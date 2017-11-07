@@ -1,4 +1,3 @@
-@import url(~angular-tree-component/dist/angular-tree-component.css);
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -25680,7 +25679,13 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-page-result {
+ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
 page-result .splash-bg {
@@ -25838,6 +25843,7 @@ page-signup .splash-end a {
 
 page-signup .item-md, page-signup .item-ios {
   background-color: transparent;
+  padding-right: 16px;
 }
 
 page-signup button.login {
@@ -25870,8 +25876,47 @@ page-signup .item-md {
   padding-left: 0;
 }
 
-page-signup .item-md.item-block .item-inner {
-  padding-right: 0;
+page-signup .item-md.item-block .item-inner, page-signup .item-ios.item-block .item-inner {
+  padding-right: 0px;
+}
+
+page-signup .item-input .label-md, page-signup .item-select .label-md, page-signup .item-datetime .label-md {
+  color: #ffffff;
+}
+
+page-signup .scroll-content {
+  height: 800px;
+}
+
+page-signup .item-input ion-label {
+  width: 120px !important;
+}
+
+page-signup .item-ios, page-signup .item-md {
+  font-size: 0.8em;
+  background-color: transparent;
+}
+
+.ios page-signup p, .md page-signup p {
+  font-size: 0.8em;
+  color: #d2d2d2;
+}
+
+.ios page-signup .swiper-slide, .md page-signup .swiper-slide {
+  display: block;
+}
+
+.ios page-signup ion-label, .ios page-signup .select-text, .md page-signup ion-label, .md page-signup .select-text {
+  margin-left: 10px;
+}
+
+.ios page-signup ion-input, .ios page-signup ion-select, .ios page-signup ion-textarea, .md page-signup ion-input, .md page-signup ion-select, .md page-signup ion-textarea {
+  background-color: #f2f2f2;
+  padding: 5px 10px;
+}
+
+.ios page-signup .invalid, .md page-signup .invalid {
+  border: 1px solid #ea6153;
 }
 
 page-simple-form .content-md {
@@ -25986,6 +26031,15 @@ page-simple-form .fab {
 page-simple-form .fab-md-in-list {
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
+  height: 55px;
+  width: 55px;
+}
+
+page-simple-form .fab-ios-in-list {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  height: 55px;
+  width: 55px;
 }
 
 page-simple-form .list-ios .item-block .item-inner {

@@ -7,7 +7,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { WelcomePage } from '../pages/welcome/welcome';
-import { SignupPage } from '../pages/signup/signup';
 
 import { HttpModule } from '@angular/http';
 import { SwingModule } from 'angular2-swing';
@@ -16,8 +15,7 @@ import { SwingModule } from 'angular2-swing';
   declarations: [
     MyApp,
     HomePage,
-    WelcomePage,
-    SignupPage
+    WelcomePage
   ],
   imports: [
     BrowserModule,
@@ -29,8 +27,7 @@ import { SwingModule } from 'angular2-swing';
   entryComponents: [
     MyApp,
     HomePage,
-    WelcomePage,
-    SignupPage
+    WelcomePage
   ],
   providers: [
     StatusBar,

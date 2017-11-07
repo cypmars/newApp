@@ -3,20 +3,20 @@
     <div class="splash-relative">
             <div class="splash-logo"></div>
             <div class="splash-intro">
-                  {{ 'WELCOME_INTRO' }}
+                  Service Advisor
             </div>
             <br>
             <div padding>
             <div class="splash-form">
-              <button ion-button block (click)="signup()"><ion-icon name="logo-linkedin" class="white-text"></ion-icon> &nbsp;&nbsp;{{ 'LINKEDIN_CONNECT' }}</button>
+              <button ion-button block (click)="signup()"><ion-icon name="logo-linkedin" class="white-text"></ion-icon> &nbsp;&nbsp;Se connecter avec LinkedIn</button>
               <br>
               <form (submit)="doLogin()">
                   <ion-list text-center>
               
                     
                     <ion-item>
-                      <ion-label fixed><ion-icon name="contact" class="white-text"></ion-icon></ion-label>
-                      <ion-input type="text" [(ngModel)]="account.email" name="email"></ion-input>
+                      <ion-label><ion-icon name="contact" class="white-text"></ion-icon></ion-label>
+                      <ion-input type="text" [(ngModel)]="account.email" name="login"></ion-input>
                     </ion-item>
               
                     <!--
@@ -31,11 +31,11 @@
                       
                     </div>
                     <ion-item>
-                      <ion-label fixed><ion-icon name="lock" class="white-text"></ion-icon></ion-label>
+                      <ion-label><ion-icon name="lock" class="white-text"></ion-icon></ion-label>
                       <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
                     </ion-item>
               
-                    <button ion-button class="login">{{ 'LOGIN_BUTTON' }}</button>
+                    <button ion-button class="login">Se connecter</button>
               
                   </ion-list>
                 </form>                
@@ -43,10 +43,10 @@
           </div>
           <div class="splash-end">
               <div class="splash-new">
-                  <a (click)="signup()">{{ 'NEW' }}</a>
+                  <a (click)="signup()">Nouveau ? S'inscrire !</a>
               </div>
               <div class="splash-forgot">
-                <a (click)="forgot()">{{ 'FORGOT_PASS' }}</a>
+                <a (click)="forgot()">Mot de passe oublié</a>
               </div>
           </div>
     </div>
