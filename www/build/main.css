@@ -25872,10 +25872,6 @@ page-signup .item-input ion-label {
   width: 20px;
 }
 
-page-signup .item-md {
-  padding-left: 0;
-}
-
 page-signup .item-md.item-block .item-inner, page-signup .item-ios.item-block .item-inner {
   padding-right: 0px;
 }
@@ -25897,6 +25893,14 @@ page-signup .item-ios, page-signup .item-md {
   background-color: transparent;
 }
 
+page-signup .white-text {
+  color: white;
+}
+
+page-signup .content-md hr, page-signup .content-ios hr {
+  background-color: white;
+}
+
 .ios page-signup p, .md page-signup p {
   font-size: 0.8em;
   color: #d2d2d2;
@@ -25911,7 +25915,7 @@ page-signup .item-ios, page-signup .item-md {
 }
 
 .ios page-signup ion-input, .ios page-signup ion-select, .ios page-signup ion-textarea, .md page-signup ion-input, .md page-signup ion-select, .md page-signup ion-textarea {
-  background-color: #f2f2f2;
+  background-color: transparent;
   padding: 5px 10px;
 }
 
