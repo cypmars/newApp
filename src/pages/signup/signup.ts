@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IonicPage, NavController, ToastController, Slides } from 'ionic-angular';
 
 import { WelcomePage } from '../pages';
-
+import { MainPage } from '../pages';
 @IonicPage()
 @Component({
   selector: 'page-signup',
@@ -84,7 +84,7 @@ export class SignupPage {
            this.signupSlider.slideTo(1);
        }
        else {
-          this.navCtrl.pop();
+          this.navCtrl.push(MainPage);
        }
   }
 }

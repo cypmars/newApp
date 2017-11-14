@@ -1,4 +1,4 @@
-webpackJsonp([4],{
+webpackJsonp([5],{
 
 /***/ 109:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -89,16 +89,20 @@ var map = {
 		0
 	],
 	"../pages/signup/signup.module": [
-		287,
-		2
+		288,
+		3
 	],
 	"../pages/simple-form/simple-form.module": [
 		286,
+		2
+	],
+	"../pages/tabs/tabs.module": [
+		287,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		288,
-		3
+		289,
+		4
 	]
 };
 function webpackAsyncContext(req) {
@@ -183,6 +187,7 @@ AppModule = __decorate([
                 links: [
                     { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                 ]
