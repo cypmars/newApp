@@ -55,7 +55,7 @@ var WelcomePage = (function () {
 }());
 WelcomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\welcome\welcome.html"*/'<ion-content>\n\n  <div class="splash-bg">\n\n    <div class="splash-relative">\n\n            <div class="splash-logo"></div>\n\n            <div class="splash-intro">\n\n                  Service Advisor\n\n            </div>\n\n            <br>\n\n            <div padding>\n\n            <div class="splash-form">\n\n              <button ion-button block (click)="signup()"><ion-icon name="logo-linkedin" class="white-text"></ion-icon> &nbsp;&nbsp;Se connecter avec LinkedIn</button>\n\n              <br>\n\n              <form (submit)="doLogin()">\n\n                  <ion-list text-center>\n\n              \n\n                    \n\n                    <ion-item>\n\n                      <ion-label><ion-icon name="contact" class="white-text"></ion-icon></ion-label>\n\n                      <ion-input type="text" [(ngModel)]="account.email" name="login"></ion-input>\n\n                    </ion-item>\n\n              \n\n                    <!--\n\n                    Want to use a Username instead of an Email? Here you go:\n\n              \n\n                    <ion-item>\n\n                      <ion-label floating>{{ \'USERNAME\' | translate }}</ion-label>\n\n                      <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>\n\n                    </ion-item>\n\n                    -->\n\n                    <div class="">\n\n                      \n\n                    </div>\n\n                    <ion-item>\n\n                      <ion-label><ion-icon name="lock" class="white-text"></ion-icon></ion-label>\n\n                      <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>\n\n                    </ion-item>\n\n              \n\n                    <button ion-button class="login">Se connecter</button>\n\n              \n\n                  </ion-list>\n\n                </form>                \n\n              </div>\n\n          </div>\n\n          <div class="splash-end">\n\n              <div class="splash-new">\n\n                  <a (click)="signup()">Nouveau ? S\'inscrire !</a>\n\n              </div>\n\n              <div class="splash-forgot">\n\n                <a (click)="forgot()">Mot de passe oublié</a>\n\n              </div>\n\n          </div>\n\n    </div>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\welcome\welcome.html"*/
+        selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\Laora\newApp\src\pages\welcome\welcome.html"*/'<ion-content>\n\n  <div class="splash-bg">\n\n    <div class="splash-relative">\n\n            <div class="splash-logo"></div>\n\n            <div class="splash-intro">\n\n                  Service Advisor\n\n            </div>\n\n            <br>\n\n            <div padding>\n\n            <div class="splash-form">\n\n              <button ion-button block (click)="signup()"><ion-icon name="logo-linkedin" class="white-text"></ion-icon> &nbsp;&nbsp;Se connecter avec LinkedIn</button>\n\n              <br>\n\n              <form (submit)="doLogin()">\n\n                  <ion-list text-center>\n\n              \n\n                    \n\n                    <ion-item>\n\n                      <ion-label><ion-icon name="contact" class="white-text"></ion-icon></ion-label>\n\n                      <ion-input type="text" [(ngModel)]="account.email" name="login"></ion-input>\n\n                    </ion-item>\n\n              \n\n                    <!--\n\n                    Want to use a Username instead of an Email? Here you go:\n\n              \n\n                    <ion-item>\n\n                      <ion-label floating>{{ \'USERNAME\' | translate }}</ion-label>\n\n                      <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>\n\n                    </ion-item>\n\n                    -->\n\n                    <div class="">\n\n                      \n\n                    </div>\n\n                    <ion-item>\n\n                      <ion-label><ion-icon name="lock" class="white-text"></ion-icon></ion-label>\n\n                      <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>\n\n                    </ion-item>\n\n              \n\n                    <button ion-button class="login">Se connecter</button>\n\n              \n\n                  </ion-list>\n\n                </form>                \n\n              </div>\n\n          </div>\n\n          <div class="splash-end">\n\n              <div class="splash-new">\n\n                  <a (click)="signup()">Nouveau ? S\'inscrire !</a>\n\n              </div>\n\n              <div class="splash-forgot">\n\n                <a (click)="forgot()">Mot de passe oublié</a>\n\n              </div>\n\n          </div>\n\n    </div>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Laora\newApp\src\pages\welcome\welcome.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */]])
@@ -87,31 +87,31 @@ webpackEmptyAsyncContext.id = 112;
 
 var map = {
 	"../pages/account/account.module": [
-		292,
+		286,
 		5
 	],
 	"../pages/news/news.module": [
-		286,
+		287,
 		4
 	],
 	"../pages/result/result.module": [
-		287,
+		288,
 		0
 	],
 	"../pages/signup/signup.module": [
-		288,
+		289,
 		3
 	],
 	"../pages/simple-form/simple-form.module": [
-		289,
+		290,
 		2
 	],
 	"../pages/tabs/tabs.module": [
-		290,
+		291,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		291,
+		292,
 		6
 	]
 };
@@ -222,13 +222,13 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_9_angular2_swing__["SwingModule"],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                 links: [
+                    { loadChildren: '../pages/account/account.module#AccountPageModule', name: 'AccountPage', segment: 'account', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/account/account.module#AccountPageModule', name: 'AccountPage', segment: 'account', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -287,7 +287,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\app\app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Users\Laora\newApp\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Laora\newApp\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -322,7 +322,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Ionic Blank\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  The world is your oyster.\n\n  <p>\n\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"C:\Users\Laora\newApp\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Ionic Blank\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  The world is your oyster.\n\n  <p>\n\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Laora\newApp\src\pages\home\home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
 ], HomePage);

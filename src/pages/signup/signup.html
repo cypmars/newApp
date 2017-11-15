@@ -71,7 +71,41 @@
               </ion-item>
             </form>
         </ion-list>
-        <button ion-button full color="primary" (click)="save()">Create Account!</button>
+       </ion-slide>
+       <ion-slide>
+          <ion-list>
+            <p>Quel est votre secteur d'activité/métier</p>
+            <form [formGroup]="slideThreeForm">
+              <ion-item>
+                  <ion-label floating class="white-text">Métier</ion-label>
+                  <ion-input formControlName="activity" type="text"></ion-input>
+              </ion-item>
+            </form>
+        </ion-list>
+       </ion-slide>
+       <ion-slide>
+          <ion-list>
+            <p>Etes-vous déjà client ?</p>
+            <form [formGroup]="slideFourForm">
+              <ion-item>
+                  <ion-label floating class="white-text">Client</ion-label>
+                  <ion-input formControlName="client" type="text"></ion-input>
+              </ion-item>
+            </form>
+        </ion-list>
+       </ion-slide>
+
+       <ion-slide>
+          <ion-list>
+              <p>Quels sont vos besoins ?</p>
+              <form [formGroup]="slideFiveForm">
+                <ion-item>
+                    <ion-label floating class="white-text">Besoins</ion-label>
+                    <ion-input formControlName="need" type="text"></ion-input>
+                </ion-item>
+              </form>
+          </ion-list>
+          <button ion-button full color="primary" (click)="save()">Create Account!</button>
        </ion-slide>
   
      </ion-slides>

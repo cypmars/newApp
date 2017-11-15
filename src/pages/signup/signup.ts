@@ -14,6 +14,9 @@ export class SignupPage {
   @ViewChild('signupSlider') signupSlider: any;
   slideOneForm: FormGroup;
   slideTwoForm: FormGroup;
+  slideThreeForm: FormGroup;
+  slideFourForm: FormGroup;
+  slideFiveForm: FormGroup;
 
   submitAttempt: boolean = false;
   lastSlide: boolean = true;
@@ -49,14 +52,30 @@ export class SignupPage {
       job: ['']
     });
 
+    this.slideThreeForm = formBuilder.group({
+      activity: ['']
+    })
+
+    this.slideFourForm = formBuilder.group({
+      client: ['']
+    })
+
+    this.slideFiveForm = formBuilder.group({
+      need: ['']
+    })
+
   }
 
   next(){
     console.log(this.signupSlider._activeIndex);
-    if (this.signupSlider._activeIndex == 1)
+    if (this.signupSlider._activeIndex == 4)
       this.navCtrl.push(WelcomePage);
-    else{
+    else if (this.signupSlider._activeIndex == 3){
       this.lastSlide = false;
+      this.signupSlider.slideNext();
+    }
+    else{
+      this.lastSlide = true;
       this.signupSlider.slideNext();
     }
     
