@@ -534,6 +534,9 @@ nodes =
       }; 
   }
 
+  prev(){
+    this.navCtrl.pop();
+  }
   ngAfterViewInit() {
     // Either subscribe in controller or set in HTML
     this.currentNode = this.nodes;

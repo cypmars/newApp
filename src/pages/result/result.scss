@@ -1,11 +1,10 @@
 page-result {
-  .splash-bg {
+  .content-md, .content-ios{
     background: #b2284e; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Firefox 3.6 to 15 */
     background: linear-gradient(-90deg, #b2284e, #2a73d3); /* Standard syntax */
-    height: 100%;
   }
 
   .splash-relative{
@@ -13,11 +12,9 @@ page-result {
     width: 90%;
     margin-right: 5%;
     margin-left:5%;
-    height:100%;
   }
 
   .splash-form{
-    margin-top: 100px;
     margin-right: 10%;
     margin-left:10%;
   }
@@ -41,7 +38,7 @@ page-result {
   #card-stack {
     width: 90%;
     height: 200px;
-    margin: 100px auto 0;
+    margin: 30px auto 0;
     position: relative;
   }
  
@@ -99,4 +96,13 @@ page-result {
     background-size: cover;
   }
 
+  .row{
+    -webkit-flex-wrap:nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .button-ios, .button-md{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
 }

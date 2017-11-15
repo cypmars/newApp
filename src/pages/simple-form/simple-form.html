@@ -1,6 +1,39 @@
+<ion-header>
+  <ion-navbar color="primary" hideBackButton="true">
+    <ion-buttons start>
+
+    </ion-buttons>
+    <ion-title>
+      Recherche
+    </ion-title>
+    <ion-buttons end>
+     
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar color="primary" no-border-top>
+    <ion-segment [(ngModel)]="searchType" color="light">
+      <ion-segment-button value="Simple">
+        Simple
+      </ion-segment-button>
+      <ion-segment-button value="Interactive">
+        Interactive
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-      <div class="splash-relative">
-          <h4 class="white-text margin-plus" text-center>Choisissez une catégorie de service</h4>
+    <div [ngSwitch]="searchType">
+      <div *ngSwitchCase="'Simple'">
+        <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+        <ion-list >
+          <ion-item *ngFor="let item of items">
+              {{ item }}
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div class="splash-relative" *ngSwitchCase="'Interactive'">
+          <p class="white-text margin-plus" style="font-size: 1.2em;" text-center>Choisissez une catégorie de service</p>
           <div class="splash-info" center>
               <div class="splash-form">
                 <div class="myFab">
@@ -59,6 +92,7 @@
                       </ion-fab-list>
                     </ion-fab>
                 </div>
+              </div>
                 <form (submit)="submit()">
                   <ion-list text-center>
                     <ion-item hidden>
@@ -66,27 +100,12 @@
                       <ion-input type="text" [(ngModel)]="search.param1" name="param1"></ion-input>
                     </ion-item>
                     <br>
-                    <ion-item>
-                      <ion-label color="white">Type de recherche</ion-label>
-                      <ion-select [(ngModel)]="search.param2" name="param2">
-                        <ion-option value="part">Particulier</ion-option>
-                        <ion-option value="pro">Professionnel</ion-option>
-                      </ion-select>
-                    </ion-item>
-                    <br><br>
-                    <ion-item class="no-border">
-                      <ion-label class>Budget</ion-label> 
-                      <ion-range min="0" max="2000" pin="true" [(ngModel)]="search.param3" name="param3" color="primary">
-                        <ion-icon range-left small name="logo-euro" class="white-text"></ion-icon>
-                        <ion-icon range-right name="logo-euro" class="white-text"></ion-icon>
-                      </ion-range>
-                    </ion-item>
-                    <br>
                     <button ion-button type="submit" class="login">Chercher &nbsp;&nbsp;&nbsp;<ion-icon name="arrow-dropright"></ion-icon></button>
                   </ion-list>
                 </form>
               </div>
-          </div>
       </div>
+
+    </div>
 </ion-content>
 

@@ -1,7 +1,19 @@
-
-  <div class="splash-bg">
+<ion-header>
+  <ion-navbar color="primary" hideBackButton="true">
+    <ion-buttons start>
+      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button>
+    </ion-buttons>
+    <ion-title>
+      Recherche
+    </ion-title>
+    <ion-buttons end>
+     
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+ <ion-content>
     <div class="splash-relative">
-        <h3 class="white-text margin-plus" text-center>Nous vous proposons:</h3>
+        <h3 class="white-text margin-plus" text-center>Faites glisser les cartes vers la droite ou la gauche</h3>
         <div class="splash-info" center>
             <div class="splash-form">
                 <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">
@@ -34,5 +46,5 @@
               </div>
         </div>
     </div>
-  </div>
+</ion-content>
 

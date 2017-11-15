@@ -23,12 +23,13 @@ page-simple-form {
   }
 
   .splash-form{
-    margin-top: 280px;
+    margin-top: 250px;
     margin-right: 10%;
     margin-left:10%;
   }
 
   .item-md, .item-ios{
+    padding-left: 0;
     background-color: transparent;
   }
 
@@ -93,7 +94,7 @@ page-simple-form {
   }
 
   ion-fab[top]{
-    top: 170px;
+    top: 140px;
   }
 
   .fab{
@@ -127,8 +128,8 @@ page-simple-form {
     border-bottom: 1px solid white;
   }
 
-  .range-md.range-has-pin{
-    padding: 0
+  .range-md.range-has-pin, .range-ios.range-has-pin{
+    padding: 0;
   }
 
   .label-md{
@@ -146,7 +147,7 @@ page-simple-form {
     padding-left: 0;
   }
 
-  .item-md.item-block .item-inner{
+  .item-md.item-block .item-inner, .item-ios.item-block .item-inner{
     padding-right:0;
   }
 
@@ -158,4 +159,11 @@ page-simple-form {
     color:white;
   }  
 
+  .range-ios, .range-md{
+    padding: 0 0 0 0;
+  }
+
+  .label-ios, .label-md{
+    margin-right: 0;
+  }
 }
