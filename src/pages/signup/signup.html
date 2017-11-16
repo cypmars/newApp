@@ -74,9 +74,9 @@
        </ion-slide>
        <ion-slide>
           <ion-list>
-            <p>Quel est votre secteur d'activité/métier</p>
+            <p>Quels sont vos secteurs d'activités/métiers ?</p>
             <form [formGroup]="slideThreeForm">
-              <ion-item>
+              <ion-item hidden>
                   <ion-label floating class="white-text">Métier</ion-label>
                   <ion-input formControlName="activity" type="text"></ion-input>
               </ion-item>
@@ -85,9 +85,9 @@
        </ion-slide>
        <ion-slide>
           <ion-list>
-            <p>Etes-vous déjà client ?</p>
+            <p>Êtes-vous déjà client ?</p>
             <form [formGroup]="slideFourForm">
-              <ion-item>
+              <ion-item hidden>
                   <ion-label floating class="white-text">Client</ion-label>
                   <ion-input formControlName="client" type="text"></ion-input>
               </ion-item>
@@ -99,7 +99,7 @@
           <ion-list>
               <p>Quels sont vos besoins ?</p>
               <form [formGroup]="slideFiveForm">
-                <ion-item>
+                <ion-item hidden>
                     <ion-label floating class="white-text">Besoins</ion-label>
                     <ion-input formControlName="need" type="text"></ion-input>
                 </ion-item>

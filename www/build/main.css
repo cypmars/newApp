@@ -26104,9 +26104,14 @@ page-signup .content-md hr, page-signup .content-ios hr {
   background-color: white;
 }
 
+page-signup p {
+  font-size: 5em;
+  color: white;
+}
+
 .ios page-signup p, .md page-signup p {
-  font-size: 0.8em;
-  color: #d2d2d2;
+  font-size: 0.9em;
+  color: white;
 }
 
 .ios page-signup .swiper-slide, .md page-signup .swiper-slide {

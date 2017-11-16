@@ -101,6 +101,11 @@ page-signup {
         background-color: rgba(255, 255, 255, 1);
       }
 
+      p{
+        font-size: 5em ; 
+        color: white ; 
+      }
+
 }
 
 .ios, .md {
@@ -108,8 +113,8 @@ page-signup {
      page-signup {
   
          p {
-             font-size: 0.8em;
-             color: #d2d2d2;
+             font-size: 0.9em;
+             color: white;
          }
   
          .swiper-slide {
