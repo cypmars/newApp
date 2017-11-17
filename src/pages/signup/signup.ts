@@ -1,17 +1,38 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild,  OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IonicPage, NavController, ToastController, Slides } from 'ionic-angular';
 
+import {
+  VisNode,
+  VisNodes,
+  VisEdges,
+  VisNetworkService,
+  VisNetworkData,
+  VisNetworkOptions } from 'ng2-vis/components/network';
+
 import { WelcomePage } from '../pages';
 import { MainPage } from '../pages';
+
+class ExampleNetworkData implements VisNetworkData {
+  public nodes: VisNodes;
+  public edges: VisEdges;
+}
+
 @IonicPage()
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup.html'
 })
-export class SignupPage {
 
+export class SignupPage implements OnInit, OnDestroy{
+
+  public visNetwork: string = 'networkId1';
+  public visNetworkData: ExampleNetworkData;
+  public visNetworkOptions: VisNetworkOptions;
+  public visNetworkService: VisNetworkService;
+  
   @ViewChild('signupSlider') signupSlider: any;
+
   slideOneForm: FormGroup;
   slideTwoForm: FormGroup;
   slideThreeForm: FormGroup;
@@ -54,20 +75,24 @@ export class SignupPage {
 
     this.slideThreeForm = formBuilder.group({
       activity: ['']
-    })
+    });
 
     this.slideFourForm = formBuilder.group({
       client: ['']
-    })
+    });
 
     this.slideFiveForm = formBuilder.group({
       need: ['']
-    })
+    });
 
   }
 
   next(){
     console.log(this.signupSlider._activeIndex);
+    if (this.signupSlider._activeIndex == 1)
+    {
+      
+    }
     if (this.signupSlider._activeIndex == 4)
       this.navCtrl.push(WelcomePage);
     else if (this.signupSlider._activeIndex == 3){
@@ -78,7 +103,7 @@ export class SignupPage {
       this.lastSlide = true;
       this.signupSlider.slideNext();
     }
-    
+
   }
 
   prev(){
@@ -106,4 +131,45 @@ export class SignupPage {
           this.navCtrl.push(MainPage);
        }
   }
+
+  public addNode(): void {
+    const newId = this.visNetworkData.nodes.getLength() + 1;
+    this.visNetworkData.nodes.add({ id: newId.toString(), label: 'Node ' + newId });
+  }
+
+  public networkInitialized(): void {
+  }
+
+  public ngOnInit(): void {
+      const nodes = new VisNodes([
+          { id: '1', label: 'Node 1' },
+          { id: '2', label: 'Node 2' },
+          { id: '3', label: 'Node 3' },
+          { id: '4', label: 'Node 4' },
+          { id: '5', label: 'Node 5', title: 'Title of Node 5' }]);
+
+      const edges = new VisEdges();
+
+      this.visNetworkData = {
+          nodes,
+          edges,
+      };
+
+      this.visNetworkOptions = {
+        nodes: {borderWidth:0,shape:"circle",color:{background:'#F92C55', highlight:{background:'#F92C55', border: '#F92C55'}},font:{color:'#fff'}},
+        physics: {
+          stabilization: false,
+          minVelocity:  0.01,
+          solver: "repulsion",
+          repulsion: {
+            nodeDistance: 40
+          }
+        }
+      };
+  }
+
+  public ngOnDestroy(): void {
+      this.visNetworkService.off(this.visNetwork, 'click');
+  }
 }
+

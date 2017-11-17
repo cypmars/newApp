@@ -75,6 +75,10 @@
        <ion-slide>
           <ion-list>
             <p>Quels sont vos secteurs d'activités/métiers ?</p>
+            <div class="chart-container">
+                <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>
+            </div>
+            <button type="button" class="btn btn-default" (click)="addNode()">Add node</button>
             <form [formGroup]="slideThreeForm">
               <ion-item hidden>
                   <ion-label floating class="white-text">Métier</ion-label>
@@ -110,9 +114,8 @@
   
      </ion-slides>
     </div>
-  
  </ion-content>
-
+ 
 <!-- <ion-content>
   <div class="splash-bg">
       <div class="splash-relative">
