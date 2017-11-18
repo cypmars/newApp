@@ -7,105 +7,57 @@
       Recherche
     </ion-title>
     <ion-buttons end>
-     
+      <button ion-button icon-left (click)="login()"><ion-icon name="person"></ion-icon></button>
     </ion-buttons>
   </ion-navbar>
-  <ion-toolbar color="primary" no-border-top>
-    <ion-segment [(ngModel)]="searchType" color="light">
-      <ion-segment-button value="Simple">
-        Simple
-      </ion-segment-button>
-      <ion-segment-button value="Interactive">
-        Interactive
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 </ion-header>
 <ion-content>
-    <div [ngSwitch]="searchType">
-      <div *ngSwitchCase="'Simple'">
-        <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-        <ion-list >
-          <ion-item *ngFor="let item of items">
-              {{ item }}
-          </ion-item>
-        </ion-list>
-      </div>
-
-      <div class="splash-relative" *ngSwitchCase="'Interactive'">
-          <p class="white-text margin-plus" style="font-size: 1.2em;" text-center>Choisissez une catégorie de service</p>
-          <div class="splash-info" center>
-              <div class="splash-form">
-                <div class="myFab">
-                  <!--<ion-fab class="myFab" center top margin-top #fab>
-                    <button id="show-services" ion-fab color="danger"><ion-icon [name]="myIcon"></ion-icon></button>
-                    <ion-fab-list side="top">
-                      <button (click)="chooseService($event, 0, fab)" ion-fab color="white"><ion-icon class="larger" name="leaf"></ion-icon></button>
-                    </ion-fab-list>
-                    <ion-fab-list side="top-left">
-                      <button (click)="chooseService($event, 1, fab)" ion-fab color="white"><ion-icon class="larger" name="lock"></ion-icon></button>
-                    </ion-fab-list>
-                    <ion-fab-list side="left">
-                      <button (click)="chooseService($event, 2, fab)" ion-fab color="white"><ion-icon class="larger" name="plane"></ion-icon></button>
-                    </ion-fab-list>
-                    <ion-fab-list side="bottom-left">
-                      <button (click)="chooseService($event, 3, fab)" ion-fab color="white"><ion-icon class="larger" name="people"></ion-icon></button>
-                    </ion-fab-list>
-                    <ion-fab-list side="bottom">
-                      <button (click)="chooseService($event, 4, fab)" ion-fab color="white"><ion-icon class="larger" name="train"></ion-icon></button>
-                    </ion-fab-list>
-                    <ion-fab-list side="bottom-right">
-                      <button (click)="chooseService($event, 5, fab)" ion-fab color="white"><ion-icon class="larger" name="nuclear"></ion-icon></button>
-                    </ion-fab-list>
-                    <ion-fab-list side="right">
-                      <button (click)="chooseService($event, 6, fab)" ion-fab color="white"><ion-icon class="larger" name="school"></ion-icon></button>
-                    </ion-fab-list>
-                    <ion-fab-list side="top-right">
-                      <button (click)="chooseService($event, 7, fab)" ion-fab color="white"><ion-icon class="larger" name="code-working"></ion-icon></button>
-                    </ion-fab-list>
-                  </ion-fab>-->
-                  <ion-fab class="myFab" center top margin-top #fab>
-                      <button id="show-services" ion-fab color="danger">{{myIcon}}</button>
-                      <ion-fab-list side="top">
-                        <button (click)="chooseService($event, 0, fab)" ion-fab color="white">Propreté et Services</button>
-                      </ion-fab-list>
-                      <ion-fab-list side="top-left">
-                        <button (click)="chooseService($event, 1, fab)" ion-fab color="white">Sécurité</button>
-                      </ion-fab-list>
-                      <ion-fab-list side="left">
-                        <button (click)="chooseService($event, 2, fab)" ion-fab color="white">Services Aéroportuaires</button>
-                      </ion-fab-list>
-                      <ion-fab-list side="bottom-left">
-                        <button (click)="chooseService($event, 3, fab)" ion-fab color="white">Accueil</button>
-                      </ion-fab-list>
-                      <ion-fab-list side="bottom">
-                        <button (click)="chooseService($event, 4, fab)" ion-fab color="white">Logistique</button>
-                      </ion-fab-list>
-                      <ion-fab-list side="bottom-right">
-                        <button (click)="chooseService($event, 5, fab)" ion-fab color="white">Technologies</button>
-                      </ion-fab-list>
-                      <ion-fab-list side="right">
-                        <button (click)="chooseService($event, 6, fab)" ion-fab color="white">Intérim, Récrutement et Formation</button>
-                      </ion-fab-list>
-                      <ion-fab-list side="top-right">
-                        <button (click)="chooseService($event, 7, fab)" ion-fab color="white">...</button>
-                      </ion-fab-list>
-                    </ion-fab>
-                </div>
-              </div>
-                <form (submit)="submit()">
-                  <ion-list text-center>
-                    <ion-item hidden>
-                      <ion-label fixed></ion-label>
-                      <ion-input type="text" [(ngModel)]="search.param1" name="param1"></ion-input>
-                    </ion-item>
-                    <br>
-                    <button ion-button type="submit" class="login">Chercher &nbsp;&nbsp;&nbsp;<ion-icon name="arrow-dropright"></ion-icon></button>
-                  </ion-list>
-                </form>
-              </div>
-      </div>
-
-    </div>
+    <p class="white-text margin-plus" style="font-size: 1.2em;" text-center>Qui êtes-vous ?</p>
+    <div class="splash-info" center>
+        <div class="splash-form">
+          <div class="myFab">
+            <!--<ion-fab class="myFab" center top margin-top #fab>
+              <button id="show-services" ion-fab color="danger"><ion-icon [name]="myIcon"></ion-icon></button>
+              <ion-fab-list side="top">
+                <button (click)="chooseService($event, 0, fab)" ion-fab color="white"><ion-icon class="larger" name="leaf"></ion-icon></button>
+              </ion-fab-list>
+              <ion-fab-list side="top-left">
+                <button (click)="chooseService($event, 1, fab)" ion-fab color="white"><ion-icon class="larger" name="lock"></ion-icon></button>
+              </ion-fab-list>
+              <ion-fab-list side="left">
+                <button (click)="chooseService($event, 2, fab)" ion-fab color="white"><ion-icon class="larger" name="plane"></ion-icon></button>
+              </ion-fab-list>
+              <ion-fab-list side="bottom-left">
+                <button (click)="chooseService($event, 3, fab)" ion-fab color="white"><ion-icon class="larger" name="people"></ion-icon></button>
+              </ion-fab-list>
+              <ion-fab-list side="bottom">
+                <button (click)="chooseService($event, 4, fab)" ion-fab color="white"><ion-icon class="larger" name="train"></ion-icon></button>
+              </ion-fab-list>
+              <ion-fab-list side="bottom-right">
+                <button (click)="chooseService($event, 5, fab)" ion-fab color="white"><ion-icon class="larger" name="nuclear"></ion-icon></button>
+              </ion-fab-list>
+              <ion-fab-list side="right">
+                <button (click)="chooseService($event, 6, fab)" ion-fab color="white"><ion-icon class="larger" name="school"></ion-icon></button>
+              </ion-fab-list>
+              <ion-fab-list side="top-right">
+                <button (click)="chooseService($event, 7, fab)" ion-fab color="white"><ion-icon class="larger" name="code-working"></ion-icon></button>
+              </ion-fab-list>
+            </ion-fab>-->
+            <ion-fab class="myFab" center middle #fab >
+                <button id="show-services" ion-fab color="danger">{{myIcon}}</button>
+                <ion-fab-list side="top">
+                  <button (click)="chooseService($event, 0, fab)" ion-fab color="white">Client</button>
+                </ion-fab-list>
+                <ion-fab-list side="left">
+                  <button (click)="chooseService($event, 1, fab)" ion-fab color="white">Prospect</button>
+                </ion-fab-list>
+                <ion-fab-list side="right">
+                  <button (click)="chooseService($event, 2, fab)" ion-fab color="white">Collaborateur</button>
+                </ion-fab-list>
+              </ion-fab>
+          </div>
+        </div>
+        </div>
 </ion-content>
 

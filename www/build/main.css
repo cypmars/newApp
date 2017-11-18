@@ -25994,6 +25994,18 @@ page-result .button-ios, page-result .button-md {
   padding: 0 0 0 0;
 }
 
+page-result .network-canvas {
+  width: 100%;
+  height: 80%;
+}
+
+page-result .chart-container {
+  position: relative;
+  margin: auto;
+  height: 80vh;
+  width: 80vw;
+}
+
 page-signup .splash-bg {
   background: #b2284e;
   /* For browsers that do not support gradients */
@@ -26169,13 +26181,6 @@ page-simple-form .content-ios {
   /* Standard syntax */
 }
 
-page-simple-form .splash-relative {
-  position: absolute;
-  width: 60%;
-  margin-right: 20%;
-  margin-left: 20%;
-}
-
 page-simple-form .splash-form {
   margin-top: 250px;
   margin-right: 10%;
@@ -26320,6 +26325,460 @@ page-simple-form .range-ios, page-simple-form .range-md {
 
 page-simple-form .label-ios, page-simple-form .label-md {
   margin-right: 0;
+}
+
+page-simple-form1 .content-md {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+}
+
+page-simple-form1 .content-ios {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+}
+
+page-simple-form1 .splash-relative {
+  position: absolute;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+page-simple-form1 .splash-form {
+  margin-top: 250px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+page-simple-form1 .item-md, page-simple-form1 .item-ios {
+  padding-left: 0;
+  background-color: transparent;
+}
+
+page-simple-form1 input {
+  color: white;
+}
+
+page-simple-form1 .white-text {
+  color: white;
+}
+
+page-simple-form1 .item-input ion-label {
+  width: 20px;
+}
+
+page-simple-form1 ion-fab-list[side=top-left] {
+  margin: -70px 62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-simple-form1 ion-fab-list[side=bottom-left] {
+  margin: 55px 62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-simple-form1 ion-fab-list[side=top-right] {
+  margin: -70px -62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-simple-form1 ion-fab-list[side=bottom-right] {
+  margin: 55px -62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-simple-form1 .larger {
+  font-size: 3em;
+}
+
+page-simple-form1 .fab-close-icone {
+  display: none;
+}
+
+page-simple-form1 ion-fab[top] {
+  top: 140px;
+}
+
+page-simple-form1 .fab {
+  font-size: 8px;
+  line-height: 10px;
+  white-space: normal;
+}
+
+page-simple-form1 .fab-md-in-list {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  height: 55px;
+  width: 55px;
+}
+
+page-simple-form1 .fab-ios-in-list {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  height: 55px;
+  width: 55px;
+}
+
+page-simple-form1 .list-ios .item-block .item-inner {
+  border-bottom: 0;
+}
+
+page-simple-form1 .list-md .item-block .item-inner {
+  border-bottom: 0;
+}
+
+page-simple-form1 .item-select {
+  border-bottom: 1px solid white;
+}
+
+page-simple-form1 .range-md.range-has-pin, page-simple-form1 .range-ios.range-has-pin {
+  padding: 0;
+}
+
+page-simple-form1 .label-md {
+  color: white;
+  width: 100%;
+  float: right;
+  margin: 0;
+}
+
+page-simple-form1 .item-input .label-md, page-simple-form1 .item-select .label-md, page-simple-form1 .item-datetime .label-md {
+  color: white;
+}
+
+page-simple-form1 .item-md {
+  padding-left: 0;
+}
+
+page-simple-form1 .item-md.item-block .item-inner, page-simple-form1 .item-ios.item-block .item-inner {
+  padding-right: 0;
+}
+
+page-simple-form1 .select-text {
+  width: 100%;
+}
+
+page-simple-form1 .select-md .select-icon .select-icon-inner {
+  color: white;
+}
+
+page-simple-form1 .range-ios, page-simple-form1 .range-md {
+  padding: 0 0 0 0;
+}
+
+page-simple-form1 .label-ios, page-simple-form1 .label-md {
+  margin-right: 0;
+}
+
+page-simple-form2 .content-md {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+}
+
+page-simple-form2 .content-ios {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+}
+
+page-simple-form2 .splash-form {
+  margin-top: 250px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+page-simple-form2 .item-md, page-simple-form2 .item-ios {
+  padding-left: 0;
+  background-color: transparent;
+}
+
+page-simple-form2 input {
+  color: white;
+}
+
+page-simple-form2 .white-text {
+  color: white;
+}
+
+page-simple-form2 .item-input ion-label {
+  width: 20px;
+}
+
+page-simple-form2 ion-fab-list[side=top-left] {
+  margin: -70px 62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-simple-form2 ion-fab-list[side=bottom-left] {
+  margin: 55px 62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-simple-form2 ion-fab-list[side=top-right] {
+  margin: -70px -62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-simple-form2 ion-fab-list[side=bottom-right] {
+  margin: 55px -62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-simple-form2 .larger {
+  font-size: 3em;
+}
+
+page-simple-form2 .fab-close-icone {
+  display: none;
+}
+
+page-simple-form2 ion-fab[top] {
+  top: 140px;
+}
+
+page-simple-form2 .fab {
+  font-size: 8px;
+  line-height: 10px;
+  white-space: normal;
+}
+
+page-simple-form2 .fab-md-in-list {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  height: 55px;
+  width: 55px;
+}
+
+page-simple-form2 .fab-ios-in-list {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  height: 55px;
+  width: 55px;
+}
+
+page-simple-form2 .list-ios .item-block .item-inner {
+  border-bottom: 0;
+}
+
+page-simple-form2 .list-md .item-block .item-inner {
+  border-bottom: 0;
+}
+
+page-simple-form2 .item-select {
+  border-bottom: 1px solid white;
+}
+
+page-simple-form2 .range-md.range-has-pin, page-simple-form2 .range-ios.range-has-pin {
+  padding: 0;
+}
+
+page-simple-form2 .label-md {
+  color: white;
+  width: 100%;
+  float: right;
+  margin: 0;
+}
+
+page-simple-form2 .item-input .label-md, page-simple-form2 .item-select .label-md, page-simple-form2 .item-datetime .label-md {
+  color: white;
+}
+
+page-simple-form2 .item-md {
+  padding-left: 0;
+}
+
+page-simple-form2 .item-md.item-block .item-inner, page-simple-form2 .item-ios.item-block .item-inner {
+  padding-right: 0;
+}
+
+page-simple-form2 .select-text {
+  width: 100%;
+}
+
+page-simple-form2 .select-md .select-icon .select-icon-inner {
+  color: white;
+}
+
+page-simple-form2 .range-ios, page-simple-form2 .range-md {
+  padding: 0 0 0 0;
+}
+
+page-simple-form2 .label-ios, page-simple-form2 .label-md {
+  margin-right: 0;
+}
+
+page-tinderQ .content-md, page-tinderQ .content-ios {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+}
+
+page-tinderQ .splash-relative {
+  position: absolute;
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+page-tinderQ .splash-form {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+page-tinderQ .item-md, page-tinderQ .item-ios {
+  background-color: transparent;
+}
+
+page-tinderQ input {
+  color: white;
+}
+
+page-tinderQ .white-text {
+  color: white;
+}
+
+page-tinderQ .item-input ion-label {
+  width: 20px;
+}
+
+page-tinderQ #card-stack {
+  width: 90%;
+  height: 200px;
+  margin: 30px auto 0;
+  position: relative;
+}
+
+page-tinderQ #card-stack ion-card {
+  border-radius: 5px;
+  position: absolute;
+  text-align: center;
+  top: 3%;
+  height: 320px;
+}
+
+page-tinderQ .item-md, page-tinderQ .item-ios {
+  padding-left: 0;
+  height: 250px;
+}
+
+page-tinderQ .item-ios.item-block .item-inner, page-tinderQ .item-md.item-block .item-inner {
+  padding-right: 0;
+}
+
+page-tinderQ .label-md, page-tinderQ .label-ios {
+  margin: 0 0 0 0;
+}
+
+page-tinderQ ion-card img {
+  max-height: 250px;
+  min-height: 250px;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+page-tinderQ .absolute-pos {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+page-tinderQ .relative-pos {
+  position: relative;
+}
+
+page-tinderQ .item-ios h1, page-tinderQ .item-md h1 {
+  text-align: center;
+  color: white;
+}
+
+page-tinderQ .validate-or-not {
+  position: absolute;
+  top: 0;
+  height: 250px;
+  width: 100%;
+  z-index: 1000;
+  background-size: cover;
+}
+
+page-tinderQ .row {
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+page-tinderQ .button-ios, page-tinderQ .button-md {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
 }
 
 page-welcome .splash-bg {

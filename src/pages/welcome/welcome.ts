@@ -21,12 +21,17 @@ export class WelcomePage {
     password: 'mot de passe'
   };
 
+  tabBarElement: any;
   // Our translated text strings
   private loginErrorString: string;
 
   constructor(public navCtrl: NavController,
     public toastCtrl: ToastController) {
+      this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
+  }
 
+  ionViewWillEnter(){
+    this.tabBarElement.style.display = 'none';
   }
 
   forgot() {

@@ -4,6 +4,9 @@ export const WelcomePage = 'WelcomePage';
 export const HomePage = 'HomePage';
 
 export const SimpleFormPage = 'SimpleFormPage';
+export const SimpleForm1Page = 'SimpleForm1Page';
+export const SimpleForm2Page = 'SimpleForm2Page';
+export const TinderQPage = 'TinderQPage';
 
 export const ResultPage = 'ResultPage';
 

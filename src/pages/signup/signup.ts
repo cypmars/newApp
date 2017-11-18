@@ -56,7 +56,10 @@ export class SignupPage implements OnInit, OnDestroy{
 
   constructor(public navCtrl: NavController,
     public formBuilder: FormBuilder,
-    public toastCtrl: ToastController) {
+    public toastCtrl: ToastController,
+    private visNetworkServ: VisNetworkService) {
+
+    this.visNetworkService = visNetworkServ;
 
     this.slideOneForm = formBuilder.group({
       firstName: ['',  Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
@@ -138,6 +141,17 @@ export class SignupPage implements OnInit, OnDestroy{
   }
 
   public networkInitialized(): void {
+     // now we can use the service to register on events
+     this.visNetworkService.on(this.visNetwork, 'click');
+     
+      // open your console/dev tools to see the click params
+      this.visNetworkService.click
+          .subscribe((eventData: any[]) => {
+              if (eventData[0] === this.visNetwork) {
+                console.log(eventData[1]);
+                console.log(this.visNetworkService.getSelectedNodes(this.visNetwork));
+              }
+          });
   }
 
   public ngOnInit(): void {
@@ -156,18 +170,22 @@ export class SignupPage implements OnInit, OnDestroy{
       };
 
       this.visNetworkOptions = {
-        nodes: {borderWidth:0,shape:"circle",color:{background:'#F92C55', highlight:{background:'#F92C55', border: '#F92C55'}},font:{color:'#fff'}},
+        interaction:{
+          multiselect: true
+        },
+        nodes: {borderWidth:1 ,shape:"circle", color:{background:'#F92C55', border: '#F92C55', highlight:{ background:'#F92C55', border: '#F92C55'}},font:{color:'#fff'}},
         physics: {
           stabilization: false,
           minVelocity:  0.01,
           solver: "repulsion",
           repulsion: {
-            nodeDistance: 40
+            nodeDistance: 50
           }
-        }
+        },
       };
   }
 
+  
   public ngOnDestroy(): void {
       this.visNetworkService.off(this.visNetwork, 'click');
   }

@@ -5,6 +5,8 @@ import { ResultPage } from './result';
 import { SwingModule } from 'angular2-swing';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { VisModule } from 'ng2-vis';
+
 @NgModule({
   declarations: [
     ResultPage,
@@ -12,6 +14,7 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
     HttpModule,
     SwingModule,
+    VisModule,
     IonicPageModule.forChild(ResultPage)
   ],
   exports: [
