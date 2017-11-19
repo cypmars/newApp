@@ -73,6 +73,8 @@ export class SimpleFormPage {
   public chooseService(event, data, fab: FabContainer){
     this.myIcon = this.itemsCat[data].name;
     this.search.param1 = this.itemsCat[data].iconName;
-    this.navCtrl.push('SimpleForm1Page');
+    this.navCtrl.push('SimpleForm1Page', {
+      param1: this.myIcon,
+    });
   }
 }

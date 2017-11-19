@@ -17,6 +17,7 @@
         <h3 class="white-text margin-plus" text-center>Faites glisser les cartes vers la droite ou la gauche</h3>
         <div class="splash-info" center>
             <div class="splash-form">
+                <p>{{param1}}, {{param2}}, {{param3}}, {{param4}}</p>
                 <div class="chart-container">
                     <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>
                 </div>

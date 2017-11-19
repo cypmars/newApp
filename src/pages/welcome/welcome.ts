@@ -50,4 +50,9 @@ export class WelcomePage {
   doLogin() {
       this.navCtrl.push(MainPage);
   }
+
+  prev(){
+    this.tabBarElement.style.display = 'flex';
+    this.navCtrl.pop();
+  }
 }

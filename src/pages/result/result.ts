@@ -33,13 +33,23 @@ class ExampleNetworkData implements VisNetworkData {
 
 export class ResultPage implements OnInit, OnDestroy{
 
+  public param1: string;
+  public param2: string;
+  public param3: string;
+  public param4: Array<string>;
+
   public visNetwork: string = 'networkId1';
   public visNetworkData: ExampleNetworkData;
   public visNetworkOptions: VisNetworkOptions;
   public visNetworkService: VisNetworkService;
 
-  constructor(private http: Http, public navCtrl: NavController, private visNetworkServ: VisNetworkService) {
+  constructor(private http: Http, public navCtrl: NavController, private visNetworkServ: VisNetworkService, public navParams: NavParams) {
     this.visNetworkService = visNetworkServ;
+
+    this.param1 = navParams.get('param1');
+    this.param2 = navParams.get('param2');
+    this.param3 = navParams.get('param3');
+    this.param4 = navParams.get('param4');
   }
 
   public addNode(): void {
@@ -80,7 +90,7 @@ export class ResultPage implements OnInit, OnDestroy{
         interaction:{
           multiselect: true
         },
-        nodes: {borderWidth:1 ,shape:"circle", color:{background:'#F92C55', border: '#F92C55', highlight:{ background:'#F92C55', border: '#F92C55'}},font:{color:'#fff'}},
+        nodes: {borderWidth:10 ,shape:"circle", color:{background:'#F92C55', border: 'transparent', highlight:{ background:'#F92C55', border: '#F92C55'}},font:{color:'#fff'}},
         physics: {
           stabilization: false,
           minVelocity:  0.01,

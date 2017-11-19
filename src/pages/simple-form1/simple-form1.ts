@@ -20,6 +20,8 @@ export class SimpleForm1Page {
   // sure to add it to the type
   @ViewChild('fab') fab: FabContainer;
   
+  public param1: string;
+
   account: { email: string, password: string } = {
     email: '@ e-mail ou pseudo',
     password: 'mot de passe'
@@ -80,7 +82,7 @@ export class SimpleForm1Page {
   constructor(public navCtrl: NavController,
     private navParams: NavParams,
     public toastCtrl: ToastController) {
-
+      this.param1 = navParams.get('param1');
   }
 
   prev() {
@@ -98,6 +100,9 @@ export class SimpleForm1Page {
 
   public chooseService(event, data, fab: FabContainer){
     this.myIcon = this.itemsCat[data].name;
-    this.navCtrl.push('SimpleForm2Page');
+    this.navCtrl.push('SimpleForm2Page', {
+      param1: this.param1,
+      param2: this.myIcon,
+    });
   }
 }

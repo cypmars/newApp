@@ -34,6 +34,11 @@ export class TinderQPage {
   @ViewChild('myswing1') swingStack: SwingStackComponent;
   @ViewChildren('mycards1') swingCards: QueryList<SwingCardComponent>;
   
+  public param1: string;
+  public param2: string;
+  public param3: string;
+  public param4: Array<string>;
+
   cards: Array<any>;
   stackConfig: StackConfig;
   recentCard: string = '';
@@ -492,10 +497,32 @@ nodes =
     if (this.currentNode.children != null)
     {
       this.cards.push(this.currentNode);
+      switch(like){
+        case true: 
+          this.param4.push('YES');
+          break;
+        case false:
+          this.param4.push('NO');
+          break;
+      }
     }
     else{
+      switch(like){
+        case true: 
+          console.log(this.param4);
+          this.param4.push('YES');
+          break;
+        case false:
+          this.param4.push('NO');
+          break;
+      }
       this.cards.pop();
-      this.navCtrl.push('ResultPage');
+      this.navCtrl.push('ResultPage', {
+        param1: this.param1,
+        param2: this.param2,
+        param3: this.param3,
+        param4: this.param4
+      });
       this.cards.pop();
     }
   }
@@ -520,7 +547,7 @@ nodes =
     return hex;
   }
 
-  constructor(private http: Http, public navCtrl: NavController) {
+  constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams) {
 
       this.stackConfig = {
         throwOutConfidence: (offsetX, offsetY, element) => {
@@ -533,6 +560,11 @@ nodes =
           return 800;
         }
       }; 
+
+      this.param1 = navParams.get('param1');
+      this.param2 = navParams.get('param2');
+      this.param3 = navParams.get('param3');
+      this.param4 = new Array<string>();
   }
 
   prev(){

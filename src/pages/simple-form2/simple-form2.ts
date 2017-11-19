@@ -20,6 +20,9 @@ export class SimpleForm2Page {
   // If you're using the username field with or without email, make
   // sure to add it to the type
   @ViewChild('fab') fab: FabContainer;
+
+  public param1: string;
+  public param2: string;
   
   account: { email: string, password: string } = {
     email: '@ e-mail ou pseudo',
@@ -85,6 +88,8 @@ export class SimpleForm2Page {
     private navParams: NavParams,
     public toastCtrl: ToastController) {
 
+      this.param1 = navParams.get('param1');
+      this.param2 = navParams.get('param2');
   }
 
   prev() {
@@ -101,7 +106,10 @@ export class SimpleForm2Page {
 
   public chooseService(event, data, fab: FabContainer){
     this.myIcon = this.itemsCat[data].name;
-    this.search.param1 = this.itemsCat[data].iconName;
-    this.navCtrl.push('TinderQPage');
+    this.navCtrl.push('TinderQPage', {
+      param1: this.param1,
+      param2: this.param2,
+      param3: this.myIcon
+    });
   }
 }
