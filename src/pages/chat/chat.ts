@@ -23,7 +23,7 @@ export class ChatPage {
   constructor(public platform: Platform, public ngZone: NgZone) {
     platform.ready().then(() => {
       ApiAIPromises.new().init({
-        clientAccessToken: "cd413db2c8ca47c2819f4f7482a86d46"
+        clientAccessToken: "5bba57cb783d4a32a052ebabd1feb7b9"
       })
       .then((result) =>  console.log(result))
 

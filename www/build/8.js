@@ -59,35 +59,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+/**
+ * The Welcome Page is a splash page that quickly describes the app,
+ * and then directs the user to create an account or log in.
+ * If you'd like to immediately put the user onto a login/signup page,
+ * we recommend not using the Welcome page.
+*/
 var ChatPage = (function () {
     function ChatPage(platform, ngZone) {
         this.platform = platform;
         this.ngZone = ngZone;
         this.answers = [];
-        platform.ready().then(function () {
-            ApiAIPromises.new().init({
-                clientAccessToken: "cd413db2c8ca47c2819f4f7482a86d46"
-            })
-                .then(function (result) { return console.log(result); });
-        });
     }
-    ChatPage.prototype.ask = function (question) {
-        var _this = this;
-        ApiAIPromises.requestText({
-            query: question
-        })
-            .then(function (_a) {
-            var speech = _a.result.fulfillment.speech;
-            _this.ngZone.run(function () {
-                _this.answers.push(speech);
-            });
-        });
-    };
     return ChatPage;
 }());
 ChatPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-chat',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat\chat.html"*/'\n\n  <ion-header no-border>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n        <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n    </ion-buttons>\n\n    <ion-title>\n\n\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      \n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n    \n\n      <input ion-text type="text" [(ngModel)]="question">\n\n    \n\n      <button ion-button (click)="ask(question)">\n\n        Ask\n\n      </button>\n\n    \n\n      <div *ngFor="let answer of answers">\n\n          {{answer}}\n\n        </div>\n\n    \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat\chat.html"*/
+        selector: 'page-chat',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat\chat.html"*/'\n\n  <ion-header no-border>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n        <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n    </ion-buttons>\n\n    <ion-title>\n\n\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      \n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n    \n\n      <input ion-text type="text" [(ngModel)]="question">\n\n    \n\n      <button ion-button (click)="ask(question)">\n\n        Ask\n\n      </button>\n\n    \n\n      <div *ngFor="let answer of answers">\n\n          {{answer}}\n\n        </div>\n\n        <div>\n\n          hello\n\n        </div>\n\n        <div>\n\n          how are you\n\n        </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat\chat.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"]])
 ], ChatPage);
