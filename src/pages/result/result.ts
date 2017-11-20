@@ -5,7 +5,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 
-import { TinderQPage } from '../pages';
+import { ServiceDetailsPage } from '../pages';
 import {
   VisNode,
   VisNodes,
@@ -44,6 +44,7 @@ export class ResultPage implements OnInit, OnDestroy{
   public visNetworkService: VisNetworkService;
 
   constructor(private http: Http, public navCtrl: NavController, private visNetworkServ: VisNetworkService, public navParams: NavParams) {
+   
     this.visNetworkService = visNetworkServ;
 
     this.param1 = navParams.get('param1');
@@ -65,19 +66,20 @@ export class ResultPage implements OnInit, OnDestroy{
       this.visNetworkService.click
           .subscribe((eventData: any[]) => {
               if (eventData[0] === this.visNetwork) {
+                this.navCtrl.push('ServiceDetailsPage');
                 console.log(eventData[1]);
                 console.log(this.visNetworkService.getSelectedNodes(this.visNetwork));
               }
           });
   }
-
+  
   public ngOnInit(): void {
       const nodes = new VisNodes([
-          { id: '1', label: 'Node 1' },
-          { id: '2', label: 'Node 2' },
-          { id: '3', label: 'Node 3' },
-          { id: '4', label: 'Node 4' },
-          { id: '5', label: 'Node 5', title: 'Title of Node 5' }]);
+          { id: '1', label: 'Propreté en milieu classique' },
+          { id: '2', label: 'Propreté en milieu sensible' },
+          { id: '3', label: 'Cryogénie' },
+          { id: '4', label: 'Propreté urbaine' },
+          { id: '5', label: 'Propreté dans les transports' }]);
 
       const edges = new VisEdges();
 
@@ -90,13 +92,13 @@ export class ResultPage implements OnInit, OnDestroy{
         interaction:{
           multiselect: true
         },
-        nodes: {borderWidth:10 ,shape:"circle", color:{background:'#F92C55', border: 'transparent', highlight:{ background:'#F92C55', border: '#F92C55'}},font:{color:'#fff'}},
+        nodes: {borderWidth:0 ,shape:"circle", color:{background:'#F92C55', border: 'transparent', highlight:{ background:'#F92C55', border: '#F92C55'}},font:{color:'#fff'}},
         physics: {
           stabilization: false,
           minVelocity:  0.01,
           solver: "repulsion",
           repulsion: {
-            nodeDistance: 50
+            nodeDistance: 75
           }
         },
       };

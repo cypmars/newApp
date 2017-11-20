@@ -1,0 +1,26 @@
+<ion-content padding class="transparent-header">
+  <ion-header no-border>
+  <ion-navbar color="primary" hideBackButton="true">
+    <ion-buttons start>
+        <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> 
+    </ion-buttons>
+    <ion-title>
+
+    </ion-title>
+    <ion-buttons end>
+      
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<div id="profile-bg" [ngStyle]="{'background-image': 'url(' + service.coverImage +')'}"></div>
+<div id="content">
+  <div id="profile-info" padding>
+    <img id="profile-image" [src]="service.profileImage">
+    <h3 id="profile-name">{{service.name}}</h3>
+    <p> &bull; {{service.location}}</p>
+    <p class="profile-description">{{service.description}}</p>
+    <button ion-button *ngIf="!like" small color="purple" (click)="follow()">Je n'aime plus</button>
+    <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J'aime <ion-icon name="checkmark"></ion-icon></button>
+  </div>
+</div>
+</ion-content>

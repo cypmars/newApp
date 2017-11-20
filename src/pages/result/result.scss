@@ -10,14 +10,8 @@ page-result {
   .splash-relative{
     position: absolute;
     width: 90%;
-    margin-right: 5%;
-    margin-left:5%;
   }
 
-  .splash-form{
-    margin-right: 10%;
-    margin-left:10%;
-  }
 
   .item-md, .item-ios{
     background-color: transparent;
@@ -114,7 +108,8 @@ page-result {
   .chart-container {
     position: relative;
     margin: auto;
-    height: 80vh;
-    width: 80vw;
+    height: 100vh;
+    width: 100vw;
   }
+
 }

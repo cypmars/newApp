@@ -5,10 +5,10 @@ webpackJsonp([8],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountPageModule", function() { return AccountPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPageModule", function() { return ChatPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account__ = __webpack_require__(607);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(608);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AccountPageModule = (function () {
-    function AccountPageModule() {
+var ChatPageModule = (function () {
+    function ChatPageModule() {
     }
-    return AccountPageModule;
+    return ChatPageModule;
 }());
-AccountPageModule = __decorate([
+ChatPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__account__["a" /* AccountPage */],
+            __WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__account__["a" /* AccountPage */])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */])
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__account__["a" /* AccountPage */]
+            __WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */]
         ]
     })
-], AccountPageModule);
+], ChatPageModule);
 
-//# sourceMappingURL=account.module.js.map
+//# sourceMappingURL=chat.module.js.map
 
 /***/ }),
 
-/***/ 607:
+/***/ 608:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -59,35 +59,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * The Welcome Page is a splash page that quickly describes the app,
- * and then directs the user to create an account or log in.
- * If you'd like to immediately put the user onto a login/signup page,
- * we recommend not using the Welcome page.
-*/
-var AccountPage = (function () {
-    function AccountPage(navCtrl, toastCtrl) {
-        this.navCtrl = navCtrl;
-        this.toastCtrl = toastCtrl;
-        // The account fields for the login form.
-        // If you're using the username field with or without email, make
-        // sure to add it to the type
-        this.account = {
-            email: '@ e-mail ou pseudo',
-            password: 'mot de passe'
-        };
+var ChatPage = (function () {
+    function ChatPage(platform, ngZone) {
+        this.platform = platform;
+        this.ngZone = ngZone;
+        this.answers = [];
+        platform.ready().then(function () {
+            ApiAIPromises.new().init({
+                clientAccessToken: "cd413db2c8ca47c2819f4f7482a86d46"
+            })
+                .then(function (result) { return console.log(result); });
+        });
     }
-    return AccountPage;
+    ChatPage.prototype.ask = function (question) {
+        var _this = this;
+        ApiAIPromises.requestText({
+            query: question
+        })
+            .then(function (_a) {
+            var speech = _a.result.fulfillment.speech;
+            _this.ngZone.run(function () {
+                _this.answers.push(speech);
+            });
+        });
+    };
+    return ChatPage;
 }());
-AccountPage = __decorate([
+ChatPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-account',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\account\account.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n        \n\n    </ion-buttons>\n\n    <ion-title>\n\n      Profil\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      \n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n  <div class="splash-bg">\n\n      <div class="account">\n\n        <div class="account-pic">\n\n          <img src="../assets/img/account-back.jpg" style="width: 100%; height:200px;">\n\n        </div>\n\n        <div text-center class="account-text">\n\n          <h4>Cyprien CONNET</h4>\n\n          <p></p>\n\n        </div>\n\n      </div>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\account\account.html"*/
+        selector: 'page-chat',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat\chat.html"*/'\n\n  <ion-header no-border>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n        <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n    </ion-buttons>\n\n    <ion-title>\n\n\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      \n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n    \n\n      <input ion-text type="text" [(ngModel)]="question">\n\n    \n\n      <button ion-button (click)="ask(question)">\n\n        Ask\n\n      </button>\n\n    \n\n      <div *ngFor="let answer of answers">\n\n          {{answer}}\n\n        </div>\n\n    \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat\chat.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */]])
-], AccountPage);
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"]) === "function" && _b || Object])
+], ChatPage);
 
-//# sourceMappingURL=account.js.map
+var _a, _b;
+//# sourceMappingURL=chat.js.map
 
 /***/ })
 

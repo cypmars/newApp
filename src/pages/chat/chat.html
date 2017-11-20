@@ -1,0 +1,27 @@
+
+  <ion-header no-border>
+  <ion-navbar color="primary" hideBackButton="true">
+    <ion-buttons start>
+        <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> 
+    </ion-buttons>
+    <ion-title>
+
+    </ion-title>
+    <ion-buttons end>
+      
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    
+      <input ion-text type="text" [(ngModel)]="question">
+    
+      <button ion-button (click)="ask(question)">
+        Ask
+      </button>
+    
+      <div *ngFor="let answer of answers">
+          {{answer}}
+        </div>
+    
+</ion-content>

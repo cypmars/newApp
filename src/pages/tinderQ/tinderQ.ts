@@ -7,6 +7,7 @@ import 'rxjs/Rx';
 
 import { SimpleFormPage } from '../pages';
 import { ResultPage } from '../pages';
+import { WelcomePage } from '../pages';
 
 import {
   StackConfig,
@@ -578,5 +579,9 @@ nodes =
     this.cards = [{email: ''}];
     this.addNewCards(this.currentNode.children[0]);
     this.addNewCards(this.currentNode);
+  }
+
+  login(){
+    this.navCtrl.push('WelcomePage');
   }
 }
