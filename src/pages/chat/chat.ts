@@ -1,7 +1,7 @@
 import { Component, NgZone } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, Platform } from 'ionic-angular';
 
-
+import { WelcomePage } from '../pages';
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -20,7 +20,7 @@ export class ChatPage {
   
   answers = [];
 
-  constructor(public platform: Platform, public ngZone: NgZone) {
+  constructor(public navCtrl: NavController, public platform: Platform, public ngZone: NgZone) {
     platform.ready().then(() => {
       ApiAIPromises.new().init({
         clientAccessToken: "5bba57cb783d4a32a052ebabd1feb7b9"
@@ -39,6 +39,12 @@ export class ChatPage {
         this.answers.push(speech);
        });
     })
+  }
+
+
+  login() {
+    
+    this.navCtrl.push('WelcomePage');
   }
 
 }
