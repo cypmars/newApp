@@ -581,6 +581,15 @@ nodes =
     this.addNewCards(this.currentNode);
   }
 
+  ionViewWillLeave(){
+    this.currentNode = this.nodes;
+    this.swingStack.throwin.subscribe((event: DragEvent) => {
+    });
+    this.cards = [{email: ''}];
+    this.addNewCards(this.currentNode.children[0]);
+    this.addNewCards(this.currentNode);
+  }
+
   login(){
     this.navCtrl.push('WelcomePage');
   }
