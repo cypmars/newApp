@@ -581,7 +581,7 @@ nodes =
     this.addNewCards(this.currentNode);
   }
 
-  ionViewWillLeave(){
+  ionViewDidLeave(){
     this.currentNode = this.nodes;
     this.swingStack.throwin.subscribe((event: DragEvent) => {
     });

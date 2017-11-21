@@ -108,4 +108,8 @@ export class ResultPage implements OnInit, OnDestroy{
   public ngOnDestroy(): void {
       this.visNetworkService.off(this.visNetwork, 'click');
   }
+
+  prev(){
+    this.navCtrl.pop();
+  }
 }
