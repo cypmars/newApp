@@ -67,39 +67,39 @@ webpackEmptyAsyncContext.id = 113;
 
 var map = {
 	"../pages/ServiceDetails/serviceDetails.module": [
-		287,
+		288,
 		9
 	],
 	"../pages/chat/chat.module": [
-		295,
+		285,
 		8
 	],
 	"../pages/news/news.module": [
-		285,
+		286,
 		7
 	],
 	"../pages/result/result.module": [
-		286,
+		287,
 		0
 	],
 	"../pages/signup/signup.module": [
-		288,
+		289,
 		2
 	],
 	"../pages/simple-form/simple-form.module": [
-		289,
+		290,
 		4
 	],
 	"../pages/simple-form1/simple-form1.module": [
-		290,
+		291,
 		6
 	],
 	"../pages/simple-form2/simple-form2.module": [
-		291,
+		292,
 		5
 	],
 	"../pages/tabs/tabs.module": [
-		292,
+		293,
 		10
 	],
 	"../pages/tinderQ/tinderQ.module": [
@@ -107,7 +107,7 @@ var map = {
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		293,
+		295,
 		3
 	]
 };
@@ -188,6 +188,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_8_angular2_swing__["SwingModule"],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                 links: [
+                    { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/ServiceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
@@ -196,9 +197,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tinderQ/tinderQ.module#TinderQPageModule', name: 'TinderQPage', segment: 'tinderQ', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],

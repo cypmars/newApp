@@ -110,7 +110,11 @@ export class ChatPage {
            }
           this.messages.push(answer);
          });
-      });
+      })
+      .fail(function (error) {
+        // some error processing 
+        console.log(error);
+    });
 
     }
     this.chatBox = '';

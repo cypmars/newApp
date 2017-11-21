@@ -1,6 +1,6 @@
 webpackJsonp([8],{
 
-/***/ 295:
+/***/ 285:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPageModule", function() { return ChatPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(617);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(608);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,7 +41,7 @@ ChatPageModule = __decorate([
 
 /***/ }),
 
-/***/ 617:
+/***/ 608:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -103,9 +103,13 @@ var ChatPage = (function () {
         this.chatBox = '';
         platform.ready().then(function () {
             ApiAIPromises.new().init({
-                clientAccessToken: "5bba57cb783d4a32a052ebabd1feb7b9"
+                clientAccessToken: "cd413db2c8ca47c2819f4f7482a86d46"
             })
-                .then(function (result) { return console.log(result); });
+                .then(function (result) { return console.log(result); })
+                .fail(function (error) {
+                // some error processing 
+                console.log(error);
+            });
         });
     }
     ChatPage.prototype.ask = function (message) {
@@ -139,6 +143,10 @@ var ChatPage = (function () {
                     };
                     _this.messages.push(answer);
                 });
+            })
+                .fail(function (error) {
+                // some error processing 
+                console.log(error);
             });
         }
         this.chatBox = '';
@@ -156,16 +164,15 @@ var ChatPage = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */]),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */])
 ], ChatPage.prototype, "content", void 0);
 ChatPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-chat',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat\chat.html"*/'\n\n  <ion-header no-border>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n\n\n    </ion-buttons>\n\n    <ion-title>\n\n\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n  <div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">\n\n		<div *ngIf="user._id !== message.userId">\n\n			<img (click)="viewProfile(message)" class="profile-pic left" [src]="toUser.pic" />\n\n			<!--  wave-->\n\n			<div class="chat-bubble left slide-left">\n\n\n\n				<div class="message" [innerHTML]="message.text" autolinker>\n\n				</div>\n\n\n\n				<div class="message-detail">\n\n					<span (click)="viewProfile(message)" class="bold">{{toUser.username}}</span>,\n\n					<span>{{message.date }}</span>\n\n				</div>\n\n\n\n			</div>\n\n		</div>\n\n\n\n		<div *ngIf="user._id === message.userId">\n\n\n\n			<img (click)="viewProfile(message)" class="profile-pic right" [src]="user.pic" />\n\n\n\n			<div class="chat-bubble right slide-right">\n\n\n\n				<div class="message" [innerHTML]="message.text" autolinker>\n\n				</div>\n\n\n\n				<div class="message-detail">\n\n					<span (click)="viewProfile(message)" class="bold">{{user.username}}</span>,\n\n					<span>{{message.date}}</span>\n\n				</div>\n\n\n\n			</div>\n\n\n\n		</div>\n\n\n\n		<div class="cf"></div>\n\n\n\n  </div>  \n\n  \n\n</ion-content>\n\n<ion-footer>\n\n	<form [formGroup]="messageForm" (submit)="ask(chatBox)" novalidate>\n\n		<ion-item>\n\n			<ion-input formControlName="message" [(ngModel)]="chatBox" placeholder="Send a message..."></ion-input>\n\n			<button ion-button clear (click)="ask(chatBox)" item-end><ion-icon class="footer-btn" name="send"></ion-icon></button>\n\n		</ion-item>\n\n	</form>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat\chat.html"*/
+        selector: 'page-chat',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat\chat.html"*/'\n\n  <ion-header no-border>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n\n\n    </ion-buttons>\n\n    <ion-title>\n\n\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n	<div> hello network</div>\n\n  <div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">\n\n		<div *ngIf="user._id !== message.userId">\n\n			<img (click)="viewProfile(message)" class="profile-pic left" [src]="toUser.pic" />\n\n			<!--  wave-->\n\n			<div class="chat-bubble left slide-left">\n\n\n\n				<div class="message" [innerHTML]="message.text" autolinker>\n\n				</div>\n\n\n\n				<div class="message-detail">\n\n					<span (click)="viewProfile(message)" class="bold">{{toUser.username}}</span>,\n\n					<span></span>\n\n				</div>\n\n\n\n			</div>\n\n		</div>\n\n\n\n		<div *ngIf="user._id === message.userId">\n\n\n\n			<img (click)="viewProfile(message)" class="profile-pic right" [src]="user.pic" />\n\n\n\n			<div class="chat-bubble right slide-right">\n\n\n\n				<div class="message" [innerHTML]="message.text" autolinker>\n\n				</div>\n\n\n\n				<div class="message-detail">\n\n					<span (click)="viewProfile(message)" class="bold">{{user.username}}</span>,\n\n					<span></span>\n\n				</div>\n\n\n\n			</div>\n\n\n\n		</div>\n\n\n\n		<div class="cf"></div>\n\n\n\n  </div>  \n\n  \n\n</ion-content>\n\n<ion-footer>\n\n	<form [formGroup]="messageForm" (submit)="ask(chatBox)" novalidate>\n\n		<ion-item>\n\n			<ion-input formControlName="message" [(ngModel)]="chatBox" placeholder="Send a message..."></ion-input>\n\n			<button ion-button clear (click)="ask(chatBox)" item-end><ion-icon class="footer-btn" name="send"></ion-icon></button>\n\n		</ion-item>\n\n	</form>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat\chat.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"]])
 ], ChatPage);
 
-var _a, _b, _c, _d, _e;
 //# sourceMappingURL=chat.js.map
 
 /***/ })
