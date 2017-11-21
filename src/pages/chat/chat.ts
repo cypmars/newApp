@@ -56,8 +56,6 @@ export class ChatPage {
   public messageForm: any;
   chatBox: any;
 
-  answers = [];
-
   constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public platform: Platform, public ngZone: NgZone) {
     this.messageForm = formBuilder.group({
       message: new FormControl('')
@@ -72,7 +70,7 @@ export class ChatPage {
       .fail(function (error) {
         // some error processing 
         console.log(error);
-    });
+      });
 
     });
   }
@@ -101,7 +99,7 @@ export class ChatPage {
          this.ngZone.run(()=> {
            const answer = {
             toId: this.user._id,
-            _id: 6,
+            _id: this.messages.length,
             date: new Date(),
             userId: this.toUser._id,
             username: this.toUser.username,
@@ -114,7 +112,7 @@ export class ChatPage {
       .fail(function (error) {
         // some error processing 
         console.log(error);
-    });
+      });
 
     }
     this.chatBox = '';

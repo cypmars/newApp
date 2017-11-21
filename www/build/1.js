@@ -17574,7 +17574,7 @@ var TinderQPage = (function () {
         this.addNewCards(this.currentNode.children[0]);
         this.addNewCards(this.currentNode);
     };
-    TinderQPage.prototype.ionViewWillLeave = function () {
+    TinderQPage.prototype.ionViewDidLeave = function () {
         this.currentNode = this.nodes;
         this.swingStack.throwin.subscribe(function (event) {
         });
