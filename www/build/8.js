@@ -1,6 +1,6 @@
 webpackJsonp([8],{
 
-/***/ 285:
+/***/ 295:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPageModule", function() { return ChatPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(608);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(617);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,7 +41,7 @@ ChatPageModule = __decorate([
 
 /***/ }),
 
-/***/ 608:
+/***/ 617:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69,12 +69,12 @@ var ChatPage = (function () {
         this.ngZone = ngZone;
         this.toUser = {
             _id: '534b8e5aaa5e7afc1b23e69b',
-            pic: 'assets/img/avatar/ian-avatar.png',
-            username: 'Venkman',
+            pic: 'assets/img/bot.png',
+            username: 'BoBot',
         };
         this.user = {
             _id: '534b8fb2aa5e7afc1b23e69c',
-            pic: 'assets/img/avatar/marty-avatar.png',
+            pic: 'assets/img/logo2.png',
             username: 'Sandy',
         };
         this.doneLoading = false;
@@ -101,12 +101,12 @@ var ChatPage = (function () {
             message: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormControl */]('')
         });
         this.chatBox = '';
-        // platform.ready().then(() => {
-        //   ApiAIPromises.new().init({
-        //     clientAccessToken: "5bba57cb783d4a32a052ebabd1feb7b9"
-        //   })
-        //   .then((result) =>  console.log(result))
-        // });
+        platform.ready().then(function () {
+            ApiAIPromises.new().init({
+                clientAccessToken: "5bba57cb783d4a32a052ebabd1feb7b9"
+            })
+                .then(function (result) { return console.log(result); });
+        });
     }
     ChatPage.prototype.ask = function (message) {
         var _this = this;
@@ -116,19 +116,28 @@ var ChatPage = (function () {
                 _id: 6,
                 date: new Date(),
                 userId: this.user._id,
-                username: this.toUser.username,
-                pic: this.toUser.pic,
+                username: this.user.username,
+                pic: this.user.pic,
                 text: message
             };
             this.messages.push(messageData);
             this.scrollToBottom();
             ApiAIPromises.requestText({
-                query: this.chatBox
+                query: message
             })
                 .then(function (_a) {
                 var speech = _a.result.fulfillment.speech;
                 _this.ngZone.run(function () {
-                    _this.messages.push(speech);
+                    var answer = {
+                        toId: _this.user._id,
+                        _id: 6,
+                        date: new Date(),
+                        userId: _this.toUser._id,
+                        username: _this.toUser.username,
+                        pic: _this.toUser.pic,
+                        text: speech
+                    };
+                    _this.messages.push(answer);
                 });
             });
         }

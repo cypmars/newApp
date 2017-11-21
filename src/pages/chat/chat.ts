@@ -8,7 +8,7 @@ import { WelcomePage } from '../pages';
  * If you'd like to immediately put the user onto a login/signup page,
  * we recommend not using the Welcome page.
 */
-// declare var ApiAIPromises: any;
+declare var ApiAIPromises: any;
 
 @IonicPage()
 @Component({
@@ -20,13 +20,13 @@ export class ChatPage {
   
   toUser = {
     _id: '534b8e5aaa5e7afc1b23e69b',
-    pic: 'assets/img/avatar/ian-avatar.png',
-    username: 'Venkman',
+    pic: 'assets/img/bot.png',
+    username: 'BoBot',
   };
 
   user = {
     _id: '534b8fb2aa5e7afc1b23e69c',
-    pic: 'assets/img/avatar/marty-avatar.png',
+    pic: 'assets/img/logo2.png',
     username: 'Sandy',
   };
 
@@ -64,13 +64,13 @@ export class ChatPage {
     });
     this.chatBox = '';
 
-    // platform.ready().then(() => {
-    //   ApiAIPromises.new().init({
-    //     clientAccessToken: "5bba57cb783d4a32a052ebabd1feb7b9"
-    //   })
-    //   .then((result) =>  console.log(result))
+    platform.ready().then(() => {
+      ApiAIPromises.new().init({
+        clientAccessToken: "5bba57cb783d4a32a052ebabd1feb7b9"
+      })
+      .then((result) =>  console.log(result))
 
-    // });
+    });
   }
 
   ask(message) {
@@ -82,22 +82,31 @@ export class ChatPage {
         _id: 6,
         date: new Date(),
         userId: this.user._id,
-        username: this.toUser.username,
-        pic: this.toUser.pic,
+        username: this.user.username,
+        pic: this.user.pic,
         text: message
       };
 
       this.messages.push(messageData);
       this.scrollToBottom();
 
-      // ApiAIPromises.requestText({
-      //   query: this.chatBox
-      // })
-      // .then(({result: {fulfillment: {speech}}}) => {
-      //    this.ngZone.run(()=> {
-      //     this.messages.push(speech);
-      //    });
-      // });
+      ApiAIPromises.requestText({
+        query: message
+      })
+      .then(({result: {fulfillment: {speech}}}) => {
+         this.ngZone.run(()=> {
+           const answer = {
+            toId: this.user._id,
+            _id: 6,
+            date: new Date(),
+            userId: this.toUser._id,
+            username: this.toUser.username,
+            pic: this.toUser.pic,
+            text: speech
+           }
+          this.messages.push(answer);
+         });
+      });
 
     }
     this.chatBox = '';
