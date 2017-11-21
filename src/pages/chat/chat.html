@@ -13,6 +13,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
+	<div> hello network</div>
   <div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">
 		<div *ngIf="user._id !== message.userId">
 			<img (click)="viewProfile(message)" class="profile-pic left" [src]="toUser.pic" />
