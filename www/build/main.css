@@ -27074,16 +27074,11 @@ page-tinderQ .content-md, page-tinderQ .content-ios {
   /* Standard syntax */
 }
 
-page-tinderQ .splash-relative {
-  position: absolute;
-  width: 90%;
-  margin-right: 5%;
-  margin-left: 5%;
-}
-
 page-tinderQ .splash-form {
   margin-right: 10%;
   margin-left: 10%;
+  margin-top: 15%;
+  height: 80%;
 }
 
 page-tinderQ .item-md, page-tinderQ .item-ios {

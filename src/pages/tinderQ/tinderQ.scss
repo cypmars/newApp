@@ -7,16 +7,12 @@ page-tinderQ {
     background: linear-gradient(-90deg, #b2284e, #2a73d3); /* Standard syntax */
   }
 
-  .splash-relative{
-    position: absolute;
-    width: 90%;
-    margin-right: 5%;
-    margin-left:5%;
-  }
-
   .splash-form{
     margin-right: 10%;
     margin-left:10%;
+    margin-top:15%;
+    height: 80%;
+    
   }
 
   .item-md, .item-ios{
@@ -40,6 +36,7 @@ page-tinderQ {
     height: 200px;
     margin: 30px auto 0;
     position: relative;
+    
   }
  
   #card-stack ion-card {
