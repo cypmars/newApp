@@ -26296,7 +26296,7 @@ page-result .content-md, page-result .content-ios {
 
 page-result .splash-relative {
   position: absolute;
-  width: 90%;
+  width: 100%;
 }
 
 page-result .item-md, page-result .item-ios {

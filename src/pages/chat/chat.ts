@@ -64,7 +64,7 @@ export class ChatPage {
 
     platform.ready().then(() => {
       ApiAIPromises.new().init({
-        clientAccessToken: "cd413db2c8ca47c2819f4f7482a86d46"
+        clientAccessToken: "099b97242c1745bd92c163cd27d2c767"
       })
       .then((result) =>  console.log(result))
       .fail(function (error) {

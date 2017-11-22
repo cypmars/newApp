@@ -43,6 +43,7 @@ export class ResultPage implements OnInit, OnDestroy{
   public visNetworkOptions: VisNetworkOptions;
   public visNetworkService: VisNetworkService;
 
+  firstT: boolean = true;
   constructor(private http: Http, public navCtrl: NavController, private visNetworkServ: VisNetworkService, public navParams: NavParams) {
    
     this.visNetworkService = visNetworkServ;
@@ -59,20 +60,25 @@ export class ResultPage implements OnInit, OnDestroy{
   }
 
   public networkInitialized(): void {
-     // now we can use the service to register on events
-     this.visNetworkService.on(this.visNetwork, 'click');
-     
-      // open your console/dev tools to see the click params
-      this.visNetworkService.click
-          .subscribe((eventData: any[]) => {
-              if (eventData[0] === this.visNetwork) {
-                this.navCtrl.push('ServiceDetailsPage');
-                console.log(eventData[1]);
-                console.log(this.visNetworkService.getSelectedNodes(this.visNetwork));
-              }
-          });
+    
+        // now we can use the service to register on events
+        this.visNetworkService.on(this.visNetwork, 'click');
+
+        // open your console/dev tools to see the click params
+        this.visNetworkService.click
+        .subscribe((eventData: any[]) => {
+          if (this.firstT)
+          {
+            if (eventData[0] === this.visNetwork) {
+              this.navCtrl.push('ServiceDetailsPage');
+              console.log(eventData[1]);
+              console.log(this.visNetworkService.getSelectedNodes(this.visNetwork));
+            }
+          }
+        });
   }
   
+
   public ngOnInit(): void {
       const nodes = new VisNodes([
           { id: '1', label: 'Propreté en milieu classique' },
@@ -106,10 +112,12 @@ export class ResultPage implements OnInit, OnDestroy{
 
   
   public ngOnDestroy(): void {
-      this.visNetworkService.off(this.visNetwork, 'click');
+    this.visNetworkService.off(this.visNetwork, 'click');
+    this.firstT = false;
   }
 
   prev(){
+    this.visNetworkService.off(this.visNetwork, 'click');
     this.navCtrl.pop();
   }
 }

@@ -95,19 +95,19 @@ var map = {
 		6
 	],
 	"../pages/simple-form2/simple-form2.module": [
-		292,
+		293,
 		5
 	],
 	"../pages/tabs/tabs.module": [
-		293,
+		292,
 		10
 	],
 	"../pages/tinderQ/tinderQ.module": [
-		294,
+		295,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		295,
+		294,
 		3
 	]
 };
@@ -195,10 +195,10 @@ AppModule = __decorate([
                     { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tinderQ/tinderQ.module#TinderQPageModule', name: 'TinderQPage', segment: 'tinderQ', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tinderQ/tinderQ.module#TinderQPageModule', name: 'TinderQPage', segment: 'tinderQ', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],

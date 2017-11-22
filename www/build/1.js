@@ -1,5 +1,5 @@
-webpackJsonp([1],Array(294).concat([
-/* 294 */
+webpackJsonp([1],Array(295).concat([
+/* 295 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(616);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(617);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -46,7 +46,6 @@ TinderQPageModule = __decorate([
 //# sourceMappingURL=tinderQ.module.js.map
 
 /***/ }),
-/* 295 */,
 /* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17032,7 +17031,8 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* 613 */,
 /* 614 */,
 /* 615 */,
-/* 616 */
+/* 616 */,
+/* 617 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17597,7 +17597,7 @@ __decorate([
 ], TinderQPage.prototype, "swingCards", void 0);
 TinderQPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-tinderQ',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n    <div class="splash-relative">\n\n        <p class="white-text margin-plus" text-center>Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      \n\n                      <ion-item *ngIf="c.question">\n\n                          <div id="validate-or-not" class="validate-or-not"></div>\n\n                          <img *ngIf="c.img_src" [src]="c.img_src">\n\n                          <h1 class="relative-pos" style="color: black;">{{ c.question }}</h1>\n\n                      </ion-item>\n\n                 \n\n                      <ion-row *ngIf="c.name">\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                              <ion-icon name="checkmark-circle"></ion-icon>\n\n                              YES\n\n                          </button>\n\n                        </ion-col>\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                            <ion-icon name="close-circle"></ion-icon>\n\n                            NO\n\n                          </button>\n\n                        </ion-col>\n\n                      </ion-row>\n\n                    </ion-card>\n\n                  </div>\n\n                  <p style="text-align: center; width: 100%;">{{ recentCard }}</p>\n\n              </div>\n\n        </div>\n\n    </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/
+        selector: 'page-tinderQ',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n    <div class="splash-relative">\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      \n\n                      <ion-item *ngIf="c.question">\n\n                          <div id="validate-or-not" class="validate-or-not"></div>\n\n                          <img *ngIf="c.img_src" [src]="c.img_src">\n\n                          <h1 class="relative-pos" style="color: black;">{{ c.question }}</h1>\n\n                      </ion-item>\n\n                 \n\n                      <ion-row *ngIf="c.name">\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                              <ion-icon name="checkmark-circle"></ion-icon>\n\n                              YES\n\n                          </button>\n\n                        </ion-col>\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                            <ion-icon name="close-circle"></ion-icon>\n\n                            NO\n\n                          </button>\n\n                        </ion-col>\n\n                      </ion-row>\n\n                    </ion-card>\n\n                  </div>\n\n                  <p style="text-align: center; width: 100%;">{{ recentCard }}</p>\n\n              </div>\n\n        </div>\n\n    </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], TinderQPage);
