@@ -27074,11 +27074,23 @@ page-tinderQ .content-md, page-tinderQ .content-ios {
   /* Standard syntax */
 }
 
+page-tinderQ .splash-info {
+  height: 70%;
+}
+
 page-tinderQ .splash-form {
   margin-right: 10%;
   margin-left: 10%;
-  margin-top: 15%;
-  height: 80%;
+  height: 100%;
+  display: -webkit-box !important;
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
 }
 
 page-tinderQ .item-md, page-tinderQ .item-ios {
@@ -27099,7 +27111,7 @@ page-tinderQ .item-input ion-label {
 
 page-tinderQ #card-stack {
   width: 90%;
-  height: 200px;
+  height: 50vh;
   margin: 30px auto 0;
   position: relative;
 }
@@ -27167,6 +27179,10 @@ page-tinderQ .row {
 page-tinderQ .button-ios, page-tinderQ .button-md {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
+}
+
+page-tinderQ ion-label {
+  white-space: unset;
 }
 
 page-welcome ion-content {

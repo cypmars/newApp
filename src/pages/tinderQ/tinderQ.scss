@@ -7,11 +7,17 @@ page-tinderQ {
     background: linear-gradient(-90deg, #b2284e, #2a73d3); /* Standard syntax */
   }
 
+  .splash-info{
+    height: 70%;
+  }
   .splash-form{
     margin-right: 10%;
     margin-left:10%;
-    margin-top:15%;
-    height: 80%;
+    height: 100%;
+    display: -webkit-box !important;
+    justify-content: center !important;
+    align-items: center !important;
+
     
   }
 
@@ -33,7 +39,7 @@ page-tinderQ {
 
   #card-stack {
     width: 90%;
-    height: 200px;
+    height: 50vh;
     margin: 30px auto 0;
     position: relative;
     
@@ -101,5 +107,9 @@ page-tinderQ {
   .button-ios, .button-md{
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+  }
+
+  ion-label{
+    white-space: unset;
   }
 }
