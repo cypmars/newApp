@@ -67,51 +67,51 @@ webpackEmptyAsyncContext.id = 115;
 
 var map = {
 	"../pages/ServiceDetails/serviceDetails.module": [
-		290,
+		292,
 		10
 	],
 	"../pages/chat/chat.module": [
-		287,
+		288,
 		8
 	],
 	"../pages/chat2/chat2.module": [
-		298,
+		287,
 		9
 	],
 	"../pages/news/news.module": [
-		288,
+		289,
 		7
 	],
 	"../pages/result/result.module": [
-		289,
+		291,
 		0
 	],
 	"../pages/signup/signup.module": [
-		292,
+		290,
 		2
 	],
 	"../pages/simple-form/simple-form.module": [
-		291,
+		294,
 		4
 	],
 	"../pages/simple-form1/simple-form1.module": [
-		297,
+		293,
 		6
 	],
 	"../pages/simple-form2/simple-form2.module": [
-		293,
+		296,
 		5
 	],
 	"../pages/tabs/tabs.module": [
-		294,
+		295,
 		11
 	],
 	"../pages/tinderQ/tinderQ.module": [
-		295,
+		297,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		296,
+		298,
 		3
 	]
 };
@@ -196,18 +196,18 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_10_angular2_swing__["SwingModule"],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                 links: [
+                    { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/ServiceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tinderQ/tinderQ.module#TinderQPageModule', name: 'TinderQPage', segment: 'tinderQ', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tinderQ/tinderQ.module#TinderQPageModule', name: 'TinderQPage', segment: 'tinderQ', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -376,7 +376,7 @@ var MainPage = 'TabsPage';
 // The initial root pages for our tabs (remove if not using tabs)
 var Tab1Root = 'NewsPage';
 var Tab2Root = 'SimpleFormPage';
-var Tab3Root = 'Chat2Page';
+var Tab3Root = 'ChatPage';
 //# sourceMappingURL=pages.js.map
 
 /***/ })
