@@ -95,6 +95,7 @@ export class Chat2Page {
             query,
           },
            (response) => {
+            alert(response.result.fulfillment.speech);
              console.log(JSON.stringify(response))
              console.log(JSON.stringify(response.result))
              let layout = response.result.fulfillment.data.layout;
@@ -133,6 +134,7 @@ export class Chat2Page {
     } catch (e) {
         alert(e);
     }
+    alert('fin de SendText');
   }
 
   async SendTextFromVoice(query):Promise<any> {
@@ -221,7 +223,7 @@ export class Chat2Page {
       text: this.newMessage,
       time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
     });
-
+    alert(this.newMessage);
     this.SendText(this.newMessage);
 
     delete this.newMessage;
