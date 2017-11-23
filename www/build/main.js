@@ -1,4 +1,4 @@
-webpackJsonp([11],{
+webpackJsonp([12],{
 
 /***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -67,47 +67,51 @@ webpackEmptyAsyncContext.id = 115;
 
 var map = {
 	"../pages/ServiceDetails/serviceDetails.module": [
-		290,
-		9
+		291,
+		10
 	],
 	"../pages/chat/chat.module": [
 		287,
 		8
 	],
-	"../pages/news/news.module": [
+	"../pages/chat2/chat2.module": [
 		288,
+		9
+	],
+	"../pages/news/news.module": [
+		289,
 		7
 	],
 	"../pages/result/result.module": [
-		289,
+		290,
 		0
 	],
 	"../pages/signup/signup.module": [
-		291,
+		292,
 		2
 	],
 	"../pages/simple-form/simple-form.module": [
-		292,
+		293,
 		4
 	],
 	"../pages/simple-form1/simple-form1.module": [
-		293,
+		294,
 		6
 	],
 	"../pages/simple-form2/simple-form2.module": [
-		294,
+		295,
 		5
 	],
 	"../pages/tabs/tabs.module": [
-		295,
-		10
+		296,
+		11
 	],
 	"../pages/tinderQ/tinderQ.module": [
-		296,
+		297,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		297,
+		298,
 		3
 	]
 };
@@ -151,7 +155,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_text_to_speech__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_text_to_speech__ = __webpack_require__(225);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_speech_recognition__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(286);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tabs_tabs__ = __webpack_require__(112);
@@ -193,6 +197,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                 links: [
                     { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/ServiceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
@@ -347,6 +352,7 @@ MyApp = __decorate([
 /* unused harmony export TinderQPage */
 /* unused harmony export ChatBubble */
 /* unused harmony export ChatPage */
+/* unused harmony export Chat2Page */
 /* unused harmony export ServiceDetailsPage */
 /* unused harmony export ResultPage */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainPage; });
@@ -363,13 +369,14 @@ var SimpleForm2Page = 'SimpleForm2Page';
 var TinderQPage = 'TinderQPage';
 var ChatBubble = 'ChatBubble';
 var ChatPage = 'ChatPage';
+var Chat2Page = 'Chat2Page';
 var ServiceDetailsPage = 'ServiceDetailsPage';
 var ResultPage = 'ResultPage';
 var MainPage = 'TabsPage';
 // The initial root pages for our tabs (remove if not using tabs)
 var Tab1Root = 'NewsPage';
 var Tab2Root = 'SimpleFormPage';
-var Tab3Root = 'ChatPage';
+var Tab3Root = 'Chat2Page';
 //# sourceMappingURL=pages.js.map
 
 /***/ })
