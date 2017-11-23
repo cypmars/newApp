@@ -175,7 +175,7 @@ export class Chat2Page {
     } catch (e) {
         alert(e);
     }
-  }
+    }
 
   async getSupportedLanguages():Promise<Array<string>> {
     try{

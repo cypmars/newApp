@@ -174,19 +174,19 @@ var Chat2Page = (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        _a.trys.push([0, 2, , 3]);
+                        alert('enter in sendText');
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
                         return [4 /*yield*/, ApiAIPlugin.requestText({
                                 query: query,
-                                originalRequest: {
-                                    source: 'WWT chat bot',
-                                    data: 'messages'
-                                }
                             }, function (response) {
                                 console.log(JSON.stringify(response));
                                 console.log(JSON.stringify(response.result));
                                 var layout = response.result.fulfillment.data.layout;
                                 var speech = response.result.fulfillment;
                                 if (response.result.fulfillment.speech) {
+                                    alert(response.result.fulfillment.speech);
                                     if (_this.platform.is('ios')) {
                                         _this.messages.push({
                                             isHuman: false,
@@ -218,14 +218,16 @@ var Chat2Page = (function () {
                             }, function (error) {
                                 console.error(error);
                             })];
-                    case 1:
-                        _a.sent();
-                        return [3 /*break*/, 3];
                     case 2:
+                        _a.sent();
+                        return [3 /*break*/, 4];
+                    case 3:
                         e_2 = _a.sent();
                         alert(e_2);
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                        return [3 /*break*/, 4];
+                    case 4:
+                        alert('fin de SendText');
+                        return [2 /*return*/];
                 }
             });
         });
@@ -366,6 +368,7 @@ var Chat2Page = (function () {
                     text: this.newMessage,
                     time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
                 });
+                alert(this.newMessage);
                 this.SendText(this.newMessage);
                 delete this.newMessage;
                 return [2 /*return*/];
@@ -378,11 +381,12 @@ var Chat2Page = (function () {
 }());
 Chat2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-chat2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/'\n\n <ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>WWT Assistant</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="content-stable" on-swipe-left="hideTime = false" on-swipe-right="hideTime = true">\n\n  <div *ngFor="let message of messages" [ngClass]="{\'other\': !message.isHuman}" class="messages">\n\n    <div class="message" *ngIf="message.isHuman" [ngClass]="{\'slide-right\': hideTime, \'\': !hideTime}">\n\n      <span>{{ message.text }}</span>\n\n    </div>\n\n    <div class="message" *ngIf="!message.isHuman && !message.layout" [ngClass]="{\'slide-right\': hideTime, \'\': !hideTime}">\n\n      <span>{{ message.text.speech }}</span>\n\n    </div>\n\n    <div class="opportunity" *ngIf="!message.isHuman && message.layout === \'opportunityList\'" [ngClass]="{\'slide-right\': hideTime, \'\': !hideTime}">\n\n      <h3>Your top opportunities are:</h3>\n\n      <div *ngFor="let opp of message.text.data.opportunityList">\n\n        <span><b>{{ opp.Name }}</b><br>\n\n        Revenue: ${{ opp.Total_Revenue__c }}<br>\n\n        GP: ${{ opp.Total_Opportunity_GP__c }}\n\n        </span>\n\n      </div>\n\n    </div>\n\n    <div class="time" [ngClass]="{\'slide-right\': hideTime, \'\': !hideTime}">{{message.time}}</div>\n\n  </div>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-toolbar position="bottom">\n\n      <ion-badge class="message-form-badge" (click)="listenForSpeech()">\n\n        <ion-icon name="mic"></ion-icon>\n\n      </ion-badge>\n\n      <input type="text" placeholder="Type a message..." [(ngModel)]="newMessage">\n\n      <button type="submit" small class="message-form-button" (click)="sendMessage()">Send <ion-icon name="send"></ion-icon></button>\n\n  </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/
+        selector: 'page-chat2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/'\n\n <ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>WWT Assistant</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="content-stable" on-swipe-left="hideTime = false" on-swipe-right="hideTime = true">\n\n	<div>Test</div>\n\n  <div *ngFor="let message of messages" [ngClass]="{\'other\': !message.isHuman}" class="messages">\n\n    <div class="message" *ngIf="message.isHuman" [ngClass]="{\'slide-right\': hideTime, \'\': !hideTime}">\n\n      <span>{{ message.text }}</span>\n\n    </div>\n\n    <div class="message" *ngIf="!message.isHuman && !message.layout" [ngClass]="{\'slide-right\': hideTime, \'\': !hideTime}">\n\n      <span>{{ message.text.speech }}</span>\n\n    </div>\n\n    <div class="opportunity" *ngIf="!message.isHuman && message.layout === \'opportunityList\'" [ngClass]="{\'slide-right\': hideTime, \'\': !hideTime}">\n\n      <h3>Your top opportunities are:</h3>\n\n      <div *ngFor="let opp of message.text.data.opportunityList">\n\n        <span><b>{{ opp.Name }}</b><br>\n\n        Revenue: ${{ opp.Total_Revenue__c }}<br>\n\n        GP: ${{ opp.Total_Opportunity_GP__c }}\n\n        </span>\n\n      </div>\n\n    </div>\n\n    <div class="time" [ngClass]="{\'slide-right\': hideTime, \'\': !hideTime}">{{message.time}}</div>\n\n  </div>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-toolbar position="bottom">\n\n      <ion-badge class="message-form-badge" (click)="listenForSpeech()">\n\n        <ion-icon name="mic"></ion-icon>\n\n      </ion-badge>\n\n      <input type="text" placeholder="Type a message..." [(ngModel)]="newMessage">\n\n      <button type="submit" small class="message-form-button" (click)="sendMessage()">Send <ion-icon name="send"></ion-icon></button>\n\n  </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"], __WEBPACK_IMPORTED_MODULE_3__ionic_native_speech_recognition__["a" /* SpeechRecognition */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__["a" /* TextToSpeech */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_speech_recognition__["a" /* SpeechRecognition */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_speech_recognition__["a" /* SpeechRecognition */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__["a" /* TextToSpeech */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__["a" /* TextToSpeech */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _e || Object])
 ], Chat2Page);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=chat2.js.map
 
 /***/ })
