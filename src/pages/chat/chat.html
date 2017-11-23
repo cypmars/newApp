@@ -52,10 +52,10 @@
   
 </ion-content>
 <ion-footer>
-	<form [formGroup]="messageForm" (submit)="ask(chatBox)" novalidate>
+	<form [formGroup]="messageForm" (submit)="sendMessage()" novalidate>
 		<ion-item>
-			<ion-input formControlName="message" [(ngModel)]="chatBox" placeholder="Send a message..."></ion-input>
-			<button ion-button clear (click)="ask(chatBox)" item-end><ion-icon class="footer-btn" name="send"></ion-icon></button>
+			<ion-input formControlName="message" [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>
+			<button ion-button clear (click)="sendMessage()" item-end><ion-icon class="footer-btn" name="send"></ion-icon></button>
 		</ion-item>
 	</form>
 </ion-footer>

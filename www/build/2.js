@@ -1,15 +1,15 @@
 webpackJsonp([2],{
 
-/***/ 289:
+/***/ 291:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageModule", function() { return SignupPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(612);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(605);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(614);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(607);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_vis__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -33,7 +33,7 @@ SignupPageModule = __decorate([
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_3_ng2_vis__["VisModule"],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__signup__["a" /* SignupPage */])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__signup__["a" /* SignupPage */])
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__signup__["a" /* SignupPage */],
@@ -45,7 +45,7 @@ SignupPageModule = __decorate([
 
 /***/ }),
 
-/***/ 306:
+/***/ 308:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64,7 +64,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-var Vis = __webpack_require__(334);
+var Vis = __webpack_require__(336);
 var VisNetwork = (function (_super) {
     __extends(VisNetwork, _super);
     function VisNetwork() {
@@ -203,13 +203,13 @@ var VisEdges = (function (_super) {
     return VisEdges;
 }(Vis.DataSet));
 exports.VisEdges = VisEdges;
-__export(__webpack_require__(604));
-__export(__webpack_require__(335));
+__export(__webpack_require__(606));
+__export(__webpack_require__(337));
 
 
 /***/ }),
 
-/***/ 307:
+/***/ 309:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -228,7 +228,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-var Vis = __webpack_require__(334);
+var Vis = __webpack_require__(336);
 var VisTimelineItems = (function (_super) {
     __extends(VisTimelineItems, _super);
     function VisTimelineItems(data, options) {
@@ -367,13 +367,13 @@ var VisTimeline = (function (_super) {
     return VisTimeline;
 }(Vis.Timeline));
 exports.VisTimeline = VisTimeline;
-__export(__webpack_require__(336));
-__export(__webpack_require__(606));
+__export(__webpack_require__(338));
+__export(__webpack_require__(608));
 
 
 /***/ }),
 
-/***/ 334:
+/***/ 336:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60316,7 +60316,7 @@ exports["default"] = FloydWarshall;
 
 /***/ }),
 
-/***/ 335:
+/***/ 337:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60329,7 +60329,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(306);
+var index_1 = __webpack_require__(308);
 /**
  * A service to create, manage and control VisNetwork instances.
  *
@@ -61192,7 +61192,7 @@ exports.VisNetworkService = VisNetworkService;
 
 /***/ }),
 
-/***/ 336:
+/***/ 338:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61205,7 +61205,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(307);
+var index_1 = __webpack_require__(309);
 /**
  * A service to create, manage and control VisTimeline instances.
  *
@@ -61890,7 +61890,7 @@ exports.VisTimelineService = VisTimelineService;
 
 /***/ }),
 
-/***/ 604:
+/***/ 606:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61906,7 +61906,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var vis_network_service_1 = __webpack_require__(335);
+var vis_network_service_1 = __webpack_require__(337);
 /**
  * Use this directive with a div container to show network data.
  *
@@ -62021,7 +62021,7 @@ exports.VisNetworkDirective = VisNetworkDirective;
 
 /***/ }),
 
-/***/ 605:
+/***/ 607:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62037,9 +62037,9 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(306);
-var index_2 = __webpack_require__(307);
-__export(__webpack_require__(607));
+var index_1 = __webpack_require__(308);
+var index_2 = __webpack_require__(309);
+__export(__webpack_require__(609));
 var VisModule = (function () {
     function VisModule() {
     }
@@ -62057,7 +62057,7 @@ exports.VisModule = VisModule;
 
 /***/ }),
 
-/***/ 606:
+/***/ 608:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62073,8 +62073,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var vis_timeline_service_1 = __webpack_require__(336);
-var index_1 = __webpack_require__(307);
+var vis_timeline_service_1 = __webpack_require__(338);
+var index_1 = __webpack_require__(309);
 /**
  * Use this directive with a div container to show timeline data.
  *
@@ -62202,7 +62202,7 @@ exports.VisTimelineDirective = VisTimelineDirective;
 
 /***/ }),
 
-/***/ 607:
+/***/ 609:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62211,23 +62211,23 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(307));
-__export(__webpack_require__(306));
+__export(__webpack_require__(309));
+__export(__webpack_require__(308));
 
 
 /***/ }),
 
-/***/ 612:
+/***/ 614:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis_components_network__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis_components_network__ = __webpack_require__(308);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis_components_network___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_vis_components_network__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages__ = __webpack_require__(55);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -62384,9 +62384,9 @@ SignupPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n\n\n    </ion-buttons>\n\n        <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button>   \n\n    <ion-title>\n\n      S\'inscrire\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button *ngIf="lastSlide" ion-button icon-right (click)="next()">Next <ion-icon name="arrow-forward"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="splash-bg">\n\n     <ion-slides pager #signupSlider>\n\n  \n\n       <ion-slide>\n\n        <p *ngIf="submitAttempt" style="color: #ea6153;">S\'il-vous-plait, remplissez les champs suivants.</p>\n\n          <form [formGroup]="slideOneForm">\n\n      \n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Nom *</ion-label>\n\n                  <ion-input formControlName="firstName" type="text"></ion-input>\n\n              </ion-item>\n\n      \n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Prénom *</ion-label>\n\n                  <ion-input formControlName="lastName" type="text"></ion-input>\n\n              </ion-item>\n\n      \n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Téléphone *</ion-label>\n\n                  <ion-input formControlName="phone" type="number"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">E-Mail *</ion-label>\n\n                  <ion-input formControlName="email" type="email"></ion-input>\n\n              </ion-item>\n\n          </form>\n\n       </ion-slide>\n\n       <ion-slide>\n\n          <ion-list>\n\n            <form [formGroup]="slideTwoForm">\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Société</ion-label>\n\n                  <ion-input formControlName="company" type="text"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Adresse</ion-label>\n\n                  <ion-textarea formControlName="address"></ion-textarea>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Code Postal</ion-label>\n\n                  <ion-input formControlName="postcode" type="text"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Ville</ion-label>\n\n                  <ion-input formControlName="postcode" type="text"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Fonction</ion-label>\n\n                  <ion-input formControlName="job" type="text"></ion-input>\n\n              </ion-item>\n\n            </form>\n\n        </ion-list>\n\n       </ion-slide>\n\n       <ion-slide>\n\n          <ion-list>\n\n            <p>Quels sont vos secteurs d\'activités/métiers ?</p>\n\n            <div class="chart-container">\n\n                <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n            </div>\n\n            <button type="button" class="btn btn-default" (click)="addNode()">Add node</button>\n\n            <form [formGroup]="slideThreeForm">\n\n              <ion-item hidden>\n\n                  <ion-label floating class="white-text">Métier</ion-label>\n\n                  <ion-input formControlName="activity" type="text"></ion-input>\n\n              </ion-item>\n\n            </form>\n\n        </ion-list>\n\n       </ion-slide>\n\n       <ion-slide>\n\n          <ion-list>\n\n            <p>Êtes-vous déjà client ?</p>\n\n            <form [formGroup]="slideFourForm">\n\n              <ion-item hidden>\n\n                  <ion-label floating class="white-text">Client</ion-label>\n\n                  <ion-input formControlName="client" type="text"></ion-input>\n\n              </ion-item>\n\n            </form>\n\n        </ion-list>\n\n       </ion-slide>\n\n\n\n       <ion-slide>\n\n          <ion-list>\n\n              <p>Quels sont vos besoins ?</p>\n\n              <form [formGroup]="slideFiveForm">\n\n                <ion-item hidden>\n\n                    <ion-label floating class="white-text">Besoins</ion-label>\n\n                    <ion-input formControlName="need" type="text"></ion-input>\n\n                </ion-item>\n\n              </form>\n\n          </ion-list>\n\n          <button ion-button full color="primary" (click)="save()">Create Account!</button>\n\n       </ion-slide>\n\n  \n\n     </ion-slides>\n\n    </div>\n\n </ion-content>\n\n \n\n<!-- <ion-content>\n\n  <div class="splash-bg">\n\n      <div class="splash-relative">\n\n        <form (submit)="doSignup()">\n\n          <ion-grid>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Nom *</ion-label>\n\n                  <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Prénom *</ion-label>\n\n                  <ion-input type="text" [(ngModel)]="account.firstName" name="firstName"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Phone *</ion-label>\n\n                  <ion-input type="number" [(ngModel)]="account.phone" name="phone"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Fax</ion-label>\n\n                  <ion-input type="number" [(ngModel)]="account.fax" name="fax"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>E-Mail *</ion-label>\n\n                  <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Adresse</ion-label>\n\n                  <ion-input type="text" [(ngModel)]="account.address" name="address"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Code Postal</ion-label>\n\n                  <ion-input type="number" [(ngModel)]="account.postcode" name="postcode"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Ville</ion-label>\n\n                  <ion-input type="text" [(ngModel)]="account.city" name="city"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Société</ion-label>\n\n                  <ion-input type="text" [(ngModel)]="account.company" name="company"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Fonction</ion-label>\n\n                  <ion-input type="text" [(ngModel)]="account.job" name="job"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n                \n\n          </ion-grid>\n\n          <div padding>\n\n            <button ion-button color="primary" block>{{ \'SIGNUP_BUTTON\' }}</button>\n\n          </div>\n\n        </form>\n\n      </div>\n\n  </div>\n\n</ion-content> -->'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\signup\signup.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */],
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */],
-        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* ToastController */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */],
         __WEBPACK_IMPORTED_MODULE_3_ng2_vis_components_network__["VisNetworkService"]])
 ], SignupPage);
 
