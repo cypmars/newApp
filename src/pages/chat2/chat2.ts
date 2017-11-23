@@ -101,13 +101,12 @@ export class Chat2Page {
            (response) => {
              console.log(JSON.stringify(response))
              console.log(JSON.stringify(response.result))
-             let layout = response.result.fulfillment.data.layout;
              let speech = response.result.fulfillment;
                if(response.result.fulfillment.speech){
                  if(this.platform.is('ios')){
                     this.messages.push({
                       isHuman: false,
-                      layout: layout,
+                      layout: '',
                       text: speech,
                       time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
                     });
@@ -225,7 +224,6 @@ export class Chat2Page {
       text: this.newMessage,
       time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
     });
-    alert(this.newMessage);
     this.SendText(this.newMessage);
 
     delete this.newMessage;

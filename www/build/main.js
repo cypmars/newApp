@@ -67,7 +67,7 @@ webpackEmptyAsyncContext.id = 115;
 
 var map = {
 	"../pages/ServiceDetails/serviceDetails.module": [
-		292,
+		289,
 		10
 	],
 	"../pages/chat/chat.module": [
@@ -79,39 +79,39 @@ var map = {
 		9
 	],
 	"../pages/news/news.module": [
-		289,
+		291,
 		7
 	],
 	"../pages/result/result.module": [
-		291,
+		290,
 		0
 	],
 	"../pages/signup/signup.module": [
-		290,
+		294,
 		2
 	],
 	"../pages/simple-form/simple-form.module": [
-		294,
+		292,
 		4
 	],
 	"../pages/simple-form1/simple-form1.module": [
-		293,
+		298,
 		6
 	],
 	"../pages/simple-form2/simple-form2.module": [
-		296,
+		293,
 		5
 	],
 	"../pages/tabs/tabs.module": [
-		295,
+		296,
 		11
 	],
 	"../pages/tinderQ/tinderQ.module": [
-		297,
+		295,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		298,
+		297,
 		3
 	]
 };
@@ -198,16 +198,16 @@ AppModule = __decorate([
                 links: [
                     { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/ServiceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tinderQ/tinderQ.module#TinderQPageModule', name: 'TinderQPage', segment: 'tinderQ', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -376,7 +376,7 @@ var MainPage = 'TabsPage';
 // The initial root pages for our tabs (remove if not using tabs)
 var Tab1Root = 'NewsPage';
 var Tab2Root = 'SimpleFormPage';
-var Tab3Root = 'ChatPage';
+var Tab3Root = 'Chat2Page';
 //# sourceMappingURL=pages.js.map
 
 /***/ })
