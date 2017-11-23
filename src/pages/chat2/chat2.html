@@ -9,6 +9,7 @@
 </ion-header>
 
 <ion-content padding class="content-stable" on-swipe-left="hideTime = false" on-swipe-right="hideTime = true">
+	<div>Test</div>
   <div *ngFor="let message of messages" [ngClass]="{'other': !message.isHuman}" class="messages">
     <div class="message" *ngIf="message.isHuman" [ngClass]="{'slide-right': hideTime, '': !hideTime}">
       <span>{{ message.text }}</span>

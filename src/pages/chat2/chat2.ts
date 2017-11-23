@@ -89,18 +89,19 @@ export class Chat2Page {
   }
 
   async SendText(query):Promise<any> {
+    alert('enter in sendText');
     try {
         await ApiAIPlugin.requestText(
           {
-            query,
+            query: query,
           },
            (response) => {
-            alert(response.result.fulfillment.speech);
              console.log(JSON.stringify(response))
              console.log(JSON.stringify(response.result))
              let layout = response.result.fulfillment.data.layout;
              let speech = response.result.fulfillment;
                if(response.result.fulfillment.speech){
+                alert(response.result.fulfillment.speech);
                  if(this.platform.is('ios')){
                     this.messages.push({
                       isHuman: false,
