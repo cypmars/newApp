@@ -91,9 +91,14 @@ export class Chat2Page {
   async SendText(query):Promise<any> {
     alert('enter in sendText');
     try {
+        alert('a');
         await ApiAIPlugin.requestText(
           {
-            query: query,
+            query,
+            originalRequest: {
+              source: 'WWT chat bot',
+              data: 'messages'
+            }
           },
            (response) => {
              console.log(JSON.stringify(response))
@@ -101,7 +106,7 @@ export class Chat2Page {
              let layout = response.result.fulfillment.data.layout;
              let speech = response.result.fulfillment;
                if(response.result.fulfillment.speech){
-                alert(response.result.fulfillment.speech);
+                alert(speech);
                  if(this.platform.is('ios')){
                     this.messages.push({
                       isHuman: false,
@@ -135,7 +140,6 @@ export class Chat2Page {
     } catch (e) {
         alert(e);
     }
-    alert('fin de SendText');
   }
 
   async SendTextFromVoice(query):Promise<any> {
