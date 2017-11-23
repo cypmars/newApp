@@ -93,10 +93,6 @@ export class Chat2Page {
         await ApiAIPlugin.requestText(
           {
             query,
-            originalRequest: {
-              source: 'WWT chat bot',
-              data: 'messages'
-            }
           },
            (response) => {
              console.log(JSON.stringify(response))
@@ -226,7 +222,7 @@ export class Chat2Page {
       time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
     });
 
-    this.SendText(this.newMessage)
+    this.SendText(this.newMessage);
 
     delete this.newMessage;
   }
