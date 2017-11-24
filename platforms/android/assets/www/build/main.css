@@ -26490,6 +26490,10 @@ page-chat2 .loader .ion-loading-c {
   font-size: 64px;
 }
 
+page-chat2 ion-footer {
+  background-color: #f4f4f4;
+}
+
 page-news .splash-bg {
   background: #b2284e;
   /* For browsers that do not support gradients */

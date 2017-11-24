@@ -6,7 +6,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 
-declare var ApiAIPlugin: any;
 
 @Component({
   templateUrl: 'app.html'

@@ -44,10 +44,18 @@
   </div>
 </ion-content>
 
-<ion-footer color="primary">
-    <ion-item>
-        <ion-badge class="message-form-badge" (click)="listenForSpeech()"><ion-icon name="mic"></ion-icon></ion-badge>
-        <ion-input [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>
-        <button ion-button clear (click)="sendMessage()" item-end><ion-icon class="footer-btn" name="send"></ion-icon></button>
-    </ion-item>
+<ion-footer>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            <button ion-button clear (click)="listenForSpeech()"><ion-icon class="footer-btn" name="mic"></ion-icon></button>
+        </ion-col>
+        <ion-col col-8>
+            <ion-input [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>
+        </ion-col>
+        <ion-col>
+            <button ion-button clear (click)="sendMessage()"><ion-icon class="footer-btn" name="send"></ion-icon></button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 </ion-footer>

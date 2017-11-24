@@ -295,8 +295,8 @@ export class Chat2Page {
       text: this.newMessage
     });
     this.SendText(this.newMessage);
-
-    delete this.newMessage;
+    console.log(this.newMessage);
+    this.newMessage="";
   }
 
   buildCardLayout(data) {
