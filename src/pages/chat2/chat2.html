@@ -1,40 +1,53 @@
 
- <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>WWT Assistant</ion-title>
-  </ion-navbar>
-</ion-header>
+  <ion-header no-border>
+    <ion-navbar color="primary" hideBackButton="true">
+      <ion-buttons start>
+  
+      </ion-buttons>
+      <ion-title>
+  
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
 
-<ion-content padding class="content-stable" on-swipe-left="hideTime = false" on-swipe-right="hideTime = true">
-  <div *ngFor="let message of messages" [ngClass]="{'other': !message.isHuman}" class="messages">
-    <div class="message" *ngIf="message.isHuman" [ngClass]="{'slide-right': hideTime, '': !hideTime}">
-      <span>{{ message.text }}</span>
-    </div>
-    <div class="message" *ngIf="!message.isHuman && !message.layout" [ngClass]="{'slide-right': hideTime, '': !hideTime}">
-      <span>{{ message.text.speech }}</span>
-    </div>
-    <div class="opportunity" *ngIf="!message.isHuman && message.layout === 'opportunityList'" [ngClass]="{'slide-right': hideTime, '': !hideTime}">
-      <h3>Your top opportunities are:</h3>
-      <div *ngFor="let opp of message.text.data.opportunityList">
-        <span><b>{{ opp.Name }}</b><br>
-        Revenue: ${{ opp.Total_Revenue__c }}<br>
-        GP: ${{ opp.Total_Opportunity_GP__c }}
-        </span>
+<ion-content padding>
+  <div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">
+    <div *ngIf="user._id !== message.userId">
+      <img class="profile-pic left" [src]="toUser.pic" />
+      <div class="chat-bubble left slide-left">
+          
+         <div class="message" [innerHTML]="message.text.speech" autolinker></div>
+          
+        <div class="message-detail">
+          <span class="bold">{{toUser.username}}</span>
+        </div>
+          
       </div>
     </div>
-    <div class="time" [ngClass]="{'slide-right': hideTime, '': !hideTime}">{{message.time}}</div>
+    <div *ngIf="user._id === message.userId">
+      <img class="profile-pic right" [src]="user.pic" />
+
+      <div class="chat-bubble right slide-right">
+          
+        <div class="message" [innerHTML]="message.text" autolinker></div>
+
+        <div class="message-detail">
+          <span class="bold">{{user.username}}</span>
+        </div>
+
+      </div>
+    </div>
+    <div class="cf"></div>
   </div>
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar position="bottom">
-      <ion-badge class="message-form-badge" (click)="listenForSpeech()">
-        <ion-icon name="mic"></ion-icon>
-      </ion-badge>
-      <input type="text" placeholder="Type a message..." [(ngModel)]="newMessage">
-      <button type="submit" small class="message-form-button" (click)="sendMessage()">Send <ion-icon name="send"></ion-icon></button>
-  </ion-toolbar>
+<ion-footer color="primary">
+    <ion-item>
+        <ion-badge class="message-form-badge" (click)="listenForSpeech()"><ion-icon name="mic"></ion-icon></ion-badge>
+        <ion-input [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>
+        <button ion-button clear (click)="sendMessage()" item-end><ion-icon class="footer-btn" name="send"></ion-icon></button>
+    </ion-item>
 </ion-footer>

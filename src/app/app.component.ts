@@ -23,15 +23,6 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-
-      ApiAIPlugin.init(
-        {
-            clientAccessToken: "099b97242c1745bd92c163cd27d2c767", 
-            lang: "en" // set lang tag from list of supported languages 
-        }, 
-        function(result) { /* success processing */ },
-        function(error) { /* error processing */ }
-      );
     });
   }
 

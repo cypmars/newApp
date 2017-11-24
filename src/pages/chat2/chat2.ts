@@ -23,7 +23,44 @@ export class Chat2Page {
   
   text: string;
   speechList : Array<string> = [];
-  messages : Array<object> = [];
+
+  toUser = {
+    _id: '534b8e5aaa5e7afc1b23e69b',
+    pic: 'assets/img/bot.png',
+    username: 'BoBot',
+  };
+
+  user = {
+    _id: '534b8fb2aa5e7afc1b23e69c',
+    pic: 'assets/img/logo2.png',
+    username: 'Sandy',
+  };
+
+  messages : Array<object> = [
+    {
+      toId: this.user._id,
+      _id: 1,
+      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+      userId: this.toUser._id,
+      username: this.toUser.username,
+      pic: this.toUser.pic,
+      text: {
+        speech: "Salut ! Je suis BoBot, je vais t'aider à déterminer ton besoin."
+      }
+    },
+    {
+      toId: this.user._id,
+      _id: 2,
+      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+      userId: this.toUser._id,
+      username: this.toUser.username,
+      pic: this.toUser.pic,
+      text: {
+        speech: "Es-tu un client, un prospect ou un collaborateur ?"
+      }
+    }
+  ];
+
   androidOptions: SpeechRecognitionListeningOptionsAndroid;
   iosOptions: SpeechRecognitionListeningOptionsIOS;
   textBody: string;
@@ -35,10 +72,19 @@ export class Chat2Page {
   responseMessage: {};
 
   constructor(private ref: ChangeDetectorRef, private speech: SpeechRecognition, private tts: TextToSpeech, public navCtrl: NavController, public platform: Platform) {
+      ApiAIPlugin.init(
+      {
+          clientAccessToken: "099b97242c1745bd92c163cd27d2c767", 
+          lang: "en" // set lang tag from list of supported languages 
+      }, 
+      function(result) { /* success processing */ },
+      function(error) { /* error processing */ }
+      );
       this.initializeApp()
       this.hideTime = true;
       this.verbalResponse = true;
   }
+
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -71,12 +117,17 @@ export class Chat2Page {
     if(this.platform.is('android')){
       this.speech.startListening(this.androidOptions).subscribe(
         (data) => {
-          this.messages.push({
-            isHuman: true,
-            layout:'',
-            text: data,
-            time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
-          });
+          this.messages.push(
+            {
+              toId: this.toUser._id,
+              _id: this.messages.length,
+              date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+              userId: this.user._id,
+              username: this.user.username,
+              pic: this.user.pic,
+              text: data
+            }
+          );
           this.SendTextFromVoice(data)
       }, (error) => {
           console.log(error)
@@ -103,29 +154,39 @@ export class Chat2Page {
              console.log(JSON.stringify(response.result))
              let speech = response.result.fulfillment;
                if(response.result.fulfillment.speech){
+                 console.log(speech);
                  if(this.platform.is('ios')){
                     this.messages.push({
-                      isHuman: false,
-                      layout: '',
-                      text: speech,
-                      time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
+                      toId: this.user._id,
+                      _id: this.messages.length,
+                      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                      userId: this.toUser._id,
+                      username: this.toUser.username,
+                      pic: this.toUser.pic,
+                      text: speech
                     });
                   this.ref.detectChanges();
                 } else {
-                  this.messages.push({
-                      isHuman: false,
-                      layout: '',
-                      text: speech,
-                      time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
-                    });
+                  this.messages.push({      
+                    toId: this.user._id,
+                    _id: 2,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: this.toUser._id,
+                    username: this.toUser.username,
+                    pic: this.toUser.pic,
+                    text: speech
+                  });
                   this.ref.detectChanges();
                 }
                } else {
                  this.messages.push({
-                  isHuman: false,
-                  layout: '',
-                  text: "I'm sorry. I could not find an answer to that request.",
-                  time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
+                  toId: this.user._id,
+                  _id: 2,
+                  date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                  userId: this.toUser._id,
+                  username: this.toUser.username,
+                  pic: this.toUser.pic,
+                  text: "Je suis désolé, je n'ai pas compris votre réponse."
                 });
                 this.ref.detectChanges();
                }
@@ -149,21 +210,27 @@ export class Chat2Page {
                 let voice = response.result.fulfillment.speech
                 console.log('3', voice)
                 this.messages.push({
-                  isHuman: false,
-                  layout: '',
-                  text: voice,
-                  time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
+                  toId: this.user._id,
+                  _id: 2,
+                  date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                  userId: this.toUser._id,
+                  username: this.toUser.username,
+                  pic: this.toUser.pic,
+                  text: voice
                 });
                 this.ref.detectChanges();
                 this.SpeakText(voice)
              } else {
-               let voice = "I'm sorry. I could not find an answer to that request."
+               let voice = "Je suis désolé, je n'ai pas compris votre réponse"
                 console.log('3', voice)
                 this.messages.push({
-                  isHuman: false,
-                  layout: response.result.fulfillment.data.layout,
-                  text: voice,
-                  time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
+                  toId: this.user._id,
+                  _id: 2,
+                  date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                  userId: this.toUser._id,
+                  username: this.toUser.username,
+                  pic: this.toUser.pic,
+                  text: voice
                 });
                 this.ref.detectChanges();
                 this.SpeakText(voice)
@@ -219,10 +286,13 @@ export class Chat2Page {
   async sendMessage():Promise<any> {
 
     this.messages.push({
-      isHuman: true,
-      layout: '',
-      text: this.newMessage,
-      time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
+      toId: this.toUser._id,
+      _id: this.messages.length,
+      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+      userId: this.user._id,
+      username: this.user.username,
+      pic: this.user.pic,
+      text: this.newMessage
     });
     this.SendText(this.newMessage);
 
@@ -231,5 +301,11 @@ export class Chat2Page {
 
   buildCardLayout(data) {
       
+  }
+
+  
+  login() {
+    
+    this.navCtrl.push('WelcomePage');
   }
 }

@@ -1,6 +1,6 @@
 webpackJsonp([9],{
 
-/***/ 287:
+/***/ 288:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Chat2PageModule", function() { return Chat2PageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat2__ = __webpack_require__(611);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat2__ = __webpack_require__(612);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,7 +41,7 @@ Chat2PageModule = __decorate([
 
 /***/ }),
 
-/***/ 611:
+/***/ 612:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -106,7 +106,44 @@ var Chat2Page = (function () {
         this.navCtrl = navCtrl;
         this.platform = platform;
         this.speechList = [];
-        this.messages = [];
+        this.toUser = {
+            _id: '534b8e5aaa5e7afc1b23e69b',
+            pic: 'assets/img/bot.png',
+            username: 'BoBot',
+        };
+        this.user = {
+            _id: '534b8fb2aa5e7afc1b23e69c',
+            pic: 'assets/img/logo2.png',
+            username: 'Sandy',
+        };
+        this.messages = [
+            {
+                toId: this.user._id,
+                _id: 1,
+                date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                userId: this.toUser._id,
+                username: this.toUser.username,
+                pic: this.toUser.pic,
+                text: {
+                    speech: "Salut ! Je suis BoBot, je vais t'aider à déterminer ton besoin."
+                }
+            },
+            {
+                toId: this.user._id,
+                _id: 2,
+                date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                userId: this.toUser._id,
+                username: this.toUser.username,
+                pic: this.toUser.pic,
+                text: {
+                    speech: "Es-tu un client, un prospect ou un collaborateur ?"
+                }
+            }
+        ];
+        ApiAIPlugin.init({
+            clientAccessToken: "099b97242c1745bd92c163cd27d2c767",
+            lang: "en" // set lang tag from list of supported languages 
+        }, function (result) { }, function (error) { });
         this.initializeApp();
         this.hideTime = true;
         this.verbalResponse = true;
@@ -152,10 +189,13 @@ var Chat2Page = (function () {
         if (this.platform.is('android')) {
             this.speech.startListening(this.androidOptions).subscribe(function (data) {
                 _this.messages.push({
-                    isHuman: true,
-                    layout: '',
-                    text: data,
-                    time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
+                    toId: _this.toUser._id,
+                    _id: _this.messages.length,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: _this.user._id,
+                    username: _this.user.username,
+                    pic: _this.user.pic,
+                    text: data
                 });
                 _this.SendTextFromVoice(data);
             }, function (error) {
@@ -174,11 +214,7 @@ var Chat2Page = (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        alert('enter in sendText');
-                        _a.label = 1;
-                    case 1:
-                        _a.trys.push([1, 3, , 4]);
-                        alert('a');
+                        _a.trys.push([0, 2, , 3]);
                         return [4 /*yield*/, ApiAIPlugin.requestText({
                                 query: query,
                                 originalRequest: {
@@ -190,46 +226,55 @@ var Chat2Page = (function () {
                                 console.log(JSON.stringify(response.result));
                                 var speech = response.result.fulfillment;
                                 if (response.result.fulfillment.speech) {
-                                    alert(speech);
+                                    console.log(speech);
                                     if (_this.platform.is('ios')) {
                                         _this.messages.push({
-                                            isHuman: false,
-                                            layout: '',
-                                            text: speech,
-                                            time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
+                                            toId: _this.user._id,
+                                            _id: _this.messages.length,
+                                            date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                            userId: _this.toUser._id,
+                                            username: _this.toUser.username,
+                                            pic: _this.toUser.pic,
+                                            text: speech
                                         });
                                         _this.ref.detectChanges();
                                     }
                                     else {
                                         _this.messages.push({
-                                            isHuman: false,
-                                            layout: '',
-                                            text: speech,
-                                            time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
+                                            toId: _this.user._id,
+                                            _id: 2,
+                                            date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                            userId: _this.toUser._id,
+                                            username: _this.toUser.username,
+                                            pic: _this.toUser.pic,
+                                            text: speech
                                         });
                                         _this.ref.detectChanges();
                                     }
                                 }
                                 else {
                                     _this.messages.push({
-                                        isHuman: false,
-                                        layout: '',
-                                        text: "I'm sorry. I could not find an answer to that request.",
-                                        time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
+                                        toId: _this.user._id,
+                                        _id: 2,
+                                        date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                        userId: _this.toUser._id,
+                                        username: _this.toUser.username,
+                                        pic: _this.toUser.pic,
+                                        text: "Je suis désolé, je n'ai pas compris votre réponse."
                                     });
                                     _this.ref.detectChanges();
                                 }
                             }, function (error) {
                                 console.error(error);
                             })];
-                    case 2:
+                    case 1:
                         _a.sent();
-                        return [3 /*break*/, 4];
-                    case 3:
+                        return [3 /*break*/, 3];
+                    case 2:
                         e_2 = _a.sent();
                         alert(e_2);
-                        return [3 /*break*/, 4];
-                    case 4: return [2 /*return*/];
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
                 }
             });
         });
@@ -249,22 +294,28 @@ var Chat2Page = (function () {
                                     var voice = response.result.fulfillment.speech;
                                     console.log('3', voice);
                                     _this.messages.push({
-                                        isHuman: false,
-                                        layout: '',
-                                        text: voice,
-                                        time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
+                                        toId: _this.user._id,
+                                        _id: 2,
+                                        date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                        userId: _this.toUser._id,
+                                        username: _this.toUser.username,
+                                        pic: _this.toUser.pic,
+                                        text: voice
                                     });
                                     _this.ref.detectChanges();
                                     _this.SpeakText(voice);
                                 }
                                 else {
-                                    var voice = "I'm sorry. I could not find an answer to that request.";
+                                    var voice = "Je suis désolé, je n'ai pas compris votre réponse";
                                     console.log('3', voice);
                                     _this.messages.push({
-                                        isHuman: false,
-                                        layout: response.result.fulfillment.data.layout,
-                                        text: voice,
-                                        time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
+                                        toId: _this.user._id,
+                                        _id: 2,
+                                        date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                        userId: _this.toUser._id,
+                                        username: _this.toUser.username,
+                                        pic: _this.toUser.pic,
+                                        text: voice
                                     });
                                     _this.ref.detectChanges();
                                     _this.SpeakText(voice);
@@ -365,12 +416,14 @@ var Chat2Page = (function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 this.messages.push({
-                    isHuman: true,
-                    layout: '',
-                    text: this.newMessage,
-                    time: new Date().toLocaleTimeString().replace(/:\d+ /, ' ')
+                    toId: this.toUser._id,
+                    _id: this.messages.length,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: this.user._id,
+                    username: this.user.username,
+                    pic: this.user.pic,
+                    text: this.newMessage
                 });
-                alert(this.newMessage);
                 this.SendText(this.newMessage);
                 delete this.newMessage;
                 return [2 /*return*/];
@@ -379,11 +432,14 @@ var Chat2Page = (function () {
     };
     Chat2Page.prototype.buildCardLayout = function (data) {
     };
+    Chat2Page.prototype.login = function () {
+        this.navCtrl.push('WelcomePage');
+    };
     return Chat2Page;
 }());
 Chat2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-chat2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/'\n\n <ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>WWT Assistant</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="content-stable" on-swipe-left="hideTime = false" on-swipe-right="hideTime = true">\n\n  <div *ngFor="let message of messages" [ngClass]="{\'other\': !message.isHuman}" class="messages">\n\n    <div class="message" *ngIf="message.isHuman" [ngClass]="{\'slide-right\': hideTime, \'\': !hideTime}">\n\n      <span>{{ message.text }}</span>\n\n    </div>\n\n    <div class="message" *ngIf="!message.isHuman && !message.layout" [ngClass]="{\'slide-right\': hideTime, \'\': !hideTime}">\n\n      <span>{{ message.text.speech }}</span>\n\n    </div>\n\n    <div class="opportunity" *ngIf="!message.isHuman && message.layout === \'opportunityList\'" [ngClass]="{\'slide-right\': hideTime, \'\': !hideTime}">\n\n      <h3>Your top opportunities are:</h3>\n\n      <div *ngFor="let opp of message.text.data.opportunityList">\n\n        <span><b>{{ opp.Name }}</b><br>\n\n        Revenue: ${{ opp.Total_Revenue__c }}<br>\n\n        GP: ${{ opp.Total_Opportunity_GP__c }}\n\n        </span>\n\n      </div>\n\n    </div>\n\n    <div class="time" [ngClass]="{\'slide-right\': hideTime, \'\': !hideTime}">{{message.time}}</div>\n\n  </div>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-toolbar position="bottom">\n\n      <ion-badge class="message-form-badge" (click)="listenForSpeech()">\n\n        <ion-icon name="mic"></ion-icon>\n\n      </ion-badge>\n\n      <input type="text" placeholder="Type a message..." [(ngModel)]="newMessage">\n\n      <button type="submit" small class="message-form-button" (click)="sendMessage()">Send <ion-icon name="send"></ion-icon></button>\n\n  </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/
+        selector: 'page-chat2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/'\n\n  <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n  \n\n      </ion-buttons>\n\n      <ion-title>\n\n  \n\n      </ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content padding>\n\n  <div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">\n\n    <div *ngIf="user._id !== message.userId">\n\n      <img class="profile-pic left" [src]="toUser.pic" />\n\n      <div class="chat-bubble left slide-left">\n\n          \n\n         <div class="message" [innerHTML]="message.text.speech" autolinker></div>\n\n          \n\n        <div class="message-detail">\n\n          <span class="bold">{{toUser.username}}</span>\n\n        </div>\n\n          \n\n      </div>\n\n    </div>\n\n    <div *ngIf="user._id === message.userId">\n\n      <img class="profile-pic right" [src]="user.pic" />\n\n\n\n      <div class="chat-bubble right slide-right">\n\n          \n\n        <div class="message" [innerHTML]="message.text" autolinker></div>\n\n\n\n        <div class="message-detail">\n\n          <span class="bold">{{user.username}}</span>\n\n        </div>\n\n\n\n      </div>\n\n    </div>\n\n    <div class="cf"></div>\n\n  </div>\n\n</ion-content>\n\n\n\n<ion-footer color="primary">\n\n    <ion-item>\n\n        <ion-badge class="message-form-badge" (click)="listenForSpeech()"><ion-icon name="mic"></ion-icon></ion-badge>\n\n        <ion-input [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>\n\n        <button ion-button clear (click)="sendMessage()" item-end><ion-icon class="footer-btn" name="send"></ion-icon></button>\n\n    </ion-item>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"], __WEBPACK_IMPORTED_MODULE_3__ionic_native_speech_recognition__["a" /* SpeechRecognition */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__["a" /* TextToSpeech */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]])
 ], Chat2Page);
