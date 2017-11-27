@@ -14,6 +14,8 @@ export const ChatPage = 'ChatPage';
 export const Chat2Page = 'Chat2Page';
 
 export const ServiceDetailsPage = 'ServiceDetailsPage';
+export const MarqueDetailsPage = 'MarqueDetailsPage';
+
 export const ResultPage = 'ResultPage';
 
 export const MainPage = 'TabsPage';

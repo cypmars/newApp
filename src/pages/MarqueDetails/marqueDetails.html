@@ -1,0 +1,71 @@
+<ion-content padding class="transparent-header">
+  <ion-header no-border>
+  <ion-navbar color="primary" hideBackButton="true">
+    <ion-buttons start>
+        <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> 
+    </ion-buttons>
+    <ion-title>
+
+    </ion-title>
+    <ion-buttons end>
+      
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<div class="title-container">
+  <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + marques.imgSrc +')'}"></div>
+  <h3 class="profile-title">{{marques.title}}</h3>
+</div>
+<div id="content">
+  <div id="profile-info" padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let key of marques.keys">
+          <h3><b class="white-text">{{key.nb}}</b><br></h3>
+          <p class="white-text">{{key.label}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <hr>
+    <h3 id="profile-name">{{marques.subtitle}}<br><small><I>"{{marques.citation}}"</I></small></h3>
+    <br>
+    <p class="profile-description">{{marques.description}}</p>
+    <p class="profile-description">{{marques.engagement}}</p>
+    <hr>
+    <br>
+    <ion-list>
+      <ion-item text-wrap (click)="toggleGroup(0)" [ngClass]="{active: isGroupShown(0)}">
+        <button ion-button color="primary" class="accordion-button" large="true">
+          <ion-icon item-left name="arrow-forward" *ngIf="!isGroupShown(0)"></ion-icon>
+          <ion-icon item-left name="arrow-down" *ngIf="isGroupShown(0)"></ion-icon>
+          Nos Métiers de la Propreté
+        </button>
+        <div *ngIf="isGroupShown(0)" text-center>
+          <div *ngFor="let serviceId of marques.metiersId">
+            <br>
+            <h2 class="white-text"><b>{{services[serviceId].name}}</b></h2>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item text-wrap (click)="toggleGroup(1)" [ngClass]="{active: isGroupShown(1)}">
+        <button ion-button color="primary" class="accordion-button" large="true">
+          <ion-icon item-left name="arrow-forward" *ngIf="!isGroupShown(1)"></ion-icon>
+          <ion-icon item-left name="arrow-down" *ngIf="isGroupShown(1)"></ion-icon>
+          Nos Atouts de la Propreté
+        </button>
+        <div *ngIf="isGroupShown(1)" text-center>
+          <div *ngFor="let atout of marques.atouts">
+            <br>
+            <h2 class="white-text"><b>{{atout.title}}</b></h2>
+            <ul>
+              <li class="white-text" *ngFor="let description of atout.description">{{description}}</li>
+            </ul>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</div>
+</ion-content>

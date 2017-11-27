@@ -19,6 +19,7 @@
     <h3 id="profile-name">{{service.name}}</h3>
     <p> &bull; {{service.location}}</p>
     <p class="profile-description">{{service.description}}</p>
+    <button ion-button (click)="seeMarque()">Voir la marque</button>
     <button ion-button *ngIf="!like" small color="purple" (click)="follow()">Je n'aime plus</button>
     <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J'aime <ion-icon name="checkmark"></ion-icon></button>
   </div>

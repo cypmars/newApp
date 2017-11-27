@@ -1,0 +1,239 @@
+page-marque-details {
+  ion-content {
+    background: #b2284e; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #b2284e, #2a73d3); /* Standard syntax */
+    height: 100%;
+  }
+
+  .ios [padding] .scroll-content, .md [padding] .scroll-content{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .splash-relative{
+    position: absolute;
+    width: 60%;
+    margin-right: 20%;
+    margin-left:20%;
+    height:100%;
+  }
+  .splash-logo {
+    margin: auto;
+    background: url('../assets/img/logo2.png') repeat transparent;
+    background-size: 100%;
+    width: 128px;
+    height: 128px;
+  }
+
+  .splash-intro{
+    text-align:center;
+    color: white;
+    font-size: 2em;
+  }
+  .splash-new{
+    position: relative;
+    font-size: 20px;
+  }
+  .splash-end{
+    position:fixed;
+    bottom: 20px;
+    width:60%;
+    text-align: center;
+  }
+
+  .splash-end a{
+    color: white;
+  }
+
+  .item-md, .item-ios{
+    background-color: transparent;
+  }
+
+  button.login {
+    margin-top: 25px;
+    max-width: 180px;
+    background-color: transparent;
+    border: 1px solid white;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    &.activated {
+      background-color: rgb(220, 220, 220);
+    }
+  }
+
+  input{
+    color: white;
+  }
+
+  .white-text{
+    color:white;
+  }
+
+  .item-input ion-label{
+    width:20px;
+  }
+
+  .item-md{
+    padding-left: 0;
+  }
+
+  .item-md.item-block .item-inner{
+    padding-right:0;
+  }
+
+  .account{
+    position:relative; 
+    height:200px;
+  }
+
+  .account-pic{
+    position:absolute;
+    width: 100%;
+    z-index:1;
+  }
+
+  .account-text{
+    position:absolute;
+    width:100%; 
+    height:200px; 
+    color: white;
+    z-index:2;
+  }
+
+  button,
+  ion-button,
+  .button-md,
+  .button-ios {
+    text-transform: none !important;
+  }
+  p {
+    color: #ffffff;
+  }
+  // Cover image
+  #profile-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: -16px;
+    height: 160px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+    filter: blur(2px);
+    text-align: center;
+  }
+  // Profile content
+  #content {
+    position: relative;
+    margin-top: 150px;
+    padding-top: 200px;
+    text-align: center;
+  }
+  #profile-image {
+    display: block;
+    border-radius: 50%;
+    width: auto;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto 0;
+    box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
+  }
+  #profile-info {
+    position: absolute;
+    top: -5px;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+  }
+  #profile-name {
+    color: #ffffff;
+    font-size: 26px;
+  }
+  .profile-description {
+    font-size: 15px;
+    color: #ffffff;
+  }
+  .follow-button {
+    text-transform: none;
+    border-radius: 3px !important;
+    ion-icon {
+      font-weight: bold;
+      padding-left: 5px;
+      font-size: 2.5rem;
+    }
+  }
+  // Following, Followers and all..
+  .profile-numbers {
+    p {
+      color: #444;
+      font-size: medium;
+      margin-bottom: 3px;
+    }
+    span {
+      font-weight: bold;
+      font-size: 2.4rem;
+      color: #34354c;
+    }
+  }
+  hr {
+    border: 0;
+    height: 1px;
+    background: #444;
+    background: -webkit-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, rgb(188, 198, 214) 50%, hsla(0, 0%, 0%, 0) 100%);
+  }
+  // Posts feed
+  #posts {
+    text-align: justify;
+  }
+
+  .toolbar-ios-primary .toolbar-background-ios{
+    background: transparent;
+  }
+
+  .toolbar-md-primary .toolbar-background-md{
+    background: transparent;
+  }
+
+  .title-container{
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .profile-title{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .scroll-content{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  button {
+    align-items: baseline;
+  }
+
+  .list-md .item-block .item-inner, .list-ios .item-block .item-inner{
+    border: 0;
+  }
+
+  .accordion-button{
+    width: 100%;
+  }
+
+  .label-md, .label-ios{
+    margin: 0 0 0 0;
+  }
+
+  .list-md, .list-ios{
+    margin:0 0 0 0;
+  }
+}

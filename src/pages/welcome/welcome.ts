@@ -34,6 +34,10 @@ export class WelcomePage {
     this.tabBarElement.style.display = 'none';
   }
 
+  ionViewWillLeave(){
+    this.tabBarElement.style.display = 'flex';
+  }
+
   forgot() {
     this.navCtrl.push('ForgotPage');
   }

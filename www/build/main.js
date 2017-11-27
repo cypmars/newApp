@@ -1,4 +1,4 @@
-webpackJsonp([12],{
+webpackJsonp([13],{
 
 /***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -25,9 +25,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var TabsPage = (function () {
     function TabsPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__pages__["b" /* Tab1Root */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_2__pages__["c" /* Tab2Root */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__pages__["d" /* Tab3Root */];
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__pages__["c" /* Tab1Root */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_2__pages__["d" /* Tab2Root */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__pages__["e" /* Tab3Root */];
         this.tab1Title = " ";
         this.tab2Title = " ";
         this.tab3Title = " ";
@@ -66,52 +66,56 @@ webpackEmptyAsyncContext.id = 115;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"../pages/MarqueDetails/marqueDetails.module": [
+		289,
+		11
+	],
 	"../pages/ServiceDetails/serviceDetails.module": [
-		291,
+		292,
 		10
 	],
 	"../pages/chat/chat.module": [
-		288,
+		287,
 		8
 	],
 	"../pages/chat2/chat2.module": [
-		287,
+		288,
 		9
 	],
 	"../pages/news/news.module": [
-		289,
+		290,
 		7
 	],
 	"../pages/result/result.module": [
-		290,
+		291,
 		0
 	],
 	"../pages/signup/signup.module": [
-		292,
+		293,
 		2
 	],
 	"../pages/simple-form/simple-form.module": [
-		293,
+		294,
 		4
 	],
 	"../pages/simple-form1/simple-form1.module": [
-		297,
+		295,
 		6
 	],
 	"../pages/simple-form2/simple-form2.module": [
-		298,
+		296,
 		5
 	],
 	"../pages/tabs/tabs.module": [
-		294,
-		11
+		297,
+		12
 	],
 	"../pages/tinderQ/tinderQ.module": [
-		296,
+		298,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		295,
+		299,
 		3
 	]
 };
@@ -196,18 +200,19 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_10_angular2_swing__["SwingModule"],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                 links: [
-                    { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/MarqueDetails/marqueDetails.module#MarqueDetailsPageModule', name: 'MarqueDetailsPage', segment: 'marqueDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/ServiceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tinderQ/tinderQ.module#TinderQPageModule', name: 'TinderQPage', segment: 'tinderQ', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tinderQ/tinderQ.module#TinderQPageModule', name: 'TinderQPage', segment: 'tinderQ', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -340,7 +345,7 @@ MyApp = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return WelcomePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return WelcomePage; });
 /* unused harmony export HomePage */
 /* unused harmony export SimpleFormPage */
 /* unused harmony export SimpleForm1Page */
@@ -350,11 +355,12 @@ MyApp = __decorate([
 /* unused harmony export ChatPage */
 /* unused harmony export Chat2Page */
 /* unused harmony export ServiceDetailsPage */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return MarqueDetailsPage; });
 /* unused harmony export ResultPage */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainPage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Tab1Root; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Tab2Root; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Tab3Root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Tab1Root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Tab2Root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Tab3Root; });
 // The page the user lands on after opening the app and without a session
 // The page the user lands on after opening the app and without a session
 var WelcomePage = 'WelcomePage';
@@ -367,6 +373,7 @@ var ChatBubble = 'ChatBubble';
 var ChatPage = 'ChatPage';
 var Chat2Page = 'Chat2Page';
 var ServiceDetailsPage = 'ServiceDetailsPage';
+var MarqueDetailsPage = 'MarqueDetailsPage';
 var ResultPage = 'ResultPage';
 var MainPage = 'TabsPage';
 // The initial root pages for our tabs (remove if not using tabs)
