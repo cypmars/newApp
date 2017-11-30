@@ -1,12 +1,12 @@
-webpackJsonp([1],Array(297).concat([
-/* 297 */
+webpackJsonp([1],Array(298).concat([
+/* 298 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TinderQPageModule", function() { return TinderQPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(622);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(213);
@@ -46,7 +46,6 @@ TinderQPageModule = __decorate([
 //# sourceMappingURL=tinderQ.module.js.map
 
 /***/ }),
-/* 298 */,
 /* 299 */,
 /* 300 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -2002,7 +2001,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var root_1 = __webpack_require__(30);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var Observable_1 = __webpack_require__(9);
 var Subscriber_1 = __webpack_require__(29);
 var map_1 = __webpack_require__(207);
@@ -2833,7 +2832,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subscriber_1 = __webpack_require__(29);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 /* tslint:enable:max-line-length */
 /**
  * Returns an Observable that emits all items emitted by the source Observable that are distinct by comparison from the previous item.
@@ -3991,7 +3990,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(9);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var AsyncSubject_1 = __webpack_require__(305);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -4286,7 +4285,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(9);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var AsyncSubject_1 = __webpack_require__(305);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -6470,7 +6469,7 @@ var Subscription_1 = __webpack_require__(33);
 var root_1 = __webpack_require__(30);
 var ReplaySubject_1 = __webpack_require__(308);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var assign_1 = __webpack_require__(410);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -7476,7 +7475,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subscription_1 = __webpack_require__(33);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /**
@@ -9690,7 +9689,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /* tslint:enable:max-line-length */
@@ -10810,7 +10809,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /**
@@ -11612,7 +11611,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var subscribeToResult_1 = __webpack_require__(52);
 var OuterSubscriber_1 = __webpack_require__(51);
 /**
@@ -12349,7 +12348,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(32);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /**
@@ -12556,7 +12555,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(32);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /**
@@ -13023,7 +13022,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subscriber_1 = __webpack_require__(29);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 /**
  * Compares all values of two observables in sequence using an optional comparor function
  * and returns an observable of a single boolean value representing whether or not the two sequences
@@ -15996,7 +15995,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Subject_1 = __webpack_require__(32);
 var Subscription_1 = __webpack_require__(33);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /**
@@ -16192,7 +16191,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(32);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /**
@@ -17041,7 +17040,7 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TinderQPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(342);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
@@ -17074,6 +17073,7 @@ var TinderQPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.recentCard = '';
+        this.showButton = true;
         //Our Tree question
         this.nodes = {
             id: 1,
@@ -17576,6 +17576,10 @@ var TinderQPage = (function () {
         this.cards = [{ email: '' }];
         this.addNewCards(this.currentNode.children[0]);
         this.addNewCards(this.currentNode);
+        console.log(this.navCtrl.getPrevious().id);
+        if (this.navCtrl.getPrevious().id == "WelcomePage" || this.navCtrl.getPrevious().id == "SignupPage") {
+            this.showButton = false;
+        }
     };
     TinderQPage.prototype.ionViewDidLeave = function () {
         this.currentNode = this.nodes;
@@ -17592,19 +17596,20 @@ var TinderQPage = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('myswing1'),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"]) === "function" && _a || Object)
 ], TinderQPage.prototype, "swingStack", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChildren"])('mycards1'),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"])
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"]) === "function" && _b || Object)
 ], TinderQPage.prototype, "swingCards", void 0);
 TinderQPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-tinderQ',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      \n\n                      <ion-item *ngIf="c.question">\n\n                          <div id="validate-or-not" class="validate-or-not"></div>\n\n                          <img *ngIf="c.img_src" [src]="c.img_src">\n\n                          <h1 class="relative-pos" style="color: black;">{{ c.question }}</h1>\n\n                      </ion-item>\n\n                 \n\n                      <ion-row *ngIf="c.name">\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                              <ion-icon name="checkmark-circle"></ion-icon>\n\n                              YES\n\n                          </button>\n\n                        </ion-col>\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                            <ion-icon name="close-circle"></ion-icon>\n\n                            NO\n\n                          </button>\n\n                        </ion-col>\n\n                      </ion-row>\n\n                    </ion-card>\n\n                  </div>\n\n                  <p style="text-align: center; width: 100%;">{{ recentCard }}</p>\n\n              </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/
+        selector: 'page-tinderQ',template:/*ion-inline-start:"C:\Users\Laora\newApp\src\pages\tinderQ\tinderQ.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button *ngIf="showButton" ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      \n\n                      <ion-item *ngIf="c.question">\n\n                          <div id="validate-or-not" class="validate-or-not"></div>\n\n                          <img *ngIf="c.img_src" [src]="c.img_src">\n\n                          <h1 class="relative-pos" style="color: black;">{{ c.question }}</h1>\n\n                      </ion-item>\n\n                 \n\n                      <ion-row *ngIf="c.name">\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                              <ion-icon name="checkmark-circle"></ion-icon>\n\n                              YES\n\n                          </button>\n\n                        </ion-col>\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                            <ion-icon name="close-circle"></ion-icon>\n\n                            NO\n\n                          </button>\n\n                        </ion-col>\n\n                      </ion-row>\n\n                    </ion-card>\n\n                  </div>\n\n                  <p style="text-align: center; width: 100%;">{{ recentCard }}</p>\n\n              </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Laora\newApp\src\pages\tinderQ\tinderQ.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _e || Object])
 ], TinderQPage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=tinderQ.js.map
 
 /***/ })

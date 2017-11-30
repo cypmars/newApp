@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="primary" hideBackButton="true">
     <ion-buttons start>
-      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>
+      <button *ngIf="showButton" ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>
     </ion-buttons>
     <ion-title>
       Recherche
