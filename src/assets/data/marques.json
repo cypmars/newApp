@@ -1,0 +1,76 @@
+{
+    "marques": [
+        {
+            "id": 0,
+            "title": "Propreté et Services",
+            "subtitle": "Préserver l’hygiène et la propreté de votre environnement de travail",
+            "description": "Onet est l’acteur référent en France et en Europe de la propreté et des services associés. Cette position est le fruit d'un développement harmonieux, prudent mais ambitieux, au côté de nos clients et actionné par nos collaborateurs.",
+            "engagement": "Rendre les espaces de travail, de passage, de loisir, de production, de transport..., propres, sains et agréables est notre leitmotiv, celui de nos agences !",
+            "imgSrc": "assets/img/gravel-proprete-hopital.jpg",
+            "videoSrc": "https://youtu.be/pSbLUVvn2lU",
+            "citation": "Leader historique en France de la propreté",
+            "metiersId":[0, 1, 2, 3, 4],
+            "atouts": [
+              {
+                "title": "Une organisation pour répondre de façon unique à chaque client",
+                "description": ["Des experts métiers par secteur d'activités", "Un réseau d'agences fort et en proximité des sites, qui a toute latitude pour adapter les process et méthodes de travail aux besoins locaux.", "Une structure dédiée à nos clients multi-sites : centralisation de la relation client, reportings dédiés, support hotline, … pour garantir des prestations homogènes et de qualité."] 
+              },
+              {
+                "title": "Des collaborateurs motivés et impliqués",
+                "description": ["Un programme de développement des compétences (école interne de formation depuis 1982, e-learning, plan de de formation individuel…)", "Un environnement de travail sûr : EPI,  lutte contre les Troubles Musculo-Squelettiques (TMS), Visite Comportementale de Sécurité…", "Un management de proximité respectueux, raisonnable et à l’écoute de ses collaborateurs."]
+              },
+              {
+                "title": "Une prestation de qualité, maitrisée sur la durée",
+                "description": ["Une application Blue Quality, disponible sur tablette numérique, pour des contrôles en ligne, permettant un suivi précis des prestations et un reporting performant", "Un portail client permettant une réactivité et traçabilité optimale en cas de dysfonctionnement", "Une politique de contrôle assidue pour un niveau de propreté conforme aux exigences de nos clients"]
+              },
+              {
+                "title": "R&D - ingénierie de services",
+                "description": ["Nos experts « outils métier » travaillent des procédés techniques et de nouveaux produits pour améliorer ou proposer de nouveaux services. Nous développons ainsi une véritable ingénierie de services", "Une veille permanente sur les dernières avancées du marché est conduite et exploitée afin d’être dans l’anticipation avec nos clients"]
+              }
+            ],
+            "keys": [
+              {"label": "collaborateurs", "nb": "44 500"},
+              {"label": "implantations", "nb": "180"},
+              {"label": "millions de m² gérés", "nb": "40"},
+              {"label": "clients", "nb": "2000"},
+              {"label": "certifications", "nb": "6"}
+            ]
+          },
+          {
+            "id": 0,
+            "title": "Propreté et Services",
+            "subtitle": "Préserver l’hygiène et la propreté de votre environnement de travail",
+            "description": "Onet est l’acteur référent en France et en Europe de la propreté et des services associés. Cette position est le fruit d'un développement harmonieux, prudent mais ambitieux, au côté de nos clients et actionné par nos collaborateurs.",
+            "engagement": "Rendre les espaces de travail, de passage, de loisir, de production, de transport..., propres, sains et agréables est notre leitmotiv, celui de nos agences !",
+            "imgSrc": "assets/img/gravel-proprete-hopital.jpg",
+            "videoSrc": "https://youtu.be/pSbLUVvn2lU",
+            "citation": "Leader historique en France de la propreté",
+            "metiersId":[0, 1, 2, 3, 4],
+            "atouts": [
+              {
+                "title": "Une organisation pour répondre de façon unique à chaque client",
+                "description": ["Des experts métiers par secteur d'activités", "Un réseau d'agences fort et en proximité des sites, qui a toute latitude pour adapter les process et méthodes de travail aux besoins locaux.", "Une structure dédiée à nos clients multi-sites : centralisation de la relation client, reportings dédiés, support hotline, … pour garantir des prestations homogènes et de qualité."] 
+              },
+              {
+                "title": "Des collaborateurs motivés et impliqués",
+                "description": ["Un programme de développement des compétences (école interne de formation depuis 1982, e-learning, plan de de formation individuel…)", "Un environnement de travail sûr : EPI,  lutte contre les Troubles Musculo-Squelettiques (TMS), Visite Comportementale de Sécurité…", "Un management de proximité respectueux, raisonnable et à l’écoute de ses collaborateurs."]
+              },
+              {
+                "title": "Une prestation de qualité, maitrisée sur la durée",
+                "description": ["Une application Blue Quality, disponible sur tablette numérique, pour des contrôles en ligne, permettant un suivi précis des prestations et un reporting performant", "Un portail client permettant une réactivité et traçabilité optimale en cas de dysfonctionnement", "Une politique de contrôle assidue pour un niveau de propreté conforme aux exigences de nos clients"]
+              },
+              {
+                "title": "R&D - ingénierie de services",
+                "description": ["Nos experts « outils métier » travaillent des procédés techniques et de nouveaux produits pour améliorer ou proposer de nouveaux services. Nous développons ainsi une véritable ingénierie de services", "Une veille permanente sur les dernières avancées du marché est conduite et exploitée afin d’être dans l’anticipation avec nos clients"]
+              }
+            ],
+            "keys": [
+              {"label": "collaborateurs", "nb": "44 500"},
+              {"label": "implantations", "nb": "180"},
+              {"label": "millions de m² gérés", "nb": "40"},
+              {"label": "clients", "nb": "2000"},
+              {"label": "certifications", "nb": "6"}
+            ]
+          }
+    ]
+}
