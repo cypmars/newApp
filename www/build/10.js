@@ -1,14 +1,14 @@
 webpackJsonp([10],{
 
-/***/ 292:
+/***/ 298:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiceDetailsPageModule", function() { return ServiceDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Chat2PageModule", function() { return Chat2PageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__serviceDetails__ = __webpack_require__(617);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat2__ = __webpack_require__(622);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ServiceDetailsPageModule = (function () {
-    function ServiceDetailsPageModule() {
+var Chat2PageModule = (function () {
+    function Chat2PageModule() {
     }
-    return ServiceDetailsPageModule;
+    return Chat2PageModule;
 }());
-ServiceDetailsPageModule = __decorate([
+Chat2PageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__serviceDetails__["a" /* ServiceDetailsPage */],
+            __WEBPACK_IMPORTED_MODULE_2__chat2__["a" /* Chat2Page */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__serviceDetails__["a" /* ServiceDetailsPage */])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__chat2__["a" /* Chat2Page */])
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__serviceDetails__["a" /* ServiceDetailsPage */]
+            __WEBPACK_IMPORTED_MODULE_2__chat2__["a" /* Chat2Page */]
         ]
     })
-], ServiceDetailsPageModule);
+], Chat2PageModule);
 
-//# sourceMappingURL=serviceDetails.module.js.map
+//# sourceMappingURL=chat2.module.js.map
 
 /***/ }),
 
-/***/ 617:
+/***/ 622:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServiceDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Chat2Page; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_speech_recognition__ = __webpack_require__(111);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,127 +59,393 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-/**
- * The Welcome Page is a splash page that quickly describes the app,
- * and then directs the user to create an account or log in.
- * If you'd like to immediately put the user onto a login/signup page,
- * we recommend not using the Welcome page.
-*/
-var ServiceDetailsPage = (function () {
-    function ServiceDetailsPage(navCtrl, toastCtrl) {
-        this.navCtrl = navCtrl;
-        this.toastCtrl = toastCtrl;
-        // The account fields for the login form.
-        // If you're using the username field with or without email, make
-        // sure to add it to the type
-        this.account = {
-            email: '@ e-mail ou pseudo',
-            password: 'mot de passe'
-        };
-        this.like = false;
-        this.items = [
-            {
-                name: 'Angra dos Reis, Brazil',
-                description: 'Brazil’s visa waiver during the Olympics was a success for one big reason: it encouraged travel beyond the big cities. The tourism board hopes to bring back the waiver, and if you’re planning to take advantage, save time to visit Angra dos Reis, between Rio and São Paulo. This popular Brazilian vacation area is where cariocas go to escape the crowds. “It’s where many of the country’s elite have their beach villas,” says Martin Frankenberg of Matuete, who has access to several of these glamorous rentals. Big changes are coming to the region. In May, Brazilian chain Fasano will open a long-awaited 54-suite hotel in a complex that includes a marina, golf course, restaurants, and a spa. The design is striking, with elevated wooden buildings that look like they’re floating, all with open-air terraces and views of the forest and sea. And the government recently pledged $8 million to improve the infrastructure on Ilha Grande—an island that’s so popular that they’ve had to impose a daily limit on visitors. —Stephanie Wu',
-                imageUrl: 'http://cdn-image.travelandleisure.com/sites/default/files/styles/964x524/public/1479915553/angra-dos-reis-brazil-WTG2017.jpg?itok=damBsB9G',
-            },
-            {
-                name: 'Belfast, Northern Ireland',
-                description: 'With a growing array of open-air bars, arts venues, and restaurants, Belfast is quickly becoming an attractive destination for travelers. Stay at the design-forward Bullitt Hotel (inspired by the Steve McQueen film), which opened in October with casual, well-appointed rooms and complimentary grab-and-go breakfast granola. Check out arts organization Seedhead, which runs street-art tours and hosts pop-up cabarets around the city. The Michelin-starred OX and EIPIC lead the fine-dining pack, but also visit Permit Room, with its internationally inspired breakfast and locally roasted coffee. Noteworthy new nightlife spots include the Muddlers Club, a stylish restaurant and cocktail bar in the trendy Cathedral Quarter, and Vandal, a graffiti-adorned pizza place that turns into a late-night club, on the top floor of a 17th-century pub.—Nell McShane Wulfhart',
-                imageUrl: 'http://cdn-image.travelandleisure.com/sites/default/files/styles/964x524/public/1480711606/belfast-city-hall-northern-ireland-WTG2017.jpg?itok=mCqumH31',
-            },
-            {
-                name: 'Belgrade, Serbia',
-                description: 'Since the end of the Yugoslav wars, Belgrade has attracted steady investment—its graffiti-covered neighborhoods are now full of restaurants and bars. You’ll find hearty platters of ćevapi—smoky sausages without casing—and stuffed somborka peppers at Sokače, paprika-laden kebabs at Tri Šešira, and pan-Latin tapas at Toro. But the biggest draw is the growing craft-beer scene (the city has 37 breweries). Don’t miss the Kabinet Supernova IPA at Prohibicija in the bar-filled Savamala district, as well as Kas’s full-bodied pale ales and Salto’s IPA at Bajloni, set in a 100-year-old brewery space in Cetinjska. —Govind Dhar',
-                imageUrl: 'http://cdn-image.travelandleisure.com/sites/default/files/styles/964x524/public/1479487289/belgrade-serbia-fortress-WTG2017.jpg?itok=rw8c4Esh',
-            },
-            {
-                name: 'Bermuda',
-                description: 'After being hit hard by the financial crisis, Bermuda is shaking itself out of stagnation and attracting a new generation of travelers. In 2014, the island won a bid to host the 35th America’s Cup, the high-profile international sailing race, which takes place this June. The promise of a flood of wealthy visitors—and a loosening of restrictions on foreign investment—has sparked a spate of development. Big news is the $100 million overhaul of the Hamilton Princess & Beach Club, the island’s 132-year-old grande dame, whose revamped rooms have a fresh, contemporary look. The hotel has also added a stellar art collection, a spa, and a restaurant serving locally sourced fare from James Beard Award–winning chef Marcus Samuelsson. Elsewhere on the island, a St. Regis, a lavish Ritz-Carlton Reserve, and the Ariel Sands resort (backed by actors Michael Douglas and Catherine Zeta-Jones) are in the works. —Paola Singer',
-                imageUrl: 'http://cdn-image.travelandleisure.com/sites/default/files/styles/964x524/public/1479915553/hamilton-princess-bermuda-WTG2017.jpg?itok=E4sFyZFn',
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
             }
-        ];
-        this.marques = [{
-                id: 0,
-                title: 'Propreté et Services',
-                subtitle: "Préserver l’hygiène et la propreté de votre environnement de travail",
-                description: "Onet est l’acteur référent en France et en Europe de la propreté et des services associés. Cette position est le fruit d'un développement harmonieux, prudent mais ambitieux, au côté de nos clients et actionné par nos collaborateurs.",
-                engagement: "Rendre les espaces de travail, de passage, de loisir, de production, de transport..., propres, sains et agréables est notre leitmotiv, celui de nos agences !",
-                imgSrc: "",
-                videoSrc: "https://youtu.be/pSbLUVvn2lU",
-                citation: "Leader historique en France de la propreté",
-                metiersId: [0, 1, 2, 3, 4, 5],
-                Atouts: [{
-                        title: 'Une organisation pour répondre de façon unique à chaque client',
-                        description: "<ul><li>Des experts métiers par secteur d'activités</li><li>Un réseau d'agences fort et en proximité des sites, qui a toute latitude pour adapter les process et méthodes de travail aux besoins locaux.</li><li>Une structure dédiée à nos clients multi-sites : centralisation de la relation client, reportings dédiés, support hotline, … pour garantir des prestations homogènes et de qualité.</li></ul>"
-                    }, {
-                        title: 'Des collaborateurs motivés et impliqués',
-                        description: "<ul><li>Un programme de développement des compétences (école interne de formation depuis 1982, e-learning, plan de de formation individuel…)</li><li>Un environnement de travail sûr : EPI,  lutte contre les Troubles Musculo-Squelettiques (TMS), Visite Comportementale de Sécurité…</li><li>Un management de proximité respectueux, raisonnable et à l’écoute de ses collaborateurs.</li></ul>"
-                    }, {
-                        title: 'Une prestation de qualité, maitrisée sur la durée',
-                        description: "<ul><li>Une application Blue Quality, disponible sur tablette numérique, pour des contrôles en ligne, permettant un suivi précis des prestations et un reporting performant</li><li>Un portail client permettant une réactivité et traçabilité optimale en cas de dysfonctionnement</li><li>Une politique de contrôle assidue pour un niveau de propreté conforme aux exigences de nos clients</li></ul>"
-                    }, {
-                        title: 'R&D - ingénierie de services',
-                        description: "<ul><li>Nos experts « outils métier » travaillent des procédés techniques et de nouveaux produits pour améliorer ou proposer de nouveaux services. Nous développons ainsi une véritable ingénierie de services</li><li>Une veille permanente sur les dernières avancées du marché est conduite et exploitée afin d’être dans l’anticipation avec nos clients</li></ul>"
-                    }],
-                keys: [{
-                        label: 'collaborateurs',
-                        nb: '44 500'
-                    },
-                    {
-                        label: 'implantations',
-                        nb: '180'
-                    },
-                    {
-                        label: 'millions de m² gérés pour plus de 2000 clients',
-                        nb: '40'
-                    },
-                    {
-                        label: 'certifications',
-                        nb: '6'
-                    }]
-            }
-        ];
-        this.service = {
-            name: 'Propreté en milieu sensible',
-            profileImage: 'assets/img/up-3_medium.jpg',
-            coverImage: 'assets/img/gravel-proprete-hopital.jpg',
-            occupation: 'Propreté',
-            location: 'Marseille, France',
-            description: "L'industrie de la « maîtrise de la contamination » doit faire face à une demande de plus en plus diversifiée, complexe et spécialisée. Ceci s'explique notamment par l'apparition de nouveaux besoins comme l'accroissement des exigences en matière de propreté ou encore l'évolution des contraintes réglementaires, notamment dans l'industrie pharmaceutique et les secteurs connexes…",
-            likes: 0,
-        };
-        this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
-    ServiceDetailsPage.prototype.prev = function () {
-        this.navCtrl.pop();
-    };
-    ServiceDetailsPage.prototype.follow = function () {
-        this.like = !this.like;
-    };
-    ServiceDetailsPage.prototype.seeMarque = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["b" /* MarqueDetailsPage */]);
-    };
-    ServiceDetailsPage.prototype.ionViewWillEnter = function () {
-        this.tabBarElement.style.display = 'none';
-    };
-    ServiceDetailsPage.prototype.ionViewWillLeave = function () {
-        this.tabBarElement.style.display = 'flex';
-    };
-    return ServiceDetailsPage;
-}());
-ServiceDetailsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-service-details',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\ServiceDetails\serviceDetails.html"*/'<ion-content padding class="transparent-header">\n\n  <ion-header no-border>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n        <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n    </ion-buttons>\n\n    <ion-title>\n\n\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      \n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n<div id="profile-bg" [ngStyle]="{\'background-image\': \'url(\' + service.coverImage +\')\'}"></div>\n\n<div id="content">\n\n  <div id="profile-info" padding>\n\n    <img id="profile-image" [src]="service.profileImage">\n\n    <h3 id="profile-name">{{service.name}}</h3>\n\n    <p> &bull; {{service.location}}</p>\n\n    <p class="profile-description">{{service.description}}</p>\n\n    <button ion-button (click)="seeMarque()">Voir la marque</button>\n\n    <button ion-button *ngIf="!like" small color="purple" (click)="follow()">Je n\'aime plus</button>\n\n    <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J\'aime <ion-icon name="checkmark"></ion-icon></button>\n\n  </div>\n\n</div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\ServiceDetails\serviceDetails.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */]])
-], ServiceDetailsPage);
+};
 
-//# sourceMappingURL=serviceDetails.js.map
+
+
+
+var Chat2Page = (function () {
+    function Chat2Page(ref, speech, tts, navCtrl, platform) {
+        this.ref = ref;
+        this.speech = speech;
+        this.tts = tts;
+        this.navCtrl = navCtrl;
+        this.platform = platform;
+        this.speechList = [];
+        this.toUser = {
+            _id: '534b8e5aaa5e7afc1b23e69b',
+            pic: 'assets/img/bot.png',
+            username: 'BoBot',
+        };
+        this.user = {
+            _id: '534b8fb2aa5e7afc1b23e69c',
+            pic: 'assets/img/logo2.png',
+            username: 'Sandy',
+        };
+        this.messages = [
+            {
+                toId: this.user._id,
+                _id: 1,
+                date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                userId: this.toUser._id,
+                username: this.toUser.username,
+                pic: this.toUser.pic,
+                text: {
+                    speech: "Salut ! Je suis BoBot, je vais t'aider à déterminer ton besoin."
+                }
+            },
+            {
+                toId: this.user._id,
+                _id: 2,
+                date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                userId: this.toUser._id,
+                username: this.toUser.username,
+                pic: this.toUser.pic,
+                text: {
+                    speech: "Es-tu un client, un prospect ou un collaborateur ?"
+                }
+            }
+        ];
+        ApiAIPlugin.init({
+            clientAccessToken: "099b97242c1745bd92c163cd27d2c767",
+            lang: "en" // set lang tag from list of supported languages 
+        }, function (result) { }, function (error) { });
+        this.initializeApp();
+        this.hideTime = true;
+        this.verbalResponse = true;
+    }
+    Chat2Page.prototype.initializeApp = function () {
+        var _this = this;
+        this.platform.ready().then(function () {
+            if (!_this.hasPermission()) {
+                _this.getPermission();
+            }
+        });
+    };
+    Chat2Page.prototype.SpeakText = function (voice) {
+        return __awaiter(this, void 0, void 0, function () {
+            var e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.tts.speak(voice)];
+                    case 1:
+                        _a.sent();
+                        console.log("Successfully spoke");
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_1 = _a.sent();
+                        console.log(e_1);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.listenForSpeech = function () {
+        var _this = this;
+        this.androidOptions = {
+            prompt: 'Speak into your phone!',
+            matches: 1
+        };
+        this.iosOptions = {
+            matches: 1
+        };
+        if (this.platform.is('android')) {
+            this.speech.startListening(this.androidOptions).subscribe(function (data) {
+                _this.messages.push({
+                    toId: _this.toUser._id,
+                    _id: _this.messages.length,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: _this.user._id,
+                    username: _this.user.username,
+                    pic: _this.user.pic,
+                    text: data
+                });
+                _this.SendTextFromVoice(data);
+            }, function (error) {
+                console.log(error);
+            });
+        }
+        else if (this.platform.is('ios')) {
+            this.speech.startListening(this.iosOptions).subscribe(function (data) { return _this.speechList = data; }, function (error) { return console.log(error); });
+            console.log(this.speechList);
+        }
+    };
+    Chat2Page.prototype.SendText = function (query) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var e_2;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, ApiAIPlugin.requestText({
+                                query: query,
+                                originalRequest: {
+                                    source: 'WWT chat bot',
+                                    data: 'messages'
+                                }
+                            }, function (response) {
+                                console.log(JSON.stringify(response));
+                                console.log(JSON.stringify(response.result));
+                                var speech = response.result.fulfillment;
+                                if (response.result.fulfillment.speech) {
+                                    console.log(speech);
+                                    if (_this.platform.is('ios')) {
+                                        _this.messages.push({
+                                            toId: _this.user._id,
+                                            _id: _this.messages.length,
+                                            date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                            userId: _this.toUser._id,
+                                            username: _this.toUser.username,
+                                            pic: _this.toUser.pic,
+                                            text: speech
+                                        });
+                                        _this.ref.detectChanges();
+                                    }
+                                    else {
+                                        _this.messages.push({
+                                            toId: _this.user._id,
+                                            _id: 2,
+                                            date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                            userId: _this.toUser._id,
+                                            username: _this.toUser.username,
+                                            pic: _this.toUser.pic,
+                                            text: speech
+                                        });
+                                        _this.ref.detectChanges();
+                                    }
+                                }
+                                else {
+                                    _this.messages.push({
+                                        toId: _this.user._id,
+                                        _id: 2,
+                                        date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                        userId: _this.toUser._id,
+                                        username: _this.toUser.username,
+                                        pic: _this.toUser.pic,
+                                        text: "Je suis désolé, je n'ai pas compris votre réponse."
+                                    });
+                                    _this.ref.detectChanges();
+                                }
+                            }, function (error) {
+                                console.error(error);
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_2 = _a.sent();
+                        alert(e_2);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.SendTextFromVoice = function (query) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var e_3;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, ApiAIPlugin.requestText({
+                                query: query
+                            }, function (response) {
+                                if (response.result.fulfillment.speech) {
+                                    var voice = response.result.fulfillment.speech;
+                                    console.log('3', voice);
+                                    _this.messages.push({
+                                        toId: _this.user._id,
+                                        _id: 2,
+                                        date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                        userId: _this.toUser._id,
+                                        username: _this.toUser.username,
+                                        pic: _this.toUser.pic,
+                                        text: voice
+                                    });
+                                    _this.ref.detectChanges();
+                                    _this.SpeakText(voice);
+                                }
+                                else {
+                                    var voice = "Je suis désolé, je n'ai pas compris votre réponse";
+                                    console.log('3', voice);
+                                    _this.messages.push({
+                                        toId: _this.user._id,
+                                        _id: 2,
+                                        date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                        userId: _this.toUser._id,
+                                        username: _this.toUser.username,
+                                        pic: _this.toUser.pic,
+                                        text: voice
+                                    });
+                                    _this.ref.detectChanges();
+                                    _this.SpeakText(voice);
+                                }
+                            }, function (error) {
+                                console.error(error);
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_3 = _a.sent();
+                        alert(e_3);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.getSupportedLanguages = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var languages, e_4;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.speech.getSupportedLanguages()];
+                    case 1:
+                        languages = _a.sent();
+                        console.log(languages);
+                        return [2 /*return*/, languages];
+                    case 2:
+                        e_4 = _a.sent();
+                        console.error(e_4);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.hasPermission = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var permission, e_5;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.speech.hasPermission()];
+                    case 1:
+                        permission = _a.sent();
+                        console.log(permission);
+                        return [2 /*return*/, permission];
+                    case 2:
+                        e_5 = _a.sent();
+                        console.log(e_5);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.getPermission = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var permission, e_6;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.speech.requestPermission()];
+                    case 1:
+                        permission = _a.sent();
+                        console.log(permission);
+                        return [2 /*return*/, permission];
+                    case 2:
+                        e_6 = _a.sent();
+                        console.log(e_6);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.isSpeechSupported = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var isAvailable;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.speech.isRecognitionAvailable()];
+                    case 1:
+                        isAvailable = _a.sent();
+                        console.log(isAvailable);
+                        return [2 /*return*/, isAvailable];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.sendMessage = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                this.messages.push({
+                    toId: this.toUser._id,
+                    _id: this.messages.length,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: this.user._id,
+                    username: this.user.username,
+                    pic: this.user.pic,
+                    text: this.newMessage
+                });
+                this.SendText(this.newMessage);
+                console.log(this.newMessage);
+                this.newMessage = "";
+                return [2 /*return*/];
+            });
+        });
+    };
+    Chat2Page.prototype.buildCardLayout = function (data) {
+    };
+    Chat2Page.prototype.login = function () {
+        this.navCtrl.push('WelcomePage');
+    };
+    return Chat2Page;
+}());
+Chat2Page = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-chat2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/'\n\n  <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n  \n\n      </ion-buttons>\n\n      <ion-title>\n\n        Chat-Bot\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content padding>\n\n  <div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">\n\n    <div *ngIf="user._id !== message.userId">\n\n      <img class="profile-pic left" [src]="toUser.pic" />\n\n      <div class="chat-bubble left slide-left">\n\n          \n\n         <div class="message" [innerHTML]="message.text.speech" autolinker></div>\n\n          \n\n        <div class="message-detail">\n\n          <span class="bold">{{toUser.username}}</span>\n\n        </div>\n\n          \n\n      </div>\n\n    </div>\n\n    <div *ngIf="user._id === message.userId">\n\n      <img class="profile-pic right" [src]="user.pic" />\n\n\n\n      <div class="chat-bubble right slide-right">\n\n          \n\n        <div class="message" [innerHTML]="message.text" autolinker></div>\n\n\n\n        <div class="message-detail">\n\n          <span class="bold">{{user.username}}</span>\n\n        </div>\n\n\n\n      </div>\n\n    </div>\n\n    <div class="cf"></div>\n\n  </div>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col>\n\n            <button ion-button clear (click)="listenForSpeech()"><ion-icon class="footer-btn" name="mic"></ion-icon></button>\n\n        </ion-col>\n\n        <ion-col col-8>\n\n            <ion-input [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>\n\n        </ion-col>\n\n        <ion-col>\n\n            <button ion-button clear (click)="sendMessage()"><ion-icon class="footer-btn" name="send"></ion-icon></button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"], __WEBPACK_IMPORTED_MODULE_3__ionic_native_speech_recognition__["a" /* SpeechRecognition */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__["a" /* TextToSpeech */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]])
+], Chat2Page);
+
+//# sourceMappingURL=chat2.js.map
 
 /***/ })
 

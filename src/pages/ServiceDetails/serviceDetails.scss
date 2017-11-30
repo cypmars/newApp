@@ -135,7 +135,6 @@ page-service-details {
     height: 100px;
     width: 100px;
     margin: 0 auto 0;
-    box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
   }
   #profile-info {
     position: absolute;
@@ -191,5 +190,20 @@ page-service-details {
 
   .toolbar-md-primary .toolbar-background-md{
     background: transparent;
+  }
+
+  .item-md .item-button, .item-ios .item-button{
+    height: 50px;
+    font-size: 1.6rem;
+  }
+
+  .list-md, .list_ios, .label-md, .label-ios{
+    margin: 0 0 0 0;
+    font-size: 1.4rem;
+  }
+
+  .list-ios > .item-block:last-child, .list-ios > .item-block:first-child{
+    border-top: 0;
+    border-bottom: 0;
   }
 }

@@ -12,16 +12,122 @@
     </ion-buttons>
   </ion-navbar>
 </ion-header>
-<div id="profile-bg" [ngStyle]="{'background-image': 'url(' + service.coverImage +')'}"></div>
+<div id="profile-bg" [ngStyle]="{'background-image': 'url(' + services[serviceId].coverImage +')'}"></div>
 <div id="content">
   <div id="profile-info" padding>
-    <img id="profile-image" [src]="service.profileImage">
-    <h3 id="profile-name">{{service.name}}</h3>
-    <p> &bull; {{service.location}}</p>
+    <img id="profile-image" [src]="services[serviceId].profileImage">
+    <h3 id="profile-name">{{services[serviceId].title}}</h3>
+    <h4 class="white-text" *ngIf="services[serviceId].subtitle != null">{{services[serviceId].subtitle}}</h4>
+    <hr>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button full color="primary" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button full color="primary">Demande d'informations</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <hr>
+    <div *ngIf="services[serviceId].subtitle2 != null">
+      <h5 class="white-text">{{services[serviceId].subtitle2}}</h5>
+      <div *ngFor="let p of services[serviceId].paragraphes">
+        <p>{{p}}</p>
+      </div>
+      <hr>
+    </div>
+    <div *ngIf="services[serviceId].description != null">
+      <div *ngFor="let description of services[serviceId].description">
+        <h5 class="white-text" *ngIf="description.title != null">{{description.title}}</h5>
+        <div *ngIf="description.paragraphes != null">
+          <div *ngFor="let p of description.paragraphes">
+            <p >{{p}}</p>
+          </div>
+        </div>
+        <div *ngIf="description.points != null">
+          <ul>
+            <li class="white-text" *ngFor="let p of description.points">{{p}}</li>
+          </ul>
+        </div>
+        <br>
+      </div>
+      <hr>
+    </div>
+    <div *ngIf="services[serviceId].engagement != null">
+      <h4 class="white-text">Engagements</h4>
+      <p>{{services[serviceId].engagement.title}}</p>
+      <ul>
+        <li class="white-text" *ngFor="let p of services[serviceId].engagement.points">{{p}}</li>
+      </ul>
+      <hr>
+    </div>
+    <div *ngIf="services[serviceId].areas != null">
+      <ion-list>
+        <ion-item text-wrap (click)="toggleGroup(0)" [ngClass]="{active: isGroupShown(0)}">
+          <button ion-button color="primary" full class="accordion-button">
+            <ion-icon item-left name="arrow-forward" *ngIf="!isGroupShown(0)"></ion-icon>
+            <ion-icon item-left name="arrow-down" *ngIf="isGroupShown(0)"></ion-icon>
+            Domaines d'iterventions
+          </button>
+          <div *ngIf="isGroupShown(0)" text-center>
+            <ul>
+              <li class="white-text" *ngFor="let area of services[serviceId].areas">
+                {{area}}
+              </li>
+            </ul>
+            <p class="white-text" *ngIf="services[serviceId].areasQual != null">{{services[serviceId].areasQual}}</p>
+            <br>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div *ngIf="services[serviceId].sectors != null">
+      <ion-list>
+        <ion-item text-wrap (click)="toggleGroup(1)" [ngClass]="{active: isGroupShown(1)}">
+          <button ion-button color="primary" full class="accordion-button">
+            <ion-icon item-left name="arrow-forward" *ngIf="!isGroupShown(1)"></ion-icon>
+            <ion-icon item-left name="arrow-down" *ngIf="isGroupShown(1)"></ion-icon>
+            Domaines d'activités
+          </button>
+          <div *ngIf="isGroupShown(1)" text-center>
+            <div *ngFor="let sector of services[serviceId].sectors">
+              <br>
+              <h5 class="white-text">{{sector.title}}</h5>
+              <p class="white-text" *ngIf="sector.subtitle != null">{{sector.subtitle}}</p>
+              <p class="white-text" *ngIf="sector.description != null">{{sector.description}}</p>
+              <ul>
+                <li class="white-text" *ngFor="let p of sector.points">{{p}}</li>
+              </ul>
+            </div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div *ngIf="services[serviceId].serviceDetails != null">
+      <ion-list>
+        <ion-item text-wrap (click)="toggleGroup(2)" [ngClass]="{active: isGroupShown(2)}">
+          <button ion-button color="primary" full class="accordion-button">
+            <ion-icon item-left name="arrow-forward" *ngIf="!isGroupShown(2)"></ion-icon>
+            <ion-icon item-left name="arrow-down" *ngIf="isGroupShown(2)"></ion-icon>
+            Notre gamme de services
+          </button>
+          <div *ngIf="isGroupShown(2)" text-center>
+            <p class="white-text">{{services[serviceId].serviceDetails.description}}</p>
+            <ul>
+              <li class="white-text" *ngFor="let p of services[serviceId].serviceDetails.points">{{p}}</li>
+            </ul>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+
+
+    <!-- <p> &bull; {{services.location}}</p>
     <p class="profile-description">{{service.description}}</p>
     <button ion-button (click)="seeMarque()">Voir la marque</button>
     <button ion-button *ngIf="!like" small color="purple" (click)="follow()">Je n'aime plus</button>
-    <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J'aime <ion-icon name="checkmark"></ion-icon></button>
+    <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J'aime <ion-icon name="checkmark"></ion-icon></button> -->
   </div>
 </div>
 </ion-content>

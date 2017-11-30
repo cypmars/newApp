@@ -61,8 +61,11 @@ export class ResultPage implements OnInit, OnDestroy{
 
   public networkInitialized(): void {
     
-        // now we can use the service to register on events
-        this.visNetworkService.on(this.visNetwork, 'click');
+        if (this.firstT)
+        {
+          // now we can use the service to register on events
+          this.visNetworkService.on(this.visNetwork, 'click');
+        }
 
         // open your console/dev tools to see the click params
         this.visNetworkService.click
@@ -70,7 +73,9 @@ export class ResultPage implements OnInit, OnDestroy{
           if (this.firstT)
           {
             if (eventData[0] === this.visNetwork) {
-              this.navCtrl.push('ServiceDetailsPage');
+              this.navCtrl.push('ServiceDetailsPage', {
+                param1: (this.visNetworkService.getSelectedNodes(this.visNetwork))[0]
+              });
               console.log(eventData[1]);
               console.log(this.visNetworkService.getSelectedNodes(this.visNetwork));
             }
@@ -81,11 +86,11 @@ export class ResultPage implements OnInit, OnDestroy{
 
   public ngOnInit(): void {
       const nodes = new VisNodes([
-          { id: '1', label: 'Propreté en milieu classique' },
-          { id: '2', label: 'Propreté en milieu sensible' },
-          { id: '3', label: 'Cryogénie' },
-          { id: '4', label: 'Propreté urbaine' },
-          { id: '5', label: 'Propreté dans les transports' }]);
+          { id: 0, label: 'Propreté en milieu classique' },
+          { id: 1, label: 'Propreté en milieu sensible' },
+          { id: 2, label: 'Cryogénie' },
+          { id: 3, label: 'Propreté urbaine' },
+          { id: 4, label: 'Propreté dans les transports' }]);
 
       const edges = new VisEdges();
 

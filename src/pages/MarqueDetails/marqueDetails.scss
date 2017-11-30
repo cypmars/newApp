@@ -229,11 +229,20 @@ page-marque-details {
     width: 100%;
   }
 
-  .label-md, .label-ios{
-    margin: 0 0 0 0;
+  .item-md .item-button, .item-ios .item-button{
+    height: 50px;
+    font-size: 1.6rem;
   }
 
-  .list-md, .list-ios{
-    margin:0 0 0 0;
+  .list-md, .list_ios, .label-md, .label-ios{
+    margin: 0 0 0 0;
+    font-size: 1.4rem;
   }
+
+  .list-ios > .item-block:last-child, .list-ios > .item-block:first-child{
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  
 }

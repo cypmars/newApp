@@ -13,50 +13,51 @@
   </ion-navbar>
 </ion-header>
 <div class="title-container">
-  <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + marques.imgSrc +')'}"></div>
-  <h3 class="profile-title">{{marques.title}}</h3>
+  <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + marques[marqueId].imgSrc +')'}"></div>
+  <h3 class="profile-title">{{marques[marqueId].title}}</h3>
 </div>
 <div id="content">
   <div id="profile-info" padding>
     <ion-grid>
       <ion-row>
-        <ion-col *ngFor="let key of marques.keys">
+        <ion-col *ngFor="let key of marques[marqueId].keys">
           <h3><b class="white-text">{{key.nb}}</b><br></h3>
           <p class="white-text">{{key.label}}</p>
         </ion-col>
       </ion-row>
     </ion-grid>
     <hr>
-    <h3 id="profile-name">{{marques.subtitle}}<br><small><I>"{{marques.citation}}"</I></small></h3>
+    <h3 id="profile-name">{{marques[marqueId].subtitle}}<br><small><I>"{{marques[marqueId].citation}}"</I></small></h3>
     <br>
-    <p class="profile-description">{{marques.description}}</p>
-    <p class="profile-description">{{marques.engagement}}</p>
+    <p class="profile-description">{{marques[marqueId].description}}</p>
+    <p class="profile-description">{{marques[marqueId].engagement}}</p>
     <hr>
     <br>
     <ion-list>
       <ion-item text-wrap (click)="toggleGroup(0)" [ngClass]="{active: isGroupShown(0)}">
-        <button ion-button color="primary" class="accordion-button" large="true">
+        <button ion-button color="primary" full class="accordion-button">
           <ion-icon item-left name="arrow-forward" *ngIf="!isGroupShown(0)"></ion-icon>
           <ion-icon item-left name="arrow-down" *ngIf="isGroupShown(0)"></ion-icon>
           Nos Métiers de la Propreté
         </button>
         <div *ngIf="isGroupShown(0)" text-center>
-          <div *ngFor="let serviceId of marques.metiersId">
+          <div *ngFor="let serviceId of marques[marqueId].metiersId">
             <br>
-            <h2 class="white-text"><b>{{services[serviceId].name}}</b></h2>
+            <h2 class="white-text"><b>{{services[serviceId].title}}</b></h2>
           </div>
+          <br>
         </div>
       </ion-item>
     </ion-list>
     <ion-list>
       <ion-item text-wrap (click)="toggleGroup(1)" [ngClass]="{active: isGroupShown(1)}">
-        <button ion-button color="primary" class="accordion-button" large="true">
+        <button ion-button color="primary" class="accordion-button" full>
           <ion-icon item-left name="arrow-forward" *ngIf="!isGroupShown(1)"></ion-icon>
           <ion-icon item-left name="arrow-down" *ngIf="isGroupShown(1)"></ion-icon>
           Nos Atouts de la Propreté
         </button>
         <div *ngIf="isGroupShown(1)" text-center>
-          <div *ngFor="let atout of marques.atouts">
+          <div *ngFor="let atout of marques[marqueId].atouts">
             <br>
             <h2 class="white-text"><b>{{atout.title}}</b></h2>
             <ul>

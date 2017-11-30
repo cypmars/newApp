@@ -25939,12 +25939,19 @@ page-marque-details .accordion-button {
   width: 100%;
 }
 
-page-marque-details .label-md, page-marque-details .label-ios {
-  margin: 0 0 0 0;
+page-marque-details .item-md .item-button, page-marque-details .item-ios .item-button {
+  height: 50px;
+  font-size: 1.6rem;
 }
 
-page-marque-details .list-md, page-marque-details .list-ios {
+page-marque-details .list-md, page-marque-details .list_ios, page-marque-details .label-md, page-marque-details .label-ios {
   margin: 0 0 0 0;
+  font-size: 1.4rem;
+}
+
+page-marque-details .list-ios > .item-block:last-child, page-marque-details .list-ios > .item-block:first-child {
+  border-top: 0;
+  border-bottom: 0;
 }
 
 page-service-details ion-content {
@@ -26094,8 +26101,6 @@ page-service-details #profile-image {
   height: 100px;
   width: 100px;
   margin: 0 auto 0;
-  -webkit-box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
-  box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
 }
 
 page-service-details #profile-info {
@@ -26156,6 +26161,21 @@ page-service-details .toolbar-ios-primary .toolbar-background-ios {
 
 page-service-details .toolbar-md-primary .toolbar-background-md {
   background: transparent;
+}
+
+page-service-details .item-md .item-button, page-service-details .item-ios .item-button {
+  height: 50px;
+  font-size: 1.6rem;
+}
+
+page-service-details .list-md, page-service-details .list_ios, page-service-details .label-md, page-service-details .label-ios {
+  margin: 0 0 0 0;
+  font-size: 1.4rem;
+}
+
+page-service-details .list-ios > .item-block:last-child, page-service-details .list-ios > .item-block:first-child {
+  border-top: 0;
+  border-bottom: 0;
 }
 
 page-chat {
