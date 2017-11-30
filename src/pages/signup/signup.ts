@@ -124,7 +124,7 @@ export class SignupPage {
 
   next(){
     console.log(this.signupSlider._activeIndex);
-    if (this.signupSlider._activeIndex == 1){
+    if (this.signupSlider._activeIndex == 0){
       this.lastSlide = false;
       this.signupSlider.slideNext();
     }
@@ -138,6 +138,10 @@ export class SignupPage {
     console.log(this.signupSlider._activeIndex);
     if (this.signupSlider._activeIndex == 0)
       this.navCtrl.pop();
+    else if (this.signupSlider._activeIndex == 2){
+      this.lastSlide = false;
+      this.signupSlider.slidePrev();
+    }
     else{
       this.lastSlide = true;
       this.signupSlider.slidePrev();
@@ -154,6 +158,10 @@ export class SignupPage {
     else {
       this.navCtrl.push(TinderQPage);
     }
+  }
+
+  public ngAfterViewInit(){
+    this.fab.setActiveLists(true);
   }
 
   public chooseService(event, data, fab: FabContainer){

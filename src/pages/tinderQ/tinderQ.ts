@@ -47,6 +47,7 @@ export class TinderQPage {
   // Our translated text strings
   private loginErrorString: string;
 
+  showButton: boolean = true ; 
 
 //Our Tree question
 nodes = 
@@ -579,6 +580,11 @@ nodes =
     this.cards = [{email: ''}];
     this.addNewCards(this.currentNode.children[0]);
     this.addNewCards(this.currentNode);
+
+    console.log(this.navCtrl.getPrevious().id) ;
+    if(this.navCtrl.getPrevious().id == "WelcomePage" || this.navCtrl.getPrevious().id == "SignupPage"){
+      this.showButton = false ; 
+    } 
   }
 
   ionViewDidLeave(){
