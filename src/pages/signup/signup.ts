@@ -1,22 +1,9 @@
 import { Component, ViewChild,  OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IonicPage, NavController, ToastController, Slides } from 'ionic-angular';
+import {  FabContainer, FabButton, FabList } from 'ionic-angular';
 
-import {
-  VisNode,
-  VisNodes,
-  VisEdges,
-  VisNetworkService,
-  VisNetworkData,
-  VisNetworkOptions } from 'ng2-vis/components/network';
-
-import { WelcomePage } from '../pages';
-import { MainPage } from '../pages';
-
-class ExampleNetworkData implements VisNetworkData {
-  public nodes: VisNodes;
-  public edges: VisEdges;
-}
+import {TinderQPage } from '../pages';
 
 @IonicPage()
 @Component({
@@ -24,81 +11,120 @@ class ExampleNetworkData implements VisNetworkData {
   templateUrl: 'signup.html'
 })
 
-export class SignupPage implements OnInit, OnDestroy{
+export class SignupPage {
 
-  public visNetwork: string = 'networkId1';
-  public visNetworkData: ExampleNetworkData;
-  public visNetworkOptions: VisNetworkOptions;
-  public visNetworkService: VisNetworkService;
+  public param1: string;
   
   @ViewChild('signupSlider') signupSlider: any;
+  @ViewChild('fab') fab: FabContainer;
 
   slideOneForm: FormGroup;
   slideTwoForm: FormGroup;
   slideThreeForm: FormGroup;
-  slideFourForm: FormGroup;
-  slideFiveForm: FormGroup;
+
+  who: string ;
+
+  jobs ; 
+
+  jobsTransport ; 
+  jobsAgriculture ; 
+  jobsCommerce ; 
+  jobsTelecom ; 
+  jobsIndustrie ; 
+  jobsEnergie ; 
+  jobsFinance ; 
+  jobsRecherche ; 
+  
+  tabBarElement: any;
 
   submitAttempt: boolean = false;
   lastSlide: boolean = true;
 
-  // The account fields for the login form.
-  // If you're using the username field with or without email, make
-  // sure to add it to the type
-  account: { name: string, email: string, password: string } = {
-    name: 'Test Human',
-    email: 'test@example.com',
-    password: 'test'
-  };
+  itemsCat: [{id: number, name: string, iconName: string, jobsName: any}] = [
+    {
+      id: 0,
+      name : "Agriculture & agroalimentaire",
+      iconName : "leaf", 
+      jobsName: this.jobsAgriculture = ["Agriculture", "Agroalimentaire", "Autre"]
+    },
+    {
+      id: 1,
+      name : "Industrie",
+      iconName : "lock", 
+      jobsName: this.jobsIndustrie = ["Pharmaceutique", "Textile", "Chimique", "Construction", "Batiment", "Automobile", "Aéronotique", "Lourde", "Autre"]
+    },
+    {
+      id: 2,
+      name : "Energie",
+      iconName : "plane",
+      jobsName: this.jobsEnergie = ["Nucléaire", "Eolien", "Solaire", "Hydrolique", "Pétrolier", "Autre"]
+    },
+    {
+      id: 3,
+      name : "Commerce & Tourisme",
+      iconName : "people", 
+      jobsName : this.jobsCommerce = ["Grand Commerce", "Petit commerce", "Artisanat", "Hôtellerie", "Restauration", "Autre"]
+    },
+    {
+      id: 4,
+      name : "Transport & Logistique",
+      iconName : "train",
+      jobsName : this.jobsTransport = ['Aéronotique', 'Ferroviaire', 'Urbain', 'Maritime', 'Astronautique', "Distribution", "Gestion & Pilotage", "Autre"] 
+    },
+    {
+      id: 5,
+      name : "Télécoms & Informatique",
+      iconName : "nuclear",
+      jobsName : this.jobsTelecom = ["Systèmes d'infromation", "Robotique", "Technologies", "Recherche", "Autre"]
+    },
+    {
+      id: 6,
+      name : "Santé & Services",
+      iconName : "school",
+      jobsName : this.jobsRecherche = ["Médecine", "Parmaceutique", "Aide à la personne", "Gardiennage", "Recherche", "Autre"]
+    },
+    {
+      id: 7,
+      name : "Economie",
+      iconName : "code-working",
+      jobsName : this.jobsFinance = ["Banque", "Finance", "Assurance", "Audit", "Conseil", "Autre"]
+    }
+  ];
+
+  myIcon: string = "Secteur d'activité ?";
 
   // Our translated text strings
   private signupErrorString: string;
 
   constructor(public navCtrl: NavController,
     public formBuilder: FormBuilder,
-    public toastCtrl: ToastController,
-    private visNetworkServ: VisNetworkService) {
+    public toastCtrl: ToastController) {
 
-    this.visNetworkService = visNetworkServ;
+    this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
 
     this.slideOneForm = formBuilder.group({
       firstName: ['',  Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
       lastName: ['',  Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
-      phone: [''],
-      email: ['']
+      email: [''],
+      mdp: ['']
     });
 
     this.slideTwoForm = formBuilder.group({
-      company: [''],
-      address: [''],
-      postcode: [''],
-      city: [''],
-      job: ['']
-    });
-
-    this.slideThreeForm = formBuilder.group({
       activity: ['']
     });
 
-    this.slideFourForm = formBuilder.group({
-      client: ['']
+    this.slideThreeForm = formBuilder.group({
+      work: ['']
     });
+  }
 
-    this.slideFiveForm = formBuilder.group({
-      need: ['']
-    });
-
+  ionViewWillLeave(){
+    this.tabBarElement.style.display = 'flex';
   }
 
   next(){
     console.log(this.signupSlider._activeIndex);
-    if (this.signupSlider._activeIndex == 1)
-    {
-      
-    }
-    if (this.signupSlider._activeIndex == 4)
-      this.navCtrl.push(WelcomePage);
-    else if (this.signupSlider._activeIndex == 3){
+    if (this.signupSlider._activeIndex == 1){
       this.lastSlide = false;
       this.signupSlider.slideNext();
     }
@@ -106,15 +132,13 @@ export class SignupPage implements OnInit, OnDestroy{
       this.lastSlide = true;
       this.signupSlider.slideNext();
     }
-
   }
 
   prev(){
     console.log(this.signupSlider._activeIndex);
     if (this.signupSlider._activeIndex == 0)
       this.navCtrl.pop();
-    else
-    {
+    else{
       this.lastSlide = true;
       this.signupSlider.slidePrev();
     }
@@ -123,71 +147,20 @@ export class SignupPage implements OnInit, OnDestroy{
   save(){
     this.submitAttempt = true;
     
-       if(!this.slideOneForm.valid){
-           this.signupSlider.slideTo(0);
-           this.lastSlide = true;
-       }
-       else if(!this.slideTwoForm.valid){
-           this.signupSlider.slideTo(1);
-       }
-       else {
-          this.navCtrl.push(MainPage);
-       }
+    if(!this.slideOneForm.valid){
+      this.signupSlider.slideTo(0);
+      this.lastSlide = true;
+    }
+    else {
+      this.navCtrl.push(TinderQPage);
+    }
   }
 
-  public addNode(): void {
-    const newId = this.visNetworkData.nodes.getLength() + 1;
-    this.visNetworkData.nodes.add({ id: newId.toString(), label: 'Node ' + newId });
-  }
-
-  public networkInitialized(): void {
-     // now we can use the service to register on events
-     this.visNetworkService.on(this.visNetwork, 'click');
-     
-      // open your console/dev tools to see the click params
-      this.visNetworkService.click
-          .subscribe((eventData: any[]) => {
-              if (eventData[0] === this.visNetwork) {
-                console.log(eventData[1]);
-                console.log(this.visNetworkService.getSelectedNodes(this.visNetwork));
-              }
-          });
-  }
-
-  public ngOnInit(): void {
-      const nodes = new VisNodes([
-          { id: '1', label: 'Node 1' },
-          { id: '2', label: 'Node 2' },
-          { id: '3', label: 'Node 3' },
-          { id: '4', label: 'Node 4' },
-          { id: '5', label: 'Node 5', title: 'Title of Node 5' }]);
-
-      const edges = new VisEdges();
-
-      this.visNetworkData = {
-          nodes,
-          edges,
-      };
-
-      this.visNetworkOptions = {
-        interaction:{
-          multiselect: true
-        },
-        nodes: {borderWidth:1 ,shape:"circle", color:{background:'#F92C55', border: '#F92C55', highlight:{ background:'#F92C55', border: '#F92C55'}},font:{color:'#fff'}},
-        physics: {
-          stabilization: false,
-          minVelocity:  0.01,
-          solver: "repulsion",
-          repulsion: {
-            nodeDistance: 50
-          }
-        },
-      };
-  }
-
-  
-  public ngOnDestroy(): void {
-      this.visNetworkService.off(this.visNetwork, 'click');
+  public chooseService(event, data, fab: FabContainer){
+    this.myIcon = this.itemsCat[data].name;
+    this.lastSlide = false;
+    this.signupSlider.slideNext();
+    this.jobs = this.itemsCat[data].jobsName ; 
   }
 }
 

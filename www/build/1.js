@@ -1,14 +1,14 @@
-webpackJsonp([1],Array(297).concat([
-/* 297 */
+webpackJsonp([1],Array(298).concat([
+/* 298 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TinderQPageModule", function() { return TinderQPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(621);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(622);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -46,7 +46,6 @@ TinderQPageModule = __decorate([
 //# sourceMappingURL=tinderQ.module.js.map
 
 /***/ }),
-/* 298 */,
 /* 299 */,
 /* 300 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -573,7 +572,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subject_1 = __webpack_require__(32);
-var queue_1 = __webpack_require__(322);
+var queue_1 = __webpack_require__(323);
 var Subscription_1 = __webpack_require__(33);
 var observeOn_1 = __webpack_require__(314);
 var ObjectUnsubscribedError_1 = __webpack_require__(209);
@@ -1585,6 +1584,17 @@ exports.ReduceSubscriber = ReduceSubscriber;
 
 "use strict";
 
+var Observable_1 = __webpack_require__(9);
+var map_1 = __webpack_require__(207);
+Observable_1.Observable.prototype.map = map_1.map;
+//# sourceMappingURL=map.js.map
+
+/***/ }),
+/* 318 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -1708,7 +1718,7 @@ exports.FromObservable = FromObservable;
 //# sourceMappingURL=FromObservable.js.map
 
 /***/ }),
-/* 318 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1825,7 +1835,7 @@ exports.RaceSubscriber = RaceSubscriber;
 //# sourceMappingURL=race.js.map
 
 /***/ }),
-/* 319 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1836,7 +1846,7 @@ exports.noop = noop;
 //# sourceMappingURL=noop.js.map
 
 /***/ }),
-/* 320 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1846,7 +1856,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var FromObservable_1 = __webpack_require__(317);
+var FromObservable_1 = __webpack_require__(318);
 var isArray_1 = __webpack_require__(106);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
@@ -1979,7 +1989,7 @@ var OnErrorResumeNextSubscriber = (function (_super) {
 //# sourceMappingURL=onErrorResumeNext.js.map
 
 /***/ }),
-/* 321 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1991,7 +2001,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var root_1 = __webpack_require__(30);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var Observable_1 = __webpack_require__(9);
 var Subscriber_1 = __webpack_require__(29);
 var map_1 = __webpack_require__(207);
@@ -2400,7 +2410,7 @@ exports.AjaxTimeoutError = AjaxTimeoutError;
 //# sourceMappingURL=AjaxObservable.js.map
 
 /***/ }),
-/* 322 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2472,7 +2482,7 @@ exports.queue = new QueueScheduler_1.QueueScheduler(QueueAction_1.QueueAction);
 //# sourceMappingURL=queue.js.map
 
 /***/ }),
-/* 323 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2649,7 +2659,7 @@ exports.MergeMapSubscriber = MergeMapSubscriber;
 //# sourceMappingURL=mergeMap.js.map
 
 /***/ }),
-/* 324 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2810,7 +2820,7 @@ exports.MergeMapToSubscriber = MergeMapToSubscriber;
 //# sourceMappingURL=mergeMapTo.js.map
 
 /***/ }),
-/* 325 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2822,7 +2832,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subscriber_1 = __webpack_require__(29);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 /* tslint:enable:max-line-length */
 /**
  * Returns an Observable that emits all items emitted by the source Observable that are distinct by comparison from the previous item.
@@ -2924,7 +2934,7 @@ var DistinctUntilChangedSubscriber = (function (_super) {
 //# sourceMappingURL=distinctUntilChanged.js.map
 
 /***/ }),
-/* 326 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3022,7 +3032,7 @@ var FilterSubscriber = (function (_super) {
 //# sourceMappingURL=filter.js.map
 
 /***/ }),
-/* 327 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3127,17 +3137,6 @@ var FindValueSubscriber = (function (_super) {
 }(Subscriber_1.Subscriber));
 exports.FindValueSubscriber = FindValueSubscriber;
 //# sourceMappingURL=find.js.map
-
-/***/ }),
-/* 328 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var Observable_1 = __webpack_require__(9);
-var map_1 = __webpack_require__(207);
-Observable_1.Observable.prototype.map = map_1.map;
-//# sourceMappingURL=map.js.map
 
 /***/ }),
 /* 329 */
@@ -3809,7 +3808,7 @@ __webpack_require__(482);
 __webpack_require__(484);
 __webpack_require__(486);
 __webpack_require__(488);
-__webpack_require__(328);
+__webpack_require__(317);
 __webpack_require__(490);
 __webpack_require__(492);
 __webpack_require__(494);
@@ -3904,13 +3903,13 @@ var TestScheduler_1 = __webpack_require__(601);
 exports.TestScheduler = TestScheduler_1.TestScheduler;
 var VirtualTimeScheduler_1 = __webpack_require__(338);
 exports.VirtualTimeScheduler = VirtualTimeScheduler_1.VirtualTimeScheduler;
-var AjaxObservable_1 = __webpack_require__(321);
+var AjaxObservable_1 = __webpack_require__(322);
 exports.AjaxResponse = AjaxObservable_1.AjaxResponse;
 exports.AjaxError = AjaxObservable_1.AjaxError;
 exports.AjaxTimeoutError = AjaxObservable_1.AjaxTimeoutError;
 var asap_1 = __webpack_require__(330);
 var async_1 = __webpack_require__(300);
-var queue_1 = __webpack_require__(322);
+var queue_1 = __webpack_require__(323);
 var animationFrame_1 = __webpack_require__(604);
 var rxSubscriber_1 = __webpack_require__(57);
 var iterator_1 = __webpack_require__(206);
@@ -3991,7 +3990,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(9);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var AsyncSubject_1 = __webpack_require__(305);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -4286,7 +4285,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(9);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var AsyncSubject_1 = __webpack_require__(305);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -4891,7 +4890,7 @@ Observable_1.Observable.from = from_1.from;
 
 "use strict";
 
-var FromObservable_1 = __webpack_require__(317);
+var FromObservable_1 = __webpack_require__(318);
 exports.from = FromObservable_1.FromObservable.create;
 //# sourceMappingURL=from.js.map
 
@@ -5789,7 +5788,7 @@ Observable_1.Observable.race = race_1.race;
 
 "use strict";
 
-var race_1 = __webpack_require__(318);
+var race_1 = __webpack_require__(319);
 exports.race = race_1.raceStatic;
 //# sourceMappingURL=race.js.map
 
@@ -5826,7 +5825,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(9);
-var noop_1 = __webpack_require__(319);
+var noop_1 = __webpack_require__(320);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -5917,7 +5916,7 @@ Observable_1.Observable.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNex
 
 "use strict";
 
-var onErrorResumeNext_1 = __webpack_require__(320);
+var onErrorResumeNext_1 = __webpack_require__(321);
 exports.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNextStatic;
 //# sourceMappingURL=onErrorResumeNext.js.map
 
@@ -6427,7 +6426,7 @@ Observable_1.Observable.ajax = ajax_1.ajax;
 
 "use strict";
 
-var AjaxObservable_1 = __webpack_require__(321);
+var AjaxObservable_1 = __webpack_require__(322);
 exports.ajax = AjaxObservable_1.AjaxObservable.create;
 //# sourceMappingURL=ajax.js.map
 
@@ -6470,7 +6469,7 @@ var Subscription_1 = __webpack_require__(33);
 var root_1 = __webpack_require__(30);
 var ReplaySubject_1 = __webpack_require__(308);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var assign_1 = __webpack_require__(410);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -7476,7 +7475,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subscription_1 = __webpack_require__(33);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /**
@@ -7901,7 +7900,7 @@ Observable_1.Observable.prototype.concatMap = concatMap_1.concatMap;
 
 "use strict";
 
-var mergeMap_1 = __webpack_require__(323);
+var mergeMap_1 = __webpack_require__(324);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to an Observable which is merged in the output
@@ -7985,7 +7984,7 @@ Observable_1.Observable.prototype.concatMapTo = concatMapTo_1.concatMapTo;
 
 "use strict";
 
-var mergeMapTo_1 = __webpack_require__(324);
+var mergeMapTo_1 = __webpack_require__(325);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to the same Observable which is merged multiple
@@ -9184,7 +9183,7 @@ exports.Set = root_1.root.Set || minimalSetImpl();
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var distinctUntilChanged_1 = __webpack_require__(325);
+var distinctUntilChanged_1 = __webpack_require__(326);
 Observable_1.Observable.prototype.distinctUntilChanged = distinctUntilChanged_1.distinctUntilChanged;
 //# sourceMappingURL=distinctUntilChanged.js.map
 
@@ -9205,7 +9204,7 @@ Observable_1.Observable.prototype.distinctUntilKeyChanged = distinctUntilKeyChan
 
 "use strict";
 
-var distinctUntilChanged_1 = __webpack_require__(325);
+var distinctUntilChanged_1 = __webpack_require__(326);
 /* tslint:enable:max-line-length */
 /**
  * Returns an Observable that emits all items emitted by the source Observable that are distinct by comparison from the previous item,
@@ -9690,7 +9689,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /* tslint:enable:max-line-length */
@@ -9959,7 +9958,7 @@ var ElementAtSubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var filter_1 = __webpack_require__(326);
+var filter_1 = __webpack_require__(327);
 Observable_1.Observable.prototype.filter = filter_1.filter;
 //# sourceMappingURL=filter.js.map
 
@@ -10031,7 +10030,7 @@ var FinallySubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var find_1 = __webpack_require__(327);
+var find_1 = __webpack_require__(328);
 Observable_1.Observable.prototype.find = find_1.find;
 //# sourceMappingURL=find.js.map
 
@@ -10052,7 +10051,7 @@ Observable_1.Observable.prototype.findIndex = findIndex_1.findIndex;
 
 "use strict";
 
-var find_1 = __webpack_require__(327);
+var find_1 = __webpack_require__(328);
 /**
  * Emits only the index of the first value emitted by the source Observable that
  * meets some condition.
@@ -10677,7 +10676,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(29);
-var noop_1 = __webpack_require__(319);
+var noop_1 = __webpack_require__(320);
 /**
  * Ignores all items emitted by the source Observable and only passes calls of `complete` or `error`.
  *
@@ -10810,7 +10809,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /**
@@ -11572,7 +11571,7 @@ Observable_1.Observable.prototype.mergeAll = mergeAll_1.mergeAll;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var mergeMap_1 = __webpack_require__(323);
+var mergeMap_1 = __webpack_require__(324);
 Observable_1.Observable.prototype.mergeMap = mergeMap_1.mergeMap;
 Observable_1.Observable.prototype.flatMap = mergeMap_1.mergeMap;
 //# sourceMappingURL=mergeMap.js.map
@@ -11584,7 +11583,7 @@ Observable_1.Observable.prototype.flatMap = mergeMap_1.mergeMap;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var mergeMapTo_1 = __webpack_require__(324);
+var mergeMapTo_1 = __webpack_require__(325);
 Observable_1.Observable.prototype.flatMapTo = mergeMapTo_1.mergeMapTo;
 Observable_1.Observable.prototype.mergeMapTo = mergeMapTo_1.mergeMapTo;
 //# sourceMappingURL=mergeMapTo.js.map
@@ -11612,7 +11611,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var subscribeToResult_1 = __webpack_require__(52);
 var OuterSubscriber_1 = __webpack_require__(51);
 /**
@@ -11822,7 +11821,7 @@ Observable_1.Observable.prototype.observeOn = observeOn_1.observeOn;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var onErrorResumeNext_1 = __webpack_require__(320);
+var onErrorResumeNext_1 = __webpack_require__(321);
 Observable_1.Observable.prototype.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNext;
 //# sourceMappingURL=onErrorResumeNext.js.map
 
@@ -11938,7 +11937,7 @@ Observable_1.Observable.prototype.partition = partition_1.partition;
 "use strict";
 
 var not_1 = __webpack_require__(511);
-var filter_1 = __webpack_require__(326);
+var filter_1 = __webpack_require__(327);
 /**
  * Splits the source Observable into two, one with values that satisfy a
  * predicate, and another with values that don't satisfy the predicate.
@@ -12223,7 +12222,7 @@ exports.publishLast = publishLast;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var race_1 = __webpack_require__(318);
+var race_1 = __webpack_require__(319);
 Observable_1.Observable.prototype.race = race_1.race;
 //# sourceMappingURL=race.js.map
 
@@ -12349,7 +12348,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(32);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /**
@@ -12556,7 +12555,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(32);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /**
@@ -13023,7 +13022,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subscriber_1 = __webpack_require__(29);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 /**
  * Compares all values of two observables in sequence using an optional comparor function
  * and returns an observable of a single boolean value representing whether or not the two sequences
@@ -15996,7 +15995,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Subject_1 = __webpack_require__(32);
 var Subscription_1 = __webpack_require__(33);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /**
@@ -16192,7 +16191,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(32);
 var tryCatch_1 = __webpack_require__(105);
-var errorObject_1 = __webpack_require__(53);
+var errorObject_1 = __webpack_require__(54);
 var OuterSubscriber_1 = __webpack_require__(51);
 var subscribeToResult_1 = __webpack_require__(52);
 /**
@@ -17034,13 +17033,14 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* 618 */,
 /* 619 */,
 /* 620 */,
-/* 621 */
+/* 621 */,
+/* 622 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TinderQPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(342);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
@@ -17599,7 +17599,7 @@ __decorate([
 ], TinderQPage.prototype, "swingCards", void 0);
 TinderQPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-tinderQ',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      \n\n                      <ion-item *ngIf="c.question">\n\n                          <div id="validate-or-not" class="validate-or-not"></div>\n\n                          <img *ngIf="c.img_src" [src]="c.img_src">\n\n                          <h1 class="relative-pos" style="color: black;">{{ c.question }}</h1>\n\n                      </ion-item>\n\n                 \n\n                      <ion-row *ngIf="c.name">\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                              <ion-icon name="checkmark-circle"></ion-icon>\n\n                              YES\n\n                          </button>\n\n                        </ion-col>\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                            <ion-icon name="close-circle"></ion-icon>\n\n                            NO\n\n                          </button>\n\n                        </ion-col>\n\n                      </ion-row>\n\n                    </ion-card>\n\n                  </div>\n\n                  <p style="text-align: center; width: 100%;">{{ recentCard }}</p>\n\n              </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/
+        selector: 'page-tinderQ',template:/*ion-inline-start:"C:\Users\Laora\newApp\src\pages\tinderQ\tinderQ.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      \n\n                      <ion-item *ngIf="c.question">\n\n                          <div id="validate-or-not" class="validate-or-not"></div>\n\n                          <img *ngIf="c.img_src" [src]="c.img_src">\n\n                          <h1 class="relative-pos" style="color: black;">{{ c.question }}</h1>\n\n                      </ion-item>\n\n                 \n\n                      <ion-row *ngIf="c.name">\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                              <ion-icon name="checkmark-circle"></ion-icon>\n\n                              YES\n\n                          </button>\n\n                        </ion-col>\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                            <ion-icon name="close-circle"></ion-icon>\n\n                            NO\n\n                          </button>\n\n                        </ion-col>\n\n                      </ion-row>\n\n                    </ion-card>\n\n                  </div>\n\n                  <p style="text-align: center; width: 100%;">{{ recentCard }}</p>\n\n              </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Laora\newApp\src\pages\tinderQ\tinderQ.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], TinderQPage);

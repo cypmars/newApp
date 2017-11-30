@@ -26989,73 +26989,15 @@ page-signup .splash-bg {
   height: 100%;
 }
 
-page-signup .splash-relative {
-  position: absolute;
-  width: 60%;
-  margin-right: 20%;
-  margin-left: 20%;
-  height: 100%;
-}
-
-page-signup .splash-logo {
-  margin: auto;
-  background: url("../assets/img/logo2.png") repeat transparent;
-  background-size: 100%;
-  width: 128px;
-  height: 128px;
-}
-
-page-signup .splash-intro {
-  text-align: center;
-  color: white;
-  font-size: 2em;
-}
-
-page-signup .splash-new {
-  position: relative;
-  font-size: 20px;
-}
-
-page-signup .splash-end {
-  position: fixed;
-  bottom: 20px;
-  width: 60%;
-  text-align: center;
-}
-
-page-signup .splash-end a {
-  color: white;
-}
-
 page-signup .item-md, page-signup .item-ios {
   background-color: transparent;
   padding-right: 16px;
-}
-
-page-signup button.login {
-  margin-top: 25px;
-  max-width: 180px;
-  background-color: transparent;
-  border: 1px solid white;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  color: #ffffff;
-}
-
-page-signup button.login.activated {
-  background-color: gainsboro;
+  font-size: 0.8em;
+  padding-left: 0;
 }
 
 page-signup input {
   color: white;
-}
-
-page-signup .white-text {
-  color: white;
-}
-
-page-signup .item-input ion-label {
-  width: 20px;
 }
 
 page-signup .item-md.item-block .item-inner, page-signup .item-ios.item-block .item-inner {
@@ -27074,11 +27016,6 @@ page-signup .item-input ion-label {
   width: 120px !important;
 }
 
-page-signup .item-ios, page-signup .item-md {
-  font-size: 0.8em;
-  background-color: transparent;
-}
-
 page-signup .white-text {
   color: white;
 }
@@ -27092,16 +27029,145 @@ page-signup p {
   color: white;
 }
 
-page-signup .network-canvas {
-  width: 100%;
-  height: 80%;
+page-signup ion-select, page-signup ion-label {
+  color: white;
 }
 
-page-signup .chart-container {
-  position: relative;
-  margin: auto;
-  height: 80vh;
-  width: 80vw;
+page-signup .myFab {
+  margin-top: 60px;
+}
+
+page-signup ion-fab-list[side=top-left] {
+  margin: -70px 62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-signup ion-fab-list[side=bottom-left] {
+  margin: 55px 62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-signup ion-fab-list[side=top-right] {
+  margin: -70px -62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-signup ion-fab-list[side=bottom-right] {
+  margin: 55px -62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-signup .larger {
+  font-size: 3em;
+}
+
+page-signup .fab-close-icone {
+  display: none;
+}
+
+page-signup .fab {
+  font-size: 8px;
+  line-height: 10px;
+  white-space: normal;
+}
+
+page-signup .fab-md-in-list {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  height: 55px;
+  width: 55px;
+}
+
+page-signup .fab-ios-in-list {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  height: 55px;
+  width: 55px;
+}
+
+page-signup .list-ios .item-block .item-inner {
+  border-bottom: 0;
+}
+
+page-signup .list-md .item-block .item-inner {
+  border-bottom: 0;
+}
+
+page-signup .item-select {
+  border-bottom: 1px solid white;
+}
+
+page-signup .range-md.range-has-pin, page-signup .range-ios.range-has-pin {
+  padding: 0;
+}
+
+page-signup .label-md {
+  color: white;
+  width: 100%;
+  float: right;
+  margin: 0;
+}
+
+page-signup .item-input .label-md, page-signup .item-select .label-md, page-signup .item-datetime .label-md {
+  color: white;
+}
+
+page-signup .item-md {
+  padding-left: 0;
+}
+
+page-signup .item-md.item-block .item-inner, page-signup .item-ios.item-block .item-inner {
+  padding-right: 0;
+}
+
+page-signup .select-text {
+  width: 100%;
+}
+
+page-signup .select-md .select-icon .select-icon-inner {
+  color: white;
+}
+
+page-signup .range-ios, page-signup .range-md {
+  padding: 0 0 0 0;
+}
+
+page-signup .label-ios, page-signup .label-md {
+  margin-right: 0;
+}
+
+page-signup .buttonSign {
+  margin-top: 50px;
+  max-width: 180px;
+  background-color: transparent;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+page-signup .buttonSign.activated {
+  background-color: gainsboro;
 }
 
 .ios page-signup p, .md page-signup p {
