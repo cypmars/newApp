@@ -24,16 +24,8 @@ export class SignupPage {
 
   who: string ;
 
-  jobs ; 
-
-  jobsTransport ; 
-  jobsAgriculture ; 
-  jobsCommerce ; 
-  jobsTelecom ; 
-  jobsIndustrie ; 
-  jobsEnergie ; 
-  jobsFinance ; 
-  jobsRecherche ; 
+  jobs;
+  jobsTab;
   
   tabBarElement: any;
 
@@ -45,49 +37,49 @@ export class SignupPage {
       id: 0,
       name : "Agriculture & agroalimentaire",
       iconName : "leaf", 
-      jobsName: this.jobsAgriculture = ["Agriculture", "Agroalimentaire", "Autre"]
+      jobsName: this.jobsTab= ["Agriculture", "Agroalimentaire", "Autre"]
     },
     {
       id: 1,
       name : "Industrie",
       iconName : "lock", 
-      jobsName: this.jobsIndustrie = ["Pharmaceutique", "Textile", "Chimique", "Construction", "Batiment", "Automobile", "Aéronotique", "Lourde", "Autre"]
+      jobsName: this.jobsTab = ["Pharmaceutique", "Textile", "Chimique", "Construction", "Batiment", "Automobile", "Aéronotique", "Lourde", "Autre"]
     },
     {
       id: 2,
       name : "Energie",
       iconName : "plane",
-      jobsName: this.jobsEnergie = ["Nucléaire", "Eolien", "Solaire", "Hydrolique", "Pétrolier", "Autre"]
+      jobsName: this.jobsTab = ["Nucléaire", "Eolien", "Solaire", "Hydrolique", "Pétrolier", "Autre"]
     },
     {
       id: 3,
       name : "Commerce & Tourisme",
       iconName : "people", 
-      jobsName : this.jobsCommerce = ["Grand Commerce", "Petit commerce", "Artisanat", "Hôtellerie", "Restauration", "Autre"]
+      jobsName : this.jobsTab = ["Grand Commerce", "Petit commerce", "Artisanat", "Hôtellerie", "Restauration", "Autre"]
     },
     {
       id: 4,
       name : "Transport & Logistique",
       iconName : "train",
-      jobsName : this.jobsTransport = ['Aéronotique', 'Ferroviaire', 'Urbain', 'Maritime', 'Astronautique', "Distribution", "Gestion & Pilotage", "Autre"] 
+      jobsName : this.jobsTab = ['Aéronotique', 'Ferroviaire', 'Urbain', 'Maritime', 'Astronautique', "Distribution", "Gestion & Pilotage", "Autre"] 
     },
     {
       id: 5,
       name : "Télécoms & Informatique",
       iconName : "nuclear",
-      jobsName : this.jobsTelecom = ["Systèmes d'infromation", "Robotique", "Technologies", "Recherche", "Autre"]
+      jobsName : this.jobsTab = ["Systèmes d'infromation", "Robotique", "Technologies", "Recherche", "Autre"]
     },
     {
       id: 6,
       name : "Santé & Services",
       iconName : "school",
-      jobsName : this.jobsRecherche = ["Médecine", "Parmaceutique", "Aide à la personne", "Gardiennage", "Recherche", "Autre"]
+      jobsName : this.jobsTab = ["Médecine", "Parmaceutique", "Aide à la personne", "Gardiennage", "Recherche", "Autre"]
     },
     {
       id: 7,
       name : "Economie",
       iconName : "code-working",
-      jobsName : this.jobsFinance = ["Banque", "Finance", "Assurance", "Audit", "Conseil", "Autre"]
+      jobsName : this.jobsTab = ["Banque", "Finance", "Assurance", "Audit", "Conseil", "Autre"]
     }
   ];
 
