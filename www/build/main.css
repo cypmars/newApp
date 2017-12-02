@@ -25688,496 +25688,6 @@ ion-title {
   text-align: center;
 }
 
-page-marque-details ion-content {
-  background: #b2284e;
-  /* For browsers that do not support gradients */
-  /* For Safari 5.1 to 6.0 */
-  /* For Opera 11.1 to 12.0 */
-  /* For Firefox 3.6 to 15 */
-  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
-  background: linear-gradient(-90deg, #b2284e, #2a73d3);
-  /* Standard syntax */
-  height: 100%;
-}
-
-page-marque-details .ios [padding] .scroll-content, page-marque-details .md [padding] .scroll-content {
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-}
-
-page-marque-details .splash-relative {
-  position: absolute;
-  width: 60%;
-  margin-right: 20%;
-  margin-left: 20%;
-  height: 100%;
-}
-
-page-marque-details .splash-logo {
-  margin: auto;
-  background: url("../assets/img/logo2.png") repeat transparent;
-  background-size: 100%;
-  width: 128px;
-  height: 128px;
-}
-
-page-marque-details .splash-intro {
-  text-align: center;
-  color: white;
-  font-size: 2em;
-}
-
-page-marque-details .splash-new {
-  position: relative;
-  font-size: 20px;
-}
-
-page-marque-details .splash-end {
-  position: fixed;
-  bottom: 20px;
-  width: 60%;
-  text-align: center;
-}
-
-page-marque-details .splash-end a {
-  color: white;
-}
-
-page-marque-details .item-md, page-marque-details .item-ios {
-  background-color: transparent;
-}
-
-page-marque-details button.login {
-  margin-top: 25px;
-  max-width: 180px;
-  background-color: transparent;
-  border: 1px solid white;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  color: #ffffff;
-}
-
-page-marque-details button.login.activated {
-  background-color: gainsboro;
-}
-
-page-marque-details input {
-  color: white;
-}
-
-page-marque-details .white-text {
-  color: white;
-}
-
-page-marque-details .item-input ion-label {
-  width: 20px;
-}
-
-page-marque-details .item-md {
-  padding-left: 0;
-}
-
-page-marque-details .item-md.item-block .item-inner {
-  padding-right: 0;
-}
-
-page-marque-details .account {
-  position: relative;
-  height: 200px;
-}
-
-page-marque-details .account-pic {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
-
-page-marque-details .account-text {
-  position: absolute;
-  width: 100%;
-  height: 200px;
-  color: white;
-  z-index: 2;
-}
-
-page-marque-details button,
-page-marque-details ion-button,
-page-marque-details .button-md,
-page-marque-details .button-ios {
-  text-transform: none !important;
-}
-
-page-marque-details p {
-  color: #ffffff;
-}
-
-page-marque-details #profile-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin-top: -16px;
-  height: 160px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-filter: blur(2px);
-  /* Safari 6.0 - 9.0 */
-  filter: blur(2px);
-  text-align: center;
-}
-
-page-marque-details #content {
-  position: relative;
-  margin-top: 150px;
-  padding-top: 200px;
-  text-align: center;
-}
-
-page-marque-details #profile-image {
-  display: block;
-  border-radius: 50%;
-  width: auto;
-  height: 100px;
-  width: 100px;
-  margin: 0 auto 0;
-  -webkit-box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
-  box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
-}
-
-page-marque-details #profile-info {
-  position: absolute;
-  top: -5px;
-  width: 100%;
-  z-index: 2;
-  text-align: center;
-}
-
-page-marque-details #profile-name {
-  color: #ffffff;
-  font-size: 26px;
-}
-
-page-marque-details .profile-description {
-  font-size: 15px;
-  color: #ffffff;
-}
-
-page-marque-details .follow-button {
-  text-transform: none;
-  border-radius: 3px !important;
-}
-
-page-marque-details .follow-button ion-icon {
-  font-weight: bold;
-  padding-left: 5px;
-  font-size: 2.5rem;
-}
-
-page-marque-details .profile-numbers p {
-  color: #444;
-  font-size: medium;
-  margin-bottom: 3px;
-}
-
-page-marque-details .profile-numbers span {
-  font-weight: bold;
-  font-size: 2.4rem;
-  color: #34354c;
-}
-
-page-marque-details hr {
-  border: 0;
-  height: 1px;
-  background: #444;
-  background: -webkit-linear-gradient(left, transparent 0%, #bcc6d6 50%, transparent 100%);
-}
-
-page-marque-details #posts {
-  text-align: justify;
-}
-
-page-marque-details .toolbar-ios-primary .toolbar-background-ios {
-  background: transparent;
-}
-
-page-marque-details .toolbar-md-primary .toolbar-background-md {
-  background: transparent;
-}
-
-page-marque-details .title-container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-page-marque-details .profile-title {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-page-marque-details .scroll-content {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-page-marque-details button {
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-page-marque-details .list-md .item-block .item-inner, page-marque-details .list-ios .item-block .item-inner {
-  border: 0;
-}
-
-page-marque-details .accordion-button {
-  width: 100%;
-}
-
-page-marque-details .item-md .item-button, page-marque-details .item-ios .item-button {
-  height: 50px;
-  font-size: 1.6rem;
-}
-
-page-marque-details .list-md, page-marque-details .list_ios, page-marque-details .label-md, page-marque-details .label-ios {
-  margin: 0 0 0 0;
-  font-size: 1.4rem;
-}
-
-page-marque-details .list-ios > .item-block:last-child, page-marque-details .list-ios > .item-block:first-child {
-  border-top: 0;
-  border-bottom: 0;
-}
-
-page-service-details ion-content {
-  background: #b2284e;
-  /* For browsers that do not support gradients */
-  /* For Safari 5.1 to 6.0 */
-  /* For Opera 11.1 to 12.0 */
-  /* For Firefox 3.6 to 15 */
-  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
-  background: linear-gradient(-90deg, #b2284e, #2a73d3);
-  /* Standard syntax */
-  height: 100%;
-}
-
-page-service-details .splash-relative {
-  position: absolute;
-  width: 60%;
-  margin-right: 20%;
-  margin-left: 20%;
-  height: 100%;
-}
-
-page-service-details .splash-logo {
-  margin: auto;
-  background: url("../assets/img/logo2.png") repeat transparent;
-  background-size: 100%;
-  width: 128px;
-  height: 128px;
-}
-
-page-service-details .splash-intro {
-  text-align: center;
-  color: white;
-  font-size: 2em;
-}
-
-page-service-details .splash-new {
-  position: relative;
-  font-size: 20px;
-}
-
-page-service-details .splash-end {
-  position: fixed;
-  bottom: 20px;
-  width: 60%;
-  text-align: center;
-}
-
-page-service-details .splash-end a {
-  color: white;
-}
-
-page-service-details .item-md, page-service-details .item-ios {
-  background-color: transparent;
-}
-
-page-service-details button.login {
-  margin-top: 25px;
-  max-width: 180px;
-  background-color: transparent;
-  border: 1px solid white;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  color: #ffffff;
-}
-
-page-service-details button.login.activated {
-  background-color: gainsboro;
-}
-
-page-service-details input {
-  color: white;
-}
-
-page-service-details .white-text {
-  color: white;
-}
-
-page-service-details .item-input ion-label {
-  width: 20px;
-}
-
-page-service-details .item-md {
-  padding-left: 0;
-}
-
-page-service-details .item-md.item-block .item-inner {
-  padding-right: 0;
-}
-
-page-service-details .account {
-  position: relative;
-  height: 200px;
-}
-
-page-service-details .account-pic {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
-
-page-service-details .account-text {
-  position: absolute;
-  width: 100%;
-  height: 200px;
-  color: white;
-  z-index: 2;
-}
-
-page-service-details button,
-page-service-details ion-button,
-page-service-details .button-md,
-page-service-details .button-ios {
-  text-transform: none !important;
-}
-
-page-service-details p {
-  color: #ffffff;
-}
-
-page-service-details #profile-bg {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  margin-top: -16px;
-  height: 160px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-filter: blur(2px);
-  /* Safari 6.0 - 9.0 */
-  filter: blur(2px);
-  text-align: center;
-}
-
-page-service-details #content {
-  position: relative;
-  margin-top: 150px;
-  padding-top: 200px;
-  text-align: center;
-}
-
-page-service-details #profile-image {
-  display: block;
-  border-radius: 50%;
-  width: auto;
-  height: 100px;
-  width: 100px;
-  margin: 0 auto 0;
-}
-
-page-service-details #profile-info {
-  position: absolute;
-  top: -95px;
-  width: 100%;
-  z-index: 2;
-  text-align: center;
-}
-
-page-service-details #profile-name {
-  color: #ffffff;
-  font-size: 26px;
-}
-
-page-service-details .profile-description {
-  font-size: 15px;
-  color: #ffffff;
-}
-
-page-service-details .follow-button {
-  text-transform: none;
-  border-radius: 3px !important;
-}
-
-page-service-details .follow-button ion-icon {
-  font-weight: bold;
-  padding-left: 5px;
-  font-size: 2.5rem;
-}
-
-page-service-details .profile-numbers p {
-  color: #444;
-  font-size: medium;
-  margin-bottom: 3px;
-}
-
-page-service-details .profile-numbers span {
-  font-weight: bold;
-  font-size: 2.4rem;
-  color: #34354c;
-}
-
-page-service-details hr {
-  border: 0;
-  height: 1px;
-  background: #444;
-  background: -webkit-linear-gradient(left, transparent 0%, #bcc6d6 50%, transparent 100%);
-}
-
-page-service-details #posts {
-  text-align: justify;
-}
-
-page-service-details .toolbar-ios-primary .toolbar-background-ios {
-  background: transparent;
-}
-
-page-service-details .toolbar-md-primary .toolbar-background-md {
-  background: transparent;
-}
-
-page-service-details .item-md .item-button, page-service-details .item-ios .item-button {
-  height: 50px;
-  font-size: 1.6rem;
-}
-
-page-service-details .list-md, page-service-details .list_ios, page-service-details .label-md, page-service-details .label-ios {
-  margin: 0 0 0 0;
-  font-size: 1.4rem;
-}
-
-page-service-details .list-ios > .item-block:last-child, page-service-details .list-ios > .item-block:first-child {
-  border-top: 0;
-  border-bottom: 0;
-}
-
 page-chat {
   /* fixes an ios bug bear */
   /* loading */
@@ -26773,6 +26283,272 @@ page-chat2 ion-footer {
   background-color: #f4f4f4;
 }
 
+page-marque-details ion-content {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+  height: 100%;
+}
+
+page-marque-details .ios [padding] .scroll-content, page-marque-details .md [padding] .scroll-content {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+page-marque-details .splash-relative {
+  position: absolute;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  height: 100%;
+}
+
+page-marque-details .splash-logo {
+  margin: auto;
+  background: url("../assets/img/logo2.png") repeat transparent;
+  background-size: 100%;
+  width: 128px;
+  height: 128px;
+}
+
+page-marque-details .splash-intro {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+
+page-marque-details .splash-new {
+  position: relative;
+  font-size: 20px;
+}
+
+page-marque-details .splash-end {
+  position: fixed;
+  bottom: 20px;
+  width: 60%;
+  text-align: center;
+}
+
+page-marque-details .splash-end a {
+  color: white;
+}
+
+page-marque-details .item-md, page-marque-details .item-ios {
+  background-color: transparent;
+}
+
+page-marque-details button.login {
+  margin-top: 25px;
+  max-width: 180px;
+  background-color: transparent;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+page-marque-details button.login.activated {
+  background-color: gainsboro;
+}
+
+page-marque-details input {
+  color: white;
+}
+
+page-marque-details .white-text {
+  color: white;
+}
+
+page-marque-details .item-input ion-label {
+  width: 20px;
+}
+
+page-marque-details .item-md {
+  padding-left: 0;
+}
+
+page-marque-details .item-md.item-block .item-inner {
+  padding-right: 0;
+}
+
+page-marque-details .account {
+  position: relative;
+  height: 200px;
+}
+
+page-marque-details .account-pic {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+page-marque-details .account-text {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  color: white;
+  z-index: 2;
+}
+
+page-marque-details button,
+page-marque-details ion-button,
+page-marque-details .button-md,
+page-marque-details .button-ios {
+  text-transform: none !important;
+}
+
+page-marque-details p {
+  color: #ffffff;
+}
+
+page-marque-details #profile-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: -16px;
+  height: 160px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-filter: blur(2px);
+  /* Safari 6.0 - 9.0 */
+  filter: blur(2px);
+  text-align: center;
+}
+
+page-marque-details #content {
+  position: relative;
+  margin-top: 150px;
+  padding-top: 200px;
+  text-align: center;
+}
+
+page-marque-details #profile-image {
+  display: block;
+  border-radius: 50%;
+  width: auto;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto 0;
+  -webkit-box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
+  box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
+}
+
+page-marque-details #profile-info {
+  position: absolute;
+  top: -5px;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+}
+
+page-marque-details #profile-name {
+  color: #ffffff;
+  font-size: 26px;
+}
+
+page-marque-details .profile-description {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+page-marque-details .follow-button {
+  text-transform: none;
+  border-radius: 3px !important;
+}
+
+page-marque-details .follow-button ion-icon {
+  font-weight: bold;
+  padding-left: 5px;
+  font-size: 2.5rem;
+}
+
+page-marque-details .profile-numbers p {
+  color: #444;
+  font-size: medium;
+  margin-bottom: 3px;
+}
+
+page-marque-details .profile-numbers span {
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: #34354c;
+}
+
+page-marque-details hr {
+  border: 0;
+  height: 1px;
+  background: #444;
+  background: -webkit-linear-gradient(left, transparent 0%, #bcc6d6 50%, transparent 100%);
+}
+
+page-marque-details #posts {
+  text-align: justify;
+}
+
+page-marque-details .toolbar-ios-primary .toolbar-background-ios {
+  background: transparent;
+}
+
+page-marque-details .toolbar-md-primary .toolbar-background-md {
+  background: transparent;
+}
+
+page-marque-details .title-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+page-marque-details .profile-title {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+page-marque-details .scroll-content {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+page-marque-details button {
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+page-marque-details .list-md .item-block .item-inner, page-marque-details .list-ios .item-block .item-inner {
+  border: 0;
+}
+
+page-marque-details .accordion-button {
+  width: 100%;
+}
+
+page-marque-details .item-md .item-button, page-marque-details .item-ios .item-button {
+  height: 50px;
+  font-size: 1.6rem;
+}
+
+page-marque-details .list-md, page-marque-details .list-ios, page-marque-details .label-md, page-marque-details .label-ios {
+  margin: 0 0 0 0;
+  font-size: 1.4rem;
+}
+
+page-marque-details .list-ios > .item-block:last-child, page-marque-details .list-ios > .item-block:first-child {
+  border-top: 0;
+  border-bottom: 0;
+}
+
 page-news .splash-bg {
   background: #b2284e;
   /* For browsers that do not support gradients */
@@ -26975,6 +26751,230 @@ page-result .chart-container {
   margin: auto;
   height: 100vh;
   width: 100vw;
+}
+
+page-service-details ion-content {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+  height: 100%;
+}
+
+page-service-details .splash-relative {
+  position: absolute;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  height: 100%;
+}
+
+page-service-details .splash-logo {
+  margin: auto;
+  background: url("../assets/img/logo2.png") repeat transparent;
+  background-size: 100%;
+  width: 128px;
+  height: 128px;
+}
+
+page-service-details .splash-intro {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+
+page-service-details .splash-new {
+  position: relative;
+  font-size: 20px;
+}
+
+page-service-details .splash-end {
+  position: fixed;
+  bottom: 20px;
+  width: 60%;
+  text-align: center;
+}
+
+page-service-details .splash-end a {
+  color: white;
+}
+
+page-service-details .item-md, page-service-details .item-ios {
+  background-color: transparent;
+}
+
+page-service-details button.login {
+  margin-top: 25px;
+  max-width: 180px;
+  background-color: transparent;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+page-service-details button.login.activated {
+  background-color: gainsboro;
+}
+
+page-service-details input {
+  color: white;
+}
+
+page-service-details .white-text {
+  color: white;
+}
+
+page-service-details .item-input ion-label {
+  width: 20px;
+}
+
+page-service-details .item-md {
+  padding-left: 0;
+}
+
+page-service-details .item-md.item-block .item-inner {
+  padding-right: 0;
+}
+
+page-service-details .account {
+  position: relative;
+  height: 200px;
+}
+
+page-service-details .account-pic {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+page-service-details .account-text {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  color: white;
+  z-index: 2;
+}
+
+page-service-details button,
+page-service-details ion-button,
+page-service-details .button-md,
+page-service-details .button-ios {
+  text-transform: none !important;
+}
+
+page-service-details p {
+  color: #ffffff;
+}
+
+page-service-details #profile-bg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin-top: -16px;
+  height: 160px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-filter: blur(2px);
+  /* Safari 6.0 - 9.0 */
+  filter: blur(2px);
+  text-align: center;
+}
+
+page-service-details #content {
+  position: relative;
+  margin-top: 150px;
+  padding-top: 200px;
+  text-align: center;
+}
+
+page-service-details #profile-image {
+  display: block;
+  border-radius: 50%;
+  width: auto;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto 0;
+}
+
+page-service-details #profile-info {
+  position: absolute;
+  top: -95px;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+}
+
+page-service-details #profile-name {
+  color: #ffffff;
+  font-size: 26px;
+}
+
+page-service-details .profile-description {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+page-service-details .follow-button {
+  text-transform: none;
+  border-radius: 3px !important;
+}
+
+page-service-details .follow-button ion-icon {
+  font-weight: bold;
+  padding-left: 5px;
+  font-size: 2.5rem;
+}
+
+page-service-details .profile-numbers p {
+  color: #444;
+  font-size: medium;
+  margin-bottom: 3px;
+}
+
+page-service-details .profile-numbers span {
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: #34354c;
+}
+
+page-service-details hr {
+  border: 0;
+  height: 1px;
+  background: #444;
+  background: -webkit-linear-gradient(left, transparent 0%, #bcc6d6 50%, transparent 100%);
+}
+
+page-service-details #posts {
+  text-align: justify;
+}
+
+page-service-details .toolbar-ios-primary .toolbar-background-ios {
+  background: transparent;
+}
+
+page-service-details .toolbar-md-primary .toolbar-background-md {
+  background: transparent;
+}
+
+page-service-details .item-md .item-button, page-service-details .item-ios .item-button {
+  height: 50px;
+  font-size: 1.6rem;
+}
+
+page-service-details .list-md, page-service-details .list_ios, page-service-details .label-md, page-service-details .label-ios {
+  margin: 0 0 0 0;
+  font-size: 1.4rem;
+}
+
+page-service-details .list-ios > .item-block:last-child, page-service-details .list-ios > .item-block:first-child {
+  border-top: 0;
+  border-bottom: 0;
 }
 
 page-signup .splash-bg {

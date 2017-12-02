@@ -7,11 +7,7 @@ webpackJsonp([2],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageModule", function() { return SignupPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
->>>>>>> 910cde7eb25d239e84d2414e931b151208141ab8
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(618);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(609);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_vis__);
@@ -62256,49 +62252,49 @@ var SignupPage = (function () {
                 id: 0,
                 name: "Agriculture & agroalimentaire",
                 iconName: "leaf",
-                jobsName: this.jobsAgriculture = ["Agriculture", "Agroalimentaire", "Autre"]
+                jobsName: this.jobsTab = ["Agriculture", "Agroalimentaire", "Autre"]
             },
             {
                 id: 1,
                 name: "Industrie",
                 iconName: "lock",
-                jobsName: this.jobsIndustrie = ["Pharmaceutique", "Textile", "Chimique", "Construction", "Batiment", "Automobile", "Aéronotique", "Lourde", "Autre"]
+                jobsName: this.jobsTab = ["Pharmaceutique", "Textile", "Chimique", "Construction", "Batiment", "Automobile", "Aéronotique", "Lourde", "Autre"]
             },
             {
                 id: 2,
                 name: "Energie",
                 iconName: "plane",
-                jobsName: this.jobsEnergie = ["Nucléaire", "Eolien", "Solaire", "Hydrolique", "Pétrolier", "Autre"]
+                jobsName: this.jobsTab = ["Nucléaire", "Eolien", "Solaire", "Hydrolique", "Pétrolier", "Autre"]
             },
             {
                 id: 3,
                 name: "Commerce & Tourisme",
                 iconName: "people",
-                jobsName: this.jobsCommerce = ["Grand Commerce", "Petit commerce", "Artisanat", "Hôtellerie", "Restauration", "Autre"]
+                jobsName: this.jobsTab = ["Grand Commerce", "Petit commerce", "Artisanat", "Hôtellerie", "Restauration", "Autre"]
             },
             {
                 id: 4,
                 name: "Transport & Logistique",
                 iconName: "train",
-                jobsName: this.jobsTransport = ['Aéronotique', 'Ferroviaire', 'Urbain', 'Maritime', 'Astronautique', "Distribution", "Gestion & Pilotage", "Autre"]
+                jobsName: this.jobsTab = ['Aéronotique', 'Ferroviaire', 'Urbain', 'Maritime', 'Astronautique', "Distribution", "Gestion & Pilotage", "Autre"]
             },
             {
                 id: 5,
                 name: "Télécoms & Informatique",
                 iconName: "nuclear",
-                jobsName: this.jobsTelecom = ["Systèmes d'infromation", "Robotique", "Technologies", "Recherche", "Autre"]
+                jobsName: this.jobsTab = ["Systèmes d'infromation", "Robotique", "Technologies", "Recherche", "Autre"]
             },
             {
                 id: 6,
                 name: "Santé & Services",
                 iconName: "school",
-                jobsName: this.jobsRecherche = ["Médecine", "Parmaceutique", "Aide à la personne", "Gardiennage", "Recherche", "Autre"]
+                jobsName: this.jobsTab = ["Médecine", "Parmaceutique", "Aide à la personne", "Gardiennage", "Recherche", "Autre"]
             },
             {
                 id: 7,
                 name: "Economie",
                 iconName: "code-working",
-                jobsName: this.jobsFinance = ["Banque", "Finance", "Assurance", "Audit", "Conseil", "Autre"]
+                jobsName: this.jobsTab = ["Banque", "Finance", "Assurance", "Audit", "Conseil", "Autre"]
             }
         ];
         this.myIcon = "Secteur d'activité ?";
@@ -62370,16 +62366,17 @@ __decorate([
 ], SignupPage.prototype, "signupSlider", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('fab'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* FabContainer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* FabContainer */]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* FabContainer */])
 ], SignupPage.prototype, "fab", void 0);
 SignupPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Laora\newApp\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button> \n\n    </ion-buttons>  \n\n    <ion-title>\n\n      S\'inscrire\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button *ngIf="lastSlide" ion-button icon-right (click)="next()">Next <ion-icon name="arrow-forward"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="splash-bg">\n\n     <ion-slides pager #signupSlider>\n\n  \n\n       <ion-slide>\n\n        <p *ngIf="submitAttempt" style="color: #ea6153;">S\'il-vous-plait, remplissez les champs suivants.</p>\n\n          <form [formGroup]="slideOneForm">\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Nom *</ion-label>\n\n                  <ion-input formControlName="firstName" type="text"></ion-input>\n\n              </ion-item>\n\n      \n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Prénom *</ion-label>\n\n                  <ion-input formControlName="lastName" type="text"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">E-Mail *</ion-label>\n\n                  <ion-input formControlName="email" type="email"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Mot de passe *</ion-label>\n\n                  <ion-input formControlName="mdp" type="text"></ion-input>\n\n              </ion-item>\n\n          </form>\n\n          <br>\n\n          <ion-item>\n\n              <ion-label>Qui êtes-vous ? *</ion-label>\n\n              <ion-select [(ngModel)]="who" interface="popover">\n\n                <ion-option value="client">Client</ion-option>\n\n                <ion-option value="prospect">Prospect</ion-option>\n\n                <ion-option value="collab">Collaborateur</ion-option>\n\n              </ion-select>\n\n            </ion-item>\n\n       </ion-slide>\n\n       <ion-slide>\n\n          <ion-list>\n\n            <form [formGroup]="slideTwoForm">\n\n              <ion-item hidden>\n\n                  <ion-label floating class="white-text">Activité</ion-label>\n\n                  <ion-input formControlName="activity" type="text"></ion-input>\n\n              </ion-item>\n\n            </form>\n\n          </ion-list>\n\n          <p class="white-text" text-center>Quel est le secteur d\'activité de votre entreprise ?</p>\n\n                <div class="myFab">\n\n                  <ion-fab class="myFab" center #fab >\n\n                      <button id="show-services" ion-fab color="danger">{{myIcon}}</button>\n\n                      <ion-fab-list side="top">\n\n                        <button (click)="chooseService($event, 0, fab)" ion-fab color="white">Agriculture &amp; Agroalimentaire</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="top-left">\n\n                        <button (click)="chooseService($event, 1, fab)" ion-fab color="white">Industrie</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="left">\n\n                        <button (click)="chooseService($event, 2, fab)" ion-fab color="white">Energies</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="bottom-left">\n\n                        <button (click)="chooseService($event, 3, fab)" ion-fab color="white">Commerce &amp; Tourisme</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="bottom">\n\n                        <button (click)="chooseService($event, 4, fab)" ion-fab color="white">Transports &amp; Logistique</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="bottom-right">\n\n                        <button (click)="chooseService($event, 5, fab)" ion-fab color="white">Télécoms &amp; Informatique</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="right">\n\n                        <button (click)="chooseService($event, 6, fab)" ion-fab color="white">Santé &amp; Services</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="top-right">\n\n                        <button (click)="chooseService($event, 7, fab)" ion-fab color="white">Economie</button>\n\n                      </ion-fab-list>\n\n                    </ion-fab>\n\n                </div>\n\n       </ion-slide>\n\n\n\n       <ion-slide>\n\n          <ion-list>\n\n            <form [formGroup]="slideThreeForm">\n\n              <ion-item hidden>\n\n                  <ion-label floating class="white-text">Métier</ion-label>\n\n                  <ion-input formControlName="work" type="text"></ion-input>\n\n              </ion-item>\n\n            </form>\n\n          </ion-list>\n\n          <p>Quel est le métier de votre entreprise ?</p>\n\n          <br>\n\n          <ion-item>\n\n            <ion-label>Métier</ion-label>\n\n            <ion-select [(ngModel)]="job">\n\n              <ion-option *ngFor="let job of jobs">{{job}}</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n        <button class="buttonSign" ion-button color="primary" (click)="save()">S\'inscrire</button>\n\n      </ion-slide>\n\n  \n\n     </ion-slides>\n\n    </div>\n\n </ion-content>\n\n '/*ion-inline-end:"C:\Users\Laora\newApp\src\pages\signup\signup.html"*/
+        selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button> \n\n    </ion-buttons>  \n\n    <ion-title>\n\n      S\'inscrire\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button *ngIf="lastSlide" ion-button icon-right (click)="next()">Next <ion-icon name="arrow-forward"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="splash-bg">\n\n     <ion-slides pager #signupSlider>\n\n  \n\n       <ion-slide>\n\n        <p *ngIf="submitAttempt" style="color: #ea6153;">S\'il-vous-plait, remplissez les champs suivants.</p>\n\n          <form [formGroup]="slideOneForm">\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Nom *</ion-label>\n\n                  <ion-input formControlName="firstName" type="text"></ion-input>\n\n              </ion-item>\n\n      \n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Prénom *</ion-label>\n\n                  <ion-input formControlName="lastName" type="text"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">E-Mail *</ion-label>\n\n                  <ion-input formControlName="email" type="email"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Mot de passe *</ion-label>\n\n                  <ion-input formControlName="mdp" type="text"></ion-input>\n\n              </ion-item>\n\n          </form>\n\n          <br>\n\n          <ion-item>\n\n              <ion-label>Qui êtes-vous ? *</ion-label>\n\n              <ion-select [(ngModel)]="who" interface="popover">\n\n                <ion-option value="client">Client</ion-option>\n\n                <ion-option value="prospect">Prospect</ion-option>\n\n                <ion-option value="collab">Collaborateur</ion-option>\n\n              </ion-select>\n\n            </ion-item>\n\n       </ion-slide>\n\n       <ion-slide>\n\n          <ion-list>\n\n            <form [formGroup]="slideTwoForm">\n\n              <ion-item hidden>\n\n                  <ion-label floating class="white-text">Activité</ion-label>\n\n                  <ion-input formControlName="activity" type="text"></ion-input>\n\n              </ion-item>\n\n            </form>\n\n          </ion-list>\n\n          <p class="white-text" text-center>Quel est le secteur d\'activité de votre entreprise ?</p>\n\n                <div class="myFab">\n\n                  <ion-fab class="myFab" center #fab >\n\n                      <button id="show-services" ion-fab color="danger">{{myIcon}}</button>\n\n                      <ion-fab-list side="top">\n\n                        <button (click)="chooseService($event, 0, fab)" ion-fab color="white">Agriculture &amp; Agroalimentaire</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="top-left">\n\n                        <button (click)="chooseService($event, 1, fab)" ion-fab color="white">Industrie</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="left">\n\n                        <button (click)="chooseService($event, 2, fab)" ion-fab color="white">Energies</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="bottom-left">\n\n                        <button (click)="chooseService($event, 3, fab)" ion-fab color="white">Commerce &amp; Tourisme</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="bottom">\n\n                        <button (click)="chooseService($event, 4, fab)" ion-fab color="white">Transports &amp; Logistique</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="bottom-right">\n\n                        <button (click)="chooseService($event, 5, fab)" ion-fab color="white">Télécoms &amp; Informatique</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="right">\n\n                        <button (click)="chooseService($event, 6, fab)" ion-fab color="white">Santé &amp; Services</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="top-right">\n\n                        <button (click)="chooseService($event, 7, fab)" ion-fab color="white">Economie</button>\n\n                      </ion-fab-list>\n\n                    </ion-fab>\n\n                </div>\n\n       </ion-slide>\n\n\n\n       <ion-slide>\n\n          <ion-list>\n\n            <form [formGroup]="slideThreeForm">\n\n              <ion-item hidden>\n\n                  <ion-label floating class="white-text">Métier</ion-label>\n\n                  <ion-input formControlName="work" type="text"></ion-input>\n\n              </ion-item>\n\n            </form>\n\n          </ion-list>\n\n          <p>Quel est le métier de votre entreprise ?</p>\n\n          <br>\n\n          <ion-item>\n\n            <ion-label>Métier</ion-label>\n\n            <ion-select [(ngModel)]="job">\n\n              <ion-option *ngFor="let job of jobs">{{job}}</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n        <button class="buttonSign" ion-button color="primary" (click)="save()">S\'inscrire</button>\n\n      </ion-slide>\n\n  \n\n     </ion-slides>\n\n    </div>\n\n </ion-content>\n\n '/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\signup\signup.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */]])
 ], SignupPage);
 
-var _a, _b, _c, _d;
 //# sourceMappingURL=signup.js.map
 
 /***/ })

@@ -19,7 +19,8 @@ export class MarqueDetailsPage {
   shownGroup = null;
   marqueId;
   tabBarElement: any;
-
+  services: any[];
+  marques: any[];
   // The account fields for the login form.
   // If you're using the username field with or without email, make
   // sure to add it to the type
@@ -34,10 +35,21 @@ export class MarqueDetailsPage {
   private loginErrorString: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public toastCtrl: ToastController) {
+    public toastCtrl: ToastController, private http:Http) {
     
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.marqueId = navParams.get('marqueId');  
+
+    let servData = http.get('assets/data/services.json').map(res => res.json().services);
+    servData.subscribe(data => {
+      this.services = data;
+    });
+
+    let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
+    brandData.subscribe(data => {
+      this.marques = data;
+    });
+
   }
 
   toggleGroup(group) {

@@ -43,7 +43,7 @@
             "profileImage": "assets/img/up-3_medium.jpg",
             "coverImage": "assets/img/gravel-proprete-hopital.jpg",
             "othersImg": ["assets/img/tenues_proprete.jpg"],
-            "sector": [{
+            "sectors": [{
               "title": "AGROALIMENTAIRE", 
               "description": "Nous intervenons sur des prestations d'hygiène de Process en industrie agroalimentaire (nettoyage et désinfection des lignes de production et de leur environnement) :", 
               "points": [

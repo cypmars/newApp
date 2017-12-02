@@ -7,7 +7,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TinderQPageModule", function() { return TinderQPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(622);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
@@ -574,7 +574,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Subject_1 = __webpack_require__(32);
 var queue_1 = __webpack_require__(323);
 var Subscription_1 = __webpack_require__(33);
-var observeOn_1 = __webpack_require__(314);
+var observeOn_1 = __webpack_require__(315);
 var ObjectUnsubscribedError_1 = __webpack_require__(209);
 var SubjectSubscription_1 = __webpack_require__(221);
 /**
@@ -706,6 +706,17 @@ exports.EmptyError = EmptyError;
 /* 310 */,
 /* 311 */,
 /* 312 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Observable_1 = __webpack_require__(9);
+var map_1 = __webpack_require__(207);
+Observable_1.Observable.prototype.map = map_1.map;
+//# sourceMappingURL=map.js.map
+
+/***/ }),
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -863,7 +874,7 @@ exports.CombineLatestSubscriber = CombineLatestSubscriber;
 //# sourceMappingURL=combineLatest.js.map
 
 /***/ }),
-/* 313 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1043,7 +1054,7 @@ exports.concatStatic = concatStatic;
 //# sourceMappingURL=concat.js.map
 
 /***/ }),
-/* 314 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1162,7 +1173,7 @@ exports.ObserveOnMessage = ObserveOnMessage;
 //# sourceMappingURL=observeOn.js.map
 
 /***/ }),
-/* 315 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1447,7 +1458,7 @@ var ZipBufferIterator = (function (_super) {
 //# sourceMappingURL=zip.js.map
 
 /***/ }),
-/* 316 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1579,17 +1590,6 @@ exports.ReduceSubscriber = ReduceSubscriber;
 //# sourceMappingURL=reduce.js.map
 
 /***/ }),
-/* 317 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var Observable_1 = __webpack_require__(9);
-var map_1 = __webpack_require__(207);
-Observable_1.Observable.prototype.map = map_1.map;
-//# sourceMappingURL=map.js.map
-
-/***/ }),
 /* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1609,7 +1609,7 @@ var ArrayObservable_1 = __webpack_require__(204);
 var ArrayLikeObservable_1 = __webpack_require__(362);
 var iterator_1 = __webpack_require__(206);
 var Observable_1 = __webpack_require__(9);
-var observeOn_1 = __webpack_require__(314);
+var observeOn_1 = __webpack_require__(315);
 var observable_1 = __webpack_require__(109);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -3808,7 +3808,7 @@ __webpack_require__(482);
 __webpack_require__(484);
 __webpack_require__(486);
 __webpack_require__(488);
-__webpack_require__(317);
+__webpack_require__(312);
 __webpack_require__(490);
 __webpack_require__(492);
 __webpack_require__(494);
@@ -4561,7 +4561,7 @@ Observable_1.Observable.combineLatest = combineLatest_1.combineLatest;
 var isScheduler_1 = __webpack_require__(107);
 var isArray_1 = __webpack_require__(106);
 var ArrayObservable_1 = __webpack_require__(204);
-var combineLatest_1 = __webpack_require__(312);
+var combineLatest_1 = __webpack_require__(313);
 /* tslint:enable:max-line-length */
 /**
  * Combines multiple Observables to create an Observable whose values are
@@ -4711,7 +4711,7 @@ Observable_1.Observable.concat = concat_1.concat;
 
 "use strict";
 
-var concat_1 = __webpack_require__(313);
+var concat_1 = __webpack_require__(314);
 exports.concat = concat_1.concatStatic;
 //# sourceMappingURL=concat.js.map
 
@@ -5075,7 +5075,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(9);
-var ScalarObservable_1 = __webpack_require__(210);
+var ScalarObservable_1 = __webpack_require__(211);
 var EmptyObservable_1 = __webpack_require__(108);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -6405,7 +6405,7 @@ Observable_1.Observable.zip = zip_1.zip;
 
 "use strict";
 
-var zip_1 = __webpack_require__(315);
+var zip_1 = __webpack_require__(316);
 exports.zip = zip_1.zipStatic;
 //# sourceMappingURL=zip.js.map
 
@@ -7741,7 +7741,7 @@ Observable_1.Observable.prototype.combineAll = combineAll_1.combineAll;
 
 "use strict";
 
-var combineLatest_1 = __webpack_require__(312);
+var combineLatest_1 = __webpack_require__(313);
 /**
  * Converts a higher-order Observable into a first-order Observable by waiting
  * for the outer Observable to complete, then applying {@link combineLatest}.
@@ -7795,7 +7795,7 @@ exports.combineAll = combineAll;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var combineLatest_1 = __webpack_require__(312);
+var combineLatest_1 = __webpack_require__(313);
 Observable_1.Observable.prototype.combineLatest = combineLatest_1.combineLatest;
 //# sourceMappingURL=combineLatest.js.map
 
@@ -7806,7 +7806,7 @@ Observable_1.Observable.prototype.combineLatest = combineLatest_1.combineLatest;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var concat_1 = __webpack_require__(313);
+var concat_1 = __webpack_require__(314);
 Observable_1.Observable.prototype.concat = concat_1.concat;
 //# sourceMappingURL=concat.js.map
 
@@ -11501,7 +11501,7 @@ Observable_1.Observable.prototype.max = max_1.max;
 
 "use strict";
 
-var reduce_1 = __webpack_require__(316);
+var reduce_1 = __webpack_require__(317);
 /**
  * The Max operator operates on an Observable that emits numbers (or items that can be compared with a provided function),
  * and when source Observable completes it emits a single item: the item with the largest value.
@@ -11751,7 +11751,7 @@ Observable_1.Observable.prototype.min = min_1.min;
 
 "use strict";
 
-var reduce_1 = __webpack_require__(316);
+var reduce_1 = __webpack_require__(317);
 /**
  * The Min operator operates on an Observable that emits numbers (or items that can be compared with a provided function),
  * and when source Observable completes it emits a single item: the item with the smallest value.
@@ -11810,7 +11810,7 @@ Observable_1.Observable.prototype.multicast = multicast_1.multicast;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var observeOn_1 = __webpack_require__(314);
+var observeOn_1 = __webpack_require__(315);
 Observable_1.Observable.prototype.observeOn = observeOn_1.observeOn;
 //# sourceMappingURL=observeOn.js.map
 
@@ -12233,7 +12233,7 @@ Observable_1.Observable.prototype.race = race_1.race;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var reduce_1 = __webpack_require__(316);
+var reduce_1 = __webpack_require__(317);
 Observable_1.Observable.prototype.reduce = reduce_1.reduce;
 //# sourceMappingURL=reduce.js.map
 
@@ -13706,9 +13706,9 @@ Observable_1.Observable.prototype.startWith = startWith_1.startWith;
 "use strict";
 
 var ArrayObservable_1 = __webpack_require__(204);
-var ScalarObservable_1 = __webpack_require__(210);
+var ScalarObservable_1 = __webpack_require__(211);
 var EmptyObservable_1 = __webpack_require__(108);
-var concat_1 = __webpack_require__(313);
+var concat_1 = __webpack_require__(314);
 var isScheduler_1 = __webpack_require__(107);
 /* tslint:enable:max-line-length */
 /**
@@ -16465,7 +16465,7 @@ var WithLatestFromSubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var zip_1 = __webpack_require__(315);
+var zip_1 = __webpack_require__(316);
 Observable_1.Observable.prototype.zip = zip_1.zipProto;
 //# sourceMappingURL=zip.js.map
 
@@ -16486,7 +16486,7 @@ Observable_1.Observable.prototype.zipAll = zipAll_1.zipAll;
 
 "use strict";
 
-var zip_1 = __webpack_require__(315);
+var zip_1 = __webpack_require__(316);
 /**
  * @param project
  * @return {Observable<R>|WebSocketSubject<T>|Observable<T>}
@@ -17041,7 +17041,7 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TinderQPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(342);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(213);
@@ -17596,20 +17596,19 @@ var TinderQPage = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('myswing1'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"])
 ], TinderQPage.prototype, "swingStack", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChildren"])('mycards1'),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"]) === "function" && _b || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"])
 ], TinderQPage.prototype, "swingCards", void 0);
 TinderQPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-tinderQ',template:/*ion-inline-start:"C:\Users\Laora\newApp\src\pages\tinderQ\tinderQ.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button *ngIf="showButton" ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      \n\n                      <ion-item *ngIf="c.question">\n\n                          <div id="validate-or-not" class="validate-or-not"></div>\n\n                          <img *ngIf="c.img_src" [src]="c.img_src">\n\n                          <h1 class="relative-pos" style="color: black;">{{ c.question }}</h1>\n\n                      </ion-item>\n\n                 \n\n                      <ion-row *ngIf="c.name">\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                              <ion-icon name="checkmark-circle"></ion-icon>\n\n                              YES\n\n                          </button>\n\n                        </ion-col>\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                            <ion-icon name="close-circle"></ion-icon>\n\n                            NO\n\n                          </button>\n\n                        </ion-col>\n\n                      </ion-row>\n\n                    </ion-card>\n\n                  </div>\n\n                  <p style="text-align: center; width: 100%;">{{ recentCard }}</p>\n\n              </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Laora\newApp\src\pages\tinderQ\tinderQ.html"*/
+        selector: 'page-tinderQ',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button *ngIf="showButton" ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      \n\n                      <ion-item *ngIf="c.question">\n\n                          <div id="validate-or-not" class="validate-or-not"></div>\n\n                          <img *ngIf="c.img_src" [src]="c.img_src">\n\n                          <h1 class="relative-pos" style="color: black;">{{ c.question }}</h1>\n\n                      </ion-item>\n\n                 \n\n                      <ion-row *ngIf="c.name">\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                              <ion-icon name="checkmark-circle"></ion-icon>\n\n                              YES\n\n                          </button>\n\n                        </ion-col>\n\n                        <ion-col>\n\n                          <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                            <ion-icon name="close-circle"></ion-icon>\n\n                            NO\n\n                          </button>\n\n                        </ion-col>\n\n                      </ion-row>\n\n                    </ion-card>\n\n                  </div>\n\n                  <p style="text-align: center; width: 100%;">{{ recentCard }}</p>\n\n              </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], TinderQPage);
 
-var _a, _b, _c, _d, _e;
 //# sourceMappingURL=tinderQ.js.map
 
 /***/ })
