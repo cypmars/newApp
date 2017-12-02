@@ -20,7 +20,8 @@ export class ServiceDetailsPage {
   shownGroup = null;
   tabBarElement: any;
   serviceId;
-  services;
+  services: any[];
+  marques:any[];
 
   // The account fields for the login form.
   // If you're using the username field with or without email, make
@@ -38,11 +39,19 @@ export class ServiceDetailsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public toastCtrl: ToastController, private http:Http) {
 
-    
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.serviceId = navParams.get('param1');
-    this.services = http.get('assets/information.json').map(res => res.json().services);
-    console.log(this.services);
+
+    let servData = http.get('assets/data/services.json').map(res => res.json().services);
+    servData.subscribe(data => {
+      this.services = data;
+    });
+
+    let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
+    brandData.subscribe(data => {
+      this.marques = data;
+    });
+
   }
 
   

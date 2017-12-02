@@ -1,4 +1,4 @@
-<ion-content padding class="transparent-header">
+<ion-content *ngIf="services != null && marques != null" padding class="transparent-header">
   <ion-header no-border>
     <ion-navbar color="primary" hideBackButton="true">
       <ion-buttons start>
@@ -17,7 +17,7 @@
   <div id="profile-info" padding>
     <img id="profile-image" [src]="services[serviceId].profileImage">
     <h3 id="profile-name">{{services[serviceId].title}}</h3>
-    <h4 class="white-text" *ngIf="services[serviceId].subtitle != null">{{services[serviceId].subtitle}}</h4>
+    <h4 class="white-text" *ngIf="services[serviceId].subtitle">{{services[serviceId].subtitle}}</h4>
     <hr>
     <ion-grid>
       <ion-row>
