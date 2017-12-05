@@ -52,27 +52,27 @@ export class SimpleForm1Page {
   },
   {
     id: 3,
-    name : "Commerce & artisanat",
+    name : "Commerce & Tourisme",
     iconName : "people"
   },
   {
     id: 4,
-    name : "Tourisme",
+    name : "Transport & Logistique",
     iconName : "train"
   },
   {
     id: 5,
-    name : "Télécoms & Internet",
+    name : "Télécoms & Informatique",
     iconName : "nuclear"
   },
   {
     id: 6,
-    name : "Recherche",
+    name : "Santé et Service",
     iconName : "school"
   },
   {
     id: 7,
-    name : "Finance et assurance",
+    name : "Economie",
     iconName : "code-working"
   }
 ];
@@ -102,7 +102,8 @@ export class SimpleForm1Page {
     this.myIcon = this.itemsCat[data].name;
     this.navCtrl.push('SimpleForm2Page', {
       param1: this.param1,
-      param2: this.myIcon,
+      param2: data,
+      param3: this.myIcon
     });
   }
 }

@@ -22,65 +22,46 @@ export class SimpleForm2Page {
   @ViewChild('fab') fab: FabContainer;
 
   public param1: string;
-  public param2: string;
+  public param2: number;
+  public param3: string;
   
+  public myIcon: string;
+
   account: { email: string, password: string } = {
     email: '@ e-mail ou pseudo',
     password: 'mot de passe'
   };
 
-  search : { param1: string, param2: string, param3: string, param4: string } = {
-    param1: 'iconeName',
-    param2: 'param2',
-    param3: 'param3',
-    param4: 'param4'
-  };
-
-  itemsCat: [{id: number, name: string, iconName: string}] = [
+  itemsCat: [{jobsName: any}] = [
     {
-      id: 0,
-      name : "Agriculture & agroalimentaire",
-      iconName : "leaf"
+      jobsName: ["Boucherie", "Poissonerie", "Boulangerie / Patisserie", "Fruits et légumes", "Produits laitiers", "Grains / Produits amylacés", "Huiles / Graisses végétales ou animales", "Boissons"]
     },
     {
-      id: 1,
-      name : "Industrie",
-      iconName : "lock"
+      jobsName:  ["Pharmaceutique", "Textile", "Chimique", "Construction", "Batiment", "Automobile", "Aéronotique", "Lourde"]
     },
     {
-      id: 2,
-      name : "Energie",
-      iconName : "plane"
+      jobsName: ["Nucléaire", "Eolien", "Solaire", "Hydrolique", "Pétrolier", "", "", "Autre"]
     },
     {
-      id: 3,
-      name : "Commerce & artisanat",
-      iconName : "people"
+      jobsName : ["Grand Commerce", "Petit commerce", "Artisanat", "Hôtellerie", "Restauration", "Autre", "", ""]
     },
     {
-      id: 4,
-      name : "Tourisme",
-      iconName : "train"
+      jobsName : ['Aéronotique', 'Ferroviaire', 'Urbain', 'Maritime', 'Astronautique', "Distribution", "Gestion & Pilotage", "Autre"] 
     },
     {
-      id: 5,
-      name : "Télécoms & Internet",
-      iconName : "nuclear"
+      jobsName : ["Systèmes d'infromation", "Robotique", "Technologies", "Recherche", "Autre", "", "", ""]
     },
     {
-      id: 6,
-      name : "Recherche",
-      iconName : "school"
+      jobsName : ["Médecine", "Parmaceutique", "Aide à la personne", "Gardiennage", "Recherche", "Autre", "", ""]
     },
     {
-      id: 7,
-      name : "Finance et assurance",
-      iconName : "code-working"
+      jobsName : ["Banque", "Finance", "Assurance", "Audit", "Conseil", "Autre", "", ""]
     }
   ];
 
 
-  myIcon: string = "Quel est votre métier ?";
+
+
   // Our translated text strings
   private loginErrorString: string;
 
@@ -88,8 +69,10 @@ export class SimpleForm2Page {
     private navParams: NavParams,
     public toastCtrl: ToastController) {
 
+      this.myIcon = "Quel est votre métier ?"
       this.param1 = navParams.get('param1');
       this.param2 = navParams.get('param2');
+      this.param3 = navParams.get('param3');
   }
 
   prev() {
@@ -105,11 +88,12 @@ export class SimpleForm2Page {
   }
 
   public chooseService(event, data, fab: FabContainer){
-    this.myIcon = this.itemsCat[data].name;
+    this.myIcon = this.itemsCat[this.param2].jobsName[data];
     this.navCtrl.push('TinderQPage', {
       param1: this.param1,
       param2: this.param2,
-      param3: this.myIcon
+      param3: this.param3,
+      param4: this.myIcon
     });
   }
 }

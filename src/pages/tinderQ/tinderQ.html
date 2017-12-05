@@ -22,8 +22,8 @@
                       
                       <ion-item *ngIf="c.question">
                           <div id="validate-or-not" class="validate-or-not"></div>
-                          <img *ngIf="c.img_src" [src]="c.img_src">
-                          <h1 class="relative-pos" style="color: black;">{{ c.question }}</h1>
+                          <img *ngIf="c.img" [src]="c.img">
+                          <h1 class="relative-pos" style="font-weight: 900">{{ c.question }}</h1>
                       </ion-item>
                  
                       <ion-row *ngIf="c.name">
@@ -42,7 +42,6 @@
                       </ion-row>
                     </ion-card>
                   </div>
-                  <p style="text-align: center; width: 100%;">{{ recentCard }}</p>
               </div>
         </div>
 </ion-content>

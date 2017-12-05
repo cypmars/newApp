@@ -36,455 +36,113 @@ export class TinderQPage {
   @ViewChildren('mycards1') swingCards: QueryList<SwingCardComponent>;
   
   public param1: string;
-  public param2: string;
+  public param2: number;
   public param3: string;
-  public param4: Array<string>;
+  public param4: string;
+  public param5: Array<string>;
+  public resultsTemp: Array<number>;
 
   cards: Array<any>;
   stackConfig: StackConfig;
   recentCard: string = '';
+
+  currentNode;
+  currentQId;
+  questionsId: Array<number>;
 
   // Our translated text strings
   private loginErrorString: string;
 
   showButton: boolean = true ; 
 
-//Our Tree question
-nodes = 
-{
-  id: 1,
-  name: 'Propreté et Service',
-  question: 'Milieu sensible ?',
-  img_src: '',
-  children: [
-    { id: 2, 
-      name: 'Hygiène et propreté en milieu sensible', 
-      question: 'Domaine Agroalimentaire ?',
-      img_src: '',
-      children: 
-      [{
-        id: 4,
-        name: 'Domaine Agroalimentaire',
-        question:'Industrie de la viande ?',
-        img_src: '',
-        children: [{
-          id: 6,
-          name: "industrie de la viande"
-        },
-        {
-          id: 7, 
-          name: "Autre industrie",
-          question: 'Industrie de la charcuterie ?',
-          img_src: '',
-          children: [{
-            id: 8, 
-            name: "Industrie de la charcuterie"
-          },
-          {
-            id: 9,
-            name: "Autre industrie",
-            question: 'Industrie des plats cuisinés, conserves ?',
-            img_src: '',
-            children: [{
-              id: 10,
-              name: "Industrie plats cuisinés, conserves"
-            },
-            {
-              id: 11,
-              name: "Autre industrie",
-              question: 'Industrie des légumes ?',
-              img_src: '',
-              children: [{
-                id: 12,
-                name: "Industrie des légumes"
-              },
-              {
-                id: 13,
-                name: "Industrie poissons"
-              }]
-            }]
-          }]
-        }]
-      },
-      {
-        id:5,
-        name: 'Autre domaine',
-        question: 'Domaine pharma ?',
-        img_src: '',
-        children: [{
-          id:14, 
-          name: "Domaine Pharma",
-          question: 'Prestations régulières ?',
-          img_src: '',
-          children: [{
-            id: 16,
-            name: 'Prestations régulières',
-          },
-          {
-            id: 17,
-            name: 'Autre Presta',
-            question: 'Mise à blanc ?',
-            img_src: '',
-            children: [{
-              id: 19,
-              name: 'Mise à blanc'
-            },
-            {
-              id: 18,
-              name: 'Autre Presta',
-              question: 'Mise en place zoning matériel ?',
-              img_src: '',
-              children: [{
-                id: 20,
-                name: 'Mise en place zoning matériel'
-              },
-              {
-                id: 21,
-                name: 'Application de bonnes pratique de nettoyage pharma',
-              }]
-            }]
-          }]
-        },
-        {
-          id: 15,
-          name:"Autre domaine",
-          question: 'Domaine Santé ?',
-          img_src: '',
-          children: [{
-            id: 22,
-            name: 'Domaine Santé',
-            children: [{
-              id: 24,
-              name: "Bio nettoyage"
-            },
-            {
-              id: 25,
-              name: "Autre Presta",
-              question: 'Entretien locaux ?',
-              img_src: '',
-              children: [{
-                id: 26,
-                name: 'Entretien locaux',
-              },
-              {
-                id: 27,
-                name: "Autre Presta",
-                question: 'Lutte infections nosocomiales ?',
-                img_src: '',
-                children: [{
-                  id: 28,
-                  name: 'Lutte quotidienne infections nosocomiales'
-                },
-                {
-                  id: 29,
-                  name: 'Autres Presta Complémentaires'
-                }]
-              }]
-            }]
-          },
-          {
-            id: 23,
-            name: 'Prestation en salle propre',
-            question: 'Presta quotidienne de nettoyage et décontamination particulaire ?',
-            img_src:'',
-            children: [{
-              id: 30,
-              name: "Presta quotidienne de nettoyage et décontamination particulaire"
-            },
-            {
-              id: 31,
-              name: "Presta ponctuelles de mise à blanc"
-            }]
-          }]
-        }]
-      }]
+  agroQuestions = [
+    {
+      id: 0,
+      name: "Surface recevant du public",
+      question: "Possedez-vous une surface commerciale ou magasin ?",
+      img: "assets/img/boutique-fruits.jpg",
+      // + hygiene et prop classique + Gestion des déchets - secteur industriel
+      servicesIdIfYes: [0, 5]
     },
     {
-      id: 3,
-      name:'Milieux non sensibles',
-      question: 'Transports ?',
-      img_src: '',
-      children : [{
-        id: 32,
-        name: 'Propreté dans les transports',
-        question: 'Transport maritime ?',
-        img_src: '',
-        children: [{
-          id: 34,
-          name: 'Transport maritime'
-        },
-        {
-            id: 35,
-            name: 'Autre transport',
-            question: 'Transport ferroviaire ?',
-            img_src: '',
-            children: [{
-              id: 36,
-              name: 'Transport ferroviaire'
-            },
-            {
-              id: 37,
-              name: 'Autre transport',
-              question: 'Transport aérien ?',
-              img_src: '',
-              children: [{
-                id: 38,
-                name: 'Transport aérien'
-              },
-              {
-                id: 39,
-                name: 'Transport urbain'
-              }]
-            }]
-        }]
-      },
-      {
-        id: 33,
-        name: 'Autre Domaine',
-        question: 'Process Industriels ?',
-        img_src: '',
-        children: [{
-          id: 40,
-          name: 'Propreté process industriels',
-          question: 'Maintenance et Nettoyage ?',
-          img_src: '',
-          children: [{
-            id: 42,
-            name: 'Maintenance et nettoyage indus'
-          },
-          {
-            id:43,
-            name: 'Autre presta',
-            question: 'Assainissement collectif et industriel ?',
-            img_src: '',
-            children: [{
-              id: 44,
-              name: 'Assainissement collectif et industriel'
-            },
-            {
-              id: 45,
-              name: 'Autre presta',
-              question: 'Hygiène ?',
-              img_src: '',
-              children: [{
-                id: 46,
-                name: 'Hygiène'
-              },
-              {
-                id: 47,
-                name: 'Autre presta',
-                question: 'Propreté urbaine ?',
-                img_src: '',
-                children: [{
-                  id: 48,
-                  name: 'Propreté urbaine'
-                },
-                {
-                  id: 49,
-                  name: 'Transport et collecte de déchets industriels'
-                }]
-              }]
-            }]
-          }]
-        },
-        {
-          id: 41,
-          name: 'Autre domaine',
-          question: 'Gestion des déchets ?',
-          img_src: '',
-          children: [{
-            id: 50,
-            name: 'Gestion des déchets',
-            question: 'Secteur Tertiaire ?',
-            img_src: '',
-            children: [{
-              id:52,
-              name: 'Secteur Tertiaire',
-              question: 'Gestion déchets in situ ?',
-              img_src: '',
-              children: [{
-                id: 54,
-                name: 'Gestion déchets in situ'
-              },
-              { 
-                id: 55,
-                name: 'Autre presta',
-                question: 'Traçabilité, reporting ?',
-                img_src: '',
-                children: [{
-                  id: 56,
-                  name: 'Traçabilité, reporting'
-                },
-                {
-                  id: 57,
-                  name: 'Autre Presta',
-                  question: 'Gestion administrative ?',
-                  img_src: '', 
-                  children: [{
-                    id: 58,
-                    name: 'Gestion administrative'
-                  },
-                  {
-                    id: 59,
-                    name: 'Optimisation interne',
-                  }] 
-                }]
-              }] 
-            },
-            {
-              id: 53,
-              name: 'Secteur Industriel',
-              question: 'Gestion déchets in situ ?',
-              img_src: '',
-              children: [{
-                id: 60,
-                name: 'Gestion déchets in situ'
-              },
-              { 
-                id: 61,
-                name: 'Autre presta',
-                question: 'Pilotage des évacs vers filière de val ?',
-                img_src: '',
-                children: [{
-                  id: 62,
-                  name: 'Pilotage des évacs vers filière de val'
-                },
-                {
-                  id: 63,
-                  name: 'Autre Presta',
-                  question: 'Gestion administrative ?',
-                  img_src: '', 
-                  children: [{
-                    id: 64,
-                    name: 'Gestion administrative'
-                  },
-                  {
-                    id: 65,
-                    name: 'Optimisation interne',
-                  }] 
-                }]
-              }] 
-            }]
-          },
-          {
-            id: 51,
-            name: 'Autre domaine',
-            question: 'Hygiène et Prop classique ?',
-            img_src: '',
-            children: [{
-              id: 66,
-              name: 'Hygiène et Prop classique',
-              question: 'Etablissement recevant du public ?',
-              img_src: '',
-              children: [{
-                id: 68,
-                name: 'Etablissement recevant du public',
-              },
-              {
-                id: 69,
-                name: 'Autre Presta',
-                question: 'Bureaux, sièges sociaux ?',
-                img_src: '',
-                children: [{
-                  id: 70,
-                  name: 'Bureaux, sièges sociaux'
-                },
-                {
-                  id: 71,
-                  name: 'Autre presta',
-                  question: 'Réseau de boutiques ou agences ?',
-                  img_src: '',
-                  children: [{
-                    id: 72,
-                    name: 'Réseau de boutiques ou agences',
-                  },
-                  {
-                    id: 73,
-                    name: 'Autre',
-                    question: 'Surfaces commerciales ?',
-                    img_src: '',
-                    children: [{
-                      id: 74,
-                      name: 'Surfaces commerciales'
-                    },
-                    {
-                      id: 75,
-                      name: 'Hôtels'
-                    }]
-                  }]
-                }]
-              }]
-            },
-            {
-              id: 67,
-              name: 'Services associés',
-              question: 'Services aux bâtiments ?',
-              img_src: '',
-              children: [{
-
-              }]
-            }]
-          }]
-        }]
-      }]
+      id: 1,
+      name: "Clients en situation d'handicap",
+      question: "Désirez-vous accompagner vos clients en situation d'handicap ?",
+      img: "assets/img/handicap.jpg",
+      servicesIdIfYes: []
+    },
+    {
+      id: 2,
+      name:"Usine ou zone de fabrication",
+      question: "Possedez-vous une usine ou zone de fabrication ?",
+      img: "assets/img/usine-boissons.jpg",
+      servicesIdIfYes: []
+    },
+    {
+      id: 3, 
+      name:"Sécurité",
+      question: "Désirez-vous voir nos services relatifs à la sécurité ?",
+      img: "assets/img/securite-q.jpg",
+      servicesIdIfYes: []
+    },
+    {
+      id: 4,
+      name: "Service logistique",
+      question: "Seriez-vous interessés par une optimisation de votre système logistique et manutention ?",
+      img: "assets/img/logistique.jpg",
+      servicesIdIfYes: []
+    },
+    {
+      id: 5,
+      name: "Recrutement",
+      question: "Pensez-vous à recruter ?",
+      img: "assets/img/recrutement.jpg",
+      servicesIdIfYes: []
     }
   ]
-}
-;
 
-  currentNode;
-  getNextNode(isYesAnswer){
-    if (isYesAnswer)
-    {
-      if (this.currentNode.children[0] != null)
-      {
-        this.currentNode = this.currentNode.children[0];
-      }
-    }
-    else
-    {
-      if (this.currentNode.children[1] != null)
-      {
-        this.currentNode = this.currentNode.children[1];
-      }
-    }
+
+
+  getNextNode(){
+    this.currentQId ++;
   }
   // Called whenever we drag an element
   onItemMove(element, x, y, r) {
     var elmt = element.children[0].children[0].children[0].children[0].children[0];
     if (document.getElementsByClassName('card')[1] != null)
     {
-      var behindElmt = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[1];
+      var behindElmt = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[2];
+      var behindImg = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[1];
     }
+    console.log(behindElmt);
     var color = '';
     var abs = Math.abs(x);
     let min = Math.trunc(Math.min(16*16 - abs, 16*16));
     let hexCode = this.decimalToHex(min, 2);
 
+    console.log(this.currentQId)
+    if (this.currentNode[this.currentQId + 1] != null)
+    {
+      if (this.currentNode[this.currentQId + 1].question != null)
+      {
+        behindElmt.innerHTML = this.currentNode[this.currentQId + 1].question;
+        behindImg.setAttribute("src", this.currentNode[this.currentQId + 1].img);
+      }
+      else
+      {
+        behindElmt.innerHTML = 'Déterminons votre besoin';
+      }
+    }
+    else{
+    }
+
     if (x < 0) {
       color = '#' + hexCode + 'FF' + hexCode;
-      if (this.currentNode.children != null)
-      {
-        if (this.currentNode.children[0].question != null)
-        {
-          behindElmt.innerHTML = this.currentNode.children[0].question;
-        }
-        else
-        {
-          behindElmt.innerHTML = 'Déterminons votre besoin';
-        }
-      }
-      else{
-      }
     } else if (x === 0){
       color = 'transparent';
     }
     else{
       color = '#FF' + hexCode + hexCode;
-      if (this.currentNode.children[1] != null)
-      {
-        behindElmt.innerHTML = this.currentNode.children[1].question;
-      }
     }
 
     element.style['transform'] = `translate3d(0, 0, 0) translate(${x}px, ${y}px) rotate(${r}deg)`;
@@ -494,17 +152,17 @@ nodes =
    
   // Connected through HTML
   voteUp(like: boolean) {
-    this.getNextNode(like);
+    this.getNextNode();
     let removedCard = this.cards.pop();
-    if (this.currentNode.children != null)
+    if (this.currentNode[this.currentQId] != null)
     {
-      this.cards.push(this.currentNode);
+      this.cards.push(this.currentNode[this.currentQId]);
       switch(like){
         case true: 
-          this.param4.push('YES');
+          this.param5.push('YES');
           break;
         case false:
-          this.param4.push('NO');
+          this.param5.push('NO');
           break;
       }
     }
@@ -512,10 +170,10 @@ nodes =
       switch(like){
         case true: 
           console.log(this.param4);
-          this.param4.push('YES');
+          this.param5.push('YES');
           break;
         case false:
-          this.param4.push('NO');
+          this.param5.push('NO');
           break;
       }
       this.cards.pop();
@@ -525,13 +183,12 @@ nodes =
         param3: this.param3,
         param4: this.param4
       });
-      this.cards.pop();
     }
   }
    
   // Add new cards to our array
-  addNewCards(node) {
-      if (node.children[0] != null)
+  addNewCards(node, id) {
+      if (this.currentNode.length > id)
       {
         this.cards.push(node);
       }
@@ -566,20 +223,53 @@ nodes =
       this.param1 = navParams.get('param1');
       this.param2 = navParams.get('param2');
       this.param3 = navParams.get('param3');
-      this.param4 = new Array<string>();
+      this.param4 = navParams.get('param4');
+
+      console.log("param1: " + this.param1);
+      console.log("param2: " + this.param2);
+      console.log("param3: " + this.param3);
+      console.log("param4: " + this.param4);
+
+      this.param5= new Array<string>();
   }
 
   prev(){
     this.navCtrl.pop();
   }
   ngAfterViewInit() {
+
+    switch(this.param2){
+      
+      // id = 0, secteur: Agroalimentaire
+      case 0:
+        this.currentNode = this.agroQuestions;
+        this.currentQId = 0;
+        break;
+
+      // id = 0, secteur: Industrie  
+      case 1:
+
+
+        break;
+      case 2:
+        break;
+      case 3:
+        break;
+      case 4:
+        break;
+      case 5:
+        break;
+      case 6:
+        break;
+    }
+
     // Either subscribe in controller or set in HTML
-    this.currentNode = this.nodes;
+
     this.swingStack.throwin.subscribe((event: DragEvent) => {
     });
     this.cards = [{email: ''}];
-    this.addNewCards(this.currentNode.children[0]);
-    this.addNewCards(this.currentNode);
+    this.addNewCards(this.currentNode[this.currentQId + 1], this.currentQId + 1);
+    this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
 
     console.log(this.navCtrl.getPrevious().id) ;
     if(this.navCtrl.getPrevious().id == "WelcomePage" || this.navCtrl.getPrevious().id == "SignupPage"){
@@ -588,12 +278,13 @@ nodes =
   }
 
   ionViewDidLeave(){
-    this.currentNode = this.nodes;
+    this.currentNode = this.agroQuestions;
+    this.currentQId = 0;
     this.swingStack.throwin.subscribe((event: DragEvent) => {
     });
     this.cards = [{email: ''}];
-    this.addNewCards(this.currentNode.children[0]);
-    this.addNewCards(this.currentNode);
+    this.addNewCards(this.currentNode[this.currentQId + 1], this.currentQId + 1);
+    this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
   }
 
   login(){

@@ -27719,7 +27719,7 @@ page-tinderQ .content-md, page-tinderQ .content-ios {
 }
 
 page-tinderQ .splash-info {
-  height: 70%;
+  height: calc(100% - 140px);
 }
 
 page-tinderQ .splash-form {
@@ -27827,6 +27827,10 @@ page-tinderQ .button-ios, page-tinderQ .button-md {
 
 page-tinderQ ion-label {
   white-space: unset;
+}
+
+page-tinderQ #card-stack {
+  margin-top: 0px;
 }
 
 page-welcome ion-content {
