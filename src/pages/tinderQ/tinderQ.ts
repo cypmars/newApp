@@ -109,15 +109,15 @@ export class TinderQPage {
       {
         this.resultsTemp.push(serviceId);
       }
-      if (this.currentNode.length == this.currentQId + 3)
-      {
-        var lastCard = document.getElementsByClassName('card')[0];
-        lastCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
-      }
-      if (this.currentNode.length == this.currentQId + 2){
-        var lastCard = document.getElementsByClassName('card')[0];
-        lastCard.setAttribute("style", "display:none");
-      }
+    }
+    if (this.currentNode.length == this.currentQId + 3)
+    {
+      var lastCard = document.getElementsByClassName('card')[0];
+      lastCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
+    }
+    if (this.currentNode.length == this.currentQId + 2){
+      var lastCard = document.getElementsByClassName('card')[0];
+      lastCard.setAttribute("style", "display:none");
     }
     this.currentQId ++;
   }
@@ -176,7 +176,7 @@ export class TinderQPage {
       }
       if (behindImg != null)
       {
-        behindImg.setAttribute("src", "");
+        behindImg.setAttribute("style", "display:none");
       }
     }
 

@@ -1,15 +1,15 @@
 webpackJsonp([2],{
 
-/***/ 292:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageModule", function() { return SignupPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(616);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(608);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(618);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(609);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_vis__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -45,170 +45,6 @@ SignupPageModule = __decorate([
 
 /***/ }),
 
-/***/ 309:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-var Vis = __webpack_require__(337);
-var VisNetwork = (function (_super) {
-    __extends(VisNetwork, _super);
-    function VisNetwork() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return VisNetwork;
-}(Vis.Network));
-exports.VisNetwork = VisNetwork;
-var VisNodes = (function (_super) {
-    __extends(VisNodes, _super);
-    function VisNodes(data, options) {
-        return _super.call(this, data, options) || this;
-    }
-    VisNodes.prototype.getLength = function () {
-        return this.length;
-    };
-    VisNodes.prototype.add = function (data, senderId) {
-        return _super.prototype.add.call(this, data, senderId);
-    };
-    VisNodes.prototype.clear = function (senderId) {
-        return _super.prototype.clear.call(this, senderId);
-    };
-    VisNodes.prototype.distinct = function (field) {
-        return _super.prototype.distinct.call(this, field);
-    };
-    VisNodes.prototype.flush = function () {
-        _super.prototype.flush.call(this);
-    };
-    VisNodes.prototype.forEach = function (callback, options) {
-        _super.prototype.forEach.call(this, callback, options);
-    };
-    VisNodes.prototype.getAll = function (options) {
-        return _super.prototype.get.call(this, options);
-    };
-    VisNodes.prototype.getById = function (id, options) {
-        return _super.prototype.get.call(this, id, options);
-    };
-    VisNodes.prototype.getByIds = function (ids, options) {
-        return _super.prototype.get.call(this, ids, options);
-    };
-    VisNodes.prototype.getDataSet = function () {
-        return _super.prototype.getDataSet.call(this);
-    };
-    VisNodes.prototype.getIds = function (options) {
-        return _super.prototype.getIds.call(this, options);
-    };
-    VisNodes.prototype.map = function (callback, options) {
-        return _super.prototype.map.call(this, callback, options);
-    };
-    VisNodes.prototype.max = function (field) {
-        return _super.prototype.max.call(this, field);
-    };
-    VisNodes.prototype.min = function (field) {
-        return _super.prototype.min.call(this, field);
-    };
-    VisNodes.prototype.on = function (event, callback) {
-        _super.prototype.on.call(this, event, callback);
-    };
-    VisNodes.prototype.off = function (event, callback) {
-        _super.prototype.off.call(this, event, callback);
-    };
-    VisNodes.prototype.removeItems = function (ids, senderId) {
-        return _super.prototype.remove.call(this, ids, senderId);
-    };
-    VisNodes.prototype.setOptions = function (options) {
-        _super.prototype.setOptions.call(this, options);
-    };
-    VisNodes.prototype.update = function (data, senderId) {
-        return _super.prototype.update.call(this, data, senderId);
-    };
-    return VisNodes;
-}(Vis.DataSet));
-exports.VisNodes = VisNodes;
-var VisEdges = (function (_super) {
-    __extends(VisEdges, _super);
-    function VisEdges(data, options) {
-        return _super.call(this, data, options) || this;
-    }
-    VisEdges.prototype.getLength = function () {
-        return this.length;
-    };
-    VisEdges.prototype.add = function (data, senderId) {
-        return _super.prototype.add.call(this, data, senderId);
-    };
-    VisEdges.prototype.clear = function (senderId) {
-        return _super.prototype.clear.call(this, senderId);
-    };
-    VisEdges.prototype.distinct = function (field) {
-        return _super.prototype.distinct.call(this, field);
-    };
-    VisEdges.prototype.flush = function () {
-        _super.prototype.flush.call(this);
-    };
-    VisEdges.prototype.forEach = function (callback, options) {
-        _super.prototype.forEach.call(this, callback, options);
-    };
-    VisEdges.prototype.getAll = function (options) {
-        return _super.prototype.get.call(this, options);
-    };
-    VisEdges.prototype.getById = function (id, options) {
-        return _super.prototype.get.call(this, id, options);
-    };
-    VisEdges.prototype.getByIds = function (ids, options) {
-        return _super.prototype.get.call(this, ids, options);
-    };
-    VisEdges.prototype.getDataSet = function () {
-        return _super.prototype.getDataSet.call(this);
-    };
-    VisEdges.prototype.getIds = function (options) {
-        return _super.prototype.getIds.call(this, options);
-    };
-    VisEdges.prototype.map = function (callback, options) {
-        return _super.prototype.map.call(this, callback, options);
-    };
-    VisEdges.prototype.max = function (field) {
-        return _super.prototype.max.call(this, field);
-    };
-    VisEdges.prototype.min = function (field) {
-        return _super.prototype.min.call(this, field);
-    };
-    VisEdges.prototype.on = function (event, callback) {
-        _super.prototype.on.call(this, event, callback);
-    };
-    VisEdges.prototype.off = function (event, callback) {
-        _super.prototype.off.call(this, event, callback);
-    };
-    VisEdges.prototype.removeItems = function (ids, senderId) {
-        return _super.prototype.remove.call(this, ids, senderId);
-    };
-    VisEdges.prototype.setOptions = function (options) {
-        _super.prototype.setOptions.call(this, options);
-    };
-    VisEdges.prototype.update = function (data, senderId) {
-        return _super.prototype.update.call(this, data, senderId);
-    };
-    return VisEdges;
-}(Vis.DataSet));
-exports.VisEdges = VisEdges;
-__export(__webpack_require__(607));
-__export(__webpack_require__(338));
-
-
-/***/ }),
-
 /***/ 310:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -228,7 +64,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-var Vis = __webpack_require__(337);
+var Vis = __webpack_require__(339);
 var VisTimelineItems = (function (_super) {
     __extends(VisTimelineItems, _super);
     function VisTimelineItems(data, options) {
@@ -367,13 +203,177 @@ var VisTimeline = (function (_super) {
     return VisTimeline;
 }(Vis.Timeline));
 exports.VisTimeline = VisTimeline;
-__export(__webpack_require__(339));
-__export(__webpack_require__(609));
+__export(__webpack_require__(341));
+__export(__webpack_require__(610));
 
 
 /***/ }),
 
-/***/ 337:
+/***/ 311:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+var Vis = __webpack_require__(339);
+var VisNetwork = (function (_super) {
+    __extends(VisNetwork, _super);
+    function VisNetwork() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return VisNetwork;
+}(Vis.Network));
+exports.VisNetwork = VisNetwork;
+var VisNodes = (function (_super) {
+    __extends(VisNodes, _super);
+    function VisNodes(data, options) {
+        return _super.call(this, data, options) || this;
+    }
+    VisNodes.prototype.getLength = function () {
+        return this.length;
+    };
+    VisNodes.prototype.add = function (data, senderId) {
+        return _super.prototype.add.call(this, data, senderId);
+    };
+    VisNodes.prototype.clear = function (senderId) {
+        return _super.prototype.clear.call(this, senderId);
+    };
+    VisNodes.prototype.distinct = function (field) {
+        return _super.prototype.distinct.call(this, field);
+    };
+    VisNodes.prototype.flush = function () {
+        _super.prototype.flush.call(this);
+    };
+    VisNodes.prototype.forEach = function (callback, options) {
+        _super.prototype.forEach.call(this, callback, options);
+    };
+    VisNodes.prototype.getAll = function (options) {
+        return _super.prototype.get.call(this, options);
+    };
+    VisNodes.prototype.getById = function (id, options) {
+        return _super.prototype.get.call(this, id, options);
+    };
+    VisNodes.prototype.getByIds = function (ids, options) {
+        return _super.prototype.get.call(this, ids, options);
+    };
+    VisNodes.prototype.getDataSet = function () {
+        return _super.prototype.getDataSet.call(this);
+    };
+    VisNodes.prototype.getIds = function (options) {
+        return _super.prototype.getIds.call(this, options);
+    };
+    VisNodes.prototype.map = function (callback, options) {
+        return _super.prototype.map.call(this, callback, options);
+    };
+    VisNodes.prototype.max = function (field) {
+        return _super.prototype.max.call(this, field);
+    };
+    VisNodes.prototype.min = function (field) {
+        return _super.prototype.min.call(this, field);
+    };
+    VisNodes.prototype.on = function (event, callback) {
+        _super.prototype.on.call(this, event, callback);
+    };
+    VisNodes.prototype.off = function (event, callback) {
+        _super.prototype.off.call(this, event, callback);
+    };
+    VisNodes.prototype.removeItems = function (ids, senderId) {
+        return _super.prototype.remove.call(this, ids, senderId);
+    };
+    VisNodes.prototype.setOptions = function (options) {
+        _super.prototype.setOptions.call(this, options);
+    };
+    VisNodes.prototype.update = function (data, senderId) {
+        return _super.prototype.update.call(this, data, senderId);
+    };
+    return VisNodes;
+}(Vis.DataSet));
+exports.VisNodes = VisNodes;
+var VisEdges = (function (_super) {
+    __extends(VisEdges, _super);
+    function VisEdges(data, options) {
+        return _super.call(this, data, options) || this;
+    }
+    VisEdges.prototype.getLength = function () {
+        return this.length;
+    };
+    VisEdges.prototype.add = function (data, senderId) {
+        return _super.prototype.add.call(this, data, senderId);
+    };
+    VisEdges.prototype.clear = function (senderId) {
+        return _super.prototype.clear.call(this, senderId);
+    };
+    VisEdges.prototype.distinct = function (field) {
+        return _super.prototype.distinct.call(this, field);
+    };
+    VisEdges.prototype.flush = function () {
+        _super.prototype.flush.call(this);
+    };
+    VisEdges.prototype.forEach = function (callback, options) {
+        _super.prototype.forEach.call(this, callback, options);
+    };
+    VisEdges.prototype.getAll = function (options) {
+        return _super.prototype.get.call(this, options);
+    };
+    VisEdges.prototype.getById = function (id, options) {
+        return _super.prototype.get.call(this, id, options);
+    };
+    VisEdges.prototype.getByIds = function (ids, options) {
+        return _super.prototype.get.call(this, ids, options);
+    };
+    VisEdges.prototype.getDataSet = function () {
+        return _super.prototype.getDataSet.call(this);
+    };
+    VisEdges.prototype.getIds = function (options) {
+        return _super.prototype.getIds.call(this, options);
+    };
+    VisEdges.prototype.map = function (callback, options) {
+        return _super.prototype.map.call(this, callback, options);
+    };
+    VisEdges.prototype.max = function (field) {
+        return _super.prototype.max.call(this, field);
+    };
+    VisEdges.prototype.min = function (field) {
+        return _super.prototype.min.call(this, field);
+    };
+    VisEdges.prototype.on = function (event, callback) {
+        _super.prototype.on.call(this, event, callback);
+    };
+    VisEdges.prototype.off = function (event, callback) {
+        _super.prototype.off.call(this, event, callback);
+    };
+    VisEdges.prototype.removeItems = function (ids, senderId) {
+        return _super.prototype.remove.call(this, ids, senderId);
+    };
+    VisEdges.prototype.setOptions = function (options) {
+        _super.prototype.setOptions.call(this, options);
+    };
+    VisEdges.prototype.update = function (data, senderId) {
+        return _super.prototype.update.call(this, data, senderId);
+    };
+    return VisEdges;
+}(Vis.DataSet));
+exports.VisEdges = VisEdges;
+__export(__webpack_require__(608));
+__export(__webpack_require__(340));
+
+
+/***/ }),
+
+/***/ 339:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60316,7 +60316,7 @@ exports["default"] = FloydWarshall;
 
 /***/ }),
 
-/***/ 338:
+/***/ 340:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60329,7 +60329,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(309);
+var index_1 = __webpack_require__(311);
 /**
  * A service to create, manage and control VisNetwork instances.
  *
@@ -61192,7 +61192,7 @@ exports.VisNetworkService = VisNetworkService;
 
 /***/ }),
 
-/***/ 339:
+/***/ 341:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61890,7 +61890,7 @@ exports.VisTimelineService = VisTimelineService;
 
 /***/ }),
 
-/***/ 607:
+/***/ 608:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61906,7 +61906,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var vis_network_service_1 = __webpack_require__(338);
+var vis_network_service_1 = __webpack_require__(340);
 /**
  * Use this directive with a div container to show network data.
  *
@@ -62021,7 +62021,7 @@ exports.VisNetworkDirective = VisNetworkDirective;
 
 /***/ }),
 
-/***/ 608:
+/***/ 609:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62037,9 +62037,9 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(309);
+var index_1 = __webpack_require__(311);
 var index_2 = __webpack_require__(310);
-__export(__webpack_require__(610));
+__export(__webpack_require__(611));
 var VisModule = (function () {
     function VisModule() {
     }
@@ -62057,7 +62057,7 @@ exports.VisModule = VisModule;
 
 /***/ }),
 
-/***/ 609:
+/***/ 610:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62073,7 +62073,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var vis_timeline_service_1 = __webpack_require__(339);
+var vis_timeline_service_1 = __webpack_require__(341);
 var index_1 = __webpack_require__(310);
 /**
  * Use this directive with a div container to show timeline data.
@@ -62202,7 +62202,7 @@ exports.VisTimelineDirective = VisTimelineDirective;
 
 /***/ }),
 
-/***/ 610:
+/***/ 611:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62212,22 +62212,20 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(310));
-__export(__webpack_require__(309));
+__export(__webpack_require__(311));
 
 
 /***/ }),
 
-/***/ 616:
+/***/ 618:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis_components_network__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis_components_network___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_vis_components_network__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages__ = __webpack_require__(55);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -62242,60 +62240,84 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var ExampleNetworkData = (function () {
-    function ExampleNetworkData() {
-    }
-    return ExampleNetworkData;
-}());
 var SignupPage = (function () {
-    function SignupPage(navCtrl, formBuilder, toastCtrl, visNetworkServ) {
+    function SignupPage(navCtrl, formBuilder, toastCtrl) {
         this.navCtrl = navCtrl;
         this.formBuilder = formBuilder;
         this.toastCtrl = toastCtrl;
-        this.visNetworkServ = visNetworkServ;
-        this.visNetwork = 'networkId1';
         this.submitAttempt = false;
         this.lastSlide = true;
-        // The account fields for the login form.
-        // If you're using the username field with or without email, make
-        // sure to add it to the type
-        this.account = {
-            name: 'Test Human',
-            email: 'test@example.com',
-            password: 'test'
-        };
-        this.visNetworkService = visNetworkServ;
+        this.itemsCat = [
+            {
+                id: 0,
+                name: "Agriculture & agroalimentaire",
+                iconName: "leaf",
+                jobsName: this.jobsTab = ["Agriculture", "Agroalimentaire", "Autre"]
+            },
+            {
+                id: 1,
+                name: "Industrie",
+                iconName: "lock",
+                jobsName: this.jobsTab = ["Pharmaceutique", "Textile", "Chimique", "Construction", "Batiment", "Automobile", "Aéronotique", "Lourde", "Autre"]
+            },
+            {
+                id: 2,
+                name: "Energie",
+                iconName: "plane",
+                jobsName: this.jobsTab = ["Nucléaire", "Eolien", "Solaire", "Hydrolique", "Pétrolier", "Autre"]
+            },
+            {
+                id: 3,
+                name: "Commerce & Tourisme",
+                iconName: "people",
+                jobsName: this.jobsTab = ["Grand Commerce", "Petit commerce", "Artisanat", "Hôtellerie", "Restauration", "Autre"]
+            },
+            {
+                id: 4,
+                name: "Transport & Logistique",
+                iconName: "train",
+                jobsName: this.jobsTab = ['Aéronotique', 'Ferroviaire', 'Urbain', 'Maritime', 'Astronautique', "Distribution", "Gestion & Pilotage", "Autre"]
+            },
+            {
+                id: 5,
+                name: "Télécoms & Informatique",
+                iconName: "nuclear",
+                jobsName: this.jobsTab = ["Systèmes d'infromation", "Robotique", "Technologies", "Recherche", "Autre"]
+            },
+            {
+                id: 6,
+                name: "Santé & Services",
+                iconName: "school",
+                jobsName: this.jobsTab = ["Médecine", "Parmaceutique", "Aide à la personne", "Gardiennage", "Recherche", "Autre"]
+            },
+            {
+                id: 7,
+                name: "Economie",
+                iconName: "code-working",
+                jobsName: this.jobsTab = ["Banque", "Finance", "Assurance", "Audit", "Conseil", "Autre"]
+            }
+        ];
+        this.myIcon = "Secteur d'activité ?";
+        this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
         this.slideOneForm = formBuilder.group({
             firstName: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["g" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["g" /* Validators */].maxLength(30), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["g" /* Validators */].pattern('[a-zA-Z ]*'), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["g" /* Validators */].required])],
             lastName: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["g" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["g" /* Validators */].maxLength(30), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["g" /* Validators */].pattern('[a-zA-Z ]*'), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["g" /* Validators */].required])],
-            phone: [''],
-            email: ['']
+            email: [''],
+            mdp: ['']
         });
         this.slideTwoForm = formBuilder.group({
-            company: [''],
-            address: [''],
-            postcode: [''],
-            city: [''],
-            job: ['']
-        });
-        this.slideThreeForm = formBuilder.group({
             activity: ['']
         });
-        this.slideFourForm = formBuilder.group({
-            client: ['']
-        });
-        this.slideFiveForm = formBuilder.group({
-            need: ['']
+        this.slideThreeForm = formBuilder.group({
+            work: ['']
         });
     }
+    SignupPage.prototype.ionViewWillLeave = function () {
+        this.tabBarElement.style.display = 'flex';
+    };
     SignupPage.prototype.next = function () {
         console.log(this.signupSlider._activeIndex);
-        if (this.signupSlider._activeIndex == 1) {
-        }
-        if (this.signupSlider._activeIndex == 4)
-            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pages__["e" /* WelcomePage */]);
-        else if (this.signupSlider._activeIndex == 3) {
+        if (this.signupSlider._activeIndex == 0) {
             this.lastSlide = false;
             this.signupSlider.slideNext();
         }
@@ -62308,6 +62330,10 @@ var SignupPage = (function () {
         console.log(this.signupSlider._activeIndex);
         if (this.signupSlider._activeIndex == 0)
             this.navCtrl.pop();
+        else if (this.signupSlider._activeIndex == 2) {
+            this.lastSlide = false;
+            this.signupSlider.slidePrev();
+        }
         else {
             this.lastSlide = true;
             this.signupSlider.slidePrev();
@@ -62319,60 +62345,18 @@ var SignupPage = (function () {
             this.signupSlider.slideTo(0);
             this.lastSlide = true;
         }
-        else if (!this.slideTwoForm.valid) {
-            this.signupSlider.slideTo(1);
-        }
         else {
-            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pages__["a" /* MainPage */]);
+            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["e" /* TinderQPage */]);
         }
     };
-    SignupPage.prototype.addNode = function () {
-        var newId = this.visNetworkData.nodes.getLength() + 1;
-        this.visNetworkData.nodes.add({ id: newId.toString(), label: 'Node ' + newId });
+    SignupPage.prototype.ngAfterViewInit = function () {
+        this.fab.setActiveLists(true);
     };
-    SignupPage.prototype.networkInitialized = function () {
-        var _this = this;
-        // now we can use the service to register on events
-        this.visNetworkService.on(this.visNetwork, 'click');
-        // open your console/dev tools to see the click params
-        this.visNetworkService.click
-            .subscribe(function (eventData) {
-            if (eventData[0] === _this.visNetwork) {
-                console.log(eventData[1]);
-                console.log(_this.visNetworkService.getSelectedNodes(_this.visNetwork));
-            }
-        });
-    };
-    SignupPage.prototype.ngOnInit = function () {
-        var nodes = new __WEBPACK_IMPORTED_MODULE_3_ng2_vis_components_network__["VisNodes"]([
-            { id: '1', label: 'Node 1' },
-            { id: '2', label: 'Node 2' },
-            { id: '3', label: 'Node 3' },
-            { id: '4', label: 'Node 4' },
-            { id: '5', label: 'Node 5', title: 'Title of Node 5' }
-        ]);
-        var edges = new __WEBPACK_IMPORTED_MODULE_3_ng2_vis_components_network__["VisEdges"]();
-        this.visNetworkData = {
-            nodes: nodes,
-            edges: edges,
-        };
-        this.visNetworkOptions = {
-            interaction: {
-                multiselect: true
-            },
-            nodes: { borderWidth: 1, shape: "circle", color: { background: '#F92C55', border: '#F92C55', highlight: { background: '#F92C55', border: '#F92C55' } }, font: { color: '#fff' } },
-            physics: {
-                stabilization: false,
-                minVelocity: 0.01,
-                solver: "repulsion",
-                repulsion: {
-                    nodeDistance: 50
-                }
-            },
-        };
-    };
-    SignupPage.prototype.ngOnDestroy = function () {
-        this.visNetworkService.off(this.visNetwork, 'click');
+    SignupPage.prototype.chooseService = function (event, data, fab) {
+        this.myIcon = this.itemsCat[data].name;
+        this.lastSlide = false;
+        this.signupSlider.slideNext();
+        this.jobs = this.itemsCat[data].jobsName;
     };
     return SignupPage;
 }());
@@ -62380,14 +62364,17 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('signupSlider'),
     __metadata("design:type", Object)
 ], SignupPage.prototype, "signupSlider", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('fab'),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* FabContainer */])
+], SignupPage.prototype, "fab", void 0);
 SignupPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button> \n\n    </ion-buttons>  \n\n    <ion-title>\n\n      S\'inscrire\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button *ngIf="lastSlide" ion-button icon-right (click)="next()">Next <ion-icon name="arrow-forward"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="splash-bg">\n\n     <ion-slides pager #signupSlider>\n\n  \n\n       <ion-slide>\n\n        <p *ngIf="submitAttempt" style="color: #ea6153;">S\'il-vous-plait, remplissez les champs suivants.</p>\n\n          <form [formGroup]="slideOneForm">\n\n      \n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Nom *</ion-label>\n\n                  <ion-input formControlName="firstName" type="text"></ion-input>\n\n              </ion-item>\n\n      \n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Prénom *</ion-label>\n\n                  <ion-input formControlName="lastName" type="text"></ion-input>\n\n              </ion-item>\n\n      \n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Téléphone *</ion-label>\n\n                  <ion-input formControlName="phone" type="number"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">E-Mail *</ion-label>\n\n                  <ion-input formControlName="email" type="email"></ion-input>\n\n              </ion-item>\n\n          </form>\n\n       </ion-slide>\n\n       <ion-slide>\n\n          <ion-list>\n\n            <form [formGroup]="slideTwoForm">\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Société</ion-label>\n\n                  <ion-input formControlName="company" type="text"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Adresse</ion-label>\n\n                  <ion-textarea formControlName="address"></ion-textarea>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Code Postal</ion-label>\n\n                  <ion-input formControlName="postcode" type="text"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Ville</ion-label>\n\n                  <ion-input formControlName="postcode" type="text"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Fonction</ion-label>\n\n                  <ion-input formControlName="job" type="text"></ion-input>\n\n              </ion-item>\n\n            </form>\n\n        </ion-list>\n\n       </ion-slide>\n\n       <ion-slide>\n\n          <ion-list>\n\n            <p>Quels sont vos secteurs d\'activités/métiers ?</p>\n\n            <div class="chart-container">\n\n                <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n            </div>\n\n            <button type="button" class="btn btn-default" (click)="addNode()">Add node</button>\n\n            <form [formGroup]="slideThreeForm">\n\n              <ion-item hidden>\n\n                  <ion-label floating class="white-text">Métier</ion-label>\n\n                  <ion-input formControlName="activity" type="text"></ion-input>\n\n              </ion-item>\n\n            </form>\n\n        </ion-list>\n\n       </ion-slide>\n\n       <ion-slide>\n\n          <ion-list>\n\n            <p>Êtes-vous déjà client ?</p>\n\n            <form [formGroup]="slideFourForm">\n\n              <ion-item hidden>\n\n                  <ion-label floating class="white-text">Client</ion-label>\n\n                  <ion-input formControlName="client" type="text"></ion-input>\n\n              </ion-item>\n\n            </form>\n\n        </ion-list>\n\n       </ion-slide>\n\n\n\n       <ion-slide>\n\n          <ion-list>\n\n              <p>Quels sont vos besoins ?</p>\n\n              <form [formGroup]="slideFiveForm">\n\n                <ion-item hidden>\n\n                    <ion-label floating class="white-text">Besoins</ion-label>\n\n                    <ion-input formControlName="need" type="text"></ion-input>\n\n                </ion-item>\n\n              </form>\n\n          </ion-list>\n\n          <button ion-button full color="primary" (click)="save()">Create Account!</button>\n\n       </ion-slide>\n\n  \n\n     </ion-slides>\n\n    </div>\n\n </ion-content>\n\n \n\n<!-- <ion-content>\n\n  <div class="splash-bg">\n\n      <div class="splash-relative">\n\n        <form (submit)="doSignup()">\n\n          <ion-grid>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Nom *</ion-label>\n\n                  <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Prénom *</ion-label>\n\n                  <ion-input type="text" [(ngModel)]="account.firstName" name="firstName"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Phone *</ion-label>\n\n                  <ion-input type="number" [(ngModel)]="account.phone" name="phone"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Fax</ion-label>\n\n                  <ion-input type="number" [(ngModel)]="account.fax" name="fax"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>E-Mail *</ion-label>\n\n                  <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Adresse</ion-label>\n\n                  <ion-input type="text" [(ngModel)]="account.address" name="address"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Code Postal</ion-label>\n\n                  <ion-input type="number" [(ngModel)]="account.postcode" name="postcode"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Ville</ion-label>\n\n                  <ion-input type="text" [(ngModel)]="account.city" name="city"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Société</ion-label>\n\n                  <ion-input type="text" [(ngModel)]="account.company" name="company"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col>\n\n                <ion-item>\n\n                  <ion-label fixed>Fonction</ion-label>\n\n                  <ion-input type="text" [(ngModel)]="account.job" name="job"></ion-input>\n\n                </ion-item>\n\n              </ion-col>\n\n            </ion-row>\n\n                \n\n          </ion-grid>\n\n          <div padding>\n\n            <button ion-button color="primary" block>{{ \'SIGNUP_BUTTON\' }}</button>\n\n          </div>\n\n        </form>\n\n      </div>\n\n  </div>\n\n</ion-content> -->'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\signup\signup.html"*/
+        selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button> \n\n    </ion-buttons>  \n\n    <ion-title>\n\n      S\'inscrire\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button *ngIf="lastSlide" ion-button icon-right (click)="next()">Next <ion-icon name="arrow-forward"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="splash-bg">\n\n     <ion-slides pager #signupSlider>\n\n  \n\n       <ion-slide>\n\n        <p *ngIf="submitAttempt" style="color: #ea6153;">S\'il-vous-plait, remplissez les champs suivants.</p>\n\n          <form [formGroup]="slideOneForm">\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Nom *</ion-label>\n\n                  <ion-input formControlName="firstName" type="text"></ion-input>\n\n              </ion-item>\n\n      \n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Prénom *</ion-label>\n\n                  <ion-input formControlName="lastName" type="text"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">E-Mail *</ion-label>\n\n                  <ion-input formControlName="email" type="email"></ion-input>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                  <ion-label floating class="white-text">Mot de passe *</ion-label>\n\n                  <ion-input formControlName="mdp" type="text"></ion-input>\n\n              </ion-item>\n\n          </form>\n\n          <br>\n\n          <ion-item>\n\n              <ion-label>Qui êtes-vous ? *</ion-label>\n\n              <ion-select [(ngModel)]="who" interface="popover">\n\n                <ion-option value="client">Client</ion-option>\n\n                <ion-option value="prospect">Prospect</ion-option>\n\n                <ion-option value="collab">Collaborateur</ion-option>\n\n              </ion-select>\n\n            </ion-item>\n\n       </ion-slide>\n\n       <ion-slide>\n\n          <ion-list>\n\n            <form [formGroup]="slideTwoForm">\n\n              <ion-item hidden>\n\n                  <ion-label floating class="white-text">Activité</ion-label>\n\n                  <ion-input formControlName="activity" type="text"></ion-input>\n\n              </ion-item>\n\n            </form>\n\n          </ion-list>\n\n          <p class="white-text" text-center>Quel est le secteur d\'activité de votre entreprise ?</p>\n\n                <div class="myFab">\n\n                  <ion-fab class="myFab" center #fab >\n\n                      <button id="show-services" ion-fab color="danger">{{myIcon}}</button>\n\n                      <ion-fab-list side="top">\n\n                        <button (click)="chooseService($event, 0, fab)" ion-fab color="white">Agriculture &amp; Agroalimentaire</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="top-left">\n\n                        <button (click)="chooseService($event, 1, fab)" ion-fab color="white">Industrie</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="left">\n\n                        <button (click)="chooseService($event, 2, fab)" ion-fab color="white">Energies</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="bottom-left">\n\n                        <button (click)="chooseService($event, 3, fab)" ion-fab color="white">Commerce &amp; Tourisme</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="bottom">\n\n                        <button (click)="chooseService($event, 4, fab)" ion-fab color="white">Transports &amp; Logistique</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="bottom-right">\n\n                        <button (click)="chooseService($event, 5, fab)" ion-fab color="white">Télécoms &amp; Informatique</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="right">\n\n                        <button (click)="chooseService($event, 6, fab)" ion-fab color="white">Santé &amp; Services</button>\n\n                      </ion-fab-list>\n\n                      <ion-fab-list side="top-right">\n\n                        <button (click)="chooseService($event, 7, fab)" ion-fab color="white">Economie</button>\n\n                      </ion-fab-list>\n\n                    </ion-fab>\n\n                </div>\n\n       </ion-slide>\n\n\n\n       <ion-slide>\n\n          <ion-list>\n\n            <form [formGroup]="slideThreeForm">\n\n              <ion-item hidden>\n\n                  <ion-label floating class="white-text">Métier</ion-label>\n\n                  <ion-input formControlName="work" type="text"></ion-input>\n\n              </ion-item>\n\n            </form>\n\n          </ion-list>\n\n          <p>Quel est le métier de votre entreprise ?</p>\n\n          <br>\n\n          <ion-item>\n\n            <ion-label>Métier</ion-label>\n\n            <ion-select [(ngModel)]="job">\n\n              <ion-option *ngFor="let job of jobs">{{job}}</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n        <button class="buttonSign" ion-button color="primary" (click)="save()">S\'inscrire</button>\n\n      </ion-slide>\n\n  \n\n     </ion-slides>\n\n    </div>\n\n </ion-content>\n\n '/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\signup\signup.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */],
-        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */],
-        __WEBPACK_IMPORTED_MODULE_3_ng2_vis_components_network__["VisNetworkService"]])
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */]])
 ], SignupPage);
 
 //# sourceMappingURL=signup.js.map
