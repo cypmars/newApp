@@ -26753,6 +26753,12 @@ page-result .chart-container {
   width: 100vw;
 }
 
+page-result #content {
+  position: relative;
+  margin-top: 100px;
+  text-align: center;
+}
+
 page-service-details ion-content {
   background: #b2284e;
   /* For browsers that do not support gradients */

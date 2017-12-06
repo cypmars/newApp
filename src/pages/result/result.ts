@@ -34,9 +34,10 @@ class ExampleNetworkData implements VisNetworkData {
 export class ResultPage implements OnInit, OnDestroy{
 
   public param1: string;
-  public param2: string;
+  public param2: number;
   public param3: string;
-  public param4: Array<string>;
+  public param4: string;
+  public param5: [number];
 
   public visNetwork: string = 'networkId1';
   public visNetworkData: ExampleNetworkData;
@@ -44,25 +45,46 @@ export class ResultPage implements OnInit, OnDestroy{
   public visNetworkService: VisNetworkService;
 
   firstT: boolean = true;
+
+  services;
+  visServices;
   constructor(private http: Http, public navCtrl: NavController, private visNetworkServ: VisNetworkService, public navParams: NavParams) {
    
+    let servData = http.get('assets/data/services.json').map(res => res.json().services);
+    servData.subscribe(data => {
+      this.services = data;
+    });
+    
     this.visNetworkService = visNetworkServ;
 
     this.param1 = navParams.get('param1');
     this.param2 = navParams.get('param2');
     this.param3 = navParams.get('param3');
     this.param4 = navParams.get('param4');
+    this.param5 = navParams.get('param5');
   }
 
-  public addNode(): void {
+  public addNode(node): void {
     const newId = this.visNetworkData.nodes.getLength() + 1;
-    this.visNetworkData.nodes.add({ id: newId.toString(), label: 'Node ' + newId });
+    this.visNetworkData.nodes.add(node);
   }
 
   public networkInitialized(): void {
     
         if (this.firstT)
         {
+          this.visNetworkData.nodes.clear();
+          for (let resultId of this.param5)
+          {
+            const visService = {
+              id: resultId,
+              label: this.services[resultId].title
+            }
+            if (this.visNetworkData.nodes.getById(resultId) == null)
+            {
+              this.addNode(visService);
+            }
+          }
           // now we can use the service to register on events
           this.visNetworkService.on(this.visNetwork, 'click');
         }
@@ -72,7 +94,7 @@ export class ResultPage implements OnInit, OnDestroy{
         .subscribe((eventData: any[]) => {
           if (this.firstT)
           {
-            if (eventData[0] === this.visNetwork) {
+            if (eventData[0] === this.visNetwork && (this.visNetworkService.getSelectedNodes(this.visNetwork))[0] != null) {
               this.navCtrl.push('ServiceDetailsPage', {
                 param1: (this.visNetworkService.getSelectedNodes(this.visNetwork))[0]
               });
@@ -81,16 +103,12 @@ export class ResultPage implements OnInit, OnDestroy{
             }
           }
         });
+        
   }
-  
 
   public ngOnInit(): void {
-      const nodes = new VisNodes([
-          { id: 0, label: 'Propreté en milieu classique' },
-          { id: 1, label: 'Propreté en milieu sensible' },
-          { id: 2, label: 'Cryogénie' },
-          { id: 3, label: 'Propreté urbaine' },
-          { id: 4, label: 'Propreté dans les transports' }]);
+       
+      const nodes = new VisNodes();
 
       const edges = new VisEdges();
 

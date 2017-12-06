@@ -62,7 +62,7 @@ export class TinderQPage {
       question: "Possedez-vous une surface commerciale ou magasin ?",
       img: "assets/img/boutique-fruits.jpg",
       // + hygiene et prop classique + Gestion des déchets - secteur industriel
-      servicesIdIfYes: [0, 5]
+      servicesIdIfYes: [0, 1, 2]
     },
     {
       id: 1,
@@ -103,7 +103,22 @@ export class TinderQPage {
 
 
 
-  getNextNode(){
+  getNextNode(like){
+    if (like){
+      for (let serviceId of this.currentNode[this.currentQId].servicesIdIfYes)
+      {
+        this.resultsTemp.push(serviceId);
+      }
+      if (this.currentNode.length == this.currentQId + 3)
+      {
+        var lastCard = document.getElementsByClassName('card')[0];
+        lastCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
+      }
+      if (this.currentNode.length == this.currentQId + 2){
+        var lastCard = document.getElementsByClassName('card')[0];
+        lastCard.setAttribute("style", "display:none");
+      }
+    }
     this.currentQId ++;
   }
   // Called whenever we drag an element
@@ -111,29 +126,58 @@ export class TinderQPage {
     var elmt = element.children[0].children[0].children[0].children[0].children[0];
     if (document.getElementsByClassName('card')[1] != null)
     {
-      var behindElmt = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[2];
-      var behindImg = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[1];
+      var behindCard = document.getElementsByClassName('card')[1];
+      if (document.getElementsByClassName('card')[1].children[0]){
+        var behindElmt = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[2];
+        var behindImg = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[1];
+      }
+      if (document.getElementsByClassName('card')[1].children[1] != null){
+        var behindButtonYes = document.getElementsByClassName('card')[1].children[1].children[0].children[0];
+        var behindButtonNo = document.getElementsByClassName('card')[1].children[1].children[1].children[0];
+      }
     }
-    console.log(behindElmt);
     var color = '';
     var abs = Math.abs(x);
     let min = Math.trunc(Math.min(16*16 - abs, 16*16));
     let hexCode = this.decimalToHex(min, 2);
 
-    console.log(this.currentQId)
     if (this.currentNode[this.currentQId + 1] != null)
     {
       if (this.currentNode[this.currentQId + 1].question != null)
       {
-        behindElmt.innerHTML = this.currentNode[this.currentQId + 1].question;
-        behindImg.setAttribute("src", this.currentNode[this.currentQId + 1].img);
+        if (behindElmt != null)
+        {
+          behindElmt.innerHTML = this.currentNode[this.currentQId + 1].question;
+          behindImg.setAttribute("src", this.currentNode[this.currentQId + 1].img);
+        }
       }
       else
       {
-        behindElmt.innerHTML = 'Déterminons votre besoin';
+        if (behindElmt != null)
+        {
+          behindElmt.innerHTML = 'Déterminons votre besoin';
+        }
       }
     }
     else{
+      if (behindCard != null)
+      {
+        behindCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
+      }
+      if (behindElmt != null)
+      {
+        behindElmt.innerHTML = 'Nous allons déterminer votre besoin';
+      }
+      if (behindButtonYes != null){
+        behindButtonYes.setAttribute("style", "display: none");
+      }
+      if (behindButtonNo != null){
+        behindButtonNo.setAttribute("style", "display: none");
+      }
+      if (behindImg != null)
+      {
+        behindImg.setAttribute("src", "");
+      }
     }
 
     if (x < 0) {
@@ -152,37 +196,22 @@ export class TinderQPage {
    
   // Connected through HTML
   voteUp(like: boolean) {
-    this.getNextNode();
+    this.getNextNode(like);
     let removedCard = this.cards.pop();
     if (this.currentNode[this.currentQId] != null)
     {
       this.cards.push(this.currentNode[this.currentQId]);
-      switch(like){
-        case true: 
-          this.param5.push('YES');
-          break;
-        case false:
-          this.param5.push('NO');
-          break;
-      }
     }
     else{
-      switch(like){
-        case true: 
-          console.log(this.param4);
-          this.param5.push('YES');
-          break;
-        case false:
-          this.param5.push('NO');
-          break;
-      }
-      this.cards.pop();
       this.navCtrl.push('ResultPage', {
         param1: this.param1,
         param2: this.param2,
         param3: this.param3,
-        param4: this.param4
+        param4: this.param4,
+        param5: this.resultsTemp
       });
+      this.cards.pop();
+      this.cards.pop();
     }
   }
    
@@ -230,14 +259,15 @@ export class TinderQPage {
       console.log("param3: " + this.param3);
       console.log("param4: " + this.param4);
 
-      this.param5= new Array<string>();
+      this.resultsTemp = new Array();
+
   }
 
   prev(){
     this.navCtrl.pop();
   }
   ngAfterViewInit() {
-
+    
     switch(this.param2){
       
       // id = 0, secteur: Agroalimentaire
@@ -262,7 +292,7 @@ export class TinderQPage {
       case 6:
         break;
     }
-
+    console.log(this.currentNode);
     // Either subscribe in controller or set in HTML
 
     this.swingStack.throwin.subscribe((event: DragEvent) => {
@@ -278,13 +308,16 @@ export class TinderQPage {
   }
 
   ionViewDidLeave(){
-    this.currentNode = this.agroQuestions;
-    this.currentQId = 0;
-    this.swingStack.throwin.subscribe((event: DragEvent) => {
-    });
-    this.cards = [{email: ''}];
-    this.addNewCards(this.currentNode[this.currentQId + 1], this.currentQId + 1);
-    this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
+    if (! (this.navCtrl.getActive().component.name == "WelcomePage"))
+    {
+      this.currentNode = this.agroQuestions;
+      this.currentQId = 0;
+      this.swingStack.throwin.subscribe((event: DragEvent) => {
+      });
+      this.cards = [{email: ''}];
+      this.addNewCards(this.currentNode[this.currentQId + 1], this.currentQId + 1);
+      this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
+    }
   }
 
   login(){

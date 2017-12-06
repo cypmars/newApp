@@ -79232,25 +79232,42 @@ var ExampleNetworkData = (function () {
 */
 var ResultPage = (function () {
     function ResultPage(http, navCtrl, visNetworkServ, navParams) {
+        var _this = this;
         this.http = http;
         this.navCtrl = navCtrl;
         this.visNetworkServ = visNetworkServ;
         this.navParams = navParams;
         this.visNetwork = 'networkId1';
         this.firstT = true;
+        var servData = http.get('assets/data/services.json').map(function (res) { return res.json().services; });
+        servData.subscribe(function (data) {
+            _this.services = data;
+        });
         this.visNetworkService = visNetworkServ;
         this.param1 = navParams.get('param1');
         this.param2 = navParams.get('param2');
         this.param3 = navParams.get('param3');
         this.param4 = navParams.get('param4');
+        this.param5 = navParams.get('param5');
     }
-    ResultPage.prototype.addNode = function () {
+    ResultPage.prototype.addNode = function (node) {
         var newId = this.visNetworkData.nodes.getLength() + 1;
-        this.visNetworkData.nodes.add({ id: newId.toString(), label: 'Node ' + newId });
+        this.visNetworkData.nodes.add(node);
     };
     ResultPage.prototype.networkInitialized = function () {
         var _this = this;
         if (this.firstT) {
+            this.visNetworkData.nodes.clear();
+            for (var _i = 0, _a = this.param5; _i < _a.length; _i++) {
+                var resultId = _a[_i];
+                var visService = {
+                    id: resultId,
+                    label: this.services[resultId].title
+                };
+                if (this.visNetworkData.nodes.getById(resultId) == null) {
+                    this.addNode(visService);
+                }
+            }
             // now we can use the service to register on events
             this.visNetworkService.on(this.visNetwork, 'click');
         }
@@ -79258,7 +79275,7 @@ var ResultPage = (function () {
         this.visNetworkService.click
             .subscribe(function (eventData) {
             if (_this.firstT) {
-                if (eventData[0] === _this.visNetwork) {
+                if (eventData[0] === _this.visNetwork && (_this.visNetworkService.getSelectedNodes(_this.visNetwork))[0] != null) {
                     _this.navCtrl.push('ServiceDetailsPage', {
                         param1: (_this.visNetworkService.getSelectedNodes(_this.visNetwork))[0]
                     });
@@ -79269,13 +79286,7 @@ var ResultPage = (function () {
         });
     };
     ResultPage.prototype.ngOnInit = function () {
-        var nodes = new __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__["VisNodes"]([
-            { id: 0, label: 'Propreté en milieu classique' },
-            { id: 1, label: 'Propreté en milieu sensible' },
-            { id: 2, label: 'Cryogénie' },
-            { id: 3, label: 'Propreté urbaine' },
-            { id: 4, label: 'Propreté dans les transports' }
-        ]);
+        var nodes = new __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__["VisNodes"]();
         var edges = new __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__["VisEdges"]();
         this.visNetworkData = {
             nodes: nodes,
@@ -79308,11 +79319,12 @@ var ResultPage = (function () {
 }());
 ResultPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-result',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/'<ion-header no-border>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n        <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n     \n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n    <div class="splash-relative">\n\n        <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div class="chart-container">\n\n                    <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n                </div>\n\n            </div>\n\n        </div>\n\n    </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/
+        selector: 'page-result',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/'<ion-content *ngIf="services != null">\n\n    <ion-header no-border>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n        <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n     \n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n<div id="content">\n\n    <div class="splash-relative">\n\n        <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div class="chart-container">\n\n                    <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n                </div>\n\n            </div>\n\n        </div>\n\n    </div>\n\n</div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__["VisNetworkService"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__["VisNetworkService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__["VisNetworkService"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _d || Object])
 ], ResultPage);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=result.js.map
 
 /***/ })
