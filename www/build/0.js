@@ -79257,7 +79257,6 @@ var ResultPage = (function () {
     ResultPage.prototype.networkInitialized = function () {
         var _this = this;
         if (this.firstT) {
-            this.visNetworkData.nodes.clear();
             for (var _i = 0, _a = this.param5; _i < _a.length; _i++) {
                 var resultId = _a[_i];
                 var visService = {
@@ -79309,10 +79308,12 @@ var ResultPage = (function () {
     };
     ResultPage.prototype.ngOnDestroy = function () {
         this.visNetworkService.off(this.visNetwork, 'click');
+        console.log(this.visNetworkData.nodes);
         this.firstT = false;
     };
     ResultPage.prototype.prev = function () {
         this.visNetworkService.off(this.visNetwork, 'click');
+        this.visNetworkData.nodes.clear();
         this.navCtrl.pop();
     };
     return ResultPage;

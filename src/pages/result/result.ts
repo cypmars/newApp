@@ -70,10 +70,8 @@ export class ResultPage implements OnInit, OnDestroy{
   }
 
   public networkInitialized(): void {
-    
         if (this.firstT)
         {
-          this.visNetworkData.nodes.clear();
           for (let resultId of this.param5)
           {
             const visService = {
@@ -136,11 +134,13 @@ export class ResultPage implements OnInit, OnDestroy{
   
   public ngOnDestroy(): void {
     this.visNetworkService.off(this.visNetwork, 'click');
+    console.log(this.visNetworkData.nodes);
     this.firstT = false;
   }
 
   prev(){
     this.visNetworkService.off(this.visNetwork, 'click');
+    this.visNetworkData.nodes.clear();
     this.navCtrl.pop();
   }
 }

@@ -17146,14 +17146,14 @@ var TinderQPage = (function () {
                 var serviceId = _a[_i];
                 this.resultsTemp.push(serviceId);
             }
-            if (this.currentNode.length == this.currentQId + 3) {
-                var lastCard = document.getElementsByClassName('card')[0];
-                lastCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
-            }
-            if (this.currentNode.length == this.currentQId + 2) {
-                var lastCard = document.getElementsByClassName('card')[0];
-                lastCard.setAttribute("style", "display:none");
-            }
+        }
+        if (this.currentNode.length == this.currentQId + 3) {
+            var lastCard = document.getElementsByClassName('card')[0];
+            lastCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
+        }
+        if (this.currentNode.length == this.currentQId + 2) {
+            var lastCard = document.getElementsByClassName('card')[0];
+            lastCard.setAttribute("style", "display:none");
         }
         this.currentQId++;
     };
@@ -17162,7 +17162,7 @@ var TinderQPage = (function () {
         var elmt = element.children[0].children[0].children[0].children[0].children[0];
         if (document.getElementsByClassName('card')[1] != null) {
             var behindCard = document.getElementsByClassName('card')[1];
-            if (document.getElementsByClassName('card')[1].children[0]) {
+            if (document.getElementsByClassName('card')[1].children[0] != null) {
                 var behindElmt = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[2];
                 var behindImg = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[1];
             }
@@ -17202,7 +17202,7 @@ var TinderQPage = (function () {
                 behindButtonNo.setAttribute("style", "display: none");
             }
             if (behindImg != null) {
-                behindImg.setAttribute("src", "");
+                behindImg.setAttribute("style", "display:none");
             }
         }
         if (x < 0) {
@@ -17233,6 +17233,7 @@ var TinderQPage = (function () {
                 param4: this.param4,
                 param5: this.resultsTemp
             });
+            this.resultsTemp = [];
             this.cards.pop();
             this.cards.pop();
         }

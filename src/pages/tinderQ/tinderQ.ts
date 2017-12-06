@@ -127,7 +127,7 @@ export class TinderQPage {
     if (document.getElementsByClassName('card')[1] != null)
     {
       var behindCard = document.getElementsByClassName('card')[1];
-      if (document.getElementsByClassName('card')[1].children[0]){
+      if (document.getElementsByClassName('card')[1].children[0] != null){
         var behindElmt = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[2];
         var behindImg = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[1];
       }
@@ -210,6 +210,7 @@ export class TinderQPage {
         param4: this.param4,
         param5: this.resultsTemp
       });
+      this.resultsTemp = [];
       this.cards.pop();
       this.cards.pop();
     }
@@ -260,14 +261,12 @@ export class TinderQPage {
       console.log("param4: " + this.param4);
 
       this.resultsTemp = new Array();
-
   }
 
   prev(){
     this.navCtrl.pop();
   }
   ngAfterViewInit() {
-    
     switch(this.param2){
       
       // id = 0, secteur: Agroalimentaire
