@@ -110,80 +110,91 @@ export class TinderQPage {
         this.resultsTemp.push(serviceId);
       }
     }
-
+    if (this.currentNode.length == this.currentQId + 3)
+    {
+      var lastCard = document.getElementsByClassName('card')[0];
+      lastCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
+    }
+    if (this.currentNode.length == this.currentQId + 2){
+      var lastCard = document.getElementsByClassName('card')[0];
+      lastCard.setAttribute("style", "display:none");
+    }
     this.currentQId ++;
   }
   // Called whenever we drag an element
   onItemMove(element, x, y, r) {
-    var elmt = element.children[0].children[0].children[0].children[0].children[0];
-    if (document.getElementsByClassName('card')[1] != null)
+    if (document.getElementsByClassName('card').length >= 3)
     {
-      var behindCard = document.getElementsByClassName('card')[1];
-      if (document.getElementsByClassName('card')[1].children[0] != null){
-        var behindElmt = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[2];
-        var behindImg = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[1];
-      }
-      if (document.getElementsByClassName('card')[1].children[1] != null){
-        var behindButtonYes = document.getElementsByClassName('card')[1].children[1].children[0].children[0];
-        var behindButtonNo = document.getElementsByClassName('card')[1].children[1].children[1].children[0];
-      }
-    }
-    var color = '';
-    var abs = Math.abs(x);
-    let min = Math.trunc(Math.min(16*16 - abs, 16*16));
-    let hexCode = this.decimalToHex(min, 2);
-
-    if (this.currentNode[this.currentQId + 1] != null)
-    {
-      if (this.currentNode[this.currentQId + 1].question != null)
+      var elmt = element.children[0].children[0].children[0].children[0].children[0];
+      if (document.getElementsByClassName('card')[1] != null)
       {
-        if (behindElmt != null)
-        {
-          behindElmt.innerHTML = this.currentNode[this.currentQId + 1].question;
-          behindImg.setAttribute("src", this.currentNode[this.currentQId + 1].img);
+        var behindCard = document.getElementsByClassName('card')[1];
+        if (document.getElementsByClassName('card')[1].children[0] != null){
+          var behindElmt = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[2];
+          var behindImg = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[1];
+        }
+        if (document.getElementsByClassName('card')[1].children[1] != null){
+          var behindButtonYes = document.getElementsByClassName('card')[1].children[1].children[0].children[0];
+          var behindButtonNo = document.getElementsByClassName('card')[1].children[1].children[1].children[0];
         }
       }
-      else
+      var color = '';
+      var abs = Math.abs(x);
+      let min = Math.trunc(Math.min(16*16 - abs, 16*16));
+      let hexCode = this.decimalToHex(min, 2);
+  
+      if (this.currentNode[this.currentQId + 1] != null)
       {
-        if (behindElmt != null)
+        if (this.currentNode[this.currentQId + 1].question != null)
         {
-          behindElmt.innerHTML = 'Déterminons votre besoin';
+          if (behindElmt != null)
+          {
+            behindElmt.innerHTML = this.currentNode[this.currentQId + 1].question;
+            behindImg.setAttribute("src", this.currentNode[this.currentQId + 1].img);
+          }
+        }
+        else
+        {
+          if (behindElmt != null)
+          {
+            behindElmt.innerHTML = 'Déterminons votre besoin';
+          }
         }
       }
-    }
-    else{
-      if (behindCard != null)
-      {
-        behindCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
+      else{
+        if (behindCard != null)
+        {
+          behindCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
+        }
+        if (behindElmt != null)
+        {
+          behindElmt.innerHTML = 'Nous allons déterminer votre besoin';
+        }
+        if (behindButtonYes != null){
+          behindButtonYes.setAttribute("style", "display: none");
+        }
+        if (behindButtonNo != null){
+          behindButtonNo.setAttribute("style", "display: none");
+        }
+        if (behindImg != null)
+        {
+          behindImg.setAttribute("style", "display:none");
+        }
       }
-      if (behindElmt != null)
-      {
-        behindElmt.innerHTML = 'Nous allons déterminer votre besoin';
+      if (x < 0) {
+        color = '#' + hexCode + 'FF' + hexCode;
+      } else if (x === 0){
+        color = 'transparent';
       }
-      if (behindButtonYes != null){
-        behindButtonYes.setAttribute("style", "display: none");
+      else{
+        color = '#FF' + hexCode + hexCode;
       }
-      if (behindButtonNo != null){
-        behindButtonNo.setAttribute("style", "display: none");
-      }
-      if (behindImg != null)
-      {
-        behindImg.setAttribute("style", "display:none");
-      }
+  
+      element.style['transform'] = `translate3d(0, 0, 0) translate(${x}px, ${y}px) rotate(${r}deg)`;
+      elmt.style['background-color'] = color;
+      elmt.style['opacity'] = 0.4;
     }
 
-    if (x < 0) {
-      color = '#' + hexCode + 'FF' + hexCode;
-    } else if (x === 0){
-      color = 'transparent';
-    }
-    else{
-      color = '#FF' + hexCode + hexCode;
-    }
-
-    element.style['transform'] = `translate3d(0, 0, 0) translate(${x}px, ${y}px) rotate(${r}deg)`;
-    elmt.style['background-color'] = color;
-    elmt.style['opacity'] = 0.4;
   }
    
   // Connected through HTML
