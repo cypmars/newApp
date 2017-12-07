@@ -26759,6 +26759,10 @@ page-result #content {
   text-align: center;
 }
 
+page-result .all {
+  height: 100%;
+}
+
 page-service-details ion-content {
   background: #b2284e;
   /* For browsers that do not support gradients */
