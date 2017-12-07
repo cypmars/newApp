@@ -1,4 +1,4 @@
-<div class="all" *ngIf="services != null">
+
     <ion-header no-border>
     <ion-navbar color="primary" hideBackButton="true">
         <ion-buttons start>
@@ -13,7 +13,7 @@
     </ion-navbar>
     <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
     </ion-header>
-    <ion-content>
+    <ion-content *ngIf="services != null">
         <div class="splash-relative">
             <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>
             <div class="splash-info" center>
@@ -25,5 +25,4 @@
             </div>
         </div>
     </ion-content>
-</div>
 

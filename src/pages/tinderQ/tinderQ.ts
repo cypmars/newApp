@@ -147,6 +147,22 @@ export class TinderQPage {
   voteUp(like: boolean) {
     this.getNextNode(like);
     let removedCard = this.cards.pop();
+    if (this.currentNode[this.currentQId] != null)
+    {
+      this.cards.push(this.currentNode[this.currentQId]);
+    }
+    else{
+      this.navCtrl.push('ResultPage', {
+        param1: this.param1,
+        param2: this.param2,
+        param3: this.param3,
+        param4: this.param4,
+        param5: this.resultsTemp
+      });
+      this.resultsTemp = [];
+      this.cards.pop();
+      this.cards.pop();
+    }
     if (document.getElementsByClassName('card')[1] != null)
     {
       var behindCard = document.getElementsByClassName('card')[1];
@@ -196,22 +212,6 @@ export class TinderQPage {
       {
         behindImg.setAttribute("style", "display:none");
       }
-    }
-    if (this.currentNode[this.currentQId] != null)
-    {
-      this.cards.push(this.currentNode[this.currentQId]);
-    }
-    else{
-      this.navCtrl.push('ResultPage', {
-        param1: this.param1,
-        param2: this.param2,
-        param3: this.param3,
-        param4: this.param4,
-        param5: this.resultsTemp
-      });
-      this.resultsTemp = [];
-      this.cards.pop();
-      this.cards.pop();
     }
   }
    
