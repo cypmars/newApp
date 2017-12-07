@@ -126,6 +126,29 @@ export class TinderQPage {
   // Called whenever we drag an element
   onItemMove(element, x, y, r) {
     var elmt = element.children[0].children[0].children[0].children[0].children[0];
+    var color = '';
+    var abs = Math.abs(x);
+    let min = Math.trunc(Math.min(16*16 - abs, 16*16));
+    let hexCode = this.decimalToHex(min, 2);
+
+    if (x < 0) {
+      color = '#' + hexCode + 'FF' + hexCode;
+    } else if (x === 0){
+      color = 'transparent';
+    }
+    else{
+      color = '#FF' + hexCode + hexCode;
+    }
+
+    element.style['transform'] = `translate3d(0, 0, 0) translate(${x}px, ${y}px) rotate(${r}deg)`;
+    elmt.style['background-color'] = color;
+    elmt.style['opacity'] = 0.4;
+  }
+   
+  // Connected through HTML
+  voteUp(like: boolean) {
+    this.getNextNode(like);
+    let removedCard = this.cards.pop();
     if (document.getElementsByClassName('card')[1] != null)
     {
       var behindCard = document.getElementsByClassName('card')[1];
@@ -138,15 +161,8 @@ export class TinderQPage {
         var behindButtonNo = document.getElementsByClassName('card')[1].children[1].children[1].children[0];
       }
     }
-    var color = '';
-    var abs = Math.abs(x);
-    let min = Math.trunc(Math.min(16*16 - abs, 16*16));
-    let hexCode = this.decimalToHex(min, 2);
-
     if (this.currentNode[this.currentQId + 1] != null)
     {
-      if (this.firstVoteUp)
-      {
         if (this.currentNode[this.currentQId + 1].question != null)
         {
           if (behindElmt != null)
@@ -162,7 +178,6 @@ export class TinderQPage {
             behindElmt.innerHTML = 'Déterminons votre besoin';
           }
         }
-      }
     }
     else{
       if (behindCard != null)
@@ -184,26 +199,6 @@ export class TinderQPage {
         behindImg.setAttribute("style", "display:none");
       }
     }
-
-    if (x < 0) {
-      color = '#' + hexCode + 'FF' + hexCode;
-    } else if (x === 0){
-      color = 'transparent';
-    }
-    else{
-      color = '#FF' + hexCode + hexCode;
-    }
-
-    element.style['transform'] = `translate3d(0, 0, 0) translate(${x}px, ${y}px) rotate(${r}deg)`;
-    elmt.style['background-color'] = color;
-    elmt.style['opacity'] = 0.4;
-  }
-   
-  // Connected through HTML
-  voteUp(like: boolean) {
-    this.firstVoteUp = true;
-    this.getNextNode(like);
-    let removedCard = this.cards.pop();
     if (this.currentNode[this.currentQId] != null)
     {
       this.cards.push(this.currentNode[this.currentQId]);
