@@ -1,5 +1,5 @@
-webpackJsonp([1],Array(297).concat([
-/* 297 */
+webpackJsonp([1],Array(298).concat([
+/* 298 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46,7 +46,6 @@ TinderQPageModule = __decorate([
 //# sourceMappingURL=tinderQ.module.js.map
 
 /***/ }),
-/* 298 */,
 /* 299 */,
 /* 300 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -17074,7 +17073,6 @@ var TinderQPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.recentCard = '';
-        this.firstVoteUp = false;
         this.showButton = true;
         this.agroQuestions = [
             {
