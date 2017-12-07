@@ -62,7 +62,7 @@ export class TinderQPage {
       question: "Possedez-vous une surface commerciale ou magasin ?",
       img: "assets/img/boutique-fruits.jpg",
       // + hygiene et prop classique + Gestion des déchets - secteur industriel
-      servicesIdIfYes: [0, 1, 2, 3]
+      servicesIdIfYes: [0, 1, 2, 3a]
     },
     {
       id: 1,
