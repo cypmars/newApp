@@ -46,6 +46,8 @@ export class TinderQPage {
   stackConfig: StackConfig;
   recentCard: string = '';
 
+  firstVoteUp: boolean = false;
+
   currentNode;
   currentQId;
   questionsId: Array<number>;
@@ -143,19 +145,22 @@ export class TinderQPage {
 
     if (this.currentNode[this.currentQId + 1] != null)
     {
-      if (this.currentNode[this.currentQId + 1].question != null)
+      if (this.firstVoteUp)
       {
-        if (behindElmt != null)
+        if (this.currentNode[this.currentQId + 1].question != null)
         {
-          behindElmt.innerHTML = this.currentNode[this.currentQId + 1].question;
-          behindImg.setAttribute("src", this.currentNode[this.currentQId + 1].img);
+          if (behindElmt != null)
+          {
+            behindElmt.innerHTML = this.currentNode[this.currentQId + 1].question;
+            behindImg.setAttribute("src", this.currentNode[this.currentQId + 1].img);
+          }
         }
-      }
-      else
-      {
-        if (behindElmt != null)
+        else
         {
-          behindElmt.innerHTML = 'Déterminons votre besoin';
+          if (behindElmt != null)
+          {
+            behindElmt.innerHTML = 'Déterminons votre besoin';
+          }
         }
       }
     }
@@ -196,6 +201,7 @@ export class TinderQPage {
    
   // Connected through HTML
   voteUp(like: boolean) {
+    this.firstVoteUp = true;
     this.getNextNode(like);
     let removedCard = this.cards.pop();
     if (this.currentNode[this.currentQId] != null)
