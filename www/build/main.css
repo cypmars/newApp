@@ -26753,12 +26753,6 @@ page-result .chart-container {
   width: 100vw;
 }
 
-page-result #content {
-  position: relative;
-  margin-top: 100px;
-  text-align: center;
-}
-
 page-result .all {
   height: 100%;
 }
