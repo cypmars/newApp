@@ -46,8 +46,6 @@ export class TinderQPage {
   stackConfig: StackConfig;
   recentCard: string = '';
 
-  firstVoteUp: boolean = false;
-
   currentNode;
   currentQId;
   questionsId: Array<number>;
