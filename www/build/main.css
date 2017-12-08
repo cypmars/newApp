@@ -27837,6 +27837,132 @@ page-tinderQ #card-stack {
   margin-top: 0px;
 }
 
+page-tinderQ2 .content-md, page-tinderQ2 .content-ios {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+}
+
+page-tinderQ2 .splash-info {
+  height: calc(100% - 140px);
+}
+
+page-tinderQ2 .splash-form {
+  margin-right: 10%;
+  margin-left: 10%;
+  height: 100%;
+  display: -webkit-box !important;
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+page-tinderQ2 .item-md, page-tinderQ2 .item-ios {
+  background-color: transparent;
+}
+
+page-tinderQ2 input {
+  color: white;
+}
+
+page-tinderQ2 .white-text {
+  color: white;
+}
+
+page-tinderQ2 .item-input ion-label {
+  width: 20px;
+}
+
+page-tinderQ2 #card-stack {
+  width: 90%;
+  height: 50vh;
+  margin: 30px auto 0;
+  position: relative;
+}
+
+page-tinderQ2 #card-stack ion-card {
+  border-radius: 5px;
+  position: absolute;
+  text-align: center;
+  top: 3%;
+  height: 320px;
+}
+
+page-tinderQ2 .item-md, page-tinderQ2 .item-ios {
+  padding-left: 0;
+  height: 250px;
+}
+
+page-tinderQ2 .item-ios.item-block .item-inner, page-tinderQ2 .item-md.item-block .item-inner {
+  padding-right: 0;
+}
+
+page-tinderQ2 .label-md, page-tinderQ2 .label-ios {
+  margin: 0 0 0 0;
+}
+
+page-tinderQ2 ion-card img {
+  max-height: 250px;
+  min-height: 250px;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+page-tinderQ2 .absolute-pos {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+page-tinderQ2 .relative-pos {
+  position: relative;
+}
+
+page-tinderQ2 .item-ios h1, page-tinderQ2 .item-md h1 {
+  text-align: center;
+  color: white;
+}
+
+page-tinderQ2 .validate-or-not {
+  position: absolute;
+  top: 0;
+  height: 250px;
+  width: 100%;
+  z-index: 1000;
+  background-size: cover;
+}
+
+page-tinderQ2 .row {
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+page-tinderQ2 .button-ios, page-tinderQ2 .button-md {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+page-tinderQ2 ion-label {
+  white-space: unset;
+}
+
+page-tinderQ2 #card-stack {
+  margin-top: 0px;
+}
+
 page-welcome ion-content {
   background: #b2284e;
   /* For browsers that do not support gradients */

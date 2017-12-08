@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 289:
+/***/ 291:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MarqueDetailsPageModule", function() { return MarqueDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiceDetailsPageModule", function() { return ServiceDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__marqueDetails__ = __webpack_require__(614);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__serviceDetails__ = __webpack_require__(617);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,30 +18,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MarqueDetailsPageModule = (function () {
-    function MarqueDetailsPageModule() {
+var ServiceDetailsPageModule = (function () {
+    function ServiceDetailsPageModule() {
     }
-    return MarqueDetailsPageModule;
+    return ServiceDetailsPageModule;
 }());
-MarqueDetailsPageModule = __decorate([
+ServiceDetailsPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__marqueDetails__["a" /* MarqueDetailsPage */]
+            __WEBPACK_IMPORTED_MODULE_2__serviceDetails__["a" /* ServiceDetailsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__marqueDetails__["a" /* MarqueDetailsPage */])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__serviceDetails__["a" /* ServiceDetailsPage */])
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__marqueDetails__["a" /* MarqueDetailsPage */],
+            __WEBPACK_IMPORTED_MODULE_2__serviceDetails__["a" /* ServiceDetailsPage */]
         ]
     })
-], MarqueDetailsPageModule);
+], ServiceDetailsPageModule);
 
-//# sourceMappingURL=marqueDetails.module.js.map
+//# sourceMappingURL=serviceDetails.module.js.map
 
 /***/ }),
 
-/***/ 312:
+/***/ 316:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53,16 +53,17 @@ Observable_1.Observable.prototype.map = map_1.map;
 
 /***/ }),
 
-/***/ 614:
+/***/ 617:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MarqueDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServiceDetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(312);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -76,14 +77,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
  * If you'd like to immediately put the user onto a login/signup page,
  * we recommend not using the Welcome page.
 */
-var MarqueDetailsPage = (function () {
-    function MarqueDetailsPage(navCtrl, navParams, toastCtrl, http) {
+var ServiceDetailsPage = (function () {
+    function ServiceDetailsPage(navCtrl, navParams, toastCtrl, http) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
@@ -99,7 +101,7 @@ var MarqueDetailsPage = (function () {
         };
         this.like = false;
         this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
-        this.marqueId = navParams.get('marqueId');
+        this.serviceId = navParams.get('param1');
         var servData = http.get('assets/data/services.json').map(function (res) { return res.json().services; });
         servData.subscribe(function (data) {
             _this.services = data;
@@ -109,7 +111,19 @@ var MarqueDetailsPage = (function () {
             _this.marques = data;
         });
     }
-    MarqueDetailsPage.prototype.toggleGroup = function (group) {
+    ServiceDetailsPage.prototype.prev = function () {
+        this.navCtrl.pop();
+    };
+    ServiceDetailsPage.prototype.follow = function () {
+        this.like = !this.like;
+    };
+    ServiceDetailsPage.prototype.showMarque = function () {
+        console.log(this.services[this.serviceId].marqueId);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["a" /* MarqueDetailsPage */], {
+            marqueId: this.services[this.serviceId].marqueId
+        });
+    };
+    ServiceDetailsPage.prototype.toggleGroup = function (group) {
         if (this.isGroupShown(group)) {
             this.shownGroup = null;
         }
@@ -118,33 +132,27 @@ var MarqueDetailsPage = (function () {
         }
     };
     ;
-    MarqueDetailsPage.prototype.isGroupShown = function (group) {
+    ServiceDetailsPage.prototype.isGroupShown = function (group) {
         return this.shownGroup === group;
     };
     ;
-    MarqueDetailsPage.prototype.prev = function () {
-        this.navCtrl.pop();
-    };
-    MarqueDetailsPage.prototype.follow = function () {
-        this.like = !this.like;
-    };
-    MarqueDetailsPage.prototype.ionViewWillEnter = function () {
+    ServiceDetailsPage.prototype.ionViewWillEnter = function () {
         this.tabBarElement.style.display = 'none';
     };
-    MarqueDetailsPage.prototype.ionViewWillLeave = function () {
+    ServiceDetailsPage.prototype.ionViewWillLeave = function () {
         this.tabBarElement.style.display = 'flex';
     };
-    return MarqueDetailsPage;
+    return ServiceDetailsPage;
 }());
-MarqueDetailsPage = __decorate([
+ServiceDetailsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-marque-details',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\marqueDetails\marqueDetails.html"*/'<ion-content *ngIf="services != null && marques != null" padding class="transparent-header">\n\n  <ion-header no-border>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n        <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n    </ion-buttons>\n\n    <ion-title>\n\n\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      \n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n<div class="title-container">\n\n  <div id="profile-bg" [ngStyle]="{\'background-image\': \'url(\' + marques[marqueId].imgSrc +\')\'}"></div>\n\n  <h3 class="profile-title">{{marques[marqueId].title}}</h3>\n\n</div>\n\n<div id="content">\n\n  <div id="profile-info" padding>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col *ngFor="let key of marques[marqueId].keys">\n\n          <h3><b class="white-text">{{key.nb}}</b><br></h3>\n\n          <p class="white-text">{{key.label}}</p>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n    <hr>\n\n    <h3 id="profile-name">{{marques[marqueId].subtitle}}<br><small><I>"{{marques[marqueId].citation}}"</I></small></h3>\n\n    <br>\n\n    <p class="profile-description">{{marques[marqueId].description}}</p>\n\n    <p class="profile-description">{{marques[marqueId].engagement}}</p>\n\n    <hr>\n\n    <br>\n\n    <ion-list>\n\n      <ion-item text-wrap (click)="toggleGroup(0)" [ngClass]="{active: isGroupShown(0)}">\n\n        <button ion-button color="primary" full class="accordion-button">\n\n          <ion-icon item-left name="arrow-forward" *ngIf="!isGroupShown(0)"></ion-icon>\n\n          <ion-icon item-left name="arrow-down" *ngIf="isGroupShown(0)"></ion-icon>\n\n          Nos Métiers de la Propreté\n\n        </button>\n\n        <div *ngIf="isGroupShown(0)" text-center>\n\n          <div *ngFor="let serviceId of marques[marqueId].metiersId">\n\n            <br>\n\n            <h2 class="white-text"><b>{{services[serviceId].title}}</b></h2>\n\n          </div>\n\n          <br>\n\n        </div>\n\n      </ion-item>\n\n    </ion-list>\n\n    <ion-list>\n\n      <ion-item text-wrap (click)="toggleGroup(1)" [ngClass]="{active: isGroupShown(1)}">\n\n        <button ion-button color="primary" class="accordion-button" full>\n\n          <ion-icon item-left name="arrow-forward" *ngIf="!isGroupShown(1)"></ion-icon>\n\n          <ion-icon item-left name="arrow-down" *ngIf="isGroupShown(1)"></ion-icon>\n\n          Nos Atouts de la Propreté\n\n        </button>\n\n        <div *ngIf="isGroupShown(1)" text-center>\n\n          <div *ngFor="let atout of marques[marqueId].atouts">\n\n            <br>\n\n            <h2 class="white-text"><b>{{atout.title}}</b></h2>\n\n            <ul>\n\n              <li class="white-text" *ngFor="let description of atout.description">{{description}}</li>\n\n            </ul>\n\n          </div>\n\n        </div>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n</div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\marqueDetails\marqueDetails.html"*/
+        selector: 'page-service-details',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\serviceDetails\serviceDetails.html"*/'<ion-content *ngIf="services != null && marques != null" padding class="transparent-header">\n\n  <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n          <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n      </ion-buttons>\n\n      <ion-title>\n\n\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        \n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n<div id="profile-bg" [ngStyle]="{\'background-image\': \'url(\' + services[serviceId].coverImage +\')\'}"></div>\n\n<div id="content">\n\n  <div id="profile-info" padding>\n\n    <img id="profile-image" [src]="services[serviceId].profileImage">\n\n    <h3 id="profile-name">{{services[serviceId].title}}</h3>\n\n    <h4 class="white-text" *ngIf="services[serviceId].subtitle">{{services[serviceId].subtitle}}</h4>\n\n    <hr>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col>\n\n          <button ion-button full color="primary" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n        </ion-col>\n\n        <ion-col>\n\n          <button ion-button full color="primary">Demande d\'informations</button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n    <hr>\n\n    <div *ngIf="services[serviceId].subtitle2 != null">\n\n      <h5 class="white-text">{{services[serviceId].subtitle2}}</h5>\n\n      <div *ngFor="let p of services[serviceId].paragraphes">\n\n        <p>{{p}}</p>\n\n      </div>\n\n      <hr>\n\n    </div>\n\n    <div *ngIf="services[serviceId].description != null">\n\n      <div *ngFor="let description of services[serviceId].description">\n\n        <h5 class="white-text" *ngIf="description.title != null">{{description.title}}</h5>\n\n        <div *ngIf="description.paragraphes != null">\n\n          <div *ngFor="let p of description.paragraphes">\n\n            <p >{{p}}</p>\n\n          </div>\n\n        </div>\n\n        <div *ngIf="description.points != null">\n\n          <ul>\n\n            <li class="white-text" *ngFor="let p of description.points">{{p}}</li>\n\n          </ul>\n\n        </div>\n\n        <br>\n\n      </div>\n\n      <hr>\n\n    </div>\n\n    <div *ngIf="services[serviceId].engagement != null">\n\n      <h4 class="white-text">Engagements</h4>\n\n      <p>{{services[serviceId].engagement.title}}</p>\n\n      <ul>\n\n        <li class="white-text" *ngFor="let p of services[serviceId].engagement.points">{{p}}</li>\n\n      </ul>\n\n      <hr>\n\n    </div>\n\n    <div *ngIf="services[serviceId].areas != null">\n\n      <ion-list>\n\n        <ion-item text-wrap (click)="toggleGroup(0)" [ngClass]="{active: isGroupShown(0)}">\n\n          <button ion-button color="primary" full class="accordion-button">\n\n            <ion-icon item-left name="arrow-forward" *ngIf="!isGroupShown(0)"></ion-icon>\n\n            <ion-icon item-left name="arrow-down" *ngIf="isGroupShown(0)"></ion-icon>\n\n            Domaines d\'interventions\n\n          </button>\n\n          <div *ngIf="isGroupShown(0)" text-center>\n\n            <ul>\n\n              <li class="white-text" *ngFor="let area of services[serviceId].areas">\n\n                {{area}}\n\n              </li>\n\n            </ul>\n\n            <p class="white-text" *ngIf="services[serviceId].areasQual != null">{{services[serviceId].areasQual}}</p>\n\n            <br>\n\n          </div>\n\n        </ion-item>\n\n      </ion-list>\n\n    </div>\n\n    <div *ngIf="services[serviceId].sectors != null">\n\n      <ion-list>\n\n        <ion-item text-wrap (click)="toggleGroup(1)" [ngClass]="{active: isGroupShown(1)}">\n\n          <button ion-button color="primary" full class="accordion-button">\n\n            <ion-icon item-left name="arrow-forward" *ngIf="!isGroupShown(1)"></ion-icon>\n\n            <ion-icon item-left name="arrow-down" *ngIf="isGroupShown(1)"></ion-icon>\n\n            Domaines d\'activités\n\n          </button>\n\n          <div *ngIf="isGroupShown(1)" text-center>\n\n            <div *ngFor="let sector of services[serviceId].sectors">\n\n              <br>\n\n              <h5 class="white-text">{{sector.title}}</h5>\n\n              <p class="white-text" *ngIf="sector.subtitle != null">{{sector.subtitle}}</p>\n\n              <p class="white-text" *ngIf="sector.description != null">{{sector.description}}</p>\n\n              <ul>\n\n                <li class="white-text" *ngFor="let p of sector.points">{{p}}</li>\n\n              </ul>\n\n            </div>\n\n          </div>\n\n        </ion-item>\n\n      </ion-list>\n\n    </div>\n\n    <div *ngIf="services[serviceId].serviceDetails != null">\n\n      <ion-list>\n\n        <ion-item text-wrap (click)="toggleGroup(2)" [ngClass]="{active: isGroupShown(2)}">\n\n          <button ion-button color="primary" full class="accordion-button">\n\n            <ion-icon item-left name="arrow-forward" *ngIf="!isGroupShown(2)"></ion-icon>\n\n            <ion-icon item-left name="arrow-down" *ngIf="isGroupShown(2)"></ion-icon>\n\n            Notre gamme de services\n\n          </button>\n\n          <div *ngIf="isGroupShown(2)" text-center>\n\n            <p class="white-text">{{services[serviceId].serviceDetails.description}}</p>\n\n            <ul>\n\n              <li class="white-text" *ngFor="let p of services[serviceId].serviceDetails.points">{{p}}</li>\n\n            </ul>\n\n          </div>\n\n        </ion-item>\n\n      </ion-list>\n\n    </div>\n\n\n\n\n\n    <!-- <p> &bull; {{services.location}}</p>\n\n    <p class="profile-description">{{service.description}}</p>\n\n    <button ion-button (click)="seeMarque()">Voir la marque</button>\n\n    <button ion-button *ngIf="!like" small color="purple" (click)="follow()">Je n\'aime plus</button>\n\n    <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J\'aime <ion-icon name="checkmark"></ion-icon></button> -->\n\n  </div>\n\n</div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\serviceDetails\serviceDetails.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]])
-], MarqueDetailsPage);
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
+], ServiceDetailsPage);
 
-//# sourceMappingURL=marqueDetails.js.map
+//# sourceMappingURL=serviceDetails.js.map
 
 /***/ })
 
