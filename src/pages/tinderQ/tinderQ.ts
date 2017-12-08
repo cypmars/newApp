@@ -114,7 +114,7 @@ export class TinderQPage {
   }
   // Called whenever we drag an element
   onItemMove(element, x, y, r) {
-    var elmt = element.children[0].children[0].children[0].children[0].children[0];
+    var elmt = element.children[0].children[0].children[0].children[0].children[0].children[0];
     var color = '';
     var abs = Math.abs(x);
     let min = Math.trunc(Math.min(16*16 - abs, 16*16));
@@ -166,13 +166,13 @@ export class TinderQPage {
     if (document.getElementsByClassName('card')[0] != null)
     {
       var behindCard = document.getElementsByClassName('card')[0];
-      if (document.getElementsByClassName('card')[1].children[0] != null){
-        var behindElmt = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[2];
-        var behindImg = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[1];
+      if (document.getElementsByClassName('card')[0].children[0] != null){
+        var behindElmt = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[0].children[2];
+        var behindImg = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[0].children[1];
       }
-      if (document.getElementsByClassName('card')[1].children[0] != null){
-        var behindButtonYes = document.getElementsByClassName('card')[0].children[1].children[0].children[0];
-        var behindButtonNo = document.getElementsByClassName('card')[0].children[1].children[1].children[0];
+      if (document.getElementsByClassName('card')[0].children[0] != null){
+        var behindButtonYes = document.getElementsByClassName('card')[0].children[0].children[1].children[0].children[0];
+        var behindButtonNo = document.getElementsByClassName('card')[0].children[0].children[1].children[1].children[0];
       }
     }
     if (this.currentNode[this.currentQId + 1] != null)
