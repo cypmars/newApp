@@ -136,15 +136,15 @@ export class TinderQPage {
    
   // Connected through HTML
   voteUp(like: boolean) {
-    if (this.currentNode.length == this.currentQId + 3)
-    {
-      var lastCard = document.getElementsByClassName('card')[0];
-      lastCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
-    }
-    if (this.currentNode.length == this.currentQId + 2){
-      var lastCard = document.getElementsByClassName('card')[0];
-      lastCard.setAttribute("style", "display:none");
-    }
+    // if (this.currentNode.length == this.currentQId + 3)
+    // {
+    //   var lastCard = document.getElementsByClassName('card')[0];
+    //   lastCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
+    // }
+    // if (this.currentNode.length == this.currentQId + 2){
+    //   var lastCard = document.getElementsByClassName('card')[0];
+    //   lastCard.setAttribute("style", "display:none");
+    // }
     this.getNextNode(like);
     let removedCard = this.cards.pop();
     if (this.currentNode[this.currentQId] != null)
@@ -163,16 +163,16 @@ export class TinderQPage {
       this.cards.pop();
       this.cards.pop();
     }
-    if (document.getElementsByClassName('card')[1] != null)
+    if (document.getElementsByClassName('card')[0] != null)
     {
-      var behindCard = document.getElementsByClassName('card')[1];
+      var behindCard = document.getElementsByClassName('card')[0];
       if (document.getElementsByClassName('card')[1].children[0] != null){
-        var behindElmt = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[2];
-        var behindImg = document.getElementsByClassName('card')[1].children[0].children[0].children[0].children[0].children[1];
+        var behindElmt = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[2];
+        var behindImg = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[1];
       }
-      if (document.getElementsByClassName('card')[1].children[1] != null){
-        var behindButtonYes = document.getElementsByClassName('card')[1].children[1].children[0].children[0];
-        var behindButtonNo = document.getElementsByClassName('card')[1].children[1].children[1].children[0];
+      if (document.getElementsByClassName('card')[1].children[0] != null){
+        var behindButtonYes = document.getElementsByClassName('card')[0].children[1].children[0].children[0];
+        var behindButtonNo = document.getElementsByClassName('card')[0].children[1].children[1].children[0];
       }
     }
     if (this.currentNode[this.currentQId + 1] != null)
@@ -290,13 +290,11 @@ export class TinderQPage {
       case 6:
         break;
     }
-    console.log(this.currentNode);
     // Either subscribe in controller or set in HTML
 
     this.swingStack.throwin.subscribe((event: DragEvent) => {
     });
-    this.cards = [{email: ''}];
-    this.addNewCards(this.currentNode[this.currentQId + 1], this.currentQId + 1);
+    this.cards = [this.currentNode[this.currentQId + 1]];
     this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
 
     console.log(this.navCtrl.getPrevious().id) ;
@@ -312,8 +310,7 @@ export class TinderQPage {
       this.currentQId = 0;
       this.swingStack.throwin.subscribe((event: DragEvent) => {
       });
-      this.cards = [{email: ''}];
-      this.addNewCards(this.currentNode[this.currentQId + 1], this.currentQId + 1);
+      this.cards = [this.currentNode[this.currentQId + 1]];
       this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
     }
   }
