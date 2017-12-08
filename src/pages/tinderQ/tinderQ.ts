@@ -39,7 +39,6 @@ export class TinderQPage {
   public param2: number;
   public param3: string;
   public param4: string;
-  public param5: Array<string>;
   public resultsTemp: Array<number>;
 
   cards: Array<any>;

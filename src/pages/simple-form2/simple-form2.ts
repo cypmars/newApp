@@ -89,7 +89,7 @@ export class SimpleForm2Page {
 
   public chooseService(event, data, fab: FabContainer){
     this.myIcon = this.itemsCat[this.param2].jobsName[data];
-    this.navCtrl.push('TinderQ2Page', {
+    this.navCtrl.push('TinderQPage', {
       param1: this.param1,
       param2: this.param2,
       param3: this.param3,
