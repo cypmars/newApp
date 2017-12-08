@@ -27837,6 +27837,34 @@ page-tinderQ #card-stack {
   margin-top: 0px;
 }
 
+page-tinderQ2 .content-md, page-tinderQ2 .content-ios {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+}
+
+page-tinderQ2 #card-stack {
+  width: 90%;
+  height: 200px;
+  background: #047915;
+  border: 10px solid #4cb338;
+  margin: 100px auto 0;
+  position: relative;
+}
+
+page-tinderQ2 #card-stack ion-card {
+  border-radius: 5px;
+  position: absolute;
+  text-align: center;
+  top: 3%;
+  height: 90%;
+}
+
 page-welcome ion-content {
   background: #b2284e;
   /* For browsers that do not support gradients */

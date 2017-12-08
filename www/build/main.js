@@ -1,4 +1,4 @@
-webpackJsonp([13],{
+webpackJsonp([14],{
 
 /***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -6,8 +6,8 @@ webpackJsonp([13],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(57);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68,19 +68,19 @@ webpackEmptyAsyncContext.id = 115;
 var map = {
 	"../pages/chat/chat.module": [
 		287,
-		10
+		11
 	],
 	"../pages/chat2/chat2.module": [
 		288,
-		11
+		12
 	],
 	"../pages/marqueDetails/marqueDetails.module": [
 		289,
-		4
+		5
 	],
 	"../pages/news/news.module": [
 		290,
-		9
+		10
 	],
 	"../pages/result/result.module": [
 		291,
@@ -88,35 +88,39 @@ var map = {
 	],
 	"../pages/serviceDetails/serviceDetails.module": [
 		292,
-		3
+		4
 	],
 	"../pages/signup/signup.module": [
 		293,
-		2
+		3
 	],
 	"../pages/simple-form/simple-form.module": [
 		294,
-		6
+		7
 	],
 	"../pages/simple-form1/simple-form1.module": [
 		295,
-		8
+		9
 	],
 	"../pages/simple-form2/simple-form2.module": [
 		296,
-		7
+		8
 	],
 	"../pages/tabs/tabs.module": [
 		297,
-		12
+		13
 	],
 	"../pages/tinderQ/tinderQ.module": [
 		298,
 		1
 	],
-	"../pages/welcome/welcome.module": [
+	"../pages/tinderQ2/tinderQ2.module": [
 		299,
-		5
+		2
+	],
+	"../pages/welcome/welcome.module": [
+		300,
+		6
 	]
 };
 function webpackAsyncContext(req) {
@@ -156,10 +160,10 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_text_to_speech__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_text_to_speech__ = __webpack_require__(227);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_speech_recognition__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(286);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tabs_tabs__ = __webpack_require__(112);
@@ -212,6 +216,7 @@ AppModule = __decorate([
                     { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tinderQ/tinderQ.module#TinderQPageModule', name: 'TinderQPage', segment: 'tinderQ', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tinderQ2/tinderQ2.module#TinderQPageModule', name: 'TinderQ2Page', segment: 'tinderQ2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                 ]
             })
@@ -241,7 +246,7 @@ AppModule = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(112);
@@ -341,7 +346,7 @@ MyApp = __decorate([
 
 /***/ }),
 
-/***/ 55:
+/***/ 57:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -351,6 +356,7 @@ MyApp = __decorate([
 /* unused harmony export SimpleForm1Page */
 /* unused harmony export SimpleForm2Page */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return TinderQPage; });
+/* unused harmony export TinderQ2Page */
 /* unused harmony export ChatBubble */
 /* unused harmony export ChatPage */
 /* unused harmony export Chat2Page */
@@ -369,6 +375,7 @@ var SimpleFormPage = 'SimpleFormPage';
 var SimpleForm1Page = 'SimpleForm1Page';
 var SimpleForm2Page = 'SimpleForm2Page';
 var TinderQPage = 'TinderQPage';
+var TinderQ2Page = 'TinderQ2Page';
 var ChatBubble = 'ChatBubble';
 var ChatPage = 'ChatPage';
 var Chat2Page = 'Chat2Page';
