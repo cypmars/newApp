@@ -27859,10 +27859,19 @@ page-tinderQ2 #card-stack {
 
 page-tinderQ2 #card-stack ion-card {
   border-radius: 5px;
+  background: #ffffff;
   position: absolute;
   text-align: center;
   top: 3%;
   height: 90%;
+}
+
+page-tinderQ2 ion-card ion-card-content {
+  background: #ffffff;
+}
+
+page-tinderQ2 ion-card ion-row {
+  background: #ffffff;
 }
 
 page-welcome ion-content {

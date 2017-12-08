@@ -56,11 +56,10 @@ export class TinderQ2Page {
   ngAfterViewInit() {
     // Either subscribe in controller or set in HTML
     this.swingStack.throwin.subscribe((event: DragEvent) => {
-      
+      event.target.style.background = '#ffffff';
     });
-    
-    this.cards = [{email: ''}];
-    this.addNewCards(1);
+    this.cards= [];
+    this.addNewCards(2);
   }
 
   onItemMove(element, x, y, r) {
