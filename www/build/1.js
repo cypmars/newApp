@@ -17152,6 +17152,7 @@ var TinderQPage = (function () {
     // Called whenever we drag an element
     TinderQPage.prototype.onItemMove = function (element, x, y, r) {
         var elmt = element.children[0].children[0].children[0].children[0].children[0].children[0];
+        this.cards[1] = this.currentNode[this.currentQId];
         var color = '';
         var abs = Math.abs(x);
         var min = Math.trunc(Math.min(16 * 16 - abs, 16 * 16));
