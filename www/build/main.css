@@ -26893,7 +26893,7 @@ page-service-details #profile-bg {
 page-service-details #content {
   position: relative;
   margin-top: 150px;
-  padding-top: 200px;
+  height: 100%;
   text-align: center;
 }
 
@@ -26903,11 +26903,10 @@ page-service-details #profile-image {
   width: auto;
   height: 100px;
   width: 100px;
-  margin: 0 auto 0;
+  margin: -80px auto 0;
 }
 
 page-service-details #profile-info {
-  position: absolute;
   top: -95px;
   width: 100%;
   z-index: 2;
@@ -26915,7 +26914,7 @@ page-service-details #profile-info {
 }
 
 page-service-details #profile-name {
-  color: #ffffff;
+  margin-top: 25px;
   font-size: 26px;
 }
 
@@ -26979,6 +26978,10 @@ page-service-details .list-md, page-service-details .list_ios, page-service-deta
 page-service-details .list-ios > .item-block:last-child, page-service-details .list-ios > .item-block:first-child {
   border-top: 0;
   border-bottom: 0;
+}
+
+page-service-details ion-card {
+  height: auto;
 }
 
 page-signup .splash-bg {
@@ -27298,23 +27301,25 @@ page-simple-form ion-fab[top] {
 }
 
 page-simple-form .fab {
-  font-size: 8px;
+  font-size: 12px;
   line-height: 10px;
   white-space: normal;
+  height: 75px;
+  width: 75px;
 }
 
 page-simple-form .fab-md-in-list {
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
-  height: 55px;
-  width: 55px;
+  height: 75px;
+  width: 75px;
 }
 
 page-simple-form .fab-ios-in-list {
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
-  height: 55px;
-  width: 55px;
+  height: 75px;
+  width: 75px;
 }
 
 page-simple-form .list-ios .item-block .item-inner {

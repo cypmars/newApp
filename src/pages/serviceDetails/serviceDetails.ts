@@ -22,6 +22,7 @@ export class ServiceDetailsPage {
   serviceId;
   services: any[];
   marques:any[];
+  products:any[];
 
   // The account fields for the login form.
   // If you're using the username field with or without email, make
@@ -50,6 +51,11 @@ export class ServiceDetailsPage {
     let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
     brandData.subscribe(data => {
       this.marques = data;
+    });
+
+    let productData = http.get('assets/data/products.json').map(res => res.json().products);
+    productData.subscribe(data => {
+      this.products = data;
     });
 
   }

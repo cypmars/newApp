@@ -1,0 +1,696 @@
+{
+    "products": [
+      {
+        "idService":"0",
+        "title":"Onet Blue Quality",
+        "subtitle":"Une application dédiée au suivi des prestations",
+        "imgSrc": "assets/img/products/Onet-Blue-Quality_product_image.jpg",
+        "parts":[
+          {
+            "title":"Votre besoin",
+            "description": [
+              "Pour l’ensemble des prestations réalisées par Onet Propreté et Services, vous attendez :"
+            ],
+            "besoins":[
+                "Un suivi efficace de vos prestations,",
+                "Des indicateurs de qualité, pertinents et adaptés à votre site,",
+                "Une transmission en toute transparence des données collectées en temps réel. "
+            ]
+          },
+          {
+            "title":"Notre solution",
+            "imgSrc":"assets/img/products/Onet-Blue-Quality.jpg",
+            "parts":[
+                "A destination de nos managers terrain, Onet Propreté et Services a développé l’application Android® Onet Blue Quality. ",
+                "Cette application garantit le suivi des prestations et facilite les échanges avec le client. Utilisée quotidiennement par nos chefs de sites et responsables de secteurs, elle est disponible sur tablette numérique.",
+                "Véritable bureau mobile connecté en 4G et en wifi, elle permet aussi l’accès aux outils bureautiques Onet : messagerie, gestion de tâches, agenda..."
+            ]
+          },
+          {
+            "title":"Points remarquables",
+            "point_remarquable":[
+                "+ de disponibilité de votre interlocuteur sur site",
+                "+ de réactivité face à vos demandes","+ de traçabilité des actions et reporting",
+                "- de papier pour un développement + responsable "
+            ]
+          },
+          {
+            "title":"Fonctionnement",
+            "description": [
+              "Pour garantir des actions concrètes et rapides à nos clients, l’application est pourvue de plusieurs fonctionnalités :"
+            ],
+            "fonctionnalite":[
+              {
+                "name":"Formulaires de contrôles, rapports de visite, rapports d’intervention, bons de travaux…",
+                "children":[
+                  {"name":"adaptés aux topologies de vos sites"},
+                  {"name":"illustrés par des photos terrain "}
+                ]
+              },
+              {"name":"Planification et gestion des interventions"},
+              {"name":"Contrôles contradictoires avec approbation client"},
+              {"name":"Consolidation des données, analyse et reporting"},
+              {"name":"Transmission des rapports par mail en temps réel "}
+            ],
+            "imgSrc":"assets/img/products/Onet-Blue-Quality-Fonctionnement_full_page_width.jpg"
+          },
+          {
+            "title":"Fiche Onet Blue Quality",
+            "fileSrc":"assets/img/products/Onet_Blue_Quality.pdf"
+          },
+          {
+            "title":"Contact Onet Propreté et Services",
+            "imgSrc":"assets/img/products/onet-proprete-et-services_medium.jpg",
+            "contact":{
+              "adress":"36, boulevard de l'océan 13009 Marseille -France",
+              "tel":"04 91 22 23 21",
+              "website":"http://www.onet-propreteetservices.com",
+              "info":"ONET SA - RCS B 059 801 324 Marseille"
+            }
+          }
+        ]
+      },
+      {
+        "idService":"0",
+        "title":"Hello d'Onet : La propreté signée",
+        "imgSrc": "assets/img/products/Hello-d-Onet-La-proprete-signee_product_image.jpg",
+        "parts":[
+          {
+            "title":"votre besoins",
+            "besoins":[
+                "Maximisez la satisfaction de vos clients.",
+                "Participez au bien-être de vos collaborateurs."
+            ],
+            "imgSrc":"assets/img/products/hellod-onet_full_page_width.jpg"
+          },
+          {
+            "title": "Le saviez-vous ?",
+            "description": [
+              "Il existe des liens puissants entre la propreté visuelle, l’odeur et le sentiment de propreté qui impact lui-même très significativement la sensation de confort et la satisfaction des utilisateurs."
+            ]
+          },
+          {
+            "title":"Hello d'Onet",
+            "description":[
+                "Onet Propreté et Services propose sa fragrance Hello d’Onet afin de signer le travail de ses agents par une odeur de propre, fraîche et légère, sans allergène et non-intrusive.","Composé d’essences naturelles, Hello d’Onet s’adapte à votre environnement.",
+                "Cette solution permet de renforcer le sentiment de propreté qui émane  de vos sites."
+            ]
+          },
+          {
+            "title":"Points remarquables Hello d'Onet",
+            "partsT":[
+              {
+                "title":"Une odeur de propre non intrusive plutôt qu’un parfum :",
+                "parts":[
+                    "Nourrir le sentiment de propre de manière inconsciente, sans parfumer la pièce. La fraîcheur nourrit le sentiment de propre.",
+                    "Offrir une fragrance légère pour ne pas être intrusive auprès des utilisateurs.","La senteur est non permanente pour que l’utilisateur éprouve ce sentiment de propre sans s’y habituer et ne plus la sentir.",
+                    "Nous avons collaboré avec une entreprise innovante spécialiste de l’odorisation d’espaces publics."
+                ]
+              },
+              {
+                "title":"Des objectifs précis pour augmenter la satisfaction des utilisateurs :",
+                "parts":[
+                    "Faire vivre une expérience olfactive stimulante, positive, de confort et de bien-être aux occupants.",
+                    "Valoriser le métier de la propreté par une traçabilité olfactive de la prestation.","Offrir un environnement de travail sain et sûr; avec des fragrances sans allergènes, ni produits de synthèse mais composées d’essences naturelles."
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Des notes soigneusement choisies",
+            "imgSrc":"assets/img/products/composition-Hello-d-onet_full_page_width.jpg"
+          },
+          {
+            "title":"La Gamme",
+            "description": [
+              "Hello d’Onet comprend à la fois des supports non mécaniques (embouts de cintres parfumés, billes parfumées pour aspirateurs …) et des diffuseurs actifs : du traditionnel spray multi surfaces à la sophistiquée borne PLV, qui permet de bénéficier à la fois des bienfaits d’Hello d’Onet et d’un gain de visibilité, découvrez une gamme complète et efficace."
+            ],
+            "examples":[
+              {
+                "title":"Bureaux – Zones d’accueil - Petits espaces :",
+                "imgSrc":"assets/img/products/hellodonet-gamme-1_large.jpg"
+              },
+              {
+                "title":"Sanitaires et lieux à forte affluence (métro, hôpitaux…) :",
+                "imgSrc":"assets/img/products/hellodonet-gamme-2_large.jpg"
+              },
+              {
+                "title":"Hôtellerie :",
+                "imgSrc":"assets/img/products/hellodonet-gamme-3_large.jpg"
+              }
+            ]
+          },
+          {
+            "title":"Téléchargement de la fiche produit Hello d'Onet",
+            "fileSrc":"assets/img/products/Fiche produit - HELLO.pdf"
+          },
+          {
+            "title":"Contact Onet Propreté et Services",
+            "imgSrc":"assets/img/products/onet-proprete-et-services_medium.jpg",
+            "contact":{
+              "adress":"36, boulevard de l'océan 13009 Marseille -France",
+              "tel":"04 91 22 23 21",
+              "website":"http://www.onet-propreteetservices.com",
+              "info":"ONET SA - RCS B 059 801 324 Marseille"
+            }
+          }
+        ]
+      },
+      {
+        "idService":"0",
+        "title":"La solution Sanitaires Connectés",
+        "subtitle":"Un service coût/qualité optimisé",
+        "imgSrc":"assets/img/products/La-solution-Sanitaires-Connectes_product_image.jpg",
+        "parts":[
+            {
+              "title":"Votre besoin",
+              "description": [
+                "La propreté de vos sanitaires, un lieu sensible pour l’image de votre entreprise, requière une attention particulière et des outils adaptés pour :"
+              ],
+              "besoins":[
+                  "Bénéficier de sanitaires toujours propres quel que soit le niveau de fréquentation,",
+                  "Garantir la satisfaction de vos usagers,",
+                  "Optimiser les prestations de propreté."
+              ]
+            },
+            {
+              "title":"Notre solution",
+              "parts":[
+                  "La solution sanitaires connectés révolutionne la logique des prestations de nettoyage et contribue à véhiculer une image innovante",
+                  "Installés dans vos sanitaires, des capteurs infrarouges et un boîtier de satisfaction collectent des données permettant de prioriser les actions de nettoyage en fonction du nombre d’utilisateurs et de leur satisfaction.",
+                  "Cette solution contribue à véhiculer une image innovante."
+              ],
+              "video": "https://youtu.be/vwtTcmh4_Dw"
+            },
+            {
+              "title":"Fonctionnement",
+              "parts":[
+                  "Un algorithme combine le comptage et la satisfaction des utilisateurs.",
+                  "Lorsque le seuil critique est atteint le boîtier déclenche automatiquement une alerte.",
+                  "L’agent de service sur site peut alors intervenir immédiatement pour réaliser la prestation."
+              ]
+            },
+            {
+              "title":"Un reporting en temps réel",
+              "descrition":"L’ensemble des données collectées est disponible et consultable sur un extranet depuis un ordinateur, une tablette ou un smartphone.",
+              "points":[{
+                "title":"Vous pouvez suivre, sur la périodicité de votre choix :",
+                "description":[
+                  "Le nombre de visiteurs",
+                  "Le nombre d’interventions",
+                  "La satisfaction des visiteurs",
+                  "Les périodes d’affluence",
+                  "Les heures et nombre d’interventions de nos agents"
+                ]
+              }]
+            },
+            {
+              "title": "Le pack Sanitaires Connectés",
+              "points": [{
+                "description": [
+                  "Audit physique du site avant installation",
+                  "Fourniture de la centrale, de la barrière de comptage, du boitier de satisfaction",
+                  "Accès au site internet de suivi",
+                  "Echange standard en cas de panne",
+                  "Assistance téléphonique"
+                ]
+              }]
+            },
+            {
+              "title": "Et demain ...",
+              "description": [
+                "Innovante, personnalisable et évolutive, cette solution pourra être connectée à d’autres objets sanitaires du quotidien (ex : distributeurs de savon, de papier toilette)."
+              ]
+            },
+            {
+              "title":"Fiche Sanitaires Connectés",
+              "fileSrc":"assets/img/products/onet_sanitaires_connectés/Sanitaires_connectes.pdf"
+            },
+            {
+              "title":"Contact Onet Propreté et Services",
+              "imgSrc":"assets/img/products/onet-proprete-et-services_medium.jpg",
+              "contact":{
+                "adress":"36, boulevard de l'océan 13009 Marseille -France",
+                "tel":"04 91 22 23 21",
+                "website":"http://www.onet-propreteetservices.com",
+                "info":"ONET SA - RCS B 059 801 324 Marseille"
+              }
+            }
+        ]
+      },
+      {
+        "idService":"1",
+        "title":"Centre de formation santé de Valenciennes",
+        "subtitle":"Pour accompagner vos équipes dans leur montée en compétence",
+        "imgSrc":"assets/img/products/formation.jpg",
+        "parts":[
+          {
+            "title": "Votre besoin",
+            "description": [
+              "Les prestations de bionettoyage exigent un savoir-faire spécifique."
+            ],
+            "points": [{
+              "title": "Face à l’évolution des certifications et agréments, votre personnel doit :",
+              "description": [
+                "Acquérir les compétences nécessaires pour intervenir en établissement de santé,",
+                "Maintenir et faire évoluer ces compétences au cours de leur carrière."
+              ]
+            }]
+          },
+          {
+            "title": "Notre solution",
+            "parts":[
+              "Onet a créé un centre de formation santé à proximité du centre hospitalier de Valenciennes.",
+              "Il vise à professionnaliser les personnels intervenant en milieu hospitalier."
+            ]
+          },
+          {
+            "title": "Points remarquables",
+            "points": [{
+              "title": "Une intervenante experte avec 13 années d’expérience dans le secteur",
+              "description": [
+                "Une reproduction à l’identique de l’environnement de travail pour une mise en situation optimale de l’agent",
+                "Un apprentissage des techniques de bionettoyage, gestes et comportements, adaptés au rythme de l’agent",
+                "Une approche pédagogique multi-modale, complétée par un suivi des acquis sur le terrain après la formation",
+                "Une insertion favorisée des agents en milieu professionnel"
+              ]
+            }],
+            "imgSrc": "assets/img/products/formation.jpg"
+          },
+          {
+            "title": "Une offre de formation efficace",
+            "description": [
+              "Dirigé par une cadre hygiéniste-formatrice, ce centre a pour vocation la montée en compétence des agents de bionettoyage à travers un contenu de formation adapté aux bonnes pratiques d'hygiène."
+            ],
+            "paragraphes": [
+              {
+                "title": "THÉMATIQUES DE CONTENU DE LA FORMATION",
+                "points": [
+                  {
+                    "title": "Précautions standards",
+                    "description": [
+                      "Préventions des Infections Associées aux Soins (IAS)",
+                      "Hygiène des mains",
+                      "Tenue professionnelle",
+                      "Equipements de Protection Individuelle (EPI)",
+                      "Prévention des Accidents d’Exposition au Sang (AES)",
+                      "Circuit du linge",
+                      "Circuit des déchets",
+                      "Techniques de bionettoyage"
+                    ]
+                  },
+                  {
+                    "title": "Précautions complémentaires :",
+                    "description": [
+                      "Choix des équipements en fonction du risque identifié"
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "MODES D'APPRENTISSAGE DE LA FORMATION",
+                "objectifs": [
+                  {
+                    "title": "En salle plénière auprès de 10 apprenants au maximum",
+                    "objectif": "comprendre la méthodologie de travail attendue et les risques encourus"
+                  },
+                  {
+                    "title": "En compagnonnage",
+                    "objectif": "accompagner l’agent apprenant sur son lieu d’exercice,observer ses pratiques et les corriger en instantané par des conseils pédagogiques"
+                  },
+                  {
+                    "title": "E-learning dans notre espace collaboratif",
+                    "objectif": "acquérir les fondamentaux du bionettoyage sur un support interactif qui s’adapte au rythme de l’agent"
+                  },
+                  {
+                    "title": "Par mimétisme à partir de vidéos déposées illustrant les gestes métiers étapes par étapes",
+                    "objectif": "Consulter sur tous supports informatiques ces illustrations des gestes métier permettant aussi une auto-formation de l’agent sur le terrain"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Un environnement optimal",
+            "points":[
+              {
+                "title": "Notre centre dispose de tous les équipements nécessaires pour le bon accueil des stagiaires :",
+                "description": [
+                  "Une connexion wifi disponible à tous",
+                  "Un lieu conçu pour faciliter l’échange et la convivialité",
+                  "Un espace détente pour se restaurer",
+                  "Un accès à toutes les commodités du Centre Hospitalier de Valenciennes"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Pour vous y rendre",
+            "description": [
+              "Dans les étages de Cedra park, à deux pas de la station de tram Saint-Waast, venez nous rencontrer :"
+            ],
+            "info": {
+              "name": "Onet Propreté et Services - Centre de formation",
+              "address": "CEDRA PARK 183, Avenue Désandrouin",
+              "cp": "59300 VALENCIENNES"
+            },
+            "transports": [
+              {
+                "moyen": "En bus :",
+                "points":[
+                  "Ligne 1 : Arrêts « Saint Waast »",
+                  "Ligne 2 : Arrêts « Saint Waast »"
+                ]
+              },
+              {
+                "moyen": "En tram :",
+                "points":[
+                  "Tram Ligne T1 - Arrêt « Saint Waast »",
+                  "Tram Ligne T2 - Arrêt « Saint Waast » (correspondance avec la station « Pont Jacob »)"
+                ]
+              },
+              {
+                "moyen": "En voiture :",
+                "description": "Si vous utilisez votre véhicule personnel, l’établissement est accessible :",
+                "points": [
+                  "par l’autoroute A23 en venant de Lille (sortie Valenciennes Nord)",
+                  "par l’autoroute A2 sens Paris-Bruxelles (sortie Valenciennes Ouest)",
+                  "par l’autoroute A2 sens Bruxelles-Paris (sortie Valenciennes Nord)"
+                ],
+                "conclusion": "De nombreuses places de stationnement sont accessibles à proximité du centre de formation."
+              }
+            ]
+          },
+          {
+            "title":"Téléchargement",
+            "fileSrc":"assets/img/products/onet-centre-de-formation-sante-valenciennes.pdf"
+          },
+          {
+            "title":"Contact Centre de Formation",
+            "imgSrc":"assets/img/products/onet-proprete-et-services_medium.jpg",
+            "contact":{
+              "name" : "Onet Propreté et Services - Centre de formation",
+              "adress":"CEDRA PARK 183, Avenue Désandrouin 59300 VALENCIENNES",
+              "tel":"03 27 46 92 06",
+              "website":"http://www.onet-propreteetservices.com",
+              "info":"Didier Mikolajczyk - dmikolajczyk@onet.fr"
+            }
+          }
+        ]
+      },
+      {
+        "idService":"2",
+        "title": "Le nettoyage cryogénique",
+        "subtitle":"Une solution respectueuse de votre support et de l’environnement",
+        "imgSrc":"assets/img/products/cryo1.png",
+        "parts":[
+          {
+            "title": "Nettoyage des supports fragiles, exigus ou électrifiés",
+            "description": [
+              "Dans des milieux d’exploitation très contraints, vos supports fragiles, exigus ou électrifiés, nécessitent une méthode de nettoyage sèche, efficiente et respectueuse de l’environnement."
+            ]
+          },
+          {
+            "title": "Le nettoyage cryogénique",
+            "parts": [
+              "C’est avec la volonté de développer des solutions de propreté et d’entretien toujours plus performantes et adaptées à vos besoins, qu’ Onet Propreté et Services vous propose le nettoyage cryogénique.",
+              "Délicate ou agressive, la pression de nettoyage s’adapte à tous les matériaux des secteurs particulièrement maculés comme l’automobile ou l’agroalimentaire. Cette technique originale et écologique représente un réel intérêt en termes de rentabilité et d’efficacité."
+            ],
+            "imgSrc": "assets/img/products/cryo2.png"
+          },
+          {
+            "title": "Points remarquables du nettoyage cryogénique",
+            "points": [
+              {
+                "description": [
+                  "Principe propre, sans eau, ni solvant, ni produit chimique",
+                  "Rapidité d’exécution du processus,",
+                  "Méthode sèche compatible avec le matériel électrique,",
+                  "Facilité d’accès aux espaces réduits,",
+                  "Respect du matériel par une intensité réglable de la projection,",
+                  "Gaz inerte et non-toxique,",
+                  "Aucun déchet secondaire"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Fonctionnement du nettoyage cryogénique",
+            "description": [
+              "Les pellets de glace carbonique sont projetés par un flux d’air comprimé. L’association du froid intense et du choc mécanique provoque le détachement des souillures. La glace carbonique se sublime instantanément après avoir assuré le nettoyage. Reste un déchet pur et plus facile à traiter."
+            ],
+            "imgSrc": "assets/img/products/cryo3.png"
+          },
+          {
+            "title":"Fiche Le nettoyage cryogénique",
+            "fileSrc":"assets/img/products/onet_sanitaires_connectés/Le_nettoyage_cryogenique.pdf"
+          },
+          {
+            "title":"Contact Onet Propreté et Services",
+            "imgSrc":"assets/img/products/onet-proprete-et-services_medium.jpg",
+            "contact":{
+              "adress":"36, boulevard de l'océan 13009 Marseille -France",
+              "tel":"04 91 22 23 21",
+              "website":"http://www.onet-propreteetservices.com",
+              "info":"ONET SA - RCS B 059 801 324 Marseille"
+            }
+          }
+        ]
+      },
+      {
+        "idService":"2",
+        "title": "Fabrication et vente de glace carbonique",
+        "subtitle":"Une solution pour le maintien de la chaîne du froid",
+        "imgSrc":"assets/img/products/cryo4.jpg",
+        "parts":[
+          {
+            "title": "Maintien au froid dans les milieux contraints",
+            "description": [
+              "Dans les milieux alimentaires, chimiques, voire informatiques, vos produits ou process nécessitent un maintien au froid par une solution efficace sans eau, ni solvant, ni produit chimique."
+            ]
+          },
+          {
+            "title": "Production de pellets de glace carbonique",
+            "parts": [
+              "Au sein de nos agences de Saint-Nazaire et Clermont-Ferrand, nous assurons une production de pellets de glace carbonique de 3 à 16 mm de diamètre.",
+              "A une température de -78,5°C, la glace carbonique appelée aussi glace sèche a un pouvoir frigorifique deux fois supérieur à celui de la glace hydrique tout en ayant un poids et un volume inférieur. La glace sèche est considérée comme une technique respectueuse de l'environnement.",
+              "En passant directement de l’état solide à l’état gazeux, la glace carbonique ne passe par une phase liquide qui n’altère donc pas vos produits et emballages."
+            ],
+            "remarque": "Le saviez-vous : 1 kg de glace carbonique est capable de congeler 10 litres d’eau à -15°C."
+          },
+          {
+            "title": "Les avantages de la glace carbonique",
+            "points":[
+              {
+                "description": [
+                  "Non-toxique,",
+                  "Inerte",
+                  "Incolore",
+                  "Indolore",
+                  "Neutre au goût pour les aliments à proximité",
+                  "Sans résidu,",
+                  "Tarifs compétitifs."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Fonctionnement"
+          },
+          {
+            "title": "Application avec les pellets de glace carbonique",
+            "points": [
+              {
+                "description": [
+                  "Conservation et transport dans l’industrie agroalimentaire ou de produits médico-pharmaceutiques,",
+                  "Transport d’aliments frais sans moyens mécanique,",
+                  "Inertage des cuves et contrôle de la fermentation dans la viticulture,",
+                  "Haute cuisine d’avant-garde (cuisine moléculaire),",
+                  "Production de fumée pour le divertissement,",
+                  "Elimination des nuisibles,",
+                  "Nettoyage et gommage cryogénique."
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Fiche Fabrication et vente de glace carbonique",
+            "fileSrc":"assets/img/products/onet_sanitaires_connectés/Fabrication_vente_glace_carbonique.pdf"
+          },
+          {
+            "title":"Contact Onet Propreté et Services",
+            "imgSrc":"assets/img/products/onet-proprete-et-services_medium.jpg",
+            "contact":{
+              "adress":"36, boulevard de l'océan 13009 Marseille -France",
+              "tel":"04 91 22 23 21",
+              "website":"http://www.onet-propreteetservices.com",
+              "info":"ONET SA - RCS B 059 801 324 Marseille"
+            }
+          }
+        ]
+      },
+      {
+        "idService":"2",
+        "title": "Le gommage cryogénique",
+        "subtitle":"Une alternative aux techniques de sablage",
+        "imgSrc":"assets/img/products/gommage_cryo.jpg",
+        "parts":[
+          {
+            "title": "Une solution de décapage puissante mais respectueuse des supports",
+            "description": "Particulièrement exposés aux pollutions fortement adhérentes ou la rouille profonde,  les milieux d’exploitation très contraints nécessitent une solution de décapage puissante mais respectueuse des  supports."
+          },
+          {
+            "title": "Le gommage cryogénique",
+            "description": "Combinant l’avantage du nettoyage cryogénique et du sablage, le gommage cryogénique s’adapte à tous les matériaux des secteurs particulièrement maculés comme l’automobile, ou le secteur nautique. Cette technique originale et écologique représente un réel intérêt en termes de rentabilité et d’efficacité."
+          },
+          {
+            "title": "Points remarquables",
+            "points": [
+              {
+                "description": [
+                  "Rapidité et homogénéité du process",
+                  "Décapage proche du sablage, tout en divisant jusqu’à 20 fois l’apport d’abrasif,",
+                  "Diminution notable des déchets secondaires,",
+                  "Méthode sèche compatible avec le matériel électrique,",
+                  "Facilité d’accès aux espaces réduits,",
+                  "Principe propre, sans eau, ni solvant, ni produit chimique,",
+                  "Gaz inerte et non-toxique."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Fonctionnement",
+            "parts": [
+              "Les pellets de glace carbonique combinés à un granulat organique ou minéral sont projetés par un flux d’air comprimé. L’association du froid intense et du choc mécanique provoque le décapage des surfaces. La glace carbonique se sublime instantanément après avoir assuré le nettoyage.",
+              "Reste un déchet pur ainsi qu’un volume limité de granulats plus facile à traiter."
+            ],
+            "imgSrc": "assets/img/products/gommage_cryo2.jpg"
+          },
+          {
+            "title": "Application du gommage cryogénique",
+            "points":[
+              {
+                "description": [
+                  "Rénovation et décapage des pièces mécaniques,",
+                  "Rénovation et décapage des coques de bateaux,",
+                  "Nettoyage et restauration de bâtiments,",
+                  "Préparation des surfaces et traitement des soudures avant peinture,",
+                  "Dérouillage, décapage de peinture ou graffiti,",
+                  "Décapage avec refroidissements pour éviter les déformations thermiques."
+                ]
+              }
+            ],
+            "imgSrc": "assets/img/products/gommage_cryo3.jpg"
+          },
+          {
+            "title":"Fiche Le gommage cryogénique",
+            "fileSrc":"assets/img/products/Le_gommage_cryogenique.pdf"
+          },
+          {
+            "title":"Contact Onet Propreté et Services",
+            "imgSrc":"assets/img/products/onet-proprete-et-services_medium.jpg",
+            "contact":{
+              "adress":"36, boulevard de l'océan 13009 Marseille -France",
+              "tel":"04 91 22 23 21",
+              "website":"http://www.onet-propreteetservices.com",
+              "info":"ONET SA - RCS B 059 801 324 Marseille"
+            }
+          }
+        ]
+      },
+      {
+        "idService":"5",
+        "title": "Le pilotage de la filière déchets avec Green Flow",
+        "imgSrc":"assets/img/products/green_flow.jpg",
+        "parts":[
+          {
+            "title": "Valoriser les déchets",
+            "description": [
+              "Les sites de nos clients ont besoin d’une solution globale pour un système de valorisation des déchets performant."
+            ],
+            "points": [
+              {
+                "title": "Cette solution doit permettre :",
+                "description": [
+                  "La traçabilité",
+                  "Le reporting",
+                  "L'optimisation de l'organisation interne"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Solution de pilotage de la filière déchets d’un site",
+            "parts":[
+              "La solution GREEN FLOW est une application connectée permettant le pilotage de la filière déchets d’un site par les équipes Onet Propreté et Services.",
+              "L’utilisation de terminaux mobiles, de capteurs de niveaux, de bascules de pesée bluetooth ou encore de puces NFC permet la remontée d’informations terrain vers l’application qui synthétise toutes ces données afin de faciliter le suivi de la filière déchets.",
+              "L’utilisateur dispose d’indicateurs détaillés pour chaque étape du process de gestion des déchets permettant un réel suivi et contrôle de la filière déchets."
+            ]
+          },
+          {
+            "title": "Points remarquables de Green Flow",
+            "points": [
+              {
+                "description": [
+                  "Notre agent est le pilote et l’unique interlocuteur de l’activité déchets pour le compte du client.",
+                  "Notre agent assure la gestion des flux internes de déchets mais assure également le suivi de l’évacuation de ces flux vers les filières de valorisations agréées.",
+                  "Pour un suivi en temps réel, notre agent dispose d’un terminal mobile connecté permettant la remontée d’informations terrain afin d’alerter le chef de site et ainsi anticiper les actions correctives et préventives : la réactivité des agents est ainsi optimisée.",
+                  "La planification des tâches est réalisée automatiquement en fonction de l’évolution de la vie du site, l’agent répond à un besoin et agit en véritable partenaire du client."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Fonctionnement de Green Flow",
+            "imgSrc": "assets/img/products/green_flow2.jpg",
+            "description": [
+              "Les équipes d’exploitation d’Onet Propreté et Services assurent de façon automatisée la gestion des expéditions, le suivi administratif ou encore le reporting d’exploitation ou environnemental. La traçabilité est ainsi maîtrisée sur l’ensemble de cette chaîne de valeur."
+            ],
+            "points": [
+              {
+                "title": "Traçabilité",
+                "description": [
+                  "Suivi des flux internes : poids / volume des déchets collectés par catégorie de déchets /occupant / zone de production",
+                  "Suivi des performances de tri",
+                  "Suivi des évacuations : demandes d’enlèvements automatiques par mail et/ou sms, élaboration automatique du Bordereau de suivi de Déchets"
+                ]
+              },
+              {
+                "title": "Reporting",
+                "description": [
+                  "Rapport d’exploitation mensuel et annuel",
+                  "Rapport environnemental",
+                  "Rapport d’anomalies",
+                  "Registre réglementaire déchets",
+                  "Rapports disponibles sur une interface dédiée au client"
+                ]
+              },
+              {
+                "title": "Optimisation de l’organisation interne",
+                "description": [
+                  "Remontée des anomalies terrain pour la réalisation d’un plan d’actions ",
+                  "Localisation des conteneurs sur un plan masse du site et suivi du taux de remplissage pour une évacuation à la demande",
+                  "Organisation automatique de la collecte en fonction du taux de remplissage et de la localisation des conteneurs"
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Fiche produit Greenflow",
+            "fileSrc":"assets/img/products/Fiche_produit.pdf"
+          },
+          {
+            "title":"Contact Onet Propreté et Services",
+            "imgSrc":"assets/img/products/onet-proprete-et-services_medium.jpg",
+            "contact":{
+              "adress":"36, boulevard de l'océan 13009 Marseille -France",
+              "tel":"04 91 22 23 21",
+              "website":"http://www.onet-propreteetservices.com",
+              "info":"ONET SA - RCS B 059 801 324 Marseille"
+            }
+          }
+        ]
+      }
+    ]
+  }

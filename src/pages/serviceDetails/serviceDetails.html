@@ -1,4 +1,4 @@
-<ion-content *ngIf="services != null && marques != null" padding class="transparent-header">
+<ion-content *ngIf="services != null && marques != null && products != null" padding class="transparent-header">
   <ion-header no-border>
     <ion-navbar color="primary" hideBackButton="true">
       <ion-buttons start>
@@ -14,8 +14,12 @@
   </ion-header>
 <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + services[serviceId].coverImage +')'}"></div>
 <div id="content">
+  <ion-card>
+    <ion-card-content>
   <div id="profile-info" padding>
-    <img id="profile-image" [src]="services[serviceId].profileImage">
+    <div style="position: absolute; left:35%; right:35%; z-index: 1000">
+        <img id="profile-image" [src]="services[serviceId].profileImage">
+    </div>
     <h3 id="profile-name">{{services[serviceId].title}}</h3>
     <h4 class="white-text" *ngIf="services[serviceId].subtitle">{{services[serviceId].subtitle}}</h4>
     <hr>
@@ -30,16 +34,20 @@
       </ion-row>
     </ion-grid>
     <hr>
+    <br>
     <div *ngIf="services[serviceId].subtitle2 != null">
-      <h5 class="white-text">{{services[serviceId].subtitle2}}</h5>
+      <h5>{{services[serviceId].subtitle2}}</h5>
+      <br>
       <div *ngFor="let p of services[serviceId].paragraphes">
         <p>{{p}}</p>
+        <br>
       </div>
       <hr>
     </div>
     <div *ngIf="services[serviceId].description != null">
       <div *ngFor="let description of services[serviceId].description">
-        <h5 class="white-text" *ngIf="description.title != null">{{description.title}}</h5>
+        <h5 *ngIf="description.title != null">{{description.title}}</h5>
+        <br>
         <div *ngIf="description.paragraphes != null">
           <div *ngFor="let p of description.paragraphes">
             <p >{{p}}</p>
@@ -47,21 +55,33 @@
         </div>
         <div *ngIf="description.points != null">
           <ul>
-            <li class="white-text" *ngFor="let p of description.points">{{p}}</li>
+            <li *ngFor="let p of description.points">{{p}}</li>
           </ul>
         </div>
+        <br>
         <br>
       </div>
       <hr>
     </div>
     <div *ngIf="services[serviceId].engagement != null">
-      <h4 class="white-text">Engagements</h4>
+      <h3>Engagements</h3>
       <p>{{services[serviceId].engagement.title}}</p>
       <ul>
-        <li class="white-text" *ngFor="let p of services[serviceId].engagement.points">{{p}}</li>
+        <li *ngFor="let p of services[serviceId].engagement.points">{{p}}</li>
       </ul>
       <hr>
     </div>
+    <h5 *ngIf="services[serviceId].productsId != null">Produits relatifs</h5>
+    <div *ngIf="services[serviceId].productsId != null" style="position: relative; height: 200px">
+      <ion-slides pager>
+        <ion-slide *ngFor="let index of services[serviceId].productsId">
+          <img [src]="products[index].imgSrc" style="height: 100%">
+          <h3 style="position: absolute; top: 35%; width: 100%; text-shadow: 2px 2px #000000;">{{products[index].title}}</h3>
+        </ion-slide>
+      </ion-slides>
+      <hr>
+    </div>
+    <br>
     <div *ngIf="services[serviceId].areas != null">
       <ion-list>
         <ion-item text-wrap (click)="toggleGroup(0)" [ngClass]="{active: isGroupShown(0)}">
@@ -71,12 +91,15 @@
             Domaines d'interventions
           </button>
           <div *ngIf="isGroupShown(0)" text-center>
-            <ul>
-              <li class="white-text" *ngFor="let area of services[serviceId].areas">
-                {{area}}
-              </li>
-            </ul>
-            <p class="white-text" *ngIf="services[serviceId].areasQual != null">{{services[serviceId].areasQual}}</p>
+            <div *ngFor="let area of services[serviceId].areas">
+              <h5 *ngIf= "area.title != null">{{area.title}}</h5>
+              <ul>
+                  <li *ngFor="let p of area.points">
+                    {{p}}
+                  </li>
+                </ul>
+            </div>
+            <p *ngIf="services[serviceId].areasQual != null">{{services[serviceId].areasQual}}</p>
             <br>
           </div>
         </ion-item>
@@ -93,11 +116,11 @@
           <div *ngIf="isGroupShown(1)" text-center>
             <div *ngFor="let sector of services[serviceId].sectors">
               <br>
-              <h5 class="white-text">{{sector.title}}</h5>
-              <p class="white-text" *ngIf="sector.subtitle != null">{{sector.subtitle}}</p>
-              <p class="white-text" *ngIf="sector.description != null">{{sector.description}}</p>
+              <h5>{{sector.title}}</h5>
+              <p *ngIf="sector.subtitle != null">{{sector.subtitle}}</p>
+              <p *ngIf="sector.description != null">{{sector.description}}</p>
               <ul>
-                <li class="white-text" *ngFor="let p of sector.points">{{p}}</li>
+                <li *ngFor="let p of sector.points">{{p}}</li>
               </ul>
             </div>
           </div>
@@ -120,7 +143,9 @@
           </div>
         </ion-item>
       </ion-list>
+      <hr>
     </div>
+
 
 
     <!-- <p> &bull; {{services.location}}</p>
@@ -129,5 +154,7 @@
     <button ion-button *ngIf="!like" small color="purple" (click)="follow()">Je n'aime plus</button>
     <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J'aime <ion-icon name="checkmark"></ion-icon></button> -->
   </div>
+</ion-card-content>
+</ion-card>
 </div>
 </ion-content>

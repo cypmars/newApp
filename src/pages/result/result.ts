@@ -36,8 +36,9 @@ export class ResultPage implements OnInit, OnDestroy{
   public param1: string;
   public param2: number;
   public param3: string;
-  public param4: string;
-  public param5: [number];
+  public param4: number;
+  public param5: string;
+  public param6: [number];
 
   public visNetwork: string = 'networkId1';
   public visNetworkData: ExampleNetworkData;
@@ -62,6 +63,7 @@ export class ResultPage implements OnInit, OnDestroy{
     this.param3 = navParams.get('param3');
     this.param4 = navParams.get('param4');
     this.param5 = navParams.get('param5');
+    this.param6 = navParams.get('param6');
   }
 
   public addNode(node): void {
@@ -72,7 +74,7 @@ export class ResultPage implements OnInit, OnDestroy{
   public networkInitialized(): void {
         if (this.firstT)
         {
-          for (let resultId of this.param5)
+          for (let resultId of this.param6)
           {
             const visService = {
               id: resultId,

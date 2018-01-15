@@ -17075,50 +17075,79 @@ var TinderQ2Page = (function () {
         this.navParams = navParams;
         this.recentCard = '';
         this.showButton = true;
-        this.agroQuestions = [
+        this.questions = [
             {
                 id: 0,
                 name: "Surface recevant du public",
-                question: "Possedez-vous une surface commerciale ou magasin ?",
-                img: "assets/img/boutique-fruits.jpg",
+                question: "Possédez-vous une surface commerciale ou magasin ?",
+                img: "assets/img/questions/boutique-fruits.jpg",
                 // + hygiene et prop classique + Gestion des déchets - secteur industriel
-                servicesIdIfYes: [0, 1, 2]
+                servicesIdIfYes: [0, 1, 2, 3, 4, 5]
+                // servicesIdIfYes: [0, 5, 6, 19]
             },
             {
                 id: 1,
-                name: "Clients en situation d'handicap",
-                question: "Désirez-vous accompagner vos clients en situation d'handicap ?",
-                img: "assets/img/handicap.jpg",
-                servicesIdIfYes: []
+                name: "Surface recevant du public",
+                question: "Possédez-vous des bureaux ou sièges sociaux ?",
+                img: "",
+                servicesIdIfYes: [0, 5, 6, 8, 17]
             },
             {
                 id: 2,
-                name: "Usine ou zone de fabrication",
-                question: "Possedez-vous une usine ou zone de fabrication ?",
-                img: "assets/img/usine-boissons.jpg",
-                servicesIdIfYes: []
+                name: "Clients en situation d'handicap",
+                question: "Désirez-vous accompagner vos clients en situation d'handicap ?",
+                img: "assets/img/questions/handicap.jpg",
+                servicesIdIfYes: [20]
             },
             {
                 id: 3,
-                name: "Sécurité",
-                question: "Désirez-vous voir nos services relatifs à la sécurité ?",
-                img: "assets/img/securite-q.jpg",
-                servicesIdIfYes: []
+                name: "Usine ou zone de fabrication",
+                question: "Possedez-vous une usine ou zone de fabrication ?",
+                img: "assets/img/usine-boissons.jpg",
+                servicesIdIfYes: [1, 2, 3, 5, 7]
             },
             {
                 id: 4,
-                name: "Service logistique",
-                question: "Seriez-vous interessés par une optimisation de votre système logistique et manutention ?",
-                img: "assets/img/logistique.jpg",
-                servicesIdIfYes: []
+                name: "Sécurité",
+                question: "Désirez-vous voir nos services relatifs à la sécurité ?",
+                img: "assets/img/questions/securite-q.jpg",
+                servicesIdIfYes: [9, 10, 11, 12, 13]
             },
             {
                 id: 5,
+                name: "Service logistique",
+                question: "Seriez-vous interessés par une optimisation de votre système logistique et manutention ?",
+                img: "assets/img/logistique.jpg",
+                servicesIdIfYes: [21, 22, 23, 24]
+            },
+            {
+                id: 6,
                 name: "Recrutement",
                 question: "Pensez-vous à recruter ?",
                 img: "assets/img/recrutement.jpg",
-                servicesIdIfYes: []
-            }
+                servicesIdIfYes: [39, 40, 41]
+            },
+            {
+                id: 7,
+                name: "Evenement",
+                question: "Pensez-vous à organiser des évenements ?",
+                img: "",
+                servicesIdIfYes: [18]
+            },
+            {
+                id: 8,
+                name: "Technologies",
+                question: "Voulez-vous voir nos solutions pour le traitement de déchets radioactif ?",
+                img: "",
+                servicesIdIfYes: [28, 34, 35, 36, 37]
+            },
+            {
+                id: 9,
+                name: "Surface recevant du public",
+                question: "Possédez-vous un cabinet médical ?",
+                img: "",
+                servicesIdIfYes: [0, 5, 6, 8, 17]
+            },
         ];
         this.stackConfig = {
             throwOutConfidence: function (offsetX, offsetY, element) {
@@ -17135,10 +17164,12 @@ var TinderQ2Page = (function () {
         this.param2 = navParams.get('param2');
         this.param3 = navParams.get('param3');
         this.param4 = navParams.get('param4');
+        this.param5 = navParams.get('param5');
         console.log("param1: " + this.param1);
         console.log("param2: " + this.param2);
         console.log("param3: " + this.param3);
         console.log("param4: " + this.param4);
+        console.log("param5: " + this.param5);
         this.resultsTemp = new Array();
     }
     TinderQ2Page.prototype.getNextNode = function (like) {
@@ -17187,12 +17218,14 @@ var TinderQ2Page = (function () {
             this.cards.push(this.currentNode[this.currentQId]);
         }
         else {
+            console.log(this.resultsTemp);
             this.navCtrl.push('ResultPage', {
                 param1: this.param1,
                 param2: this.param2,
                 param3: this.param3,
                 param4: this.param4,
-                param5: this.resultsTemp
+                param5: this.param5,
+                param6: this.resultsTemp
             });
             this.resultsTemp = [];
             this.cards.pop();
@@ -17218,26 +17251,347 @@ var TinderQ2Page = (function () {
         this.navCtrl.pop();
     };
     TinderQ2Page.prototype.ngAfterViewInit = function () {
+        this.myQuestions = new Array();
         switch (this.param2) {
             // id = 0, secteur: Agroalimentaire
             case 0:
-                this.currentNode = this.agroQuestions;
+                this.myQuestions.push(this.questions[0]);
+                this.myQuestions.push(this.questions[2]);
+                this.myQuestions.push(this.questions[3]);
+                this.myQuestions.push(this.questions[4]);
+                this.myQuestions.push(this.questions[6]);
+                this.myQuestions.push(this.questions[7]);
+                switch (this.param4) {
+                    // Boucherie
+                    case 0:
+                        break;
+                    // Poissonnerie
+                    case 1:
+                        break;
+                    // Boulangerie / patisserie
+                    case 2:
+                        break;
+                    // Fruits et légumes
+                    case 3:
+                        break;
+                    // Produits laitiers
+                    case 4:
+                        break;
+                    // Grains / Produits amylacés
+                    case 5:
+                        break;
+                    // Huiles / Graisses végétales ou animales
+                    case 6:
+                        break;
+                    // Boissons
+                    case 7:
+                        break;
+                }
+                ;
+                this.currentNode = this.myQuestions;
                 this.currentQId = 0;
                 break;
-            // id = 0, secteur: Industrie  
+            // id = 1, secteur: Industrie  
             case 1:
+                this.myQuestions.push(this.questions[1]);
+                this.myQuestions.push(this.questions[4]);
+                this.myQuestions.push(this.questions[5]);
+                this.myQuestions.push(this.questions[6]);
+                this.resultsTemp.push(1);
+                this.resultsTemp.push(2);
+                this.resultsTemp.push(3);
+                this.resultsTemp.push(5);
+                this.resultsTemp.push(7);
+                this.resultsTemp.push(38);
+                switch (this.param4) {
+                    // Pharmaceutique
+                    case 0:
+                        this.resultsTemp.push(34);
+                        break;
+                    // Textile
+                    case 1:
+                        break;
+                    // Chimique
+                    case 2:
+                        this.resultsTemp.push(34);
+                        break;
+                    // Construction
+                    case 3:
+                        break;
+                    // Bâtiment
+                    case 4:
+                        this.resultsTemp.push(25);
+                        break;
+                    // Automobile
+                    case 5:
+                        break;
+                    // Aéronautique
+                    case 6:
+                        break;
+                    // Lourde
+                    case 7:
+                        this.resultsTemp.push(34);
+                        break;
+                }
+                ;
+                this.currentNode = this.myQuestions;
+                this.currentQId = 0;
                 break;
+            // id = 2, secteur: Energie
             case 2:
+                this.myQuestions.push(this.questions[1]);
+                this.myQuestions.push(this.questions[3]);
+                this.myQuestions.push(this.questions[4]);
+                this.myQuestions.push(this.questions[5]);
+                this.myQuestions.push(this.questions[6]);
+                this.resultsTemp.push(1);
+                this.resultsTemp.push(2);
+                this.resultsTemp.push(3);
+                this.resultsTemp.push(5);
+                this.resultsTemp.push(7);
+                this.resultsTemp.push(8);
+                switch (this.param4) {
+                    // Nucléaire
+                    case 0:
+                        this.myQuestions.push(this.questions[8]);
+                        this.resultsTemp.push(25);
+                        this.resultsTemp.push(26);
+                        this.resultsTemp.push(27);
+                        this.resultsTemp.push(30);
+                        this.resultsTemp.push(31);
+                        this.resultsTemp.push(32);
+                        this.resultsTemp.push(33);
+                        break;
+                    // Eolien
+                    case 1:
+                        break;
+                    // Solaire
+                    case 2:
+                        break;
+                    // Hydrolique
+                    case 3:
+                        break;
+                    // Pétrolier
+                    case 4:
+                        break;
+                    //
+                    case 5:
+                        break;
+                    //
+                    case 6:
+                        break;
+                    // Autre
+                    case 7:
+                        break;
+                }
+                ;
+                this.currentNode = this.myQuestions;
+                this.currentQId = 0;
                 break;
+            // id = 3, secteur: Commerce & Tourisme
             case 3:
+                this.myQuestions.push(4);
+                this.myQuestions.push(5);
+                this.myQuestions.push(6);
+                this.myQuestions.push(7);
+                this.myQuestions.push(2);
+                this.resultsTemp.push(0);
+                this.resultsTemp.push(5);
+                this.resultsTemp.push(6);
+                this.resultsTemp.push(8);
+                this.resultsTemp.push(19);
+                switch (this.param4) {
+                    // Grand Commerce
+                    case 0:
+                        break;
+                    // Petit Commerce
+                    case 1:
+                        break;
+                    // Artisanat
+                    case 2:
+                        break;
+                    // Hôtellerie
+                    case 3:
+                        break;
+                    // Restauration
+                    case 4:
+                        break;
+                    // Autre
+                    case 5:
+                        break;
+                    //
+                    case 6:
+                        break;
+                    //
+                    case 7:
+                        break;
+                }
+                ;
+                this.currentNode = this.myQuestions;
+                this.currentQId = 0;
                 break;
+            // id = 4, secteur: Transports et logistique
             case 4:
+                this.myQuestions.push(this.questions[1]);
+                this.myQuestions.push(this.questions[4]);
+                this.myQuestions.push(this.questions[6]);
+                this.resultsTemp.push(1);
+                this.resultsTemp.push(2);
+                this.resultsTemp.push(4);
+                this.resultsTemp.push(8);
+                this.resultsTemp.push(21);
+                this.resultsTemp.push(22);
+                switch (this.param4) {
+                    // Aéronautique
+                    case 0:
+                        this.resultsTemp.push(14);
+                        this.resultsTemp.push(15);
+                        this.resultsTemp.push(16);
+                        break;
+                    // Ferroviaire
+                    case 1:
+                        this.resultsTemp.push(24);
+                        break;
+                    // Urbain
+                    case 2:
+                        this.resultsTemp.push(23);
+                        break;
+                    // Maritime
+                    case 3:
+                        break;
+                    // Astronautique
+                    case 4:
+                        break;
+                    // Distribution
+                    case 5:
+                        break;
+                    // Gestion & pilotage
+                    case 6:
+                        break;
+                    // Autre
+                    case 7:
+                        break;
+                }
+                ;
+                this.currentNode = this.myQuestions;
+                this.currentQId = 0;
                 break;
+            // id = 5, secteur: Télécoms & Informatique
             case 5:
+                this.myQuestions.push(this.questions[1]);
+                this.myQuestions.push(this.questions[2]);
+                this.myQuestions.push(this.questions[4]);
+                this.myQuestions.push(this.questions[6]);
+                this.myQuestions.push(this.questions[7]);
+                switch (this.param4) {
+                    // Systèmes d'information
+                    case 0:
+                        break;
+                    // Robotique
+                    case 1:
+                        break;
+                    // Technologies
+                    case 2:
+                        break;
+                    // Recherches
+                    case 3:
+                        break;
+                    // Autre
+                    case 4:
+                        break;
+                    //
+                    case 5:
+                        break;
+                    //
+                    case 6:
+                        break;
+                    //
+                    case 7:
+                        break;
+                }
+                ;
+                this.currentNode = this.myQuestions;
+                this.currentQId = 0;
                 break;
+            // id = 6, secteur: Santé et services
             case 6:
+                this.myQuestions.push(this.questions[9]);
+                this.myQuestions.push(this.questions[2]);
+                this.myQuestions.push(this.questions[4]);
+                this.myQuestions.push(this.questions[5]);
+                this.myQuestions.push(this.questions[6]);
+                this.resultsTemp.push(8);
+                switch (this.param4) {
+                    // Médecine
+                    case 0:
+                        break;
+                    // Pharmaceutique
+                    case 1:
+                        break;
+                    // Aide à la personne
+                    case 2:
+                        break;
+                    // Gardiennage
+                    case 3:
+                        break;
+                    // Recherche
+                    case 4:
+                        break;
+                    // Autre
+                    case 5:
+                        break;
+                    //
+                    case 6:
+                        break;
+                    //
+                    case 7:
+                        break;
+                }
+                ;
+                this.currentNode = this.myQuestions;
+                this.currentQId = 0;
+                break;
+            // id = 7, secteur: Economie
+            case 7:
+                this.myQuestions.push(this.questions[1]);
+                this.myQuestions.push(this.questions[2]);
+                this.myQuestions.push(this.questions[4]);
+                this.myQuestions.push(this.questions[6]);
+                this.resultsTemp.push(8);
+                this.resultsTemp.push(17);
+                switch (this.param4) {
+                    // Banque
+                    case 0:
+                        break;
+                    // Finance
+                    case 1:
+                        break;
+                    // Assurance
+                    case 2:
+                        break;
+                    // Audit
+                    case 3:
+                        break;
+                    // Conseil
+                    case 4:
+                        break;
+                    // Autre
+                    case 5:
+                        break;
+                    //
+                    case 6:
+                        break;
+                    //
+                    case 7:
+                        break;
+                }
+                ;
+                this.currentNode = this.myQuestions;
+                this.currentQId = 0;
                 break;
         }
+        console.log(this.myQuestions);
+        console.log(this.resultsTemp);
         // Either subscribe in controller or set in HTML
         this.swingStack.throwin.subscribe(function (event) {
         });
@@ -17250,7 +17604,7 @@ var TinderQ2Page = (function () {
     };
     TinderQ2Page.prototype.ionViewDidLeave = function () {
         if (!(this.navCtrl.getActive().component.name == "WelcomePage")) {
-            this.currentNode = this.agroQuestions;
+            this.currentNode = this.myQuestions;
             this.currentQId = 0;
             this.swingStack.throwin.subscribe(function (event) {
             });
@@ -17265,20 +17619,19 @@ var TinderQ2Page = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('myswing1'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"])
 ], TinderQ2Page.prototype, "swingStack", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChildren"])('mycards1'),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"]) === "function" && _b || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"])
 ], TinderQ2Page.prototype, "swingCards", void 0);
 TinderQ2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-tinderQ2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ2\tinderQ2.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button *ngIf="showButton" ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      <ion-card-content>\n\n                          <ion-item *ngIf="c.question">\n\n                              <div id="validate-or-not" class="validate-or-not"></div>\n\n                              <img *ngIf="c.img" [src]="c.img">\n\n                              <h1 class="relative-pos" style="font-weight: 900">{{ c.question }}</h1>\n\n                          </ion-item>\n\n                     \n\n                          <ion-row *ngIf="c.name">\n\n                            <ion-col>\n\n                              <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                                  <ion-icon name="checkmark-circle"></ion-icon>\n\n                                  YES\n\n                              </button>\n\n                            </ion-col>\n\n                            <ion-col>\n\n                              <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                                <ion-icon name="close-circle"></ion-icon>\n\n                                NO\n\n                              </button>\n\n                            </ion-col>\n\n                          </ion-row>\n\n                        \n\n                      </ion-card-content>\n\n                    </ion-card>\n\n                  </div>\n\n              </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ2\tinderQ2.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], TinderQ2Page);
 
-var _a, _b, _c, _d, _e;
 //# sourceMappingURL=tinderQ2.js.map
 
 /***/ })

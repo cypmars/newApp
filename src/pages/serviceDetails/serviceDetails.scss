@@ -125,7 +125,7 @@ page-service-details {
   #content {
     position: relative;
     margin-top: 150px;
-    padding-top: 200px;
+    height: 100%;
     text-align: center;
   }
   #profile-image {
@@ -134,17 +134,16 @@ page-service-details {
     width: auto;
     height: 100px;
     width: 100px;
-    margin: 0 auto 0;
+    margin: -80px auto 0;
   }
   #profile-info {
-    position: absolute;
     top: -95px;
     width: 100%;
     z-index: 2;
     text-align: center;
   }
   #profile-name {
-    color: #ffffff;
+    margin-top: 25px;
     font-size: 26px;
   }
   .profile-description {
@@ -205,5 +204,9 @@ page-service-details {
   .list-ios > .item-block:last-child, .list-ios > .item-block:first-child{
     border-top: 0;
     border-bottom: 0;
+  }
+
+  ion-card{
+    height: auto;
   }
 }

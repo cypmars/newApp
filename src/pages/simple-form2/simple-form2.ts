@@ -26,6 +26,7 @@ export class SimpleForm2Page {
   public param3: string;
   
   public myIcon: string;
+  public myIconId: number;
 
   account: { email: string, password: string } = {
     email: '@ e-mail ou pseudo',
@@ -89,11 +90,13 @@ export class SimpleForm2Page {
 
   public chooseService(event, data, fab: FabContainer){
     this.myIcon = this.itemsCat[this.param2].jobsName[data];
+    this.myIconId = data;
     this.navCtrl.push('TinderQ2Page', {
       param1: this.param1,
       param2: this.param2,
       param3: this.param3,
-      param4: this.myIcon
+      param4: this.myIconId,
+      param5: this.myIcon
     });
   }
 }

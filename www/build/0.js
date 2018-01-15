@@ -1,5 +1,5 @@
-webpackJsonp([0],Array(292).concat([
-/* 292 */
+webpackJsonp([0],Array(290).concat([
+/* 290 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__result__ = __webpack_require__(618);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__result__ = __webpack_require__(616);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_vis__ = __webpack_require__(610);
@@ -50,6 +50,8 @@ ResultPageModule = __decorate([
 //# sourceMappingURL=result.module.js.map
 
 /***/ }),
+/* 291 */,
+/* 292 */,
 /* 293 */,
 /* 294 */,
 /* 295 */,
@@ -79192,9 +79194,7 @@ __export(__webpack_require__(339));
 /* 613 */,
 /* 614 */,
 /* 615 */,
-/* 616 */,
-/* 617 */,
-/* 618 */
+/* 616 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -79250,6 +79250,7 @@ var ResultPage = (function () {
         this.param3 = navParams.get('param3');
         this.param4 = navParams.get('param4');
         this.param5 = navParams.get('param5');
+        this.param6 = navParams.get('param6');
     }
     ResultPage.prototype.addNode = function (node) {
         var newId = this.visNetworkData.nodes.getLength() + 1;
@@ -79258,7 +79259,7 @@ var ResultPage = (function () {
     ResultPage.prototype.networkInitialized = function () {
         var _this = this;
         if (this.firstT) {
-            for (var _i = 0, _a = this.param5; _i < _a.length; _i++) {
+            for (var _i = 0, _a = this.param6; _i < _a.length; _i++) {
                 var resultId = _a[_i];
                 var visService = {
                     id: resultId,
