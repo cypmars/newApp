@@ -17089,7 +17089,7 @@ var TinderQ2Page = (function () {
                 id: 1,
                 name: "Surface recevant du public",
                 question: "Possédez-vous des bureaux ou sièges sociaux ?",
-                img: "",
+                img: "assets/img/questions/bureau.jpg",
                 servicesIdIfYes: [0, 5, 6, 8, 17]
             },
             {
@@ -17103,7 +17103,7 @@ var TinderQ2Page = (function () {
                 id: 3,
                 name: "Usine ou zone de fabrication",
                 question: "Possedez-vous une usine ou zone de fabrication ?",
-                img: "assets/img/usine-boissons.jpg",
+                img: "assets/img/questions/usine-boissons.jpg",
                 servicesIdIfYes: [1, 2, 3, 5, 7]
             },
             {
@@ -17117,35 +17117,35 @@ var TinderQ2Page = (function () {
                 id: 5,
                 name: "Service logistique",
                 question: "Seriez-vous interessés par une optimisation de votre système logistique et manutention ?",
-                img: "assets/img/logistique.jpg",
+                img: "assets/img/questions/logistique.jpg",
                 servicesIdIfYes: [21, 22, 23, 24]
             },
             {
                 id: 6,
                 name: "Recrutement",
                 question: "Pensez-vous à recruter ?",
-                img: "assets/img/recrutement.jpg",
+                img: "assets/img/questions/recrutement.jpg",
                 servicesIdIfYes: [39, 40, 41]
             },
             {
                 id: 7,
                 name: "Evenement",
                 question: "Pensez-vous à organiser des évenements ?",
-                img: "",
+                img: "assets/img/questions/evenement.jpg",
                 servicesIdIfYes: [18]
             },
             {
                 id: 8,
                 name: "Technologies",
                 question: "Voulez-vous voir nos solutions pour le traitement de déchets radioactif ?",
-                img: "",
+                img: "assets/img/questions/technologies.jpg",
                 servicesIdIfYes: [28, 34, 35, 36, 37]
             },
             {
                 id: 9,
                 name: "Surface recevant du public",
                 question: "Possédez-vous un cabinet médical ?",
-                img: "",
+                img: "assets/img/questions/cabinet.jpg",
                 servicesIdIfYes: [0, 5, 6, 8, 17]
             },
         ];
@@ -17339,9 +17339,9 @@ var TinderQ2Page = (function () {
                 break;
             // id = 2, secteur: Energie
             case 2:
-                this.myQuestions.push(this.questions[1]);
                 this.myQuestions.push(this.questions[3]);
                 this.myQuestions.push(this.questions[4]);
+                this.myQuestions.push(this.questions[1]);
                 this.myQuestions.push(this.questions[5]);
                 this.myQuestions.push(this.questions[6]);
                 this.resultsTemp.push(1);
@@ -17390,11 +17390,11 @@ var TinderQ2Page = (function () {
                 break;
             // id = 3, secteur: Commerce & Tourisme
             case 3:
-                this.myQuestions.push(4);
-                this.myQuestions.push(5);
-                this.myQuestions.push(6);
-                this.myQuestions.push(7);
-                this.myQuestions.push(2);
+                this.myQuestions.push(this.questions[4]);
+                this.myQuestions.push(this.questions[5]);
+                this.myQuestions.push(this.questions[6]);
+                this.myQuestions.push(this.questions[7]);
+                this.myQuestions.push(this.questions[2]);
                 this.resultsTemp.push(0);
                 this.resultsTemp.push(5);
                 this.resultsTemp.push(6);
@@ -17478,10 +17478,10 @@ var TinderQ2Page = (function () {
                 break;
             // id = 5, secteur: Télécoms & Informatique
             case 5:
-                this.myQuestions.push(this.questions[1]);
+                this.myQuestions.push(this.questions[6]);
                 this.myQuestions.push(this.questions[2]);
                 this.myQuestions.push(this.questions[4]);
-                this.myQuestions.push(this.questions[6]);
+                this.myQuestions.push(this.questions[1]);
                 this.myQuestions.push(this.questions[7]);
                 switch (this.param4) {
                     // Systèmes d'information

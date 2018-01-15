@@ -121,7 +121,17 @@ export class ResultPage implements OnInit, OnDestroy{
         interaction:{
           multiselect: true
         },
-        nodes: {borderWidth:0 ,shape:"circle", color:{background:'#F92C55', border: 'transparent', highlight:{ background:'#F92C55', border: '#F92C55'}},font:{color:'#fff'}},
+        nodes: {
+          borderWidth:0 ,
+          shape:"circle", 
+          color:{
+            background:'#F92C55', 
+            border: 'transparent', 
+            highlight:{ background:'#F92C55', border: '#F92C55'}
+          },
+          font:{color:'#fff'},
+
+        },
         physics: {
           stabilization: false,
           minVelocity:  0.01,

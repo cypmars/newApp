@@ -38,44 +38,23 @@ page-simple-form {
     width:20px;
   }
 
-  ion-fab-list[side=top-left]{
-    margin: -70px 62px;
-    right: 0;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+  ion-fab-list[side=top]{
+    margin: 90px 0px;
+    bottom: 0;
   }
 
-  ion-fab-list[side=bottom-left]{
-    margin: 55px 62px;
-    right: 0;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+  ion-fab-list[side=right]{
+    margin: 0px 90px;
+    left: 0;
   }
 
-  ion-fab-list[side=top-right]{
-    margin: -70px -62px;
+  ion-fab-list[side=left]{
+    margin: 0px 90px;
     right: 0;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
   }
 
-  ion-fab-list[side=bottom-right]{
-    margin: 55px -62px;
-    right: 0;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+  .fab-close-active .fab-close-icon{
+    margin-top: 10px;
   }
 
   .larger{
