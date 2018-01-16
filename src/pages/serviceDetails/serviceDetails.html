@@ -1,5 +1,4 @@
-<ion-content *ngIf="services != null && marques != null && products != null" class="transparent-header">
-  <ion-header no-border>
+  <ion-header no-border class="transparent-header">
     <ion-navbar color="primary" hideBackButton="true">
       <ion-buttons start>
           <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> 
@@ -12,6 +11,7 @@
       </ion-buttons>
     </ion-navbar>
   </ion-header>
+<ion-content *ngIf="services != null && marques != null && products != null">
 <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + services[serviceId].coverImage +')'}"></div>
 <div id="content">
   <ion-card>
