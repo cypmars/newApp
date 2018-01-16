@@ -26757,6 +26757,10 @@ page-result .all {
   height: 100%;
 }
 
+page-service-details {
+  top: 20px !important;
+}
+
 page-service-details ion-content {
   background: #b2284e;
   /* For browsers that do not support gradients */
