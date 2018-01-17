@@ -8,17 +8,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__result__ = __webpack_require__(617);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__result__ = __webpack_require__(618);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_vis__ = __webpack_require__(610);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_vis__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic2_auto_complete__ = __webpack_require__(621);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_CompleteTestService__ = __webpack_require__(613);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_vis__ = __webpack_require__(610);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ng2_vis__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -38,8 +42,12 @@ ResultPageModule = __decorate([
         imports: [
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingModule"],
-            __WEBPACK_IMPORTED_MODULE_5_ng2_vis__["VisModule"],
+            __WEBPACK_IMPORTED_MODULE_7_ng2_vis__["VisModule"],
+            __WEBPACK_IMPORTED_MODULE_5_ionic2_auto_complete__["a" /* AutoCompleteModule */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__result__["a" /* ResultPage */])
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_6__providers_CompleteTestService__["a" /* CompleteTestService */]
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_3__result__["a" /* ResultPage */]
@@ -584,7 +592,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subject_1 = __webpack_require__(32);
-var queue_1 = __webpack_require__(323);
+var queue_1 = __webpack_require__(322);
 var Subscription_1 = __webpack_require__(33);
 var observeOn_1 = __webpack_require__(313);
 var ObjectUnsubscribedError_1 = __webpack_require__(209);
@@ -1605,162 +1613,10 @@ Observable_1.Observable.prototype.map = map_1.map;
 
 "use strict";
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-var Vis = __webpack_require__(606);
-var VisTimelineItems = (function (_super) {
-    __extends(VisTimelineItems, _super);
-    function VisTimelineItems(data, options) {
-        return _super.call(this, data, options) || this;
-    }
-    VisTimelineItems.prototype.getLength = function () {
-        return this.length;
-    };
-    VisTimelineItems.prototype.add = function (data, senderId) {
-        return _super.prototype.add.call(this, data, senderId);
-    };
-    VisTimelineItems.prototype.clear = function (senderId) {
-        return _super.prototype.clear.call(this, senderId);
-    };
-    VisTimelineItems.prototype.distinct = function (field) {
-        return _super.prototype.distinct.call(this, field);
-    };
-    VisTimelineItems.prototype.flush = function () {
-        _super.prototype.flush.call(this);
-    };
-    VisTimelineItems.prototype.forEach = function (callback, options) {
-        _super.prototype.forEach.call(this, callback, options);
-    };
-    VisTimelineItems.prototype.getAll = function (options) {
-        return _super.prototype.get.call(this, options);
-    };
-    VisTimelineItems.prototype.getById = function (id, options) {
-        return _super.prototype.get.call(this, id, options);
-    };
-    VisTimelineItems.prototype.getByIds = function (ids, options) {
-        return _super.prototype.get.call(this, ids, options);
-    };
-    VisTimelineItems.prototype.getDataSet = function () {
-        return _super.prototype.getDataSet.call(this);
-    };
-    VisTimelineItems.prototype.getIds = function (options) {
-        return _super.prototype.getIds.call(this, options);
-    };
-    VisTimelineItems.prototype.map = function (callback, options) {
-        return _super.prototype.map.call(this, callback, options);
-    };
-    VisTimelineItems.prototype.max = function (field) {
-        return _super.prototype.max.call(this, field);
-    };
-    VisTimelineItems.prototype.min = function (field) {
-        return _super.prototype.min.call(this, field);
-    };
-    VisTimelineItems.prototype.on = function (event, callback) {
-        _super.prototype.on.call(this, event, callback);
-    };
-    VisTimelineItems.prototype.off = function (event, callback) {
-        _super.prototype.off.call(this, event, callback);
-    };
-    VisTimelineItems.prototype.removeItems = function (ids, senderId) {
-        return _super.prototype.remove.call(this, ids, senderId);
-    };
-    VisTimelineItems.prototype.setOptions = function (options) {
-        _super.prototype.setOptions.call(this, options);
-    };
-    VisTimelineItems.prototype.update = function (data, senderId) {
-        return _super.prototype.update.call(this, data, senderId);
-    };
-    return VisTimelineItems;
-}(Vis.DataSet));
-exports.VisTimelineItems = VisTimelineItems;
-var VisTimelineGroups = (function (_super) {
-    __extends(VisTimelineGroups, _super);
-    function VisTimelineGroups(data, options) {
-        return _super.call(this, data, options) || this;
-    }
-    VisTimelineGroups.prototype.getLength = function () {
-        return this.length;
-    };
-    VisTimelineGroups.prototype.add = function (data, senderId) {
-        return _super.prototype.add.call(this, data, senderId);
-    };
-    VisTimelineGroups.prototype.clear = function (senderId) {
-        return _super.prototype.clear.call(this, senderId);
-    };
-    VisTimelineGroups.prototype.distinct = function (field) {
-        return _super.prototype.distinct.call(this, field);
-    };
-    VisTimelineGroups.prototype.flush = function () {
-        _super.prototype.flush.call(this);
-    };
-    VisTimelineGroups.prototype.forEach = function (callback, options) {
-        _super.prototype.forEach.call(this, callback, options);
-    };
-    VisTimelineGroups.prototype.getAll = function (options) {
-        return _super.prototype.get.call(this, options);
-    };
-    VisTimelineGroups.prototype.getById = function (id, options) {
-        return _super.prototype.get.call(this, id, options);
-    };
-    VisTimelineGroups.prototype.getByIds = function (ids, options) {
-        return _super.prototype.get.call(this, ids, options);
-    };
-    VisTimelineGroups.prototype.getDataSet = function () {
-        return _super.prototype.getDataSet.call(this);
-    };
-    VisTimelineGroups.prototype.getIds = function (options) {
-        return _super.prototype.getIds.call(this, options);
-    };
-    VisTimelineGroups.prototype.map = function (callback, options) {
-        return _super.prototype.map.call(this, callback, options);
-    };
-    VisTimelineGroups.prototype.max = function (field) {
-        return _super.prototype.max.call(this, field);
-    };
-    VisTimelineGroups.prototype.min = function (field) {
-        return _super.prototype.min.call(this, field);
-    };
-    VisTimelineGroups.prototype.on = function (event, callback) {
-        _super.prototype.on.call(this, event, callback);
-    };
-    VisTimelineGroups.prototype.off = function (event, callback) {
-        _super.prototype.off.call(this, event, callback);
-    };
-    VisTimelineGroups.prototype.removeItems = function (ids, senderId) {
-        return _super.prototype.remove.call(this, ids, senderId);
-    };
-    VisTimelineGroups.prototype.setOptions = function (options) {
-        _super.prototype.setOptions.call(this, options);
-    };
-    VisTimelineGroups.prototype.update = function (data, senderId) {
-        return _super.prototype.update.call(this, data, senderId);
-    };
-    return VisTimelineGroups;
-}(Vis.DataSet));
-exports.VisTimelineGroups = VisTimelineGroups;
-var VisTimeline = (function (_super) {
-    __extends(VisTimeline, _super);
-    function VisTimeline() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return VisTimeline;
-}(Vis.Timeline));
-exports.VisTimeline = VisTimeline;
-__export(__webpack_require__(608));
-__export(__webpack_require__(611));
-
+/* tslint:disable:no-empty */
+function noop() { }
+exports.noop = noop;
+//# sourceMappingURL=noop.js.map
 
 /***/ }),
 /* 318 */
@@ -2013,17 +1869,6 @@ exports.RaceSubscriber = RaceSubscriber;
 
 "use strict";
 
-/* tslint:disable:no-empty */
-function noop() { }
-exports.noop = noop;
-//# sourceMappingURL=noop.js.map
-
-/***/ }),
-/* 321 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -2162,7 +2007,7 @@ var OnErrorResumeNextSubscriber = (function (_super) {
 //# sourceMappingURL=onErrorResumeNext.js.map
 
 /***/ }),
-/* 322 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2583,7 +2428,7 @@ exports.AjaxTimeoutError = AjaxTimeoutError;
 //# sourceMappingURL=AjaxObservable.js.map
 
 /***/ }),
-/* 323 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2655,7 +2500,7 @@ exports.queue = new QueueScheduler_1.QueueScheduler(QueueAction_1.QueueAction);
 //# sourceMappingURL=queue.js.map
 
 /***/ }),
-/* 324 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2832,7 +2677,7 @@ exports.MergeMapSubscriber = MergeMapSubscriber;
 //# sourceMappingURL=mergeMap.js.map
 
 /***/ }),
-/* 325 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2993,7 +2838,7 @@ exports.MergeMapToSubscriber = MergeMapToSubscriber;
 //# sourceMappingURL=mergeMapTo.js.map
 
 /***/ }),
-/* 326 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3107,7 +2952,7 @@ var DistinctUntilChangedSubscriber = (function (_super) {
 //# sourceMappingURL=distinctUntilChanged.js.map
 
 /***/ }),
-/* 327 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3205,7 +3050,7 @@ var FilterSubscriber = (function (_super) {
 //# sourceMappingURL=filter.js.map
 
 /***/ }),
-/* 328 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3312,7 +3157,7 @@ exports.FindValueSubscriber = FindValueSubscriber;
 //# sourceMappingURL=find.js.map
 
 /***/ }),
-/* 329 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3367,7 +3212,7 @@ exports.BehaviorSubject = BehaviorSubject;
 //# sourceMappingURL=BehaviorSubject.js.map
 
 /***/ }),
-/* 330 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3412,7 +3257,7 @@ exports.asap = new AsapScheduler_1.AsapScheduler(AsapAction_1.AsapAction);
 //# sourceMappingURL=asap.js.map
 
 /***/ }),
-/* 331 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3560,7 +3405,7 @@ var ThrottleSubscriber = (function (_super) {
 //# sourceMappingURL=throttle.js.map
 
 /***/ }),
-/* 332 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3625,7 +3470,7 @@ var TimeIntervalSubscriber = (function (_super) {
 //# sourceMappingURL=timeInterval.js.map
 
 /***/ }),
-/* 333 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3656,7 +3501,7 @@ exports.TimeoutError = TimeoutError;
 //# sourceMappingURL=TimeoutError.js.map
 
 /***/ }),
-/* 334 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3712,12 +3557,12 @@ var TimestampSubscriber = (function (_super) {
 //# sourceMappingURL=timestamp.js.map
 
 /***/ }),
-/* 335 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var SubscriptionLog_1 = __webpack_require__(336);
+var SubscriptionLog_1 = __webpack_require__(335);
 var SubscriptionLoggable = (function () {
     function SubscriptionLoggable() {
         this.subscriptions = [];
@@ -3737,7 +3582,7 @@ exports.SubscriptionLoggable = SubscriptionLoggable;
 //# sourceMappingURL=SubscriptionLoggable.js.map
 
 /***/ }),
-/* 336 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3754,7 +3599,7 @@ exports.SubscriptionLog = SubscriptionLog;
 //# sourceMappingURL=SubscriptionLog.js.map
 
 /***/ }),
-/* 337 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3773,7 +3618,7 @@ exports.applyMixins = applyMixins;
 //# sourceMappingURL=applyMixins.js.map
 
 /***/ }),
-/* 338 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3890,6 +3735,169 @@ var VirtualAction = (function (_super) {
 }(AsyncAction_1.AsyncAction));
 exports.VirtualAction = VirtualAction;
 //# sourceMappingURL=VirtualTimeScheduler.js.map
+
+/***/ }),
+/* 338 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+var Vis = __webpack_require__(606);
+var VisTimelineItems = (function (_super) {
+    __extends(VisTimelineItems, _super);
+    function VisTimelineItems(data, options) {
+        return _super.call(this, data, options) || this;
+    }
+    VisTimelineItems.prototype.getLength = function () {
+        return this.length;
+    };
+    VisTimelineItems.prototype.add = function (data, senderId) {
+        return _super.prototype.add.call(this, data, senderId);
+    };
+    VisTimelineItems.prototype.clear = function (senderId) {
+        return _super.prototype.clear.call(this, senderId);
+    };
+    VisTimelineItems.prototype.distinct = function (field) {
+        return _super.prototype.distinct.call(this, field);
+    };
+    VisTimelineItems.prototype.flush = function () {
+        _super.prototype.flush.call(this);
+    };
+    VisTimelineItems.prototype.forEach = function (callback, options) {
+        _super.prototype.forEach.call(this, callback, options);
+    };
+    VisTimelineItems.prototype.getAll = function (options) {
+        return _super.prototype.get.call(this, options);
+    };
+    VisTimelineItems.prototype.getById = function (id, options) {
+        return _super.prototype.get.call(this, id, options);
+    };
+    VisTimelineItems.prototype.getByIds = function (ids, options) {
+        return _super.prototype.get.call(this, ids, options);
+    };
+    VisTimelineItems.prototype.getDataSet = function () {
+        return _super.prototype.getDataSet.call(this);
+    };
+    VisTimelineItems.prototype.getIds = function (options) {
+        return _super.prototype.getIds.call(this, options);
+    };
+    VisTimelineItems.prototype.map = function (callback, options) {
+        return _super.prototype.map.call(this, callback, options);
+    };
+    VisTimelineItems.prototype.max = function (field) {
+        return _super.prototype.max.call(this, field);
+    };
+    VisTimelineItems.prototype.min = function (field) {
+        return _super.prototype.min.call(this, field);
+    };
+    VisTimelineItems.prototype.on = function (event, callback) {
+        _super.prototype.on.call(this, event, callback);
+    };
+    VisTimelineItems.prototype.off = function (event, callback) {
+        _super.prototype.off.call(this, event, callback);
+    };
+    VisTimelineItems.prototype.removeItems = function (ids, senderId) {
+        return _super.prototype.remove.call(this, ids, senderId);
+    };
+    VisTimelineItems.prototype.setOptions = function (options) {
+        _super.prototype.setOptions.call(this, options);
+    };
+    VisTimelineItems.prototype.update = function (data, senderId) {
+        return _super.prototype.update.call(this, data, senderId);
+    };
+    return VisTimelineItems;
+}(Vis.DataSet));
+exports.VisTimelineItems = VisTimelineItems;
+var VisTimelineGroups = (function (_super) {
+    __extends(VisTimelineGroups, _super);
+    function VisTimelineGroups(data, options) {
+        return _super.call(this, data, options) || this;
+    }
+    VisTimelineGroups.prototype.getLength = function () {
+        return this.length;
+    };
+    VisTimelineGroups.prototype.add = function (data, senderId) {
+        return _super.prototype.add.call(this, data, senderId);
+    };
+    VisTimelineGroups.prototype.clear = function (senderId) {
+        return _super.prototype.clear.call(this, senderId);
+    };
+    VisTimelineGroups.prototype.distinct = function (field) {
+        return _super.prototype.distinct.call(this, field);
+    };
+    VisTimelineGroups.prototype.flush = function () {
+        _super.prototype.flush.call(this);
+    };
+    VisTimelineGroups.prototype.forEach = function (callback, options) {
+        _super.prototype.forEach.call(this, callback, options);
+    };
+    VisTimelineGroups.prototype.getAll = function (options) {
+        return _super.prototype.get.call(this, options);
+    };
+    VisTimelineGroups.prototype.getById = function (id, options) {
+        return _super.prototype.get.call(this, id, options);
+    };
+    VisTimelineGroups.prototype.getByIds = function (ids, options) {
+        return _super.prototype.get.call(this, ids, options);
+    };
+    VisTimelineGroups.prototype.getDataSet = function () {
+        return _super.prototype.getDataSet.call(this);
+    };
+    VisTimelineGroups.prototype.getIds = function (options) {
+        return _super.prototype.getIds.call(this, options);
+    };
+    VisTimelineGroups.prototype.map = function (callback, options) {
+        return _super.prototype.map.call(this, callback, options);
+    };
+    VisTimelineGroups.prototype.max = function (field) {
+        return _super.prototype.max.call(this, field);
+    };
+    VisTimelineGroups.prototype.min = function (field) {
+        return _super.prototype.min.call(this, field);
+    };
+    VisTimelineGroups.prototype.on = function (event, callback) {
+        _super.prototype.on.call(this, event, callback);
+    };
+    VisTimelineGroups.prototype.off = function (event, callback) {
+        _super.prototype.off.call(this, event, callback);
+    };
+    VisTimelineGroups.prototype.removeItems = function (ids, senderId) {
+        return _super.prototype.remove.call(this, ids, senderId);
+    };
+    VisTimelineGroups.prototype.setOptions = function (options) {
+        _super.prototype.setOptions.call(this, options);
+    };
+    VisTimelineGroups.prototype.update = function (data, senderId) {
+        return _super.prototype.update.call(this, data, senderId);
+    };
+    return VisTimelineGroups;
+}(Vis.DataSet));
+exports.VisTimelineGroups = VisTimelineGroups;
+var VisTimeline = (function (_super) {
+    __extends(VisTimeline, _super);
+    function VisTimeline() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return VisTimeline;
+}(Vis.Timeline));
+exports.VisTimeline = VisTimeline;
+__export(__webpack_require__(608));
+__export(__webpack_require__(611));
+
 
 /***/ }),
 /* 339 */
@@ -4212,7 +4220,7 @@ var AsyncSubject_1 = __webpack_require__(306);
 exports.AsyncSubject = AsyncSubject_1.AsyncSubject;
 var ReplaySubject_1 = __webpack_require__(309);
 exports.ReplaySubject = ReplaySubject_1.ReplaySubject;
-var BehaviorSubject_1 = __webpack_require__(329);
+var BehaviorSubject_1 = __webpack_require__(328);
 exports.BehaviorSubject = BehaviorSubject_1.BehaviorSubject;
 var ConnectableObservable_1 = __webpack_require__(220);
 exports.ConnectableObservable = ConnectableObservable_1.ConnectableObservable;
@@ -4224,25 +4232,25 @@ var ArgumentOutOfRangeError_1 = __webpack_require__(305);
 exports.ArgumentOutOfRangeError = ArgumentOutOfRangeError_1.ArgumentOutOfRangeError;
 var ObjectUnsubscribedError_1 = __webpack_require__(209);
 exports.ObjectUnsubscribedError = ObjectUnsubscribedError_1.ObjectUnsubscribedError;
-var TimeoutError_1 = __webpack_require__(333);
+var TimeoutError_1 = __webpack_require__(332);
 exports.TimeoutError = TimeoutError_1.TimeoutError;
 var UnsubscriptionError_1 = __webpack_require__(214);
 exports.UnsubscriptionError = UnsubscriptionError_1.UnsubscriptionError;
-var timeInterval_1 = __webpack_require__(332);
+var timeInterval_1 = __webpack_require__(331);
 exports.TimeInterval = timeInterval_1.TimeInterval;
-var timestamp_1 = __webpack_require__(334);
+var timestamp_1 = __webpack_require__(333);
 exports.Timestamp = timestamp_1.Timestamp;
 var TestScheduler_1 = __webpack_require__(599);
 exports.TestScheduler = TestScheduler_1.TestScheduler;
-var VirtualTimeScheduler_1 = __webpack_require__(338);
+var VirtualTimeScheduler_1 = __webpack_require__(337);
 exports.VirtualTimeScheduler = VirtualTimeScheduler_1.VirtualTimeScheduler;
-var AjaxObservable_1 = __webpack_require__(322);
+var AjaxObservable_1 = __webpack_require__(321);
 exports.AjaxResponse = AjaxObservable_1.AjaxResponse;
 exports.AjaxError = AjaxObservable_1.AjaxError;
 exports.AjaxTimeoutError = AjaxObservable_1.AjaxTimeoutError;
-var asap_1 = __webpack_require__(330);
+var asap_1 = __webpack_require__(329);
 var async_1 = __webpack_require__(301);
-var queue_1 = __webpack_require__(323);
+var queue_1 = __webpack_require__(322);
 var animationFrame_1 = __webpack_require__(602);
 var rxSubscriber_1 = __webpack_require__(56);
 var iterator_1 = __webpack_require__(206);
@@ -6158,7 +6166,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(9);
-var noop_1 = __webpack_require__(320);
+var noop_1 = __webpack_require__(317);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -6249,7 +6257,7 @@ Observable_1.Observable.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNex
 
 "use strict";
 
-var onErrorResumeNext_1 = __webpack_require__(321);
+var onErrorResumeNext_1 = __webpack_require__(320);
 exports.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNextStatic;
 //# sourceMappingURL=onErrorResumeNext.js.map
 
@@ -6759,7 +6767,7 @@ Observable_1.Observable.ajax = ajax_1.ajax;
 
 "use strict";
 
-var AjaxObservable_1 = __webpack_require__(322);
+var AjaxObservable_1 = __webpack_require__(321);
 exports.ajax = AjaxObservable_1.AjaxObservable.create;
 //# sourceMappingURL=ajax.js.map
 
@@ -8233,7 +8241,7 @@ Observable_1.Observable.prototype.concatMap = concatMap_1.concatMap;
 
 "use strict";
 
-var mergeMap_1 = __webpack_require__(324);
+var mergeMap_1 = __webpack_require__(323);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to an Observable which is merged in the output
@@ -8317,7 +8325,7 @@ Observable_1.Observable.prototype.concatMapTo = concatMapTo_1.concatMapTo;
 
 "use strict";
 
-var mergeMapTo_1 = __webpack_require__(325);
+var mergeMapTo_1 = __webpack_require__(324);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to the same Observable which is merged multiple
@@ -9516,7 +9524,7 @@ exports.Set = root_1.root.Set || minimalSetImpl();
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var distinctUntilChanged_1 = __webpack_require__(326);
+var distinctUntilChanged_1 = __webpack_require__(325);
 Observable_1.Observable.prototype.distinctUntilChanged = distinctUntilChanged_1.distinctUntilChanged;
 //# sourceMappingURL=distinctUntilChanged.js.map
 
@@ -9537,7 +9545,7 @@ Observable_1.Observable.prototype.distinctUntilKeyChanged = distinctUntilKeyChan
 
 "use strict";
 
-var distinctUntilChanged_1 = __webpack_require__(326);
+var distinctUntilChanged_1 = __webpack_require__(325);
 /* tslint:enable:max-line-length */
 /**
  * Returns an Observable that emits all items emitted by the source Observable that are distinct by comparison from the previous item,
@@ -10291,7 +10299,7 @@ var ElementAtSubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var filter_1 = __webpack_require__(327);
+var filter_1 = __webpack_require__(326);
 Observable_1.Observable.prototype.filter = filter_1.filter;
 //# sourceMappingURL=filter.js.map
 
@@ -10363,7 +10371,7 @@ var FinallySubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var find_1 = __webpack_require__(328);
+var find_1 = __webpack_require__(327);
 Observable_1.Observable.prototype.find = find_1.find;
 //# sourceMappingURL=find.js.map
 
@@ -10384,7 +10392,7 @@ Observable_1.Observable.prototype.findIndex = findIndex_1.findIndex;
 
 "use strict";
 
-var find_1 = __webpack_require__(328);
+var find_1 = __webpack_require__(327);
 /**
  * Emits only the index of the first value emitted by the source Observable that
  * meets some condition.
@@ -11009,7 +11017,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(29);
-var noop_1 = __webpack_require__(320);
+var noop_1 = __webpack_require__(317);
 /**
  * Ignores all items emitted by the source Observable and only passes calls of `complete` or `error`.
  *
@@ -11904,7 +11912,7 @@ Observable_1.Observable.prototype.mergeAll = mergeAll_1.mergeAll;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var mergeMap_1 = __webpack_require__(324);
+var mergeMap_1 = __webpack_require__(323);
 Observable_1.Observable.prototype.mergeMap = mergeMap_1.mergeMap;
 Observable_1.Observable.prototype.flatMap = mergeMap_1.mergeMap;
 //# sourceMappingURL=mergeMap.js.map
@@ -11916,7 +11924,7 @@ Observable_1.Observable.prototype.flatMap = mergeMap_1.mergeMap;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var mergeMapTo_1 = __webpack_require__(325);
+var mergeMapTo_1 = __webpack_require__(324);
 Observable_1.Observable.prototype.flatMapTo = mergeMapTo_1.mergeMapTo;
 Observable_1.Observable.prototype.mergeMapTo = mergeMapTo_1.mergeMapTo;
 //# sourceMappingURL=mergeMapTo.js.map
@@ -12154,7 +12162,7 @@ Observable_1.Observable.prototype.observeOn = observeOn_1.observeOn;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var onErrorResumeNext_1 = __webpack_require__(321);
+var onErrorResumeNext_1 = __webpack_require__(320);
 Observable_1.Observable.prototype.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNext;
 //# sourceMappingURL=onErrorResumeNext.js.map
 
@@ -12270,7 +12278,7 @@ Observable_1.Observable.prototype.partition = partition_1.partition;
 "use strict";
 
 var not_1 = __webpack_require__(509);
-var filter_1 = __webpack_require__(327);
+var filter_1 = __webpack_require__(326);
 /**
  * Splits the source Observable into two, one with values that satisfy a
  * predicate, and another with values that don't satisfy the predicate.
@@ -12469,7 +12477,7 @@ Observable_1.Observable.prototype.publishBehavior = publishBehavior_1.publishBeh
 
 "use strict";
 
-var BehaviorSubject_1 = __webpack_require__(329);
+var BehaviorSubject_1 = __webpack_require__(328);
 var multicast_1 = __webpack_require__(205);
 /**
  * @param value
@@ -14142,7 +14150,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(9);
-var asap_1 = __webpack_require__(330);
+var asap_1 = __webpack_require__(329);
 var isNumeric_1 = __webpack_require__(307);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -15278,7 +15286,7 @@ var TakeWhileSubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var throttle_1 = __webpack_require__(331);
+var throttle_1 = __webpack_require__(330);
 Observable_1.Observable.prototype.throttle = throttle_1.throttle;
 //# sourceMappingURL=throttle.js.map
 
@@ -15306,7 +15314,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subscriber_1 = __webpack_require__(29);
 var async_1 = __webpack_require__(301);
-var throttle_1 = __webpack_require__(331);
+var throttle_1 = __webpack_require__(330);
 /**
  * Emits a value from the source Observable, then ignores subsequent source
  * values for `duration` milliseconds, then repeats this process.
@@ -15422,7 +15430,7 @@ function dispatchNext(arg) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var timeInterval_1 = __webpack_require__(332);
+var timeInterval_1 = __webpack_require__(331);
 Observable_1.Observable.prototype.timeInterval = timeInterval_1.timeInterval;
 //# sourceMappingURL=timeInterval.js.map
 
@@ -15451,7 +15459,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var async_1 = __webpack_require__(301);
 var isDate_1 = __webpack_require__(308);
 var Subscriber_1 = __webpack_require__(29);
-var TimeoutError_1 = __webpack_require__(333);
+var TimeoutError_1 = __webpack_require__(332);
 /**
  *
  * Errors if Observable does not emit a value in given time span.
@@ -15695,7 +15703,7 @@ var TimeoutWithSubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var timestamp_1 = __webpack_require__(334);
+var timestamp_1 = __webpack_require__(333);
 Observable_1.Observable.prototype.timestamp = timestamp_1.timestamp;
 //# sourceMappingURL=timestamp.js.map
 
@@ -16847,8 +16855,8 @@ var Observable_1 = __webpack_require__(9);
 var Notification_1 = __webpack_require__(302);
 var ColdObservable_1 = __webpack_require__(600);
 var HotObservable_1 = __webpack_require__(601);
-var SubscriptionLog_1 = __webpack_require__(336);
-var VirtualTimeScheduler_1 = __webpack_require__(338);
+var SubscriptionLog_1 = __webpack_require__(335);
+var VirtualTimeScheduler_1 = __webpack_require__(337);
 var defaultMaxFrame = 750;
 var TestScheduler = (function (_super) {
     __extends(TestScheduler, _super);
@@ -17074,8 +17082,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(9);
 var Subscription_1 = __webpack_require__(33);
-var SubscriptionLoggable_1 = __webpack_require__(335);
-var applyMixins_1 = __webpack_require__(337);
+var SubscriptionLoggable_1 = __webpack_require__(334);
+var applyMixins_1 = __webpack_require__(336);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -17126,8 +17134,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(32);
 var Subscription_1 = __webpack_require__(33);
-var SubscriptionLoggable_1 = __webpack_require__(335);
-var applyMixins_1 = __webpack_require__(337);
+var SubscriptionLoggable_1 = __webpack_require__(334);
+var applyMixins_1 = __webpack_require__(336);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -78183,7 +78191,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(317);
+var index_1 = __webpack_require__(338);
 /**
  * A service to create, manage and control VisTimeline instances.
  *
@@ -79014,7 +79022,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
 var index_1 = __webpack_require__(339);
-var index_2 = __webpack_require__(317);
+var index_2 = __webpack_require__(338);
 __export(__webpack_require__(612));
 var VisModule = (function () {
     function VisModule() {
@@ -79049,7 +79057,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
 var vis_timeline_service_1 = __webpack_require__(608);
-var index_1 = __webpack_require__(317);
+var index_1 = __webpack_require__(338);
 /**
  * Use this directive with a div container to show timeline data.
  *
@@ -79185,27 +79193,20 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(317));
+__export(__webpack_require__(338));
 __export(__webpack_require__(339));
 
 
 /***/ }),
-/* 613 */,
-/* 614 */,
-/* 615 */,
-/* 616 */,
-/* 617 */
+/* 613 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResultPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompleteTestService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -79215,6 +79216,77 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+var CompleteTestService = (function () {
+    function CompleteTestService(http) {
+        this.http = http;
+        this.labelAttribute = "title";
+    }
+    CompleteTestService.prototype.getResults = function (keyword) {
+        var _this = this;
+        return this.http.get('assets/data/services.json')
+            .map(function (result) {
+            return result.json().services
+                .filter(function (item) { return _this.sansAccent(item.title.toLowerCase()).includes(keyword.toLowerCase()); }).slice(0, 5);
+        });
+    };
+    CompleteTestService.prototype.sansAccent = function (string) {
+        var accent = [
+            /[\300-\306]/g, /[\340-\346]/g,
+            /[\310-\313]/g, /[\350-\353]/g,
+            /[\314-\317]/g, /[\354-\357]/g,
+            /[\322-\330]/g, /[\362-\370]/g,
+            /[\331-\334]/g, /[\371-\374]/g,
+            /[\321]/g, /[\361]/g,
+            /[\307]/g, /[\347]/g,
+        ];
+        var noaccent = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'N', 'n', 'C', 'c'];
+        var str = string;
+        for (var i = 0; i < accent.length; i++) {
+            str = str.replace(accent[i], noaccent[i]);
+        }
+        return str;
+    };
+    return CompleteTestService;
+}());
+CompleteTestService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]) === "function" && _a || Object])
+], CompleteTestService);
+
+var _a;
+//# sourceMappingURL=CompleteTestService.js.map
+
+/***/ }),
+/* 614 */,
+/* 615 */,
+/* 616 */,
+/* 617 */,
+/* 618 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResultPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__ = __webpack_require__(613);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_vis_components_network__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_vis_components_network___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_vis_components_network__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 
 
@@ -79232,12 +79304,13 @@ var ExampleNetworkData = (function () {
  * we recommend not using the Welcome page.
 */
 var ResultPage = (function () {
-    function ResultPage(http, navCtrl, visNetworkServ, navParams) {
+    function ResultPage(http, navCtrl, visNetworkServ, navParams, completeTestService) {
         var _this = this;
         this.http = http;
         this.navCtrl = navCtrl;
         this.visNetworkServ = visNetworkServ;
         this.navParams = navParams;
+        this.completeTestService = completeTestService;
         this.visNetwork = 'networkId1';
         this.firstT = true;
         var servData = http.get('assets/data/services.json').map(function (res) { return res.json().services; });
@@ -79262,6 +79335,9 @@ var ResultPage = (function () {
         if (this.firstT) {
             for (var _i = 0, _a = this.param6; _i < _a.length; _i++) {
                 var resultId = _a[_i];
+                // pertinence aléatoire
+                var possib = ["bas", "moyen", "haut"];
+                this.services[resultId].pertinence = possib[Math.floor(Math.random() * 3)];
                 var myGroup = this.services[resultId].marqueId * 3;
                 if (this.services[resultId].pertinence === "haut")
                     myGroup = myGroup + 2;
@@ -79291,6 +79367,12 @@ var ResultPage = (function () {
             }
         });
     };
+    ResultPage.prototype.getVal = function (event) {
+        console.log(event.id);
+        this.navCtrl.push('ServiceDetailsPage', {
+            param1: event.id,
+        });
+    };
     ResultPage.prototype.more = function () {
         if (this.firstT) {
             this.navCtrl.push('ServiceDetailsPage', {
@@ -79299,8 +79381,8 @@ var ResultPage = (function () {
         }
     };
     ResultPage.prototype.ngOnInit = function () {
-        var nodes = new __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__["VisNodes"]();
-        var edges = new __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__["VisEdges"]();
+        var nodes = new __WEBPACK_IMPORTED_MODULE_5_ng2_vis_components_network__["VisNodes"]();
+        var edges = new __WEBPACK_IMPORTED_MODULE_5_ng2_vis_components_network__["VisEdges"]();
         this.visNetworkData = {
             nodes: nodes,
             edges: edges,
@@ -79379,12 +79461,435 @@ var ResultPage = (function () {
 }());
 ResultPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-result',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/'\n\n    <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n        <ion-buttons start>\n\n            <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n        </ion-buttons>\n\n        <ion-title>\n\n        Recherche\n\n        </ion-title>\n\n        <ion-buttons end>\n\n        \n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n    </ion-header>\n\n    <ion-content *ngIf="services != null">\n\n        <div class="splash-relative">\n\n            <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n\n            <div class="splash-info" center>\n\n                <div class="splash-form">\n\n                    <div class="chart-container">\n\n                        <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n                    </div>\n\n                </div>\n\n            </div>\n\n        </div>\n\n        <ion-footer class="footer" hidden style="position: fixed; bottom:49px;">\n\n            <ion-grid>\n\n              <ion-row>\n\n                <ion-col text-center col-9 *ngIf="myServiceId != null">\n\n                    <h4 style="color:#0eae15" *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#d01717" *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#386ecd" *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#cbc40e" *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#cc7136" *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#962ac8" *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#d42649" *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].title}}</h4>\n\n                </ion-col>\n\n                <ion-col col-3>\n\n                    <button ion-button (click)="more()" clear>+ d\'infos</button>\n\n                </ion-col>\n\n              </ion-row>\n\n            </ion-grid>\n\n        </ion-footer>\n\n    </ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/
+        selector: 'page-result',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/'\n\n    <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n        <ion-buttons start>\n\n            <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n        </ion-buttons>\n\n        <ion-title>\n\n        Recherche\n\n        </ion-title>\n\n        <ion-buttons end>\n\n        \n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)"></ion-auto-complete>\n\n    </ion-header>\n\n    <ion-content *ngIf="services != null">\n\n        <div class="splash-relative">\n\n            <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n\n            <div class="splash-info" center>\n\n                <div class="splash-form">\n\n                    <div class="chart-container">\n\n                        <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n                    </div>\n\n                </div>\n\n            </div>\n\n        </div>\n\n        <ion-footer class="footer" hidden style="position: fixed; bottom:49px;">\n\n            <ion-grid>\n\n              <ion-row>\n\n                <ion-col text-center col-9 *ngIf="myServiceId != null">\n\n                    <h4 style="color:#0eae15" *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#d01717" *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#386ecd" *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#cbc40e" *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#cc7136" *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#962ac8" *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#d42649" *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].title}}</h4>\n\n                </ion-col>\n\n                <ion-col col-3>\n\n                    <button ion-button (click)="more()" clear>+ d\'infos</button>\n\n                </ion-col>\n\n              </ion-row>\n\n            </ion-grid>\n\n        </ion-footer>\n\n    </ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__["VisNetworkService"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5_ng2_vis_components_network__["VisNetworkService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ng2_vis_components_network__["VisNetworkService"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */]) === "function" && _e || Object])
 ], ResultPage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=result.js.map
+
+/***/ }),
+/* 619 */,
+/* 620 */,
+/* 621 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AutoCompleteModule; });
+/* unused harmony export AutoCompleteComponent */
+/* unused harmony export BoldPrefix */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(54);
+
+
+
+
+
+
+
+// searchbar default options
+var defaultOpts = {
+    cancelButtonText: 'Cancel',
+    showCancelButton: false,
+    debounce: 250,
+    placeholder: 'Search',
+    autocomplete: 'off',
+    autocorrect: 'off',
+    spellcheck: 'off',
+    type: 'search',
+    value: '',
+    noItems: '',
+    clearOnEdit: false,
+    clearInput: false
+};
+var AutoCompleteComponent = (function () {
+    /**
+     * create a new instace
+     */
+    function AutoCompleteComponent() {
+        this.hideListOnSelection = true;
+        this.onTouchedCallback = __WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop__["noop"];
+        this.onChangeCallback = __WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop__["noop"];
+        this.showListChanged = false;
+        this.keyword = '';
+        this.suggestions = [];
+        this._showList = false;
+        this.itemSelected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.itemsShown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.itemsHidden = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.ionAutoInput = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.autoFocus = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.autoBlur = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.options = {};
+        // set default options
+        this.defaultOpts = defaultOpts;
+    }
+    Object.defineProperty(AutoCompleteComponent.prototype, "showList", {
+        /**
+         * @return {?}
+         */
+        get: function () {
+            return this._showList;
+        },
+        /**
+         * @param {?} value
+         * @return {?}
+         */
+        set: function (value) {
+            if (this._showList === value) {
+                return;
+            }
+            this._showList = value;
+            this.showListChanged = true;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * handle tap
+     * @param {?} event
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.handleTap = function (event) {
+        if (this.showResultsFirst || this.keyword.length > 0) {
+            this.getItems();
+        }
+    };
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.writeValue = function (value) {
+        if (value !== this.selection) {
+            this.selection = value || null;
+            this.formValue = this.getFormValue(this.selection);
+            this.keyword = this.getLabel(this.selection);
+        }
+    };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.registerOnChange = function (fn) {
+        this.onChangeCallback = fn;
+    };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.registerOnTouched = function (fn) {
+        this.onTouchedCallback = fn;
+    };
+    /**
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.updateModel = function () {
+        this.onChangeCallback(this.formValue);
+    };
+    /**
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.ngAfterViewChecked = function () {
+        if (this.showListChanged) {
+            this.showListChanged = false;
+            this.showList ? this.itemsShown.emit() : this.itemsHidden.emit();
+        }
+    };
+    /**
+     * get items for auto-complete
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.getItems = function () {
+        var _this = this;
+        var /** @type {?} */ result;
+        if (this.showResultsFirst && this.keyword.trim() === '') {
+            this.keyword = '';
+        }
+        else if (this.keyword.trim() === '') {
+            this.suggestions = [];
+            return;
+        }
+        if (typeof this.dataProvider === 'function') {
+            result = this.dataProvider(this.keyword);
+        }
+        else {
+            result = this.dataProvider.getResults(this.keyword);
+        }
+        // if result is instanceof Subject, use it asObservable
+        if (result instanceof __WEBPACK_IMPORTED_MODULE_4_rxjs__["Subject"]) {
+            result = result.asObservable();
+        }
+        if (result instanceof Promise) {
+            result = __WEBPACK_IMPORTED_MODULE_4_rxjs__["Observable"].fromPromise(result);
+        }
+        // if query is async
+        if (result instanceof __WEBPACK_IMPORTED_MODULE_4_rxjs__["Observable"]) {
+            result
+                .subscribe(function (results) {
+                _this.suggestions = results;
+                _this.showItemList();
+            }, function (error) { return console.error(error); });
+        }
+        else {
+            this.suggestions = result;
+            this.showItemList();
+        }
+        // emit event
+        this.ionAutoInput.emit(this.keyword);
+    };
+    /**
+     * show item list
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.showItemList = function () {
+        this.showList = true;
+    };
+    /**
+     * hide item list
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.hideItemList = function () {
+        this.showList = this.alwaysShowList;
+    };
+    /**
+     * select item from list
+     *
+     * @param {?} selection
+     *
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.select = function (selection) {
+        this.keyword = this.getLabel(selection);
+        this.formValue = this.getFormValue(selection);
+        this.hideItemList();
+        // emit selection event
+        this.updateModel();
+        if (this.hideListOnSelection) {
+            this.hideItemList();
+        }
+        // emit selection event
+        this.itemSelected.emit(selection);
+        this.selection = selection;
+    };
+    /**
+     * get current selection
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.getSelection = function () {
+        return this.selection;
+    };
+    /**
+     * get current input value
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.getValue = function () {
+        return this.formValue;
+    };
+    /**
+     * set current input value
+     * @param {?} selection
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.setValue = function (selection) {
+        this.formValue = this.getFormValue(selection);
+        this.keyword = this.getLabel(selection);
+        return;
+    };
+    /**
+     * /**
+     * clear current input value
+     * @param {?=} hideItemList
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.clearValue = function (hideItemList) {
+        if (hideItemList === void 0) { hideItemList = false; }
+        this.keyword = '';
+        this.selection = null;
+        this.formValue = null;
+        if (hideItemList) {
+            this.hideItemList();
+        }
+        return;
+    };
+    /**
+     * set focus of searchbar
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.setFocus = function () {
+        if (this.searchbarElem) {
+            this.searchbarElem.setFocus();
+        }
+    };
+    /**
+     * fired when the input focused
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.onFocus = function () {
+        this.autoFocus.emit();
+    };
+    /**
+     * fired when the input focused
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.onBlur = function () {
+        this.autoBlur.emit();
+    };
+    /**
+     * handle document click
+     * @param {?} event
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.documentClickHandler = function (event) {
+        if ((this.searchbarElem
+            && !this.searchbarElem._elementRef.nativeElement.contains(event.target))
+            ||
+                (!this.inputElem && this.inputElem._elementRef.nativeElement.contains(event.target))) {
+            this.hideItemList();
+        }
+    };
+    /**
+     * @param {?} selection
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.getFormValue = function (selection) {
+        if (selection == null) {
+            return null;
+        }
+        var /** @type {?} */ attr = this.dataProvider.formValueAttribute == null ? this.dataProvider.labelAttribute : this.dataProvider.formValueAttribute;
+        if (typeof selection === 'object' && attr) {
+            return selection[attr];
+        }
+        return selection;
+    };
+    /**
+     * @param {?} selection
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.getLabel = function (selection) {
+        if (selection == null) {
+            return '';
+        }
+        var /** @type {?} */ attr = this.dataProvider.labelAttribute;
+        var /** @type {?} */ value = selection;
+        if (this.dataProvider.getItemLabel) {
+            value = this.dataProvider.getItemLabel(value);
+        }
+        if (typeof value === 'object' && attr) {
+            return value[attr] || '';
+        }
+        return value || '';
+    };
+    return AutoCompleteComponent;
+}());
+AutoCompleteComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'ion-auto-complete',
+                template: "\n        <ion-input\n                #inputElem\n                (keyup)=\"getItems($event)\"\n                (tap)=\"handleTap($event)\"\n                [(ngModel)]=\"keyword\"\n                (ngModelChange)=\"updateModel()\"\n                [placeholder]=\"options.placeholder == null ? defaultOpts.placeholder : options.placeholder\"\n                [type]=\"options.type == null ? defaultOpts.type : options.type\"\n                [clearOnEdit]=\"options.clearOnEdit == null ? defaultOpts.clearOnEdit : options.clearOnEdit\"\n                [clearInput]=\"options.clearInput == null ? defaultOpts.clearInput : options.clearInput\"\n                [disabled]=\"disabled\"\n                [ngClass]=\"{'hidden': !useIonInput}\"\n                (ionFocus)=\"onFocus()\"\n                (ionBlur)=\"onBlur()\"\n        >\n        </ion-input>\n        <ion-searchbar\n                #searchbarElem\n                (ionInput)=\"getItems($event)\"\n                (tap)=\"handleTap($event)\"\n                [(ngModel)]=\"keyword\"\n                (ngModelChange)=\"updateModel()\"\n                [cancelButtonText]=\"options.cancelButtonText == null ? defaultOpts.cancelButtonText : options.cancelButtonText\"\n                [showCancelButton]=\"options.showCancelButton == null ? defaultOpts.showCancelButton : options.showCancelButton\"\n                [debounce]=\"options.debounce == null ? defaultOpts.debounce : options.debounce\"\n                [placeholder]=\"options.placeholder == null ? defaultOpts.placeholder : options.placeholder\"\n                [autocomplete]=\"options.autocomplete == null ? defaultOpts.autocomplete : options.autocomplete\"\n                [autocorrect]=\"options.autocorrect == null ? defaultOpts.autocorrect : options.autocorrect\"\n                [spellcheck]=\"options.spellcheck == null ? defaultOpts.spellcheck : options.spellcheck\"\n                [type]=\"options.type == null ? defaultOpts.type : options.type\"\n                [disabled]=\"disabled\"\n                [ngClass]=\"{'hidden': useIonInput}\"\n                (ionClear)=\"clearValue(true)\"\n                (ionFocus)=\"onFocus()\"\n                (ionBlur)=\"onBlur()\"\n        >\n        </ion-searchbar>\n        <ng-template #defaultTemplate let-attrs=\"attrs\">\n            <span [innerHTML]='attrs.label | boldprefix:attrs.keyword'></span>\n        </ng-template>\n        <ul *ngIf=\"!disabled && suggestions.length > 0 && showList\">\n            <li *ngFor=\"let suggestion of suggestions\" (tap)=\"select(suggestion);$event.srcEvent.stopPropagation()\">\n                <ng-template\n                        [ngTemplateOutlet]=\"template || defaultTemplate\"\n                        [ngTemplateOutletContext]=\"\n                        {attrs:{ \n                          data: suggestion, \n                          label: getLabel(suggestion),\n                          keyword: keyword,\n                          formValue: getFormValue(suggestion), \n                          labelAttribute: dataProvider.labelAttribute, \n                          formValueAttribute: dataProvider.formValueAttribute }}\"></ng-template>\n            </li>\n        </ul>\n        <p *ngIf=\"suggestions.length == 0 && showList && options.noItems\">{{ options.noItems }}</p>\n    ",
+                providers: [
+                    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* NG_VALUE_ACCESSOR */], useExisting: AutoCompleteComponent, multi: true }
+                ]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+AutoCompleteComponent.ctorParameters = function () { return []; };
+AutoCompleteComponent.propDecorators = {
+    'dataProvider': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'options': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'disabled': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'keyword': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'showResultsFirst': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'alwaysShowList': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'hideListOnSelection': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'template': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'useIonInput': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'autoFocus': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'autoBlur': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'itemSelected': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'itemsShown': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'itemsHidden': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'ionAutoInput': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'searchbarElem': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"], args: ['searchbarElem',] },],
+    'inputElem': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"], args: ['inputElem',] },],
+    'documentClickHandler': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"], args: ['document:click', ['$event'],] },],
+};
+
+/**
+ * bolds the beggining of the matching string in the item
+ */
+var BoldPrefix = (function () {
+    function BoldPrefix() {
+    }
+    /**
+     * @param {?} value
+     * @param {?} keyword
+     * @return {?}
+     */
+    BoldPrefix.prototype.transform = function (value, keyword) {
+        if (!keyword)
+            return value;
+        var /** @type {?} */ escaped_keyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        return value.replace(new RegExp(escaped_keyword, 'gi'), function (str) { return str.bold(); });
+    };
+    return BoldPrefix;
+}());
+BoldPrefix.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{
+                name: 'boldprefix'
+            },] },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+BoldPrefix.ctorParameters = function () { return []; };
+
+var AutoCompleteModule = (function () {
+    function AutoCompleteModule() {
+    }
+    /**
+     * @return {?}
+     */
+    AutoCompleteModule.forRoot = function () {
+        return {
+            ngModule: AutoCompleteModule,
+            providers: []
+        };
+    };
+    return AutoCompleteModule;
+}());
+AutoCompleteModule.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
+                imports: [
+                    __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
+                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
+                    __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["d" /* IonicModule */]
+                ],
+                declarations: [
+                    AutoCompleteComponent,
+                    BoldPrefix
+                ],
+                exports: [
+                    AutoCompleteComponent,
+                    BoldPrefix
+                ]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+AutoCompleteModule.ctorParameters = function () { return []; };
+
+
+
 
 /***/ })
 ]));

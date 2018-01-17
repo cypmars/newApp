@@ -4,6 +4,8 @@ import { HttpModule } from '@angular/http';
 import { ResultPage } from './result';
 import { SwingModule } from 'angular2-swing';
 import { BrowserModule } from '@angular/platform-browser';
+import { AutoCompleteModule } from 'ionic2-auto-complete';
+import { CompleteTestService } from '../../providers/CompleteTestService';
 
 import { VisModule } from 'ng2-vis';
 
@@ -15,7 +17,11 @@ import { VisModule } from 'ng2-vis';
     HttpModule,
     SwingModule,
     VisModule,
+    AutoCompleteModule,
     IonicPageModule.forChild(ResultPage)
+  ],
+  providers: [
+    CompleteTestService
   ],
   exports: [
     ResultPage

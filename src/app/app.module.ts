@@ -12,7 +12,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { HttpModule } from '@angular/http';
 import { SwingModule } from 'angular2-swing';
-
 @NgModule({
   declarations: [
     MyApp,

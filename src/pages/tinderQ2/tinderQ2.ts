@@ -1,6 +1,7 @@
 import { Component, ViewChild, ViewChildren, QueryList } from '@angular/core';
 import {  FabContainer, FabButton } from 'ionic-angular';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { CompleteTestService } from '../../providers/CompleteTestService';
 
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
@@ -237,7 +238,7 @@ export class TinderQ2Page {
     return hex;
   }
 
-  constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams, public completeTestService: CompleteTestService) {
 
       this.stackConfig = {
         throwOutConfidence: (offsetX, offsetY, element) => {
@@ -267,6 +268,13 @@ export class TinderQ2Page {
       this.myAnswer = new Array();
   }
 
+  getVal(event){
+    console.log(event.id);
+    this.navCtrl.push('ServiceDetailsPage', {
+      param1: event.id,
+    });
+  }
+  
   prev(){
     this.navCtrl.pop();
   }

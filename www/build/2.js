@@ -1,5 +1,5 @@
-webpackJsonp([2],Array(299).concat([
-/* 299 */
+webpackJsonp([2],Array(298).concat([
+/* 298 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ2__ = __webpack_require__(624);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(625);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -30,22 +30,23 @@ var TinderQPageModule = (function () {
 TinderQPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__tinderQ2__["a" /* TinderQ2Page */],
+            __WEBPACK_IMPORTED_MODULE_3__tinderQ__["a" /* TinderQPage */],
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingModule"],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__tinderQ2__["a" /* TinderQ2Page */])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__tinderQ__["a" /* TinderQPage */])
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_3__tinderQ2__["a" /* TinderQ2Page */]
+            __WEBPACK_IMPORTED_MODULE_3__tinderQ__["a" /* TinderQPage */]
         ]
     })
 ], TinderQPageModule);
 
-//# sourceMappingURL=tinderQ2.module.js.map
+//# sourceMappingURL=tinderQ.module.js.map
 
 /***/ }),
+/* 299 */,
 /* 300 */,
 /* 301 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -572,7 +573,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subject_1 = __webpack_require__(32);
-var queue_1 = __webpack_require__(323);
+var queue_1 = __webpack_require__(322);
 var Subscription_1 = __webpack_require__(33);
 var observeOn_1 = __webpack_require__(313);
 var ObjectUnsubscribedError_1 = __webpack_require__(209);
@@ -1588,7 +1589,17 @@ Observable_1.Observable.prototype.map = map_1.map;
 //# sourceMappingURL=map.js.map
 
 /***/ }),
-/* 317 */,
+/* 317 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/* tslint:disable:no-empty */
+function noop() { }
+exports.noop = noop;
+//# sourceMappingURL=noop.js.map
+
+/***/ }),
 /* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1839,17 +1850,6 @@ exports.RaceSubscriber = RaceSubscriber;
 
 "use strict";
 
-/* tslint:disable:no-empty */
-function noop() { }
-exports.noop = noop;
-//# sourceMappingURL=noop.js.map
-
-/***/ }),
-/* 321 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -1988,7 +1988,7 @@ var OnErrorResumeNextSubscriber = (function (_super) {
 //# sourceMappingURL=onErrorResumeNext.js.map
 
 /***/ }),
-/* 322 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2409,7 +2409,7 @@ exports.AjaxTimeoutError = AjaxTimeoutError;
 //# sourceMappingURL=AjaxObservable.js.map
 
 /***/ }),
-/* 323 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2481,7 +2481,7 @@ exports.queue = new QueueScheduler_1.QueueScheduler(QueueAction_1.QueueAction);
 //# sourceMappingURL=queue.js.map
 
 /***/ }),
-/* 324 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2658,7 +2658,7 @@ exports.MergeMapSubscriber = MergeMapSubscriber;
 //# sourceMappingURL=mergeMap.js.map
 
 /***/ }),
-/* 325 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2819,7 +2819,7 @@ exports.MergeMapToSubscriber = MergeMapToSubscriber;
 //# sourceMappingURL=mergeMapTo.js.map
 
 /***/ }),
-/* 326 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2933,7 +2933,7 @@ var DistinctUntilChangedSubscriber = (function (_super) {
 //# sourceMappingURL=distinctUntilChanged.js.map
 
 /***/ }),
-/* 327 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3031,7 +3031,7 @@ var FilterSubscriber = (function (_super) {
 //# sourceMappingURL=filter.js.map
 
 /***/ }),
-/* 328 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3138,7 +3138,7 @@ exports.FindValueSubscriber = FindValueSubscriber;
 //# sourceMappingURL=find.js.map
 
 /***/ }),
-/* 329 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3193,7 +3193,7 @@ exports.BehaviorSubject = BehaviorSubject;
 //# sourceMappingURL=BehaviorSubject.js.map
 
 /***/ }),
-/* 330 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3238,7 +3238,7 @@ exports.asap = new AsapScheduler_1.AsapScheduler(AsapAction_1.AsapAction);
 //# sourceMappingURL=asap.js.map
 
 /***/ }),
-/* 331 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3386,7 +3386,7 @@ var ThrottleSubscriber = (function (_super) {
 //# sourceMappingURL=throttle.js.map
 
 /***/ }),
-/* 332 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3451,7 +3451,7 @@ var TimeIntervalSubscriber = (function (_super) {
 //# sourceMappingURL=timeInterval.js.map
 
 /***/ }),
-/* 333 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3482,7 +3482,7 @@ exports.TimeoutError = TimeoutError;
 //# sourceMappingURL=TimeoutError.js.map
 
 /***/ }),
-/* 334 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3538,12 +3538,12 @@ var TimestampSubscriber = (function (_super) {
 //# sourceMappingURL=timestamp.js.map
 
 /***/ }),
-/* 335 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var SubscriptionLog_1 = __webpack_require__(336);
+var SubscriptionLog_1 = __webpack_require__(335);
 var SubscriptionLoggable = (function () {
     function SubscriptionLoggable() {
         this.subscriptions = [];
@@ -3563,7 +3563,7 @@ exports.SubscriptionLoggable = SubscriptionLoggable;
 //# sourceMappingURL=SubscriptionLoggable.js.map
 
 /***/ }),
-/* 336 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3580,7 +3580,7 @@ exports.SubscriptionLog = SubscriptionLog;
 //# sourceMappingURL=SubscriptionLog.js.map
 
 /***/ }),
-/* 337 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3599,7 +3599,7 @@ exports.applyMixins = applyMixins;
 //# sourceMappingURL=applyMixins.js.map
 
 /***/ }),
-/* 338 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3718,6 +3718,7 @@ exports.VirtualAction = VirtualAction;
 //# sourceMappingURL=VirtualTimeScheduler.js.map
 
 /***/ }),
+/* 338 */,
 /* 339 */,
 /* 340 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3876,7 +3877,7 @@ var AsyncSubject_1 = __webpack_require__(306);
 exports.AsyncSubject = AsyncSubject_1.AsyncSubject;
 var ReplaySubject_1 = __webpack_require__(309);
 exports.ReplaySubject = ReplaySubject_1.ReplaySubject;
-var BehaviorSubject_1 = __webpack_require__(329);
+var BehaviorSubject_1 = __webpack_require__(328);
 exports.BehaviorSubject = BehaviorSubject_1.BehaviorSubject;
 var ConnectableObservable_1 = __webpack_require__(220);
 exports.ConnectableObservable = ConnectableObservable_1.ConnectableObservable;
@@ -3888,25 +3889,25 @@ var ArgumentOutOfRangeError_1 = __webpack_require__(305);
 exports.ArgumentOutOfRangeError = ArgumentOutOfRangeError_1.ArgumentOutOfRangeError;
 var ObjectUnsubscribedError_1 = __webpack_require__(209);
 exports.ObjectUnsubscribedError = ObjectUnsubscribedError_1.ObjectUnsubscribedError;
-var TimeoutError_1 = __webpack_require__(333);
+var TimeoutError_1 = __webpack_require__(332);
 exports.TimeoutError = TimeoutError_1.TimeoutError;
 var UnsubscriptionError_1 = __webpack_require__(214);
 exports.UnsubscriptionError = UnsubscriptionError_1.UnsubscriptionError;
-var timeInterval_1 = __webpack_require__(332);
+var timeInterval_1 = __webpack_require__(331);
 exports.TimeInterval = timeInterval_1.TimeInterval;
-var timestamp_1 = __webpack_require__(334);
+var timestamp_1 = __webpack_require__(333);
 exports.Timestamp = timestamp_1.Timestamp;
 var TestScheduler_1 = __webpack_require__(599);
 exports.TestScheduler = TestScheduler_1.TestScheduler;
-var VirtualTimeScheduler_1 = __webpack_require__(338);
+var VirtualTimeScheduler_1 = __webpack_require__(337);
 exports.VirtualTimeScheduler = VirtualTimeScheduler_1.VirtualTimeScheduler;
-var AjaxObservable_1 = __webpack_require__(322);
+var AjaxObservable_1 = __webpack_require__(321);
 exports.AjaxResponse = AjaxObservable_1.AjaxResponse;
 exports.AjaxError = AjaxObservable_1.AjaxError;
 exports.AjaxTimeoutError = AjaxObservable_1.AjaxTimeoutError;
-var asap_1 = __webpack_require__(330);
+var asap_1 = __webpack_require__(329);
 var async_1 = __webpack_require__(301);
-var queue_1 = __webpack_require__(323);
+var queue_1 = __webpack_require__(322);
 var animationFrame_1 = __webpack_require__(602);
 var rxSubscriber_1 = __webpack_require__(56);
 var iterator_1 = __webpack_require__(206);
@@ -5822,7 +5823,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(9);
-var noop_1 = __webpack_require__(320);
+var noop_1 = __webpack_require__(317);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -5913,7 +5914,7 @@ Observable_1.Observable.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNex
 
 "use strict";
 
-var onErrorResumeNext_1 = __webpack_require__(321);
+var onErrorResumeNext_1 = __webpack_require__(320);
 exports.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNextStatic;
 //# sourceMappingURL=onErrorResumeNext.js.map
 
@@ -6423,7 +6424,7 @@ Observable_1.Observable.ajax = ajax_1.ajax;
 
 "use strict";
 
-var AjaxObservable_1 = __webpack_require__(322);
+var AjaxObservable_1 = __webpack_require__(321);
 exports.ajax = AjaxObservable_1.AjaxObservable.create;
 //# sourceMappingURL=ajax.js.map
 
@@ -7897,7 +7898,7 @@ Observable_1.Observable.prototype.concatMap = concatMap_1.concatMap;
 
 "use strict";
 
-var mergeMap_1 = __webpack_require__(324);
+var mergeMap_1 = __webpack_require__(323);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to an Observable which is merged in the output
@@ -7981,7 +7982,7 @@ Observable_1.Observable.prototype.concatMapTo = concatMapTo_1.concatMapTo;
 
 "use strict";
 
-var mergeMapTo_1 = __webpack_require__(325);
+var mergeMapTo_1 = __webpack_require__(324);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to the same Observable which is merged multiple
@@ -9180,7 +9181,7 @@ exports.Set = root_1.root.Set || minimalSetImpl();
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var distinctUntilChanged_1 = __webpack_require__(326);
+var distinctUntilChanged_1 = __webpack_require__(325);
 Observable_1.Observable.prototype.distinctUntilChanged = distinctUntilChanged_1.distinctUntilChanged;
 //# sourceMappingURL=distinctUntilChanged.js.map
 
@@ -9201,7 +9202,7 @@ Observable_1.Observable.prototype.distinctUntilKeyChanged = distinctUntilKeyChan
 
 "use strict";
 
-var distinctUntilChanged_1 = __webpack_require__(326);
+var distinctUntilChanged_1 = __webpack_require__(325);
 /* tslint:enable:max-line-length */
 /**
  * Returns an Observable that emits all items emitted by the source Observable that are distinct by comparison from the previous item,
@@ -9955,7 +9956,7 @@ var ElementAtSubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var filter_1 = __webpack_require__(327);
+var filter_1 = __webpack_require__(326);
 Observable_1.Observable.prototype.filter = filter_1.filter;
 //# sourceMappingURL=filter.js.map
 
@@ -10027,7 +10028,7 @@ var FinallySubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var find_1 = __webpack_require__(328);
+var find_1 = __webpack_require__(327);
 Observable_1.Observable.prototype.find = find_1.find;
 //# sourceMappingURL=find.js.map
 
@@ -10048,7 +10049,7 @@ Observable_1.Observable.prototype.findIndex = findIndex_1.findIndex;
 
 "use strict";
 
-var find_1 = __webpack_require__(328);
+var find_1 = __webpack_require__(327);
 /**
  * Emits only the index of the first value emitted by the source Observable that
  * meets some condition.
@@ -10673,7 +10674,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(29);
-var noop_1 = __webpack_require__(320);
+var noop_1 = __webpack_require__(317);
 /**
  * Ignores all items emitted by the source Observable and only passes calls of `complete` or `error`.
  *
@@ -11568,7 +11569,7 @@ Observable_1.Observable.prototype.mergeAll = mergeAll_1.mergeAll;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var mergeMap_1 = __webpack_require__(324);
+var mergeMap_1 = __webpack_require__(323);
 Observable_1.Observable.prototype.mergeMap = mergeMap_1.mergeMap;
 Observable_1.Observable.prototype.flatMap = mergeMap_1.mergeMap;
 //# sourceMappingURL=mergeMap.js.map
@@ -11580,7 +11581,7 @@ Observable_1.Observable.prototype.flatMap = mergeMap_1.mergeMap;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var mergeMapTo_1 = __webpack_require__(325);
+var mergeMapTo_1 = __webpack_require__(324);
 Observable_1.Observable.prototype.flatMapTo = mergeMapTo_1.mergeMapTo;
 Observable_1.Observable.prototype.mergeMapTo = mergeMapTo_1.mergeMapTo;
 //# sourceMappingURL=mergeMapTo.js.map
@@ -11818,7 +11819,7 @@ Observable_1.Observable.prototype.observeOn = observeOn_1.observeOn;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var onErrorResumeNext_1 = __webpack_require__(321);
+var onErrorResumeNext_1 = __webpack_require__(320);
 Observable_1.Observable.prototype.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNext;
 //# sourceMappingURL=onErrorResumeNext.js.map
 
@@ -11934,7 +11935,7 @@ Observable_1.Observable.prototype.partition = partition_1.partition;
 "use strict";
 
 var not_1 = __webpack_require__(509);
-var filter_1 = __webpack_require__(327);
+var filter_1 = __webpack_require__(326);
 /**
  * Splits the source Observable into two, one with values that satisfy a
  * predicate, and another with values that don't satisfy the predicate.
@@ -12133,7 +12134,7 @@ Observable_1.Observable.prototype.publishBehavior = publishBehavior_1.publishBeh
 
 "use strict";
 
-var BehaviorSubject_1 = __webpack_require__(329);
+var BehaviorSubject_1 = __webpack_require__(328);
 var multicast_1 = __webpack_require__(205);
 /**
  * @param value
@@ -13806,7 +13807,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(9);
-var asap_1 = __webpack_require__(330);
+var asap_1 = __webpack_require__(329);
 var isNumeric_1 = __webpack_require__(307);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -14942,7 +14943,7 @@ var TakeWhileSubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var throttle_1 = __webpack_require__(331);
+var throttle_1 = __webpack_require__(330);
 Observable_1.Observable.prototype.throttle = throttle_1.throttle;
 //# sourceMappingURL=throttle.js.map
 
@@ -14970,7 +14971,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subscriber_1 = __webpack_require__(29);
 var async_1 = __webpack_require__(301);
-var throttle_1 = __webpack_require__(331);
+var throttle_1 = __webpack_require__(330);
 /**
  * Emits a value from the source Observable, then ignores subsequent source
  * values for `duration` milliseconds, then repeats this process.
@@ -15086,7 +15087,7 @@ function dispatchNext(arg) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var timeInterval_1 = __webpack_require__(332);
+var timeInterval_1 = __webpack_require__(331);
 Observable_1.Observable.prototype.timeInterval = timeInterval_1.timeInterval;
 //# sourceMappingURL=timeInterval.js.map
 
@@ -15115,7 +15116,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var async_1 = __webpack_require__(301);
 var isDate_1 = __webpack_require__(308);
 var Subscriber_1 = __webpack_require__(29);
-var TimeoutError_1 = __webpack_require__(333);
+var TimeoutError_1 = __webpack_require__(332);
 /**
  *
  * Errors if Observable does not emit a value in given time span.
@@ -15359,7 +15360,7 @@ var TimeoutWithSubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var timestamp_1 = __webpack_require__(334);
+var timestamp_1 = __webpack_require__(333);
 Observable_1.Observable.prototype.timestamp = timestamp_1.timestamp;
 //# sourceMappingURL=timestamp.js.map
 
@@ -16511,8 +16512,8 @@ var Observable_1 = __webpack_require__(9);
 var Notification_1 = __webpack_require__(302);
 var ColdObservable_1 = __webpack_require__(600);
 var HotObservable_1 = __webpack_require__(601);
-var SubscriptionLog_1 = __webpack_require__(336);
-var VirtualTimeScheduler_1 = __webpack_require__(338);
+var SubscriptionLog_1 = __webpack_require__(335);
+var VirtualTimeScheduler_1 = __webpack_require__(337);
 var defaultMaxFrame = 750;
 var TestScheduler = (function (_super) {
     __extends(TestScheduler, _super);
@@ -16738,8 +16739,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(9);
 var Subscription_1 = __webpack_require__(33);
-var SubscriptionLoggable_1 = __webpack_require__(335);
-var applyMixins_1 = __webpack_require__(337);
+var SubscriptionLoggable_1 = __webpack_require__(334);
+var applyMixins_1 = __webpack_require__(336);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -16790,8 +16791,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(32);
 var Subscription_1 = __webpack_require__(33);
-var SubscriptionLoggable_1 = __webpack_require__(335);
-var applyMixins_1 = __webpack_require__(337);
+var SubscriptionLoggable_1 = __webpack_require__(334);
+var applyMixins_1 = __webpack_require__(336);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -17035,11 +17036,12 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* 621 */,
 /* 622 */,
 /* 623 */,
-/* 624 */
+/* 624 */,
+/* 625 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TinderQ2Page; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TinderQPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
@@ -17067,87 +17069,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * If you'd like to immediately put the user onto a login/signup page,
  * we recommend not using the Welcome page.
 */
-var TinderQ2Page = (function () {
-    function TinderQ2Page(http, navCtrl, navParams) {
+var TinderQPage = (function () {
+    function TinderQPage(http, navCtrl, navParams) {
         var _this = this;
         this.http = http;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.recentCard = '';
         this.showButton = true;
-        this.questions = [
+        this.agroQuestions = [
             {
                 id: 0,
                 name: "Surface recevant du public",
-                question: "Possédez-vous une surface commerciale ou magasin ?",
-                img: "assets/img/questions/boutique-fruits.jpg",
+                question: "Possedez-vous une surface commerciale ou magasin ?",
+                img: "assets/img/boutique-fruits.jpg",
                 // + hygiene et prop classique + Gestion des déchets - secteur industriel
-                servicesIdIfYes: [0, 1, 2, 3, 4, 5]
-                // servicesIdIfYes: [0, 5, 6, 19]
+                servicesIdIfYes: [0, 1, 2]
             },
             {
                 id: 1,
-                name: "Surface recevant du public",
-                question: "Possédez-vous des bureaux ou sièges sociaux ?",
-                img: "assets/img/questions/bureau.jpg",
-                servicesIdIfYes: [0, 5, 6, 8, 17]
+                name: "Clients en situation d'handicap",
+                question: "Désirez-vous accompagner vos clients en situation d'handicap ?",
+                img: "assets/img/handicap.jpg",
+                servicesIdIfYes: []
             },
             {
                 id: 2,
-                name: "Clients en situation d'handicap",
-                question: "Désirez-vous accompagner vos clients en situation d'handicap ?",
-                img: "assets/img/questions/handicap.jpg",
-                servicesIdIfYes: [20]
+                name: "Usine ou zone de fabrication",
+                question: "Possedez-vous une usine ou zone de fabrication ?",
+                img: "assets/img/usine-boissons.jpg",
+                servicesIdIfYes: []
             },
             {
                 id: 3,
-                name: "Usine ou zone de fabrication",
-                question: "Possedez-vous une usine ou zone de fabrication ?",
-                img: "assets/img/questions/usine-boissons.jpg",
-                servicesIdIfYes: [1, 2, 3, 5, 7]
+                name: "Sécurité",
+                question: "Désirez-vous voir nos services relatifs à la sécurité ?",
+                img: "assets/img/securite-q.jpg",
+                servicesIdIfYes: []
             },
             {
                 id: 4,
-                name: "Sécurité",
-                question: "Désirez-vous voir nos services relatifs à la sécurité ?",
-                img: "assets/img/questions/securite-q.jpg",
-                servicesIdIfYes: [9, 10, 11, 12, 13]
+                name: "Service logistique",
+                question: "Seriez-vous interessés par une optimisation de votre système logistique et manutention ?",
+                img: "assets/img/logistique.jpg",
+                servicesIdIfYes: []
             },
             {
                 id: 5,
-                name: "Service logistique",
-                question: "Seriez-vous interessés par une optimisation de votre système logistique et manutention ?",
-                img: "assets/img/questions/logistique.jpg",
-                servicesIdIfYes: [21, 22, 23, 24]
-            },
-            {
-                id: 6,
                 name: "Recrutement",
                 question: "Pensez-vous à recruter ?",
-                img: "assets/img/questions/recrutement.jpg",
-                servicesIdIfYes: [39, 40, 41]
-            },
-            {
-                id: 7,
-                name: "Evenement",
-                question: "Pensez-vous à organiser des évenements ?",
-                img: "assets/img/questions/evenement.jpg",
-                servicesIdIfYes: [18]
-            },
-            {
-                id: 8,
-                name: "Technologies",
-                question: "Voulez-vous voir nos solutions pour le traitement de déchets radioactif ?",
-                img: "assets/img/questions/technologies.jpg",
-                servicesIdIfYes: [28, 34, 35, 36, 37]
-            },
-            {
-                id: 9,
-                name: "Surface recevant du public",
-                question: "Possédez-vous un cabinet médical ?",
-                img: "assets/img/questions/cabinet.jpg",
-                servicesIdIfYes: [0, 5, 6, 8, 17]
-            },
+                img: "assets/img/recrutement.jpg",
+                servicesIdIfYes: []
+            }
         ];
         this.stackConfig = {
             throwOutConfidence: function (offsetX, offsetY, element) {
@@ -17164,34 +17137,23 @@ var TinderQ2Page = (function () {
         this.param2 = navParams.get('param2');
         this.param3 = navParams.get('param3');
         this.param4 = navParams.get('param4');
-        this.param5 = navParams.get('param5');
         console.log("param1: " + this.param1);
         console.log("param2: " + this.param2);
         console.log("param3: " + this.param3);
         console.log("param4: " + this.param4);
-        console.log("param5: " + this.param5);
         this.resultsTemp = new Array();
-        this.myAnswer = new Array();
     }
-    TinderQ2Page.prototype.getNextNode = function (like) {
+    TinderQPage.prototype.getNextNode = function (like) {
         if (like) {
             for (var _i = 0, _a = this.currentNode[this.currentQId].servicesIdIfYes; _i < _a.length; _i++) {
                 var serviceId = _a[_i];
-                var bool = false;
-                for (var _b = 0, _c = this.resultsTemp; _b < _c.length; _b++) {
-                    var resultId = _c[_b];
-                    if (serviceId == resultId) {
-                        bool = true;
-                    }
-                }
-                if (!bool)
-                    this.resultsTemp.push(serviceId);
+                this.resultsTemp.push(serviceId);
             }
         }
         this.currentQId++;
     };
     // Called whenever we drag an element
-    TinderQ2Page.prototype.onItemMove = function (element, x, y, r) {
+    TinderQPage.prototype.onItemMove = function (element, x, y, r) {
         var elmt = element.children[0].children[0].children[0].children[0].children[0].children[0];
         var color = '';
         var abs = Math.abs(x);
@@ -17211,7 +17173,7 @@ var TinderQ2Page = (function () {
         elmt.style['opacity'] = 0.4;
     };
     // Connected through HTML
-    TinderQ2Page.prototype.voteUp = function (like) {
+    TinderQPage.prototype.voteUp = function (like) {
         // if (this.currentNode.length == this.currentQId + 3)
         // {
         //   var lastCard = document.getElementsByClassName('card')[0];
@@ -17221,41 +17183,73 @@ var TinderQ2Page = (function () {
         //   var lastCard = document.getElementsByClassName('card')[0];
         //   lastCard.setAttribute("style", "display:none");
         // }
-        this.myAnswer.push({
-            question: this.currentNode[this.currentQId],
-            answer: like
-        });
         this.getNextNode(like);
         var removedCard = this.cards.pop();
         if (this.currentNode[this.currentQId] != null) {
             this.cards.push(this.currentNode[this.currentQId]);
         }
         else {
-            console.log(this.resultsTemp);
             this.navCtrl.push('ResultPage', {
                 param1: this.param1,
                 param2: this.param2,
                 param3: this.param3,
                 param4: this.param4,
-                param5: this.param5,
-                param6: this.resultsTemp,
-                param7: this.myAnswer
+                param5: this.resultsTemp
             });
-            console.log(this.myAnswer);
             this.resultsTemp = [];
-            this.myAnswer = [];
             this.cards.pop();
             this.cards.pop();
         }
+        if (document.getElementsByClassName('card')[0] != null) {
+            var behindCard = document.getElementsByClassName('card')[0];
+            if (document.getElementsByClassName('card')[0].children[0] != null) {
+                var behindElmt = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[0].children[2];
+                var behindImg = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[0].children[1];
+            }
+            if (document.getElementsByClassName('card')[0].children[0] != null) {
+                var behindButtonYes = document.getElementsByClassName('card')[0].children[0].children[1].children[0].children[0];
+                var behindButtonNo = document.getElementsByClassName('card')[0].children[0].children[1].children[1].children[0];
+            }
+        }
+        if (this.currentNode[this.currentQId + 1] != null) {
+            if (this.currentNode[this.currentQId + 1].question != null) {
+                if (behindElmt != null) {
+                    behindElmt.innerHTML = this.currentNode[this.currentQId + 1].question;
+                    behindImg.setAttribute("src", this.currentNode[this.currentQId + 1].img);
+                }
+            }
+            else {
+                if (behindElmt != null) {
+                    behindElmt.innerHTML = 'Déterminons votre besoin';
+                }
+            }
+        }
+        else {
+            if (behindCard != null) {
+                behindCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
+            }
+            if (behindElmt != null) {
+                behindElmt.innerHTML = 'Nous allons déterminer votre besoin';
+            }
+            if (behindButtonYes != null) {
+                behindButtonYes.setAttribute("style", "display: none");
+            }
+            if (behindButtonNo != null) {
+                behindButtonNo.setAttribute("style", "display: none");
+            }
+            if (behindImg != null) {
+                behindImg.setAttribute("style", "display:none");
+            }
+        }
     };
     // Add new cards to our array
-    TinderQ2Page.prototype.addNewCards = function (node, id) {
+    TinderQPage.prototype.addNewCards = function (node, id) {
         if (this.currentNode.length > id) {
             this.cards.push(node);
         }
     };
     // http://stackoverflow.com/questions/57803/how-to-convert-decimal-to-hex-in-javascript
-    TinderQ2Page.prototype.decimalToHex = function (d, padding) {
+    TinderQPage.prototype.decimalToHex = function (d, padding) {
         var hex = Number(d).toString(16);
         padding = typeof (padding) === "undefined" || padding === null ? padding = 2 : padding;
         while (hex.length < padding) {
@@ -17263,396 +17257,71 @@ var TinderQ2Page = (function () {
         }
         return hex;
     };
-    TinderQ2Page.prototype.prev = function () {
+    TinderQPage.prototype.prev = function () {
         this.navCtrl.pop();
     };
-    TinderQ2Page.prototype.ngAfterViewInit = function () {
-        console.log("INIT");
-        this.myQuestions = new Array();
+    TinderQPage.prototype.ngAfterViewInit = function () {
         switch (this.param2) {
             // id = 0, secteur: Agroalimentaire
             case 0:
-                this.myQuestions.push(this.questions[0]);
-                this.myQuestions.push(this.questions[2]);
-                this.myQuestions.push(this.questions[3]);
-                this.myQuestions.push(this.questions[4]);
-                this.myQuestions.push(this.questions[6]);
-                this.myQuestions.push(this.questions[7]);
-                switch (this.param4) {
-                    // Boucherie
-                    case 0:
-                        break;
-                    // Poissonnerie
-                    case 1:
-                        break;
-                    // Boulangerie / patisserie
-                    case 2:
-                        break;
-                    // Fruits et légumes
-                    case 3:
-                        break;
-                    // Produits laitiers
-                    case 4:
-                        break;
-                    // Grains / Produits amylacés
-                    case 5:
-                        break;
-                    // Huiles / Graisses végétales ou animales
-                    case 6:
-                        break;
-                    // Boissons
-                    case 7:
-                        break;
-                }
-                ;
-                this.currentNode = this.myQuestions;
+                this.currentNode = this.agroQuestions;
                 this.currentQId = 0;
                 break;
-            // id = 1, secteur: Industrie  
+            // id = 0, secteur: Industrie  
             case 1:
-                this.myQuestions.push(this.questions[1]);
-                this.myQuestions.push(this.questions[4]);
-                this.myQuestions.push(this.questions[5]);
-                this.myQuestions.push(this.questions[6]);
-                this.resultsTemp.push(1);
-                this.resultsTemp.push(2);
-                this.resultsTemp.push(3);
-                this.resultsTemp.push(5);
-                this.resultsTemp.push(7);
-                this.resultsTemp.push(38);
-                switch (this.param4) {
-                    // Pharmaceutique
-                    case 0:
-                        this.resultsTemp.push(34);
-                        break;
-                    // Textile
-                    case 1:
-                        break;
-                    // Chimique
-                    case 2:
-                        this.resultsTemp.push(34);
-                        break;
-                    // Construction
-                    case 3:
-                        break;
-                    // Bâtiment
-                    case 4:
-                        this.resultsTemp.push(25);
-                        break;
-                    // Automobile
-                    case 5:
-                        break;
-                    // Aéronautique
-                    case 6:
-                        break;
-                    // Lourde
-                    case 7:
-                        this.resultsTemp.push(34);
-                        break;
-                }
-                ;
-                this.currentNode = this.myQuestions;
-                this.currentQId = 0;
                 break;
-            // id = 2, secteur: Energie
             case 2:
-                this.myQuestions.push(this.questions[3]);
-                this.myQuestions.push(this.questions[4]);
-                this.myQuestions.push(this.questions[1]);
-                this.myQuestions.push(this.questions[5]);
-                this.myQuestions.push(this.questions[6]);
-                this.resultsTemp.push(1);
-                this.resultsTemp.push(2);
-                this.resultsTemp.push(3);
-                this.resultsTemp.push(5);
-                this.resultsTemp.push(7);
-                this.resultsTemp.push(8);
-                switch (this.param4) {
-                    // Nucléaire
-                    case 0:
-                        this.myQuestions.push(this.questions[8]);
-                        this.resultsTemp.push(25);
-                        this.resultsTemp.push(26);
-                        this.resultsTemp.push(27);
-                        this.resultsTemp.push(30);
-                        this.resultsTemp.push(31);
-                        this.resultsTemp.push(32);
-                        this.resultsTemp.push(33);
-                        break;
-                    // Eolien
-                    case 1:
-                        break;
-                    // Solaire
-                    case 2:
-                        break;
-                    // Hydrolique
-                    case 3:
-                        break;
-                    // Pétrolier
-                    case 4:
-                        break;
-                    //
-                    case 5:
-                        break;
-                    //
-                    case 6:
-                        break;
-                    // Autre
-                    case 7:
-                        break;
-                }
-                ;
-                this.currentNode = this.myQuestions;
-                this.currentQId = 0;
                 break;
-            // id = 3, secteur: Commerce & Tourisme
             case 3:
-                this.myQuestions.push(this.questions[4]);
-                this.myQuestions.push(this.questions[5]);
-                this.myQuestions.push(this.questions[6]);
-                this.myQuestions.push(this.questions[7]);
-                this.myQuestions.push(this.questions[2]);
-                this.resultsTemp.push(0);
-                this.resultsTemp.push(5);
-                this.resultsTemp.push(6);
-                this.resultsTemp.push(8);
-                this.resultsTemp.push(19);
-                switch (this.param4) {
-                    // Grand Commerce
-                    case 0:
-                        break;
-                    // Petit Commerce
-                    case 1:
-                        break;
-                    // Artisanat
-                    case 2:
-                        break;
-                    // Hôtellerie
-                    case 3:
-                        break;
-                    // Restauration
-                    case 4:
-                        break;
-                    // Autre
-                    case 5:
-                        break;
-                    //
-                    case 6:
-                        break;
-                    //
-                    case 7:
-                        break;
-                }
-                ;
-                this.currentNode = this.myQuestions;
-                this.currentQId = 0;
                 break;
-            // id = 4, secteur: Transports et logistique
             case 4:
-                this.myQuestions.push(this.questions[1]);
-                this.myQuestions.push(this.questions[4]);
-                this.myQuestions.push(this.questions[6]);
-                this.resultsTemp.push(1);
-                this.resultsTemp.push(2);
-                this.resultsTemp.push(4);
-                this.resultsTemp.push(8);
-                this.resultsTemp.push(21);
-                this.resultsTemp.push(22);
-                switch (this.param4) {
-                    // Aéronautique
-                    case 0:
-                        this.resultsTemp.push(14);
-                        this.resultsTemp.push(15);
-                        this.resultsTemp.push(16);
-                        break;
-                    // Ferroviaire
-                    case 1:
-                        this.resultsTemp.push(24);
-                        break;
-                    // Urbain
-                    case 2:
-                        this.resultsTemp.push(23);
-                        break;
-                    // Maritime
-                    case 3:
-                        break;
-                    // Astronautique
-                    case 4:
-                        break;
-                    // Distribution
-                    case 5:
-                        break;
-                    // Gestion & pilotage
-                    case 6:
-                        break;
-                    // Autre
-                    case 7:
-                        break;
-                }
-                ;
-                this.currentNode = this.myQuestions;
-                this.currentQId = 0;
                 break;
-            // id = 5, secteur: Télécoms & Informatique
             case 5:
-                this.myQuestions.push(this.questions[6]);
-                this.myQuestions.push(this.questions[2]);
-                this.myQuestions.push(this.questions[4]);
-                this.myQuestions.push(this.questions[1]);
-                this.myQuestions.push(this.questions[7]);
-                switch (this.param4) {
-                    // Systèmes d'information
-                    case 0:
-                        break;
-                    // Robotique
-                    case 1:
-                        break;
-                    // Technologies
-                    case 2:
-                        break;
-                    // Recherches
-                    case 3:
-                        break;
-                    // Autre
-                    case 4:
-                        break;
-                    //
-                    case 5:
-                        break;
-                    //
-                    case 6:
-                        break;
-                    //
-                    case 7:
-                        break;
-                }
-                ;
-                this.currentNode = this.myQuestions;
-                this.currentQId = 0;
                 break;
-            // id = 6, secteur: Santé et services
             case 6:
-                this.myQuestions.push(this.questions[9]);
-                this.myQuestions.push(this.questions[2]);
-                this.myQuestions.push(this.questions[4]);
-                this.myQuestions.push(this.questions[5]);
-                this.myQuestions.push(this.questions[6]);
-                this.resultsTemp.push(8);
-                switch (this.param4) {
-                    // Médecine
-                    case 0:
-                        break;
-                    // Pharmaceutique
-                    case 1:
-                        break;
-                    // Aide à la personne
-                    case 2:
-                        break;
-                    // Gardiennage
-                    case 3:
-                        break;
-                    // Recherche
-                    case 4:
-                        break;
-                    // Autre
-                    case 5:
-                        break;
-                    //
-                    case 6:
-                        break;
-                    //
-                    case 7:
-                        break;
-                }
-                ;
-                this.currentNode = this.myQuestions;
-                this.currentQId = 0;
-                break;
-            // id = 7, secteur: Economie
-            case 7:
-                this.myQuestions.push(this.questions[1]);
-                this.myQuestions.push(this.questions[2]);
-                this.myQuestions.push(this.questions[4]);
-                this.myQuestions.push(this.questions[6]);
-                this.resultsTemp.push(8);
-                this.resultsTemp.push(17);
-                switch (this.param4) {
-                    // Banque
-                    case 0:
-                        break;
-                    // Finance
-                    case 1:
-                        break;
-                    // Assurance
-                    case 2:
-                        break;
-                    // Audit
-                    case 3:
-                        break;
-                    // Conseil
-                    case 4:
-                        break;
-                    // Autre
-                    case 5:
-                        break;
-                    //
-                    case 6:
-                        break;
-                    //
-                    case 7:
-                        break;
-                }
-                ;
-                this.currentNode = this.myQuestions;
-                this.currentQId = 0;
                 break;
         }
-        console.log(this.myQuestions);
-        console.log(this.resultsTemp);
         // Either subscribe in controller or set in HTML
         this.swingStack.throwin.subscribe(function (event) {
         });
-        this.cards = [{}];
+        this.cards = [this.currentNode[this.currentQId + 1]];
         this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
         console.log(this.navCtrl.getPrevious().id);
         if (this.navCtrl.getPrevious().id == "WelcomePage" || this.navCtrl.getPrevious().id == "SignupPage") {
             this.showButton = false;
         }
     };
-    TinderQ2Page.prototype.ionViewDidLeave = function () {
-        console.log(this.navCtrl.getActive());
-        if (!(this.navCtrl.getActive().component.name == "WelcomePage") && !(this.navCtrl.getActive().component.name == "TinderQ2Page")) {
-            this.currentNode = this.myQuestions;
+    TinderQPage.prototype.ionViewDidLeave = function () {
+        if (!(this.navCtrl.getActive().component.name == "WelcomePage")) {
+            this.currentNode = this.agroQuestions;
             this.currentQId = 0;
             this.swingStack.throwin.subscribe(function (event) {
             });
-            this.cards = [{}];
+            this.cards = [this.currentNode[this.currentQId + 1]];
             this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
         }
-        console.log("Did Leave ???");
     };
-    TinderQ2Page.prototype.login = function () {
+    TinderQPage.prototype.login = function () {
         this.navCtrl.push('WelcomePage');
     };
-    return TinderQ2Page;
+    return TinderQPage;
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('myswing1'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"]) === "function" && _a || Object)
-], TinderQ2Page.prototype, "swingStack", void 0);
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"])
+], TinderQPage.prototype, "swingStack", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChildren"])('mycards1'),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"]) === "function" && _b || Object)
-], TinderQ2Page.prototype, "swingCards", void 0);
-TinderQ2Page = __decorate([
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"])
+], TinderQPage.prototype, "swingCards", void 0);
+TinderQPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-tinderQ2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ2\tinderQ2.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button *ngIf="showButton" ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      <ion-card-content>\n\n                          <ion-item *ngIf="c.question">\n\n                              <div id="validate-or-not" class="validate-or-not"></div>\n\n                              <img *ngIf="c.img" [src]="c.img">\n\n                              <h1 class="relative-pos" style="font-weight: 900">{{ c.question }}</h1>\n\n                          </ion-item>\n\n                     \n\n                          <ion-row *ngIf="c.name">\n\n                            <ion-col>\n\n                              <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                                  <ion-icon name="checkmark-circle"></ion-icon>\n\n                                  YES\n\n                              </button>\n\n                            </ion-col>\n\n                            <ion-col>\n\n                              <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                                <ion-icon name="close-circle"></ion-icon>\n\n                                NO\n\n                              </button>\n\n                            </ion-col>\n\n                          </ion-row>\n\n                        \n\n                      </ion-card-content>\n\n                    </ion-card>\n\n                  </div>\n\n              </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ2\tinderQ2.html"*/
+        selector: 'page-tinderQ',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button *ngIf="showButton" ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      <ion-card-content>\n\n                          <ion-item *ngIf="c.question">\n\n                              <div id="validate-or-not" class="validate-or-not"></div>\n\n                              <img *ngIf="c.img" [src]="c.img">\n\n                              <h1 class="relative-pos" style="font-weight: 900">{{ c.question }}</h1>\n\n                          </ion-item>\n\n                     \n\n                          <ion-row *ngIf="c.name">\n\n                            <ion-col>\n\n                              <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                                  <ion-icon name="checkmark-circle"></ion-icon>\n\n                                  YES\n\n                              </button>\n\n                            </ion-col>\n\n                            <ion-col>\n\n                              <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                                <ion-icon name="close-circle"></ion-icon>\n\n                                NO\n\n                              </button>\n\n                            </ion-col>\n\n                          </ion-row>\n\n                        \n\n                      </ion-card-content>\n\n                    </ion-card>\n\n                  </div>\n\n              </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _e || Object])
-], TinderQ2Page);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+], TinderQPage);
 
-var _a, _b, _c, _d, _e;
-//# sourceMappingURL=tinderQ2.js.map
+//# sourceMappingURL=tinderQ.js.map
 
 /***/ })
 ]));

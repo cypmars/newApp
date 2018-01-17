@@ -1,16 +1,15 @@
-webpackJsonp([1],Array(298).concat([
-/* 298 */
+webpackJsonp([1],Array(294).concat([
+/* 294 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TinderQPageModule", function() { return TinderQPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SimpleFormPageModule", function() { return SimpleFormPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(623);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic2_auto_complete__ = __webpack_require__(621);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_CompleteTestService__ = __webpack_require__(613);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simple_form__ = __webpack_require__(622);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,30 +21,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TinderQPageModule = (function () {
-    function TinderQPageModule() {
+var SimpleFormPageModule = (function () {
+    function SimpleFormPageModule() {
     }
-    return TinderQPageModule;
+    return SimpleFormPageModule;
 }());
-TinderQPageModule = __decorate([
+SimpleFormPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__tinderQ__["a" /* TinderQPage */],
+            __WEBPACK_IMPORTED_MODULE_4__simple_form__["a" /* SimpleFormPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingModule"],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__tinderQ__["a" /* TinderQPage */])
+            __WEBPACK_IMPORTED_MODULE_2_ionic2_auto_complete__["a" /* AutoCompleteModule */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__simple_form__["a" /* SimpleFormPage */]),
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_3__providers_CompleteTestService__["a" /* CompleteTestService */]
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_3__tinderQ__["a" /* TinderQPage */]
+            __WEBPACK_IMPORTED_MODULE_4__simple_form__["a" /* SimpleFormPage */]
         ]
     })
-], TinderQPageModule);
+], SimpleFormPageModule);
 
-//# sourceMappingURL=tinderQ.module.js.map
+//# sourceMappingURL=simple-form.module.js.map
 
 /***/ }),
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
 /* 299 */,
 /* 300 */,
 /* 301 */
@@ -573,7 +578,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subject_1 = __webpack_require__(32);
-var queue_1 = __webpack_require__(323);
+var queue_1 = __webpack_require__(322);
 var Subscription_1 = __webpack_require__(33);
 var observeOn_1 = __webpack_require__(313);
 var ObjectUnsubscribedError_1 = __webpack_require__(209);
@@ -1589,7 +1594,17 @@ Observable_1.Observable.prototype.map = map_1.map;
 //# sourceMappingURL=map.js.map
 
 /***/ }),
-/* 317 */,
+/* 317 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/* tslint:disable:no-empty */
+function noop() { }
+exports.noop = noop;
+//# sourceMappingURL=noop.js.map
+
+/***/ }),
 /* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1840,17 +1855,6 @@ exports.RaceSubscriber = RaceSubscriber;
 
 "use strict";
 
-/* tslint:disable:no-empty */
-function noop() { }
-exports.noop = noop;
-//# sourceMappingURL=noop.js.map
-
-/***/ }),
-/* 321 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -1989,7 +1993,7 @@ var OnErrorResumeNextSubscriber = (function (_super) {
 //# sourceMappingURL=onErrorResumeNext.js.map
 
 /***/ }),
-/* 322 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2410,7 +2414,7 @@ exports.AjaxTimeoutError = AjaxTimeoutError;
 //# sourceMappingURL=AjaxObservable.js.map
 
 /***/ }),
-/* 323 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2482,7 +2486,7 @@ exports.queue = new QueueScheduler_1.QueueScheduler(QueueAction_1.QueueAction);
 //# sourceMappingURL=queue.js.map
 
 /***/ }),
-/* 324 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2659,7 +2663,7 @@ exports.MergeMapSubscriber = MergeMapSubscriber;
 //# sourceMappingURL=mergeMap.js.map
 
 /***/ }),
-/* 325 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2820,7 +2824,7 @@ exports.MergeMapToSubscriber = MergeMapToSubscriber;
 //# sourceMappingURL=mergeMapTo.js.map
 
 /***/ }),
-/* 326 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2934,7 +2938,7 @@ var DistinctUntilChangedSubscriber = (function (_super) {
 //# sourceMappingURL=distinctUntilChanged.js.map
 
 /***/ }),
-/* 327 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3032,7 +3036,7 @@ var FilterSubscriber = (function (_super) {
 //# sourceMappingURL=filter.js.map
 
 /***/ }),
-/* 328 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3139,7 +3143,7 @@ exports.FindValueSubscriber = FindValueSubscriber;
 //# sourceMappingURL=find.js.map
 
 /***/ }),
-/* 329 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3194,7 +3198,7 @@ exports.BehaviorSubject = BehaviorSubject;
 //# sourceMappingURL=BehaviorSubject.js.map
 
 /***/ }),
-/* 330 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3239,7 +3243,7 @@ exports.asap = new AsapScheduler_1.AsapScheduler(AsapAction_1.AsapAction);
 //# sourceMappingURL=asap.js.map
 
 /***/ }),
-/* 331 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3387,7 +3391,7 @@ var ThrottleSubscriber = (function (_super) {
 //# sourceMappingURL=throttle.js.map
 
 /***/ }),
-/* 332 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3452,7 +3456,7 @@ var TimeIntervalSubscriber = (function (_super) {
 //# sourceMappingURL=timeInterval.js.map
 
 /***/ }),
-/* 333 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3483,7 +3487,7 @@ exports.TimeoutError = TimeoutError;
 //# sourceMappingURL=TimeoutError.js.map
 
 /***/ }),
-/* 334 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3539,12 +3543,12 @@ var TimestampSubscriber = (function (_super) {
 //# sourceMappingURL=timestamp.js.map
 
 /***/ }),
-/* 335 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var SubscriptionLog_1 = __webpack_require__(336);
+var SubscriptionLog_1 = __webpack_require__(335);
 var SubscriptionLoggable = (function () {
     function SubscriptionLoggable() {
         this.subscriptions = [];
@@ -3564,7 +3568,7 @@ exports.SubscriptionLoggable = SubscriptionLoggable;
 //# sourceMappingURL=SubscriptionLoggable.js.map
 
 /***/ }),
-/* 336 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3581,7 +3585,7 @@ exports.SubscriptionLog = SubscriptionLog;
 //# sourceMappingURL=SubscriptionLog.js.map
 
 /***/ }),
-/* 337 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3600,7 +3604,7 @@ exports.applyMixins = applyMixins;
 //# sourceMappingURL=applyMixins.js.map
 
 /***/ }),
-/* 338 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3719,6 +3723,7 @@ exports.VirtualAction = VirtualAction;
 //# sourceMappingURL=VirtualTimeScheduler.js.map
 
 /***/ }),
+/* 338 */,
 /* 339 */,
 /* 340 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3877,7 +3882,7 @@ var AsyncSubject_1 = __webpack_require__(306);
 exports.AsyncSubject = AsyncSubject_1.AsyncSubject;
 var ReplaySubject_1 = __webpack_require__(309);
 exports.ReplaySubject = ReplaySubject_1.ReplaySubject;
-var BehaviorSubject_1 = __webpack_require__(329);
+var BehaviorSubject_1 = __webpack_require__(328);
 exports.BehaviorSubject = BehaviorSubject_1.BehaviorSubject;
 var ConnectableObservable_1 = __webpack_require__(220);
 exports.ConnectableObservable = ConnectableObservable_1.ConnectableObservable;
@@ -3889,25 +3894,25 @@ var ArgumentOutOfRangeError_1 = __webpack_require__(305);
 exports.ArgumentOutOfRangeError = ArgumentOutOfRangeError_1.ArgumentOutOfRangeError;
 var ObjectUnsubscribedError_1 = __webpack_require__(209);
 exports.ObjectUnsubscribedError = ObjectUnsubscribedError_1.ObjectUnsubscribedError;
-var TimeoutError_1 = __webpack_require__(333);
+var TimeoutError_1 = __webpack_require__(332);
 exports.TimeoutError = TimeoutError_1.TimeoutError;
 var UnsubscriptionError_1 = __webpack_require__(214);
 exports.UnsubscriptionError = UnsubscriptionError_1.UnsubscriptionError;
-var timeInterval_1 = __webpack_require__(332);
+var timeInterval_1 = __webpack_require__(331);
 exports.TimeInterval = timeInterval_1.TimeInterval;
-var timestamp_1 = __webpack_require__(334);
+var timestamp_1 = __webpack_require__(333);
 exports.Timestamp = timestamp_1.Timestamp;
 var TestScheduler_1 = __webpack_require__(599);
 exports.TestScheduler = TestScheduler_1.TestScheduler;
-var VirtualTimeScheduler_1 = __webpack_require__(338);
+var VirtualTimeScheduler_1 = __webpack_require__(337);
 exports.VirtualTimeScheduler = VirtualTimeScheduler_1.VirtualTimeScheduler;
-var AjaxObservable_1 = __webpack_require__(322);
+var AjaxObservable_1 = __webpack_require__(321);
 exports.AjaxResponse = AjaxObservable_1.AjaxResponse;
 exports.AjaxError = AjaxObservable_1.AjaxError;
 exports.AjaxTimeoutError = AjaxObservable_1.AjaxTimeoutError;
-var asap_1 = __webpack_require__(330);
+var asap_1 = __webpack_require__(329);
 var async_1 = __webpack_require__(301);
-var queue_1 = __webpack_require__(323);
+var queue_1 = __webpack_require__(322);
 var animationFrame_1 = __webpack_require__(602);
 var rxSubscriber_1 = __webpack_require__(56);
 var iterator_1 = __webpack_require__(206);
@@ -5823,7 +5828,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(9);
-var noop_1 = __webpack_require__(320);
+var noop_1 = __webpack_require__(317);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -5914,7 +5919,7 @@ Observable_1.Observable.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNex
 
 "use strict";
 
-var onErrorResumeNext_1 = __webpack_require__(321);
+var onErrorResumeNext_1 = __webpack_require__(320);
 exports.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNextStatic;
 //# sourceMappingURL=onErrorResumeNext.js.map
 
@@ -6424,7 +6429,7 @@ Observable_1.Observable.ajax = ajax_1.ajax;
 
 "use strict";
 
-var AjaxObservable_1 = __webpack_require__(322);
+var AjaxObservable_1 = __webpack_require__(321);
 exports.ajax = AjaxObservable_1.AjaxObservable.create;
 //# sourceMappingURL=ajax.js.map
 
@@ -7898,7 +7903,7 @@ Observable_1.Observable.prototype.concatMap = concatMap_1.concatMap;
 
 "use strict";
 
-var mergeMap_1 = __webpack_require__(324);
+var mergeMap_1 = __webpack_require__(323);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to an Observable which is merged in the output
@@ -7982,7 +7987,7 @@ Observable_1.Observable.prototype.concatMapTo = concatMapTo_1.concatMapTo;
 
 "use strict";
 
-var mergeMapTo_1 = __webpack_require__(325);
+var mergeMapTo_1 = __webpack_require__(324);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to the same Observable which is merged multiple
@@ -9181,7 +9186,7 @@ exports.Set = root_1.root.Set || minimalSetImpl();
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var distinctUntilChanged_1 = __webpack_require__(326);
+var distinctUntilChanged_1 = __webpack_require__(325);
 Observable_1.Observable.prototype.distinctUntilChanged = distinctUntilChanged_1.distinctUntilChanged;
 //# sourceMappingURL=distinctUntilChanged.js.map
 
@@ -9202,7 +9207,7 @@ Observable_1.Observable.prototype.distinctUntilKeyChanged = distinctUntilKeyChan
 
 "use strict";
 
-var distinctUntilChanged_1 = __webpack_require__(326);
+var distinctUntilChanged_1 = __webpack_require__(325);
 /* tslint:enable:max-line-length */
 /**
  * Returns an Observable that emits all items emitted by the source Observable that are distinct by comparison from the previous item,
@@ -9956,7 +9961,7 @@ var ElementAtSubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var filter_1 = __webpack_require__(327);
+var filter_1 = __webpack_require__(326);
 Observable_1.Observable.prototype.filter = filter_1.filter;
 //# sourceMappingURL=filter.js.map
 
@@ -10028,7 +10033,7 @@ var FinallySubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var find_1 = __webpack_require__(328);
+var find_1 = __webpack_require__(327);
 Observable_1.Observable.prototype.find = find_1.find;
 //# sourceMappingURL=find.js.map
 
@@ -10049,7 +10054,7 @@ Observable_1.Observable.prototype.findIndex = findIndex_1.findIndex;
 
 "use strict";
 
-var find_1 = __webpack_require__(328);
+var find_1 = __webpack_require__(327);
 /**
  * Emits only the index of the first value emitted by the source Observable that
  * meets some condition.
@@ -10674,7 +10679,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(29);
-var noop_1 = __webpack_require__(320);
+var noop_1 = __webpack_require__(317);
 /**
  * Ignores all items emitted by the source Observable and only passes calls of `complete` or `error`.
  *
@@ -11569,7 +11574,7 @@ Observable_1.Observable.prototype.mergeAll = mergeAll_1.mergeAll;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var mergeMap_1 = __webpack_require__(324);
+var mergeMap_1 = __webpack_require__(323);
 Observable_1.Observable.prototype.mergeMap = mergeMap_1.mergeMap;
 Observable_1.Observable.prototype.flatMap = mergeMap_1.mergeMap;
 //# sourceMappingURL=mergeMap.js.map
@@ -11581,7 +11586,7 @@ Observable_1.Observable.prototype.flatMap = mergeMap_1.mergeMap;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var mergeMapTo_1 = __webpack_require__(325);
+var mergeMapTo_1 = __webpack_require__(324);
 Observable_1.Observable.prototype.flatMapTo = mergeMapTo_1.mergeMapTo;
 Observable_1.Observable.prototype.mergeMapTo = mergeMapTo_1.mergeMapTo;
 //# sourceMappingURL=mergeMapTo.js.map
@@ -11819,7 +11824,7 @@ Observable_1.Observable.prototype.observeOn = observeOn_1.observeOn;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var onErrorResumeNext_1 = __webpack_require__(321);
+var onErrorResumeNext_1 = __webpack_require__(320);
 Observable_1.Observable.prototype.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNext;
 //# sourceMappingURL=onErrorResumeNext.js.map
 
@@ -11935,7 +11940,7 @@ Observable_1.Observable.prototype.partition = partition_1.partition;
 "use strict";
 
 var not_1 = __webpack_require__(509);
-var filter_1 = __webpack_require__(327);
+var filter_1 = __webpack_require__(326);
 /**
  * Splits the source Observable into two, one with values that satisfy a
  * predicate, and another with values that don't satisfy the predicate.
@@ -12134,7 +12139,7 @@ Observable_1.Observable.prototype.publishBehavior = publishBehavior_1.publishBeh
 
 "use strict";
 
-var BehaviorSubject_1 = __webpack_require__(329);
+var BehaviorSubject_1 = __webpack_require__(328);
 var multicast_1 = __webpack_require__(205);
 /**
  * @param value
@@ -13807,7 +13812,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(9);
-var asap_1 = __webpack_require__(330);
+var asap_1 = __webpack_require__(329);
 var isNumeric_1 = __webpack_require__(307);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -14943,7 +14948,7 @@ var TakeWhileSubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var throttle_1 = __webpack_require__(331);
+var throttle_1 = __webpack_require__(330);
 Observable_1.Observable.prototype.throttle = throttle_1.throttle;
 //# sourceMappingURL=throttle.js.map
 
@@ -14971,7 +14976,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subscriber_1 = __webpack_require__(29);
 var async_1 = __webpack_require__(301);
-var throttle_1 = __webpack_require__(331);
+var throttle_1 = __webpack_require__(330);
 /**
  * Emits a value from the source Observable, then ignores subsequent source
  * values for `duration` milliseconds, then repeats this process.
@@ -15087,7 +15092,7 @@ function dispatchNext(arg) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var timeInterval_1 = __webpack_require__(332);
+var timeInterval_1 = __webpack_require__(331);
 Observable_1.Observable.prototype.timeInterval = timeInterval_1.timeInterval;
 //# sourceMappingURL=timeInterval.js.map
 
@@ -15116,7 +15121,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var async_1 = __webpack_require__(301);
 var isDate_1 = __webpack_require__(308);
 var Subscriber_1 = __webpack_require__(29);
-var TimeoutError_1 = __webpack_require__(333);
+var TimeoutError_1 = __webpack_require__(332);
 /**
  *
  * Errors if Observable does not emit a value in given time span.
@@ -15360,7 +15365,7 @@ var TimeoutWithSubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var timestamp_1 = __webpack_require__(334);
+var timestamp_1 = __webpack_require__(333);
 Observable_1.Observable.prototype.timestamp = timestamp_1.timestamp;
 //# sourceMappingURL=timestamp.js.map
 
@@ -16512,8 +16517,8 @@ var Observable_1 = __webpack_require__(9);
 var Notification_1 = __webpack_require__(302);
 var ColdObservable_1 = __webpack_require__(600);
 var HotObservable_1 = __webpack_require__(601);
-var SubscriptionLog_1 = __webpack_require__(336);
-var VirtualTimeScheduler_1 = __webpack_require__(338);
+var SubscriptionLog_1 = __webpack_require__(335);
+var VirtualTimeScheduler_1 = __webpack_require__(337);
 var defaultMaxFrame = 750;
 var TestScheduler = (function (_super) {
     __extends(TestScheduler, _super);
@@ -16739,8 +16744,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(9);
 var Subscription_1 = __webpack_require__(33);
-var SubscriptionLoggable_1 = __webpack_require__(335);
-var applyMixins_1 = __webpack_require__(337);
+var SubscriptionLoggable_1 = __webpack_require__(334);
+var applyMixins_1 = __webpack_require__(336);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -16791,8 +16796,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(32);
 var Subscription_1 = __webpack_require__(33);
-var SubscriptionLoggable_1 = __webpack_require__(335);
-var applyMixins_1 = __webpack_require__(337);
+var SubscriptionLoggable_1 = __webpack_require__(334);
+var applyMixins_1 = __webpack_require__(336);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -17025,7 +17030,68 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* 610 */,
 /* 611 */,
 /* 612 */,
-/* 613 */,
+/* 613 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompleteTestService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CompleteTestService = (function () {
+    function CompleteTestService(http) {
+        this.http = http;
+        this.labelAttribute = "title";
+    }
+    CompleteTestService.prototype.getResults = function (keyword) {
+        var _this = this;
+        return this.http.get('assets/data/services.json')
+            .map(function (result) {
+            return result.json().services
+                .filter(function (item) { return _this.sansAccent(item.title.toLowerCase()).includes(keyword.toLowerCase()); }).slice(0, 5);
+        });
+    };
+    CompleteTestService.prototype.sansAccent = function (string) {
+        var accent = [
+            /[\300-\306]/g, /[\340-\346]/g,
+            /[\310-\313]/g, /[\350-\353]/g,
+            /[\314-\317]/g, /[\354-\357]/g,
+            /[\322-\330]/g, /[\362-\370]/g,
+            /[\331-\334]/g, /[\371-\374]/g,
+            /[\321]/g, /[\361]/g,
+            /[\307]/g, /[\347]/g,
+        ];
+        var noaccent = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'N', 'n', 'C', 'c'];
+        var str = string;
+        for (var i = 0; i < accent.length; i++) {
+            str = str.replace(accent[i], noaccent[i]);
+        }
+        return str;
+    };
+    return CompleteTestService;
+}());
+CompleteTestService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]) === "function" && _a || Object])
+], CompleteTestService);
+
+var _a;
+//# sourceMappingURL=CompleteTestService.js.map
+
+/***/ }),
 /* 614 */,
 /* 615 */,
 /* 616 */,
@@ -17033,20 +17099,435 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* 618 */,
 /* 619 */,
 /* 620 */,
-/* 621 */,
-/* 622 */,
-/* 623 */
+/* 621 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TinderQPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AutoCompleteModule; });
+/* unused harmony export AutoCompleteComponent */
+/* unused harmony export BoldPrefix */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(54);
+
+
+
+
+
+
+
+// searchbar default options
+var defaultOpts = {
+    cancelButtonText: 'Cancel',
+    showCancelButton: false,
+    debounce: 250,
+    placeholder: 'Search',
+    autocomplete: 'off',
+    autocorrect: 'off',
+    spellcheck: 'off',
+    type: 'search',
+    value: '',
+    noItems: '',
+    clearOnEdit: false,
+    clearInput: false
+};
+var AutoCompleteComponent = (function () {
+    /**
+     * create a new instace
+     */
+    function AutoCompleteComponent() {
+        this.hideListOnSelection = true;
+        this.onTouchedCallback = __WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop__["noop"];
+        this.onChangeCallback = __WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop__["noop"];
+        this.showListChanged = false;
+        this.keyword = '';
+        this.suggestions = [];
+        this._showList = false;
+        this.itemSelected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.itemsShown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.itemsHidden = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.ionAutoInput = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.autoFocus = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.autoBlur = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.options = {};
+        // set default options
+        this.defaultOpts = defaultOpts;
+    }
+    Object.defineProperty(AutoCompleteComponent.prototype, "showList", {
+        /**
+         * @return {?}
+         */
+        get: function () {
+            return this._showList;
+        },
+        /**
+         * @param {?} value
+         * @return {?}
+         */
+        set: function (value) {
+            if (this._showList === value) {
+                return;
+            }
+            this._showList = value;
+            this.showListChanged = true;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * handle tap
+     * @param {?} event
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.handleTap = function (event) {
+        if (this.showResultsFirst || this.keyword.length > 0) {
+            this.getItems();
+        }
+    };
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.writeValue = function (value) {
+        if (value !== this.selection) {
+            this.selection = value || null;
+            this.formValue = this.getFormValue(this.selection);
+            this.keyword = this.getLabel(this.selection);
+        }
+    };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.registerOnChange = function (fn) {
+        this.onChangeCallback = fn;
+    };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.registerOnTouched = function (fn) {
+        this.onTouchedCallback = fn;
+    };
+    /**
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.updateModel = function () {
+        this.onChangeCallback(this.formValue);
+    };
+    /**
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.ngAfterViewChecked = function () {
+        if (this.showListChanged) {
+            this.showListChanged = false;
+            this.showList ? this.itemsShown.emit() : this.itemsHidden.emit();
+        }
+    };
+    /**
+     * get items for auto-complete
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.getItems = function () {
+        var _this = this;
+        var /** @type {?} */ result;
+        if (this.showResultsFirst && this.keyword.trim() === '') {
+            this.keyword = '';
+        }
+        else if (this.keyword.trim() === '') {
+            this.suggestions = [];
+            return;
+        }
+        if (typeof this.dataProvider === 'function') {
+            result = this.dataProvider(this.keyword);
+        }
+        else {
+            result = this.dataProvider.getResults(this.keyword);
+        }
+        // if result is instanceof Subject, use it asObservable
+        if (result instanceof __WEBPACK_IMPORTED_MODULE_4_rxjs__["Subject"]) {
+            result = result.asObservable();
+        }
+        if (result instanceof Promise) {
+            result = __WEBPACK_IMPORTED_MODULE_4_rxjs__["Observable"].fromPromise(result);
+        }
+        // if query is async
+        if (result instanceof __WEBPACK_IMPORTED_MODULE_4_rxjs__["Observable"]) {
+            result
+                .subscribe(function (results) {
+                _this.suggestions = results;
+                _this.showItemList();
+            }, function (error) { return console.error(error); });
+        }
+        else {
+            this.suggestions = result;
+            this.showItemList();
+        }
+        // emit event
+        this.ionAutoInput.emit(this.keyword);
+    };
+    /**
+     * show item list
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.showItemList = function () {
+        this.showList = true;
+    };
+    /**
+     * hide item list
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.hideItemList = function () {
+        this.showList = this.alwaysShowList;
+    };
+    /**
+     * select item from list
+     *
+     * @param {?} selection
+     *
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.select = function (selection) {
+        this.keyword = this.getLabel(selection);
+        this.formValue = this.getFormValue(selection);
+        this.hideItemList();
+        // emit selection event
+        this.updateModel();
+        if (this.hideListOnSelection) {
+            this.hideItemList();
+        }
+        // emit selection event
+        this.itemSelected.emit(selection);
+        this.selection = selection;
+    };
+    /**
+     * get current selection
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.getSelection = function () {
+        return this.selection;
+    };
+    /**
+     * get current input value
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.getValue = function () {
+        return this.formValue;
+    };
+    /**
+     * set current input value
+     * @param {?} selection
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.setValue = function (selection) {
+        this.formValue = this.getFormValue(selection);
+        this.keyword = this.getLabel(selection);
+        return;
+    };
+    /**
+     * /**
+     * clear current input value
+     * @param {?=} hideItemList
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.clearValue = function (hideItemList) {
+        if (hideItemList === void 0) { hideItemList = false; }
+        this.keyword = '';
+        this.selection = null;
+        this.formValue = null;
+        if (hideItemList) {
+            this.hideItemList();
+        }
+        return;
+    };
+    /**
+     * set focus of searchbar
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.setFocus = function () {
+        if (this.searchbarElem) {
+            this.searchbarElem.setFocus();
+        }
+    };
+    /**
+     * fired when the input focused
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.onFocus = function () {
+        this.autoFocus.emit();
+    };
+    /**
+     * fired when the input focused
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.onBlur = function () {
+        this.autoBlur.emit();
+    };
+    /**
+     * handle document click
+     * @param {?} event
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.documentClickHandler = function (event) {
+        if ((this.searchbarElem
+            && !this.searchbarElem._elementRef.nativeElement.contains(event.target))
+            ||
+                (!this.inputElem && this.inputElem._elementRef.nativeElement.contains(event.target))) {
+            this.hideItemList();
+        }
+    };
+    /**
+     * @param {?} selection
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.getFormValue = function (selection) {
+        if (selection == null) {
+            return null;
+        }
+        var /** @type {?} */ attr = this.dataProvider.formValueAttribute == null ? this.dataProvider.labelAttribute : this.dataProvider.formValueAttribute;
+        if (typeof selection === 'object' && attr) {
+            return selection[attr];
+        }
+        return selection;
+    };
+    /**
+     * @param {?} selection
+     * @return {?}
+     */
+    AutoCompleteComponent.prototype.getLabel = function (selection) {
+        if (selection == null) {
+            return '';
+        }
+        var /** @type {?} */ attr = this.dataProvider.labelAttribute;
+        var /** @type {?} */ value = selection;
+        if (this.dataProvider.getItemLabel) {
+            value = this.dataProvider.getItemLabel(value);
+        }
+        if (typeof value === 'object' && attr) {
+            return value[attr] || '';
+        }
+        return value || '';
+    };
+    return AutoCompleteComponent;
+}());
+AutoCompleteComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'ion-auto-complete',
+                template: "\n        <ion-input\n                #inputElem\n                (keyup)=\"getItems($event)\"\n                (tap)=\"handleTap($event)\"\n                [(ngModel)]=\"keyword\"\n                (ngModelChange)=\"updateModel()\"\n                [placeholder]=\"options.placeholder == null ? defaultOpts.placeholder : options.placeholder\"\n                [type]=\"options.type == null ? defaultOpts.type : options.type\"\n                [clearOnEdit]=\"options.clearOnEdit == null ? defaultOpts.clearOnEdit : options.clearOnEdit\"\n                [clearInput]=\"options.clearInput == null ? defaultOpts.clearInput : options.clearInput\"\n                [disabled]=\"disabled\"\n                [ngClass]=\"{'hidden': !useIonInput}\"\n                (ionFocus)=\"onFocus()\"\n                (ionBlur)=\"onBlur()\"\n        >\n        </ion-input>\n        <ion-searchbar\n                #searchbarElem\n                (ionInput)=\"getItems($event)\"\n                (tap)=\"handleTap($event)\"\n                [(ngModel)]=\"keyword\"\n                (ngModelChange)=\"updateModel()\"\n                [cancelButtonText]=\"options.cancelButtonText == null ? defaultOpts.cancelButtonText : options.cancelButtonText\"\n                [showCancelButton]=\"options.showCancelButton == null ? defaultOpts.showCancelButton : options.showCancelButton\"\n                [debounce]=\"options.debounce == null ? defaultOpts.debounce : options.debounce\"\n                [placeholder]=\"options.placeholder == null ? defaultOpts.placeholder : options.placeholder\"\n                [autocomplete]=\"options.autocomplete == null ? defaultOpts.autocomplete : options.autocomplete\"\n                [autocorrect]=\"options.autocorrect == null ? defaultOpts.autocorrect : options.autocorrect\"\n                [spellcheck]=\"options.spellcheck == null ? defaultOpts.spellcheck : options.spellcheck\"\n                [type]=\"options.type == null ? defaultOpts.type : options.type\"\n                [disabled]=\"disabled\"\n                [ngClass]=\"{'hidden': useIonInput}\"\n                (ionClear)=\"clearValue(true)\"\n                (ionFocus)=\"onFocus()\"\n                (ionBlur)=\"onBlur()\"\n        >\n        </ion-searchbar>\n        <ng-template #defaultTemplate let-attrs=\"attrs\">\n            <span [innerHTML]='attrs.label | boldprefix:attrs.keyword'></span>\n        </ng-template>\n        <ul *ngIf=\"!disabled && suggestions.length > 0 && showList\">\n            <li *ngFor=\"let suggestion of suggestions\" (tap)=\"select(suggestion);$event.srcEvent.stopPropagation()\">\n                <ng-template\n                        [ngTemplateOutlet]=\"template || defaultTemplate\"\n                        [ngTemplateOutletContext]=\"\n                        {attrs:{ \n                          data: suggestion, \n                          label: getLabel(suggestion),\n                          keyword: keyword,\n                          formValue: getFormValue(suggestion), \n                          labelAttribute: dataProvider.labelAttribute, \n                          formValueAttribute: dataProvider.formValueAttribute }}\"></ng-template>\n            </li>\n        </ul>\n        <p *ngIf=\"suggestions.length == 0 && showList && options.noItems\">{{ options.noItems }}</p>\n    ",
+                providers: [
+                    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* NG_VALUE_ACCESSOR */], useExisting: AutoCompleteComponent, multi: true }
+                ]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+AutoCompleteComponent.ctorParameters = function () { return []; };
+AutoCompleteComponent.propDecorators = {
+    'dataProvider': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'options': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'disabled': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'keyword': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'showResultsFirst': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'alwaysShowList': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'hideListOnSelection': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'template': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'useIonInput': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'autoFocus': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'autoBlur': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'itemSelected': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'itemsShown': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'itemsHidden': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'ionAutoInput': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'searchbarElem': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"], args: ['searchbarElem',] },],
+    'inputElem': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"], args: ['inputElem',] },],
+    'documentClickHandler': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"], args: ['document:click', ['$event'],] },],
+};
+
+/**
+ * bolds the beggining of the matching string in the item
+ */
+var BoldPrefix = (function () {
+    function BoldPrefix() {
+    }
+    /**
+     * @param {?} value
+     * @param {?} keyword
+     * @return {?}
+     */
+    BoldPrefix.prototype.transform = function (value, keyword) {
+        if (!keyword)
+            return value;
+        var /** @type {?} */ escaped_keyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        return value.replace(new RegExp(escaped_keyword, 'gi'), function (str) { return str.bold(); });
+    };
+    return BoldPrefix;
+}());
+BoldPrefix.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{
+                name: 'boldprefix'
+            },] },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+BoldPrefix.ctorParameters = function () { return []; };
+
+var AutoCompleteModule = (function () {
+    function AutoCompleteModule() {
+    }
+    /**
+     * @return {?}
+     */
+    AutoCompleteModule.forRoot = function () {
+        return {
+            ngModule: AutoCompleteModule,
+            providers: []
+        };
+    };
+    return AutoCompleteModule;
+}());
+AutoCompleteModule.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
+                imports: [
+                    __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
+                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
+                    __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["d" /* IonicModule */]
+                ],
+                declarations: [
+                    AutoCompleteComponent,
+                    BoldPrefix
+                ],
+                exports: [
+                    AutoCompleteComponent,
+                    BoldPrefix
+                ]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+AutoCompleteModule.ctorParameters = function () { return []; };
+
+
+
+
+/***/ }),
+/* 622 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SimpleFormPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_CompleteTestService__ = __webpack_require__(613);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -17067,259 +17548,76 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * If you'd like to immediately put the user onto a login/signup page,
  * we recommend not using the Welcome page.
 */
-var TinderQPage = (function () {
-    function TinderQPage(http, navCtrl, navParams) {
-        var _this = this;
+var SimpleFormPage = (function () {
+    function SimpleFormPage(http, navCtrl, navParams, toastCtrl, completeTestService) {
         this.http = http;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.recentCard = '';
-        this.showButton = true;
-        this.agroQuestions = [
+        this.toastCtrl = toastCtrl;
+        this.completeTestService = completeTestService;
+        this.account = {
+            email: '@ e-mail ou pseudo',
+            password: 'mot de passe'
+        };
+        this.search = {
+            param1: 'iconeName',
+            param2: 'param2',
+            param3: 'param3',
+            param4: 'param4'
+        };
+        this.itemsCat = [
             {
                 id: 0,
-                name: "Surface recevant du public",
-                question: "Possedez-vous une surface commerciale ou magasin ?",
-                img: "assets/img/boutique-fruits.jpg",
-                // + hygiene et prop classique + Gestion des déchets - secteur industriel
-                servicesIdIfYes: [0, 1, 2]
+                name: "Client",
+                iconName: "leaf"
             },
             {
                 id: 1,
-                name: "Clients en situation d'handicap",
-                question: "Désirez-vous accompagner vos clients en situation d'handicap ?",
-                img: "assets/img/handicap.jpg",
-                servicesIdIfYes: []
+                name: "Prospect",
+                iconName: "lock"
             },
             {
                 id: 2,
-                name: "Usine ou zone de fabrication",
-                question: "Possedez-vous une usine ou zone de fabrication ?",
-                img: "assets/img/usine-boissons.jpg",
-                servicesIdIfYes: []
-            },
-            {
-                id: 3,
-                name: "Sécurité",
-                question: "Désirez-vous voir nos services relatifs à la sécurité ?",
-                img: "assets/img/securite-q.jpg",
-                servicesIdIfYes: []
-            },
-            {
-                id: 4,
-                name: "Service logistique",
-                question: "Seriez-vous interessés par une optimisation de votre système logistique et manutention ?",
-                img: "assets/img/logistique.jpg",
-                servicesIdIfYes: []
-            },
-            {
-                id: 5,
-                name: "Recrutement",
-                question: "Pensez-vous à recruter ?",
-                img: "assets/img/recrutement.jpg",
-                servicesIdIfYes: []
+                name: "Collaborateur",
+                iconName: "plane"
             }
         ];
-        this.stackConfig = {
-            throwOutConfidence: function (offsetX, offsetY, element) {
-                return Math.min(Math.abs(offsetX) / (element.offsetWidth / 2), 1);
-            },
-            transform: function (element, x, y, r) {
-                _this.onItemMove(element, x, y, r);
-            },
-            throwOutDistance: function (d) {
-                return 800;
-            }
-        };
-        this.param1 = navParams.get('param1');
-        this.param2 = navParams.get('param2');
-        this.param3 = navParams.get('param3');
-        this.param4 = navParams.get('param4');
-        console.log("param1: " + this.param1);
-        console.log("param2: " + this.param2);
-        console.log("param3: " + this.param3);
-        console.log("param4: " + this.param4);
-        this.resultsTemp = new Array();
+        this.myIcon = "Choisissez une catégorie de service";
     }
-    TinderQPage.prototype.getNextNode = function (like) {
-        if (like) {
-            for (var _i = 0, _a = this.currentNode[this.currentQId].servicesIdIfYes; _i < _a.length; _i++) {
-                var serviceId = _a[_i];
-                this.resultsTemp.push(serviceId);
-            }
-        }
-        this.currentQId++;
-    };
-    // Called whenever we drag an element
-    TinderQPage.prototype.onItemMove = function (element, x, y, r) {
-        var elmt = element.children[0].children[0].children[0].children[0].children[0].children[0];
-        var color = '';
-        var abs = Math.abs(x);
-        var min = Math.trunc(Math.min(16 * 16 - abs, 16 * 16));
-        var hexCode = this.decimalToHex(min, 2);
-        if (x < 0) {
-            color = '#' + hexCode + 'FF' + hexCode;
-        }
-        else if (x === 0) {
-            color = 'transparent';
-        }
-        else {
-            color = '#FF' + hexCode + hexCode;
-        }
-        element.style['transform'] = "translate3d(0, 0, 0) translate(" + x + "px, " + y + "px) rotate(" + r + "deg)";
-        elmt.style['background-color'] = color;
-        elmt.style['opacity'] = 0.4;
-    };
-    // Connected through HTML
-    TinderQPage.prototype.voteUp = function (like) {
-        // if (this.currentNode.length == this.currentQId + 3)
-        // {
-        //   var lastCard = document.getElementsByClassName('card')[0];
-        //   lastCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
-        // }
-        // if (this.currentNode.length == this.currentQId + 2){
-        //   var lastCard = document.getElementsByClassName('card')[0];
-        //   lastCard.setAttribute("style", "display:none");
-        // }
-        this.getNextNode(like);
-        var removedCard = this.cards.pop();
-        if (this.currentNode[this.currentQId] != null) {
-            this.cards.push(this.currentNode[this.currentQId]);
-        }
-        else {
-            this.navCtrl.push('ResultPage', {
-                param1: this.param1,
-                param2: this.param2,
-                param3: this.param3,
-                param4: this.param4,
-                param5: this.resultsTemp
-            });
-            this.resultsTemp = [];
-            this.cards.pop();
-            this.cards.pop();
-        }
-        if (document.getElementsByClassName('card')[0] != null) {
-            var behindCard = document.getElementsByClassName('card')[0];
-            if (document.getElementsByClassName('card')[0].children[0] != null) {
-                var behindElmt = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[0].children[2];
-                var behindImg = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[0].children[1];
-            }
-            if (document.getElementsByClassName('card')[0].children[0] != null) {
-                var behindButtonYes = document.getElementsByClassName('card')[0].children[0].children[1].children[0].children[0];
-                var behindButtonNo = document.getElementsByClassName('card')[0].children[0].children[1].children[1].children[0];
-            }
-        }
-        if (this.currentNode[this.currentQId + 1] != null) {
-            if (this.currentNode[this.currentQId + 1].question != null) {
-                if (behindElmt != null) {
-                    behindElmt.innerHTML = this.currentNode[this.currentQId + 1].question;
-                    behindImg.setAttribute("src", this.currentNode[this.currentQId + 1].img);
-                }
-            }
-            else {
-                if (behindElmt != null) {
-                    behindElmt.innerHTML = 'Déterminons votre besoin';
-                }
-            }
-        }
-        else {
-            if (behindCard != null) {
-                behindCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
-            }
-            if (behindElmt != null) {
-                behindElmt.innerHTML = 'Nous allons déterminer votre besoin';
-            }
-            if (behindButtonYes != null) {
-                behindButtonYes.setAttribute("style", "display: none");
-            }
-            if (behindButtonNo != null) {
-                behindButtonNo.setAttribute("style", "display: none");
-            }
-            if (behindImg != null) {
-                behindImg.setAttribute("style", "display:none");
-            }
-        }
-    };
-    // Add new cards to our array
-    TinderQPage.prototype.addNewCards = function (node, id) {
-        if (this.currentNode.length > id) {
-            this.cards.push(node);
-        }
-    };
-    // http://stackoverflow.com/questions/57803/how-to-convert-decimal-to-hex-in-javascript
-    TinderQPage.prototype.decimalToHex = function (d, padding) {
-        var hex = Number(d).toString(16);
-        padding = typeof (padding) === "undefined" || padding === null ? padding = 2 : padding;
-        while (hex.length < padding) {
-            hex = "0" + hex;
-        }
-        return hex;
-    };
-    TinderQPage.prototype.prev = function () {
-        this.navCtrl.pop();
-    };
-    TinderQPage.prototype.ngAfterViewInit = function () {
-        switch (this.param2) {
-            // id = 0, secteur: Agroalimentaire
-            case 0:
-                this.currentNode = this.agroQuestions;
-                this.currentQId = 0;
-                break;
-            // id = 0, secteur: Industrie  
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-        }
-        // Either subscribe in controller or set in HTML
-        this.swingStack.throwin.subscribe(function (event) {
+    SimpleFormPage.prototype.getVal = function (event) {
+        console.log(event.id);
+        this.navCtrl.push('ServiceDetailsPage', {
+            param1: event.id,
         });
-        this.cards = [this.currentNode[this.currentQId + 1]];
-        this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
-        console.log(this.navCtrl.getPrevious().id);
-        if (this.navCtrl.getPrevious().id == "WelcomePage" || this.navCtrl.getPrevious().id == "SignupPage") {
-            this.showButton = false;
-        }
     };
-    TinderQPage.prototype.ionViewDidLeave = function () {
-        if (!(this.navCtrl.getActive().component.name == "WelcomePage")) {
-            this.currentNode = this.agroQuestions;
-            this.currentQId = 0;
-            this.swingStack.throwin.subscribe(function (event) {
-            });
-            this.cards = [this.currentNode[this.currentQId + 1]];
-            this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
-        }
-    };
-    TinderQPage.prototype.login = function () {
+    SimpleFormPage.prototype.login = function () {
         this.navCtrl.push('WelcomePage');
     };
-    return TinderQPage;
+    SimpleFormPage.prototype.ngAfterViewInit = function () {
+        this.fab.setActiveLists(true);
+    };
+    SimpleFormPage.prototype.chooseService = function (event, data, fab) {
+        this.myIcon = this.itemsCat[data].name;
+        this.search.param1 = this.itemsCat[data].iconName;
+        this.navCtrl.push('SimpleForm1Page', {
+            param1: this.myIcon,
+        });
+    };
+    return SimpleFormPage;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('myswing1'),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"])
-], TinderQPage.prototype, "swingStack", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChildren"])('mycards1'),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"])
-], TinderQPage.prototype, "swingCards", void 0);
-TinderQPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('fab'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* FabContainer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* FabContainer */]) === "function" && _a || Object)
+], SimpleFormPage.prototype, "fab", void 0);
+SimpleFormPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-tinderQ',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button *ngIf="showButton" ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      <ion-card-content>\n\n                          <ion-item *ngIf="c.question">\n\n                              <div id="validate-or-not" class="validate-or-not"></div>\n\n                              <img *ngIf="c.img" [src]="c.img">\n\n                              <h1 class="relative-pos" style="font-weight: 900">{{ c.question }}</h1>\n\n                          </ion-item>\n\n                     \n\n                          <ion-row *ngIf="c.name">\n\n                            <ion-col>\n\n                              <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                                  <ion-icon name="checkmark-circle"></ion-icon>\n\n                                  YES\n\n                              </button>\n\n                            </ion-col>\n\n                            <ion-col>\n\n                              <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                                <ion-icon name="close-circle"></ion-icon>\n\n                                NO\n\n                              </button>\n\n                            </ion-col>\n\n                          </ion-row>\n\n                        \n\n                      </ion-card-content>\n\n                    </ion-card>\n\n                  </div>\n\n              </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ\tinderQ.html"*/
+        selector: 'page-simple-form',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\simple-form\simple-form.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)"></ion-auto-complete>\n\n</ion-header>\n\n<ion-content>\n\n    <p class="white-text margin-plus" style="font-size: 1.2em;" text-center>Qui êtes-vous ?</p>\n\n    <div class="splash-info" center>\n\n        <div class="splash-form">\n\n          <div class="myFab">\n\n            <!--<ion-fab class="myFab" center top margin-top #fab>\n\n              <button id="show-services" ion-fab color="danger"><ion-icon [name]="myIcon"></ion-icon></button>\n\n              <ion-fab-list side="top">\n\n                <button (click)="chooseService($event, 0, fab)" ion-fab color="white"><ion-icon class="larger" name="leaf"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="top-left">\n\n                <button (click)="chooseService($event, 1, fab)" ion-fab color="white"><ion-icon class="larger" name="lock"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="left">\n\n                <button (click)="chooseService($event, 2, fab)" ion-fab color="white"><ion-icon class="larger" name="plane"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="bottom-left">\n\n                <button (click)="chooseService($event, 3, fab)" ion-fab color="white"><ion-icon class="larger" name="people"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="bottom">\n\n                <button (click)="chooseService($event, 4, fab)" ion-fab color="white"><ion-icon class="larger" name="train"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="bottom-right">\n\n                <button (click)="chooseService($event, 5, fab)" ion-fab color="white"><ion-icon class="larger" name="nuclear"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="right">\n\n                <button (click)="chooseService($event, 6, fab)" ion-fab color="white"><ion-icon class="larger" name="school"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="top-right">\n\n                <button (click)="chooseService($event, 7, fab)" ion-fab color="white"><ion-icon class="larger" name="code-working"></ion-icon></button>\n\n              </ion-fab-list>\n\n            </ion-fab>-->\n\n            <ion-fab class="myFab" center middle #fab >\n\n                <button id="show-services" ion-fab color="danger">{{myIcon}}</button>\n\n                <ion-fab-list side="top">\n\n                  <button (click)="chooseService($event, 0, fab)" ion-fab color="white">Client</button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="left">\n\n                  <button (click)="chooseService($event, 1, fab)" ion-fab color="white">Prospect</button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="right">\n\n                  <button (click)="chooseService($event, 2, fab)" ion-fab color="white">Collaborateur</button>\n\n                </ion-fab-list>\n\n              </ion-fab>\n\n          </div>\n\n        </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\simple-form\simple-form.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-], TinderQPage);
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__providers_CompleteTestService__["a" /* CompleteTestService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_CompleteTestService__["a" /* CompleteTestService */]) === "function" && _f || Object])
+], SimpleFormPage);
 
-//# sourceMappingURL=tinderQ.js.map
+var _a, _b, _c, _d, _e, _f;
+//# sourceMappingURL=simple-form.js.map
 
 /***/ })
 ]));

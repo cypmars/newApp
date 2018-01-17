@@ -1,14 +1,14 @@
 webpackJsonp([7],{
 
-/***/ 294:
+/***/ 300:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SimpleFormPageModule", function() { return SimpleFormPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WelcomePageModule", function() { return WelcomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__simple_form__ = __webpack_require__(620);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__welcome__ = __webpack_require__(627);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SimpleFormPageModule = (function () {
-    function SimpleFormPageModule() {
+var WelcomePageModule = (function () {
+    function WelcomePageModule() {
     }
-    return SimpleFormPageModule;
+    return WelcomePageModule;
 }());
-SimpleFormPageModule = __decorate([
+WelcomePageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__simple_form__["a" /* SimpleFormPage */],
+            __WEBPACK_IMPORTED_MODULE_2__welcome__["a" /* WelcomePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__simple_form__["a" /* SimpleFormPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__welcome__["a" /* WelcomePage */])
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__simple_form__["a" /* SimpleFormPage */]
+            __WEBPACK_IMPORTED_MODULE_2__welcome__["a" /* WelcomePage */]
         ]
     })
-], SimpleFormPageModule);
+], WelcomePageModule);
 
-//# sourceMappingURL=simple-form.module.js.map
+//# sourceMappingURL=welcome.module.js.map
 
 /***/ }),
 
-/***/ 620:
+/***/ 627:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SimpleFormPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WelcomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(57);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66,69 +67,50 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * If you'd like to immediately put the user onto a login/signup page,
  * we recommend not using the Welcome page.
 */
-var SimpleFormPage = (function () {
-    function SimpleFormPage(navCtrl, navParams, toastCtrl) {
+var WelcomePage = (function () {
+    function WelcomePage(navCtrl, toastCtrl) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
         this.toastCtrl = toastCtrl;
+        // The account fields for the login form.
+        // If you're using the username field with or without email, make
+        // sure to add it to the type
         this.account = {
             email: '@ e-mail ou pseudo',
             password: 'mot de passe'
         };
-        this.search = {
-            param1: 'iconeName',
-            param2: 'param2',
-            param3: 'param3',
-            param4: 'param4'
-        };
-        this.itemsCat = [
-            {
-                id: 0,
-                name: "Client",
-                iconName: "leaf"
-            },
-            {
-                id: 1,
-                name: "Prospect",
-                iconName: "lock"
-            },
-            {
-                id: 2,
-                name: "Collaborateur",
-                iconName: "plane"
-            }
-        ];
-        this.myIcon = "Choisissez une catégorie de service";
+        this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     }
-    SimpleFormPage.prototype.login = function () {
-        this.navCtrl.push('WelcomePage');
+    WelcomePage.prototype.ionViewWillEnter = function () {
+        this.tabBarElement.style.display = 'none';
     };
-    SimpleFormPage.prototype.ngAfterViewInit = function () {
-        this.fab.setActiveLists(true);
+    WelcomePage.prototype.ionViewWillLeave = function () {
+        this.tabBarElement.style.display = 'flex';
     };
-    SimpleFormPage.prototype.chooseService = function (event, data, fab) {
-        this.myIcon = this.itemsCat[data].name;
-        this.search.param1 = this.itemsCat[data].iconName;
-        this.navCtrl.push('SimpleForm1Page', {
-            param1: this.myIcon,
-        });
+    WelcomePage.prototype.forgot = function () {
+        this.navCtrl.push('ForgotPage');
     };
-    return SimpleFormPage;
+    WelcomePage.prototype.signup = function () {
+        this.navCtrl.push('SignupPage');
+    };
+    // Attempt to login in through our User service
+    WelcomePage.prototype.doLogin = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["e" /* TinderQPage */]);
+    };
+    WelcomePage.prototype.prev = function () {
+        this.tabBarElement.style.display = 'flex';
+        this.navCtrl.pop();
+    };
+    return WelcomePage;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('fab'),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* FabContainer */])
-], SimpleFormPage.prototype, "fab", void 0);
-SimpleFormPage = __decorate([
+WelcomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-simple-form',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\simple-form\simple-form.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n<ion-content>\n\n    <p class="white-text margin-plus" style="font-size: 1.2em;" text-center>Qui êtes-vous ?</p>\n\n    <div class="splash-info" center>\n\n        <div class="splash-form">\n\n          <div class="myFab">\n\n            <!--<ion-fab class="myFab" center top margin-top #fab>\n\n              <button id="show-services" ion-fab color="danger"><ion-icon [name]="myIcon"></ion-icon></button>\n\n              <ion-fab-list side="top">\n\n                <button (click)="chooseService($event, 0, fab)" ion-fab color="white"><ion-icon class="larger" name="leaf"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="top-left">\n\n                <button (click)="chooseService($event, 1, fab)" ion-fab color="white"><ion-icon class="larger" name="lock"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="left">\n\n                <button (click)="chooseService($event, 2, fab)" ion-fab color="white"><ion-icon class="larger" name="plane"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="bottom-left">\n\n                <button (click)="chooseService($event, 3, fab)" ion-fab color="white"><ion-icon class="larger" name="people"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="bottom">\n\n                <button (click)="chooseService($event, 4, fab)" ion-fab color="white"><ion-icon class="larger" name="train"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="bottom-right">\n\n                <button (click)="chooseService($event, 5, fab)" ion-fab color="white"><ion-icon class="larger" name="nuclear"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="right">\n\n                <button (click)="chooseService($event, 6, fab)" ion-fab color="white"><ion-icon class="larger" name="school"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="top-right">\n\n                <button (click)="chooseService($event, 7, fab)" ion-fab color="white"><ion-icon class="larger" name="code-working"></ion-icon></button>\n\n              </ion-fab-list>\n\n            </ion-fab>-->\n\n            <ion-fab class="myFab" center middle #fab >\n\n                <button id="show-services" ion-fab color="danger">{{myIcon}}</button>\n\n                <ion-fab-list side="top">\n\n                  <button (click)="chooseService($event, 0, fab)" ion-fab color="white">Client</button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="left">\n\n                  <button (click)="chooseService($event, 1, fab)" ion-fab color="white">Prospect</button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="right">\n\n                  <button (click)="chooseService($event, 2, fab)" ion-fab color="white">Collaborateur</button>\n\n                </ion-fab-list>\n\n              </ion-fab>\n\n          </div>\n\n        </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\simple-form\simple-form.html"*/
+        selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\welcome\welcome.html"*/'<ion-header no-border>\n\n  <ion-navbar color=\'primary\' hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon>back</button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      \n\n    </ion-title>\n\n    <ion-buttons end>\n\n     \n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n  <div class="splash-bg">\n\n    <div class="splash-relative">\n\n            <div class="splash-logo"></div>\n\n            <div class="splash-intro">\n\n                  Service Advisor\n\n            </div>\n\n            <br>\n\n            <div padding>\n\n            <div class="splash-form">\n\n              <button ion-button block (click)="signup()"><ion-icon name="logo-linkedin" class="white-text"></ion-icon> &nbsp;&nbsp;Se connecter avec LinkedIn</button>\n\n              <br>\n\n              <form (submit)="doLogin()">\n\n                  <ion-list text-center>\n\n              \n\n                    \n\n                    <ion-item>\n\n                      <ion-label><ion-icon name="contact" class="white-text"></ion-icon></ion-label>\n\n                      <ion-input type="text" [(ngModel)]="account.email" name="login"></ion-input>\n\n                    </ion-item>\n\n              \n\n                    <!--\n\n                    Want to use a Username instead of an Email? Here you go:\n\n              \n\n                    <ion-item>\n\n                      <ion-label floating>{{ \'USERNAME\' | translate }}</ion-label>\n\n                      <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>\n\n                    </ion-item>\n\n                    -->\n\n                    <div class="">\n\n                      \n\n                    </div>\n\n                    <ion-item>\n\n                      <ion-label><ion-icon name="lock" class="white-text"></ion-icon></ion-label>\n\n                      <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>\n\n                    </ion-item>\n\n              \n\n                    <button ion-button class="login">Se connecter</button>\n\n              \n\n                  </ion-list>\n\n                </form>                \n\n              </div>\n\n          </div>\n\n          <div class="splash-end">\n\n              <div class="splash-new">\n\n                  <a (click)="signup()">Nouveau ? S\'inscrire !</a>\n\n              </div>\n\n              <div class="splash-forgot">\n\n                <a (click)="forgot()">Mot de passe oublié</a>\n\n              </div>\n\n          </div>\n\n    </div>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\welcome\welcome.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */]])
-], SimpleFormPage);
+], WelcomePage);
 
-//# sourceMappingURL=simple-form.js.map
+//# sourceMappingURL=welcome.js.map
 
 /***/ })
 

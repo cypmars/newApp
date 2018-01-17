@@ -1,6 +1,7 @@
 import { Component, ViewChild, ViewChildren, QueryList, OnInit, OnDestroy } from '@angular/core';
 import {  FabContainer, FabButton } from 'ionic-angular';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { CompleteTestService } from '../../providers/CompleteTestService';
 
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
@@ -52,7 +53,7 @@ export class ResultPage implements OnInit, OnDestroy{
 
   myServiceId;
 
-  constructor(private http: Http, public navCtrl: NavController, private visNetworkServ: VisNetworkService, public navParams: NavParams) {
+  constructor(private http: Http, public navCtrl: NavController, private visNetworkServ: VisNetworkService, public navParams: NavParams, public completeTestService: CompleteTestService) {
    
     let servData = http.get('assets/data/services.json').map(res => res.json().services);
     servData.subscribe(data => {
@@ -79,8 +80,13 @@ export class ResultPage implements OnInit, OnDestroy{
   public networkInitialized(): void {
         if (this.firstT)
         {
+
           for (let resultId of this.param6)
           {
+            // pertinence aléatoire
+            
+            let possib = ["bas", "moyen", "haut"];
+            this.services[resultId].pertinence = possib[Math.floor(Math.random() * 3)];
             let myGroup = this.services[resultId].marqueId * 3;
             if (this.services[resultId].pertinence === "haut")
               myGroup = myGroup + 2;
@@ -113,6 +119,13 @@ export class ResultPage implements OnInit, OnDestroy{
           }
         });
         
+  }
+
+  getVal(event){
+    console.log(event.id);
+    this.navCtrl.push('ServiceDetailsPage', {
+      param1: event.id,
+    });
   }
 
   public more(){

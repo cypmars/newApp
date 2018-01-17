@@ -76,7 +76,7 @@ var map = {
 	],
 	"../pages/marqueDetails/marqueDetails.module": [
 		289,
-		5
+		6
 	],
 	"../pages/news/news.module": [
 		290,
@@ -88,15 +88,15 @@ var map = {
 	],
 	"../pages/serviceDetails/serviceDetails.module": [
 		292,
-		4
+		5
 	],
 	"../pages/signup/signup.module": [
 		293,
-		3
+		4
 	],
 	"../pages/simple-form/simple-form.module": [
 		294,
-		7
+		1
 	],
 	"../pages/simple-form1/simple-form1.module": [
 		295,
@@ -112,15 +112,15 @@ var map = {
 	],
 	"../pages/tinderQ/tinderQ.module": [
 		298,
-		1
+		2
 	],
 	"../pages/tinderQ2/tinderQ2.module": [
 		299,
-		2
+		3
 	],
 	"../pages/welcome/welcome.module": [
 		300,
-		6
+		7
 	]
 };
 function webpackAsyncContext(req) {

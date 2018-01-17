@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import {  FabContainer, FabButton, FabList } from 'ionic-angular';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { Http } from '@angular/http';
+import { CompleteTestService } from '../../providers/CompleteTestService';
 
 import { SimpleForm1Page } from '../pages';
 import { WelcomePage } from '../pages';
@@ -21,6 +23,7 @@ export class SimpleFormPage {
   // sure to add it to the type
   @ViewChild('fab') fab: FabContainer;
   
+  services;
   account: { email: string, password: string } = {
     email: '@ e-mail ou pseudo',
     password: 'mot de passe'
@@ -56,10 +59,17 @@ export class SimpleFormPage {
   // Our translated text strings
   private loginErrorString: string;
 
-  constructor(public navCtrl: NavController,
+  constructor(private http:Http, public navCtrl: NavController,
     private navParams: NavParams,
-    public toastCtrl: ToastController) {
+    public toastCtrl: ToastController, public completeTestService: CompleteTestService) {
 
+  }
+
+  getVal(event){
+    console.log(event.id);
+    this.navCtrl.push('ServiceDetailsPage', {
+      param1: event.id,
+    });
   }
 
   login() {
@@ -77,4 +87,5 @@ export class SimpleFormPage {
       param1: this.myIcon,
     });
   }
+
 }

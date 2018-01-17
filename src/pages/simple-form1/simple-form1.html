@@ -10,7 +10,7 @@
       <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>
     </ion-buttons>
   </ion-navbar>
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)"></ion-auto-complete>
 </ion-header>
 <ion-content>
     <p class="white-text margin-plus" style="font-size: 1.2em;" text-center>Quel est le secteur d'activité de votre Entreprise ?</p>

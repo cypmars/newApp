@@ -11,7 +11,7 @@
         
         </ion-buttons>
     </ion-navbar>
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)"></ion-auto-complete>
     </ion-header>
     <ion-content *ngIf="services != null">
         <div class="splash-relative">

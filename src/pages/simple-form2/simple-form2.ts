@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import {  FabContainer, FabButton, FabList } from 'ionic-angular';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { CompleteTestService } from '../../providers/CompleteTestService';
 
 import { SimpleForm1Page } from '../pages';
 import { WelcomePage } from '../pages';
@@ -68,7 +69,8 @@ export class SimpleForm2Page {
 
   constructor(public navCtrl: NavController,
     private navParams: NavParams,
-    public toastCtrl: ToastController) {
+    public toastCtrl: ToastController,
+    public completeTestService: CompleteTestService) {
 
       this.myIcon = "Quel est votre métier ?"
       this.param1 = navParams.get('param1');
@@ -84,6 +86,13 @@ export class SimpleForm2Page {
     this.navCtrl.push('WelcomePage');
   }
 
+  getVal(event){
+    console.log(event.id);
+    this.navCtrl.push('ServiceDetailsPage', {
+      param1: event.id,
+    });
+  }
+  
   public ngAfterViewInit(){
     this.fab.setActiveLists(true);
   }
