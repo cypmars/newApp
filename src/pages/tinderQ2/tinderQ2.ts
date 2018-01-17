@@ -271,6 +271,7 @@ export class TinderQ2Page {
     this.navCtrl.pop();
   }
   ngAfterViewInit() {
+    console.log("INIT");
     this.myQuestions = new Array();
     switch(this.param2){
       // id = 0, secteur: Agroalimentaire
@@ -636,7 +637,8 @@ export class TinderQ2Page {
   }
 
   ionViewDidLeave(){
-    if (! (this.navCtrl.getActive().component.name == "WelcomePage"))
+    console.log(this.navCtrl.getActive());
+    if (!(this.navCtrl.getActive().component.name == "WelcomePage") && !(this.navCtrl.getActive().component.name == "TinderQ2Page"))
     {
       this.currentNode = this.myQuestions;
       this.currentQId = 0;
@@ -645,6 +647,7 @@ export class TinderQ2Page {
       this.cards = [{}];
       this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
     }
+    console.log("Did Leave ???")
   }
 
   login(){

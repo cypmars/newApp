@@ -151,7 +151,7 @@ export class ResultPage implements OnInit, OnDestroy{
           font:{
             color:'#fff',
             size: 45,
-            align: 'right',
+            align: 'center',
             face: 'FontAwesome'
           },
         },

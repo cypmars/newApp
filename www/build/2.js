@@ -17267,6 +17267,7 @@ var TinderQ2Page = (function () {
         this.navCtrl.pop();
     };
     TinderQ2Page.prototype.ngAfterViewInit = function () {
+        console.log("INIT");
         this.myQuestions = new Array();
         switch (this.param2) {
             // id = 0, secteur: Agroalimentaire
@@ -17619,7 +17620,8 @@ var TinderQ2Page = (function () {
         }
     };
     TinderQ2Page.prototype.ionViewDidLeave = function () {
-        if (!(this.navCtrl.getActive().component.name == "WelcomePage")) {
+        console.log(this.navCtrl.getActive());
+        if (!(this.navCtrl.getActive().component.name == "WelcomePage") && !(this.navCtrl.getActive().component.name == "TinderQ2Page")) {
             this.currentNode = this.myQuestions;
             this.currentQId = 0;
             this.swingStack.throwin.subscribe(function (event) {
@@ -17627,6 +17629,7 @@ var TinderQ2Page = (function () {
             this.cards = [{}];
             this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
         }
+        console.log("Did Leave ???");
     };
     TinderQ2Page.prototype.login = function () {
         this.navCtrl.push('WelcomePage');
@@ -17635,19 +17638,20 @@ var TinderQ2Page = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('myswing1'),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_angular2_swing__["SwingStackComponent"]) === "function" && _a || Object)
 ], TinderQ2Page.prototype, "swingStack", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChildren"])('mycards1'),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"])
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"]) === "function" && _b || Object)
 ], TinderQ2Page.prototype, "swingCards", void 0);
 TinderQ2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-tinderQ2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ2\tinderQ2.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button *ngIf="showButton" ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n</ion-header>\n\n <ion-content>\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      <ion-card-content>\n\n                          <ion-item *ngIf="c.question">\n\n                              <div id="validate-or-not" class="validate-or-not"></div>\n\n                              <img *ngIf="c.img" [src]="c.img">\n\n                              <h1 class="relative-pos" style="font-weight: 900">{{ c.question }}</h1>\n\n                          </ion-item>\n\n                     \n\n                          <ion-row *ngIf="c.name">\n\n                            <ion-col>\n\n                              <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">\n\n                                  <ion-icon name="checkmark-circle"></ion-icon>\n\n                                  YES\n\n                              </button>\n\n                            </ion-col>\n\n                            <ion-col>\n\n                              <button ion-button clear icon-left color="danger" (click)="voteUp(false)">\n\n                                <ion-icon name="close-circle"></ion-icon>\n\n                                NO\n\n                              </button>\n\n                            </ion-col>\n\n                          </ion-row>\n\n                        \n\n                      </ion-card-content>\n\n                    </ion-card>\n\n                  </div>\n\n              </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ2\tinderQ2.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _e || Object])
 ], TinderQ2Page);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=tinderQ2.js.map
 
 /***/ })
