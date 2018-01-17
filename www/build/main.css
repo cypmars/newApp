@@ -26859,6 +26859,26 @@ page-result ion-footer {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+page-result .valignCenter {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-align-content: center !important;
+  -ms-flex-line-pack: center !important;
+  align-content: center !important;
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+page-result ion-auto-complete ul {
+  margin-top: -10px;
+  left: 1px;
+  width: 99.5%;
+}
+
 page-service-details ion-content {
   background: #b2284e;
   /* For browsers that do not support gradients */
@@ -27454,6 +27474,12 @@ page-simple-form .label-ios, page-simple-form .label-md {
   margin-right: 0;
 }
 
+page-simple-form ion-auto-complete ul {
+  margin-top: -10px;
+  left: 1px;
+  width: 99.5%;
+}
+
 page-simple-form1 .content-md {
   background: #b2284e;
   /* For browsers that do not support gradients */
@@ -27655,6 +27681,12 @@ page-simple-form1 .label-ios, page-simple-form1 .label-md {
   margin-right: 0;
 }
 
+page-simple-form1 ion-auto-complete ul {
+  margin-top: -10px;
+  left: 1px;
+  width: 99.5%;
+}
+
 page-simple-form2 .content-md {
   background: #b2284e;
   /* For browsers that do not support gradients */
@@ -27847,6 +27879,12 @@ page-simple-form2 .range-ios, page-simple-form2 .range-md {
 
 page-simple-form2 .label-ios, page-simple-form2 .label-md {
   margin-right: 0;
+}
+
+page-simple-form2 ion-auto-complete ul {
+  margin-top: -10px;
+  left: 1px;
+  width: 99.5%;
 }
 
 page-tinderQ .content-md, page-tinderQ .content-ios {
@@ -28099,6 +28137,12 @@ page-tinderQ2 ion-label {
 
 page-tinderQ2 #card-stack {
   margin-top: 0px;
+}
+
+page-tinderQ2 ion-auto-complete ul {
+  margin-top: -10px;
+  left: 1px;
+  width: 99.5%;
 }
 
 page-welcome ion-content {
