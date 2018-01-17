@@ -56,6 +56,7 @@ export class TinderQ2Page {
   showButton: boolean = true ; 
 
   myQuestions;
+  myAnswer;
   questions = 
   [
     {
@@ -137,7 +138,15 @@ export class TinderQ2Page {
     if (like){
       for (let serviceId of this.currentNode[this.currentQId].servicesIdIfYes)
       {
-        this.resultsTemp.push(serviceId);
+        let bool = false;
+        for (let resultId of this.resultsTemp)
+        {
+          if (serviceId == resultId){
+            bool = true
+          }
+        }
+        if (!bool)
+          this.resultsTemp.push(serviceId);
       }
     }
     this.currentQId ++;
@@ -176,6 +185,13 @@ export class TinderQ2Page {
     //   var lastCard = document.getElementsByClassName('card')[0];
     //   lastCard.setAttribute("style", "display:none");
     // }
+
+    this.myAnswer.push(    
+      {
+        question: this.currentNode[this.currentQId], 
+        answer: like
+      }
+    );
     this.getNextNode(like);
     let removedCard = this.cards.pop();
     if (this.currentNode[this.currentQId] != null)
@@ -190,9 +206,12 @@ export class TinderQ2Page {
         param3: this.param3,
         param4: this.param4,
         param5: this.param5,
-        param6: this.resultsTemp
+        param6: this.resultsTemp,
+        param7: this.myAnswer
       });
+      console.log(this.myAnswer);
       this.resultsTemp = [];
+      this.myAnswer = [];
       this.cards.pop();
       this.cards.pop();
     }
@@ -245,6 +264,7 @@ export class TinderQ2Page {
       console.log("param5: " + this.param5);
 
       this.resultsTemp = new Array();
+      this.myAnswer = new Array();
   }
 
   prev(){

@@ -79251,6 +79251,7 @@ var ResultPage = (function () {
         this.param4 = navParams.get('param4');
         this.param5 = navParams.get('param5');
         this.param6 = navParams.get('param6');
+        console.log(this.param6);
     }
     ResultPage.prototype.addNode = function (node) {
         var newId = this.visNetworkData.nodes.getLength() + 1;
@@ -79261,9 +79262,15 @@ var ResultPage = (function () {
         if (this.firstT) {
             for (var _i = 0, _a = this.param6; _i < _a.length; _i++) {
                 var resultId = _a[_i];
+                var myGroup = this.services[resultId].marqueId * 3;
+                if (this.services[resultId].pertinence === "haut")
+                    myGroup = myGroup + 2;
+                if (this.services[resultId].pertinence === "moyen")
+                    myGroup = myGroup + 1;
                 var visService = {
                     id: resultId,
-                    label: this.services[resultId].title
+                    group: myGroup,
+                    label: " " + this.services[resultId].icon + " "
                 };
                 if (this.visNetworkData.nodes.getById(resultId) == null) {
                     this.addNode(visService);
@@ -79277,14 +79284,19 @@ var ResultPage = (function () {
             .subscribe(function (eventData) {
             if (_this.firstT) {
                 if (eventData[0] === _this.visNetwork && (_this.visNetworkService.getSelectedNodes(_this.visNetwork))[0] != null) {
-                    _this.navCtrl.push('ServiceDetailsPage', {
-                        param1: (_this.visNetworkService.getSelectedNodes(_this.visNetwork))[0]
-                    });
-                    console.log(eventData[1]);
-                    console.log(_this.visNetworkService.getSelectedNodes(_this.visNetwork));
+                    _this.myServiceId = (_this.visNetworkService.getSelectedNodes(_this.visNetwork))[0];
+                    var footer = document.getElementsByClassName('footer')[0];
+                    footer.removeAttribute("hidden");
                 }
             }
         });
+    };
+    ResultPage.prototype.more = function () {
+        if (this.firstT) {
+            this.navCtrl.push('ServiceDetailsPage', {
+                param1: this.myServiceId
+            });
+        }
     };
     ResultPage.prototype.ngOnInit = function () {
         var nodes = new __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__["VisNodes"]();
@@ -79305,7 +79317,43 @@ var ResultPage = (function () {
                     border: 'transparent',
                     highlight: { background: '#F92C55', border: '#F92C55' }
                 },
-                font: { color: '#fff' },
+                font: {
+                    color: '#fff',
+                    size: 45,
+                    align: 'right',
+                    face: 'FontAwesome'
+                },
+            },
+            groups: {
+                //Groupés par marque
+                // Marque id=0
+                0: { font: { size: 45 }, color: { background: '#10e51a', highlight: { background: '#0eae15' } } },
+                1: { font: { size: 65 }, color: { background: '#10e51a', highlight: { background: '#0eae15' } } },
+                2: { font: { size: 85 }, color: { background: '#10e51a', highlight: { background: '#0eae15' } } },
+                // Marque id=1
+                3: { font: { size: 45 }, color: { background: '#f71b1b', highlight: { background: '#d01717' } } },
+                4: { font: { size: 65 }, color: { background: '#f71b1b', highlight: { background: '#d01717' } } },
+                5: { font: { size: 85 }, color: { background: '#f71b1b', highlight: { background: '#d01717' } } },
+                // Marque id=2
+                6: { font: { size: 45 }, color: { background: '#488aff', highlight: { background: '#386ecd' } } },
+                7: { font: { size: 65 }, color: { background: '#488aff', highlight: { background: '#386ecd' } } },
+                8: { font: { size: 85 }, color: { background: '#488aff', highlight: { background: '#386ecd' } } },
+                // Marque id=3
+                9: { font: { size: 45 }, color: { background: '#e5dd10', highlight: { background: '#cbc40e' } } },
+                10: { font: { size: 65 }, color: { background: '#e5dd10', highlight: { background: '#cbc40e' } } },
+                11: { font: { size: 85 }, color: { background: '#e5dd10', highlight: { background: '#cbc40e' } } },
+                // Marque id=4
+                12: { font: { size: 45 }, color: { background: '#f08640', highlight: { background: '#cc7136' } } },
+                13: { font: { size: 65 }, color: { background: '#f08640', highlight: { background: '#cc7136' } } },
+                14: { font: { size: 85 }, color: { background: '#f08640', highlight: { background: '#cc7136' } } },
+                // Marque id=5
+                15: { font: { size: 45 }, color: { background: '#b734f4', highlight: { background: '#962ac8' } } },
+                16: { font: { size: 65 }, color: { background: '#b734f4', highlight: { background: '#962ac8' } } },
+                17: { font: { size: 85 }, color: { background: '#b734f4', highlight: { background: '#962ac8' } } },
+                // Marque id=6
+                18: { font: { size: 45 }, color: { background: '#f92c55', highlight: { background: '#d42649' } } },
+                19: { font: { size: 65 }, color: { background: '#f92c55', highlight: { background: '#d42649' } } },
+                20: { font: { size: 85 }, color: { background: '#f92c55', highlight: { background: '#d42649' } } },
             },
             physics: {
                 stabilization: false,
@@ -79331,7 +79379,7 @@ var ResultPage = (function () {
 }());
 ResultPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-result',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/'\n\n    <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n        <ion-buttons start>\n\n            <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n        </ion-buttons>\n\n        <ion-title>\n\n        Recherche\n\n        </ion-title>\n\n        <ion-buttons end>\n\n        \n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n    </ion-header>\n\n    <ion-content *ngIf="services != null">\n\n        <div class="splash-relative">\n\n            <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n\n            <div class="splash-info" center>\n\n                <div class="splash-form">\n\n                    <div class="chart-container">\n\n                        <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n                    </div>\n\n                </div>\n\n            </div>\n\n        </div>\n\n    </ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/
+        selector: 'page-result',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/'\n\n    <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n        <ion-buttons start>\n\n            <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n        </ion-buttons>\n\n        <ion-title>\n\n        Recherche\n\n        </ion-title>\n\n        <ion-buttons end>\n\n        \n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n    </ion-header>\n\n    <ion-content *ngIf="services != null">\n\n        <div class="splash-relative">\n\n            <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n\n            <div class="splash-info" center>\n\n                <div class="splash-form">\n\n                    <div class="chart-container">\n\n                        <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n                    </div>\n\n                </div>\n\n            </div>\n\n        </div>\n\n        <ion-footer class="footer" hidden>\n\n            <ion-grid>\n\n              <ion-row>\n\n                <ion-col text-center col-9 *ngIf="myServiceId != null">\n\n                    <h4 style="color:#0eae15" *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#d01717" *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#386ecd" *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#cbc40e" *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#cc7136" *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#962ac8" *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].title}}</h4>\n\n                    <h4 style="color:#d42649" *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].title}}</h4>\n\n                </ion-col>\n\n                <ion-col col-3>\n\n                    <button ion-button (click)="more()" clear>+ d\'infos</button>\n\n                </ion-col>\n\n              </ion-row>\n\n            </ion-grid>\n\n        </ion-footer>\n\n    </ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_4_ng2_vis_components_network__["VisNetworkService"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], ResultPage);

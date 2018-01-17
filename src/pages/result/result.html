@@ -24,5 +24,23 @@
                 </div>
             </div>
         </div>
+        <ion-footer class="footer" hidden>
+            <ion-grid>
+              <ion-row>
+                <ion-col text-center col-9 *ngIf="myServiceId != null">
+                    <h4 style="color:#0eae15" *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].title}}</h4>
+                    <h4 style="color:#d01717" *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].title}}</h4>
+                    <h4 style="color:#386ecd" *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].title}}</h4>
+                    <h4 style="color:#cbc40e" *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].title}}</h4>
+                    <h4 style="color:#cc7136" *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].title}}</h4>
+                    <h4 style="color:#962ac8" *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].title}}</h4>
+                    <h4 style="color:#d42649" *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].title}}</h4>
+                </ion-col>
+                <ion-col col-3>
+                    <button ion-button (click)="more()" clear>+ d'infos</button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+        </ion-footer>
     </ion-content>
 

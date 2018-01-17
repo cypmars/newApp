@@ -1,6 +1,7 @@
 {
   "services":[
     {
+      "icon": "\uf000",
       "title": "Hygiène et Propreté classique",
       "subtitle": "Au cœur de votre environnement de travail",
       "subtitle2": "LA PROPRETÉ, UN BESOIN FONDAMENTAL, DES ENJEUX FORTS",
@@ -24,11 +25,13 @@
           ]
         }
       ],
+      "pertinence": "haut",
       "productsId": [0, 1, 2],
       "marqueId": 0
     },
     {
       "linkedId": 2,
+      "icon": "\uf001",
       "title": "Hygiène et Propreté en milieu sensible",
       "subtitle2": "Une expertise multisectorielle et des savoir-faire spéciﬁques pour la « maîtrise de la contamination »",
       "paragraphes": [
@@ -87,10 +90,12 @@
           "Prestations ponctuelles de 'mise à blanc'"
         ]
       }],
+      "pertinence": "bas",
       "productsId": [3],
       "marqueId": 0
     },
     {
+      "icon": "\uf002",
       "title": "Cryogénie",
       "subtitle": "Vous offrir une solution de rénovation respectueuse de votre support et de l’environnement",
       "description": [{
@@ -140,10 +145,12 @@
           ]
         }
       ],
+      "pertinence": "bas",
       "productsId": [4, 5, 6],
       "marqueId": 0
     },
     {
+      "icon": "\uf003",
       "title": "Propreté et maintenance des process industriels",
       "subtitle2": "UNE EXPERTISE TECHNIQUE ET DES MODES OPÉRATOIRES PRÉCIS",
       "paragraphes": [
@@ -164,9 +171,11 @@
           ]
         }
       ],
+      "pertinence": "bas",
       "marqueId": 0
     },
     {
+      "icon": "\uf004",
       "title": "Propreté dans les transports",
       "description": [{
         "title": "EXPERTISE ET EXPÉRIENCE POUR S'ADAPTER AUX IMPÉRATIFS DU SECTEUR DES TRANSPORTS",
@@ -216,9 +225,11 @@
           "habillage intérieur et extérieur de véhicule…"
         ]
       },
+      "pertinence": "bas",
       "marqueId": 0
     },
     {
+      "icon": "\uf005",
       "linkedId": [6, 7] ,
       "title": "Gestion des déchets",
       "description": [{
@@ -264,9 +275,11 @@
       }],
       "profileImage": "assets/img/gestion_dechet_profile.jpg",
       "coverImage": "assets/img/gravel-proprete-hopital.jpg",
+      "pertinence": "bas",
       "marqueId": 0
     },
     {
+      "icon": "\uf006",
       "title": "La gestion des déchets en milieu tertiaire",
       "paragraphes": [
         "La gestion des déchets en milieu tertiaire (bâtiments administratifs, réseaux d’agences et établissements recevant du public notamment) est fortement liée à la prestation de propreté. En effet, nos équipes réalisent la collecte des déchets à la source et interviennent au sein du cycle de vie du déchet."
@@ -382,9 +395,11 @@
       ],
       "profileImage": "assets/img/gestion_dechet_profile.jpg",
       "coverImage": "assets/img/gravel-proprete-hopital.jpg",
+      "pertinence": "bas",
       "marqueId": 0
     },
     {
+      "icon": "\uf007",
       "title": "La gestion des déchets industriels",
       "paragraphes": [
         "La gestion des déchets industriels occupe une place prépondérante au sein du cycle de production. La collecte, le tri et le suivi de l’évacuation des déchets font partie intégrante de la chaîne de production des entreprises."
@@ -478,9 +493,11 @@
       ],
       "profileImage": "assets/img/gestion_dechet_profile.jpg",
       "coverImage": "assets/img/gravel-proprete-hopital.jpg",
+      "pertinence": "bas",
       "marqueId": 0
     },
-    { 
+    {
+      "icon": "\uf008",
       "title": "Services associés",
       "paragraphes":[
         "Le maintien de la qualité de l'environnement de travail conditionne les performances de l'entreprise et garantit la sécurité des personnes comme des biens.",
@@ -512,9 +529,11 @@
       }],
       "profileImage": "assets/img/services_associes.jpg",
       "coverImage": "assets/img/gravel-proprete-hopital.jpg",
+      "pertinence": "bas",
       "marqueId": 0
     },
     {
+      "icon": "\uf009",
       "title": "Sécurité humaine*",
       "subtitle": "Solution de sécurité par agent",
       "description": [{
@@ -557,9 +576,11 @@
       }],
       "profileImage": "assets/img/img_secu_humaine_large.jpg",
       "coverImage": "assets/img/gravel-proprete-hopital.jpg",
+      "pertinence": "bas",
       "marqueId": 1
     },
     {
+      "icon": "\uf00a",
       "title": "Sécurité électronique",
       "subtitle": "Solution de sécurité par système électronique",
       "description": [{
@@ -604,9 +625,11 @@
       }],
       "profileImage": "assets/img/securite-electronique_large.jpg",
       "coverImage": "assets/img/gravel-proprete-hopital.jpg",
+      "pertinence": "bas",
       "marqueId": 1
     },
     {
+      "icon": "\uf00b",
       "title": "Télé(vidéo)surveillance*",
       "subtitle": "Solution de sécurité à distance",
       "description": 
@@ -693,9 +716,11 @@
       ],
       "profileImage": "assets/img/tls_large_large.jpg",
       "coverImage": "assets/img/gravel-proprete-hopital.jpg",
+      "pertinence": "bas",
       "marqueId": 1
     },
     {
+      "icon": "\uf00c",
       "title": "Vidéoprotection",
       "subtitle": "Solution de sécurité par images",
       "description": [{
@@ -741,9 +766,11 @@
       }],
       "profileImage": "assets/img/securite-electronique_large.jpg",
       "coverImage": "assets/img/gravel-proprete-hopital.jpg",
+      "pertinence": "bas",
       "marqueId": 1
     },
     {
+      "icon": "\uf00d",
       "title": "Conseil & Audit",
       "subtitle": "Solution d'accompagnement en prévention et maîtrise des risques",
       "description": [{
@@ -761,9 +788,11 @@
       }],
       "profileImage": "assets/img/securite-electronique_large.jpg",
       "coverImage": "assets/img/gravel-proprete-hopital.jpg",
+      "pertinence": "bas",
       "marqueId": 1
     },
     {
+      "icon": "\uf00e",
       "title": "Aviation générale",
       "paragraphes": [
         "Les équipes d’Onet Airport Services dédiées à l’aviation générale et à la spécificité de ces services, sont à la disposition de tous les propriétaires d’aéronefs privés et des sites dédiés à la recherche d’une qualité d’assistance exceptionnelle et personnalisée."
@@ -784,9 +813,11 @@
           ]
         }
       ],
+      "pertinence": "bas",
       "marqueId": 2
     },
     {
+      "icon": "\uf00f",
       "title": "Full Handling",
       "paragraphes":[
         "Onet Airport Services propose des prestations full handling.",
@@ -839,9 +870,11 @@
           ]
         }
       ],
+      "pertinence": "bas",
       "marqueId": 2
     },
     {
+      "icon": "\uf010",
       "title": "Cargo & Transport",
       "paragraphes": [
         "Onet Airport Services assure la gestion des flux de marchandises et de personnes.  Cela se traduit par l’accompagnement et l’optimisation des process de fret mais également par les transferts pour le personnel navigants ou les passagers entre l’avion et l’aérogare."
@@ -871,16 +904,20 @@
           "img": "assets/img/xxx.jpg"
         }
       ],
+      "pertinence": "bas",
       "marqueId": 2
     },
     {
+      "icon": "\uf011",
       "title": "Accueil en Entreprise",
       "subtitle": "Accueil en entreprise et services associés",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 3
     },
     {
+      "icon": "\uf012",
       "title": "Accueil Evènementiel",
       "subtitle2": "Des compétences spécifiques pour chaque évènement",
       "paragraphes": [
@@ -888,21 +925,27 @@
       ],
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 3
     },
     {
+      "icon": "\uf013",
       "title": "Accueil In&Out store",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 3
     },
     {
+      "icon": "\uf014",
       "title": "Accompagnement de personnes en situation de handicap ou à mobilité réduite",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 3
     },
     {
+      "icon": "\uf015",
       "title": "Conseil & ingénieurie logistique",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
@@ -918,9 +961,11 @@
           ]
         }
       ],
+      "pertinence": "bas",
       "marqueId": 4
     },
     {
+      "icon": "\uf016",
       "title": "Gestion et pilotage des flux physiques et d'informations",
       "subtitle2": "UN PILOTAGE AGILE DES FLUX ET UNE TRAÇABILITÉ OPTIMALE",
       "paragraphes":[
@@ -981,9 +1026,11 @@
           "img": "assets/img/xxx.jpg"
         }
       ],
+      "pertinence": "bas",
       "marqueId": 4
     },
     {
+      "icon": "\uf017",
       "title": "Transport routier",
       "paragraphes": [
         "Le transport routier est un des maillons essentiels de la chaîne transport et logistique.",
@@ -1003,9 +1050,11 @@
           ]
         }
       ],
+      "pertinence": "bas",
       "marqueId": 4
     },
     {
+      "icon": "\uf018",
       "title": "Manoeuvre ferroviaire",
       "paragraphes": [
         "Pour offrir à nos clients industriels une solution logistique complète, nous assurons la gestion des Installations terminales Embranchées (ITE).",
@@ -1022,110 +1071,145 @@
           ]
         }
       ],
+      "pertinence": "bas",
       "marqueId": 4
     },
     {
       "linkedId": [26, 27, 28],
+      "icon": "\uf019",
       "title": "Constructions neuves et modifications d'installations",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf01a",
       "title": "Ingénierie",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf01b",
       "title": "Fourniture de systèmes et d'équipements pour les réacteurs de puissance",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf01c",
       "title": "Fourniture d'installations pour le traitements de déchets radioactifs",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf01d",
       "title": "Assistance à l'exploitation",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf01e",
       "title": "Maintenance",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf01f",
       "title": "Contrôle non destructif",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf020",
       "title": "Décontamination, démantèlement",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf021",
       "title": "Désamiantage",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf022",
       "linkedId": [35, 36, 37],
       "title": "Traitement des déchets",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf023",
       "title": "Maîtrise de la filière déchets",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf024",
       "title": "Installation Sogeval",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf025",
       "title": "Les conteneurs Onet",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf026",
       "title": "Formation pour l'industrie, le bâtiment et le nucléaire",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 5
     },
     {
+      "icon": "\uf027",
       "title": "Intérim",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 6
     },
     {
+      "icon": "\uf028",
       "title": "Recrutement",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 6
     },
     {
+      "icon": "\uf029",
       "title": "Formation",
       "profileImage": "assets/img/xxx.jpg",
       "coverImage": "assets/img/xxx.jpg",
+      "pertinence": "bas",
       "marqueId": 6
     }
   ]

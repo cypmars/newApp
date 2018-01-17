@@ -17171,12 +17171,21 @@ var TinderQ2Page = (function () {
         console.log("param4: " + this.param4);
         console.log("param5: " + this.param5);
         this.resultsTemp = new Array();
+        this.myAnswer = new Array();
     }
     TinderQ2Page.prototype.getNextNode = function (like) {
         if (like) {
             for (var _i = 0, _a = this.currentNode[this.currentQId].servicesIdIfYes; _i < _a.length; _i++) {
                 var serviceId = _a[_i];
-                this.resultsTemp.push(serviceId);
+                var bool = false;
+                for (var _b = 0, _c = this.resultsTemp; _b < _c.length; _b++) {
+                    var resultId = _c[_b];
+                    if (serviceId == resultId) {
+                        bool = true;
+                    }
+                }
+                if (!bool)
+                    this.resultsTemp.push(serviceId);
             }
         }
         this.currentQId++;
@@ -17212,6 +17221,10 @@ var TinderQ2Page = (function () {
         //   var lastCard = document.getElementsByClassName('card')[0];
         //   lastCard.setAttribute("style", "display:none");
         // }
+        this.myAnswer.push({
+            question: this.currentNode[this.currentQId],
+            answer: like
+        });
         this.getNextNode(like);
         var removedCard = this.cards.pop();
         if (this.currentNode[this.currentQId] != null) {
@@ -17225,9 +17238,12 @@ var TinderQ2Page = (function () {
                 param3: this.param3,
                 param4: this.param4,
                 param5: this.param5,
-                param6: this.resultsTemp
+                param6: this.resultsTemp,
+                param7: this.myAnswer
             });
+            console.log(this.myAnswer);
             this.resultsTemp = [];
+            this.myAnswer = [];
             this.cards.pop();
             this.cards.pop();
         }

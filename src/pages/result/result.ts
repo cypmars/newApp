@@ -49,6 +49,9 @@ export class ResultPage implements OnInit, OnDestroy{
 
   services;
   visServices;
+
+  myServiceId;
+
   constructor(private http: Http, public navCtrl: NavController, private visNetworkServ: VisNetworkService, public navParams: NavParams) {
    
     let servData = http.get('assets/data/services.json').map(res => res.json().services);
@@ -64,6 +67,8 @@ export class ResultPage implements OnInit, OnDestroy{
     this.param4 = navParams.get('param4');
     this.param5 = navParams.get('param5');
     this.param6 = navParams.get('param6');
+
+    console.log(this.param6);
   }
 
   public addNode(node): void {
@@ -76,9 +81,15 @@ export class ResultPage implements OnInit, OnDestroy{
         {
           for (let resultId of this.param6)
           {
+            let myGroup = this.services[resultId].marqueId * 3;
+            if (this.services[resultId].pertinence === "haut")
+              myGroup = myGroup + 2;
+            if (this.services[resultId].pertinence === "moyen")
+              myGroup = myGroup + 1;
             const visService = {
               id: resultId,
-              label: this.services[resultId].title
+              group: myGroup,
+              label: " "+this.services[resultId].icon+" "
             }
             if (this.visNetworkData.nodes.getById(resultId) == null)
             {
@@ -95,15 +106,22 @@ export class ResultPage implements OnInit, OnDestroy{
           if (this.firstT)
           {
             if (eventData[0] === this.visNetwork && (this.visNetworkService.getSelectedNodes(this.visNetwork))[0] != null) {
-              this.navCtrl.push('ServiceDetailsPage', {
-                param1: (this.visNetworkService.getSelectedNodes(this.visNetwork))[0]
-              });
-              console.log(eventData[1]);
-              console.log(this.visNetworkService.getSelectedNodes(this.visNetwork));
+              this.myServiceId = (this.visNetworkService.getSelectedNodes(this.visNetwork))[0];
+              var footer = document.getElementsByClassName('footer')[0];
+              footer.removeAttribute("hidden");
             }
           }
         });
         
+  }
+
+  public more(){
+    if (this.firstT)
+    {
+      this.navCtrl.push('ServiceDetailsPage', {
+        param1: this.myServiceId
+      });
+    }
   }
 
   public ngOnInit(): void {
@@ -123,14 +141,57 @@ export class ResultPage implements OnInit, OnDestroy{
         },
         nodes: {
           borderWidth:0 ,
+
           shape:"circle", 
           color:{
             background:'#F92C55', 
             border: 'transparent', 
             highlight:{ background:'#F92C55', border: '#F92C55'}
           },
-          font:{color:'#fff'},
+          font:{
+            color:'#fff',
+            size: 45,
+            align: 'right',
+            face: 'FontAwesome'
+          },
+        },
+        groups: {
 
+          //Groupés par marque
+          // Marque id=0
+          0:{font:{size:45}, color:{background:'#10e51a', highlight:{ background:'#0eae15' }}},
+          1:{font:{size:65}, color:{background:'#10e51a', highlight:{ background:'#0eae15' }}},
+          2:{font:{size:85}, color:{background:'#10e51a', highlight:{ background:'#0eae15' }}},
+
+          // Marque id=1
+          3:{font:{size:45}, color:{background:'#f71b1b', highlight:{ background:'#d01717' }}},
+          4:{font:{size:65}, color:{background:'#f71b1b', highlight:{ background:'#d01717' }}},
+          5:{font:{size:85}, color:{background:'#f71b1b', highlight:{ background:'#d01717' }}},
+
+          // Marque id=2
+          6:{font:{size:45}, color:{background:'#488aff', highlight:{ background:'#386ecd' }}},
+          7:{font:{size:65}, color:{background:'#488aff', highlight:{ background:'#386ecd' }}},
+          8:{font:{size:85}, color:{background:'#488aff', highlight:{ background:'#386ecd' }}},
+
+          // Marque id=3
+          9:{font:{size:45}, color:{background:'#e5dd10', highlight:{ background:'#cbc40e' }}},
+          10:{font:{size:65}, color:{background:'#e5dd10', highlight:{ background:'#cbc40e' }}},
+          11:{font:{size:85}, color:{background:'#e5dd10', highlight:{ background:'#cbc40e' }}},
+
+          // Marque id=4
+          12:{font:{size:45}, color:{background:'#f08640', highlight:{ background:'#cc7136' }}},
+          13:{font:{size:65}, color:{background:'#f08640', highlight:{ background:'#cc7136' }}},
+          14:{font:{size:85}, color:{background:'#f08640', highlight:{ background:'#cc7136' }}},
+
+          // Marque id=5
+          15:{font:{size:45}, color:{background:'#b734f4', highlight:{ background:'#962ac8' }}},
+          16:{font:{size:65}, color:{background:'#b734f4', highlight:{ background:'#962ac8' }}},
+          17:{font:{size:85}, color:{background:'#b734f4', highlight:{ background:'#962ac8' }}},
+
+          // Marque id=6
+          18:{font:{size:45}, color:{background:'#f92c55', highlight:{ background:'#d42649' }}},
+          19:{font:{size:65}, color:{background:'#f92c55', highlight:{ background:'#d42649' }}},
+          20:{font:{size:85}, color:{background:'#f92c55', highlight:{ background:'#d42649' }}},
         },
         physics: {
           stabilization: false,
