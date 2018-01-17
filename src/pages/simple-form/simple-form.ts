@@ -24,6 +24,7 @@ export class SimpleFormPage {
   @ViewChild('fab') fab: FabContainer;
   
   services;
+  placeholder="";
   account: { email: string, password: string } = {
     email: '@ e-mail ou pseudo',
     password: 'mot de passe'
@@ -70,6 +71,7 @@ export class SimpleFormPage {
     this.navCtrl.push('ServiceDetailsPage', {
       param1: event.id,
     });
+    this.placeholder = "";
   }
 
   login() {

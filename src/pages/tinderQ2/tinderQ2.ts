@@ -43,6 +43,7 @@ export class TinderQ2Page {
   public param5: string;
   public resultsTemp: Array<number>;
 
+  placeholder="";
   cards: Array<any>;
   stackConfig: StackConfig;
   recentCard: string = '';
@@ -273,6 +274,7 @@ export class TinderQ2Page {
     this.navCtrl.push('ServiceDetailsPage', {
       param1: event.id,
     });
+    this.placeholder="";
   }
   
   prev(){
@@ -646,7 +648,7 @@ export class TinderQ2Page {
 
   ionViewDidLeave(){
     console.log(this.navCtrl.getActive());
-    if (!(this.navCtrl.getActive().component.name == "WelcomePage") && !(this.navCtrl.getActive().component.name == "TinderQ2Page"))
+    if (!(this.navCtrl.getActive().component.name == "WelcomePage") && !(this.navCtrl.getActive().component.name == "TinderQ2Page") && !(this.navCtrl.getActive().component.name == "ServiceDetailsPage"))
     {
       this.currentNode = this.myQuestions;
       this.currentQId = 0;

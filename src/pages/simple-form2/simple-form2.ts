@@ -29,6 +29,7 @@ export class SimpleForm2Page {
   public myIcon: string;
   public myIconId: number;
 
+  placeholder="";
   account: { email: string, password: string } = {
     email: '@ e-mail ou pseudo',
     password: 'mot de passe'
@@ -91,6 +92,7 @@ export class SimpleForm2Page {
     this.navCtrl.push('ServiceDetailsPage', {
       param1: event.id,
     });
+    this.placeholder = "";
   }
   
   public ngAfterViewInit(){

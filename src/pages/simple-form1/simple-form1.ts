@@ -23,6 +23,7 @@ export class SimpleForm1Page {
   
   public param1: string;
 
+  placeholder="";
   account: { email: string, password: string } = {
     email: '@ e-mail ou pseudo',
     password: 'mot de passe'
@@ -101,6 +102,7 @@ export class SimpleForm1Page {
     this.navCtrl.push('ServiceDetailsPage', {
       param1: event.id,
     });
+    this.placeholder = "";
   }
 
   public ngAfterViewInit(){

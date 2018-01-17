@@ -53,6 +53,7 @@ export class ResultPage implements OnInit, OnDestroy{
 
   myServiceId;
 
+  placeholder="";
   constructor(private http: Http, public navCtrl: NavController, private visNetworkServ: VisNetworkService, public navParams: NavParams, public completeTestService: CompleteTestService) {
    
     let servData = http.get('assets/data/services.json').map(res => res.json().services);
@@ -126,6 +127,7 @@ export class ResultPage implements OnInit, OnDestroy{
     this.navCtrl.push('ServiceDetailsPage', {
       param1: event.id,
     });
+    this.placeholder="";
   }
 
   public more(){
@@ -135,6 +137,10 @@ export class ResultPage implements OnInit, OnDestroy{
         param1: this.myServiceId
       });
     }
+  }
+
+  login() {
+    this.navCtrl.push('WelcomePage');
   }
 
   public ngOnInit(): void {

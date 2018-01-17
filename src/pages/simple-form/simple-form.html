@@ -10,7 +10,9 @@
       <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>
     </ion-buttons>
   </ion-navbar>
-  <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)"></ion-auto-complete>
+  <form>
+    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>
+  </form>
 </ion-header>
 <ion-content>
     <p class="white-text margin-plus" style="font-size: 1.2em;" text-center>Qui êtes-vous ?</p>
