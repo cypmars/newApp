@@ -24,3 +24,9 @@ ion-title {
     height: 100%;
     text-align: center;
   }
+
+  @import "../../node_modules/ionic2-auto-complete/auto-complete";
+
+  ion-auto-complete {
+    width: 100vw;
+  }

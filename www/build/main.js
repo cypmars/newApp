@@ -76,7 +76,7 @@ var map = {
 	],
 	"../pages/marqueDetails/marqueDetails.module": [
 		289,
-		6
+		8
 	],
 	"../pages/news/news.module": [
 		290,
@@ -88,23 +88,23 @@ var map = {
 	],
 	"../pages/serviceDetails/serviceDetails.module": [
 		292,
-		5
+		7
 	],
 	"../pages/signup/signup.module": [
 		293,
-		4
+		6
 	],
 	"../pages/simple-form/simple-form.module": [
 		294,
-		1
+		2
 	],
 	"../pages/simple-form1/simple-form1.module": [
 		295,
-		9
+		4
 	],
 	"../pages/simple-form2/simple-form2.module": [
 		296,
-		8
+		3
 	],
 	"../pages/tabs/tabs.module": [
 		297,
@@ -112,15 +112,15 @@ var map = {
 	],
 	"../pages/tinderQ/tinderQ.module": [
 		298,
-		2
+		5
 	],
 	"../pages/tinderQ2/tinderQ2.module": [
 		299,
-		3
+		1
 	],
 	"../pages/welcome/welcome.module": [
 		300,
-		7
+		9
 	]
 };
 function webpackAsyncContext(req) {
@@ -168,7 +168,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(286);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tabs_tabs__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_swing__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_swing__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_angular2_swing__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
