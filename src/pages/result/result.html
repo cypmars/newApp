@@ -32,16 +32,16 @@
         <ion-grid>
           <ion-row>
             <ion-col text-center col-9 *ngIf="myServiceId != null" class="valignCenter">
-                <h4 style="color:#0eae15" no-margin *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].title}}</h4>
-                <h4 style="color:#d01717" no-margin *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].title}}</h4>
-                <h4 style="color:#386ecd" no-margin *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].title}}</h4>
-                <h4 style="color:#cbc40e" no-margin *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].title}}</h4>
-                <h4 style="color:#cc7136" no-margin *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].title}}</h4>
-                <h4 style="color:#962ac8" no-margin *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].title}}</h4>
-                <h4 style="color:#d42649" no-margin *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].title}}</h4>
+                <h4 style="color:#0eae15; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].title}}</h4>
+                <h4 style="color:#d01717; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].title}}</h4>
+                <h4 style="color:#386ecd; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].title}}</h4>
+                <h4 style="color:#cbc40e; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].title}}</h4>
+                <h4 style="color:#cc7136; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].title}}</h4>
+                <h4 style="color:#962ac8; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].title}}</h4>
+                <h4 style="color:#d42649; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].title}}</h4>
             </ion-col>
             <ion-col text-center col-3 class="valignCenter">
-                <a (click)="more()" clear>+ d'infos</a>
+                <a style="width: 100%;" (click)="more()">+ d'infos</a>
             </ion-col>
           </ion-row>
         </ion-grid>
