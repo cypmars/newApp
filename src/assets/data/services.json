@@ -2,1257 +2,348 @@
   "services":[
     {
       "id": 0,
+      "marqueId": 0,
+      "productIds": [0, 1, 2],
+      "imgService": "assets/img/services/0.jpg", 
+      "imgMarque": "assets/img/marques/0.jpg",
+      "video": "",
       "icon": "\uf000",
+      "pertinence": "bas",
       "title": "Hygiène et Propreté classique",
-      "subtitle": "Au cœur de votre environnement de travail",
-      "subtitle2": "LA PROPRETÉ, UN BESOIN FONDAMENTAL, DES ENJEUX FORTS",
-      "paragraphes": [
-        "La propreté « classique » renvoie au besoin fondamental, et non pas simpliste, de la notion de « propre ».", 
-        "Chaque secteur d’activité à ses propres enjeux et la propreté s’y inscrit à différents niveaux.", 
-        "Dans une galerie commerciale ou un espace de loisir, la propreté et « l’agréabilité » auront un impact direct sur la satisfaction des clients et leur panier moyen ; dans un bureau, la propreté et la netteté de l’espace de travail auront un impact direct sur le bien-être du collaborateur et à postériori sa productivité ; dans un hôtel, la propreté de la chambre est un argument de satisfaction et de fidélisation…", 
-        "C’est pourquoi nous n’aborderons jamais de la même manière un espace (destination, revêtement, taux d’occupation…) car chacun nécessite une organisation rigoureuse, un sens du service irréprochable et des équipes motivées et impliquées.", 
-        "Et quel que soit le secteur et le niveau de technicité (matériel, norme…) qu’il requiert, notre proposition de valeur est fondée sur une gestion agile et respectueuse des femmes et des hommes qui chaque jour interviennent auprès de nos clients."
-      ],
-      "profileImage": "assets/img/proprete-classique.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "othersImg": ["assets/img/tenues_proprete.jpg"],
-      "areas": [
-        {
-          "points":[
-            "Etablissement recevant du public", 
-            "Bureaux, sièges sociaux", "Réseaux de boutiques ou agences", 
-            "Surfaces commerciale", 
-            "Hôtels"
-          ]
-        }
-      ],
-      "pertinence": "haut",
-      "productsId": [0, 1, 2],
-      "marqueId": 0
+      "content": {
+        "title": "Hygiène et Propreté classique",
+        "subtitle": "Au cœur de votre environnement de travail",
+        "parts": [
+          {
+            "title": "LA PROPRETÉ, UN BESOIN FONDAMENTAL, DES ENJEUX FORTS",
+            "paragraphes": [
+              { "description": "La propreté « classique » renvoie au besoin fondamental, et non pas simpliste, de la notion de « propre ». " },
+              { "description": "Chaque secteur d’activité à ses propres enjeux et la propreté s’y inscrit à différents niveaux." },
+              { "description": "Dans une galerie commerciale ou un espace de loisir, la propreté et « l’agréabilité » auront un impact direct sur la satisfaction des clients et leur panier moyen ; dans un bureau, la propreté et la netteté de l’espace de travail auront un impact direct sur le bien-être du collaborateur et à postériori sa productivité ; dans un hôtel, la propreté de la chambre est un argument de satisfaction et de fidélisation…" },
+              { "description": "C’est pourquoi nous n’aborderons jamais de la même manière un espace (destination, revêtement, taux d’occupation…) car chacun nécessite une organisation rigoureuse, un sens du service irréprochable et des équipes motivées et impliquées." },
+              { "description": "Et quel que soit le secteur et le niveau de technicité (matériel, norme…) qu’il requiert, notre proposition de valeur est fondée sur une gestion agile et respectueuse des femmes et des hommes qui chaque jour interviennent auprès de nos clients." }
+            ]
+          }
+        ],
+        "areas":[
+          {
+            "title": "DOMAINES D’INTERVENTION",
+            "parts":[
+              {
+                "points": [
+                  "Etablissement recevant du public", 
+                  "Bureaux, sièges sociaux", "Réseaux de boutiques ou agences", 
+                  "Surfaces commerciale", 
+                  "Hôtels"
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": 1,
-      "linkedId": 2,
+      "marqueId": 0,
+      "subServiceIds": [2],
+      "productIds": [3],
+      "imgService": "assets/img/services/1.jpg", 
+      "imgMarque": "assets/img/marques/0.jpg",
       "icon": "\uf001",
-      "title": "Hygiène et Propreté en milieu sensible",
-      "subtitle2": "Une expertise multisectorielle et des savoir-faire spéciﬁques pour la « maîtrise de la contamination »",
-      "paragraphes": [
-        "L'industrie de la « maîtrise de la contamination » doit faire face à une demande de plus en plus diversifiée, complexe et spécialisée. Ceci s'explique notamment par l'apparition de nouveaux besoins comme l'accroissement des exigences en matière de propreté ou encore l'évolution des contraintes réglementaires, notamment dans l'industrie pharmaceutique et les secteurs connexes…", 
-        "Depuis plus de 30 ans, reconnus pour notre maîtrise du nettoyage en milieux ultra-propres, nous sommes présents de la classe ISO 3 à la classe ISO 9.", 
-        "Nous réalisons des prestations quotidiennes de nettoyage, de décontamination chimique et microbiologique, ainsi que des prestations ponctuelles de 'mise à blanc'."
-      ],
-      "engagement": {
-        "title": "La maîtrise de la contamination a pour objectif de protéger ensemble ou séparément :", 
-        "points": [
-          "le produit fabriqué ou traité (ou le patient en milieu hospitalier)", 
-          "l'opérateur lors de la manipulation de produits potentiellement toxiques", 
-          "l'environnement"
-        ]
-      },
-      "profileImage": "assets/img/up-3_medium.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "othersImg": ["assets/img/tenues_proprete.jpg"],
-      "sector": [{
-        "title": "AGROALIMENTAIRE", 
-        "description": "Nous intervenons sur des prestations d'hygiène de Process en industrie agroalimentaire (nettoyage et désinfection des lignes de production et de leur environnement) :", 
-        "points": [
-          "Industries de la viande (bœuf, porcs, volailles...) abatage, découpe transformation",
-          "Salaisons & charcuteries",
-          "Industrie des plats cuisinés frais, surgelés appertisé (conserves)",
-          "Industrie du poisson, Biscuiterie / pâtisserie",
-          "Industrie du légume"
-        ]
-      },
-      {
-        "title": "INDUSTRIE PHARMACEUTIQUE",
-        "subtitle": "DE LA CLASSE ISO 3 À LA CLASSE ISO 9",
-        "points": [
-          "Prestations régulières de nettoyage et décontamination des différentes zones",
-          "Prestations ponctuelles de mise à blanc",
-          "Mise en place de zoning matériel",
-          "Parfaite application des bonnes pratiques de nettoyage pharmaceutique"
-        ]
-      },
-      {
-        "title": "ÉTABLISSEMENTS DE SANTÉ",
-        "subtitle": "INTERVENTION DE LA ZONE 0 À LA ZONE 4",
-        "points": [
-          "Bio nettoyage",
-          "Entretien des locaux",
-          "Lutte quotidienne contre les infections nosocomiales",
-          "Autres prestations complémentaires (collecte des déchets, service des repas, entretien des espaces verts...)"
-        ],
-        "more": "https://fr.groupeonet.com/content/download/8974/143577/version/1/file/plaquette_Onet_sante.pdf"
-      },
-      {
-        "title": "NOS PRESTATIONS EN SALLE PROPRE",
-        "subtitle": "DE LA CLASSE ISO 3 À LA CLASSE ISO 9",
-        "points": [
-          "Prestations quotidiennes de nettoyage et de décontamination particulaire",
-          "Prestations ponctuelles de 'mise à blanc'"
-        ]
-      }],
       "pertinence": "bas",
-      "productsId": [3],
-      "marqueId": 0
+      "title": "Hygiène et Propreté en milieu sensible",
+      "content": {
+        "title": "Hygiène et Propreté en milieu sensible",
+        "parts": [
+          {
+            "title": "Une expertise multisectorielle et des savoir-faire spéciﬁques pour la « maîtrise de la contamination »",
+            "paragraphes": [
+              { "description": "L'industrie de la « maîtrise de la contamination » doit faire face à une demande de plus en plus diversifiée, complexe et spécialisée. Ceci s'explique notamment par l'apparition de nouveaux besoins comme l'accroissement des exigences en matière de propreté ou encore l'évolution des contraintes réglementaires, notamment dans l'industrie pharmaceutique et les secteurs connexes…" },
+              { 
+                "accrPointsBold": "La maîtrise de la contamination a pour objectif de protéger ensemble ou séparément :",
+                "points": [
+                  { "title": "le produit fabriqué ou traité (ou le patient en milieu hospitalier)" },
+                  { "title": "l'opérateur lors de la manipulation de produits potentiellement toxiques" },
+                  { "title": "l'environnement" }
+                ]
+              },
+              { "description": "Depuis plus de 30 ans, reconnus pour notre maîtrise du nettoyage en milieux ultra-propres, nous sommes présents de la classe ISO 3 à la classe ISO 9." },
+              { "description": "Nous réalisons des prestations quotidiennes de nettoyage, de décontamination chimique et microbiologique, ainsi que des prestations ponctuelles de 'mise à blanc'." }
+            ]
+          }
+        ],
+        "areas": [
+          {
+            "title": "DOMAINES D'ACTIVITES",
+            "parts": [
+              {
+                "title": "AGROALIMENTAIRE",
+                "description": "Nous intervenons sur des prestations d'hygiène de Process en industrie agroalimentaire (nettoyage et désinfection des lignes de production et de leur environnement) :",
+                "points": [
+                  "Industries de la viande (bœuf, porcs, volailles...) abatage, découpe transformation",
+                  "Salaisons & charcuteries",
+                  "Industrie des plats cuisinés frais, surgelés appertisé (conserves)",
+                  "Industrie du poisson, Biscuiterie / pâtisserie",
+                  "Industrie du légume"
+                ]
+              },
+              {
+                "title": "INDUSTRIE PHARMACEUTIQUE",
+                "subtitle": "DE LA CLASSE ISO 3 À LA CLASSE ISO 9",
+                "points": [
+                  "Prestations régulières de nettoyage et décontamination des différentes zones",
+                  "Prestations ponctuelles de mise à blanc",
+                  "Mise en place de zoning matériel",
+                  "Parfaite application des bonnes pratiques de nettoyage pharmaceutique"
+                ]
+              },
+              {
+                "title": "ÉTABLISSEMENTS DE SANTÉ",
+                "subtitle": "INTERVENTION DE LA ZONE 0 À LA ZONE 4",
+                "points": [
+                  "Bio nettoyage",
+                  "Entretien des locaux",
+                  "Lutte quotidienne contre les infections nosocomiales",
+                  "Autres prestations complémentaires (collecte des déchets, service des repas, entretien des espaces verts...)"
+                ],
+                "more": "https://fr.groupeonet.com/content/download/8974/143577/version/1/file/plaquette_Onet_sante.pdf"
+              },
+              {
+                "title": "NOS PRESTATIONS EN SALLE PROPRE",
+                "subtitle": "DE LA CLASSE ISO 3 À LA CLASSE ISO 9",
+                "points": [
+                  "Prestations quotidiennes de nettoyage et de décontamination particulaire",
+                  "Prestations ponctuelles de 'mise à blanc'"
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": 2,
+      "marqueId": 0,
+      "productIds": [4, 5, 6],
+      "imgService": "assets/img/services/2.jpg", 
+      "imgMarque": "assets/img/marques/0.jpg",
       "icon": "\uf002",
-      "title": "Cryogénie",
-      "subtitle": "Vous offrir une solution de rénovation respectueuse de votre support et de l’environnement",
-      "description": [{
-        "title": "Cryonettoyage : Principe de mise en œuvre par cryogénie",
-        "img": "assets/img/cryo_medium.jpg",
-        "paragraphes": [
-          "Le CO2 liquéfié, soutiré d’un réservoir, passe dans un pelletiseur qui le transforme à l’état d’agrégat solide: la neige carbonique. Cette neige à très basse température ( –78,5°C ) est ensuite compactée dans une filière pour donner des sticks ou pellets.",
-          "Les pellets ou sticks sont stockés et livrés dans des bacs isothermes",
-          "La projection de micro-pellets se fait avec de l'air comprimé fourni, soit par le réseau interne de l’entreprise, soit par un compresseur d'air",
-          "Le pistolet utilisé permet de projeter sous pression les pellets ou la neige carbonique directement sur les surfaces à nettoyer."
-        ]
-      },
-      {
-        "title": "Comment fonctionne le nettoyage cryogénique (ou décapage par cryogénie)?",
-        "img": "assets/img/cryo_medium2.jpg",
-        "paragraphes": [
-          "C’est une méthode de nettoyage révolutionnaire dans laquelle on projette de la glace sèche sous forme de cylindres appelés « pellets » à l’aide d’un flux d’air comprimé.",
-          "L’association du choc mécanique et du froid (choc thermique) intense provoque le détachement de la couche à éliminer (décapage par cryogénie).",
-          "Le processus ne laisse aucun résidu secondaire, la glace carbonique se sublimant. Le seul résidu à évacuer est la couche qui a été éliminée, plus facile à traiter. "
-        ]
-      },
-      {
-        "title": "Avantages économiques, techniques et environnementaux du nettoyage cryogénique",
-        "img": "assets/img/cryo_medium3.jpg",
-        "points": [
-          "Réduction du temps d'immobilisation",
-          "Aucune dépense liée à l'évacuation",
-          "Méthode de nettoyage rapide et efficace",
-          "Réduction de l'usure des équipements de production",
-          "Protection de l'environnement"
-        ]
-      }],
-      "profileImage": "assets/img/cryo_medium3.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "areas": [
-        {
-          "points":[
-            "Automobile", 
-            "Agroalimentaire", 
-            "Aéronautique", 
-            "Imprimerie",
-            "Restauration après sinistre",
-            "Plasturgie",
-            "Fonderie",
-            "Electricité",
-            "Transports"
-          ]
-        }
-      ],
       "pertinence": "bas",
-      "productsId": [4, 5, 6],
-      "marqueId": 0
+      "title": "Cryogénie",
+      "content": {
+        "title": "Cryogénie",
+        "subtitle": "Vous offrir une solution de rénovation respectueuse de votre support et de l’environnement",
+        "parts": [
+          {
+            "title": "Cryonettoyage : Principe de mise en œuvre par cryogénie",
+            "paragraphes": [
+              {
+                "points": [
+                  { "title": "Le CO2 liquéfié, soutiré d’un réservoir, passe dans un pelletiseur qui le transforme à l’état d’agrégat solide: la neige carbonique. Cette neige à très basse température ( –78,5°C ) est ensuite compactée dans une filière pour donner des sticks ou pellets."},
+                  { "title": "Les pellets ou sticks sont stockés et livrés dans des bacs isothermes"}
+                ]
+              },
+              {
+                "accrPoints": "La projection de micro-pellets se fait avec de l'air comprimé fourni :",
+                "points": [
+                  { "title": "Soit par le réseau interne de l’entreprise,"},
+                  { "title": "Soit par un compresseur d'air." }
+                ]
+              },
+              { "descriptionBold": "Le pistolet utilisé permet de projeter sous pression les pellets ou la neige carbonique directement sur les surfaces à nettoyer." }
+            ]
+          },
+          {
+            "title": "Comment fonctionne le nettoyage cryogénique (ou décapage par cryogénie)?",
+            "paragraphes": [
+              { "description": "C’est une méthode de nettoyage révolutionnaire dans laquelle on projette de la glace sèche sous forme de cylindres appelés « pellets » à l’aide d’un flux d’air comprimé." },
+              { "description": "L’association du choc mécanique et du froid (choc thermique) intense provoque le détachement de la couche à éliminer (décapage par cryogénie)." },
+              { "description": "Le processus ne laisse aucun résidu secondaire, la glace carbonique se sublimant. Le seul résidu à évacuer est la couche qui a été éliminée, plus facile à traiter.   " } 
+            ]
+          },
+          {
+            "title": "Avantages économiques, techniques et environnementaux du nettoyage cryogénique",
+            "points": [
+              { "title": "Réduction du temps d'immobilisation" },
+              { "title": "Aucune dépense liée à l'évacuation" },
+              { "title": "Méthode de nettoyage rapide et efficace" },
+              { "title": "Réduction de l'usure des équipements de production" },
+              { "title": "Protection de l'environnement" }              
+            ]
+          }
+        ],
+        "areas": [
+          {
+            "title": "SECTEURS D'INTERVENTION",
+            "parts": [
+              {
+                "points": [
+                  "Automobile", 
+                  "Agroalimentaire", 
+                  "Aéronautique", 
+                  "Imprimerie",
+                  "Restauration après sinistre",
+                  "Plasturgie",
+                  "Fonderie",
+                  "Electricité",
+                  "Transports"
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": 3,
+      "marqueId": 0,
+      "imgService": "assets/img/services/3.jpg", 
+      "imgMarque": "assets/img/marques/0.jpg",
       "icon": "\uf003",
+      "pertinence": "bas",   
       "title": "Propreté et maintenance des process industriels",
-      "subtitle2": "UNE EXPERTISE TECHNIQUE ET DES MODES OPÉRATOIRES PRÉCIS",
-      "paragraphes": [
-        "Onet Propreté et Services intervient avec ses agents qualifiés et ses équipements sur des sites industriels, pour des collectivités et des particuliers.", 
-        "Chaque opération est réalisée dans le strict respect des règles liées à la politique de qualité, sécurité et environnement.", 
-        "Hydrocurage, aspiration et refoulement, haute et très haute pression, balayage industriel, nettoyage de mobilier urbain..., nos interventions de traitements préventifs et curatifs contribuent à la sécurité des personnes et à la pérennité de l'outil de production. "
-      ],
-      "profileImage": "assets/img/process-industriel.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "areas": [
-        {
-          "points": [
-            "Maintenance et Nettoyage industriel", 
-            "Assainissement collectif et individuel", 
-            "Hygiène", 
-            "Propreté urbaine",
-            "Transport et Collecte de déchets industriels"
-          ]
-        }
-      ],
-      "pertinence": "bas",
-      "marqueId": 0
+      "content": {
+        "title": "Propreté et maintenance des process industriels",
+        "parts": [
+          {
+            "title": "UNE EXPERTISE TECHNIQUE ET DES MODES OPÉRATOIRES PRÉCIS",
+            "paragraphes": [
+              {"description": "Onet Propreté et Services intervient avec ses agents qualifiés et ses équipements sur des sites industriels, pour des collectivités et des particuliers." },
+              {"description": "Chaque opération est réalisée dans le strict respect des règles liées à la politique de qualité, sécurité et environnement." },
+              {"description": "Hydrocurage, aspiration et refoulement, haute et très haute pression, balayage industriel, nettoyage de mobilier urbain..., nos interventions de traitements préventifs et curatifs contribuent à la sécurité des personnes et à la pérennité de l'outil de production." }
+            ]
+          }
+        ],
+        "areas": [
+          {
+            "title": "DOMAINES D'INTERVENTION",
+            "parts": [
+              {
+                "points": [
+                  "Maintenance et Nettoyage industriel", 
+                  "Assainissement collectif et individuel", 
+                  "Hygiène", 
+                  "Propreté urbaine",
+                  "Transport et Collecte de déchets industriels"
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": 4,
+      "marqueId": 0,
+      "imgService": "assets/img/services/4.png", 
+      "imgMarque": "assets/img/marques/0.jpg",
       "icon": "\uf004",
-      "title": "Propreté dans les transports",
-      "description": [{
-        "title": "EXPERTISE ET EXPÉRIENCE POUR S'ADAPTER AUX IMPÉRATIFS DU SECTEUR DES TRANSPORTS",
-        "img": "assets/img/transport.png",
-        "paragraphes": [
-          "Élément clé de l'image de marque et composante de la satisfaction des voyageurs, la propreté est un véritable enjeu pour les entreprises du secteur  (ferroviaires, urbains, aériens et maritimes)."
-        ]
-        },
-        {
-          "title": "Onet, dont l’expérience est largement reconnue et éprouvée, intervient en s’adaptant aux impératifs inhérents à votre secteur d’activité :",
-          "points": [
-            "gestion des aléas,",
-            "temps d’intervention limités,",
-            "sécurité, sûreté,",
-            "respect de la politique liée à l’environnement,",
-            "normes en vigueur…"
-          ]
-        },
-        {
-          "paragraphes": [
-            "L'organisation des flux, des modes d'exploitation et notre savoir-faire en gestion du personnel nous permettent de répondre efficacement à vos besoins en s’adaptant aux contraintes des plans de transport.",
-            "Notre expertise nous permet d’intervenir en amont, de la définition du cahier des charges jusqu’à la réalisation des prestations en s’inscrivant dans un processus d’amélioration continue.",
-            "Près de 20 agences spécialisées vous accompagnent dans votre démarche d'obligation de résultats."
-          ]
-      }],
-      "profileImage": "assets/img/transport.png",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "areas": [
-        {
-          "points":[
-            "Transport Ferroviaire", 
-            "Transport Maritime", 
-            "Transport Aérien", 
-            "Transport Urbain"
-          ]
-        }
-      ],
-      "areasQual": "Notre démarche qualité de certification ISO 9001, version 2000, vous garantit qualité et réactivité des méthodes d'interventions",
-      "ServiceDetails": {
-        "description": "Afin de contribuer à faire vivre une expérience agréable à vos passagers et équipages/collaborateurs, nous vous proposons une gamme de services large :",
-        "points": [
-          "accompagnement de personne en situation de handicap ou à mobilité réduite,",
-          "sécurité,",
-          "accueil,",
-          "navette de transport,",
-          "manutention bagage,",
-          "habillage intérieur et extérieur de véhicule…"
-        ]
-      },
       "pertinence": "bas",
-      "marqueId": 0
+      "title": "Propreté dans les transports",
+      "content": {
+        "title": "Propreté dans les transports",
+        "parts": [
+          {
+            "title": "EXPERTISE ET EXPÉRIENCE POUR S'ADAPTER AUX IMPÉRATIFS DU SECTEUR DES TRANSPORTS",
+            "paragraphes": [
+              { "description": "Élément clé de l'image de marque et composante de la satisfaction des voyageurs, la propreté est un véritable enjeu pour les entreprises du secteur  (ferroviaires, urbains, aériens et maritimes)." },
+              {
+                "accrPoints": "Onet, dont l’expérience est largement reconnue et éprouvée, intervient en s’adaptant aux impératifs inhérents à votre secteur d’activité :",
+                "points": [
+                  { "title": "gestion des aléas," },
+                  { "title": "temps d’intervention limités," },
+                  { "title": "sécurité, sûreté,"},
+                  { "title": "respect de la politique liée à l’environnement,"},
+                  { "title": "normes en vigueur…"}
+                ]
+              },
+              { "description": "L'organisation des flux, des modes d'exploitation et notre savoir-faire en gestion du personnel nous permettent de répondre efficacement à vos besoins en s’adaptant aux contraintes des plans de transport." },
+              { "description": "Notre expertise nous permet d’intervenir en amont, de la définition du cahier des charges jusqu’à la réalisation des prestations en s’inscrivant dans un processus d’amélioration continue." },
+              { "description": "Près de 20 agences spécialisées vous accompagnent dans votre démarche d'obligation de résultats." }
+            ]
+            
+          }
+        ],
+        "areas": [
+          {
+            "title": "DOMAINES D'INTERVENTION",
+            "parts": [
+              {
+                "points": [
+                  "Transport Ferroviaire", 
+                  "Transport Maritime", 
+                  "Transport Aérien", 
+                  "Transport Urbain"
+                ]
+              }
+            ],
+            "conclusion": "Notre démarche qualité de certification ISO 9001, version 2000, vous garantit qualité et réactivité des méthodes d'interventions."
+          },
+          {
+            "title": "GAMME DE SERVICES",
+            "parts": [
+              {
+                "points": [
+                  "accompagnement de personne en situation de handicap ou à mobilité réduite,",
+                  "sécurité,",
+                  "accueil,",
+                  "navette de transport,",
+                  "manutention bagage,",
+                  "habillage intérieur et extérieur de véhicule…"
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": 5,
+      "marqueId": 0,
+      "subServiceIds": [6, 7],   
+      "productIds": [],
+      "imgService": "assets/img/services/5.jpg", 
+      "imgMarque": "assets/img/marques/0.jpg",
+      "video": "https://youtu.be/-YTJpFcD0tQ",
       "icon": "\uf005",
-      "linkedId": [6, 7] ,
+      "pertinence": "bas",    
       "title": "Gestion des déchets",
-      "description": [{
-        "title": "UNE SOLUTION GLOBALE POUR UN SYSTÈME DE VALORISATION DES DÉCHETS PERFORMANT",
-        "paragraphes": [
-          "Partie prenante de votre démarche responsable et durable, Onet contribue à l’optimisation de la gestion des déchets par une implication quotidienne sur le terrain.",
-          "Certifiés ISO 14001, nous intervenons sur site client dans le cadre de la gestion interne et externe de tout déchet dangereux et non-dangereux."        
-        ],
-        "points": [
-          "Tri sélectif,",
-          "Collecte,",
-          "Sensibilisation," ,
-          "Communication," ,
-          "Reporting," ,
-          "Suivi des évacuations," ,
-          "Pilotage," ,
-          "Choix des prestataires de collecte et de valorisation."
+      "content": {
+        "title": "Gestion des déchets",
+        "parts": [
+          {
+            "title": "UNE SOLUTION GLOBALE POUR UN SYSTÈME DE VALORISATION DES DÉCHETS PERFORMANT",
+            "paragraphes": [
+              {
+                "accrPoints": "Partie prenante de votre démarche responsable et durable, Onet contribue à l’optimisation de la gestion des déchets par une implication quotidienne sur le terrain. Certifiés ISO 14001, nous intervenons sur site client dans le cadre de la gestion interne et externe de tout déchet dangereux et non-dangereux.",
+                "points":[
+                  { "title": "Tri sélectif," },
+                  { "title": "Collecte," },
+                  { "title": "Sensibilisation," },
+                  { "title": "Communication," },
+                  { "title": "Reporting," },
+                  { "title": "Suivi des évacuations," },
+                  { "title": "Pilotage,"},
+                  { "title": "Choix des prestataires de collecte et de valorisation." }
+                ]
+              },
+              { "description": "L’activité Déchet opérée par Onet est une activité complémentaire et indissociable à celles de nos activités principales sur le site client. Ainsi notre intervention dans le cadre de l’activité Déchet est systématiquement couplée à une activité de base comme la propreté, ce qui permet d’optimiser nos ressources internes et d’offrir une gamme élargie de prestations." },
+              { "description": "Toutes nos interventions sont assurées en adéquation avec la réglementation en vigueur à travers les procédures, formations, équipements de sécurité et outils adaptés." },
+              { "description": "Performantes et respectueuses de l’environnement, les solutions Onet vous accompagnent dans l’excellence environnementale et deviennent un véritable partenaire dans la gestion de vos déchets." },
+              {
+                "accrPoints": "Bénéficier d’une solution globale de gestion des déchets en support de prestations de propreté permet de :",
+                "points": [
+                  { "title": "bénéficier d’un interlocuteur unique pour l’ensemble des prestations," },
+                  { "title": "réaliser des économies à travers un contrat unique pour l’ensemble des prestations," },
+                  { "title": "disposer d’outils permettant de suivre la totalité de la chaîne de valeur du déchet tout en s’affranchissant des tâches administratives et réglementaires," },
+                  { "title": "mutualiser les équipes lors d’absences et assurer la continuité de service," },
+                  { "title": "assurer une très bonne coordination entre nos équipes." }
+                ]
+              }
+            ]
+          }
         ]
-      },
-      {
-        "video": "https://youtu.be/-YTJpFcD0tQ",
-        "paragraphes": [
-          "L’activité Déchet opérée par Onet est une activité complémentaire et indissociable à celles de nos activités principales sur le site client. Ainsi notre intervention dans le cadre de l’activité Déchet est systématiquement couplée à une activité de base comme la propreté, ce qui permet d’optimiser nos ressources internes et d’offrir une gamme élargie de prestations."
-        ]
-      },
-      {
-        "paragraphes": [
-          "Toutes nos interventions sont assurées en adéquation avec la réglementation en vigueur à travers les procédures, formations, équipements de sécurité et outils adaptés.",
-          "Performantes et respectueuses de l’environnement, les solutions Onet vous accompagnent dans l’excellence environnementale et deviennent un véritable partenaire dans la gestion de vos déchets."
-        ]
-      },
-      {
-        "paragraphes": [
-          "Bénéficier d’une solution globale de gestion des déchets en support de prestations de propreté permet de :"
-        ],
-        "points":[
-          "bénéficier d’un interlocuteur unique pour l’ensemble des prestations,",
-          "réaliser des économies à travers un contrat unique pour l’ensemble des prestations,",
-          "disposer d’outils permettant de suivre la totalité de la chaîne de valeur du déchet tout en s’affranchissant des tâches administratives et réglementaires,",
-          "mutualiser les équipes lors d’absences et assurer la continuité de service,",
-          "assurer une très bonne coordination entre nos équipes."
-        ]
-      }],
-      "profileImage": "assets/img/gestion_dechet_profile.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "pertinence": "bas",
-      "marqueId": 0
-    },
-    {
-      "id": 6,
-      "icon": "\uf006",
-      "title": "La gestion des déchets en milieu tertiaire",
-      "paragraphes": [
-        "La gestion des déchets en milieu tertiaire (bâtiments administratifs, réseaux d’agences et établissements recevant du public notamment) est fortement liée à la prestation de propreté. En effet, nos équipes réalisent la collecte des déchets à la source et interviennent au sein du cycle de vie du déchet."
-      ],
-      "description": [
-        {
-          "title": "Accompagnement dans la démarche de tri sélectif des déchets",
-          "paragraphes": [
-            "Afin d’optimiser les performances de tri et assurer une valorisation optimale des déchets, nous accompagnons nos clients dans la démarche de tri sélectif en proposant :"
-          ],
-          "points": [
-            "un audit de la filière déchets,",
-            "la mise en place des points de collecte,",
-            "l’accompagnement au changement,",
-            "la sensibilisation,",
-            "la communication et le reporting des gisements collectés par catégorie et par zone de production."
-          ]
-        },
-        {
-          "paragraphes":[
-            "Pour compléter cette démarche, nous pouvons réaliser l’acheminement vers les installations de valorisation où nous proposons l’intervention de nos partenaires spécialisés, dont des entreprises adaptées.",
-            "De plus, en tant que partenaire et expert du secteur, Onet Propreté et Services vous accompagne dans la mise en place du dispositif répondant à la récente évolution de la réglementation en matière de tri des déchets qui impose les obligations suivantes :"
-          ]
-        },
-        {
-          "img":"assets/img/gestion-dechet-tertiaire-1.jpg",
-          "paragraphes":[
-            ""
-          ]
-        },
-        {
-          "title": "Types de déchets collectés",
-          "points": [
-            "Papier (environ 70% du gisement),",
-            "carton,",
-            "emballages (bouteilles, gobelets, films plastiques ou encore cannettes),",
-            "Déchets des Équipements Électriques et Électroniques (DEEE)."
-          ]
-        },
-        {
-          "title": "Nos prestations en gestion des déchets en milieu tertiaire",
-          "souspoints":[
-            {
-              "title": "Gestion des déchets in-situ :",
-              "points": [
-                "Collecte des contenants au sein des locaux,",
-                "Sur-tri des déchets,",
-                "Pesée des déchets,",
-                "Regroupement par catégorie de déchets,",
-                "Réalisation des demandes d’enlèvement."
-              ]
-            },
-            {
-              "title": "Traçabilité- reporting :",
-              "points": [
-                "Élaboration et archivage des bons d'enlèvement et des bordereaux de suivi des déchets (BSD),",
-                "Tenue du registre déchets,",
-                "Transmission des quantités de déchets par catégorie et par zone de production et du taux de valorisation global du site."
-              ]
-            },
-            {
-              "title": "Gestion administrative :",
-              "points": [
-                "Suivi de la facturation du prestataire de collecte et de valorisation."
-              ]
-            },
-            {
-              "title": "Optimisation interne :",
-              "points": [
-                "Suivi des aléas (état du parc matériel, erreur de tri),",
-                "Élaboration de plans d’actions et de progrès."
-              ]
-            }
-          ]
-        }
-      ],
-      "temoignages": 
-      [
-        {
-          "title": "DES SOLUTIONS SUR-MESURE ET PERSONNALISÉES",
-          "paragraphes":[
-            "Sur le site tertiaire de Décathlon Village à Bouc-Bel-Air (Bouches-du-Rhône), Onet participe à la démarche nationale éco-citoyenne de son client grâce à la mise en place de dispositifs de tri (pour les activités de la galerie, l’espace fitness, le restaurant, la terrasse, et les bureaux) incitant les usagers à utiliser le système déployé, pour que les agents Onet réalisent la collecte et le transfert vers la zone déchets.",
-            "Le partenaire Elise, réalise, quand à lui, l’évacuation et la valorisation des déchets."
-          ]
-        },
-        {
-          "video":"https://youtu.be/-PeKxznCKVc",
-          "paragraphes": [
-            "« Le bilan aujourd’hui est très positif au-delà de la démarche éducative, l’analyse des résultats montre non seulement que le tri est bien fait et qu’il y a très peu de déchets mal positionnés. Notre volonté, au niveau local et national, d’être éco-citoyen se manifeste notamment grâce au tri des déchets et à la réduction de la consommation d’énergie, les solutions d’Onet nous permettent ainsi de compléter notre démarche. », signale Jean-Philippe Bretton, Responsable Exploitation Décathlon Village Bouc-Bel-Air."
-          ]
-        },
-        {
-          "title": "UN ACCOMPAGNEMENT QUOTIDIEN POUR DES SOLUTIONS ÉVOLUTIVES",
-          "paragraphes":[
-            "Au sein des bâtiments de la Cour de Justice de l’Union Européenne, Onet a accompagné son client dans l’amélioration du tri et du recyclage des déchets dans le prolongement de la prestation propreté.",
-            "De nombreux indicateurs sont remontés lors de la collecte :"
-          ],
-          "points":[
-            "performances de tri,",
-            "taux de remplissage des contenants,",
-            "poids des déchets par catégorie et par zone de production",
-            "suivi du planning d’évacuation."
-          ]
-        },
-        {
-          "paragraphes":[
-            "Ainsi, la traçabilité depuis la collecte jusqu’à la valorisation est assurée.",
-            "Ces informations permettent d’établir des plans d’actions et de progrès visant l’amélioration continue de la gestion des déchets.",
-            "« Nous disposons aujourd'hui d’un suivi et d’une gestion de nos déchets dont nous n’avions pas rêvé un an avant ! Cette solution web est source de progrès, car elle permet de savoir où mener des actions préventives pour nous améliorer.",
-            "Son utilisation a profondément modifié notre approche de la gestion des déchets », indique François Maraite, Cour de Justice de l’Union Européenne, Unité Affaires immobilières et sécurité – Section Facility Management."
-          ]
-        }
-      ],
-      "profileImage": "assets/img/gestion_dechet_profile.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "pertinence": "bas",
-      "marqueId": 0
-    },
-    {
-      "id": 7,
-      "icon": "\uf007",
-      "title": "La gestion des déchets industriels",
-      "paragraphes": [
-        "La gestion des déchets industriels occupe une place prépondérante au sein du cycle de production. La collecte, le tri et le suivi de l’évacuation des déchets font partie intégrante de la chaîne de production des entreprises."
-      ],
-      "description": [
-        {
-          "title": "Optimisation du process industriel",
-          "paragraphes": [
-            "Ces activités, opérées par Onet, sont essentielles afin de permettre la continuité de l’exploitation et son déroulement afin d’assurer l’optimisation du process industriel.",
-            "À travers notre outil Greenflow, le suivi de la production de déchets industriels par catégorie et par zone de production permet de cartographier les gisements et les flux dans l’objectif d’amélioration continue du process client tant organisationnelle, sécuritaire que financière."
-          ]
-        },
-        {
-          "title": "Types de déchets collectés",
-          "paragraphes":[
-            "ous types de déchets industriels, dangereux et non-dangereux :"
-          ],
-          "points": [
-            "carton,",
-            "films plastiques,",
-            "métaux,",
-            "bois,",
-            "palettes,",
-            "huiles,",
-            "boues,",
-            "déchets industriels banals (DIB),",
-            "verre,",
-            "solvants,",
-            "rebus de fabrication, ..."
-          ]
-        },
-        {
-          "title": "Nos prestations en gestion des déchets en milieu industriel",
-          "souspoints": [
-            {
-              "title": "Gestion des déchets in-situ :",
-              "points": [
-                "Collecte des contenants,",
-                "Tri des matières et contrôle des performances de tri,",
-                "Regroupement des déchets,",
-                "Pesée."
-              ]
-            },
-            {
-              "title": "Pilotage des évacuations vers les filières de valorisation :",
-              "points": [
-                "Réalisation des demandes d’enlèvement,",
-                "Suivi des factures du prestataire déchet."
-              ]
-            },
-            {
-              "title": "Gestion administrative :",
-              "points": [
-                "Mise en conformité réglementaire : élaboration et archivage des bordereaux de suivi des déchets (BSD), tenue du registre déchets,",
-                "Reporting d’exploitation,",
-                "Traçabilité via Greenflow (puces NFC, balance connectée, capteur de niveau, optimisation des circuits internes de collecte, ...)."
-              ]
-            },
-            {
-              "title": "Optimisation interne :",
-              "points": [
-                "Suivi des aléas (état du parc matériel, erreur de tri),",
-                "Suivi des niveaux de remplissage des contenants,",
-                "Élaboration de plans d’actions et de progrès."
-              ]
-            }
-          ]
-        }
-      ],
-      "temoignages": [
-        {
-          "title": "ONET, AU COEUR DE L’OPTIMISATION DES FLUX",
-          "paragraphes":[
-            "Sur le centre logistique Rexel de Toulouse (Haute-Garonne), suite à la réalisation d’un audit, Onet a pu identifier les problématiques du site en termes de gestion des déchets et apporter les solutions adéquates (dispositifs de collecte, collecte et transfert, campagne d’affichage, terminal mobile, logiciel Greenflow) pour l’optimisation des flux et un gain de temps."
-          ]
-        },
-        {
-          "video":"https://youtu.be/mK_HvsqgIAM",
-          "paragraphes": [
-            "« La solution Onet m’a permis de mieux optimiser les flux, d’avoir un flux plus rationnel, et de gagner en temps. », signale Serge Fontanel, Directeur du Centre Logistique Rexel Toulouse."
-          ]
-        },
-        {
-          "title": "UNE SOLUTION DÉVELOPPÉE PAR ONET POUR UNE MEILLEURE TRAÇABILITÉ",
-          "paragraphes":[
-            "Sur le site de PUNCH Powerglide de Strasbourg (Bas-Rhin), industrie fabriquant de boîtes de vitesse, Onet a déployé le logiciel Greenflow pour la gestion des déchets. 85 types de déchets distincts répertoriés sur les 90 000 m2 qui composent l’usine articulée autour de trois bâtiments principaux.",
-            "Aujourd'hui, avec un dispositif de collecte adapté (wagonnets, chariot, compacteurs, bennes, …), Onet assure la collecte, le transfert de ces déchets et le regroupement vers la zone de stockage appropriée.",
-            "« Le logiciel va nous donner à terme la capacité de peser les déchets et de suivre les quantités et les provenances. Nous espérons à terme améliorer le tri et réduire les quantités de déchets sur les chaines de production. Valoriser nos déchets contribue à réduire nos coûts. », annonce Bertrand Andna, Responsable contrats généraux chez PUNCH Powerglide."
-          ]
-        }
-      ],
-      "profileImage": "assets/img/gestion_dechet_profile.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "pertinence": "bas",
-      "marqueId": 0
-    },
-    {
-      "id": 8,
-      "icon": "\uf008",
-      "title": "Services associés",
-      "paragraphes":[
-        "Le maintien de la qualité de l'environnement de travail conditionne les performances de l'entreprise et garantit la sécurité des personnes comme des biens.",
-        "Les services associés sont toutes les solutions de service que l'on peut proposer et mettre en œuvre chez nos clients afin de leur apporter des réponses et un confort dans la gestion de leur site, notamment de la prise en charge des tâches périphériques à leur cœur de métier."
-      ],
-      "description": [{
-        "title": "SERVICES AUX OCCUPANTS",
-        "points": [
-          "Réception, gestion et préparation des salles de réunion.",
-          "Petite manutention, livraison de colis.",
-          "Accueil.",
-          "Nettoyage et gestion du parc véhicules, …",
-          "Gestion de distribution automatique (offre Sylliance avec notre partenaire SLG).",
-          "Gestion des archives (offre Sylliance avec notre partenaire Locarchives).",
-          "Conciergerie d'entreprise avec Or du temps   www.conciergerie-ordutemps.com"
-        ]
-      },
-      {
-        "title": "SERVICES AUX BÂTIMENTS",
-        "points": [
-          "Maintenance immobilière : cloisons amovibles, cloisons et doublage en plaque de plâtre plomberie, maçonnerie, électricité, menuiserie, serrurerie, peinture, marquage et traçage des sols, réfection de clôtures et regards d’assainissement, second-œuvre…,",
-          "Entretien des espaces verts extérieurs et intérieurs : tonte pelouse, fauchage, désherbage, bêchage, binage, arrosage, taille…,",
-          "3 D (Dératisation, Désinsectisation, Désinfection),",
-          "Salage, déneigement"
-        ]
-      },
-      {
-        "img": "assets/img/service-associes.jpg"
-      }],
-      "profileImage": "assets/img/services_associes.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "pertinence": "bas",
-      "marqueId": 0
-    },
-    {
-      "id": 9,
-      "icon": "\uf009",
-      "title": "Sécurité humaine*",
-      "subtitle": "Solution de sécurité par agent",
-      "description": [{
-        "paragraphes": [
-          "Selon la nature de vos risques, Onet Sécurité répond par une offre de sécurité humaine adaptée, avec un profil et des compétences spécifiques en fonction des missions et de votre secteur d’activité.",
-          "Domaines d'intervention : "
-        ],
-        "points": [
-          "sûreté,",
-          "sécurité incendie,",
-          "sûreté aéroportuaire,",
-          "sécurité évènementielle."
-        ]
-      },
-      {
-        "img": "assets/img/img_secu_humaine_large.jpg",
-        "paragraphes": [
-          "Dissuader, prévenir, intervenir et traiter sont les missions quotidiennes de nos agents qui œuvrent à la maîtrise de vos risques, la protection de vos biens, de votre savoir-faire et de vos équipes.",
-          "Professionnalisme, discrétion, efficacité et réactivité sont les qualités des agents Onet Sécurité."
-        ]
-      },
-      {
-        "title": "ÉLÉMENTS CLÉS DE LA SÉCURITÉ HUMAINE",
-        "points": [
-          "94% de satisfaction client,",
-          "4122 agents sur le terrain,  de 400 à 700 stadiers par match,",
-          "2,5% de la masse salariale investie en formation,",
-          "86% d’agents satisfaits de travailler chez Main Sécurité,",
-          "87% ont pour moteur la satisfaction du travail bien fait,",
-          "+ de 5 millions d’heures de sécurité gérées chaque année,",
-          "20 implantations de proximité,",
-          "Main Sécurité est la société d'exploitation de l'activité de sécurité humaine d'Onet,",
-          "NF Service « entreprises privées de prévention et sécurité » & MASE."
-        ]
-      },
-      {
-        "paragraphes": [
-          "* Autorisation d'exercer par le CIAC SUD du CNAPS N° AUT-013-2114-11-18-20150357540  délivrée le 18/11/2015. L'autorisation d'exercice ne confère aucune prérogative de puissance publique à l'entreprise ou aux personnes qui en bénéficient."
-        ]
-      }],
-      "profileImage": "assets/img/img_secu_humaine_large.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "pertinence": "bas",
-      "marqueId": 1
-    },
-    {
-      "id": 10,
-      "icon": "\uf00a",
-      "title": "Sécurité électronique",
-      "subtitle": "Solution de sécurité par système électronique",
-      "description": [{
-        "title": "PLUS TÔT VOUS ÊTES ALERTÉ D’UN DANGER, PLUS RAPIDEMENT ET INTELLIGEMMENT VOUS POUVEZ INTERVENIR.",
-        "paragraphes": [
-          "Pour identifier les menaces avant qu’elles ne compromettent la sécurité des personnes ou la pérennité de votre activité, Onet Sécurité construit, intègre et maintient des systèmes de sécurité électronique sur-mesure, capables de répondre aux besoins des clients les plus exigeants, par la parfaite maîtrise du cycle de vie des installations.",
-          "Domaines d'intervention : "
-        ],
-        "points": [
-          "Détection Intrusion,",
-          "Vidéoprotection",
-          "Contrôle d’accès",
-          "Sas et moyens de filtrage,",
-          "Hypervision"
-        ]
-      },
-      {
-        "img": "assets/img/securite-electronique_large.jpg",
-        "paragraphes": [
-          "Nos solutions sont fiables et modulables en fonction de vos risques et du niveau de sécurité qu’ils requièrent.",
-          "L’investissement consacré en R&D nous permet de proposer des solutions intégrées innovantes pour optimiser à la fois le pilotage et le niveau de sécurité de vos sites."
-        ]
-      },
-      {
-        "title": "ÉLÉMENTS CLÉS",
-        "points": [
-          "485 collaborateurs – 38 implantations de proximité,",
-          "18 005 installations réalisées – Leader en haute sécurité (bancaire),",
-          "45 ans d’expérience,",
-          "2% du CA réinvestis chaque année en R&D,",
-          "NF Service et Apsad en Détection Intrusion et Vidéosurveillance - Qualifelec,",
-          "Label Origine France Garantie pour la centrale Belledonne,",
-          "Telem est la société d’exploitation de l’activité de sécurité électronique d’Onet."
-        ]
-      },
-      {
-        "title" : "ILS LE DISENT SUR LEUR MÉTIER",
-        "paragraphes": [
-          "« Le SAV c’est vraiment être au service du client. Être disponible, réactif et persévérant sont les maîtres mots de notre quotidien pas toujours facile. Notre métier consiste à réparer un dysfonctionnement, qui plus est, dans le domaine de la haute sécurité. La performance est notre leitmotiv. » Florian P.,  Technicien et Responsable production SAV",
-          "« Les chantiers requièrent à la fois réactivité, efficacité et technicité. Prendre du recul est absolument essentiel afin d’opter rapidement pour les solutions qui satisferont le client. Ce qui anime mon quotidien, c’est les relations étroites que j’entretiens précieusement avec mes clients mais aussi avec mon équipe, les architectes, les sous-traitants, etc. La confiance est la base de nos relations et aussi ce qui fait la différence sur notre marché. » Gilles V., Responsable Technique."
-        ]
-      }],
-      "profileImage": "assets/img/securite-electronique_large.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "pertinence": "bas",
-      "marqueId": 1
-    },
-    {
-      "id": 11,
-      "icon": "\uf00b",
-      "title": "Télé(vidéo)surveillance*",
-      "subtitle": "Solution de sécurité à distance",
-      "description": 
-      [
-        {
-          "img":"assets/img/tls_large_large.jpg",
-          "paragraphes": [
-            "La gestion des flux d’informations, tels que les alarmes, est la base de tout système de sécurité.",
-            "Nos centres APSAD P3 nous permettent de maîtriser et analyser en temps réel, 24h/24 et 7j/7, le niveau de sécurité sur vos sites et a la capacité de déclencher des interventions."
-          ]
-        },
-        {
-          "title": "DOMAINES D'INTERVENTION DE LA TÉLÉSURVEILLANCE ET TÉLÉVIDÉOSURVEILLANCE",
-          "subtitle": "Gestion des alarmes", 
-          "paragraphes": [
-            "De la réception du signal, au traitement, puis à la levée de doute et interventions, nos systèmes de télésurveillance garantissent une action instantanée et directe limitant ainsi les risques de propagation ou d'aggravation des incidents."
-          ]
-        },
-        {
-          "subtitle": "Surveillance et géolocalisation des personnes et des biens",
-          "paragraphes": [
-            "Onet Sécurité réalise le suivi sécuritaire des personnes et des objets mobiles connectés, par localisation géo satellitaire :"
-          ],
-          "points": [
-            "alarmes de PTI,",
-            "alarmes d’inclusion/exclusion sur zones géographiques,",
-            "tracking d’objets de valeur…"
-          ]
-        },
-        {
-          "subtitle": "Télé-ronde",
-          "paragraphes": [
-            "Au travers de rondes vidéo, nos systèmes de télévidéosurveillance permettent de réaliser de façon automatisée la visualisation et l'analyse des scènes fournies par des caméras implantées stratégiquement."
-          ]
-        },
-        {
-          "subtitle": "Télé-escorte",
-          "paragraphes": [
-            "La télévidéosurveillance d'Onet Sécurité au bénéfice de vos sites assure la sécurisation de vos collaborateurs dans le cadre de situations à risque telles que suivi de progression ou l'accès à des zones sensibles ou de haute sécurité…"
-          ]
-        },
-        {
-          "subtitle": "Télé-accès piétons et véhicules",
-          "paragraphes": [
-            "Onet Sécurité propose l'assistance à distance de votre personnel lors de l’ouverture et de la fermeture de vos sites afin de lutter contre les comités d’accueil."
-          ]
-        },
-        {
-          "subtitle": "Télé-vidéodétection",
-          "paragraphes": [
-            "L'utilisation de caméras optiques et thermiques de haute sécurité associées à de puissants logiciels d’analyse d’image (V.M.S) et intégrées dans la chaîne d’expertise de la vidéosurveillance permet la vidéodétection automatisée à distance."
-          ]
-        },
-        {
-          "subtitle": "Télé-interpellation par messages sonores",
-          "paragraphes": [
-            "L'intervention verbale à distance par nos opérateurs de télévidéosurveillance est un élément fort de la stratégie de dissuasion, sans présence continue d’un agent de sécurité et réduit efficacement les risques d’effraction ou d’intrusion.",
-            "Vous souhaitez développer votre propre solution de télésurveillance ? Fort de notre expérience, nous vous proposons de la concevoir et de la mettre en œuvre."
-          ]
-        },
-        {
-          "title": "ÉLÉMENTS CLÉS",
-          "points": [
-            "2 PCS APSAD P3,",
-            "3000 clients et près de 10 500 personnes placées sous surveillance électronique,",
-            "3500 alarmes traitées et 85 000 événements reçus chaque jour,",
-            "7800 interventions par an,",
-            "39 opérateurs pour un service 24h/24 et 7j/7,",
-            "Telem Télésurveillance est la société d’exploitation de l’activité télésurveillance d’Onet."
-          ]
-        },
-        {
-          "title" : "ILS LE DISENT SUR LEUR MÉTIER",
-          "paragraphes": [
-            "« Plus de trente ans après mes débuts dans la sécurité, j’aime toujours autant mon métier. Un hold-up dans une banque, une agression, un incendie : il faut appliquer la procédure, avec les codes appropriés, appeler sur place, rassurer et réconforter. Le contact humain est la base de mon travail. Il faut savoir garder son sang froid en toute situation, gérer son stress face aux multiples informations que nous recevons et dont le traitement est soumis à un temps minuté pour y répondre. » Didier C., Opérateur en télésurveillance.",
-            "« Notre métier consiste à suivre les sites télésurveillés, soit en détectant un problème technique, soit en neutralisant une situation à risque et en dépêchant sur place un agent de sécurité, les forces de police ou de gendarmerie. Pour la prestation des bracelets électroniques nous assurons la supervision des alarmes, traitées pour partie par les agents de la pénitentiaire et pour l’autre partie par les opérateurs. Pour cela, nous disposons des technologies les plus performantes du marché et une équipe d’opérateurs hautement qualifiés. » Frédéric V., Directeur des opérations."
-          ]
-        },
-        {
-          "paragraphes":[
-            "* Autorisation d’exercer par la CIAC SUD du CNAPS N° AUT-013-2115-06-10-20160546525 délivrée le 10/06/2016. L'autorisation d'exercice ne confère aucune prérogative de puissance publique à l'entreprise ou aux personnes qui en bénéficient."
-          ]
-        }
-      ],
-      "profileImage": "assets/img/tls_large_large.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "pertinence": "bas",
-      "marqueId": 1
-    },
-    {
-      "id": 12,
-      "icon": "\uf00c",
-      "title": "Vidéoprotection",
-      "subtitle": "Solution de sécurité par images",
-      "description": [{
-        "paragraphes": [
-          "Optimiser l’efficacité d'un système de sécurité avec une solution de vidéoprotection proactive, basée sur l’image utile et notre savoir-faire.",
-          "Onet Sécurité construit, intègre et maintient des solutions expertes et sur-mesure de vidéoprotection, enrichies des dernières innovations technologiques.",
-          "Domaines d'intervention : "
-        ],
-        "points": [
-          "Système de vidéoprotection,",
-          "Détection comportementale,",
-          "Détection d’unicité de passage,",
-          "Contrôle d’accès,",
-          "Lecture de plaque minéralogique,",
-          "Vidéoprotection urbaine."
-        ]
-      },
-      {
-        "paragraphes": [
-          "Notre expérience nous permet aujourd’hui de répondre précisément à vos besoins."
-        ]
-      },
-      {
-        "subtitle": "Découvrez en image notre solution de vidéoprotection urbaine :",
-        "video": "https://youtu.be/3M2-zbgnIIU"
-      },
-      {
-        "title": "ÉLÉMENTS CLÉS",
-        "points": [
-          "+ 30 ans d’expérience en vidéoprotection,",
-          "1 bureau d’études interne pour une évolution continue, phasé avec les besoins du marché,",
-          "1 gamme de stockeurs ultra-performants, certifiés CNPP Approval 2010-0023,",
-          "Plus d’une quinzaine de superviseurs d’affichage graphique dynamique,",
-          "Partenariat avec CASD, Genetec, Milestone,",
-          "Telem est la société d'exploitation de l'activité vidéoprotection d'Onet."
-        ]
-      },
-      {
-        "title" : "ILS LE DISENT SUR LEUR MÉTIER",
-        "paragraphes": [
-          "« Ce métier est gratifiant car le résultat de nos solutions techniques est explicitement visible. Selon les besoins propres à chacun de nos clients, nous apportons à la bonne personne, au bon moment, l’image la plus pertinente. » François M., Chargé d’affaires"
-        ]
-      }],
-      "profileImage": "assets/img/securite-electronique_large.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "pertinence": "bas",
-      "marqueId": 1
-    },
-    {
-      "id": 13,
-      "icon": "\uf00d",
-      "title": "Conseil & Audit",
-      "subtitle": "Solution d'accompagnement en prévention et maîtrise des risques",
-      "description": [{
-        "paragraphes": [
-          "Expert en prévention et en maîtrise des risques, nous avons pour vocation de développer, accompagner et évaluer les connaissances et les savoir-faire en Sécurité, sûreté et Hygiène, Sécurité et Environnement (HSE).",
-          "Domaines d'intervention : ",
-          "Nous proposons 2 gammes de prestations pour des missions d'accompagnement à court, moyen et long terme et des solutions périodiques de diagnostics, d'évaluations dans le cadre d'audits et d'études."
-        ]
-      },
-      {
-        "title": "NOS EXPERTS",
-        "paragraphes": [
-          "Une équipe de 11 experts aux compétences variées allant du SST à l'ATEX en passant par le SSIAP."
-        ]
-      }],
-      "profileImage": "assets/img/securite-electronique_large.jpg",
-      "coverImage": "assets/img/gravel-proprete-hopital.jpg",
-      "pertinence": "bas",
-      "marqueId": 1
-    },
-    {
-      "id": 14,
-      "icon": "\uf00e",
-      "title": "Aviation générale",
-      "paragraphes": [
-        "Les équipes d’Onet Airport Services dédiées à l’aviation générale et à la spécificité de ces services, sont à la disposition de tous les propriétaires d’aéronefs privés et des sites dédiés à la recherche d’une qualité d’assistance exceptionnelle et personnalisée."
-      ],
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "areas":[
-        {
-          "points":[
-            "Assistance au sol / passager",
-            "Nettoyage avion",
-            "Eau potable",
-            "Catering",
-            "Formalités de douane – de sécurité",
-            "Refueling",
-            "Conciergerie",
-            "Transport des passagers"
-          ]
-        }
-      ],
-      "pertinence": "bas",
-      "marqueId": 2
-    },
-    {
-      "id": 15,
-      "icon": "\uf00f",
-      "title": "Full Handling",
-      "paragraphes":[
-        "Onet Airport Services propose des prestations full handling.",
-        "Son expertise dans le passage, trafic, piste et cargo est garante d'un savoir-faire maîtrisé. Pour assurer une qualité de service optimale, l'ensemble des services est réalisé par les équipes d’ Onet Airport Services. Un interlocuteur unique et dédié est en contact direct avec la compagnie aérienne."
-      ],
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "areas":[
-        {
-          "title": "Service passage :",
-          "points": [
-            "information aux passagers,",
-            "traitement des spécificités,",
-            "typologie passagers – correspondances – réclamations – irrégularités,",
-            "billetterie,",
-            "enregistrement."
-          ]
-        },
-        {
-          "title": "Service opérations :",
-          "points": [
-            "élaboration des dossiers de vol,",
-            "plan de chargement,",
-            "devis de masse,",
-            "coordination du vol,",
-            "transport des équipages."
-          ]
-        },
-        {
-          "title": "Service piste :",
-          "points": [
-            "traitement des bagages,",
-            "guidage - Marshalling,",
-            "parking,",
-            "GPU",
-            "climatisation et chauffage (ACU),",
-            "communication entre sol et poste de pilotage,",
-            "chargement et déchargement,",
-            "démarrage (ASU),",
-            "mesure de sécurité,",
-            "déplacement de l’avion,",
-            "nettoyage extérieur,",
-            "nettoyage intérieur (transit, night stop ou type Z),",
-            "service vidange toilette,",
-            "service eau potable,",
-            "équipement cabine,",
-            "rangement du matériel cabine,",
-            "assistance ramp à la restauration/mise à bord,",
-            "dégivrage. "
-          ]
-        }
-      ],
-      "pertinence": "bas",
-      "marqueId": 2
-    },
-    {
-      "id": 16,
-      "icon": "\uf010",
-      "title": "Cargo & Transport",
-      "paragraphes": [
-        "Onet Airport Services assure la gestion des flux de marchandises et de personnes.  Cela se traduit par l’accompagnement et l’optimisation des process de fret mais également par les transferts pour le personnel navigants ou les passagers entre l’avion et l’aérogare."
-      ],
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "areas":[
-        {
-          "title": "DOMAINES D’INTERVENTION POUR LE TRANSPORT",
-          "points": [
-            "accueil des équipages",
-            "chargement et déchargement des bagages",
-            "transfert des équipages (avion <->aérogare <-> hôtel)"
-          ],
-          "img": "assets/img/xxx.jpg"
-        },
-        {
-          "title": "DOMAINES D’INTERVENTION POUR LE CARGO",
-          "points": [
-            "assistance piste des avions",
-            "transfert du fret",
-            "chargement / déchargement des camions",
-            "inspection filtrage et sûreté des colis",
-            "tri des colis",
-            "contrôle douanier"
-          ],
-          "img": "assets/img/xxx.jpg"
-        }
-      ],
-      "pertinence": "bas",
-      "marqueId": 2
-    },
-    {
-      "id": 17,
-      "icon": "\uf011",
-      "title": "Accueil en Entreprise",
-      "subtitle": "Accueil en entreprise et services associés",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 3
-    },
-    {
-      "id": 18,
-      "icon": "\uf012",
-      "title": "Accueil Evènementiel",
-      "subtitle2": "Des compétences spécifiques pour chaque évènement",
-      "paragraphes": [
-        "L’expertise et la diversité des compétences de nos hôtes et hôtesses nous permettent de vous offrir une réponse spécifique à tous vos besoins  événementiels - manifestations culturelles ou sportives, congrès, salons, cocktails, road shows, soirées de prestige, tournées promotionnelles – mais également à vos actions de promotion des ventes."
-      ],
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 3
-    },
-    {
-      "id": 19,
-      "icon": "\uf013",
-      "title": "Accueil In&Out store",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 3
-    },
-    {
-      "id": 20,
-      "icon": "\uf014",
-      "title": "Accompagnement de personnes en situation de handicap ou à mobilité réduite",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 3
-    },
-    {
-      "id": 21,
-      "icon": "\uf015",
-      "title": "Conseil & ingénieurie logistique",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "areas":[
-        {
-          "points":[
-            "Etude et modélisation des processus logistiques",
-            "Audit de process logistiques opérationnels",
-            "Suivi et contrôle des performances - ROI",
-            "Plan d’implantations et mécanisme d’optimisation",
-            "Etude de première externalisation de votre fonction logistique",
-            "Plan de progrès – définition et mise en œuvre"
-          ]
-        }
-      ],
-      "pertinence": "bas",
-      "marqueId": 4
-    },
-    {
-      "id": 22,
-      "icon": "\uf016",
-      "title": "Gestion et pilotage des flux physiques et d'informations",
-      "subtitle2": "UN PILOTAGE AGILE DES FLUX ET UNE TRAÇABILITÉ OPTIMALE",
-      "paragraphes":[
-        "Le pilotage des flux consiste à coordonner les flux physiques et d’informations d'un site.",
-        "Totalement intégré à vos process, à l’intérieur de vos sites, nous développons une connaissance précise de votre activité et ses enjeux.",
-        "Couplée à notre expertise et expérience en pilotage et « réalisation » des flux nous répondons de façon complète et adaptée à vos besoins.",
-        "Notre savoir-faire en ingénierie sociale nous permet de reprendre sereinement des collaborateurs, en limitant tous risques sociaux, tout en les impliquant et motivant sur le long terme."
-      ],
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "areas":[
-        {
-          "title": "Logistique amont - approvisionnement",
-          "points":[
-            "Transport routier",
-            "Manoeuvre ferroviaire et exploitation d'installations embranchées",
-            "Réception, déchargement matières, composants, comsommables et produits finis / pièces de rechanges",
-            "Conditionnement et emballage",
-            "Contrôle qualité",
-            "Gestion de flux physique et d'information (traçabilité...)",
-            "Contrôle sûreté douanière"
-          ],
-          "img": "assets/img/xxx.jpg"
-        },
-        {
-          "title": "Gestion des stocks",
-          "points":[
-            "Gestion des stocks physiques et informatiques",
-            "Inventaires, suivi administratif",
-            "Préparation de commande, picking",
-            "Étiquetage / marquage",
-            "Tri / contrôle qualité / tests"
-          ],
-          "img": "assets/img/xxx.jpg"
-        },
-        {
-          "title": "Logistique de production",
-          "points":[
-            "Approvisionnement et gestion bord de ligne / chaîne de production",
-            "Assemblage / montage / intervention sur produit / petites opérations industrielles",
-            "Sortie de production",
-            "Conditionnement et emballage",
-            "Logistique déchet de production et d'emballages"
-          ],
-          "img": "assets/img/xxx.jpg"
-        },
-        {
-          "title": "Logistique aval - Distribution",
-          "points":[
-            "Conditionnement, emballage",
-            "Kitting",
-            "Expédition et achat transport",
-            "Gestion des échantillons",
-            "Reverse logistics",
-            "Opérations douanières (Chargeur Connu, OEA)",
-            "Transport routier / manœuvre ferroviaire"
-          ],
-          "img": "assets/img/xxx.jpg"
-        }
-      ],
-      "pertinence": "bas",
-      "marqueId": 4
-    },
-    {
-      "id": 23,
-      "icon": "\uf017",
-      "title": "Transport routier",
-      "paragraphes": [
-        "Le transport routier est un des maillons essentiels de la chaîne transport et logistique.",
-        "En fonction de votre secteur d'activité, vos produits et la capacité de transport dont vous avez besoin, Onet Logistique vous propose une solution adaptée et parfaitement sécurisée."
-      ],
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "areas":[
-        {
-          "points": [
-            "Transport régional de lot et demi-lot",
-            "Gestion des navettes intra et inter sites",
-            "Déchargement de camion - Mise à quais",
-            "Location avec ou sans chauffeur",
-            "Mise à disposition de matériel pour des navettes",
-            "Reconditionnement de lots de marchandises…"
-          ]
-        }
-      ],
-      "pertinence": "bas",
-      "marqueId": 4
-    },
-    {
-      "id": 24,
-      "icon": "\uf018",
-      "title": "Manoeuvre ferroviaire",
-      "paragraphes": [
-        "Pour offrir à nos clients industriels une solution logistique complète, nous assurons la gestion des Installations terminales Embranchées (ITE).",
-        "Notre expérience dans ce domaine complexe, nos collaborateurs dûment habilités (P1 – P2- P3) et nos moyens de traction nous permettent de répondre de façon adaptée à vos exigences et offrent souplesse et performance à notre prestation de logistique in situ."
-      ],
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "areas":[
-        {
-          "points": [
-            "Exploitation d'Installations terminales Embranchées",
-            "Gestion des rames : prise en charge (vide/pleine) – Chargement/déchargement (palettisé ou vrac)…",
-            "Reconstitution et acheminement des rames, mise à disposition à la SNCF"
-          ]
-        }
-      ],
-      "pertinence": "bas",
-      "marqueId": 4
-    },
-    {
-      "id": 25,
-      "linkedId": [26, 27, 28],
-      "icon": "\uf019",
-      "title": "Constructions neuves et modifications d'installations",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 26,
-      "icon": "\uf01a",
-      "title": "Ingénierie",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 27,
-      "icon": "\uf01b",
-      "title": "Fourniture de systèmes et d'équipements pour les réacteurs de puissance",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 28,
-      "icon": "\uf01c",
-      "title": "Fourniture d'installations pour le traitements de déchets radioactifs",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 29,
-      "icon": "\uf01d",
-      "title": "Assistance à l'exploitation",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 30,
-      "icon": "\uf01e",
-      "title": "Maintenance",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 31,
-      "icon": "\uf01f",
-      "title": "Contrôle non destructif",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 32,
-      "icon": "\uf020",
-      "title": "Décontamination, démantèlement",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 33,
-      "icon": "\uf021",
-      "title": "Désamiantage",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 34,
-      "icon": "\uf022",
-      "linkedId": [35, 36, 37],
-      "title": "Traitement des déchets",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 35,
-      "icon": "\uf023",
-      "title": "Maîtrise de la filière déchets",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 36,
-      "icon": "\uf024",
-      "title": "Installation Sogeval",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 37,
-      "icon": "\uf025",
-      "title": "Les conteneurs Onet",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 38,
-      "icon": "\uf026",
-      "title": "Formation pour l'industrie, le bâtiment et le nucléaire",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 5
-    },
-    {
-      "id": 39,
-      "icon": "\uf027",
-      "title": "Intérim",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 6
-    },
-    {
-      "id": 40,
-      "icon": "\uf028",
-      "title": "Recrutement",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 6
-    },
-    {
-      "id": 41,
-      "icon": "\uf029",
-      "title": "Formation",
-      "profileImage": "assets/img/xxx.jpg",
-      "coverImage": "assets/img/xxx.jpg",
-      "pertinence": "bas",
-      "marqueId": 6
+      }
     }
   ]
 }

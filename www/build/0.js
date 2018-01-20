@@ -8,11 +8,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__result__ = __webpack_require__(619);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__result__ = __webpack_require__(620);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic2_auto_complete__ = __webpack_require__(605);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_CompleteTestService__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_CompleteTestService__ = __webpack_require__(339);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_vis__ = __webpack_require__(612);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ng2_vis__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3738,67 +3738,6 @@ exports.VirtualAction = VirtualAction;
 
 /***/ }),
 /* 338 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompleteTestService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(317);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var CompleteTestService = (function () {
-    function CompleteTestService(http) {
-        this.http = http;
-        this.labelAttribute = "title";
-    }
-    CompleteTestService.prototype.getResults = function (keyword) {
-        var _this = this;
-        return this.http.get('assets/data/services.json')
-            .map(function (result) {
-            return result.json().services
-                .filter(function (item) { return _this.sansAccent(item.title.toLowerCase()).includes(keyword.toLowerCase()); }).slice(0, 5);
-        });
-    };
-    CompleteTestService.prototype.sansAccent = function (string) {
-        var accent = [
-            /[\300-\306]/g, /[\340-\346]/g,
-            /[\310-\313]/g, /[\350-\353]/g,
-            /[\314-\317]/g, /[\354-\357]/g,
-            /[\322-\330]/g, /[\362-\370]/g,
-            /[\331-\334]/g, /[\371-\374]/g,
-            /[\321]/g, /[\361]/g,
-            /[\307]/g, /[\347]/g,
-        ];
-        var noaccent = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'N', 'n', 'C', 'c'];
-        var str = string;
-        for (var i = 0; i < accent.length; i++) {
-            str = str.replace(accent[i], noaccent[i]);
-        }
-        return str;
-    };
-    return CompleteTestService;
-}());
-CompleteTestService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]])
-], CompleteTestService);
-
-//# sourceMappingURL=CompleteTestService.js.map
-
-/***/ }),
-/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4031,6 +3970,67 @@ var Symbol = {
 };
 exports.Symbol = Symbol;
 //# sourceMappingURL=Rx.js.map
+
+/***/ }),
+/* 339 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompleteTestService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CompleteTestService = (function () {
+    function CompleteTestService(http) {
+        this.http = http;
+        this.labelAttribute = "title";
+    }
+    CompleteTestService.prototype.getResults = function (keyword) {
+        var _this = this;
+        return this.http.get('assets/data/services.json')
+            .map(function (result) {
+            return result.json().services
+                .filter(function (item) { return _this.sansAccent(item.title.toLowerCase()).includes(keyword.toLowerCase()); }).slice(0, 5);
+        });
+    };
+    CompleteTestService.prototype.sansAccent = function (string) {
+        var accent = [
+            /[\300-\306]/g, /[\340-\346]/g,
+            /[\310-\313]/g, /[\350-\353]/g,
+            /[\314-\317]/g, /[\354-\357]/g,
+            /[\322-\330]/g, /[\362-\370]/g,
+            /[\331-\334]/g, /[\371-\374]/g,
+            /[\321]/g, /[\361]/g,
+            /[\307]/g, /[\347]/g,
+        ];
+        var noaccent = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'N', 'n', 'C', 'c'];
+        var str = string;
+        for (var i = 0; i < accent.length; i++) {
+            str = str.replace(accent[i], noaccent[i]);
+        }
+        return str;
+    };
+    return CompleteTestService;
+}());
+CompleteTestService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]])
+], CompleteTestService);
+
+//# sourceMappingURL=CompleteTestService.js.map
 
 /***/ }),
 /* 340 */
@@ -17108,7 +17108,7 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_util_noop__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs__ = __webpack_require__(338);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(54);
 
@@ -79683,16 +79683,17 @@ __export(__webpack_require__(607));
 /* 616 */,
 /* 617 */,
 /* 618 */,
-/* 619 */
+/* 619 */,
+/* 620 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResultPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__ = __webpack_require__(339);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__(338);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_vis_components_network__ = __webpack_require__(607);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_vis_components_network___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_vis_components_network__);
@@ -79885,7 +79886,7 @@ var ResultPage = (function () {
 }());
 ResultPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-result',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/'\n\n    <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n        <ion-buttons start>\n\n            <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n        </ion-buttons>\n\n        <ion-title>\n\n        Recherche\n\n        </ion-title>\n\n        <ion-buttons end>\n\n            <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    <form>\n\n    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>\n\n    </form>\n\n    </ion-header>\n\n    <ion-content *ngIf="services != null">\n\n        <div class="splash-relative">\n\n            <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n\n            <div class="splash-info" center>\n\n                <div class="splash-form">\n\n                    <div class="chart-container">\n\n                        <p text-center style="background-color: rgba(0, 0, 0, 0.7); margin: 0 20% 0 20%; padding:5px 5px 5px 5px; position:fixed; top: calc(20% - 1px); left:0; width:60%; z-index:1000;"><small><span style="color:#0eae15">Propreté et Services</span> - <span style="color:#d01717">Sécurité</span> - <span style="color:#386ecd">Services aéroportuaires</span> - <span style="color:#cbc40e">Accueil</span> - <span style="color:#cc7136">Logistique</span> - <span style="color:#962ac8">Technologies</span> - <span style="color:#d42649">AXXIS: Intérim, Recrutement et Formation</span></small></p>\n\n                        <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n                    </div>\n\n                </div>\n\n            </div>\n\n        </div>\n\n    </ion-content>\n\n    <ion-footer class="footer" hidden>\n\n        <ion-grid>\n\n          <ion-row>\n\n            <ion-col text-center col-9 *ngIf="myServiceId != null" class="valignCenter">\n\n                <h4 style="color:#0eae15; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].title}}</h4>\n\n                <h4 style="color:#d01717; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].title}}</h4>\n\n                <h4 style="color:#386ecd; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].title}}</h4>\n\n                <h4 style="color:#cbc40e; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].title}}</h4>\n\n                <h4 style="color:#cc7136; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].title}}</h4>\n\n                <h4 style="color:#962ac8; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].title}}</h4>\n\n                <h4 style="color:#d42649; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].title}}</h4>\n\n            </ion-col>\n\n            <ion-col text-center col-3 class="valignCenter">\n\n                <a style="width: 100%;" (click)="more()">+ d\'infos</a>\n\n            </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n    </ion-footer>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/
+        selector: 'page-result',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/'\n\n    <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n        <ion-buttons start>\n\n            <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n        </ion-buttons>\n\n        <ion-title>\n\n        Recherche\n\n        </ion-title>\n\n        <ion-buttons end>\n\n            <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    <form>\n\n    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>\n\n    </form>\n\n    </ion-header>\n\n    <ion-content *ngIf="services != null">\n\n        <div class="splash-relative">\n\n            <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n\n            <div class="splash-info" center>\n\n                <div class="splash-form">\n\n                    <div class="chart-container">\n\n                        <p text-center style="background-color: rgba(0, 0, 0, 0.7); margin: 0 20% 0 20%; padding:5px 5px 5px 5px; position:fixed; top: calc(20% - 1px); left:0; width:60%; z-index:1000;"><small><span style="color:#0eae15">Propreté et Services</span> - <span style="color:#d01717">Sécurité</span> - <span style="color:#386ecd">Services aéroportuaires</span> - <span style="color:#cbc40e">Accueil</span> - <span style="color:#cc7136">Logistique</span> - <span style="color:#962ac8">Technologies</span> - <span style="color:#d42649">AXXIS: Intérim, Recrutement et Formation</span></small></p>\n\n                        <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n                    </div>\n\n                </div>\n\n            </div>\n\n        </div>\n\n    </ion-content>\n\n    <ion-footer class="footer" hidden>\n\n        <ion-grid>\n\n          <ion-row>\n\n            <ion-col text-center col-9 *ngIf="myServiceId != null" class="valignCenter">\n\n                <h4 style="color:#0eae15; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#d01717; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#386ecd; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#cbc40e; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#cc7136; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#962ac8; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#d42649; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].content.title}}</h4>\n\n            </ion-col>\n\n            <ion-col text-center col-3 class="valignCenter">\n\n                <a style="width: 100%;" (click)="more()">+ d\'infos</a>\n\n            </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n    </ion-footer>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_5_ng2_vis_components_network__["VisNetworkService"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */]])
 ], ResultPage);

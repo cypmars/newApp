@@ -42,6 +42,7 @@ export class ServiceDetailsPage {
 
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.serviceId = navParams.get('param1');
+    console.log(this.serviceId);
 
     let servData = http.get('assets/data/services.json').map(res => res.json().services);
     servData.subscribe(data => {
@@ -96,6 +97,17 @@ export class ServiceDetailsPage {
     this.tabBarElement.style.display = 'flex';
   }
 
+  show(event){
+    if (event.srcElement.style.wordBreak == "normal"){
+      event.srcElement.style.wordBreak = "break-word";
+      event.srcElement.style.width = "100px";
+    }
+    else{
+      event.srcElement.style.wordBreak = "normal";
+      event.srcElement.style.width = "100%";
+      event.srcElement.style.minWidth = "100px";
+    }
+  }
   // forgot() {
   //   this.navCtrl.push('ForgotPage');
   // }

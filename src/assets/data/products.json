@@ -1,10 +1,10 @@
 {
     "products": [
       {
-        "idService":"0",
+        "idService": 0,
         "title":"Onet Blue Quality",
         "subtitle":"Une application dédiée au suivi des prestations",
-        "imgSrc": "assets/img/products/Onet-Blue-Quality_product_image.jpg",
+        "imgSrc": "assets/img/products/0.png",
         "parts":[
           {
             "title":"Votre besoin",
@@ -71,9 +71,9 @@
         ]
       },
       {
-        "idService":"0",
+        "idService": 0,
         "title":"Hello d'Onet : La propreté signée",
-        "imgSrc": "assets/img/products/Hello-d-Onet-La-proprete-signee_product_image.jpg",
+        "imgSrc": "assets/img/products/1.jpg",
         "parts":[
           {
             "title":"votre besoins",
@@ -157,10 +157,10 @@
         ]
       },
       {
-        "idService":"0",
+        "idService": 0,
         "title":"La solution Sanitaires Connectés",
         "subtitle":"Un service coût/qualité optimisé",
-        "imgSrc":"assets/img/products/La-solution-Sanitaires-Connectes_product_image.jpg",
+        "imgSrc":"assets/img/products/2.jpg",
         "parts":[
             {
               "title":"Votre besoin",
@@ -239,10 +239,10 @@
         ]
       },
       {
-        "idService":"1",
+        "idService": 1,
         "title":"Centre de formation santé de Valenciennes",
         "subtitle":"Pour accompagner vos équipes dans leur montée en compétence",
-        "imgSrc":"assets/img/products/formation.jpg",
+        "imgSrc":"assets/img/products/3.jpg",
         "parts":[
           {
             "title": "Votre besoin",
@@ -399,10 +399,10 @@
         ]
       },
       {
-        "idService":"2",
+        "idService":2,
         "title": "Le nettoyage cryogénique",
         "subtitle":"Une solution respectueuse de votre support et de l’environnement",
-        "imgSrc":"assets/img/products/cryo1.png",
+        "imgSrc":"assets/img/products/4.png",
         "parts":[
           {
             "title": "Nettoyage des supports fragiles, exigus ou électrifiés",
@@ -458,10 +458,10 @@
         ]
       },
       {
-        "idService":"2",
+        "idService": 2,
         "title": "Fabrication et vente de glace carbonique",
         "subtitle":"Une solution pour le maintien de la chaîne du froid",
-        "imgSrc":"assets/img/products/cryo4.jpg",
+        "imgSrc":"assets/img/products/5.jpg",
         "parts":[
           {
             "title": "Maintien au froid dans les milieux contraints",
@@ -530,10 +530,10 @@
         ]
       },
       {
-        "idService":"2",
+        "idService": 2,
         "title": "Le gommage cryogénique",
         "subtitle":"Une alternative aux techniques de sablage",
-        "imgSrc":"assets/img/products/gommage_cryo.jpg",
+        "imgSrc":"assets/img/products/6.jpg",
         "parts":[
           {
             "title": "Une solution de décapage puissante mais respectueuse des supports",
@@ -600,9 +600,9 @@
         ]
       },
       {
-        "idService":"5",
+        "idService": 5,
         "title": "Le pilotage de la filière déchets avec Green Flow",
-        "imgSrc":"assets/img/products/green_flow.jpg",
+        "imgSrc":"assets/img/products/7.jpg",
         "parts":[
           {
             "title": "Valoriser les déchets",

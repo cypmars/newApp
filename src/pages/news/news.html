@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
   <ion-navbar color="primary" hideBackButton="true">
     <ion-buttons start>
       
@@ -7,14 +7,40 @@
       News
     </ion-title>
     <ion-buttons end>
-     
+        <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>
     </ion-buttons>
   </ion-navbar>
+  <form>
+    <ion-auto-complete [dataProvider]="completeNewsService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>
+  </form>
 </ion-header>
-<ion-content>
-  <div class="splash-bg">
+<ion-content *ngIf="dates != null && news != null">
     <div class="splash-relative">
-            
+      <div class="card-background">
+        <div *ngFor="let date of dates">
+          <ion-grid>
+            <ion-row>
+              <ion-col col-3>
+                <hr style="background-color:white;">
+              </ion-col>
+              <ion-col col-6 text-center>
+                  <p style="color: white; font-size:1.1em">{{cleanDates[dates.indexOf(date)]}}</p>
+              </ion-col>
+              <ion-col col-3>
+                <hr style="background-color:white;">
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <div *ngFor="let new of news">
+            <ion-card *ngIf="new.date == date" (click)="showDetails($event, new.id)">
+              <img [src]="new.img"/>
+              <div style="position: absolute; bottom: 0; width: 100%; background-color: rgba(0, 0, 0, 0.5); color: white; padding-top:20px; padding-bottom: 20px; height: fit-content;">
+                <div class="card-title">{{new.content.title}}</div>
+                <div class="card-subtitle"></div>
+              </div>
+            </ion-card>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 </ion-content>

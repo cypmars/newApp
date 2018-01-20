@@ -1,0 +1,91 @@
+{
+    "template":
+    {
+        "id": 0,
+        "marqueId": 1,
+        "subServiceIds": [],    // ids des services sous services de this
+        "productIds": [],
+        "imgService": "assets/img/0.jpg", 
+        "imgMarque": "assets/img/marques/1.jpg",
+        "video": "",
+        "icon": "",
+        "pertinence": "",       // haut moyen bas
+        "content": {
+            "title": "",
+            "subtitle": "",
+            "introBold": "",
+            "intro": "",
+            "pointsIntro": [""],
+            "parts":[
+                {
+                    "title":"",
+                    "paragraphes": [
+                        {
+                            "accrPoints": "",    // phrase d'accroche avec points (xxx :)
+                                //OR
+                            "accrPointsBold": "", 
+                            "points": [         // Peut être seul sans accrPoints
+                                {
+                                    "title": "",
+                                    "subpoints": [""]
+                                }
+                            ], 
+                            // OR
+                            "description": "", // 
+                            // OR
+                            "descriptionBold": ""
+
+                        }
+                    ],
+                    // OR
+                    "title": "",
+                    "subParts": [
+                        {
+                            "title": "",
+                            "paragraphes": [
+                                {
+                                    "accrPoints": "",    // phrase d'accroche avec points (xxx :)
+                                        //OR
+                                    "accrPointsBold": "", 
+                                    "points": [         // Peut être seul sans accrPoints
+                                        {
+                                            "title": "",
+                                            "subpoints": [""]
+                                        }
+                                    ], 
+                                    // OR
+                                    "description": "", // 
+                                    // OR
+                                    "descriptionBold": ""
+        
+                                }
+                            ],
+                            // OR
+                            "points":[""]
+                            // OR
+                        }
+                    ],
+                    // OR
+                    "title": "",
+                    "points": [""]
+                }
+            ],
+            "areas":
+            [
+                {
+                    "title": "",
+                    "parts": [
+                        {
+                            "title": "",
+                            "subtitle": "",
+                            "description": "",
+                            "points":[""],
+                            "more": ""
+                        }
+                    ],
+                    "conclusion": ""
+                }
+            ]
+        }
+    }
+}

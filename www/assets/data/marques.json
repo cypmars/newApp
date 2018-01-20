@@ -46,7 +46,7 @@
         }
       ],
       "engagement": "Rendre les espaces de travail, de passage, de loisir, de production, de transport..., propres, sains et agréables est notre leitmotiv, celui de nos agences !",
-      "imgSrc": "assets/img/gravel-proprete-hopital.jpg",
+      "imgSrc": "assets/img/marques/0.jpg",
       "videoSrc": "https://youtu.be/pSbLUVvn2lU",
       "citation": "Leader historique en France de la propreté",
       "metiersId":[0, 1, 2, 3, 4, 5, 6, 7, 8],
@@ -104,7 +104,7 @@
           ]
         }
       ],
-      "imgSrc": "assets/img/xxx.jpg",
+      "imgSrc": "assets/img/marques/1.jpg",
       "videoSrc": "https://youtu.be/xxx",
       "metiersId":[9, 10, 11, 12, 13],
       "keys": [
@@ -160,7 +160,7 @@
           ]
         }
       ],
-      "imgSrc": "assets/img/xxx.jpg",
+      "imgSrc": "assets/img/marques/2.jpg",
       "videoSrc": "https://youtu.be/GYs9s2yvj9M",
       "metiersId":[14, 15, 16],
       "keys": [
@@ -228,7 +228,7 @@
           ]
         }
       ],
-      "imgSrc": "assets/img/xxx.jpg",
+      "imgSrc": "assets/img/marques/3.jpg",
       "videoSrc": "https://youtu.be/3aRL1cQZX7A",
       "metiersId":[17, 18, 19, 20],
       "keys": [
@@ -282,7 +282,7 @@
           ]
         }
       ],
-      "imgSrc": "assets/img/xxx.jpg",
+      "imgSrc": "assets/img/marques/4.jpg",
       "videoSrc": "https://youtu.be/xxx",
       "metiersId":[21, 22, 23, 24],
       "keys": [
@@ -320,7 +320,7 @@
           ]
         }
       ],
-      "imgSrc": "assets/img/xxx.jpg",
+      "imgSrc": "assets/img/marques/5.jpg",
       "videoSrc": "https://youtu.be/Pns_4yzGUIw",
       "metiersId":[25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38],
       "keys": [
@@ -357,7 +357,7 @@
           ]
         }
       ],
-      "imgSrc": "assets/img/xxx.jpg",
+      "imgSrc": "assets/img/marques/6.jpg",
       "videoSrc": "https://youtu.be/el5g0VjLMOU",
       "metiersId":[39, 40, 41],
       "keys": [

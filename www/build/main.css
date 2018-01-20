@@ -26647,7 +26647,7 @@ page-marque-details .list-ios > .item-block:last-child, page-marque-details .lis
   border-bottom: 0;
 }
 
-page-news .splash-bg {
+page-news .content-md, page-news .content-ios {
   background: #b2284e;
   /* For browsers that do not support gradients */
   /* For Safari 5.1 to 6.0 */
@@ -26656,45 +26656,11 @@ page-news .splash-bg {
   background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
   background: linear-gradient(-90deg, #b2284e, #2a73d3);
   /* Standard syntax */
-  height: 100%;
 }
 
 page-news .splash-relative {
   position: absolute;
-  width: 60%;
-  margin-right: 20%;
-  margin-left: 20%;
-  height: 100%;
-}
-
-page-news .splash-logo {
-  margin: auto;
-  background: url("../assets/img/logo2.png") repeat transparent;
-  background-size: 100%;
-  width: 128px;
-  height: 128px;
-}
-
-page-news .splash-intro {
-  text-align: center;
-  color: white;
-  font-size: 2em;
-}
-
-page-news .splash-new {
-  position: relative;
-  font-size: 20px;
-}
-
-page-news .splash-end {
-  position: fixed;
-  bottom: 20px;
-  width: 60%;
-  text-align: center;
-}
-
-page-news .splash-end a {
-  color: white;
+  width: 100%;
 }
 
 page-news .item-md, page-news .item-ios {
@@ -26733,6 +26699,66 @@ page-news .item-md {
 
 page-news .item-md.item-block .item-inner {
   padding-right: 0;
+}
+
+page-news .card-background ion-card {
+  position: relative;
+  text-align: center;
+  height: 200px;
+}
+
+page-news .card-background .card-title {
+  font-size: 1.1em;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: calc(100% - 20px);
+  color: #fff;
+}
+
+page-news .card-background img {
+  height: 100%;
+}
+
+page-news .card-background .card-subtitle {
+  font-size: 1.0em;
+  position: absolute;
+  top: 52%;
+  width: 100%;
+  color: #fff;
+}
+
+page-news .valign-center {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-align-content: center !important;
+  -ms-flex-line-pack: center !important;
+  align-content: center !important;
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+page-news ion-auto-complete ul {
+  margin-top: -10px;
+  left: 1px;
+  width: 99.5%;
+}
+
+page-news .scroll-content {
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+
+page-news .col p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+page-news .col hr {
+  margin-top: 10px;
 }
 
 page-result .content-md, page-result .content-ios {
@@ -27104,6 +27130,50 @@ page-service-details .list-ios > .item-block:last-child, page-service-details .l
 
 page-service-details ion-card {
   height: auto;
+}
+
+page-service-details .content-ios hr {
+  height: 1px;
+}
+
+page-service-details .points {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+page-service-details .scroll {
+  padding: 30px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+page-service-details ion-badge {
+  word-break: break-word;
+  overflow: hidden;
+  width: 100px;
+  padding: 6px 6px;
+}
+
+page-service-details .justify-center {
+  text-align: justify;
+  text-align-last: center;
+}
+
+page-service-details .scroll > .scroll-content {
+  white-space: nowrap;
+}
+
+page-service-details .row {
+  display: initial;
+}
+
+page-service-details .mother {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 page-signup .splash-bg {

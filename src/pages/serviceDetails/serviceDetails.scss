@@ -210,4 +210,42 @@ page-service-details {
   ion-card{
     height: auto;
   }
+
+  .content-ios hr{
+    height: 1px;
+  }
+
+  .points{
+    display: inline-flex;
+  }
+
+  .scroll{
+    padding: 30px;
+    white-space: nowrap;
+    text-align:center;
+  }
+
+  ion-badge{
+    word-break: break-word;
+    overflow:hidden;
+    width: 100px;
+    padding: 6px 6px;
+  }
+
+  .justify-center{
+    text-align: justify; 
+    text-align-last: center;
+  }
+
+  .scroll>.scroll-content{
+    white-space: nowrap;
+  }
+
+  .row{
+    display:initial;
+  }
+
+  .mother{
+    display: inline-flex;
+  }
 }

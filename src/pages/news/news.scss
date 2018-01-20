@@ -1,46 +1,15 @@
 page-news {
-  .splash-bg {
+  .content-md, .content-ios{
     background: #b2284e; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Firefox 3.6 to 15 */
     background: linear-gradient(-90deg, #b2284e, #2a73d3); /* Standard syntax */
-    height: 100%;
   }
 
   .splash-relative{
     position: absolute;
-    width: 60%;
-    margin-right: 20%;
-    margin-left:20%;
-    height:100%;
-  }
-  .splash-logo {
-    margin: auto;
-    background: url('../assets/img/logo2.png') repeat transparent;
-    background-size: 100%;
-    width: 128px;
-    height: 128px;
-  }
-
-  .splash-intro{
-    text-align:center;
-    color: white;
-    font-size: 2em;
-  }
-  .splash-new{
-    position: relative;
-    font-size: 20px;
-  }
-  .splash-end{
-    position:fixed;
-    bottom: 20px;
-    width:60%;
-    text-align: center;
-  }
-
-  .splash-end a{
-    color: white;
+    width: 100%;
   }
 
   .item-md, .item-ios{
@@ -79,4 +48,64 @@ page-news {
     padding-right:0;
   }
   
+  
+  .card-background {
+    
+      ion-card {
+        position: relative;
+        text-align: center;
+        height: 200px;
+      }
+    
+      .card-title {
+        font-size: 1.1em;
+        margin-right: 10px;
+        margin-left: 10px;
+        width: calc(100% - 20px);
+        color: #fff;
+      }
+    
+      img{
+        height: 100%;
+      }
+
+
+
+      .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+      }
+    
+    }
+
+    .valign-center{
+      display: flex!important;
+      align-content: center!important;
+      align-items: center!important;
+    }
+
+    ion-auto-complete ul{
+      margin-top: -10px;
+      left:1px;
+      width: 99.5%;
+    }
+
+    .scroll-content{
+      margin-top: 90px;
+      margin-bottom: 50px;
+    }
+
+    .col{
+      p{
+        margin-top:0;
+        margin-bottom:0;
+      }
+
+      hr{
+        margin-top:10px;
+      }
+    }
 }
