@@ -26393,11 +26393,6 @@ page-marque-details ion-content {
   height: 100%;
 }
 
-page-marque-details .ios [padding] .scroll-content, page-marque-details .md [padding] .scroll-content {
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-}
-
 page-marque-details .splash-relative {
   position: absolute;
   width: 60%;
@@ -26506,7 +26501,6 @@ page-marque-details p {
 
 page-marque-details #profile-bg {
   position: absolute;
-  top: 0;
   left: 0;
   width: 100%;
   margin-top: -16px;
@@ -26523,7 +26517,7 @@ page-marque-details #profile-bg {
 page-marque-details #content {
   position: relative;
   margin-top: 150px;
-  padding-top: 200px;
+  height: 100%;
   text-align: center;
 }
 
@@ -26533,21 +26527,18 @@ page-marque-details #profile-image {
   width: auto;
   height: 100px;
   width: 100px;
-  margin: 0 auto 0;
-  -webkit-box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
-  box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
+  margin: -80px auto 0;
 }
 
 page-marque-details #profile-info {
-  position: absolute;
-  top: -5px;
+  top: -95px;
   width: 100%;
   z-index: 2;
   text-align: center;
 }
 
 page-marque-details #profile-name {
-  color: #ffffff;
+  margin-top: 25px;
   font-size: 26px;
 }
 
@@ -26598,46 +26589,12 @@ page-marque-details .toolbar-md-primary .toolbar-background-md {
   background: transparent;
 }
 
-page-marque-details .title-container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-page-marque-details .profile-title {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-page-marque-details .scroll-content {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-page-marque-details button {
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-page-marque-details .list-md .item-block .item-inner, page-marque-details .list-ios .item-block .item-inner {
-  border: 0;
-}
-
-page-marque-details .accordion-button {
-  width: 100%;
-}
-
 page-marque-details .item-md .item-button, page-marque-details .item-ios .item-button {
   height: 50px;
   font-size: 1.6rem;
 }
 
-page-marque-details .list-md, page-marque-details .list-ios, page-marque-details .label-md, page-marque-details .label-ios {
+page-marque-details .list-md, page-marque-details .list_ios, page-marque-details .label-md, page-marque-details .label-ios {
   margin: 0 0 0 0;
   font-size: 1.4rem;
 }
@@ -26645,6 +26602,97 @@ page-marque-details .list-md, page-marque-details .list-ios, page-marque-details
 page-marque-details .list-ios > .item-block:last-child, page-marque-details .list-ios > .item-block:first-child {
   border-top: 0;
   border-bottom: 0;
+}
+
+page-marque-details ion-card {
+  height: auto;
+}
+
+page-marque-details .content-ios hr {
+  height: 1px;
+}
+
+page-marque-details .points {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+page-marque-details .keys .scroll {
+  padding: 90px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+page-marque-details .scroll {
+  padding: 30px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+page-marque-details ion-badge {
+  word-break: break-word;
+  overflow: hidden;
+  width: 100px;
+  padding: 6px 6px;
+}
+
+page-marque-details .col ion-badge {
+  height: 100px;
+  font-size: 1.4em;
+}
+
+page-marque-details .col {
+  min-width: 150px;
+}
+
+page-marque-details .descr {
+  white-space: normal;
+}
+
+page-marque-details .badge-md, page-marque-details .badge-ios {
+  border-radius: 50px;
+}
+
+page-marque-details .justify-center {
+  text-align: justify;
+  text-align-last: center;
+}
+
+page-marque-details .scroll > .scroll-content {
+  white-space: nowrap;
+}
+
+page-marque-details .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+page-marque-details .mother {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+page-marque-details .valign-center {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-align-content: center !important;
+  -ms-flex-line-pack: center !important;
+  align-content: center !important;
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
 }
 
 page-news .content-md, page-news .content-ios {
@@ -27030,6 +27078,48 @@ page-news-details .mother {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+page-news-details .item-md ion-avatar[item-start] {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+page-news-details .item-ios ion-avatar[item-start] {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+page-news-details ion-label {
+  white-space: normal;
+  margin-top: 20px;
+}
+
+page-news-details .label-ios, page-news-details .label-md {
+  margin-top: 8px;
+}
+
+page-news-details .temoignage-back {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+  border-radius: 25px;
+}
+
+page-news-details .temoignage ion-card {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  margin: 0;
+  width: auto;
+}
+
+page-news-details .item-ios.item-block .item-inner, page-news-details .item-md.item-block .item-inner {
+  padding-right: 20px;
 }
 
 page-result .content-md, page-result .content-ios {

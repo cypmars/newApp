@@ -1,0 +1,62 @@
+{
+  "marques": [
+    {
+      "id": 0,
+      "servicesId":[0, 1, 2],
+      "newsId": [0],
+      "img": "assets/img/marques/0.jpg",
+      "video": "https://youtu.be/xxx",
+      "title": "",
+      "content": {
+        "title": "",  //same as line 8
+        "citation": "",
+        "keys": [
+          {"label": "", "nb": ""}
+        ],
+        "areas": [
+          {
+            "title": "",
+            "parts":[
+              {
+                "points":[""]
+              } 
+            ]
+          } 
+        ],
+        "parts": [
+          {
+            "title": "",
+            "points": [
+              { 
+                "title": ""
+              }
+            ],
+            "paragraphes": [
+              { 
+                "description": "",
+                "descriptionBold": "",
+                "accrPoints": "",
+                "accrPointsBold": "",
+                "points":[
+                  {
+                    "title": ""
+                  }
+                ]
+              }
+            ],
+            "subparts": [
+              {
+                "title": "",
+                "paragraphes": [
+                  {
+                    "description": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -248,4 +248,47 @@ page-news-details {
   .mother{
     display: inline-flex;
   }
+
+  .item-md ion-avatar[item-start]{
+    margin-left:8px;
+    margin-right:8px;
+  }
+
+  .item-ios ion-avatar[item-start]{
+    margin-left:8px;
+    margin-right:8px;
+  }
+
+  ion-label{
+    white-space: normal;
+    margin-top: 20px;
+  }
+
+  .label-ios,.label-md{
+    margin-top: 8px;
+  }
+
+  .temoignage-back{
+    background: #b2284e; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #b2284e, #2a73d3); /* Standard syntax */
+    border-radius: 25px;
+  }
+  .temoignage{
+    ion-card{
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 25px;
+      margin: 0;
+      width: auto;
+
+    }
+
+
+  }
+
+  .item-ios.item-block .item-inner, .item-md.item-block .item-inner{
+    padding-right: 20px;
+  }
 }

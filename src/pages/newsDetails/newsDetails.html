@@ -12,7 +12,7 @@
       </ion-buttons>
     </ion-navbar>
   </ion-header>
-<div id="profile-bg" [ngStyle]="{'background-image': 'url(' + marques[news[newsId].marqueId].imgSrc +')'}"></div>
+<div id="profile-bg" [ngStyle]="{'background-image': 'url(' + marques[news[newsId].marqueId].imgCover +')'}"></div>
 <div id="content">
   <ion-card>
     <ion-card-content>
@@ -60,10 +60,10 @@
         <h3 *ngIf="part.title != null" style="font-size: 1.2em">{{part.title}}</h3>
         <br>
         <div *ngIf="part.paragraphes != null">
-          <div *ngFor="let p of part.paragraphes" class="justify-center">
-            <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>
-            <p *ngIf="p.accrPointsBold"><b>{{p.accrPointsBold}}</b></p>
-            <div *ngIf="p.points">
+          <div *ngFor="let p of part.paragraphes">
+            <p *ngIf="p.accrPoints" class="justify-center">{{p.accrPoints}}</p>
+            <p *ngIf="p.accrPointsBold" class="justify-center"><b>{{p.accrPointsBold}}</b></p>
+            <div *ngIf="p.points" class="justify-center">
               <ul style="color:#666" text-justify>
                 <li *ngFor="let point of p.points">
                   {{point.title}}
@@ -75,8 +75,25 @@
                 </li>
               </ul>
             </div>
-            <p *ngIf="p.description" text-justify>{{p.description}}</p>
-            <p *ngIf="p.descriptionBold" text-justify><b>{{p.descriptionBold}}</b></p>
+            <p *ngIf="p.description" class="justify-center">{{p.description}}</p>
+            <p *ngIf="p.descriptionBold" class="justify-center"><b>{{p.descriptionBold}}</b></p>
+            <div *ngIf="p.temoignage" class="temoignage-back">
+              <div class="temoignage" >
+                  <ion-card text-center>   
+                    <ion-item style="margin-right: 50px;">
+                      <ion-avatar item-start>
+                        <img [src]="p.temoignage.authorImg">
+                      </ion-avatar>
+                      <h2 text-center style="color: white">{{p.temoignage.author}}</h2>
+                      <p text-center>{{p.temoignage.function}}</p>
+                    </ion-item>
+                    <hr>
+                    <ion-card-content>
+                      <p style="color:#8e9093; font-size: 1.2em"><i>{{p.temoignage.content}}</i></p>
+                    </ion-card-content>
+                  </ion-card>
+                </div>
+            </div>
             <br>
           </div>
         </div>
@@ -85,8 +102,8 @@
             <li *ngFor="let p of part.points">{{p}}</li>
           </ul>
         </div>
+        <br>
       </div>
-      <hr>
     </div>
     <!-- <p> &bull; {{services.location}}</p>
     <p class="profile-description">{{service.description}}</p>
