@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { CompleteNewsService } from '../../providers/CompleteNewsService';
-
+import { NewsDetailsPage } from '../pages';
 import { Http } from '@angular/http';
 /**
  * The Welcome Page is a splash page that quickly describes the app,

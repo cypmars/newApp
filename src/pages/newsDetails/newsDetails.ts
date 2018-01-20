@@ -13,40 +13,37 @@ import 'rxjs/add/operator/map'
 */
 @IonicPage()
 @Component({
-  selector: 'page-service-details',
-  templateUrl: 'serviceDetails.html'
+  selector: 'page-news-details',
+  templateUrl: 'newsDetails.html'
 })
 export class NewsDetailsPage {
-  shownGroup = null;
   tabBarElement: any;
-  serviceId;
-  services: any[];
+  newsId;
+  news: any[];
   marques:any[];
   products:any[];
 
   // The account fields for the login form.
   // If you're using the username field with or without email, make
   // sure to add it to the type
-  account: { email: string, password: string } = {
-    email: '@ e-mail ou pseudo',
-    password: 'mot de passe'
-  };
-
-  like = false;
+  // account: { email: string, password: string } = {
+  //   email: '@ e-mail ou pseudo',
+  //   password: 'mot de passe'
+  // };
 
   // Our translated text strings
-  private loginErrorString: string;
+  // private loginErrorString: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public toastCtrl: ToastController, private http:Http) {
 
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
-    this.serviceId = navParams.get('param1');
-    console.log(this.serviceId);
+    this.newsId = navParams.get('param1');
+    console.log(this.newsId);
 
-    let servData = http.get('assets/data/services.json').map(res => res.json().services);
-    servData.subscribe(data => {
-      this.services = data;
+    let newsData = http.get('assets/data/news.json').map(res => res.json().news);
+    newsData.subscribe(data => {
+      this.news = data;
     });
 
     let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
@@ -65,29 +62,13 @@ export class NewsDetailsPage {
   prev() {
     this.navCtrl.pop();
   }
-  
-  follow() {
-    this.like = !this.like;
-  }
 
   showMarque(){
-    console.log(this.services[this.serviceId].marqueId);
+    console.log(this.news[this.newsId].marqueId);
     this.navCtrl.push(MarqueDetailsPage, {
-      marqueId: this.services[this.serviceId].marqueId
+      marqueId: this.news[this.newsId].marqueId
     });
   }
-
-  toggleGroup(group) {
-    if (this.isGroupShown(group)) {
-        this.shownGroup = null;
-    } else {
-        this.shownGroup = group;
-    }
-  };
-  
-  isGroupShown(group) {
-      return this.shownGroup === group;
-  };
 
   ionViewWillEnter(){
     this.tabBarElement.style.display = 'none';

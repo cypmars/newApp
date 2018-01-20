@@ -116,21 +116,21 @@
                     {
                         "title": "Une solution logistique intégrée, de la commande jusqu’à l’utilisation du produit sur site",
                         "paragraphes": [
-                            "Les produits, dont l’acquisition est centralisée notre filiale de Distribution de matériel de nettoyage Prodim, sont livrés directement aux agences en format ultra-concentré. Ce procédé simplifie ainsi la gestion des commandes, tout en réduisant la fréquence des livraisons et le nombre de références produits. Une fois en agence, les bidons sont assemblés directement sur le Dilumob. A chaque nouvelle livraison des produits, les bidons vides sont récupérés pour un nouveau remplissage, diminuant significativement l’empreinte écologique liée au rejet de plastique."
+                            { "description": "Les produits, dont l’acquisition est centralisée notre filiale de Distribution de matériel de nettoyage Prodim, sont livrés directement aux agences en format ultra-concentré. Ce procédé simplifie ainsi la gestion des commandes, tout en réduisant la fréquence des livraisons et le nombre de références produits. Une fois en agence, les bidons sont assemblés directement sur le Dilumob. A chaque nouvelle livraison des produits, les bidons vides sont récupérés pour un nouveau remplissage, diminuant significativement l’empreinte écologique liée au rejet de plastique." }
                         ]
                     },
                     {
                         "title": "Un projet d’entreprise global",
                         "paragraphes": [
-                            "Ce projet a mobilisé de nombreuses compétences du groupe pour fournir à nos clients une solution opérationnelle, fonctionnelle et efficace.",
-                            "Il s’inscrit dans la politique Développement responsable d'Onet qui s’appuie sur 4 axes fondamentaux : la protection de l'environnement, l'équité sociale, la responsabilité sociétale et la performance économique."
+                            { "description": "Ce projet a mobilisé de nombreuses compétences du groupe pour fournir à nos clients une solution opérationnelle, fonctionnelle et efficace." },
+                            { "description": "Il s’inscrit dans la politique Développement responsable d'Onet qui s’appuie sur 4 axes fondamentaux : la protection de l'environnement, l'équité sociale, la responsabilité sociétale et la performance économique." }
                         ]
                     },
                     {
                         "title": "Ecovadis place Onet dans le top 1% et lui décerne le statut Gold",
                         "paragraphes": [
-                            "Cette démarche globale a permis d’hisser Onet dans le top 1% des fournisseurs évalués par Ecovadis sur le thème Environnement.",
-                            "Ecovadis est une plateforme de notation de la performance sociale et environnementale des chaînes d'approvisionnement mondiales. Celle-ci évalue la responsabilité sociétale des entreprises et a décerné à Onet le statut Gold. Pour la totalité de ses actions, Onet se situe dans le TOP 2% des fournisseurs évalués par Ecovadis dans toutes les catégories."
+                            { "description": "Cette démarche globale a permis d’hisser Onet dans le top 1% des fournisseurs évalués par Ecovadis sur le thème Environnement." },
+                            { "description": "Ecovadis est une plateforme de notation de la performance sociale et environnementale des chaînes d'approvisionnement mondiales. Celle-ci évalue la responsabilité sociétale des entreprises et a décerné à Onet le statut Gold. Pour la totalité de ses actions, Onet se situe dans le TOP 2% des fournisseurs évalués par Ecovadis dans toutes les catégories." }
                         ]
                     }                 
                 ]
@@ -173,9 +173,9 @@
                             {
                                 "accrPoints": "Afin de contribuer au développement et à l’attractivité des aéroports, Onet propose les services aéroportuaires suivants :",
                                 "points": [
-                                    "Aviation générale",
-                                    "Full handling",
-                                    "Cargo & Transport"
+                                    { "title": "Aviation générale"},
+                                    { "title": "Full handling"},
+                                    { "title": "Cargo & Transport"}
                                 ]
                             },
                             { "description": "Pour ses clients, le renouvellement en 2016 pour une période de deux ans, sur l’ensemble de ses activités de la certification ISAGO (IATA Safety Audit for Ground Operations) est un gage supplémentaire de la qualité et de la sécurité des opérations effectuées par Onet."}

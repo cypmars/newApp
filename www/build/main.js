@@ -1,4 +1,4 @@
-webpackJsonp([14],{
+webpackJsonp([15],{
 
 /***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -68,59 +68,63 @@ webpackEmptyAsyncContext.id = 115;
 var map = {
 	"../pages/chat/chat.module": [
 		287,
-		11
+		12
 	],
 	"../pages/chat2/chat2.module": [
 		288,
-		12
+		13
 	],
 	"../pages/marqueDetails/marqueDetails.module": [
 		289,
-		9
+		10
 	],
 	"../pages/news/news.module": [
 		290,
 		5
 	],
-	"../pages/result/result.module": [
+	"../pages/newsDetails/newsDetails.module": [
 		291,
+		9
+	],
+	"../pages/result/result.module": [
+		292,
 		0
 	],
 	"../pages/serviceDetails/serviceDetails.module": [
-		292,
+		293,
 		8
 	],
 	"../pages/signup/signup.module": [
-		293,
+		294,
 		7
 	],
 	"../pages/simple-form/simple-form.module": [
-		294,
+		295,
 		2
 	],
 	"../pages/simple-form1/simple-form1.module": [
-		295,
+		296,
 		4
 	],
 	"../pages/simple-form2/simple-form2.module": [
-		296,
+		297,
 		3
 	],
 	"../pages/tabs/tabs.module": [
-		297,
-		13
+		298,
+		14
 	],
 	"../pages/tinderQ/tinderQ.module": [
-		298,
+		299,
 		6
 	],
 	"../pages/tinderQ2/tinderQ2.module": [
-		299,
+		300,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		300,
-		10
+		301,
+		11
 	]
 };
 function webpackAsyncContext(req) {
@@ -208,6 +212,7 @@ AppModule = __decorate([
                     { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/marqueDetails/marqueDetails.module#MarqueDetailsPageModule', name: 'MarqueDetailsPage', segment: 'marqueDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/newsDetails/newsDetails.module#NewsDetailsPageModule', name: 'NewsDetailsPage', segment: 'newsDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/serviceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
@@ -362,6 +367,7 @@ MyApp = __decorate([
 /* unused harmony export Chat2Page */
 /* unused harmony export ServiceDetailsPage */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MarqueDetailsPage; });
+/* unused harmony export NewsDetailsPage */
 /* unused harmony export ResultPage */
 /* unused harmony export MainPage */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Tab1Root; });
@@ -381,6 +387,7 @@ var ChatPage = 'ChatPage';
 var Chat2Page = 'Chat2Page';
 var ServiceDetailsPage = 'ServiceDetailsPage';
 var MarqueDetailsPage = 'MarqueDetailsPage';
+var NewsDetailsPage = 'NewsDetailsPage';
 var ResultPage = 'ResultPage';
 var MainPage = 'TabsPage';
 // The initial root pages for our tabs (remove if not using tabs)

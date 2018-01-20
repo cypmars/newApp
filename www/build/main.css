@@ -26761,6 +26761,277 @@ page-news .col hr {
   margin-top: 10px;
 }
 
+page-news-details ion-content {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+  height: 100%;
+}
+
+page-news-details .splash-relative {
+  position: absolute;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  height: 100%;
+}
+
+page-news-details .splash-logo {
+  margin: auto;
+  background: url("../assets/img/logo2.png") repeat transparent;
+  background-size: 100%;
+  width: 128px;
+  height: 128px;
+}
+
+page-news-details .splash-intro {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+
+page-news-details .splash-new {
+  position: relative;
+  font-size: 20px;
+}
+
+page-news-details .splash-end {
+  position: fixed;
+  bottom: 20px;
+  width: 60%;
+  text-align: center;
+}
+
+page-news-details .splash-end a {
+  color: white;
+}
+
+page-news-details .item-md, page-news-details .item-ios {
+  background-color: transparent;
+}
+
+page-news-details button.login {
+  margin-top: 25px;
+  max-width: 180px;
+  background-color: transparent;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+page-news-details button.login.activated {
+  background-color: gainsboro;
+}
+
+page-news-details input {
+  color: white;
+}
+
+page-news-details .white-text {
+  color: white;
+}
+
+page-news-details .item-input ion-label {
+  width: 20px;
+}
+
+page-news-details .item-md {
+  padding-left: 0;
+}
+
+page-news-details .item-md.item-block .item-inner {
+  padding-right: 0;
+}
+
+page-news-details .account {
+  position: relative;
+  height: 200px;
+}
+
+page-news-details .account-pic {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+page-news-details .account-text {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  color: white;
+  z-index: 2;
+}
+
+page-news-details button,
+page-news-details ion-button,
+page-news-details .button-md,
+page-news-details .button-ios {
+  text-transform: none !important;
+}
+
+page-news-details p {
+  color: #ffffff;
+}
+
+page-news-details #profile-bg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin-top: -16px;
+  height: 160px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-filter: blur(2px);
+  /* Safari 6.0 - 9.0 */
+  filter: blur(2px);
+  text-align: center;
+}
+
+page-news-details #content {
+  position: relative;
+  margin-top: 150px;
+  height: 100%;
+  text-align: center;
+}
+
+page-news-details #profile-image {
+  display: block;
+  border-radius: 50%;
+  width: auto;
+  height: 100px;
+  width: 100px;
+  margin: -80px auto 0;
+}
+
+page-news-details #profile-info {
+  top: -95px;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+}
+
+page-news-details #profile-name {
+  margin-top: 25px;
+  font-size: 26px;
+}
+
+page-news-details .profile-description {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+page-news-details .follow-button {
+  text-transform: none;
+  border-radius: 3px !important;
+}
+
+page-news-details .follow-button ion-icon {
+  font-weight: bold;
+  padding-left: 5px;
+  font-size: 2.5rem;
+}
+
+page-news-details .profile-numbers p {
+  color: #444;
+  font-size: medium;
+  margin-bottom: 3px;
+}
+
+page-news-details .profile-numbers span {
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: #34354c;
+}
+
+page-news-details hr {
+  border: 0;
+  height: 1px;
+  background: #444;
+  background: -webkit-linear-gradient(left, transparent 0%, #bcc6d6 50%, transparent 100%);
+}
+
+page-news-details #posts {
+  text-align: justify;
+}
+
+page-news-details .toolbar-ios-primary .toolbar-background-ios {
+  background: transparent;
+}
+
+page-news-details .toolbar-md-primary .toolbar-background-md {
+  background: transparent;
+}
+
+page-news-details .item-md .item-button, page-news-details .item-ios .item-button {
+  height: 50px;
+  font-size: 1.6rem;
+}
+
+page-news-details .list-md, page-news-details .list_ios, page-news-details .label-md, page-news-details .label-ios {
+  margin: 0 0 0 0;
+  font-size: 1.4rem;
+}
+
+page-news-details .list-ios > .item-block:last-child, page-news-details .list-ios > .item-block:first-child {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+page-news-details ion-card {
+  height: auto;
+}
+
+page-news-details .content-ios hr {
+  height: 1px;
+}
+
+page-news-details .points {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+page-news-details .scroll {
+  padding: 30px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+page-news-details ion-badge {
+  word-break: break-word;
+  overflow: hidden;
+  width: 100px;
+  padding: 6px 6px;
+}
+
+page-news-details .justify-center {
+  text-align: justify;
+  text-align-last: center;
+}
+
+page-news-details .scroll > .scroll-content {
+  white-space: nowrap;
+}
+
+page-news-details .row {
+  display: initial;
+}
+
+page-news-details .mother {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 page-result .content-md, page-result .content-ios {
   background: #b2284e;
   /* For browsers that do not support gradients */
