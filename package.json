@@ -60,8 +60,7 @@
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-whitelist": {},
-      "ionic-plugin-keyboard": {},
-      "com.hutchind.cordova.plugins.streamingmedia": {}
+      "ionic-plugin-keyboard": {}
     },
     "platforms": [
       "android"
