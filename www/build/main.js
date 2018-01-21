@@ -1,4 +1,4 @@
-webpackJsonp([15],{
+webpackJsonp([16],{
 
 /***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -25,9 +25,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var TabsPage = (function () {
     function TabsPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__pages__["b" /* Tab1Root */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_2__pages__["c" /* Tab2Root */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__pages__["d" /* Tab3Root */];
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__pages__["c" /* Tab1Root */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_2__pages__["d" /* Tab2Root */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__pages__["e" /* Tab3Root */];
         this.tab1Title = " ";
         this.tab2Title = " ";
         this.tab3Title = " ";
@@ -68,15 +68,15 @@ webpackEmptyAsyncContext.id = 115;
 var map = {
 	"../pages/chat/chat.module": [
 		287,
-		12
+		13
 	],
 	"../pages/chat2/chat2.module": [
 		288,
-		13
+		14
 	],
 	"../pages/marqueDetails/marqueDetails.module": [
 		289,
-		8
+		9
 	],
 	"../pages/news/news.module": [
 		290,
@@ -84,47 +84,51 @@ var map = {
 	],
 	"../pages/newsDetails/newsDetails.module": [
 		291,
-		10
+		11
+	],
+	"../pages/productDetails/productDetails.module": [
+		292,
+		8
 	],
 	"../pages/result/result.module": [
-		292,
+		293,
 		0
 	],
 	"../pages/serviceDetails/serviceDetails.module": [
-		293,
-		9
+		294,
+		10
 	],
 	"../pages/signup/signup.module": [
-		294,
+		295,
 		7
 	],
 	"../pages/simple-form/simple-form.module": [
-		295,
+		296,
 		2
 	],
 	"../pages/simple-form1/simple-form1.module": [
-		296,
+		297,
 		4
 	],
 	"../pages/simple-form2/simple-form2.module": [
-		297,
+		298,
 		3
 	],
 	"../pages/tabs/tabs.module": [
-		298,
-		14
+		299,
+		15
 	],
 	"../pages/tinderQ/tinderQ.module": [
-		299,
+		300,
 		6
 	],
 	"../pages/tinderQ2/tinderQ2.module": [
-		300,
+		301,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		301,
-		11
+		302,
+		12
 	]
 };
 function webpackAsyncContext(req) {
@@ -213,6 +217,7 @@ AppModule = __decorate([
                     { loadChildren: '../pages/marqueDetails/marqueDetails.module#MarqueDetailsPageModule', name: 'MarqueDetailsPage', segment: 'marqueDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/newsDetails/newsDetails.module#NewsDetailsPageModule', name: 'NewsDetailsPage', segment: 'newsDetails', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/productDetails/productDetails.module#ProductDetailsPageModule', name: 'ProductDetailsPage', segment: 'productDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/serviceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
@@ -360,7 +365,7 @@ MyApp = __decorate([
 /* unused harmony export SimpleFormPage */
 /* unused harmony export SimpleForm1Page */
 /* unused harmony export SimpleForm2Page */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return TinderQPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return TinderQPage; });
 /* unused harmony export TinderQ2Page */
 /* unused harmony export ChatBubble */
 /* unused harmony export ChatPage */
@@ -368,11 +373,12 @@ MyApp = __decorate([
 /* unused harmony export ServiceDetailsPage */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MarqueDetailsPage; });
 /* unused harmony export NewsDetailsPage */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ProductDetailsPage; });
 /* unused harmony export ResultPage */
 /* unused harmony export MainPage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Tab1Root; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Tab2Root; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Tab3Root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Tab1Root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Tab2Root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Tab3Root; });
 // The page the user lands on after opening the app and without a session
 // The page the user lands on after opening the app and without a session
 var WelcomePage = 'WelcomePage';
@@ -388,6 +394,7 @@ var Chat2Page = 'Chat2Page';
 var ServiceDetailsPage = 'ServiceDetailsPage';
 var MarqueDetailsPage = 'MarqueDetailsPage';
 var NewsDetailsPage = 'NewsDetailsPage';
+var ProductDetailsPage = 'ProductDetailsPage';
 var ResultPage = 'ResultPage';
 var MainPage = 'TabsPage';
 // The initial root pages for our tabs (remove if not using tabs)

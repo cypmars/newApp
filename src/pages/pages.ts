@@ -16,6 +16,7 @@ export const Chat2Page = 'Chat2Page';
 export const ServiceDetailsPage = 'ServiceDetailsPage';
 export const MarqueDetailsPage = 'MarqueDetailsPage';
 export const NewsDetailsPage = 'NewsDetailsPage';
+export const ProductDetailsPage = 'ProductDetailsPage';
 
 export const ResultPage = 'ResultPage';
 

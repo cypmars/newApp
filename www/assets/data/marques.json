@@ -8,6 +8,17 @@
       "imgProfile": "assets/img/marques/profile/0.png",
       "videoId": "pSbLUVvn2lU",
       "title": "Propreté et Services",
+      "contact": {
+        "address": {
+          "num" : "36",
+          "road": "boulevard de l'océan",
+          "cp": "13009",
+          "city": "Marseille",
+          "country": "France"
+        },
+        "tel": "04 91 22 23 21",
+        "website": "http://www.onet-propreteetservices.com"
+      },
       "content": {
         "title": "Propreté et Services",
         "citation": "Leader historique en France de la propreté",
@@ -72,6 +83,17 @@
       "imgCover": "assets/img/marques/1.jpg",
       "imgProfile": "assets/img/marques/profile/1.jpg",
       "title": "Sécurité",
+      "contact": {
+        "address": {
+          "num" : "36",
+          "road": "boulevard de l'océan",
+          "cp": "13009",
+          "city": "Marseille",
+          "country": "France"
+        },
+        "tel": "04 91 22 23 21",
+        "website": "https://fr.groupeonet.com"
+      },
       "content": {
         "title": "Sécurité",
         "keys": [
@@ -126,6 +148,17 @@
       "imgProfile": "assets/img/marques/profile/2.jpg",
       "videoId": "GYs9s2yvj9M",
       "title": "Services aéroportuaires",
+      "contact": {
+        "address": {
+          "num" : "36",
+          "road": "boulevard de l'océan",
+          "cp": "13009",
+          "city": "Marseille",
+          "country": "France"
+        },
+        "tel": "04 91 22 23 21",
+        "website": "https://fr.groupeonet.com"
+      },
       "content": {
         "title": "Services aéroportuaires",
         "keys": [
@@ -186,6 +219,17 @@
       "imgProfile": "assets/img/marques/profile/3.jpg",
       "videoId": "3aRL1cQZX7A",
       "title": "Accueil",
+      "contact": {
+        "address": {
+          "num" : "36",
+          "road": "boulevard de l'océan",
+          "cp": "13009",
+          "city": "Marseille",
+          "country": "France"
+        },
+        "tel": "04 91 22 23 21",
+        "website": "https://fr.groupeonet.com"
+      },
       "content": {
         "title": "Accueil",
         "keys": [
@@ -256,6 +300,17 @@
       "imgCover": "assets/img/marques/4.jpg",
       "imgProfile": "assets/img/marques/profile/4.jpg",
       "title": "Logistique",
+      "contact": {
+        "address": {
+          "num" : "36",
+          "road": "boulevard de l'océan",
+          "cp": "13009",
+          "city": "Marseille",
+          "country": "France"
+        },
+        "tel": "04 91 22 23 21",
+        "website": "https://fr.groupeonet.com"
+      },
       "content": {
         "title": "Logistique",
         "keys": [
@@ -315,6 +370,17 @@
       "imgProfile": "assets/img/marques/profile/5.jpg",
       "videoId": "Pns_4yzGUIw",
       "title": "Technologies",
+      "contact": {
+        "address": {
+          "num" : "36",
+          "road": "boulevard de l'océan",
+          "cp": "13009",
+          "city": "Marseille",
+          "country": "France"
+        },
+        "tel": "04 91 22 23 21",
+        "website": "https://fr.groupeonet.com"
+      },
       "content": {
         "title": "Technologies",
         "keys": [
@@ -353,6 +419,17 @@
       "imgProfile": "assets/img/marques/profile/6.png",
       "videoId": "el5g0VjLMOU",
       "title": "Intérim, Recrutement & formation",
+      "contact": {
+        "address": {
+          "num" : "36",
+          "road": "boulevard de l'océan",
+          "cp": "13009",
+          "city": "Marseille",
+          "country": "France"
+        },
+        "tel": "04 91 22 23 21",
+        "website": "https://fr.groupeonet.com"
+      },
       "content": {
         "title": "Intérim, Recrutement & formation",
         "keys": [

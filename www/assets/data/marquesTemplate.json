@@ -5,8 +5,19 @@
       "servicesId":[0, 1, 2],
       "newsId": [0],
       "img": "assets/img/marques/0.jpg",
-      "video": "https://youtu.be/xxx",
+      "videoId": "xxx",
       "title": "",
+      "contact": {
+        "address": {
+          "num" : "",
+          "road": "",
+          "cp": "",
+          "city": "",
+          "country": ""
+        },
+        "tel": "",
+        "website": ""
+      },
       "content": {
         "title": "",  //same as line 8
         "citation": "",

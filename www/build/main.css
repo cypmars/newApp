@@ -27122,6 +27122,320 @@ page-news-details .item-ios.item-block .item-inner, page-news-details .item-md.i
   padding-right: 20px;
 }
 
+page-product-details ion-content {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+  height: 100%;
+}
+
+page-product-details .splash-relative {
+  position: absolute;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  height: 100%;
+}
+
+page-product-details .splash-logo {
+  margin: auto;
+  background: url("../assets/img/logo2.png") repeat transparent;
+  background-size: 100%;
+  width: 128px;
+  height: 128px;
+}
+
+page-product-details .splash-intro {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+
+page-product-details .splash-new {
+  position: relative;
+  font-size: 20px;
+}
+
+page-product-details .splash-end {
+  position: fixed;
+  bottom: 20px;
+  width: 60%;
+  text-align: center;
+}
+
+page-product-details .splash-end a {
+  color: white;
+}
+
+page-product-details .item-md, page-product-details .item-ios {
+  background-color: transparent;
+}
+
+page-product-details button.login {
+  margin-top: 25px;
+  max-width: 180px;
+  background-color: transparent;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+page-product-details button.login.activated {
+  background-color: gainsboro;
+}
+
+page-product-details input {
+  color: white;
+}
+
+page-product-details .white-text {
+  color: white;
+}
+
+page-product-details .item-input ion-label {
+  width: 20px;
+}
+
+page-product-details .item-md {
+  padding-left: 0;
+}
+
+page-product-details .item-md.item-block .item-inner {
+  padding-right: 0;
+}
+
+page-product-details .account {
+  position: relative;
+  height: 200px;
+}
+
+page-product-details .account-pic {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+page-product-details .account-text {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  color: white;
+  z-index: 2;
+}
+
+page-product-details button,
+page-product-details ion-button,
+page-product-details .button-md,
+page-product-details .button-ios {
+  text-transform: none !important;
+}
+
+page-product-details p {
+  color: #ffffff;
+}
+
+page-product-details #profile-bg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin-top: -16px;
+  height: 160px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-filter: blur(2px);
+  /* Safari 6.0 - 9.0 */
+  filter: blur(2px);
+  text-align: center;
+}
+
+page-product-details #content {
+  position: relative;
+  margin-top: 150px;
+  height: 100%;
+  text-align: center;
+}
+
+page-product-details #profile-image {
+  display: block;
+  border-radius: 50%;
+  width: auto;
+  height: 100px;
+  width: 100px;
+  margin: -80px auto 0;
+}
+
+page-product-details #profile-info {
+  top: -95px;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+}
+
+page-product-details #profile-name {
+  margin-top: 25px;
+  font-size: 26px;
+}
+
+page-product-details .profile-description {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+page-product-details .follow-button {
+  text-transform: none;
+  border-radius: 3px !important;
+}
+
+page-product-details .follow-button ion-icon {
+  font-weight: bold;
+  padding-left: 5px;
+  font-size: 2.5rem;
+}
+
+page-product-details .profile-numbers p {
+  color: #444;
+  font-size: medium;
+  margin-bottom: 3px;
+}
+
+page-product-details .profile-numbers span {
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: #34354c;
+}
+
+page-product-details hr {
+  border: 0;
+  height: 1px;
+  background: #444;
+  background: -webkit-linear-gradient(left, transparent 0%, #bcc6d6 50%, transparent 100%);
+}
+
+page-product-details #posts {
+  text-align: justify;
+}
+
+page-product-details .toolbar-ios-primary .toolbar-background-ios {
+  background: transparent;
+}
+
+page-product-details .toolbar-md-primary .toolbar-background-md {
+  background: transparent;
+}
+
+page-product-details .item-md .item-button, page-product-details .item-ios .item-button {
+  height: 50px;
+  font-size: 1.6rem;
+}
+
+page-product-details .list-md, page-product-details .list_ios, page-product-details .label-md, page-product-details .label-ios {
+  margin: 0 0 0 0;
+  font-size: 1.4rem;
+}
+
+page-product-details .list-ios > .item-block:last-child, page-product-details .list-ios > .item-block:first-child {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+page-product-details ion-card {
+  height: auto;
+}
+
+page-product-details .content-ios hr {
+  height: 1px;
+}
+
+page-product-details .points {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+page-product-details .keys .scroll {
+  padding: 90px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+page-product-details .scroll {
+  padding: 30px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+page-product-details ion-badge {
+  word-break: break-word;
+  overflow: hidden;
+  width: 100px;
+  padding: 6px 6px;
+}
+
+page-product-details .col ion-badge {
+  height: 100px;
+  font-size: 1.4em;
+}
+
+page-product-details .col {
+  min-width: 150px;
+}
+
+page-product-details .descr {
+  white-space: normal;
+}
+
+page-product-details .badge-md, page-product-details .badge-ios {
+  border-radius: 50px;
+}
+
+page-product-details .justify-center {
+  text-align: justify;
+  text-align-last: center;
+}
+
+page-product-details .scroll > .scroll-content {
+  white-space: nowrap;
+}
+
+page-product-details .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+page-product-details .mother {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+page-product-details .valign-center {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-align-content: center !important;
+  -ms-flex-line-pack: center !important;
+  align-content: center !important;
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
 page-result .content-md, page-result .content-ios {
   background: #b2284e;
   /* For browsers that do not support gradients */

@@ -83,14 +83,14 @@
             </div>
             <hr>
           </div>
-          <h3 style="font-size:1.2em" *ngIf="marques[marqueId].NewsIds != null">News &amp; Infos</h3>
+          <h3 style="font-size:1.2em" *ngIf="marques[marqueId].newsIds != null">News &amp; Infos</h3>
           <br>
           <div *ngIf="marques[marqueId].newsIds != null" style="position: relative; height: 200px; margin-bottom: 20px;">
             <ion-slides pager>
               <ion-slide *ngFor="let index of marques[marqueId].newsIds">
-                <img [src]="marques[index].imgSrc" style="height: 100%">
+                <img [src]="news[index].img" style="height: 100%">
                 <div style="position: absolute; top: 20%; right:10%; left:10%; width: 80%; background-color: rgba(0, 0, 0, 0.5); color: white; padding-top:20px; padding-bottom: 20px;">
-                  {{marques[index].title}}
+                  {{news[index].title}}
                 </div>
               </ion-slide>
             </ion-slides>
@@ -122,11 +122,11 @@
                 </div>
               </div>
               <div *ngIf="part.subparts != null" class="justify-center">
-                <div *ngFor="let subPart of part.subparts">
-                  <h5 *ngIf="subPart.title != null">{{subPart.title}}</h5>
+                <div *ngFor="let subpart of part.subparts">
+                  <h5 *ngIf="subpart.title != null">{{subpart.title}}</h5>
                   <br>
-                  <div *ngIf="subPart.paragraphes != null">
-                    <div *ngFor="let p of subPart.paragraphes">
+                  <div *ngIf="subpart.paragraphes != null">
+                    <div *ngFor="let p of subpart.paragraphes">
                       <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>
                       <p *ngIf="p.accrPointsBold"><b>{{p.accrPointsBold}}</b></p>
                       <div *ngIf="p.points">

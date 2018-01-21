@@ -2,40 +2,24 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 import { MarqueDetailsPage } from '../pages';
+import { ProductDetailsPage } from '../pages';
+
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map'
 
-/**
- * The Welcome Page is a splash page that quickly describes the app,
- * and then directs the user to create an account or log in.
- * If you'd like to immediately put the user onto a login/signup page,
- * we recommend not using the Welcome page.
-*/
+
 @IonicPage()
 @Component({
   selector: 'page-service-details',
   templateUrl: 'serviceDetails.html'
 })
 export class ServiceDetailsPage {
-  shownGroup = null;
+
   tabBarElement: any;
   serviceId;
   services: any[];
   marques:any[];
   products:any[];
-
-  // The account fields for the login form.
-  // If you're using the username field with or without email, make
-  // sure to add it to the type
-  account: { email: string, password: string } = {
-    email: '@ e-mail ou pseudo',
-    password: 'mot de passe'
-  };
-
-  like = false;
-
-  // Our translated text strings
-  private loginErrorString: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public toastCtrl: ToastController, private http:Http) {
@@ -65,10 +49,6 @@ export class ServiceDetailsPage {
   prev() {
     this.navCtrl.pop();
   }
-  
-  follow() {
-    this.like = !this.like;
-  }
 
   showMarque(){
     console.log(this.services[this.serviceId].marqueId);
@@ -77,24 +57,20 @@ export class ServiceDetailsPage {
     });
   }
 
-  toggleGroup(group) {
-    if (this.isGroupShown(group)) {
-        this.shownGroup = null;
-    } else {
-        this.shownGroup = group;
-    }
-  };
-  
-  isGroupShown(group) {
-      return this.shownGroup === group;
-  };
-
   ionViewWillEnter(){
     this.tabBarElement.style.display = 'none';
   }
 
   ionViewWillLeave(){
     this.tabBarElement.style.display = 'flex';
+  }
+
+  showProduct(event, index){
+    console.log(index);
+    this.navCtrl.push(ProductDetailsPage, {
+      productId: index
+    });
+
   }
 
   show(event){
@@ -108,20 +84,4 @@ export class ServiceDetailsPage {
       event.srcElement.style.minWidth = "100px";
     }
   }
-  // forgot() {
-  //   this.navCtrl.push('ForgotPage');
-  // }
-
-  // signup() {
-  //   this.navCtrl.push('SignupPage');
-  // }
-
-  // login() {
-  //   this.navCtrl.push('LoginPage');
-  // }
-
-  // // Attempt to login in through our User service
-  // doLogin() {
-  //     this.navCtrl.push('SimpleFormPage');
-  // }
 }

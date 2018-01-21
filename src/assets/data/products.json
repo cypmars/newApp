@@ -127,7 +127,7 @@
           },
           {
             "title": "Des notes soigneusement choisies",
-            "img": "assets/img/product/description/1.jpg"
+            "img": "assets/img/products/description/1.jpg"
           },
           {
             "title": "La Gamme",
@@ -138,15 +138,15 @@
                 "points": [
                   {
                     "title": "Bureaux – Zones d’accueil - Petits espaces :",
-                    "img": "assets/img/product/description/2.jpg"
+                    "img": "assets/img/products/description/2.jpg"
                   },
                   {
                     "title": "Sanitaires et lieux à forte affluence (métro, hôpitaux…) :",
-                    "img": "assets/img/product/description/3.jpg"
+                    "img": "assets/img/products/description/3.jpg"
                   },
                   {
                     "title": "Hôtellerie :",
-                    "img": "assets/img/product/description/4.jpg"
+                    "img": "assets/img/products/description/4.jpg"
                   }
                 ]
               }
@@ -213,7 +213,7 @@
                 ]
               }
             ],
-            "img": "assets/img/product/description/5.jpg"
+            "img": "assets/img/products/description/5.jpg"
           },
           {
             "title": "Un reporting en temps réel",
@@ -329,7 +329,7 @@
                     ]
                   }
                 ],
-                "img": "assets/img/product/description/6.jpg"
+                "img": "assets/img/products/description/6.jpg"
               },
               {
                 "title": "MODES D'APPRENTISSAGE DE LA FORMATION",
@@ -413,7 +413,7 @@
               { "description": "C’est avec la volonté de développer des solutions de propreté et d’entretien toujours plus performantes et adaptées à vos besoins, qu’ Onet Propreté et Services vous propose le nettoyage cryogénique." },
               { "description": "Délicate ou agressive, la pression de nettoyage s’adapte à tous les matériaux des secteurs particulièrement maculés comme l’automobile ou l’agroalimentaire. Cette technique originale et écologique représente un réel intérêt en termes de rentabilité et d’efficacité." }
             ],
-            "img": "assets/img/product/description/7.png"
+            "img": "assets/img/products/description/7.png"
           },
           {
             "title": "Points remarquables du nettoyage cryogénique",
@@ -433,11 +433,11 @@
               { "description": "Les pellets de glace carbonique sont projetés par un flux d’air comprimé. L’association du froid intense et du choc mécanique provoque le détachement des souillures. La glace carbonique se sublime instantanément après avoir assuré le nettoyage." },
               { "description": " Reste un déchet pur et plus facile à traiter." }
             ],
-            "img": "assets/img/product/description/8.png"
+            "img": "assets/img/products/description/8.png"
           },
           {
             "title": "Fiche Le nettoyage cryogénique",
-            "pdf": "assets/img/product/pdf/4.pdf"
+            "pdf": "assets/img/products/pdf/4.pdf"
           }
         ]
       }
@@ -539,7 +539,7 @@
               { "description": "Les pellets de glace carbonique combinés à un granulat organique ou minéral sont projetés par un flux d’air comprimé. L’association du froid intense et du choc mécanique provoque le décapage des surfaces. La glace carbonique se sublime instantanément après avoir assuré le nettoyage." },
               { "description": "Reste un déchet pur ainsi qu’un volume limité de granulats plus facile à traiter." }
             ],
-            "img": "assets/img/product/description/9.png"
+            "img": "assets/img/products/description/9.png"
           },
           {
             "title": "Application du gommage cryogénique",
@@ -551,7 +551,7 @@
               "Dérouillage, décapage de peinture ou graffiti,",
               "Décapage avec refroidissements pour éviter les déformations thermiques." 
             ],
-            "img": "assets/img/product/description/10.jpg"
+            "img": "assets/img/products/description/10.jpg"
           },
           {
             "title": "Fiche Le gommage cryogénique",
@@ -633,7 +633,7 @@
                 ]
               }
             ],
-            "img": "assets/img/product/description/11.png"
+            "img": "assets/img/products/description/11.png"
           },
           {
             "title": "Fiche Green Flow",

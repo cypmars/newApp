@@ -1,6 +1,6 @@
 webpackJsonp([7],{
 
-/***/ 294:
+/***/ 295:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageModule", function() { return SignupPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(625);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(613);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(627);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(615);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_vis__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -45,7 +45,7 @@ SignupPageModule = __decorate([
 
 /***/ }),
 
-/***/ 607:
+/***/ 608:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64,7 +64,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-var Vis = __webpack_require__(609);
+var Vis = __webpack_require__(611);
 var VisTimelineItems = (function (_super) {
     __extends(VisTimelineItems, _super);
     function VisTimelineItems(data, options) {
@@ -203,13 +203,13 @@ var VisTimeline = (function (_super) {
     return VisTimeline;
 }(Vis.Timeline));
 exports.VisTimeline = VisTimeline;
-__export(__webpack_require__(611));
-__export(__webpack_require__(614));
+__export(__webpack_require__(613));
+__export(__webpack_require__(616));
 
 
 /***/ }),
 
-/***/ 608:
+/***/ 609:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -228,7 +228,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-var Vis = __webpack_require__(609);
+var Vis = __webpack_require__(611);
 var VisNetwork = (function (_super) {
     __extends(VisNetwork, _super);
     function VisNetwork() {
@@ -367,13 +367,13 @@ var VisEdges = (function (_super) {
     return VisEdges;
 }(Vis.DataSet));
 exports.VisEdges = VisEdges;
+__export(__webpack_require__(614));
 __export(__webpack_require__(612));
-__export(__webpack_require__(610));
 
 
 /***/ }),
 
-/***/ 609:
+/***/ 611:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60316,7 +60316,7 @@ exports["default"] = FloydWarshall;
 
 /***/ }),
 
-/***/ 610:
+/***/ 612:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60329,7 +60329,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(608);
+var index_1 = __webpack_require__(609);
 /**
  * A service to create, manage and control VisNetwork instances.
  *
@@ -61192,7 +61192,7 @@ exports.VisNetworkService = VisNetworkService;
 
 /***/ }),
 
-/***/ 611:
+/***/ 613:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61205,7 +61205,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(607);
+var index_1 = __webpack_require__(608);
 /**
  * A service to create, manage and control VisTimeline instances.
  *
@@ -61890,7 +61890,7 @@ exports.VisTimelineService = VisTimelineService;
 
 /***/ }),
 
-/***/ 612:
+/***/ 614:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61906,7 +61906,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var vis_network_service_1 = __webpack_require__(610);
+var vis_network_service_1 = __webpack_require__(612);
 /**
  * Use this directive with a div container to show network data.
  *
@@ -62021,7 +62021,7 @@ exports.VisNetworkDirective = VisNetworkDirective;
 
 /***/ }),
 
-/***/ 613:
+/***/ 615:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62037,9 +62037,9 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(608);
-var index_2 = __webpack_require__(607);
-__export(__webpack_require__(615));
+var index_1 = __webpack_require__(609);
+var index_2 = __webpack_require__(608);
+__export(__webpack_require__(617));
 var VisModule = (function () {
     function VisModule() {
     }
@@ -62057,7 +62057,7 @@ exports.VisModule = VisModule;
 
 /***/ }),
 
-/***/ 614:
+/***/ 616:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62073,8 +62073,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var vis_timeline_service_1 = __webpack_require__(611);
-var index_1 = __webpack_require__(607);
+var vis_timeline_service_1 = __webpack_require__(613);
+var index_1 = __webpack_require__(608);
 /**
  * Use this directive with a div container to show timeline data.
  *
@@ -62202,7 +62202,7 @@ exports.VisTimelineDirective = VisTimelineDirective;
 
 /***/ }),
 
-/***/ 615:
+/***/ 617:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62211,13 +62211,13 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(607));
 __export(__webpack_require__(608));
+__export(__webpack_require__(609));
 
 
 /***/ }),
 
-/***/ 625:
+/***/ 627:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62346,7 +62346,7 @@ var SignupPage = (function () {
             this.lastSlide = true;
         }
         else {
-            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["e" /* TinderQPage */]);
+            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["f" /* TinderQPage */]);
         }
     };
     SignupPage.prototype.ngAfterViewInit = function () {
