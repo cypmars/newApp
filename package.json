@@ -60,6 +60,7 @@
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-whitelist": {},
+      "cordova-plugin-streaming-media": {},
       "ionic-plugin-keyboard": {}
     },
     "platforms": [
