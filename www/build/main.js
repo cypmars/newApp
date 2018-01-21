@@ -76,7 +76,7 @@ var map = {
 	],
 	"../pages/marqueDetails/marqueDetails.module": [
 		289,
-		10
+		8
 	],
 	"../pages/news/news.module": [
 		290,
@@ -84,7 +84,7 @@ var map = {
 	],
 	"../pages/newsDetails/newsDetails.module": [
 		291,
-		9
+		10
 	],
 	"../pages/result/result.module": [
 		292,
@@ -92,7 +92,7 @@ var map = {
 	],
 	"../pages/serviceDetails/serviceDetails.module": [
 		293,
-		8
+		9
 	],
 	"../pages/signup/signup.module": [
 		294,

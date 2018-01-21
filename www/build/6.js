@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(628);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(629);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -17039,7 +17039,8 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* 625 */,
 /* 626 */,
 /* 627 */,
-/* 628 */
+/* 628 */,
+/* 629 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

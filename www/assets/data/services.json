@@ -301,7 +301,7 @@
       "id": 5,
       "marqueId": 0,
       "subServiceIds": [6, 7],   
-      "productIds": [],
+      "productIds": [7],
       "imgService": "assets/img/services/5.jpg", 
       "imgMarque": "assets/img/marques/0.jpg",
       "video": "https://youtu.be/-YTJpFcD0tQ",

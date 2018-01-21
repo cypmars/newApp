@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 291:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsDetailsPageModule", function() { return NewsDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiceDetailsPageModule", function() { return ServiceDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__newsDetails__ = __webpack_require__(621);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__serviceDetails__ = __webpack_require__(624);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var NewsDetailsPageModule = (function () {
-    function NewsDetailsPageModule() {
+var ServiceDetailsPageModule = (function () {
+    function ServiceDetailsPageModule() {
     }
-    return NewsDetailsPageModule;
+    return ServiceDetailsPageModule;
 }());
-NewsDetailsPageModule = __decorate([
+ServiceDetailsPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */],
+            __WEBPACK_IMPORTED_MODULE_2__serviceDetails__["a" /* ServiceDetailsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__serviceDetails__["a" /* ServiceDetailsPage */])
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */]
+            __WEBPACK_IMPORTED_MODULE_2__serviceDetails__["a" /* ServiceDetailsPage */]
         ]
     })
-], NewsDetailsPageModule);
+], ServiceDetailsPageModule);
 
-//# sourceMappingURL=newsDetails.module.js.map
+//# sourceMappingURL=serviceDetails.module.js.map
 
 /***/ }),
 
@@ -53,11 +53,11 @@ Observable_1.Observable.prototype.map = map_1.map;
 
 /***/ }),
 
-/***/ 621:
+/***/ 624:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewsDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServiceDetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(57);
@@ -84,28 +84,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * If you'd like to immediately put the user onto a login/signup page,
  * we recommend not using the Welcome page.
 */
-var NewsDetailsPage = (function () {
-    // The account fields for the login form.
-    // If you're using the username field with or without email, make
-    // sure to add it to the type
-    // account: { email: string, password: string } = {
-    //   email: '@ e-mail ou pseudo',
-    //   password: 'mot de passe'
-    // };
-    // Our translated text strings
-    // private loginErrorString: string;
-    function NewsDetailsPage(navCtrl, navParams, toastCtrl, http) {
+var ServiceDetailsPage = (function () {
+    function ServiceDetailsPage(navCtrl, navParams, toastCtrl, http) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.toastCtrl = toastCtrl;
         this.http = http;
+        this.shownGroup = null;
+        // The account fields for the login form.
+        // If you're using the username field with or without email, make
+        // sure to add it to the type
+        this.account = {
+            email: '@ e-mail ou pseudo',
+            password: 'mot de passe'
+        };
+        this.like = false;
         this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
-        this.newsId = navParams.get('param1');
-        console.log(this.newsId);
-        var newsData = http.get('assets/data/news.json').map(function (res) { return res.json().news; });
-        newsData.subscribe(function (data) {
-            _this.news = data;
+        this.serviceId = navParams.get('param1');
+        console.log(this.serviceId);
+        var servData = http.get('assets/data/services.json').map(function (res) { return res.json().services; });
+        servData.subscribe(function (data) {
+            _this.services = data;
         });
         var brandData = http.get('assets/data/marques.json').map(function (res) { return res.json().marques; });
         brandData.subscribe(function (data) {
@@ -116,22 +116,38 @@ var NewsDetailsPage = (function () {
             _this.products = data;
         });
     }
-    NewsDetailsPage.prototype.prev = function () {
+    ServiceDetailsPage.prototype.prev = function () {
         this.navCtrl.pop();
     };
-    NewsDetailsPage.prototype.showMarque = function () {
-        console.log(this.news[this.newsId].marqueId);
+    ServiceDetailsPage.prototype.follow = function () {
+        this.like = !this.like;
+    };
+    ServiceDetailsPage.prototype.showMarque = function () {
+        console.log(this.services[this.serviceId].marqueId);
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["a" /* MarqueDetailsPage */], {
-            marqueId: this.news[this.newsId].marqueId
+            marqueId: this.services[this.serviceId].marqueId
         });
     };
-    NewsDetailsPage.prototype.ionViewWillEnter = function () {
+    ServiceDetailsPage.prototype.toggleGroup = function (group) {
+        if (this.isGroupShown(group)) {
+            this.shownGroup = null;
+        }
+        else {
+            this.shownGroup = group;
+        }
+    };
+    ;
+    ServiceDetailsPage.prototype.isGroupShown = function (group) {
+        return this.shownGroup === group;
+    };
+    ;
+    ServiceDetailsPage.prototype.ionViewWillEnter = function () {
         this.tabBarElement.style.display = 'none';
     };
-    NewsDetailsPage.prototype.ionViewWillLeave = function () {
+    ServiceDetailsPage.prototype.ionViewWillLeave = function () {
         this.tabBarElement.style.display = 'flex';
     };
-    NewsDetailsPage.prototype.show = function (event) {
+    ServiceDetailsPage.prototype.show = function (event) {
         if (event.srcElement.style.wordBreak == "normal") {
             event.srcElement.style.wordBreak = "break-word";
             event.srcElement.style.width = "100px";
@@ -142,17 +158,17 @@ var NewsDetailsPage = (function () {
             event.srcElement.style.minWidth = "100px";
         }
     };
-    return NewsDetailsPage;
+    return ServiceDetailsPage;
 }());
-NewsDetailsPage = __decorate([
+ServiceDetailsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-news-details',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\newsDetails\newsDetails.html"*/'<ion-content *ngIf="news != null && marques != null && products != null" padding class="transparent-header" style="border-top: 20px solid #488aff">\n\n  <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n          <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n      </ion-buttons>\n\n      <ion-title>\n\n\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        \n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n<div id="profile-bg" [ngStyle]="{\'background-image\': \'url(\' + marques[news[newsId].marqueId].imgCover +\')\'}"></div>\n\n<div id="content">\n\n  <ion-card>\n\n    <ion-card-content>\n\n  <div id="profile-info" padding>\n\n    <div style="position: absolute; left:35%; right:35%; z-index: 1000">\n\n        <img id="profile-image" [src]="news[newsId].img">\n\n    </div>\n\n    <h3 id="profile-name">{{news[newsId].content.title}}</h3>\n\n    <br>\n\n    <div *ngIf="news[newsId].content.subtitle">\n\n      <h4 style="font-size: 1.4em">{{news[newsId].content.subtitle}}</h4>\n\n      <br>\n\n    </div>\n\n    <hr>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col>\n\n          <button *ngIf="news[newsId].marqueId == 0" ion-button full style="background-color: #0eae15" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 1" ion-button full style="background-color: #d01717" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 2" ion-button full style="background-color: #386ecd" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 3" ion-button full style="background-color: #cbc40e" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 4" ion-button full style="background-color: #cc7136" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 5" ion-button full style="background-color: #962ac8" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 6" ion-button full style="background-color: #d42649" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n    <hr style="margin-bottom: 20px;">\n\n    <div *ngIf="news[newsId].content.introBold" class="justify-center">\n\n      <p><b>{{news[newsId].content.introBold}}</b></p>\n\n      <br>\n\n    </div>\n\n    <div *ngIf="news[newsId].content.intro" class="justify-center">\n\n      <p *ngFor="let intro of news[newsId].content.intro">{{intro}}</p>\n\n      <br>\n\n    </div>\n\n    <div *ngIf="news[newsId].content.pointsIntro != null" class="justify-center">\n\n      <ul>\n\n        <li *ngFor="let point of news[newsId].content.pointsIntro"> {{point}} </li>\n\n      </ul>\n\n    </div>\n\n    <br><br>\n\n    <div *ngIf="news[newsId].content.parts != null">\n\n      <div *ngFor="let part of news[newsId].content.parts">\n\n        <h3 *ngIf="part.title != null" style="font-size: 1.2em">{{part.title}}</h3>\n\n        <br>\n\n        <div *ngIf="part.paragraphes != null">\n\n          <div *ngFor="let p of part.paragraphes">\n\n            <p *ngIf="p.accrPoints" class="justify-center">{{p.accrPoints}}</p>\n\n            <p *ngIf="p.accrPointsBold" class="justify-center"><b>{{p.accrPointsBold}}</b></p>\n\n            <div *ngIf="p.points" class="justify-center">\n\n              <ul style="color:#666" text-justify>\n\n                <li *ngFor="let point of p.points">\n\n                  {{point.title}}\n\n                  <div *ngIf="point.subpoints">\n\n                    <ul>\n\n                      <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                    </ul>\n\n                  </div>\n\n                </li>\n\n              </ul>\n\n            </div>\n\n            <p *ngIf="p.description" class="justify-center">{{p.description}}</p>\n\n            <p *ngIf="p.descriptionBold" class="justify-center"><b>{{p.descriptionBold}}</b></p>\n\n            <div *ngIf="p.temoignage" class="temoignage-back">\n\n              <div class="temoignage" >\n\n                  <ion-card text-center>   \n\n                    <ion-item style="margin-right: 50px;">\n\n                      <ion-avatar item-start>\n\n                        <img [src]="p.temoignage.authorImg">\n\n                      </ion-avatar>\n\n                      <h2 text-center style="color: white">{{p.temoignage.author}}</h2>\n\n                      <p text-center>{{p.temoignage.function}}</p>\n\n                    </ion-item>\n\n                    <hr>\n\n                    <ion-card-content>\n\n                      <p style="color:#8e9093; font-size: 1.2em"><i>{{p.temoignage.content}}</i></p>\n\n                    </ion-card-content>\n\n                  </ion-card>\n\n                </div>\n\n            </div>\n\n            <br>\n\n          </div>\n\n        </div>\n\n        <div *ngIf="part.points">\n\n          <ul>\n\n            <li *ngFor="let p of part.points">{{p}}</li>\n\n          </ul>\n\n        </div>\n\n        <br>\n\n      </div>\n\n    </div>\n\n    <!-- <p> &bull; {{services.location}}</p>\n\n    <p class="profile-description">{{service.description}}</p>\n\n    <button ion-button (click)="seeMarque()">Voir la marque</button>\n\n    <button ion-button *ngIf="!like" small color="purple" (click)="follow()">Je n\'aime plus</button>\n\n    <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J\'aime <ion-icon name="checkmark"></ion-icon></button> -->\n\n  </div>\n\n</ion-card-content>\n\n</ion-card>\n\n</div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\newsDetails\newsDetails.html"*/
+        selector: 'page-service-details',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\serviceDetails\serviceDetails.html"*/'<ion-content *ngIf="services != null && marques != null && products != null" padding class="transparent-header" style="border-top: 20px solid #488aff">\n\n  <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n          <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n      </ion-buttons>\n\n      <ion-title>\n\n\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        \n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n  <div id="profile-bg" [ngStyle]="{\'background-image\': \'url(\' + services[serviceId].imgMarque +\')\'}"></div>\n\n  <div id="content">\n\n    <ion-card>\n\n      <ion-card-content>\n\n        <div id="profile-info" padding>\n\n          <div style="position: absolute; left:35%; right:35%; z-index: 1000">\n\n              <img id="profile-image" [src]="services[serviceId].imgService">\n\n          </div>\n\n          <h3 id="profile-name">{{services[serviceId].content.title}}</h3>\n\n          <br>\n\n          <div *ngIf="services[serviceId].content.subtitle">\n\n            <h4 style="font-size: 1.4em">{{services[serviceId].content.subtitle}}</h4>\n\n            <br>\n\n          </div>\n\n          <div *ngIf="services[serviceId].content.introBold">\n\n            <p><b>{{services[serviceId].content.introBold}}</b></p>\n\n            <br>\n\n          </div>\n\n          <div *ngIf="services[serviceId].content.intro">\n\n            <p><b>{{services[serviceId].content.intro}}</b></p>\n\n            <br>\n\n          </div>\n\n          <div *ngIf="services[serviceId].content.pointsIntro != null">\n\n            <ul>\n\n              <li *ngFor="let point of services[serviceId].content.pointsIntro"> {{point}} </li>\n\n            </ul>\n\n          </div>\n\n          <hr>\n\n          <ion-grid>\n\n            <ion-row>\n\n              <ion-col>\n\n                <button *ngIf="services[serviceId].marqueId == 0" ion-button full style="background-color: #0eae15" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n                <button *ngIf="services[serviceId].marqueId == 1" ion-button full style="background-color: #d01717" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n                <button *ngIf="services[serviceId].marqueId == 2" ion-button full style="background-color: #386ecd" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n                <button *ngIf="services[serviceId].marqueId == 3" ion-button full style="background-color: #cbc40e" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n                <button *ngIf="services[serviceId].marqueId == 4" ion-button full style="background-color: #cc7136" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n                <button *ngIf="services[serviceId].marqueId == 5" ion-button full style="background-color: #962ac8" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n                <button *ngIf="services[serviceId].marqueId == 6" ion-button full style="background-color: #d42649" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n              </ion-col>\n\n              <ion-col>\n\n                <button ion-button full color="primary">Demande d\'informations</button>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <hr>\n\n          <h3 style="font-size:1.2em" *ngIf="services[serviceId].productIds != null">Fiches &amp; Produits</h3>\n\n          <br>\n\n          <div *ngIf="services[serviceId].productIds != null" style="position: relative; height: 200px; margin-bottom: 20px;">\n\n            <ion-slides pager>\n\n              <ion-slide *ngFor="let index of services[serviceId].productIds">\n\n                <img [src]="products[index].imgSrc" style="height: 100%">\n\n                <div style="position: absolute; top: 20%; right:10%; left:10%; width: 80%; background-color: rgba(0, 0, 0, 0.5); color: white; padding-top:20px; padding-bottom: 20px;">\n\n                  {{products[index].title}}\n\n                </div>\n\n              </ion-slide>\n\n            </ion-slides>\n\n            <hr>\n\n          </div>\n\n          <div *ngIf="services[serviceId].content.parts != null">\n\n            <div *ngFor="let part of services[serviceId].content.parts">\n\n              <h3 *ngIf="part.title != null" style="font-size: 1.2em">{{part.title}}</h3>\n\n              <br>\n\n              <div *ngIf="part.paragraphes != null">\n\n                <div *ngFor="let p of part.paragraphes" class="justify-center">\n\n                  <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>\n\n                  <p *ngIf="p.accrPointsBold"><b>{{p.accrPointsBold}}</b></p>\n\n                  <div *ngIf="p.points">\n\n                    <ul style="color:#666" text-justify>\n\n                      <li *ngFor="let point of p.points">\n\n                        {{point.title}}\n\n                        <div *ngIf="point.subpoints">\n\n                          <ul>\n\n                            <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                          </ul>\n\n                        </div>\n\n                      </li>\n\n                    </ul>\n\n                  </div>\n\n                  <p *ngIf="p.description" text-justify>{{p.description}}</p>\n\n                  <p *ngIf="p.descriptionBold"><b>{{p.descriptionBold}}</b></p>\n\n                  <br>\n\n                </div>\n\n              </div>\n\n              <div *ngIf="part.subParts != null">\n\n                <div *ngFor="let subPart of part.subParts">\n\n                  <h5 *ngIf="subPart.title != null">{{description.title}}</h5>\n\n                  <br>\n\n                  <div *ngIf="subPart.paragraphes != null">\n\n                    <div *ngFor="let p of subPart.paragraphes">\n\n                      <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>\n\n                      <p *ngIf="p.accrPointsBold"><b>{{p.accrPointsBold}}</b></p>\n\n                      <div *ngIf="p.points">\n\n                        <ul>\n\n                          <li *ngFor="let point of p.points">\n\n                            {{point.title}}\n\n                            <div *ngIf="point.subpoints">\n\n                              <ul>\n\n                                <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                              </ul>\n\n                            </div>\n\n                          </li>\n\n                        </ul>\n\n                      </div>\n\n                      <p *ngIf="p.description">{{p.description}}</p>\n\n                      <p *ngIf="p.descriptionBold"><b>{{p.descriptionBold}}</b></p>\n\n                      <br>\n\n                    </div>\n\n                  </div>\n\n                </div>\n\n              </div>\n\n              <div *ngIf="part.points">\n\n                <ul>\n\n                  <li *ngFor="let p of part.points">{{p.title}}</li>\n\n                </ul>\n\n              </div>\n\n            </div>\n\n            <hr>\n\n          </div>\n\n          <div *ngIf="services[serviceId].content.areas != null">\n\n            <div *ngFor="let areasCats of services[serviceId].content.areas">\n\n              <h3 style="font-size: 1.2em" *ngIf="areasCats.title">{{areasCats.title}}</h3>\n\n              <br>\n\n              <div *ngIf="areasCats.parts">\n\n                <div *ngFor="let part of areasCats.parts">\n\n                  <h4 *ngIf="part.title">{{part.title}}</h4>\n\n                  <p *ngIf="part.subtitle">{{part.subtitle}}</p>\n\n                  <p *ngIf="part.description">{{part.description}}</p>\n\n                  <div *ngIf="part.points" style="margin-bottom:20px;" text-center>\n\n                    <ion-scroll zoom="false" scrollX="true" class="scroll">\n\n                      <ion-row text-center>\n\n                        <div class="mother">\n\n                          <div style="white-space: nowrap;" *ngFor="let area of part.points" class="area" style="margin-right:5px;">\n\n                              <ion-badge style="background-color: #0eae15" *ngIf="services[serviceId].marqueId == 0" (click)="show($event)">{{area}}</ion-badge>\n\n                              <ion-badge style="background-color: #d01717" *ngIf="services[serviceId].marqueId == 1" (click)="show($event)">{{area}}</ion-badge>\n\n                              <ion-badge style="background-color: #386ecd" *ngIf="services[serviceId].marqueId == 2" (click)="show($event)">{{area}}</ion-badge>\n\n                              <ion-badge style="background-color: #cbc40e" *ngIf="services[serviceId].marqueId == 3" (click)="show($event)">{{area}}</ion-badge>\n\n                              <ion-badge style="background-color: #cc7136" *ngIf="services[serviceId].marqueId == 4" (click)="show($event)">{{area}}</ion-badge>\n\n                              <ion-badge style="background-color: #962ac8" *ngIf="services[serviceId].marqueId == 5" (click)="show($event)">{{area}}</ion-badge>\n\n                              <ion-badge style="background-color: #d42649" *ngIf="services[serviceId].marqueId == 6" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge (click)="show($event)">{{area}}</ion-badge>\n\n                          </div>\n\n                        </div>\n\n                      </ion-row>\n\n                    </ion-scroll>\n\n                  </div>\n\n                  <br>\n\n                </div>\n\n              </div>\n\n              <p *ngIf="areasCats.conclusion"></p>\n\n            </div>\n\n            <hr>\n\n          </div>\n\n      <!-- <p> &bull; {{services.location}}</p>\n\n      <p class="profile-description">{{service.description}}</p>\n\n      <button ion-button (click)="seeMarque()">Voir la marque</button>\n\n      <button ion-button *ngIf="!like" small color="purple" (click)="follow()">Je n\'aime plus</button>\n\n      <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J\'aime <ion-icon name="checkmark"></ion-icon></button> -->\n\n        </div>  \n\n      </ion-card-content>\n\n    </ion-card>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\serviceDetails\serviceDetails.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
-], NewsDetailsPage);
+], ServiceDetailsPage);
 
-//# sourceMappingURL=newsDetails.js.map
+//# sourceMappingURL=serviceDetails.js.map
 
 /***/ })
 

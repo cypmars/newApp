@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic2_auto_complete__ = __webpack_require__(606);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_CompleteTestService__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simple_form1__ = __webpack_require__(626);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simple_form1__ = __webpack_require__(627);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -17520,7 +17520,8 @@ AutoCompleteModule.ctorParameters = function () { return []; };
 /* 623 */,
 /* 624 */,
 /* 625 */,
-/* 626 */
+/* 626 */,
+/* 627 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

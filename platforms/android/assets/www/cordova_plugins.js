@@ -62,6 +62,14 @@ module.exports = [
       "cordova.plugins.Keyboard"
     ],
     "runs": true
+  },
+  {
+    "id": "com.hutchind.cordova.plugins.streamingmedia.StreamingMedia",
+    "file": "plugins/com.hutchind.cordova.plugins.streamingmedia/www/StreamingMedia.js",
+    "pluginId": "com.hutchind.cordova.plugins.streamingmedia",
+    "clobbers": [
+      "streamingMedia"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -74,7 +82,8 @@ module.exports.metadata =
   "cordova-plugin-ionic-webview": "1.1.16",
   "cordova-plugin-splashscreen": "4.0.3",
   "cordova-plugin-whitelist": "1.3.1",
-  "ionic-plugin-keyboard": "2.2.1"
+  "ionic-plugin-keyboard": "2.2.1",
+  "com.hutchind.cordova.plugins.streamingmedia": "0.1.4"
 };
 // BOTTOM OF METADATA
 });

@@ -144,6 +144,13 @@
                       <ion-row text-center>
                         <div class="mother">
                           <div style="white-space: nowrap;" *ngFor="let area of part.points" class="area" style="margin-right:5px;">
+                              <ion-badge style="background-color: #0eae15" *ngIf="services[serviceId].marqueId == 0" (click)="show($event)">{{area}}</ion-badge>
+                              <ion-badge style="background-color: #d01717" *ngIf="services[serviceId].marqueId == 1" (click)="show($event)">{{area}}</ion-badge>
+                              <ion-badge style="background-color: #386ecd" *ngIf="services[serviceId].marqueId == 2" (click)="show($event)">{{area}}</ion-badge>
+                              <ion-badge style="background-color: #cbc40e" *ngIf="services[serviceId].marqueId == 3" (click)="show($event)">{{area}}</ion-badge>
+                              <ion-badge style="background-color: #cc7136" *ngIf="services[serviceId].marqueId == 4" (click)="show($event)">{{area}}</ion-badge>
+                              <ion-badge style="background-color: #962ac8" *ngIf="services[serviceId].marqueId == 5" (click)="show($event)">{{area}}</ion-badge>
+                              <ion-badge style="background-color: #d42649" *ngIf="services[serviceId].marqueId == 6" (click)="show($event)">{{area}}</ion-badge>
                             <ion-badge (click)="show($event)">{{area}}</ion-badge>
                           </div>
                         </div>

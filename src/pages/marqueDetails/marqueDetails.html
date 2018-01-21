@@ -33,7 +33,13 @@
               <ion-grid>
                 <ion-row text-center>
                   <ion-col *ngFor="let key of marques[marqueId].content.keys">
-                    <ion-badge><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>
+                    <ion-badge *ngIf="marqueId == 0" style="background-color: #0eae15"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>
+                    <ion-badge *ngIf="marqueId == 1" style="background-color: #d01717"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>
+                    <ion-badge *ngIf="marqueId == 2" style="background-color: #386ecd"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>
+                    <ion-badge *ngIf="marqueId == 3" style="background-color: #cbc40e"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>
+                    <ion-badge *ngIf="marqueId == 4" style="background-color: #cc7136"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>
+                    <ion-badge *ngIf="marqueId == 5" style="background-color: #962ac8"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>
+                    <ion-badge *ngIf="marqueId == 6" style="background-color: #d42649"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>
                     <div class="descr">
                       <p class="max-width: 150px;">{{key.label}}</p>
                     </div>
@@ -59,7 +65,13 @@
                       <ion-row text-center>
                         <div class="mother">
                           <div style="white-space: nowrap;" *ngFor="let area of part.points" class="area" style="margin-right:5px;">
-                            <ion-badge (click)="show($event)">{{area}}</ion-badge>
+                            <ion-badge style="background-color: #0eae15" *ngIf="marqueId == 0" (click)="show($event)">{{area}}</ion-badge>
+                            <ion-badge style="background-color: #d01717" *ngIf="marqueId == 1" (click)="show($event)">{{area}}</ion-badge>
+                            <ion-badge style="background-color: #386ecd" *ngIf="marqueId == 2" (click)="show($event)">{{area}}</ion-badge>
+                            <ion-badge style="background-color: #cbc40e" *ngIf="marqueId == 3" (click)="show($event)">{{area}}</ion-badge>
+                            <ion-badge style="background-color: #cc7136" *ngIf="marqueId == 4" (click)="show($event)">{{area}}</ion-badge>
+                            <ion-badge style="background-color: #962ac8" *ngIf="marqueId == 5" (click)="show($event)">{{area}}</ion-badge>
+                            <ion-badge style="background-color: #d42649" *ngIf="marqueId == 6" (click)="show($event)">{{area}}</ion-badge>
                           </div>
                         </div>
                       </ion-row>
@@ -109,9 +121,9 @@
                   <br>
                 </div>
               </div>
-              <div *ngIf="part.subParts != null">
-                <div *ngFor="let subPart of part.subParts">
-                  <h5 *ngIf="subPart.title != null">{{description.title}}</h5>
+              <div *ngIf="part.subparts != null" class="justify-center">
+                <div *ngFor="let subPart of part.subparts">
+                  <h5 *ngIf="subPart.title != null">{{subPart.title}}</h5>
                   <br>
                   <div *ngIf="subPart.paragraphes != null">
                     <div *ngFor="let p of subPart.paragraphes">
@@ -136,7 +148,7 @@
                   </div>
                 </div>
               </div>
-              <div *ngIf="part.points" class="justify-center">
+              <div *ngIf="part.points" class="justify-center" style="color: #666">
                 <ul>
                   <li *ngFor="let p of part.points">{{p.title}}</li>
                 </ul>
