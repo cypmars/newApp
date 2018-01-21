@@ -70,6 +70,14 @@ module.exports = [
     "clobbers": [
       "streamingMedia"
     ]
+  },
+  {
+    "id": "cordova-plugin-youtube-video-player.YoutubeVideoPlayer",
+    "file": "plugins/cordova-plugin-youtube-video-player/plugins/com.bunkerpalace.cordova.YoutubeVideoPlayer/www/YoutubeVideoPlayer.js",
+    "pluginId": "cordova-plugin-youtube-video-player",
+    "clobbers": [
+      "YoutubeVideoPlayer"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -83,7 +91,8 @@ module.exports.metadata =
   "cordova-plugin-splashscreen": "4.0.3",
   "cordova-plugin-whitelist": "1.3.1",
   "ionic-plugin-keyboard": "2.2.1",
-  "com.hutchind.cordova.plugins.streamingmedia": "0.1.4"
+  "com.hutchind.cordova.plugins.streamingmedia": "0.1.4",
+  "cordova-plugin-youtube-video-player": "1.0.6"
 };
 // BOTTOM OF METADATA
 });

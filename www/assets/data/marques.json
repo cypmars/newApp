@@ -6,7 +6,7 @@
       "newsId": [0],
       "imgCover": "assets/img/marques/0.jpg",
       "imgProfile": "assets/img/marques/profile/0.png",
-      "video": "https://youtu.be/pSbLUVvn2lU",
+      "videoId": "pSbLUVvn2lU",
       "title": "Propreté et Services",
       "content": {
         "title": "Propreté et Services",
@@ -124,7 +124,7 @@
       "newsId": [2],
       "imgCover": "assets/img/marques/2.jpg",
       "imgProfile": "assets/img/marques/profile/2.jpg",
-      "video": "https://youtu.be/GYs9s2yvj9M",
+      "videoId": "GYs9s2yvj9M",
       "title": "Services aéroportuaires",
       "content": {
         "title": "Services aéroportuaires",
@@ -184,7 +184,7 @@
       "newsId": [3],
       "imgCover": "assets/img/marques/3.jpg",
       "imgProfile": "assets/img/marques/profile/3.jpg",
-      "video": "https://youtu.be/3aRL1cQZX7A",
+      "videoId": "3aRL1cQZX7A",
       "title": "Accueil",
       "content": {
         "title": "Accueil",
@@ -313,7 +313,7 @@
       "newsId": [5],
       "imgCover": "assets/img/marques/5.jpg",
       "imgProfile": "assets/img/marques/profile/5.jpg",
-      "video": "https://youtu.be/Pns_4yzGUIw",
+      "videoId": "Pns_4yzGUIw",
       "title": "Technologies",
       "content": {
         "title": "Technologies",
@@ -351,7 +351,7 @@
       "newsId": [6],
       "imgCover": "assets/img/marques/6.jpg",
       "imgProfile": "assets/img/marques/profile/6.png",
-      "video": "https://youtu.be/el5g0VjLMOU",
+      "videoId": "el5g0VjLMOU",
       "title": "Intérim, Recrutement & formation",
       "content": {
         "title": "Intérim, Recrutement & formation",

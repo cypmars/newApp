@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { MarqueDetailsPage } from './marqueDetails';
 
-import { StreamingMedia } from '@ionic-native/streaming-media';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { StreamingMedia } from '@ionic-native/streaming-media';
     IonicPageModule.forChild(MarqueDetailsPage)
   ],
   providers: [
-    StreamingMedia
+    YoutubeVideoPlayer
   ],
   exports: [
     MarqueDetailsPage,

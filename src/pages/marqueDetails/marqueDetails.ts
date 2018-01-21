@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Http } from '@angular/http';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
 
-import { StreamingMedia, StreamingVideoOptions, StreamingAudioOptions } from '@ionic-native/streaming-media';
-
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -37,7 +36,7 @@ export class MarqueDetailsPage {
   private loginErrorString: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public toastCtrl: ToastController, private http:Http, private streamingMedia: StreamingMedia) {
+    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer) {
     
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.marqueId = navParams.get('marqueId');  
@@ -50,9 +49,9 @@ export class MarqueDetailsPage {
     let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
     brandData.subscribe(data => {
       this.marques = data;
-      if (this.marques[this.marqueId].video != null)
+      if (this.marques[this.marqueId].videoId != null)
       {
-        this.startVideo(this.marques[this.marqueId].video);
+        this.youtube.openVideo(this.marques[this.marqueId].videoId);
       }
     });
 
@@ -98,31 +97,7 @@ export class MarqueDetailsPage {
     }
   }
 
-  startVideo(videoSrc) {
-    let options: StreamingVideoOptions = {
-      successCallback: () => { console.log('Finished Video') },
-      errorCallback: (e) => { console.log('Error: ', e) },
-      orientation: 'portrait'
-    };
- 
-    // http://www.sample-videos.com/
-    this.streamingMedia.playVideo(videoSrc, options);
-  }
-
-  startAudio(audioSrc) {
-    let options: StreamingAudioOptions = {
-      successCallback: () => { console.log('Finished Audio') },
-      errorCallback: (e) => { console.log('Error: ', e) },
-      initFullscreen: false // iOS only!
-    };
- 
-    //http://soundbible.com/2196-Baby-Music-Box.html
-    this.streamingMedia.playAudio(audioSrc, options);
-  }
-
-  stopAudio() {
-    this.streamingMedia.stopAudio();
-  }
+  
   
   // forgot() {
   //   this.navCtrl.push('ForgotPage');
