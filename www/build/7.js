@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageModule", function() { return SignupPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(627);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(628);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(615);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_vis__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -209,7 +209,7 @@ __export(__webpack_require__(616));
 
 /***/ }),
 
-/***/ 609:
+/***/ 610:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60329,7 +60329,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(609);
+var index_1 = __webpack_require__(610);
 /**
  * A service to create, manage and control VisNetwork instances.
  *
@@ -62037,7 +62037,7 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(609);
+var index_1 = __webpack_require__(610);
 var index_2 = __webpack_require__(608);
 __export(__webpack_require__(617));
 var VisModule = (function () {
@@ -62212,12 +62212,12 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(608));
-__export(__webpack_require__(609));
+__export(__webpack_require__(610));
 
 
 /***/ }),
 
-/***/ 627:
+/***/ 628:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

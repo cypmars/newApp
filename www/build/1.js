@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ2__ = __webpack_require__(632);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ2__ = __webpack_require__(633);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic2_auto_complete__ = __webpack_require__(607);
@@ -17528,7 +17528,8 @@ AutoCompleteModule.ctorParameters = function () { return []; };
 /* 629 */,
 /* 630 */,
 /* 631 */,
-/* 632 */
+/* 632 */,
+/* 633 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, Platform } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+import { MarqueDetailsPage } from '../pages';
+
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+
+import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer';
+
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -36,8 +41,8 @@ export class ProductDetailsPage {
   // Our translated text strings
   // private loginErrorString: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, platform: Platform,
+    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer, private documentView: DocumentViewer) {
     
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.productId = navParams.get('productId');  
@@ -68,12 +73,26 @@ export class ProductDetailsPage {
 
   }
 
+  openPDF(productId){
+    const options: DocumentViewerOptions = {
+      title: productId
+    }
+    
+    this.documentView.viewDocument('assets/img/products/pdf/'+productId+'.pdf', 'application/pdf', options)
+  }
+
   prev() {
     this.navCtrl.pop();
   }
 
   ionViewWillEnter(){
     this.tabBarElement.style.display = 'none';
+  }
+
+  showMarque(){
+    this.navCtrl.push(MarqueDetailsPage, {
+      marqueId: this.products[this.productId].idMarque
+    });
   }
 
   ionViewWillLeave(){

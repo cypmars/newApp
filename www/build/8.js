@@ -8,14 +8,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductDetailsPageModule", function() { return ProductDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__productDetails__ = __webpack_require__(624);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_youtube_video_player__ = __webpack_require__(610);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__productDetails__ = __webpack_require__(625);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_youtube_video_player__ = __webpack_require__(609);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_document_viewer__ = __webpack_require__(619);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -34,7 +36,8 @@ ProductDetailsPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__productDetails__["a" /* ProductDetailsPage */])
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_youtube_video_player__["a" /* YoutubeVideoPlayer */]
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_youtube_video_player__["a" /* YoutubeVideoPlayer */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_document_viewer__["a" /* DocumentViewer */]
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__productDetails__["a" /* ProductDetailsPage */],
@@ -58,7 +61,7 @@ Observable_1.Observable.prototype.map = map_1.map;
 
 /***/ }),
 
-/***/ 610:
+/***/ 609:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -148,17 +151,23 @@ var YoutubeVideoPlayer = (function (_super) {
 
 /***/ }),
 
-/***/ 624:
+/***/ 619:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductDetailsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(313);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_youtube_video_player__ = __webpack_require__(610);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentViewer; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_core__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -168,6 +177,130 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+/**
+ * @name Document Viewer
+ * @description
+ * This plugin offers a slim API to view PDF files which are either stored in the apps assets folder (/www/*) or in any other file system directory available via the cordova file plugin.
+ *
+ * @usage
+ * ```typescript
+ * import { DocumentViewer } from '@ionic-native/document-viewer';
+ *
+ *
+ * constructor(private document: DocumentViewer) { }
+ *
+ * ...
+ * const options: DocumentViewerOptions = {
+ *   title: 'My PDF'
+ * }
+ *
+ * this.document.viewDocument('assets/myFile.pdf', 'application/pdf', options)
+ *
+ * ```
+ *
+ * @interfaces
+ * DocumentViewerOptions
+ */
+var DocumentViewer = (function (_super) {
+    __extends(DocumentViewer, _super);
+    function DocumentViewer() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * Displays the email composer pre-filled with data.
+     *
+     * @returns {Promise<any>} Resolves promise when the EmailComposer has been opened
+     */
+    DocumentViewer.prototype.getSupportInfo = function () { return; };
+    /**
+     * Check if the document can be shown
+     *
+     * @param url {string} Url to the file
+     * @param contentType {string} Content type of the file
+     * @param options {Array<DocumentViewerOptions>} options
+     * @param [onPossible] {Function}
+     * @param [onMissingApp] {Function}
+     * @param [onImpossible] {Function}
+     * @param [onError] {Function}
+     */
+    DocumentViewer.prototype.canViewDocument = function (url, contentType, options, onPossible, onMissingApp, onImpossible, onError) { };
+    /**
+     * Opens the file
+     *
+     * @param url {string} Url to the file
+     * @param contentType {string} Content type of the file
+     * @param options {DocumentViewerOptions} options
+     * @param [onShow] {Function}
+     * @param [onClose] {Function}
+     * @param [onMissingApp] {Function}
+     * @param [onError] {Function}
+     */
+    DocumentViewer.prototype.viewDocument = function (url, contentType, options, onShow, onClose, onMissingApp, onError) { };
+    DocumentViewer.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    DocumentViewer.ctorParameters = function () { return []; };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", Promise)
+    ], DocumentViewer.prototype, "getSupportInfo", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({ sync: true }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [String, String, Object, Function, Function, Function, Function]),
+        __metadata("design:returntype", void 0)
+    ], DocumentViewer.prototype, "canViewDocument", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({ sync: true }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [String, String, Object, Function, Function, Function, Function]),
+        __metadata("design:returntype", void 0)
+    ], DocumentViewer.prototype, "viewDocument", null);
+    DocumentViewer = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["d" /* Plugin */])({
+            pluginName: 'Document Viewer',
+            plugin: 'cordova-plugin-document-viewer',
+            pluginRef: 'SitewaertsDocumentViewer',
+            repo: 'https://github.com/sitewaerts/cordova-plugin-document-viewer',
+            platforms: ['Android', 'iOS', 'Windows']
+        })
+    ], DocumentViewer);
+    return DocumentViewer;
+}(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["c" /* IonicNativePlugin */]));
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 625:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductDetailsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_youtube_video_player__ = __webpack_require__(609);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_document_viewer__ = __webpack_require__(619);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
 
 
 
@@ -190,13 +323,14 @@ var ProductDetailsPage = (function () {
     // like = false;
     // Our translated text strings
     // private loginErrorString: string;
-    function ProductDetailsPage(navCtrl, navParams, toastCtrl, http, youtube) {
+    function ProductDetailsPage(navCtrl, navParams, platform, toastCtrl, http, youtube, documentView) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.toastCtrl = toastCtrl;
         this.http = http;
         this.youtube = youtube;
+        this.documentView = documentView;
         this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
         this.productId = navParams.get('productId');
         var servData = http.get('assets/data/services.json').map(function (res) { return res.json().services; });
@@ -219,11 +353,22 @@ var ProductDetailsPage = (function () {
             }
         });
     }
+    ProductDetailsPage.prototype.openPDF = function (productId) {
+        var options = {
+            title: productId
+        };
+        this.documentView.viewDocument('assets/img/products/pdf/' + productId + '.pdf', 'application/pdf', options);
+    };
     ProductDetailsPage.prototype.prev = function () {
         this.navCtrl.pop();
     };
     ProductDetailsPage.prototype.ionViewWillEnter = function () {
         this.tabBarElement.style.display = 'none';
+    };
+    ProductDetailsPage.prototype.showMarque = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pages__["a" /* MarqueDetailsPage */], {
+            marqueId: this.products[this.productId].idMarque
+        });
     };
     ProductDetailsPage.prototype.ionViewWillLeave = function () {
         this.tabBarElement.style.display = 'flex';
@@ -232,12 +377,12 @@ var ProductDetailsPage = (function () {
 }());
 ProductDetailsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-product-details',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\productDetails\productDetails.html"*/'<ion-content *ngIf="services != null && news != null && marques != null && products != null" padding class="transparent-header" style="border-top: 20px solid #488aff">\n\n  <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n          <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n      </ion-buttons>\n\n      <ion-title>\n\n\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        \n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n  <div id="profile-bg" [ngStyle]="{\'background-image\': \'url(\' + marques[products[productId].idMarque].imgCover +\')\'}"></div>\n\n  <div id="content">\n\n    <ion-card>\n\n      <ion-card-content>\n\n        <div id="profile-info" padding>\n\n          <div style="position: absolute; left:35%; right:35%; z-index: 1000">\n\n              <img id="profile-image" [src]="products[productId].img">\n\n          </div>\n\n          <h3 id="profile-name">{{products[productId].content.title}}</h3>\n\n          <br>\n\n          <div *ngIf="products[productId].content.subtitle">\n\n            <h4 style="font-size: 1.4em">{{products[productId].content.subtitle}}</h4>\n\n            <br>\n\n          </div>\n\n          <ion-grid>\n\n            <ion-row>\n\n              <ion-col>\n\n                <button *ngIf="products[productId].idMarque == 0" ion-button full style="background-color: #0eae15" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n                <button *ngIf="products[productId].idMarque == 1" ion-button full style="background-color: #d01717" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n                <button *ngIf="products[productId].idMarque == 2" ion-button full style="background-color: #386ecd" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n                <button *ngIf="products[productId].idMarque == 3" ion-button full style="background-color: #cbc40e" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n                <button *ngIf="products[productId].idMarque == 4" ion-button full style="background-color: #cc7136" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n                <button *ngIf="products[productId].idMarque == 5" ion-button full style="background-color: #962ac8" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n                <button *ngIf="products[productId].idMarque == 6" ion-button full style="background-color: #d42649" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <hr>\n\n          <div *ngIf="products[productId].content.parts != null">\n\n            <div *ngFor="let part of products[productId].content.parts">\n\n              <h3 *ngIf="part.title != null" style="font-size: 1.2em">{{part.title}}</h3>\n\n              <p *ngIf="part.intro">{{part.intro}}</p>\n\n              <img *ngIf="part.img" [src]="part.img">\n\n              <br>\n\n              <div *ngIf="part.paragraphes != null">\n\n                <div *ngFor="let p of part.paragraphes" class="justify-center">\n\n                  <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>\n\n                  <p *ngIf="p.accrPointsBold"><b>{{p.accrPointsBold}}</b></p>\n\n                  <div *ngIf="p.points">\n\n                    <ul style="color:#666" text-justify>\n\n                      <li *ngFor="let point of p.points">\n\n                        {{point.title}}\n\n                        <img *ngIf="point.img" [src]="point.img"/>\n\n                        <div *ngIf="point.subpoints">\n\n                          <ul>\n\n                            <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                          </ul>\n\n                        </div>\n\n                      </li>\n\n                    </ul>\n\n                  </div>\n\n                  <p *ngIf="p.description" text-justify>{{p.description}}</p>\n\n                  <p *ngIf="p.descriptionBold"><b>{{p.descriptionBold}}</b></p>\n\n                  <br>\n\n                </div>\n\n              </div>\n\n              <div *ngIf="part.subparts != null" class="justify-center">\n\n                <div *ngFor="let subpart of part.subparts">\n\n                  <h5 *ngIf="subpart.title != null">{{subpart.title}}</h5>\n\n                  <img *ngIf="subpart.img" [src]="subpart.img">\n\n                  <br>\n\n                  <div *ngIf="subpart.paragraphes != null">\n\n                    <div *ngFor="let p of subpart.paragraphes">\n\n                      <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>\n\n                      <p *ngIf="p.accrPointsBold"><b>{{p.accrPointsBold}}</b></p>\n\n                      <div *ngIf="p.points">\n\n                        <ul>\n\n                          <li *ngFor="let point of p.points">\n\n                            {{point.title}}\n\n                            <div *ngIf="point.subpoints">\n\n                              <ul>\n\n                                <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                              </ul>\n\n                            </div>\n\n                          </li>\n\n                        </ul>\n\n                      </div>\n\n                      <p *ngIf="p.description">{{p.description}}</p>\n\n                      <p *ngIf="p.descriptionBold"><b>{{p.descriptionBold}}</b></p>\n\n                      <p *ngIf="p.objectif"><b>Objectif:</b> {{p.objectif}}</p>\n\n                      <br>\n\n                    </div>\n\n                  </div>\n\n                </div>\n\n              </div>\n\n              <div *ngIf="part.points" class="justify-center" style="color: #666">\n\n                <ul>\n\n                  <li *ngFor="let p of part.points">{{p}}</li>\n\n                </ul>\n\n              </div>\n\n            </div>\n\n            <hr>\n\n          </div>\n\n        </div>\n\n      </ion-card-content>\n\n    </ion-card>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\productDetails\productDetails.html"*/
+        selector: 'page-product-details',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\productDetails\productDetails.html"*/'<ion-content *ngIf="services != null && news != null && marques != null && products != null" padding class="transparent-header" style="border-top: 20px solid #488aff">\n\n  <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n          <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n      </ion-buttons>\n\n      <ion-title>\n\n\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        \n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n  <div id="profile-bg" [ngStyle]="{\'background-image\': \'url(\' + marques[products[productId].idMarque].imgCover +\')\'}"></div>\n\n  <div id="content">\n\n    <ion-card>\n\n      <ion-card-content>\n\n        <div id="profile-info" padding>\n\n          <div style="position: absolute; left:35%; right:35%; z-index: 1000">\n\n              <img id="profile-image" [src]="products[productId].img">\n\n          </div>\n\n          <h3 id="profile-name">{{products[productId].content.title}}</h3>\n\n          <br>\n\n          <div *ngIf="products[productId].content.subtitle">\n\n            <h4 style="font-size: 1.4em">{{products[productId].content.subtitle}}</h4>\n\n            <br>\n\n          </div>\n\n          <hr>\n\n          <ion-grid>\n\n            <ion-row>\n\n              <ion-col>\n\n                <button *ngIf="products[productId].idMarque == 0" ion-button full style="background-color: #0eae15" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n                <button *ngIf="products[productId].idMarque == 1" ion-button full style="background-color: #d01717" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n                <button *ngIf="products[productId].idMarque == 2" ion-button full style="background-color: #386ecd" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n                <button *ngIf="products[productId].idMarque == 3" ion-button full style="background-color: #cbc40e" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n                <button *ngIf="products[productId].idMarque == 4" ion-button full style="background-color: #cc7136" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n                <button *ngIf="products[productId].idMarque == 5" ion-button full style="background-color: #962ac8" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n                <button *ngIf="products[productId].idMarque == 6" ion-button full style="background-color: #d42649" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>\n\n              </ion-col>\n\n              <ion-col>\n\n                <button ion-button full color="primary" click="openPDF(productId)">Télécharger la Fiche produit</button>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <hr>\n\n          <div *ngIf="products[productId].content.parts != null">\n\n            <div *ngFor="let part of products[productId].content.parts">\n\n              <h3 *ngIf="part.title != null" style="font-size: 1.2em">{{part.title}}</h3>\n\n              <p *ngIf="part.intro">{{part.intro}}</p>\n\n              <img *ngIf="part.img" [src]="part.img">\n\n              <br>\n\n              <div *ngIf="part.paragraphes != null">\n\n                <div *ngFor="let p of part.paragraphes" class="justify-center">\n\n                  <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>\n\n                  <p *ngIf="p.accrPointsBold"><b>{{p.accrPointsBold}}</b></p>\n\n                  <div *ngIf="p.points">\n\n                    <ul style="color:#666" text-justify>\n\n                      <li *ngFor="let point of p.points">\n\n                        {{point.title}}\n\n                        <img *ngIf="point.img" [src]="point.img"/>\n\n                        <div *ngIf="point.subpoints">\n\n                          <ul>\n\n                            <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                          </ul>\n\n                        </div>\n\n                      </li>\n\n                    </ul>\n\n                  </div>\n\n                  <p *ngIf="p.description" text-justify>{{p.description}}</p>\n\n                  <p *ngIf="p.descriptionBold"><b>{{p.descriptionBold}}</b></p>\n\n                  <br>\n\n                </div>\n\n              </div>\n\n              <div *ngIf="part.subparts != null" class="justify-center">\n\n                <div *ngFor="let subpart of part.subparts">\n\n                  <h5 *ngIf="subpart.title != null">{{subpart.title}}</h5>\n\n                  <img *ngIf="subpart.img" [src]="subpart.img">\n\n                  <br>\n\n                  <div *ngIf="subpart.paragraphes != null">\n\n                    <div *ngFor="let p of subpart.paragraphes">\n\n                      <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>\n\n                      <p *ngIf="p.accrPointsBold"><b>{{p.accrPointsBold}}</b></p>\n\n                      <div *ngIf="p.points">\n\n                        <ul>\n\n                          <li *ngFor="let point of p.points">\n\n                            {{point.title}}\n\n                            <div *ngIf="point.subpoints">\n\n                              <ul>\n\n                                <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                              </ul>\n\n                            </div>\n\n                          </li>\n\n                        </ul>\n\n                      </div>\n\n                      <p *ngIf="p.description">{{p.description}}</p>\n\n                      <p *ngIf="p.descriptionBold"><b>{{p.descriptionBold}}</b></p>\n\n                      <p *ngIf="p.objectif"><b>Objectif:</b> {{p.objectif}}</p>\n\n                      <br>\n\n                    </div>\n\n                  </div>\n\n                </div>\n\n              </div>\n\n              <div *ngIf="part.points" class="justify-center" style="color: #666">\n\n                <ul>\n\n                  <li *ngFor="let p of part.points">{{p}}</li>\n\n                </ul>\n\n              </div>\n\n            </div>\n\n            <hr>\n\n          </div>\n\n        </div>\n\n      </ion-card-content>\n\n    </ion-card>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\productDetails\productDetails.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_youtube_video_player__["a" /* YoutubeVideoPlayer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_youtube_video_player__["a" /* YoutubeVideoPlayer */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_youtube_video_player__["a" /* YoutubeVideoPlayer */], __WEBPACK_IMPORTED_MODULE_6__ionic_native_document_viewer__["a" /* DocumentViewer */]])
 ], ProductDetailsPage);
 
-var _a, _b, _c, _d, _e;
 //# sourceMappingURL=productDetails.js.map
 
 /***/ })

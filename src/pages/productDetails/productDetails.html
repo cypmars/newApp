@@ -26,6 +26,7 @@
             <h4 style="font-size: 1.4em">{{products[productId].content.subtitle}}</h4>
             <br>
           </div>
+          <hr>
           <ion-grid>
             <ion-row>
               <ion-col>
@@ -36,6 +37,9 @@
                 <button *ngIf="products[productId].idMarque == 4" ion-button full style="background-color: #cc7136" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>
                 <button *ngIf="products[productId].idMarque == 5" ion-button full style="background-color: #962ac8" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>
                 <button *ngIf="products[productId].idMarque == 6" ion-button full style="background-color: #d42649" (click)="showMarque()">{{marques[products[productId].idMarque].title}}</button>
+              </ion-col>
+              <ion-col>
+                <button ion-button full color="primary" click="openPDF(productId)">Télécharger la Fiche produit</button>
               </ion-col>
             </ion-row>
           </ion-grid>

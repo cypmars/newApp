@@ -6,6 +6,7 @@
       "idMarque": 0,
       "title":"Onet Blue Quality",
       "img": "assets/img/products/0.png",
+      "pdf": "assets/img/products/pdf/0.pdf",
       "content": {
         "title":"Onet Blue Quality",
         "subtitle":"Une application dédiée au suivi des prestations",
@@ -61,10 +62,6 @@
               }
             ],
             "img": "assets/img/products/description/0.jpg"
-          },
-          {
-            "title": "Fiche Onet Blue Quality",
-            "pdf": "assets/img/products/pdf/0.pdf"
           }
         ]
       }
@@ -74,7 +71,8 @@
       "idService": 0,
       "idMarque": 0,
       "title":"Hello d'Onet: La propreté signée",
-      "img": "assets/img/products/1.jpg",
+      "img": "assets/img/products/2.jpg",
+      "pdf": "assets/img/products/pdf/1.pdf",
       "content": {
         "title": "Hello d'Onet: La propreté signée",
         "parts":[
@@ -151,10 +149,6 @@
                 ]
               }
             ]
-          },
-          {
-            "title": "Fiche produit Hello d'Onet",
-            "pdf": "assets/img/products/pdf/1.pdf"
           }
         ]
       }
@@ -164,8 +158,9 @@
       "idService": 0,
       "idMarque": 0,
       "title":"La solution Sanitaires Connectés",
-      "img": "assets/img/products/2.jpg",
+      "img": "assets/img/products/1.jpg",
       "videoId": "vwtTcmh4_Dw",
+      "pdf": "assets/img/products/pdf/1.pdf",
       "content": {
         "title": "La solution Sanitaires Connectés",
         "parts":[
@@ -246,10 +241,6 @@
             "paragraphes": [
               { "description": "Innovante, personnalisable et évolutive, cette solution pourra être connectée à d’autres objets sanitaires du quotidien (ex : distributeurs de savon, de papier toilette)." }
             ]
-          },
-          {
-            "title": "Fiche Sanitaires Connectés",
-            "pdf": "assets/img/products/pdf/1.pdf"
           }
         ]
       }
@@ -260,6 +251,7 @@
       "idMarque": 0,
       "title":"Centre de formation santé de Valenciennes",
       "img": "assets/img/products/3.jpg",
+      "pdf": "assets/img/products/pdf/3.pdf",
       "content": {
         "title": "Centre de formation santé de Valenciennes",
         "subtitle": "Pour accompagner vos équipes dans leur montée en compétence",
@@ -368,10 +360,6 @@
                 ]
               }
             ]
-          },
-          {
-            "title": "Fiche Centre de Formation Santé de Valencienne",
-            "pdf": "assets/img/products/pdf/3.pdf"
           }
         ],
         "contact": {
@@ -397,6 +385,7 @@
       "idMarque": 0,
       "title": "Le nettoyage cryogénique",
       "img": "assets/img/products/4.png",
+      "pdf": "assets/img/products/pdf/4.pdf",
       "content": {
         "title": "Le nettoyage cryogénique",
         "subtitle":"Une solution respectueuse de votre support et de l’environnement",
@@ -434,10 +423,6 @@
               { "description": " Reste un déchet pur et plus facile à traiter." }
             ],
             "img": "assets/img/products/description/8.png"
-          },
-          {
-            "title": "Fiche Le nettoyage cryogénique",
-            "pdf": "assets/img/products/pdf/4.pdf"
           }
         ]
       }
@@ -448,6 +433,7 @@
       "idMarque": 0,
       "title":"Fabrication et vente de glace carbonique",
       "img": "assets/img/products/5.jpg",
+      "pdf": "assets/img/products/pdf/5.pdf",
       "content": {
         "title":"Fabrication et vente de glace carbonique",
         "subtitle":"Une solution pour le maintien de la chaîne du froid",
@@ -491,10 +477,6 @@
               "Nettoyage et gommage cryogénique."
             ],
             "img": "assets/img/products/description/7.jpg"
-          },
-          {
-            "title": "Fiche Fabrication et vente de glace carbonique",
-            "pdf": "assets/img/products/pdf/5.pdf"
           }
         ]
       }
@@ -505,6 +487,7 @@
       "idMarque": 0,
       "title":"Le gommage cryogénique",
       "img": "assets/img/products/6.jpg",
+      "pdf": "assets/img/products/pdf/6.pdf",
       "content": {
         "title":"Le gommage cryogénique",
         "subtitle":"Une alternative aux techniques de sablage",
@@ -552,10 +535,6 @@
               "Décapage avec refroidissements pour éviter les déformations thermiques." 
             ],
             "img": "assets/img/products/description/10.jpg"
-          },
-          {
-            "title": "Fiche Le gommage cryogénique",
-            "pdf": "assets/img/products/pdf/6.pdf"
           }
         ]
       }
@@ -566,6 +545,7 @@
       "idMarque": 0,
       "title": "Le pilotage de la filière déchets avec Green Flow",
       "img": "assets/img/products/7.jpg",
+      "pdf": "assets/img/products/pdf/6.pdf",
       "content": {
         "title":"Le pilotage de la filière déchets avec Green Flow",
         "parts":[
@@ -634,10 +614,6 @@
               }
             ],
             "img": "assets/img/products/description/11.png"
-          },
-          {
-            "title": "Fiche Green Flow",
-            "pdf": "assets/img/products/pdf/6.pdf"
           }
         ]
       }

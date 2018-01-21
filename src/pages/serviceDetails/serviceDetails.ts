@@ -7,6 +7,8 @@ import { ProductDetailsPage } from '../pages';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map'
 
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+
 
 @IonicPage()
 @Component({
@@ -22,16 +24,11 @@ export class ServiceDetailsPage {
   products:any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public toastCtrl: ToastController, private http:Http) {
+    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer) {
 
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.serviceId = navParams.get('param1');
     console.log(this.serviceId);
-
-    let servData = http.get('assets/data/services.json').map(res => res.json().services);
-    servData.subscribe(data => {
-      this.services = data;
-    });
 
     let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
     brandData.subscribe(data => {
@@ -41,6 +38,15 @@ export class ServiceDetailsPage {
     let productData = http.get('assets/data/products.json').map(res => res.json().products);
     productData.subscribe(data => {
       this.products = data;
+    });
+    
+    let servData = http.get('assets/data/services.json').map(res => res.json().services);
+    servData.subscribe(data => {
+      this.services = data;
+      if (this.services[this.serviceId].videoId != null)
+      {
+        this.youtube.openVideo(this.services[this.serviceId].videoId);
+      }
     });
 
   }

@@ -27406,13 +27406,7 @@ page-product-details .scroll > .scroll-content {
 }
 
 page-product-details .row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  display: initial;
 }
 
 page-product-details .mother {
