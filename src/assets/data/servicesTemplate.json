@@ -10,8 +10,9 @@
         "video": "",
         "icon": "",
         "pertinence": "",       // haut moyen bas
-        "content": {
-            "title": "",
+        "title": "",
+        "content": {     
+            "title": "",  // same of line 13
             "subtitle": "",
             "introBold": "",
             "intro": "",
@@ -22,7 +23,6 @@
                     "paragraphes": [
                         {
                             "accrPoints": "",    // phrase d'accroche avec points (xxx :)
-                                //OR
                             "accrPointsBold": "", 
                             "points": [         // Peut être seul sans accrPoints
                                 {
@@ -30,22 +30,16 @@
                                     "subpoints": [""]
                                 }
                             ], 
-                            // OR
-                            "description": "", // 
-                            // OR
+                            "description": "", 
                             "descriptionBold": ""
-
                         }
                     ],
-                    // OR
-                    "title": "",
                     "subParts": [
                         {
                             "title": "",
                             "paragraphes": [
                                 {
                                     "accrPoints": "",    // phrase d'accroche avec points (xxx :)
-                                        //OR
                                     "accrPointsBold": "", 
                                     "points": [         // Peut être seul sans accrPoints
                                         {
@@ -53,20 +47,14 @@
                                             "subpoints": [""]
                                         }
                                     ], 
-                                    // OR
                                     "description": "", // 
-                                    // OR
                                     "descriptionBold": ""
         
                                 }
                             ],
-                            // OR
                             "points":[""]
-                            // OR
                         }
                     ],
-                    // OR
-                    "title": "",
                     "points": [""]
                 }
             ],
