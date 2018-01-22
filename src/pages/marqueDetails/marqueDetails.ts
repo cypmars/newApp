@@ -51,8 +51,7 @@ export class MarqueDetailsPage {
       if (this.marques[this.marqueId].videoId != null)
       {
         let openVideo = true;
-        let views =this.navCtrl.getViews();
-        views.pop();
+        var views =this.navCtrl.getViews();
         for (let view of views){
           if (view.id == "MarqueDetailsPage"){
             openVideo = false;
