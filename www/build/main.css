@@ -28831,7 +28831,7 @@ page-tinderQ2 .label-md, page-tinderQ2 .label-ios {
 }
 
 page-tinderQ2 ion-footer {
-  background-color: #f4f4f4;
+  background-color: white;
 }
 
 page-tinderQ2 ion-card img {
@@ -28839,8 +28839,8 @@ page-tinderQ2 ion-card img {
   min-height: 100%;
   position: absolute;
   top: 0;
-  right: -50%;
   z-index: 0;
+  min-width: 100%;
   width: auto;
 }
 
@@ -28901,6 +28901,12 @@ page-tinderQ2 ion-auto-complete ul {
 page-tinderQ2 .card-content-ios, page-tinderQ2 .card-content-md {
   padding: 0;
   height: 100%;
+}
+
+page-tinderQ2 .footer-btn {
+  font-size: 4em;
+  margin: 8px 5px;
+  font-weight: 800;
 }
 
 page-welcome ion-content {

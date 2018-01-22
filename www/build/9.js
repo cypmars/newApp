@@ -201,6 +201,7 @@ var ServiceDetailsPage = (function () {
             if (_this.services[_this.serviceId].videoId != null) {
                 var openVideo = true;
                 var views = _this.navCtrl.getViews();
+                views.pop();
                 for (var _i = 0, views_1 = views; _i < views_1.length; _i++) {
                     var view = views_1[_i];
                     if (view.id == "ServiceDetailsPage") {

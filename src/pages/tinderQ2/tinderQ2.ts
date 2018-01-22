@@ -196,6 +196,8 @@ export class TinderQ2Page {
     );
     this.getNextNode(like);
     let removedCard = this.cards.pop();
+    console.log("qdevant: "+this.currentNode[this.currentQId].name);
+    console.log("idqdevant: "+this.currentQId);
     if (this.currentNode[this.currentQId] != null)
     {
       this.cards.push(this.currentNode[this.currentQId]);
@@ -216,24 +218,6 @@ export class TinderQ2Page {
       this.myAnswer = [];
       this.cards.pop();
       this.cards.pop();
-    }
-
-
-    if (document.getElementsByClassName('card')[0] != null)
-    {
-      console.log(document.getElementsByClassName('card')[0]);
-      var behindCard = document.getElementsByClassName('card')[0];
-      if (document.getElementsByClassName('card')[0].children[0] != null){
-        var behindElmt = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[0].children[2];
-        var behindImg = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[0].children[1];
-      }
-      if (this.currentNode[this.currentQId + 1] != null)
-      {
-        if (behindElmt != null && behindImg != null){
-          behindImg.setAttribute("src", this.currentNode[this.currentQId + 1].img);
-          behindElmt.innerHTML = this.currentNode[this.currentQId + 1].question;
-        }
-      }
     }
   }
    
@@ -657,13 +641,16 @@ export class TinderQ2Page {
     this.cards = [{}];
     this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
 
-    
     console.log(this.navCtrl.getPrevious().id) ;
     if(this.navCtrl.getPrevious().id == "WelcomePage" || this.navCtrl.getPrevious().id == "SignupPage"){
       this.showButton = false ; 
     } 
   }
 
+  ionViewWillEnter(){
+    var behindCard = document.getElementsByClassName('card')[0];
+    behindCard.setAttribute("style", "background-color:rgba(255,255,255,0.2)");
+  }
   ionViewDidLeave(){
     console.log(this.navCtrl.getActive());
     if (!(this.navCtrl.getActive().component.name == "WelcomePage") && !(this.navCtrl.getActive().component.name == "TinderQ2Page") && !(this.navCtrl.getActive().component.name == "ServiceDetailsPage"))

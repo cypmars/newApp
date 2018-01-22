@@ -22,10 +22,10 @@
 
                     <ion-card #mycards1 swing-card *ngFor="let c of cards">
                       <ion-card-content>
-                          <ion-item>
+                          <ion-item *ngIf="c.question">
                               <div id="validate-or-not" class="validate-or-not"></div>
-                              <img [src]="c.img">
-                              <div class="relative-pos" style="background-color: rgba(0,0,0,0.5); width:100%">
+                              <img *ngIf="c.img" [src]="c.img">
+                              <div class="relative-pos" style="background-color: rgba(0,0,0,0.5); width:100%; padding-top: 15px; padding-bottom: 15px;">
                                 <h1 style="font-weight: 900">{{ c.question }}</h1>
                               </div>
                           </ion-item>
@@ -39,16 +39,14 @@
 <ion-footer>
     <ion-grid>
       <ion-row>
-        <ion-col text-center>
-            <button ion-button clear icon-left color="danger" (click)="voteUp(false)">
-                <ion-icon name="close-circle" class="footer-btn"></ion-icon>
-                NO
-              </button>
+        <ion-col text-right style="padding-right: 10px;">
+            <button style="background-color:rgba(0,0,0,0.1); border-radius:40px; width:70px" (click)="voteUp(false)">
+                &nbsp;&nbsp;&nbsp;<ion-icon name="close" color="danger" class="footer-btn"></ion-icon>&nbsp;&nbsp;&nbsp;
+            </button>
         </ion-col>
-        <ion-col text-center>
-            <button ion-button clear icon-left color="secondary" (click)="voteUp(true)">
-                <ion-icon name="checkmark-circle" class="footer-btn"></ion-icon>
-                YES
+        <ion-col text-left style="padding-left: 10px;">
+            <button style="background-color:rgba(0,0,0,0.1); border-radius:40px; width:70px" (click)="voteUp(true)">
+                &nbsp;&nbsp;&nbsp;<ion-icon name="checkmark" color="secondary" class="footer-btn"></ion-icon>&nbsp;&nbsp;&nbsp;
             </button>
         </ion-col>
       </ion-row>

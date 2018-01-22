@@ -47,6 +47,7 @@ export class ServiceDetailsPage {
       {
         let openVideo = true;
         let views =this.navCtrl.getViews();
+        views.pop();
         for (let view of views){
           if (view.id == "ServiceDetailsPage"){
             openVideo = false;

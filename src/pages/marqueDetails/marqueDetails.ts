@@ -52,6 +52,7 @@ export class MarqueDetailsPage {
       {
         let openVideo = true;
         let views =this.navCtrl.getViews();
+        views.pop();
         for (let view of views){
           if (view.id == "MarqueDetailsPage"){
             openVideo = false;
