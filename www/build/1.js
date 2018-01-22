@@ -1,5 +1,5 @@
-webpackJsonp([1],Array(302).concat([
-/* 302 */
+webpackJsonp([1],Array(301).concat([
+/* 301 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ2__ = __webpack_require__(634);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ2__ = __webpack_require__(633);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic2_auto_complete__ = __webpack_require__(607);
@@ -54,6 +54,7 @@ TinderQPageModule = __decorate([
 //# sourceMappingURL=tinderQ2.module.js.map
 
 /***/ }),
+/* 302 */,
 /* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17528,8 +17529,7 @@ AutoCompleteModule.ctorParameters = function () { return []; };
 /* 630 */,
 /* 631 */,
 /* 632 */,
-/* 633 */,
-/* 634 */
+/* 633 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17725,8 +17725,6 @@ var TinderQ2Page = (function () {
         });
         this.getNextNode(like);
         var removedCard = this.cards.pop();
-        console.log("qdevant: " + this.currentNode[this.currentQId].name);
-        console.log("idqdevant: " + this.currentQId);
         if (this.currentNode[this.currentQId] != null) {
             this.cards.push(this.currentNode[this.currentQId]);
         }

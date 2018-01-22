@@ -1,5 +1,5 @@
-webpackJsonp([6],Array(296).concat([
-/* 296 */
+webpackJsonp([6],Array(300).concat([
+/* 300 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(629);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(632);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -46,10 +46,6 @@ TinderQPageModule = __decorate([
 //# sourceMappingURL=tinderQ.module.js.map
 
 /***/ }),
-/* 297 */,
-/* 298 */,
-/* 299 */,
-/* 300 */,
 /* 301 */,
 /* 302 */,
 /* 303 */
@@ -17043,7 +17039,10 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* 626 */,
 /* 627 */,
 /* 628 */,
-/* 629 */
+/* 629 */,
+/* 630 */,
+/* 631 */,
+/* 632 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

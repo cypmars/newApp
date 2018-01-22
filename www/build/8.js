@@ -1,6 +1,6 @@
 webpackJsonp([8],{
 
-/***/ 300:
+/***/ 292:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductDetailsPageModule", function() { return ProductDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__productDetails__ = __webpack_require__(632);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__productDetails__ = __webpack_require__(625);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_youtube_video_player__ = __webpack_require__(609);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_document_viewer__ = __webpack_require__(619);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -277,7 +277,7 @@ var DocumentViewer = (function (_super) {
 
 /***/ }),
 
-/***/ 632:
+/***/ 625:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -350,10 +350,17 @@ var ProductDetailsPage = (function () {
             _this.marques = data;
             if (_this.products[_this.productId].videoId != null) {
                 var openVideo = true;
-                var views = _this.navCtrl.getViews();
-                views.pop();
-                for (var _i = 0, views_1 = views; _i < views_1.length; _i++) {
-                    var view = views_1[_i];
+                var vlength = _this.navCtrl.getViews().length;
+                var index = 0;
+                var final = new Array();
+                for (var _i = 0, _a = _this.navCtrl.getViews(); _i < _a.length; _i++) {
+                    var views = _a[_i];
+                    if (views != _this.navCtrl.getViews()[vlength - 1]) {
+                        final.push(views);
+                    }
+                }
+                for (var _b = 0, final_1 = final; _b < final_1.length; _b++) {
+                    var view = final_1[_b];
                     if (view.id == "ProductDetailsPage") {
                         openVideo = false;
                     }

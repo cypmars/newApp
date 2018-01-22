@@ -1,5 +1,5 @@
-webpackJsonp([3],Array(295).concat([
-/* 295 */
+webpackJsonp([3],Array(297).concat([
+/* 297 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic2_auto_complete__ = __webpack_require__(607);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_CompleteTestService__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simple_form2__ = __webpack_require__(628);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simple_form2__ = __webpack_require__(630);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -47,8 +47,6 @@ SimpleFormPageModule = __decorate([
 //# sourceMappingURL=simple-form2.module.js.map
 
 /***/ }),
-/* 296 */,
-/* 297 */,
 /* 298 */,
 /* 299 */,
 /* 300 */,
@@ -17523,7 +17521,9 @@ AutoCompleteModule.ctorParameters = function () { return []; };
 /* 625 */,
 /* 626 */,
 /* 627 */,
-/* 628 */
+/* 628 */,
+/* 629 */,
+/* 630 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

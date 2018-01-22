@@ -207,9 +207,17 @@ var MarqueDetailsPage = (function () {
             _this.marques = data;
             if (_this.marques[_this.marqueId].videoId != null) {
                 var openVideo = true;
-                var views = _this.navCtrl.getViews();
-                for (var _i = 0, views_1 = views; _i < views_1.length; _i++) {
-                    var view = views_1[_i];
+                var vlength = _this.navCtrl.getViews().length;
+                var index = 0;
+                var final = new Array();
+                for (var _i = 0, _a = _this.navCtrl.getViews(); _i < _a.length; _i++) {
+                    var views = _a[_i];
+                    if (views != _this.navCtrl.getViews()[vlength - 1]) {
+                        final.push(views);
+                    }
+                }
+                for (var _b = 0, final_1 = final; _b < final_1.length; _b++) {
+                    var view = final_1[_b];
                     if (view.id == "MarqueDetailsPage") {
                         openVideo = false;
                     }

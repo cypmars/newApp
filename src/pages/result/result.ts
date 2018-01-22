@@ -114,8 +114,10 @@ export class ResultPage implements OnInit, OnDestroy{
           {
             if (eventData[0] === this.visNetwork && (this.visNetworkService.getSelectedNodes(this.visNetwork))[0] != null) {
               this.myServiceId = (this.visNetworkService.getSelectedNodes(this.visNetwork))[0];
-              var footer = document.getElementsByClassName('footer')[0];
-              footer.removeAttribute("hidden");
+              var footer = document.getElementsByClassName('footer');
+              console.log(footer);
+              footer[1].removeAttribute("hidden");
+              
             }
           }
         });

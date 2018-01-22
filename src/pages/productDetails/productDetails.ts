@@ -68,9 +68,17 @@ export class ProductDetailsPage {
       if (this.products[this.productId].videoId != null)
       {
         let openVideo = true;
-        let views =this.navCtrl.getViews();
-        views.pop();
-        for (let view of views){
+        var vlength = this.navCtrl.getViews().length;
+        let index = 0;
+        let final = new Array();
+        for (let views of this.navCtrl.getViews())
+        {
+          if (views != this.navCtrl.getViews()[vlength - 1])
+          {
+            final.push(views);
+          }
+        }
+        for (let view of final){
           if (view.id == "ProductDetailsPage"){
             openVideo = false;
           }

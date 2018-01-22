@@ -196,8 +196,6 @@ export class TinderQ2Page {
     );
     this.getNextNode(like);
     let removedCard = this.cards.pop();
-    console.log("qdevant: "+this.currentNode[this.currentQId].name);
-    console.log("idqdevant: "+this.currentQId);
     if (this.currentNode[this.currentQId] != null)
     {
       this.cards.push(this.currentNode[this.currentQId]);

@@ -1,6 +1,6 @@
 webpackJsonp([9],{
 
-/***/ 301:
+/***/ 294:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiceDetailsPageModule", function() { return ServiceDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__serviceDetails__ = __webpack_require__(633);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__serviceDetails__ = __webpack_require__(627);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_youtube_video_player__ = __webpack_require__(609);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -148,7 +148,7 @@ var YoutubeVideoPlayer = (function (_super) {
 
 /***/ }),
 
-/***/ 633:
+/***/ 627:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -200,10 +200,17 @@ var ServiceDetailsPage = (function () {
             _this.services = data;
             if (_this.services[_this.serviceId].videoId != null) {
                 var openVideo = true;
-                var views = _this.navCtrl.getViews();
-                views.pop();
-                for (var _i = 0, views_1 = views; _i < views_1.length; _i++) {
-                    var view = views_1[_i];
+                var vlength = _this.navCtrl.getViews().length;
+                var index = 0;
+                var final = new Array();
+                for (var _i = 0, _a = _this.navCtrl.getViews(); _i < _a.length; _i++) {
+                    var views = _a[_i];
+                    if (views != _this.navCtrl.getViews()[vlength - 1]) {
+                        final.push(views);
+                    }
+                }
+                for (var _b = 0, final_1 = final; _b < final_1.length; _b++) {
+                    var view = final_1[_b];
                     if (view.id == "ServiceDetailsPage") {
                         openVideo = false;
                     }
