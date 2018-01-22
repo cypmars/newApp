@@ -1,5 +1,5 @@
-<ion-content *ngIf="marques != null && news != null" padding class="transparent-header" style="border-top: 20px solid #488aff">
-  <ion-header no-border>
+<ion-content *ngIf="marques != null && news != null" padding style="border-top: 20px solid #488aff">
+  <ion-header no-border style="background-color: rgba(0, 0, 0, 0.2)">
     <ion-navbar color="primary" hideBackButton="true">
       <ion-buttons start>
           <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> 
@@ -25,6 +25,23 @@
           <div *ngIf="marques[marqueId].content.citation">
             <h4 style="font-size: 1.4em">{{marques[marqueId].content.citation}}</h4>
             <br>
+          </div>
+
+          <hr>
+          <div *ngIf="marques[marqueId].videoId" class="button-video">
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                    <button *ngIf="marqueId == 0" ion-button full style="background-color: #0eae15" (click)="replayVideo()">Rejouer la vidéo</button>
+                    <button *ngIf="marqueId == 1" ion-button full style="background-color: #d01717" (click)="replayVideo()">Rejouer la vidéo</button>
+                    <button *ngIf="marqueId == 2" ion-button full style="background-color: #386ecd" (click)="replayVideo()">Rejouer la vidéo</button>
+                    <button *ngIf="marqueId == 3" ion-button full style="background-color: #cbc40e" (click)="replayVideo()">Rejouer la vidéo</button>
+                    <button *ngIf="marqueId == 4" ion-button full style="background-color: #cc7136" (click)="replayVideo()">Rejouer la vidéo</button>
+                    <button *ngIf="marqueId == 5" ion-button full style="background-color: #962ac8" (click)="replayVideo()">Rejouer la vidéo</button>
+                    <button *ngIf="marqueId == 6" ion-button full style="background-color: #d42649" (click)="replayVideo()">Rejouer la vidéo</button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
           </div>
           <hr>
 

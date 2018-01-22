@@ -45,7 +45,16 @@ export class ServiceDetailsPage {
       this.services = data;
       if (this.services[this.serviceId].videoId != null)
       {
-        this.youtube.openVideo(this.services[this.serviceId].videoId);
+        let openVideo = true;
+        let views =this.navCtrl.getViews();
+        for (let view of views){
+          if (view.id == "ServiceDetailsPage"){
+            openVideo = false;
+          }
+        }
+        if (openVideo){
+          this.youtube.openVideo(this.services[this.serviceId].videoId);
+        }
       }
     });
 
@@ -54,6 +63,10 @@ export class ServiceDetailsPage {
   
   prev() {
     this.navCtrl.pop();
+  }
+
+  replayVideo(){
+    this.youtube.openVideo(this.services[this.serviceId].videoId);
   }
 
   showMarque(){

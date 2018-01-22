@@ -37,7 +37,6 @@ export class MarqueDetailsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer) {
-    
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.marqueId = navParams.get('marqueId');  
 
@@ -51,10 +50,23 @@ export class MarqueDetailsPage {
       this.marques = data;
       if (this.marques[this.marqueId].videoId != null)
       {
-        this.youtube.openVideo(this.marques[this.marqueId].videoId);
+        let openVideo = true;
+        let views =this.navCtrl.getViews();
+        for (let view of views){
+          if (view.id == "MarqueDetailsPage"){
+            openVideo = false;
+          }
+        }
+        if (openVideo){
+          this.youtube.openVideo(this.marques[this.marqueId].videoId);
+        }
       }
     });
 
+  }
+
+  replayVideo(){
+    this.youtube.openVideo(this.marques[this.marqueId].videoId);
   }
 
   toggleGroup(group) {
@@ -79,6 +91,7 @@ export class MarqueDetailsPage {
 
   ionViewWillEnter(){
     this.tabBarElement.style.display = 'none';
+    console.log("enter");
   }
 
   ionViewWillLeave(){

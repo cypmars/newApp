@@ -162,12 +162,17 @@
           },
           {
             "title": "Avantages économiques, techniques et environnementaux du nettoyage cryogénique",
-            "points": [
-              "Réduction du temps d'immobilisation",
-              "Aucune dépense liée à l'évacuation",
-              "Méthode de nettoyage rapide et efficace",
-              "Réduction de l'usure des équipements de production",
-              "Protection de l'environnement"              
+            "paragraphes": [
+              { 
+                "points": [
+                  { "title": "La gestion des déchets en milieu tertiaire"},
+                  { "title": "Réduction du temps d'immobilisation"},
+                  { "title": "La gestion des déchets en milieu tertiaire"},
+                  { "title": "Méthode de nettoyage rapide et efficace"},
+                  { "title": "Réduction de l'usure des équipements de production"},
+                  { "title": "Protection de l'environnement"}
+                ] 
+              }
             ]
           }
         ],

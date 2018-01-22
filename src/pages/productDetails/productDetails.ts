@@ -67,7 +67,16 @@ export class ProductDetailsPage {
       this.marques = data;
       if (this.products[this.productId].videoId != null)
       {
-        this.youtube.openVideo(this.products[this.productId].videoId);
+        let openVideo = true;
+        let views =this.navCtrl.getViews();
+        for (let view of views){
+          if (view.id == "ProductDetailsPage"){
+            openVideo = false;
+          }
+        }
+        if (openVideo){
+          this.youtube.openVideo(this.products[this.productId].videoId);
+        }
       }
     });
 
@@ -79,6 +88,11 @@ export class ProductDetailsPage {
     }
     
     this.documentView.viewDocument('assets/img/products/pdf/'+productId+'.pdf', 'application/pdf', options)
+  }
+
+  
+  replayVideo(){
+    this.youtube.openVideo(this.products[this.productId].videoId);
   }
 
   prev() {

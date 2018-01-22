@@ -1,5 +1,5 @@
-<ion-content *ngIf="services != null && marques != null && products != null" padding class="transparent-header" style="border-top: 20px solid #488aff">
-  <ion-header no-border>
+<ion-content *ngIf="services != null && marques != null && products != null" padding style="border-top: 20px solid #488aff">
+  <ion-header no-border style="background-color: rgba(0, 0, 0, 0.2)">
     <ion-navbar color="primary" hideBackButton="true">
       <ion-buttons start>
           <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> 
@@ -50,6 +50,14 @@
                 <button *ngIf="services[serviceId].marqueId == 4" ion-button full style="background-color: #cc7136" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>
                 <button *ngIf="services[serviceId].marqueId == 5" ion-button full style="background-color: #962ac8" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>
                 <button *ngIf="services[serviceId].marqueId == 6" ion-button full style="background-color: #d42649" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <hr>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <button ion-button full color="primary" (click)="replayVideo()">Rejouer la vidéo</button>
               </ion-col>
               <ion-col>
                 <button ion-button full color="primary">Demande d'informations</button>

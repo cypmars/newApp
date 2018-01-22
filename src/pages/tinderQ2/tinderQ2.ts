@@ -162,7 +162,7 @@ export class TinderQ2Page {
     let min = Math.trunc(Math.min(16*16 - abs, 16*16));
     let hexCode = this.decimalToHex(min, 2);
 
-    if (x < 0) {
+    if (x > 0) {
       color = '#' + hexCode + 'FF' + hexCode;
     } else if (x === 0){
       color = 'transparent';
@@ -216,6 +216,24 @@ export class TinderQ2Page {
       this.myAnswer = [];
       this.cards.pop();
       this.cards.pop();
+    }
+
+
+    if (document.getElementsByClassName('card')[0] != null)
+    {
+      console.log(document.getElementsByClassName('card')[0]);
+      var behindCard = document.getElementsByClassName('card')[0];
+      if (document.getElementsByClassName('card')[0].children[0] != null){
+        var behindElmt = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[0].children[2];
+        var behindImg = document.getElementsByClassName('card')[0].children[0].children[0].children[0].children[0].children[0].children[1];
+      }
+      if (this.currentNode[this.currentQId + 1] != null)
+      {
+        if (behindElmt != null && behindImg != null){
+          behindImg.setAttribute("src", this.currentNode[this.currentQId + 1].img);
+          behindElmt.innerHTML = this.currentNode[this.currentQId + 1].question;
+        }
+      }
     }
   }
    
