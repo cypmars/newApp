@@ -278,6 +278,10 @@ export class TinderQ2Page {
   }
   
   prev(){
+    var footer = document.getElementsByClassName('footer');
+    console.log("before removing first: "+footer[0]);
+    footer[0].remove();
+    console.log("after removing first: "+footer[0]);
     this.navCtrl.pop();
   }
   ngAfterViewInit() {
@@ -647,8 +651,11 @@ export class TinderQ2Page {
 
   ionViewWillEnter(){
     var behindCard = document.getElementsByClassName('card')[0];
-    behindCard.setAttribute("style", "background-color:rgba(255,255,255,0.2)");
+    if (behindCard != null){
+      behindCard.setAttribute("style", "background-color:rgba(255,255,255,0.2)");
+    }
   }
+
   ionViewDidLeave(){
     console.log(this.navCtrl.getActive());
     if (!(this.navCtrl.getActive().component.name == "WelcomePage") && !(this.navCtrl.getActive().component.name == "TinderQ2Page") && !(this.navCtrl.getActive().component.name == "ServiceDetailsPage"))
@@ -660,7 +667,7 @@ export class TinderQ2Page {
       this.cards = [{}];
       this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
     }
-    console.log("Did Leave ???")
+    console.log("Did Leave ???");
   }
 
   login(){

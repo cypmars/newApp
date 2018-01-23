@@ -52,7 +52,7 @@ export class ResultPage implements OnInit, OnDestroy{
   visServices;
 
   myServiceId;
-
+  boolFooterVisible: boolean = false;
   placeholder="";
   constructor(private http: Http, public navCtrl: NavController, private visNetworkServ: VisNetworkService, public navParams: NavParams, public completeTestService: CompleteTestService) {
    
@@ -117,7 +117,7 @@ export class ResultPage implements OnInit, OnDestroy{
               var footer = document.getElementsByClassName('footer');
               console.log(footer);
               footer[1].removeAttribute("hidden");
-              
+              this.boolFooterVisible = true;
             }
           }
         });
@@ -126,6 +126,9 @@ export class ResultPage implements OnInit, OnDestroy{
 
   getVal(event){
     console.log(event.id);
+    var footer = document.getElementsByClassName('footer');
+    footer[1].setAttribute("hidden", "true");
+    this.boolFooterVisible = false;
     this.navCtrl.push('ServiceDetailsPage', {
       param1: event.id,
     });
@@ -135,6 +138,9 @@ export class ResultPage implements OnInit, OnDestroy{
   public more(){
     if (this.firstT)
     {
+      var footer = document.getElementsByClassName('footer');
+      footer[1].setAttribute("hidden", "true");
+      this.boolFooterVisible = false;
       this.navCtrl.push('ServiceDetailsPage', {
         param1: this.myServiceId
       });
@@ -235,6 +241,11 @@ export class ResultPage implements OnInit, OnDestroy{
   prev(){
     this.visNetworkService.off(this.visNetwork, 'click');
     this.visNetworkData.nodes.clear();
+    var footer = document.getElementsByClassName('footer');
+    console.log(this.boolFooterVisible);
+    if (this.boolFooterVisible){
+      footer[1].setAttribute("hidden", "true");
+    }
     this.navCtrl.pop();
   }
 }

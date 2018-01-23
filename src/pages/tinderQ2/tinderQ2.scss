@@ -67,7 +67,15 @@ page-tinderQ2 {
   }
 
   ion-footer{
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255,255,255,0.6);
+  }
+
+  .icon-md-secondary{
+    margin-left: -5px !important;
+  }
+
+  .icon-ios-secondary{
+    margin-left: 5px !important;
   }
 
   ion-card img{

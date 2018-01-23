@@ -28831,7 +28831,15 @@ page-tinderQ2 .label-md, page-tinderQ2 .label-ios {
 }
 
 page-tinderQ2 ion-footer {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+page-tinderQ2 .icon-md-secondary {
+  margin-left: -5px !important;
+}
+
+page-tinderQ2 .icon-ios-secondary {
+  margin-left: 5px !important;
 }
 
 page-tinderQ2 ion-card img {

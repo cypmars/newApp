@@ -79737,6 +79737,7 @@ var ResultPage = (function () {
         this.completeTestService = completeTestService;
         this.visNetwork = 'networkId1';
         this.firstT = true;
+        this.boolFooterVisible = false;
         this.placeholder = "";
         var servData = http.get('assets/data/services.json').map(function (res) { return res.json().services; });
         servData.subscribe(function (data) {
@@ -79789,12 +79790,16 @@ var ResultPage = (function () {
                     var footer = document.getElementsByClassName('footer');
                     console.log(footer);
                     footer[1].removeAttribute("hidden");
+                    _this.boolFooterVisible = true;
                 }
             }
         });
     };
     ResultPage.prototype.getVal = function (event) {
         console.log(event.id);
+        var footer = document.getElementsByClassName('footer');
+        footer[1].setAttribute("hidden", "true");
+        this.boolFooterVisible = false;
         this.navCtrl.push('ServiceDetailsPage', {
             param1: event.id,
         });
@@ -79802,6 +79807,9 @@ var ResultPage = (function () {
     };
     ResultPage.prototype.more = function () {
         if (this.firstT) {
+            var footer = document.getElementsByClassName('footer');
+            footer[1].setAttribute("hidden", "true");
+            this.boolFooterVisible = false;
             this.navCtrl.push('ServiceDetailsPage', {
                 param1: this.myServiceId
             });
@@ -79885,6 +79893,11 @@ var ResultPage = (function () {
     ResultPage.prototype.prev = function () {
         this.visNetworkService.off(this.visNetwork, 'click');
         this.visNetworkData.nodes.clear();
+        var footer = document.getElementsByClassName('footer');
+        console.log(this.boolFooterVisible);
+        if (this.boolFooterVisible) {
+            footer[1].setAttribute("hidden", "true");
+        }
         this.navCtrl.pop();
     };
     return ResultPage;
