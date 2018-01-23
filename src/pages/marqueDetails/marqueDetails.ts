@@ -111,14 +111,11 @@ export class MarqueDetailsPage {
   ionViewWillEnter(){
     this.tabBarElement.style.display = 'none';
     console.log("enter");
+    this.loadMap();
   }
 
   ionViewWillLeave(){
     this.tabBarElement.style.display = 'flex';
-  }
-
-  ionViewDidLoad(){
-    this.loadMap();
   }
 
   showService(index){
@@ -180,7 +177,7 @@ export class MarqueDetailsPage {
       }
     };
 
-    this.map = this.googleMaps.create('map_canvas', mapOptions);
+    this.map = GoogleMaps.create('map_canvas', mapOptions);
 
     // Wait the MAP_READY before using any methods.
     this.map.one(GoogleMapsEvent.MAP_READY)
