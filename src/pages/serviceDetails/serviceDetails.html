@@ -39,6 +39,16 @@
               <li *ngFor="let point of services[serviceId].content.pointsIntro"> {{point}} </li>
             </ul>
           </div>
+          <ion-grid>
+            <ion-row>
+              <ion-col *ngIf="services[serviceId].videoId">
+                  <button ion-button color="primary" small (click)="replayVideo()">Rejouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>
+              </ion-col>
+              <ion-col>
+                  <button ion-button color="primary" small>Demande d'informations</button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
           <hr>
           <ion-grid>
             <ion-row>
@@ -54,30 +64,21 @@
             </ion-row>
           </ion-grid>
           <hr>
-          <ion-grid>
-            <ion-row>
-              <ion-col>
-                <button ion-button full color="primary" (click)="replayVideo()">Rejouer la vidéo</button>
-              </ion-col>
-              <ion-col>
-                <button ion-button full color="primary">Demande d'informations</button>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-          <hr>
-          <h3 style="font-size:1.2em" *ngIf="services[serviceId].productIds != null">Fiches &amp; Produits</h3>
-          <br>
-          <div *ngIf="services[serviceId].productIds != null" style="position: relative; height: 200px; margin-bottom: 20px;">
-            <ion-slides pager>
-              <ion-slide *ngFor="let index of services[serviceId].productIds">
-                <div (click)="showProduct($event, index)">
-                  <img [src]="products[index].img" style="width: 100%;">
-                  <div style="position: absolute; top: 20%; right:10%; left:10%; width: 80%; background-color: rgba(0, 0, 0, 0.5); color: white; padding-top:20px; padding-bottom: 20px;">
-                    {{products[index].title}}
+          <div *ngIf="services[serviceId].productIds">
+            <h3 style="font-size:1.2em" *ngIf="services[serviceId].productIds != null">Fiches &amp; Produits</h3>
+            <br>
+            <div *ngIf="services[serviceId].productIds != null" style="position: relative; height: 150px; margin-bottom: 20px;">
+              <ion-slides pager>
+                <ion-slide *ngFor="let index of services[serviceId].productIds">
+                  <div (click)="showProduct($event, index)">
+                    <img [src]="products[index].img">
+                    <div style="position: absolute; top: 20%; right:10%; left:10%; width: 80%; background-color: rgba(0, 0, 0, 0.5); color: white; padding-top:20px; padding-bottom: 20px;">
+                      {{products[index].title}}
+                    </div>
                   </div>
-                </div>
-              </ion-slide>
-            </ion-slides>
+                </ion-slide>
+              </ion-slides>
+            </div>
             <hr>
           </div>
           <div *ngIf="services[serviceId].content.parts != null">

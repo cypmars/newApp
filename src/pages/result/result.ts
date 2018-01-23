@@ -96,7 +96,7 @@ export class ResultPage implements OnInit, OnDestroy{
             const visService = {
               id: resultId,
               group: myGroup,
-              label: " "+this.services[resultId].icon+" "
+              label: this.services[resultId].icon
             }
             if (this.visNetworkData.nodes.getById(resultId) == null)
             {
@@ -164,17 +164,11 @@ export class ResultPage implements OnInit, OnDestroy{
 
       this.visNetworkOptions = {
         interaction:{
-          multiselect: true
+          multiselect: false
         },
         nodes: {
-          borderWidth:0 ,
-
+          borderWidth:50,
           shape:"circle", 
-          color:{
-            background:'#F92C55', 
-            border: 'transparent', 
-            highlight:{ background:'#F92C55', border: '#F92C55'}
-          },
           font:{
             color:'#fff',
             size: 45,
@@ -186,39 +180,39 @@ export class ResultPage implements OnInit, OnDestroy{
 
           //Groupés par marque
           // Marque id=0
-          0:{font:{size:45}, color:{background:'#10e51a', highlight:{ background:'#0eae15' }}},
-          1:{font:{size:65}, color:{background:'#10e51a', highlight:{ background:'#0eae15' }}},
-          2:{font:{size:85}, color:{background:'#10e51a', highlight:{ background:'#0eae15' }}},
+          0:{font:{size:45}, color:{border:'#10e51a', background:'#10e51a', highlight:{ border:'#0eae15', background:'#0eae15' }}},
+          1:{font:{size:65}, color:{border:'#10e51a', background:'#10e51a', highlight:{ border:'#0eae15', background:'#0eae15' }}},
+          2:{font:{size:85}, color:{border:'#10e51a', background:'#10e51a', highlight:{ border:'#0eae15', background:'#0eae15' }}},
 
           // Marque id=1
-          3:{font:{size:45}, color:{background:'#f71b1b', highlight:{ background:'#d01717' }}},
-          4:{font:{size:65}, color:{background:'#f71b1b', highlight:{ background:'#d01717' }}},
-          5:{font:{size:85}, color:{background:'#f71b1b', highlight:{ background:'#d01717' }}},
+          3:{font:{size:45}, color:{border:'#f71b1b', background:'#f71b1b', highlight:{ border:'#d01717', background:'#d01717' }}},
+          4:{font:{size:65}, color:{border:'#f71b1b', background:'#f71b1b', highlight:{ border:'#d01717', background:'#d01717' }}},
+          5:{font:{size:85}, color:{border:'#f71b1b', background:'#f71b1b', highlight:{ border:'#d01717', background:'#d01717' }}},
 
           // Marque id=2
-          6:{font:{size:45}, color:{background:'#488aff', highlight:{ background:'#386ecd' }}},
-          7:{font:{size:65}, color:{background:'#488aff', highlight:{ background:'#386ecd' }}},
-          8:{font:{size:85}, color:{background:'#488aff', highlight:{ background:'#386ecd' }}},
+          6:{font:{size:45}, color:{border:'#488aff', background:'#488aff', highlight:{ border:'#386ecd', background:'#386ecd' }}},
+          7:{font:{size:65}, color:{border:'#488aff',background:'#488aff', highlight:{ border:'#386ecd', background:'#386ecd' }}},
+          8:{font:{size:85}, color:{border:'#488aff', background:'#488aff', highlight:{ border:'#386ecd', background:'#386ecd' }}},
 
           // Marque id=3
-          9:{font:{size:45}, color:{background:'#e5dd10', highlight:{ background:'#cbc40e' }}},
-          10:{font:{size:65}, color:{background:'#e5dd10', highlight:{ background:'#cbc40e' }}},
-          11:{font:{size:85}, color:{background:'#e5dd10', highlight:{ background:'#cbc40e' }}},
+          9:{font:{size:45}, color:{border:'#e5dd10', background:'#e5dd10', highlight:{ border:'#cbc40e', background:'#cbc40e' }}},
+          10:{font:{size:65}, color:{border:'#e5dd10', background:'#e5dd10', highlight:{ border:'#cbc40e', background:'#cbc40e' }}},
+          11:{font:{size:85}, color:{border:'#e5dd10', background:'#e5dd10', highlight:{ border:'#cbc40e', background:'#cbc40e' }}},
 
           // Marque id=4
-          12:{font:{size:45}, color:{background:'#f08640', highlight:{ background:'#cc7136' }}},
-          13:{font:{size:65}, color:{background:'#f08640', highlight:{ background:'#cc7136' }}},
-          14:{font:{size:85}, color:{background:'#f08640', highlight:{ background:'#cc7136' }}},
+          12:{font:{size:45}, color:{border:'#f08640', background:'#f08640', highlight:{ border:'#cc7136', background:'#cc7136' }}},
+          13:{font:{size:65}, color:{border:'#f08640', background:'#f08640', highlight:{ border:'#cc7136', background:'#cc7136' }}},
+          14:{font:{size:85}, color:{border:'#f08640', background:'#f08640', highlight:{ border:'#cc7136', background:'#cc7136' }}},
 
           // Marque id=5
-          15:{font:{size:45}, color:{background:'#b734f4', highlight:{ background:'#962ac8' }}},
-          16:{font:{size:65}, color:{background:'#b734f4', highlight:{ background:'#962ac8' }}},
-          17:{font:{size:85}, color:{background:'#b734f4', highlight:{ background:'#962ac8' }}},
+          15:{font:{size:45}, color:{border:'#b734f4', background:'#b734f4', highlight:{ border:'#962ac8', background:'#962ac8' }}},
+          16:{font:{size:65}, color:{border:'#b734f4', background:'#b734f4', highlight:{ border:'#962ac8', background:'#962ac8' }}},
+          17:{font:{size:85}, color:{border:'#b734f4', background:'#b734f4', highlight:{ border:'#962ac8', background:'#962ac8' }}},
 
           // Marque id=6
-          18:{font:{size:45}, color:{background:'#f92c55', highlight:{ background:'#d42649' }}},
-          19:{font:{size:65}, color:{background:'#f92c55', highlight:{ background:'#d42649' }}},
-          20:{font:{size:85}, color:{background:'#f92c55', highlight:{ background:'#d42649' }}},
+          18:{font:{size:45}, color:{border:'#f92c55', background:'#f92c55', highlight:{ border:'#d42649', background:'#d42649' }}},
+          19:{font:{size:65}, color:{border:'#f92c55', background:'#f92c55', highlight:{ border:'#d42649', background:'#d42649' }}},
+          20:{font:{size:85}, color:{border:'#f92c55', background:'#f92c55', highlight:{ border:'#d42649', background:'#d42649' }}},
         },
         physics: {
           stabilization: false,

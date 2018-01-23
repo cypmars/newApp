@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPageModule", function() { return ChatPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(620);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(624);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -29,7 +29,7 @@ ChatPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */])
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */]
@@ -41,7 +41,7 @@ ChatPageModule = __decorate([
 
 /***/ }),
 
-/***/ 620:
+/***/ 624:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -406,7 +406,7 @@ ChatPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-chat',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat\chat.html"*/'\n\n  <ion-header no-border>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n\n\n    </ion-buttons>\n\n    <ion-title>\n\n\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n  <div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">\n\n		<div *ngIf="user._id !== message.userId">\n\n			<img (click)="viewProfile(message)" class="profile-pic left" [src]="toUser.pic" />\n\n			<!--  wave-->\n\n			<div class="chat-bubble left slide-left">\n\n\n\n				<div class="message" [innerHTML]="message.text" autolinker>\n\n				</div>\n\n\n\n				<div class="message-detail">\n\n					<span (click)="viewProfile(message)" class="bold">{{toUser.username}}</span>\n\n				</div>\n\n\n\n			</div>\n\n		</div>\n\n\n\n		<div *ngIf="user._id === message.userId">\n\n\n\n			<img (click)="viewProfile(message)" class="profile-pic right" [src]="user.pic" />\n\n\n\n			<div class="chat-bubble right slide-right">\n\n\n\n				<div class="message" [innerHTML]="message.text" autolinker>\n\n				</div>\n\n\n\n				<div class="message-detail">\n\n					<span (click)="viewProfile(message)" class="bold">{{user.username}}</span>\n\n				</div>\n\n\n\n			</div>\n\n\n\n		</div>\n\n\n\n		<div class="cf"></div>\n\n\n\n  </div>  \n\n  \n\n</ion-content>\n\n<ion-footer>\n\n	<form [formGroup]="messageForm" (submit)="sendMessage()" novalidate>\n\n		<ion-item>\n\n			<ion-input formControlName="message" [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>\n\n			<button ion-button clear (click)="sendMessage()" item-end><ion-icon class="footer-btn" name="send"></ion-icon></button>\n\n		</ion-item>\n\n	</form>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat\chat.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"], __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__["a" /* SpeechRecognition */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__["a" /* TextToSpeech */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"], __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__["a" /* SpeechRecognition */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__["a" /* TextToSpeech */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Platform */]])
 ], ChatPage);
 
 //# sourceMappingURL=chat.js.map

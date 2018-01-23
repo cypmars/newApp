@@ -28,13 +28,14 @@ export class NewsPage {
   cleanDates:string[];
   datesFinish:string[];
   news:any[];
+  marques:any[];
   // Our translated text strings
   private loginErrorString: string;
 
   constructor(private http: Http, public navCtrl: NavController,
     public toastCtrl: ToastController,
     public completeNewsService: CompleteNewsService) {
-  
+
       this.dates = new Array();
       let newsData = http.get('assets/data/news.json').map(res => res.json().news);
       newsData.subscribe(data => {
@@ -62,6 +63,11 @@ export class NewsPage {
         }
         this.datesFinish = this.dates;
         this.cleanDates = result;
+      });
+
+      let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
+      brandData.subscribe(data => {
+        this.marques = data;
       });
 
       

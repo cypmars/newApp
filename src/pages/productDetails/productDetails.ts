@@ -3,11 +3,13 @@ import { IonicPage, NavController, NavParams, ToastController, Platform } from '
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-import { MarqueDetailsPage } from '../pages';
+import { ImageViewerController } from "ionic-img-viewer";
 
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
 import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer';
+
+import { MarqueDetailsPage } from '../pages';
 
 /**
  * The Welcome Page is a splash page that quickly describes the app,
@@ -42,7 +44,7 @@ export class ProductDetailsPage {
   // private loginErrorString: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, platform: Platform,
-    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer, private documentView: DocumentViewer) {
+    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer, private documentView: DocumentViewer, public imageViewerCtrl: ImageViewerController) {
     
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.productId = navParams.get('productId');  
@@ -99,7 +101,11 @@ export class ProductDetailsPage {
     this.documentView.viewDocument('assets/img/products/pdf/'+productId+'.pdf', 'application/pdf', options)
   }
 
-  
+  openImg(imageToView) {
+    const viewer = this.imageViewerCtrl.create(imageToView)
+    viewer.present();
+  }
+
   replayVideo(){
     this.youtube.openVideo(this.products[this.productId].videoId);
   }

@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 import { MyApp } from './app.component';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -19,6 +20,7 @@ import { SwingModule } from 'angular2-swing';
   ],
   imports: [
     BrowserModule,
+    IonicImageViewerModule,
     HttpModule,
     SwingModule,
     IonicModule.forRoot(MyApp)

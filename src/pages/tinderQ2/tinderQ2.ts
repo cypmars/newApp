@@ -648,13 +648,6 @@ export class TinderQ2Page {
       this.showButton = false ; 
     } 
   }
-  ionViewWillEnter(){
-    var behindCard = document.getElementsByClassName('card')[0];
-    console.log("WillEnter "+behindCard);
-    if (behindCard != null){
-      behindCard.setAttribute("style", "background-color:rgba(255,255,255,0.2)");
-    }
-  }
 
   ionViewDidLeave(){
     console.log(this.navCtrl.getActive());

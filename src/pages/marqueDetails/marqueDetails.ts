@@ -4,6 +4,20 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+
+import {
+  GoogleMaps,
+  GoogleMap,
+  GoogleMapsEvent,
+  GoogleMapOptions,
+  CameraPosition,
+  MarkerOptions,
+  Marker
+ } from '@ionic-native/google-maps';
+
+import { ServiceDetailsPage } from '../pages';
+import { NewsDetailsPage } from '../pages';
+import { ProductDetailsPage } from '../pages';
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -17,32 +31,32 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 })
 export class MarqueDetailsPage {
 
+  map: GoogleMap;
+
   shownGroup = null;
   marqueId;
   tabBarElement: any;
   news: any[];
   marques: any[];
-  // The account fields for the login form.
-  // If you're using the username field with or without email, make
-  // sure to add it to the type
-  account: { email: string, password: string } = {
-    email: '@ e-mail ou pseudo',
-    password: 'mot de passe'
-  };
+  services: any[];
 
-  like = false;
+  listShown: boolean=false;
 
-  // Our translated text strings
-  private loginErrorString: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer) {
+    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer, private googleMaps: GoogleMaps) {
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.marqueId = navParams.get('marqueId');  
 
     let newsData = http.get('assets/data/news.json').map(res => res.json().news);
     newsData.subscribe(data => {
       this.news = data;
+    });
+
+    
+    let servData = http.get('assets/data/services.json').map(res => res.json().services);
+    servData.subscribe(data => {
+      this.services = data;
     });
 
     let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
@@ -93,10 +107,6 @@ export class MarqueDetailsPage {
   prev() {
     this.navCtrl.pop();
   }
-  
-  follow() {
-    this.like = !this.like;
-  }
 
   ionViewWillEnter(){
     this.tabBarElement.style.display = 'none';
@@ -105,6 +115,44 @@ export class MarqueDetailsPage {
 
   ionViewWillLeave(){
     this.tabBarElement.style.display = 'flex';
+  }
+
+  ionViewDidLoad(){
+    this.loadMap();
+  }
+
+  showService(index){
+    this.navCtrl.push(ServiceDetailsPage, {
+      param1: index
+    });
+  }
+
+  showServicesList(){
+    var list = document.getElementsByClassName('list');
+    if (this.listShown){
+      list[0].setAttribute("hidden", "true");
+    }
+    else{
+      list[0].removeAttribute("hidden");
+    }
+    this.listShown = !this.listShown;
+    
+  }
+
+  showProduct(event, index){
+    console.log(index);
+    this.navCtrl.push(ProductDetailsPage, {
+      productId: index
+    });
+
+  }
+
+  showNews(event, index){
+    console.log(index);
+    this.navCtrl.push(NewsDetailsPage, {
+      param1: index
+    });
+
   }
 
   show(event){
@@ -119,22 +167,43 @@ export class MarqueDetailsPage {
     }
   }
 
-  
-  
-  // forgot() {
-  //   this.navCtrl.push('ForgotPage');
-  // }
+  loadMap() {
+    
+    let mapOptions: GoogleMapOptions = {
+      camera: {
+        target: {
+          lat: this.marques[this.marqueId].contact.address.lat,
+          lng: this.marques[this.marqueId].contact.address.lng
+        },
+        zoom: 18,
+        tilt: 30
+      }
+    };
 
-  // signup() {
-  //   this.navCtrl.push('SignupPage');
-  // }
+    this.map = this.googleMaps.create('map_canvas', mapOptions);
 
-  // login() {
-  //   this.navCtrl.push('LoginPage');
-  // }
+    // Wait the MAP_READY before using any methods.
+    this.map.one(GoogleMapsEvent.MAP_READY)
+      .then(() => {
+        console.log('Map is ready!');
 
-  // // Attempt to login in through our User service
-  // doLogin() {
-  //     this.navCtrl.push('SimpleFormPage');
-  // }
+        // Now you can use all methods safely.
+        this.map.addMarker({
+          title: 'Ionic',
+          icon: 'blue',
+          animation: 'DROP',
+          position: {
+            lat: this.marques[this.marqueId].contact.address.lat,
+            lng: this.marques[this.marqueId].contact.address.lng
+          }
+        })
+        .then(marker => {
+          marker.on(GoogleMapsEvent.MARKER_CLICK)
+            .subscribe(() => {
+              alert('clicked');
+            });
+        });
+
+    });
+  }
 }

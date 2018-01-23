@@ -25679,6 +25679,76 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+image-viewer.ion-page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  opacity: 1;
+}
+
+image-viewer.ion-page ion-navbar.toolbar .toolbar-background {
+  background-color: transparent;
+}
+
+image-viewer.ion-page ion-navbar.toolbar.toolbar-ios {
+  padding-top: calc(20px + 4px);
+}
+
+image-viewer.ion-page ion-navbar .bar-button-default {
+  color: white;
+}
+
+image-viewer.ion-page .backdrop {
+  will-change: opacity;
+}
+
+image-viewer.ion-page .image-wrapper {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 56px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+image-viewer.ion-page .image {
+  will-change: transform;
+}
+
+image-viewer.ion-page img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
 ion-auto-complete {
   overflow: hidden !important;
   display: block;
@@ -26699,6 +26769,13 @@ page-marque-details .valign-center {
   align-items: center !important;
 }
 
+page-marque-details .swiper-slide img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+
 page-news .content-md, page-news .content-ios {
   background: #b2284e;
   /* For browsers that do not support gradients */
@@ -27434,6 +27511,46 @@ page-product-details .valign-center {
   align-items: center !important;
 }
 
+page-product-details .image-wrapper {
+  position: relative;
+  z-index: 10;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  overflow: hidden;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  margin-top: 56px;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+page-product-details .image {
+  will-change: transform;
+}
+
+page-product-details img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+page-product-details .img-thumb {
+  text-align: center;
+  max-width: 200px;
+}
+
 page-result .content-md, page-result .content-ios {
   background: #b2284e;
   /* For browsers that do not support gradients */
@@ -27556,6 +27673,10 @@ page-result .all {
 
 page-result ion-footer {
   background-color: rgba(255, 255, 255, 0.7);
+}
+
+page-result ion-footer ion-col {
+  height: 80px;
 }
 
 page-result .valignCenter {
@@ -27847,6 +27968,11 @@ page-service-details .mother {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+page-service-details .swiper-slide img {
+  height: 100%;
+  width: 100%;
 }
 
 page-signup .splash-bg {
@@ -28831,7 +28957,7 @@ page-tinderQ2 .label-md, page-tinderQ2 .label-ios {
 }
 
 page-tinderQ2 ion-footer {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 page-tinderQ2 .icon-md-secondary {
@@ -28915,6 +29041,10 @@ page-tinderQ2 .footer-btn {
   font-size: 4em;
   margin: 8px 4px;
   font-weight: 800;
+}
+
+page-tinderQ2 .card-ios, page-tinderQ2 .card-md {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 page-welcome ion-content {

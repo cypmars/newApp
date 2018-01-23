@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsDetailsPageModule", function() { return NewsDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__newsDetails__ = __webpack_require__(624);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__newsDetails__ = __webpack_require__(628);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -29,7 +29,7 @@ NewsDetailsPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */])
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */]
@@ -41,7 +41,7 @@ NewsDetailsPageModule = __decorate([
 
 /***/ }),
 
-/***/ 313:
+/***/ 319:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53,16 +53,16 @@ Observable_1.Observable.prototype.map = map_1.map;
 
 /***/ }),
 
-/***/ 624:
+/***/ 628:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewsDetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(319);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -148,8 +148,8 @@ NewsDetailsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-news-details',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\newsDetails\newsDetails.html"*/'<ion-content *ngIf="news != null && marques != null && products != null" padding style="border-top: 20px solid #488aff">\n\n  <ion-header no-border style="background-color: rgba(0, 0, 0, 0.2)">\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n          <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n      </ion-buttons>\n\n      <ion-title>\n\n\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        \n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n<div id="profile-bg" [ngStyle]="{\'background-image\': \'url(\' + marques[news[newsId].marqueId].imgCover +\')\'}"></div>\n\n<div id="content">\n\n  <ion-card>\n\n    <ion-card-content>\n\n  <div id="profile-info" padding>\n\n    <div style="position: absolute; left:35%; right:35%; z-index: 1000">\n\n        <img id="profile-image" [src]="news[newsId].img">\n\n    </div>\n\n    <h3 id="profile-name">{{news[newsId].content.title}}</h3>\n\n    <br>\n\n    <div *ngIf="news[newsId].content.subtitle">\n\n      <h4 style="font-size: 1.4em">{{news[newsId].content.subtitle}}</h4>\n\n      <br>\n\n    </div>\n\n    <hr>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col>\n\n          <button *ngIf="news[newsId].marqueId == 0" ion-button full style="background-color: #0eae15" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 1" ion-button full style="background-color: #d01717" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 2" ion-button full style="background-color: #386ecd" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 3" ion-button full style="background-color: #cbc40e" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 4" ion-button full style="background-color: #cc7136" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 5" ion-button full style="background-color: #962ac8" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 6" ion-button full style="background-color: #d42649" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n    <hr style="margin-bottom: 20px;">\n\n    <div *ngIf="news[newsId].content.introBold" class="justify-center">\n\n      <p><b>{{news[newsId].content.introBold}}</b></p>\n\n      <br>\n\n    </div>\n\n    <div *ngIf="news[newsId].content.intro" class="justify-center">\n\n      <p *ngFor="let intro of news[newsId].content.intro">{{intro}}</p>\n\n      <br>\n\n    </div>\n\n    <div *ngIf="news[newsId].content.pointsIntro != null" class="justify-center">\n\n      <ul>\n\n        <li *ngFor="let point of news[newsId].content.pointsIntro"> {{point}} </li>\n\n      </ul>\n\n    </div>\n\n    <br><br>\n\n    <div *ngIf="news[newsId].content.parts != null">\n\n      <div *ngFor="let part of news[newsId].content.parts">\n\n        <h3 *ngIf="part.title != null" style="font-size: 1.2em">{{part.title}}</h3>\n\n        <br>\n\n        <div *ngIf="part.paragraphes != null">\n\n          <div *ngFor="let p of part.paragraphes">\n\n            <p *ngIf="p.accrPoints" class="justify-center">{{p.accrPoints}}</p>\n\n            <p *ngIf="p.accrPointsBold" class="justify-center"><b>{{p.accrPointsBold}}</b></p>\n\n            <div *ngIf="p.points" class="justify-center">\n\n              <ul style="color:#666" text-justify>\n\n                <li *ngFor="let point of p.points">\n\n                  {{point.title}}\n\n                  <div *ngIf="point.subpoints">\n\n                    <ul>\n\n                      <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                    </ul>\n\n                  </div>\n\n                </li>\n\n              </ul>\n\n            </div>\n\n            <p *ngIf="p.description" class="justify-center">{{p.description}}</p>\n\n            <p *ngIf="p.descriptionBold" class="justify-center"><b>{{p.descriptionBold}}</b></p>\n\n            <div *ngIf="p.temoignage" class="temoignage-back">\n\n              <div class="temoignage" >\n\n                  <ion-card text-center>   \n\n                    <ion-item style="margin-right: 50px;">\n\n                      <ion-avatar item-start>\n\n                        <img [src]="p.temoignage.authorImg">\n\n                      </ion-avatar>\n\n                      <h2 text-center style="color: white">{{p.temoignage.author}}</h2>\n\n                      <p text-center>{{p.temoignage.function}}</p>\n\n                    </ion-item>\n\n                    <hr>\n\n                    <ion-card-content>\n\n                      <p style="color:#8e9093; font-size: 1.2em"><i>{{p.temoignage.content}}</i></p>\n\n                    </ion-card-content>\n\n                  </ion-card>\n\n                </div>\n\n            </div>\n\n            <br>\n\n          </div>\n\n        </div>\n\n        <div *ngIf="part.points" class="justify-center" style="color: #666">\n\n          <ul>\n\n            <li *ngFor="let p of part.points">{{p}}</li>\n\n          </ul>\n\n        </div>\n\n        <br>\n\n      </div>\n\n    </div>\n\n    <!-- <p> &bull; {{services.location}}</p>\n\n    <p class="profile-description">{{service.description}}</p>\n\n    <button ion-button (click)="seeMarque()">Voir la marque</button>\n\n    <button ion-button *ngIf="!like" small color="purple" (click)="follow()">Je n\'aime plus</button>\n\n    <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J\'aime <ion-icon name="checkmark"></ion-icon></button> -->\n\n  </div>\n\n</ion-card-content>\n\n</ion-card>\n\n</div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\newsDetails\newsDetails.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
 ], NewsDetailsPage);
 
 //# sourceMappingURL=newsDetails.js.map

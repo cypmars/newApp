@@ -90,4 +90,8 @@
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-plugin-youtube-video-player" spec="^1.0.6" />
     <plugin name="cordova-plugin-document-viewer" spec="^0.9.7" />
+    <plugin name="cordova-plugin-googlemaps" spec="^2.1.1">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyAX-8MrCgp__syPOptwAnhcphSC_3fWgMk" />
+        <variable name="API_KEY_FOR_IOS" value="AIzaSyBPKiyBQg1Qsqcws3T3YVD0OaZu-y7TxXc" />
+    </plugin>
 </widget>

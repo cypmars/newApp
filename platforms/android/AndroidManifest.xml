@@ -16,9 +16,17 @@
         <provider android:authorities="io.ionic.starter.DocumentViewerPlugin.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="de.sitewaerts.cordova.documentviewer.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/documentviewer_file_paths" />
         </provider>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAX-8MrCgp__syPOptwAnhcphSC_3fWgMk" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     </application>
     <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    <uses-feature android:name="android.hardware.location" />
+    <uses-feature android:name="android.hardware.location.gps" />
 </manifest>

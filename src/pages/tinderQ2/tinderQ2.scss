@@ -67,7 +67,7 @@ page-tinderQ2 {
   }
 
   ion-footer{
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.7);
   }
 
   .icon-md-secondary{
@@ -149,5 +149,9 @@ page-tinderQ2 {
     font-size: 4em;
     margin: 8px 4px;
     font-weight: 800;
+  }
+
+  .card-ios, .card-md{
+    background-color: rgba(255,255,255,0.2);
   }
 }

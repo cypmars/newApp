@@ -28,7 +28,6 @@ export class ServiceDetailsPage {
 
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.serviceId = navParams.get('param1');
-    console.log(this.serviceId);
 
     let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
     brandData.subscribe(data => {

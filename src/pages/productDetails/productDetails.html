@@ -26,6 +26,16 @@
             <h4 style="font-size: 1.4em">{{products[productId].content.subtitle}}</h4>
             <br>
           </div>
+          <ion-grid>
+            <ion-row>
+              <ion-col *ngIf="products[productId].videoId">
+                <button ion-button small color="primary" (click)="replayVideo()">Rejouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>
+              </ion-col>
+              <ion-col>
+                <button ion-button small color="primary" (click)="openPDF(productId)">Fiche produit &nbsp;&nbsp;<ion-icon name="download" style="color: white"></ion-icon></button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
           <hr>
           <ion-grid>
             <ion-row>
@@ -41,22 +51,13 @@
             </ion-row>
           </ion-grid>
           <hr>
-          <ion-grid>
-            <ion-row>
-              <ion-col *ngIf="products[productId].videoId">
-                <button ion-button full color="primary" (click)="replayVideo()">Rejouer la vidéo</button>
-              </ion-col>
-              <ion-col>
-                <button ion-button full color="primary" (click)="openPDF(productId)">Télécharger la Fiche produit</button>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-          <hr>
           <div *ngIf="products[productId].content.parts != null">
             <div *ngFor="let part of products[productId].content.parts">
               <h3 *ngIf="part.title != null" style="font-size: 1.2em">{{part.title}}</h3>
               <p *ngIf="part.intro">{{part.intro}}</p>
-              <img *ngIf="part.img" [src]="part.img">
+              <ion-thumbnail>
+                <img class="img-thumb" *ngIf="part.img" [src]="part.img" #imageToView (click)="openImg(imageToView)">
+              </ion-thumbnail>
               <br>
               <div *ngIf="part.paragraphes != null">
                 <div *ngFor="let p of part.paragraphes" class="justify-center">
@@ -66,7 +67,9 @@
                     <ul style="color:#666" text-justify>
                       <li *ngFor="let point of p.points">
                         {{point.title}}
-                        <img *ngIf="point.img" [src]="point.img"/>
+                        <ion-thumbnail item-center>
+                          <img class="img-thumb" *ngIf="point.img" [src]="point.img" #imageToView (click)="openImg(imageToView)"/>
+                        </ion-thumbnail>
                         <div *ngIf="point.subpoints">
                           <ul>
                             <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>
