@@ -103,6 +103,13 @@
                   </div>
                   <p *ngIf="p.description" text-justify>{{p.description}}</p>
                   <p *ngIf="p.descriptionBold"><b>{{p.descriptionBold}}</b></p>
+                  <div *ngIf="p.dressing != null" style="position: relative; height: 150px; margin-bottom: 20px;">
+                    <ion-slides *ngIf="p.dressing" pager>
+                        <ion-slide *ngFor="let img of p.dressing">
+                          <img [src]="img">
+                        </ion-slide>
+                      </ion-slides>
+                  </div>
                   <br>
                 </div>
               </div>
@@ -110,6 +117,10 @@
                 <div *ngFor="let subpart of part.subparts">
                   <h5 *ngIf="subpart.title != null">{{subpart.title}}</h5>
                   <br>
+                  <div *ngIf="subpart.videoId">
+                    <button ion-button small (click)="playVideo(subpart.videoId)">Jouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>
+                    <br>
+                  </div>
                   <div *ngIf="subpart.paragraphes != null">
                     <div *ngFor="let p of subpart.paragraphes">
                       <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>

@@ -77,6 +77,10 @@ export class ServiceDetailsPage {
     this.youtube.openVideo(this.services[this.serviceId].videoId);
   }
 
+  playVideo(videoId){
+    this.youtube.openVideo(videoId);
+  }
+
   showMarque(){
     console.log(this.services[this.serviceId].marqueId);
     this.navCtrl.push(MarqueDetailsPage, {
