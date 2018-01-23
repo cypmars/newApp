@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(644);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ__ = __webpack_require__(643);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(239);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -174,7 +174,7 @@ var queue_1 = __webpack_require__(341);
 var Subscription_1 = __webpack_require__(32);
 var observeOn_1 = __webpack_require__(334);
 var ObjectUnsubscribedError_1 = __webpack_require__(218);
-var SubjectSubscription_1 = __webpack_require__(232);
+var SubjectSubscription_1 = __webpack_require__(231);
 /**
  * @class ReplaySubject<T>
  */
@@ -923,9 +923,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var isArray_1 = __webpack_require__(55);
-var isArrayLike_1 = __webpack_require__(228);
-var isPromise_1 = __webpack_require__(229);
-var PromiseObservable_1 = __webpack_require__(235);
+var isArrayLike_1 = __webpack_require__(227);
+var isPromise_1 = __webpack_require__(228);
+var PromiseObservable_1 = __webpack_require__(234);
 var IteratorObservable_1 = __webpack_require__(377);
 var ArrayObservable_1 = __webpack_require__(110);
 var ArrayLikeObservable_1 = __webpack_require__(378);
@@ -3055,7 +3055,7 @@ __webpack_require__(369);
 __webpack_require__(372);
 __webpack_require__(374);
 __webpack_require__(375);
-__webpack_require__(224);
+__webpack_require__(235);
 __webpack_require__(379);
 __webpack_require__(382);
 __webpack_require__(383);
@@ -3189,7 +3189,7 @@ var ReplaySubject_1 = __webpack_require__(329);
 exports.ReplaySubject = ReplaySubject_1.ReplaySubject;
 var BehaviorSubject_1 = __webpack_require__(347);
 exports.BehaviorSubject = BehaviorSubject_1.BehaviorSubject;
-var ConnectableObservable_1 = __webpack_require__(231);
+var ConnectableObservable_1 = __webpack_require__(230);
 exports.ConnectableObservable = ConnectableObservable_1.ConnectableObservable;
 var Notification_1 = __webpack_require__(213);
 exports.Notification = Notification_1.Notification;
@@ -3201,7 +3201,7 @@ var ObjectUnsubscribedError_1 = __webpack_require__(218);
 exports.ObjectUnsubscribedError = ObjectUnsubscribedError_1.ObjectUnsubscribedError;
 var TimeoutError_1 = __webpack_require__(351);
 exports.TimeoutError = TimeoutError_1.TimeoutError;
-var UnsubscriptionError_1 = __webpack_require__(225);
+var UnsubscriptionError_1 = __webpack_require__(224);
 exports.UnsubscriptionError = UnsubscriptionError_1.UnsubscriptionError;
 var timeInterval_1 = __webpack_require__(350);
 exports.TimeInterval = timeInterval_1.TimeInterval;
@@ -4178,7 +4178,7 @@ exports.empty = EmptyObservable_1.EmptyObservable.create;
 "use strict";
 
 var Observable_1 = __webpack_require__(6);
-var forkJoin_1 = __webpack_require__(233);
+var forkJoin_1 = __webpack_require__(232);
 Observable_1.Observable.forkJoin = forkJoin_1.forkJoin;
 //# sourceMappingURL=forkJoin.js.map
 
@@ -4595,7 +4595,7 @@ exports.FromEventPatternObservable = FromEventPatternObservable;
 "use strict";
 
 var Observable_1 = __webpack_require__(6);
-var fromPromise_1 = __webpack_require__(234);
+var fromPromise_1 = __webpack_require__(233);
 Observable_1.Observable.fromPromise = fromPromise_1.fromPromise;
 //# sourceMappingURL=fromPromise.js.map
 
@@ -4971,7 +4971,7 @@ exports.IntervalObservable = IntervalObservable;
 "use strict";
 
 var Observable_1 = __webpack_require__(6);
-var merge_1 = __webpack_require__(226);
+var merge_1 = __webpack_require__(225);
 Observable_1.Observable.merge = merge_1.merge;
 //# sourceMappingURL=merge.js.map
 
@@ -10580,7 +10580,7 @@ exports.max = max;
 "use strict";
 
 var Observable_1 = __webpack_require__(6);
-var merge_1 = __webpack_require__(227);
+var merge_1 = __webpack_require__(226);
 Observable_1.Observable.prototype.merge = merge_1.merge;
 //# sourceMappingURL=merge.js.map
 
@@ -12217,7 +12217,7 @@ var SequenceEqualCompareToSubscriber = (function (_super) {
 "use strict";
 
 var Observable_1 = __webpack_require__(6);
-var share_1 = __webpack_require__(230);
+var share_1 = __webpack_require__(229);
 Observable_1.Observable.prototype.share = share_1.share;
 //# sourceMappingURL=share.js.map
 
@@ -16076,8 +16076,7 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* 640 */,
 /* 641 */,
 /* 642 */,
-/* 643 */,
-/* 644 */
+/* 643 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

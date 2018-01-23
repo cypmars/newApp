@@ -257,8 +257,6 @@ dependencies {
     compile "com.google.code.gson:gson:2.3"
     compile "commons-io:commons-io:2.4"
     compile "com.android.support:support-v4:+"
-    compile "com.google.android.gms:play-services-maps:+"
-    compile "com.google.android.gms:play-services-location:+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

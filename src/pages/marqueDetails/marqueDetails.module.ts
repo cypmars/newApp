@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { MarqueDetailsPage } from './marqueDetails';
-import { GoogleMaps } from '@ionic-native/google-maps';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
 @NgModule({
@@ -12,7 +11,6 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
     IonicPageModule.forChild(MarqueDetailsPage)
   ],
   providers: [
-    GoogleMaps,
     YoutubeVideoPlayer
   ],
   exports: [

@@ -71,12 +71,12 @@ var map = {
 		13
 	],
 	"../pages/chat2/chat2.module": [
-		311,
+		312,
 		14
 	],
 	"../pages/marqueDetails/marqueDetails.module": [
-		312,
-		8
+		311,
+		10
 	],
 	"../pages/news/news.module": [
 		313,
@@ -88,7 +88,7 @@ var map = {
 	],
 	"../pages/productDetails/productDetails.module": [
 		315,
-		9
+		8
 	],
 	"../pages/result/result.module": [
 		316,
@@ -96,7 +96,7 @@ var map = {
 	],
 	"../pages/serviceDetails/serviceDetails.module": [
 		317,
-		10
+		9
 	],
 	"../pages/signup/signup.module": [
 		318,
@@ -216,8 +216,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */], {}, {
                 links: [
                     { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/marqueDetails/marqueDetails.module#MarqueDetailsPageModule', name: 'MarqueDetailsPage', segment: 'marqueDetails', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/newsDetails/newsDetails.module#NewsDetailsPageModule', name: 'NewsDetailsPage', segment: 'newsDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/productDetails/productDetails.module#ProductDetailsPageModule', name: 'ProductDetailsPage', segment: 'productDetails', priority: 'low', defaultHistory: [] },

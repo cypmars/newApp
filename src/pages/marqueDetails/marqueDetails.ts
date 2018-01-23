@@ -5,16 +5,6 @@ import 'rxjs/add/operator/map';
 
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
-import {
-  GoogleMaps,
-  GoogleMap,
-  GoogleMapsEvent,
-  GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
-  Marker
- } from '@ionic-native/google-maps';
-
 import { ServiceDetailsPage } from '../pages';
 import { NewsDetailsPage } from '../pages';
 import { ProductDetailsPage } from '../pages';
@@ -31,8 +21,6 @@ import { ProductDetailsPage } from '../pages';
 })
 export class MarqueDetailsPage {
 
-  map: GoogleMap;
-
   shownGroup = null;
   marqueId;
   tabBarElement: any;
@@ -44,7 +32,7 @@ export class MarqueDetailsPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer, private googleMaps: GoogleMaps) {
+    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer) {
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.marqueId = navParams.get('marqueId');  
 
@@ -111,7 +99,6 @@ export class MarqueDetailsPage {
   ionViewWillEnter(){
     this.tabBarElement.style.display = 'none';
     console.log("enter");
-    this.loadMap();
   }
 
   ionViewWillLeave(){
@@ -162,45 +149,5 @@ export class MarqueDetailsPage {
       event.srcElement.style.width = "100%";
       event.srcElement.style.minWidth = "100px";
     }
-  }
-
-  loadMap() {
-    
-    let mapOptions: GoogleMapOptions = {
-      camera: {
-        target: {
-          lat: this.marques[this.marqueId].contact.address.lat,
-          lng: this.marques[this.marqueId].contact.address.lng
-        },
-        zoom: 18,
-        tilt: 30
-      }
-    };
-
-    this.map = GoogleMaps.create('map_canvas', mapOptions);
-
-    // Wait the MAP_READY before using any methods.
-    this.map.one(GoogleMapsEvent.MAP_READY)
-      .then(() => {
-        console.log('Map is ready!');
-
-        // Now you can use all methods safely.
-        this.map.addMarker({
-          title: 'Ionic',
-          icon: 'blue',
-          animation: 'DROP',
-          position: {
-            lat: this.marques[this.marqueId].contact.address.lat,
-            lng: this.marques[this.marqueId].contact.address.lng
-          }
-        })
-        .then(marker => {
-          marker.on(GoogleMapsEvent.MARKER_CLICK)
-            .subscribe(() => {
-              alert('clicked');
-            });
-        });
-
-    });
   }
 }
