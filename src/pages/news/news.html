@@ -34,7 +34,7 @@
           <div *ngFor="let new of news">
             <ion-card *ngIf="new.date == date" (click)="showDetails($event, new.id)">
               <img [src]="new.img"/>
-              <div style="position: absolute; bottom: 0; width: 100%; background-color: rgba(0, 0, 0, 0.5); color: white; padding-top:20px; padding-bottom: 20px; height: fit-content;">
+              <div style="position: absolute; bottom: 0; width: 100%; background-color: rgba(0, 0, 0, 0.5); color: white; padding-top:20px; padding-bottom: 20px; height: auto">
                 <div class="card-title">{{new.content.title}}</div>
                 <div class="card-subtitle"></div>
               </div>
