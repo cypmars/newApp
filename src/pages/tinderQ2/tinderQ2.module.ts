@@ -5,7 +5,6 @@ import { TinderQ2Page } from './tinderQ2';
 import { SwingModule } from 'angular2-swing';
 import { AutoCompleteModule } from 'ionic2-auto-complete';
 import { CompleteTestService } from '../../providers/CompleteTestService';
-import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -25,4 +24,4 @@ import { BrowserModule } from '@angular/platform-browser';
   ]
 })
 
-export class TinderQPageModule { }
+export class TinderQ2PageModule { }

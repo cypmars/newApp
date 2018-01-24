@@ -1,9 +1,9 @@
-import { Component, ViewChild,  OnInit, OnDestroy } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { IonicPage, NavController, ToastController, Slides } from 'ionic-angular';
-import {  FabContainer, FabButton, FabList } from 'ionic-angular';
+import { IonicPage, NavController, ToastController } from 'ionic-angular';
+import {  FabContainer } from 'ionic-angular';
 
-import {TinderQPage } from '../pages';
+import {TinderQ2Page } from '../pages';
 
 @IonicPage()
 @Component({
@@ -85,9 +85,6 @@ export class SignupPage {
 
   myIcon: string = "Secteur d'activité ?";
 
-  // Our translated text strings
-  private signupErrorString: string;
-
   constructor(public navCtrl: NavController,
     public formBuilder: FormBuilder,
     public toastCtrl: ToastController) {
@@ -148,7 +145,7 @@ export class SignupPage {
       this.lastSlide = true;
     }
     else {
-      this.navCtrl.push(TinderQPage);
+      this.navCtrl.push(TinderQ2Page);
     }
   }
 

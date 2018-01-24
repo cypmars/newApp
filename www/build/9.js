@@ -1,15 +1,15 @@
 webpackJsonp([9],{
 
-/***/ 316:
+/***/ 310:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiceDetailsPageModule", function() { return ServiceDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MarqueDetailsPageModule", function() { return MarqueDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__serviceDetails__ = __webpack_require__(637);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_youtube_video_player__ = __webpack_require__(620);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__marqueDetails__ = __webpack_require__(630);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_youtube_video_player__ = __webpack_require__(617);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,51 +20,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ServiceDetailsPageModule = (function () {
-    function ServiceDetailsPageModule() {
+var MarqueDetailsPageModule = (function () {
+    function MarqueDetailsPageModule() {
     }
-    return ServiceDetailsPageModule;
+    return MarqueDetailsPageModule;
 }());
-ServiceDetailsPageModule = __decorate([
+MarqueDetailsPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__serviceDetails__["a" /* ServiceDetailsPage */],
+            __WEBPACK_IMPORTED_MODULE_2__marqueDetails__["a" /* MarqueDetailsPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__serviceDetails__["a" /* ServiceDetailsPage */])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__marqueDetails__["a" /* MarqueDetailsPage */])
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_youtube_video_player__["a" /* YoutubeVideoPlayer */]
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__serviceDetails__["a" /* ServiceDetailsPage */]
+            __WEBPACK_IMPORTED_MODULE_2__marqueDetails__["a" /* MarqueDetailsPage */],
         ]
     })
-], ServiceDetailsPageModule);
+], MarqueDetailsPageModule);
 
-//# sourceMappingURL=serviceDetails.module.js.map
+//# sourceMappingURL=marqueDetails.module.js.map
 
 /***/ }),
 
-/***/ 331:
+/***/ 328:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var Observable_1 = __webpack_require__(6);
-var map_1 = __webpack_require__(216);
+var map_1 = __webpack_require__(215);
 Observable_1.Observable.prototype.map = map_1.map;
 //# sourceMappingURL=map.js.map
 
 /***/ }),
 
-/***/ 620:
+/***/ 617:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return YoutubeVideoPlayer; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(58);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -148,18 +148,18 @@ var YoutubeVideoPlayer = (function (_super) {
 
 /***/ }),
 
-/***/ 637:
+/***/ 630:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServiceDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MarqueDetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(331);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_youtube_video_player__ = __webpack_require__(620);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(328);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_youtube_video_player__ = __webpack_require__(617);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages__ = __webpack_require__(55);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -176,31 +176,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ServiceDetailsPage = (function () {
-    function ServiceDetailsPage(navCtrl, navParams, toastCtrl, http, youtube) {
+
+/**
+ * The Welcome Page is a splash page that quickly describes the app,
+ * and then directs the user to create an account or log in.
+ * If you'd like to immediately put the user onto a login/signup page,
+ * we recommend not using the Welcome page.
+*/
+var MarqueDetailsPage = (function () {
+    function MarqueDetailsPage(navCtrl, navParams, toastCtrl, http, youtube) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.toastCtrl = toastCtrl;
-        this.http = http;
         this.youtube = youtube;
+        this.shownGroup = null;
+        this.listShown = false;
         this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
-        this.serviceId = navParams.get('param1');
-        var brandData = http.get('assets/data/marques.json').map(function (res) { return res.json().marques; });
-        brandData.subscribe(function (data) {
-            _this.marques = data;
-        });
-        var productData = http.get('assets/data/products.json').map(function (res) { return res.json().products; });
-        productData.subscribe(function (data) {
-            _this.products = data;
+        this.marqueId = navParams.get('marqueId');
+        var newsData = http.get('assets/data/news.json').map(function (res) { return res.json().news; });
+        newsData.subscribe(function (data) {
+            _this.news = data;
         });
         var servData = http.get('assets/data/services.json').map(function (res) { return res.json().services; });
         servData.subscribe(function (data) {
             _this.services = data;
-            if (_this.services[_this.serviceId].videoId != null) {
+        });
+        var brandData = http.get('assets/data/marques.json').map(function (res) { return res.json().marques; });
+        brandData.subscribe(function (data) {
+            _this.marques = data;
+            if (_this.marques[_this.marqueId].videoId != null) {
                 var openVideo = true;
                 var vlength = _this.navCtrl.getViews().length;
-                var index = 0;
                 var final = new Array();
                 for (var _i = 0, _a = _this.navCtrl.getViews(); _i < _a.length; _i++) {
                     var views = _a[_i];
@@ -210,44 +217,71 @@ var ServiceDetailsPage = (function () {
                 }
                 for (var _b = 0, final_1 = final; _b < final_1.length; _b++) {
                     var view = final_1[_b];
-                    if (view.id == "ServiceDetailsPage") {
+                    if (view.id == "MarqueDetailsPage") {
                         openVideo = false;
                     }
                 }
                 if (openVideo) {
-                    _this.youtube.openVideo(_this.services[_this.serviceId].videoId);
+                    console.log(openVideo);
+                    _this.youtube.openVideo(_this.marques[_this.marqueId].videoId);
                 }
             }
         });
     }
-    ServiceDetailsPage.prototype.prev = function () {
+    MarqueDetailsPage.prototype.replayVideo = function () {
+        this.youtube.openVideo(this.marques[this.marqueId].videoId);
+    };
+    MarqueDetailsPage.prototype.toggleGroup = function (group) {
+        if (this.isGroupShown(group)) {
+            this.shownGroup = null;
+        }
+        else {
+            this.shownGroup = group;
+        }
+    };
+    ;
+    MarqueDetailsPage.prototype.isGroupShown = function (group) {
+        return this.shownGroup === group;
+    };
+    ;
+    MarqueDetailsPage.prototype.prev = function () {
         this.navCtrl.pop();
     };
-    ServiceDetailsPage.prototype.replayVideo = function () {
-        this.youtube.openVideo(this.services[this.serviceId].videoId);
-    };
-    ServiceDetailsPage.prototype.playVideo = function (videoId) {
-        this.youtube.openVideo(videoId);
-    };
-    ServiceDetailsPage.prototype.showMarque = function () {
-        console.log(this.services[this.serviceId].marqueId);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["a" /* MarqueDetailsPage */], {
-            marqueId: this.services[this.serviceId].marqueId
-        });
-    };
-    ServiceDetailsPage.prototype.ionViewWillEnter = function () {
+    MarqueDetailsPage.prototype.ionViewWillEnter = function () {
         this.tabBarElement.style.display = 'none';
+        console.log("enter");
     };
-    ServiceDetailsPage.prototype.ionViewWillLeave = function () {
+    MarqueDetailsPage.prototype.ionViewWillLeave = function () {
         this.tabBarElement.style.display = 'flex';
     };
-    ServiceDetailsPage.prototype.showProduct = function (event, index) {
+    MarqueDetailsPage.prototype.showService = function (index) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["e" /* ServiceDetailsPage */], {
+            param1: index
+        });
+    };
+    MarqueDetailsPage.prototype.showServicesList = function () {
+        var list = document.getElementsByClassName('list');
+        if (this.listShown) {
+            list[0].setAttribute("hidden", "true");
+        }
+        else {
+            list[0].removeAttribute("hidden");
+        }
+        this.listShown = !this.listShown;
+    };
+    MarqueDetailsPage.prototype.showProduct = function (event, index) {
         console.log(index);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["c" /* ProductDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["c" /* ProductDetailsPage */], {
             productId: index
         });
     };
-    ServiceDetailsPage.prototype.show = function (event) {
+    MarqueDetailsPage.prototype.showNews = function (event, index) {
+        console.log(index);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["b" /* NewsDetailsPage */], {
+            param1: index
+        });
+    };
+    MarqueDetailsPage.prototype.show = function (event) {
         if (event.srcElement.style.wordBreak == "normal") {
             event.srcElement.style.wordBreak = "break-word";
             event.srcElement.style.width = "100px";
@@ -258,17 +292,17 @@ var ServiceDetailsPage = (function () {
             event.srcElement.style.minWidth = "100px";
         }
     };
-    return ServiceDetailsPage;
+    return MarqueDetailsPage;
 }());
-ServiceDetailsPage = __decorate([
+MarqueDetailsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-service-details',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\serviceDetails\serviceDetails.html"*/'<ion-content *ngIf="services != null && marques != null && products != null" padding style="border-top: 20px solid #488aff">\n\n  <ion-header no-border style="background-color: rgba(0, 0, 0, 0.2)">\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n          <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n      </ion-buttons>\n\n      <ion-title>\n\n\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        \n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n  <div id="profile-bg" [ngStyle]="{\'background-image\': \'url(\' + services[serviceId].imgMarque +\')\'}"></div>\n\n  <div id="content">\n\n    <ion-card>\n\n      <ion-card-content>\n\n        <div id="profile-info" padding>\n\n          <div style="position: absolute; left:35%; right:35%; z-index: 1000">\n\n              <img id="profile-image" [src]="services[serviceId].imgService">\n\n          </div>\n\n          <h3 id="profile-name">{{services[serviceId].content.title}}</h3>\n\n          <br>\n\n          <div *ngIf="services[serviceId].content.subtitle">\n\n            <h4 style="font-size: 1.4em">{{services[serviceId].content.subtitle}}</h4>\n\n            <br>\n\n          </div>\n\n          <div *ngIf="services[serviceId].content.introBold">\n\n            <p><b>{{services[serviceId].content.introBold}}</b></p>\n\n            <br>\n\n          </div>\n\n          <div *ngIf="services[serviceId].content.intro">\n\n            <p><b>{{services[serviceId].content.intro}}</b></p>\n\n            <br>\n\n          </div>\n\n          <div *ngIf="services[serviceId].content.pointsIntro != null">\n\n            <ul>\n\n              <li *ngFor="let point of services[serviceId].content.pointsIntro"> {{point}} </li>\n\n            </ul>\n\n          </div>\n\n          <ion-grid>\n\n            <ion-row>\n\n              <ion-col *ngIf="services[serviceId].videoId">\n\n                  <button ion-button color="primary" small (click)="replayVideo()">Rejouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>\n\n              </ion-col>\n\n              <ion-col>\n\n                  <button ion-button color="primary" small>Demande d\'informations</button>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <hr>\n\n          <ion-grid>\n\n            <ion-row>\n\n              <ion-col>\n\n                <button *ngIf="services[serviceId].marqueId == 0" ion-button full style="background-color: #0eae15" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n                <button *ngIf="services[serviceId].marqueId == 1" ion-button full style="background-color: #d01717" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n                <button *ngIf="services[serviceId].marqueId == 2" ion-button full style="background-color: #386ecd" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n                <button *ngIf="services[serviceId].marqueId == 3" ion-button full style="background-color: #cbc40e" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n                <button *ngIf="services[serviceId].marqueId == 4" ion-button full style="background-color: #cc7136" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n                <button *ngIf="services[serviceId].marqueId == 5" ion-button full style="background-color: #962ac8" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n                <button *ngIf="services[serviceId].marqueId == 6" ion-button full style="background-color: #d42649" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <hr>\n\n          <div *ngIf="services[serviceId].productIds">\n\n            <h3 style="font-size:1.2em" *ngIf="services[serviceId].productIds != null">Fiches &amp; Produits</h3>\n\n            <br>\n\n            <div *ngIf="services[serviceId].productIds != null" style="position: relative; height: 150px; margin-bottom: 20px;">\n\n              <ion-slides pager>\n\n                <ion-slide *ngFor="let index of services[serviceId].productIds">\n\n                  <div (click)="showProduct($event, index)">\n\n                    <img [src]="products[index].img">\n\n                    <div style="position: absolute; top: 20%; right:10%; left:10%; width: 80%; background-color: rgba(0, 0, 0, 0.5); color: white; padding-top:20px; padding-bottom: 20px;">\n\n                      {{products[index].title}}\n\n                    </div>\n\n                  </div>\n\n                </ion-slide>\n\n              </ion-slides>\n\n            </div>\n\n            <hr>\n\n          </div>\n\n          <div *ngIf="services[serviceId].content.parts != null">\n\n            <div *ngFor="let part of services[serviceId].content.parts">\n\n              <h3 *ngIf="part.title != null" style="font-size: 1.2em">{{part.title}}</h3>\n\n              <br>\n\n              <div *ngIf="part.paragraphes != null">\n\n                <div *ngFor="let p of part.paragraphes" class="justify-center">\n\n                  <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>\n\n                  <p *ngIf="p.accrPointsBold"><b>{{p.accrPointsBold}}</b></p>\n\n                  <div *ngIf="p.points">\n\n                    <ul style="color:#666" text-justify>\n\n                      <li *ngFor="let point of p.points">\n\n                        {{point.title}}\n\n                        <div *ngIf="point.subpoints">\n\n                          <ul>\n\n                            <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                          </ul>\n\n                        </div>\n\n                      </li>\n\n                    </ul>\n\n                  </div>\n\n                  <p *ngIf="p.description" text-justify>{{p.description}}</p>\n\n                  <p *ngIf="p.descriptionBold"><b>{{p.descriptionBold}}</b></p>\n\n                  <div *ngIf="p.dressing != null" style="position: relative; height: 150px; margin-bottom: 20px;">\n\n                    <ion-slides *ngIf="p.dressing" pager>\n\n                        <ion-slide *ngFor="let img of p.dressing">\n\n                          <img [src]="img">\n\n                        </ion-slide>\n\n                      </ion-slides>\n\n                  </div>\n\n                  <br>\n\n                </div>\n\n              </div>\n\n              <div *ngIf="part.subparts != null">\n\n                <div *ngFor="let subpart of part.subparts">\n\n                  <h5 *ngIf="subpart.title != null">{{subpart.title}}</h5>\n\n                  <br>\n\n                  <div *ngIf="subpart.videoId">\n\n                    <button ion-button small (click)="playVideo(subpart.videoId)">Jouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>\n\n                    <br>\n\n                  </div>\n\n                  <div *ngIf="subpart.paragraphes != null">\n\n                    <div *ngFor="let p of subpart.paragraphes">\n\n                      <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>\n\n                      <p *ngIf="p.accrPointsBold"><b>{{p.accrPointsBold}}</b></p>\n\n                      <div *ngIf="p.points">\n\n                        <ul>\n\n                          <li *ngFor="let point of p.points">\n\n                            {{point.title}}\n\n                            <div *ngIf="point.subpoints">\n\n                              <ul>\n\n                                <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                              </ul>\n\n                            </div>\n\n                          </li>\n\n                        </ul>\n\n                      </div>\n\n                      <p *ngIf="p.description">{{p.description}}</p>\n\n                      <p *ngIf="p.descriptionBold"><b>{{p.descriptionBold}}</b></p>\n\n                      <br>\n\n                    </div>\n\n                  </div>\n\n                </div>\n\n              </div>\n\n              <div *ngIf="part.points">\n\n                <ul>\n\n                  <li *ngFor="let p of part.points">{{p.title}}</li>\n\n                </ul>\n\n              </div>\n\n            </div>\n\n            <hr>\n\n          </div>\n\n          <div *ngIf="services[serviceId].content.areas != null">\n\n            <div *ngFor="let areasCats of services[serviceId].content.areas">\n\n              <h3 style="font-size: 1.2em" *ngIf="areasCats.title">{{areasCats.title}}</h3>\n\n              <br>\n\n              <div *ngIf="areasCats.parts">\n\n                <div *ngFor="let part of areasCats.parts">\n\n                  <h4 *ngIf="part.title">{{part.title}}</h4>\n\n                  <p *ngIf="part.subtitle">{{part.subtitle}}</p>\n\n                  <p *ngIf="part.description">{{part.description}}</p>\n\n                  <div *ngIf="part.points" style="margin-bottom:20px;" text-center>\n\n                    <ion-scroll zoom="false" scrollX="true" class="scroll">\n\n                      <ion-row text-center>\n\n                        <div class="mother">\n\n                          <div style="white-space: nowrap;" *ngFor="let area of part.points" class="area" style="margin-right:5px;">\n\n                            <ion-badge style="background-color: #0eae15" *ngIf="services[serviceId].marqueId == 0" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge style="background-color: #d01717" *ngIf="services[serviceId].marqueId == 1" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge style="background-color: #386ecd" *ngIf="services[serviceId].marqueId == 2" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge style="background-color: #cbc40e" *ngIf="services[serviceId].marqueId == 3" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge style="background-color: #cc7136" *ngIf="services[serviceId].marqueId == 4" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge style="background-color: #962ac8" *ngIf="services[serviceId].marqueId == 5" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge style="background-color: #d42649" *ngIf="services[serviceId].marqueId == 6" (click)="show($event)">{{area}}</ion-badge>\n\n                          </div>\n\n                        </div>\n\n                      </ion-row>\n\n                    </ion-scroll>\n\n                  </div>\n\n                  <br>\n\n                </div>\n\n              </div>\n\n              <p *ngIf="areasCats.conclusion"></p>\n\n            </div>\n\n            <hr>\n\n          </div>\n\n      <!-- <p> &bull; {{services.location}}</p>\n\n      <p class="profile-description">{{service.description}}</p>\n\n      <button ion-button (click)="seeMarque()">Voir la marque</button>\n\n      <button ion-button *ngIf="!like" small color="purple" (click)="follow()">Je n\'aime plus</button>\n\n      <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J\'aime <ion-icon name="checkmark"></ion-icon></button> -->\n\n        </div>  \n\n      </ion-card-content>\n\n    </ion-card>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\serviceDetails\serviceDetails.html"*/
+        selector: 'page-marque-details',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\marqueDetails\marqueDetails.html"*/'<ion-content *ngIf="marques != null && news != null && services != null" padding style="border-top: 20px solid #488aff">\n\n  <ion-header no-border style="background-color: rgba(0, 0, 0, 0.2)">\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n          <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n      </ion-buttons>\n\n      <ion-title>\n\n\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        \n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n  <div id="profile-bg" [ngStyle]="{\'background-image\': \'url(\' + marques[marqueId].imgCover +\')\'}"></div>\n\n  <div id="content">\n\n    <ion-card>\n\n      <ion-card-content>\n\n        <div id="profile-info" padding>\n\n          <div style="position: absolute; left:35%; right:35%; z-index: 1000">\n\n              <img id="profile-image" [src]="marques[marqueId].imgProfile">\n\n          </div>\n\n          <h3 id="profile-name">{{marques[marqueId].content.title}}</h3>\n\n          <br>\n\n          <div *ngIf="marques[marqueId].content.citation">\n\n            <h4 style="font-size: 1.4em">{{marques[marqueId].content.citation}}</h4>\n\n            <br>\n\n          </div>\n\n          <div *ngIf="marques[marqueId].videoId" class="button-video">\n\n            <ion-grid>\n\n              <ion-row>\n\n                <ion-col>\n\n                    <button *ngIf="marqueId == 0" ion-button small style="background-color: #0eae15" (click)="replayVideo()">Rejouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>\n\n                    <button *ngIf="marqueId == 1" ion-button small style="background-color: #d01717" (click)="replayVideo()">Rejouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>\n\n                    <button *ngIf="marqueId == 2" ion-button small style="background-color: #386ecd" (click)="replayVideo()">Rejouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>\n\n                    <button *ngIf="marqueId == 3" ion-button small style="background-color: #cbc40e" (click)="replayVideo()">Rejouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>\n\n                    <button *ngIf="marqueId == 4" ion-button small style="background-color: #cc7136" (click)="replayVideo()">Rejouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>\n\n                    <button *ngIf="marqueId == 5" ion-button small style="background-color: #962ac8" (click)="replayVideo()">Rejouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>\n\n                    <button *ngIf="marqueId == 6" ion-button small style="background-color: #d42649" (click)="replayVideo()">Rejouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>\n\n                </ion-col>\n\n              </ion-row>\n\n            </ion-grid>\n\n          </div>\n\n          <hr>\n\n\n\n          <div *ngIf="marques[marqueId].content.keys != null" class="keys">\n\n            <ion-scroll zoom="false" scrollX="true" class="scroll">\n\n              <ion-grid>\n\n                <ion-row text-center>\n\n                  <ion-col *ngFor="let key of marques[marqueId].content.keys">\n\n                    <ion-badge *ngIf="marqueId == 0" style="background-color: #0eae15"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>\n\n                    <ion-badge *ngIf="marqueId == 1" style="background-color: #d01717"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>\n\n                    <ion-badge *ngIf="marqueId == 2" style="background-color: #386ecd"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>\n\n                    <ion-badge *ngIf="marqueId == 3" style="background-color: #cbc40e"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>\n\n                    <ion-badge *ngIf="marqueId == 4" style="background-color: #cc7136"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>\n\n                    <ion-badge *ngIf="marqueId == 5" style="background-color: #962ac8"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>\n\n                    <ion-badge *ngIf="marqueId == 6" style="background-color: #d42649"><div style="margin-top: 35px;">{{key.nb}}</div></ion-badge>\n\n                    <div class="descr">\n\n                      <p class="max-width: 150px;">{{key.label}}</p>\n\n                    </div>\n\n                  </ion-col>\n\n                </ion-row>\n\n              </ion-grid>\n\n            </ion-scroll>\n\n            <hr>\n\n          </div>\n\n          <div *ngIf="marques[marqueId].content.areas != null">\n\n            <br>\n\n            <div *ngFor="let areasCats of marques[marqueId].content.areas">\n\n              <h3 style="font-size: 1.2em" *ngIf="areasCats.title">{{areasCats.title}}</h3>\n\n              <br>\n\n              <div *ngIf="areasCats.parts">\n\n                <div *ngFor="let part of areasCats.parts">\n\n                  <h4 *ngIf="part.title">{{part.title}}</h4>\n\n                  <p *ngIf="part.subtitle">{{part.subtitle}}</p>\n\n                  <p *ngIf="part.description">{{part.description}}</p>\n\n                  <div *ngIf="part.points" style="margin-bottom:20px;" text-center>\n\n                    <ion-scroll zoom="false" scrollX="true" class="scroll">\n\n                      <ion-row text-center>\n\n                        <div class="mother">\n\n                          <div style="white-space: nowrap;" *ngFor="let area of part.points" class="area" style="margin-right:5px;">\n\n                            <ion-badge style="background-color: #0eae15" *ngIf="marqueId == 0" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge style="background-color: #d01717" *ngIf="marqueId == 1" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge style="background-color: #386ecd" *ngIf="marqueId == 2" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge style="background-color: #cbc40e" *ngIf="marqueId == 3" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge style="background-color: #cc7136" *ngIf="marqueId == 4" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge style="background-color: #962ac8" *ngIf="marqueId == 5" (click)="show($event)">{{area}}</ion-badge>\n\n                            <ion-badge style="background-color: #d42649" *ngIf="marqueId == 6" (click)="show($event)">{{area}}</ion-badge>\n\n                          </div>\n\n                        </div>\n\n                      </ion-row>\n\n                    </ion-scroll>\n\n                  </div>\n\n                </div>\n\n              </div>\n\n              <p *ngIf="areasCats.conclusion"></p>\n\n            </div>\n\n            <hr>\n\n          </div>\n\n          <div *ngIf="marques[marqueId].newsId">\n\n            <h3 style="font-size:1.2em" *ngIf="marques[marqueId].newsId != null">News &amp; Infos</h3>\n\n            <br>\n\n            <div *ngIf="marques[marqueId].newsId != null" style="position: relative; height: 150px; margin-bottom: 20px;">\n\n              <ion-slides pager>\n\n                <ion-slide *ngFor="let index of marques[marqueId].newsId">\n\n                  <div (click)="showNews($event, index)">\n\n                    <img [src]="news[index].img">\n\n                    <div style="position: absolute; top: 20%; right:10%; left:10%; width: 80%; background-color: rgba(0, 0, 0, 0.5); color: white; padding-top:20px; padding-bottom: 20px;">\n\n                      {{news[index].title}}\n\n                    </div>\n\n                  </div>\n\n                </ion-slide>\n\n              </ion-slides>\n\n            </div>\n\n            <hr>\n\n          </div>\n\n          <div *ngIf="marques[marqueId].content.parts != null">\n\n            <div *ngFor="let part of marques[marqueId].content.parts">\n\n              <h3 *ngIf="part.title != null" style="font-size: 1.2em">{{part.title}}</h3>\n\n              <br>\n\n              <div *ngIf="part.paragraphes != null">\n\n                <div *ngFor="let p of part.paragraphes" class="justify-center">\n\n                  <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>\n\n                  <p *ngIf="p.accrPointsBold"><b>{{p.accrPointsBold}}</b></p>\n\n                  <div *ngIf="p.points">\n\n                    <ul style="color:#666" text-justify>\n\n                      <li *ngFor="let point of p.points">\n\n                        {{point.title}}\n\n                        <div *ngIf="point.subpoints">\n\n                          <ul>\n\n                            <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                          </ul>\n\n                        </div>\n\n                      </li>\n\n                    </ul>\n\n                  </div>\n\n                  <p *ngIf="p.description" text-justify>{{p.description}}</p>\n\n                  <p *ngIf="p.descriptionBold"><b>{{p.descriptionBold}}</b></p>\n\n                  <br>\n\n                </div>\n\n              </div>\n\n              <div *ngIf="part.subparts != null" class="justify-center">\n\n                <div *ngFor="let subpart of part.subparts">\n\n                  <h5 *ngIf="subpart.title != null">{{subpart.title}}</h5>\n\n                  <br>\n\n                  <div *ngIf="subpart.paragraphes != null">\n\n                    <div *ngFor="let p of subpart.paragraphes">\n\n                      <p *ngIf="p.accrPoints">{{p.accrPoints}}</p>\n\n                      <p *ngIf="p.accrPointsBold"><b>{{p.accrPointsBold}}</b></p>\n\n                      <div *ngIf="p.points">\n\n                        <ul>\n\n                          <li *ngFor="let point of p.points">\n\n                            {{point.title}}\n\n                            <div *ngIf="point.subpoints">\n\n                              <ul>\n\n                                <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                              </ul>\n\n                            </div>\n\n                          </li>\n\n                        </ul>\n\n                      </div>\n\n                      <p *ngIf="p.description">{{p.description}}</p>\n\n                      <p *ngIf="p.descriptionBold"><b>{{p.descriptionBold}}</b></p>\n\n                      <br>\n\n                    </div>\n\n                  </div>\n\n                </div>\n\n              </div>\n\n              <div *ngIf="part.points" class="justify-center" style="color: #666">\n\n                <ul>\n\n                  <li *ngFor="let p of part.points">{{p.title}}</li>\n\n                </ul>\n\n              </div>\n\n            </div>\n\n            <hr>\n\n          </div>\n\n          <h3 style="font-size:1.2em" *ngIf="marques[marqueId].servicesId" (click)="showServicesList(listShown)">Nos Services &nbsp;&nbsp;\n\n            <ion-icon *ngIf="!listShown" name="arrow-up"></ion-icon>\n\n            <ion-icon *ngIf="listShown" name="arrow-down"></ion-icon>\n\n          </h3>\n\n          <br>\n\n          <ion-list hidden>\n\n            <ion-item *ngFor="let index of marques[marqueId].servicesId" (click)="showService(index)">\n\n              <ion-avatar item-start>\n\n                <img [src]="services[index].imgService">\n\n              </ion-avatar>\n\n              <h4>{{services[index].content.title}}</h4>\n\n              <p>{{services[index].content.subtitle}}</p>\n\n            </ion-item>\n\n          </ion-list>\n\n        </div>\n\n      </ion-card-content>\n\n    </ion-card>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\marqueDetails\marqueDetails.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_youtube_video_player__["a" /* YoutubeVideoPlayer */]])
-], ServiceDetailsPage);
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_youtube_video_player__["a" /* YoutubeVideoPlayer */]])
+], MarqueDetailsPage);
 
-//# sourceMappingURL=serviceDetails.js.map
+//# sourceMappingURL=marqueDetails.js.map
 
 /***/ })
 

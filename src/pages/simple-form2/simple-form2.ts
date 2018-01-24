@@ -1,10 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import {  FabContainer, FabButton, FabList } from 'ionic-angular';
+import {  FabContainer } from 'ionic-angular';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { CompleteTestService } from '../../providers/CompleteTestService';
 
-import { SimpleForm1Page } from '../pages';
-import { WelcomePage } from '../pages';
+import { WelcomePage, TinderQ2Page, ServiceDetailsPage } from '../pages';
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -62,14 +61,8 @@ export class SimpleForm2Page {
     }
   ];
 
-
-
-
-  // Our translated text strings
-  private loginErrorString: string;
-
   constructor(public navCtrl: NavController,
-    private navParams: NavParams,
+    navParams: NavParams,
     public toastCtrl: ToastController,
     public completeTestService: CompleteTestService) {
 
@@ -84,12 +77,12 @@ export class SimpleForm2Page {
   }
 
   login() {
-    this.navCtrl.push('WelcomePage');
+    this.navCtrl.push(WelcomePage);
   }
 
   getVal(event){
     console.log(event.id);
-    this.navCtrl.push('ServiceDetailsPage', {
+    this.navCtrl.push(ServiceDetailsPage, {
       param1: event.id,
     });
     this.placeholder = "";
@@ -102,7 +95,7 @@ export class SimpleForm2Page {
   public chooseService(event, data, fab: FabContainer){
     this.myIcon = this.itemsCat[this.param2].jobsName[data];
     this.myIconId = data;
-    this.navCtrl.push('TinderQ2Page', {
+    this.navCtrl.push(TinderQ2Page, {
       param1: this.param1,
       param2: this.param2,
       param3: this.param3,

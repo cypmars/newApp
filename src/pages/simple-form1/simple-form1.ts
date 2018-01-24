@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import {  FabContainer, FabButton, FabList } from 'ionic-angular';
+import {  FabContainer } from 'ionic-angular';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { CompleteTestService } from '../../providers/CompleteTestService';
 
-import { SimpleForm2Page } from '../pages';
+import { WelcomePage, SimpleForm2Page, ServiceDetailsPage } from '../pages';
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -82,7 +82,7 @@ export class SimpleForm1Page {
   myIcon: string = "Quel est le secteur d'activité de votre Entreprise ?";
 
   constructor(public navCtrl: NavController,
-    private navParams: NavParams,
+    navParams: NavParams,
     public toastCtrl: ToastController,
     public completeTestService: CompleteTestService) {
       this.param1 = navParams.get('param1');
@@ -94,12 +94,12 @@ export class SimpleForm1Page {
 
   login() {
     
-    this.navCtrl.push('WelcomePage');
+    this.navCtrl.push(WelcomePage);
   }
 
   getVal(event){
     console.log(event.id);
-    this.navCtrl.push('ServiceDetailsPage', {
+    this.navCtrl.push(ServiceDetailsPage, {
       param1: event.id,
     });
     this.placeholder = "";
@@ -111,7 +111,7 @@ export class SimpleForm1Page {
 
   public chooseService(event, data, fab: FabContainer){
     this.myIcon = this.itemsCat[data].name;
-    this.navCtrl.push('SimpleForm2Page', {
+    this.navCtrl.push(SimpleForm2Page, {
       param1: this.param1,
       param2: data,
       param3: this.myIcon

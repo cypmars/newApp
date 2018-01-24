@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-
-import { Chat2Page } from './chat2';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
-import { SpeechRecognition } from '@ionic-native/speech-recognition';
+import { Chat2Page } from './chat2';
 
 @NgModule({
   declarations: [
@@ -11,6 +9,9 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition';
   ],
   imports: [
     IonicPageModule.forChild(Chat2Page)
+  ],
+  providers: [
+    TextToSpeech,
   ],
   exports: [
     Chat2Page

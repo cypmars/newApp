@@ -29,10 +29,8 @@ export class NewsPage {
   datesFinish:string[];
   news:any[];
   marques:any[];
-  // Our translated text strings
-  private loginErrorString: string;
 
-  constructor(private http: Http, public navCtrl: NavController,
+  constructor(http: Http, public navCtrl: NavController,
     public toastCtrl: ToastController,
     public completeNewsService: CompleteNewsService) {
 
@@ -75,14 +73,14 @@ export class NewsPage {
 
   getVal(event){
     console.log(event.id);
-    this.navCtrl.push('NewsDetailsPage', {
+    this.navCtrl.push(NewsDetailsPage, {
       param1: event.id,
     });
     this.placeholder="";
   }
 
   showDetails(event, idNews){
-    this.navCtrl.push('NewsDetailsPage', {
+    this.navCtrl.push(NewsDetailsPage, {
       param1: idNews,
     });
   }

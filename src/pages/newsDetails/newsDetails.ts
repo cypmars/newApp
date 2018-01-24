@@ -35,7 +35,7 @@ export class NewsDetailsPage {
   // private loginErrorString: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public toastCtrl: ToastController, private http:Http) {
+    public toastCtrl: ToastController, http:Http) {
 
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.newsId = navParams.get('param1');

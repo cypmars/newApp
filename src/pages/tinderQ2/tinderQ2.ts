@@ -1,23 +1,18 @@
-import { Component, ViewChild, ViewChildren, QueryList } from '@angular/core';
-import {  FabContainer, FabButton } from 'ionic-angular';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CompleteTestService } from '../../providers/CompleteTestService';
 
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 
-import { SimpleFormPage } from '../pages';
+import { ServiceDetailsPage } from '../pages';
 import { ResultPage } from '../pages';
 import { WelcomePage } from '../pages';
 
 import {
   StackConfig,
-  Stack,
-  Card,
-  ThrowEvent,
   DragEvent,
-  SwingStackComponent,
-  SwingCardComponent
+  SwingStackComponent
 } from 'angular2-swing';
 
 /**
@@ -34,7 +29,6 @@ import {
 
 export class TinderQ2Page {
   @ViewChild('myswing1') swingStack: SwingStackComponent;
-  @ViewChildren('mycards1') swingCards: QueryList<SwingCardComponent>;
   
   public param1: string;
   public param2: number;
@@ -52,9 +46,6 @@ export class TinderQ2Page {
   currentQId;
   questionsId: Array<number>;
 
-  // Our translated text strings
-  private loginErrorString: string;
-
   showButton: boolean = true ; 
 
   myQuestions;
@@ -67,8 +58,7 @@ export class TinderQ2Page {
       question: "Possédez-vous une surface commerciale ou magasin ?",
       img: "assets/img/questions/boutique-fruits.jpg",
       // + hygiene et prop classique + Gestion des déchets - secteur industriel
-      servicesIdIfYes: [0, 1, 2, 3, 4, 5]
-      // servicesIdIfYes: [0, 5, 6, 19]
+      servicesIdIfYes: [0, 5, 6, 19]
     },
     {
       id: 1,
@@ -188,6 +178,7 @@ export class TinderQ2Page {
     //   lastCard.setAttribute("style", "display:none");
     // }
 
+    console.log(this.swingStack);
     this.myAnswer.push(    
       {
         question: this.currentNode[this.currentQId], 
@@ -195,14 +186,13 @@ export class TinderQ2Page {
       }
     );
     this.getNextNode(like);
-    let removedCard = this.cards.pop();
     if (this.currentNode[this.currentQId] != null)
     {
       this.cards.push(this.currentNode[this.currentQId]);
     }
     else{
       console.log(this.resultsTemp);
-      this.navCtrl.push('ResultPage', {
+      this.navCtrl.push(ResultPage, {
         param1: this.param1,
         param2: this.param2,
         param3: this.param3,
@@ -239,7 +229,7 @@ export class TinderQ2Page {
     return hex;
   }
 
-  constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams, public completeTestService: CompleteTestService) {
+  constructor(http: Http, public navCtrl: NavController, public navParams: NavParams, public completeTestService: CompleteTestService) {
 
       this.stackConfig = {
         throwOutConfidence: (offsetX, offsetY, element) => {
@@ -271,7 +261,7 @@ export class TinderQ2Page {
 
   getVal(event){
     console.log(event.id);
-    this.navCtrl.push('ServiceDetailsPage', {
+    this.navCtrl.push(ServiceDetailsPage, {
       param1: event.id,
     });
     this.placeholder="";
@@ -664,6 +654,6 @@ export class TinderQ2Page {
   }
 
   login(){
-    this.navCtrl.push('WelcomePage');
+    this.navCtrl.push(WelcomePage);
   }
 }

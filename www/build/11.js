@@ -1,14 +1,15 @@
 webpackJsonp([11],{
 
-/***/ 313:
+/***/ 309:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsDetailsPageModule", function() { return NewsDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Chat2PageModule", function() { return Chat2PageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__newsDetails__ = __webpack_require__(634);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__ = __webpack_require__(626);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat2__ = __webpack_require__(629);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,52 +19,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var NewsDetailsPageModule = (function () {
-    function NewsDetailsPageModule() {
+
+var Chat2PageModule = (function () {
+    function Chat2PageModule() {
     }
-    return NewsDetailsPageModule;
+    return Chat2PageModule;
 }());
-NewsDetailsPageModule = __decorate([
+Chat2PageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */],
+            __WEBPACK_IMPORTED_MODULE_3__chat2__["a" /* Chat2Page */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__chat2__["a" /* Chat2Page */])
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__["a" /* TextToSpeech */],
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */]
+            __WEBPACK_IMPORTED_MODULE_3__chat2__["a" /* Chat2Page */]
         ]
     })
-], NewsDetailsPageModule);
+], Chat2PageModule);
 
-//# sourceMappingURL=newsDetails.module.js.map
-
-/***/ }),
-
-/***/ 331:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var Observable_1 = __webpack_require__(6);
-var map_1 = __webpack_require__(216);
-Observable_1.Observable.prototype.map = map_1.map;
-//# sourceMappingURL=map.js.map
+//# sourceMappingURL=chat2.module.js.map
 
 /***/ }),
 
-/***/ 634:
+/***/ 626:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewsDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TextToSpeech; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(331);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(58);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -75,84 +74,490 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
 /**
- * The Welcome Page is a splash page that quickly describes the app,
- * and then directs the user to create an account or log in.
- * If you'd like to immediately put the user onto a login/signup page,
- * we recommend not using the Welcome page.
-*/
-var NewsDetailsPage = (function () {
-    // The account fields for the login form.
-    // If you're using the username field with or without email, make
-    // sure to add it to the type
-    // account: { email: string, password: string } = {
-    //   email: '@ e-mail ou pseudo',
-    //   password: 'mot de passe'
-    // };
-    // Our translated text strings
-    // private loginErrorString: string;
-    function NewsDetailsPage(navCtrl, navParams, toastCtrl, http) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.toastCtrl = toastCtrl;
-        this.http = http;
-        this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
-        this.newsId = navParams.get('param1');
-        console.log(this.newsId);
-        var newsData = http.get('assets/data/news.json').map(function (res) { return res.json().news; });
-        newsData.subscribe(function (data) {
-            _this.news = data;
-        });
-        var brandData = http.get('assets/data/marques.json').map(function (res) { return res.json().marques; });
-        brandData.subscribe(function (data) {
-            _this.marques = data;
-        });
-        var productData = http.get('assets/data/products.json').map(function (res) { return res.json().products; });
-        productData.subscribe(function (data) {
-            _this.products = data;
-        });
+ * @name Text To Speech
+ * @description
+ * Text to Speech plugin
+ *
+ * @usage
+ * ```typescript
+ * import { TextToSpeech } from '@ionic-native/text-to-speech';
+ *
+ * constructor(private tts: TextToSpeech) { }
+ *
+ * ...
+ *
+ * this.tts.speak('Hello World')
+ *   .then(() => console.log('Success'))
+ *   .catch((reason: any) => console.log(reason));
+ *
+ * ```
+ * @interfaces
+ * TTSOptions
+ */
+var TextToSpeech = (function (_super) {
+    __extends(TextToSpeech, _super);
+    function TextToSpeech() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    NewsDetailsPage.prototype.prev = function () {
-        this.navCtrl.pop();
+    /**
+     * This function speaks
+     * @param textOrOptions {string | TTSOptions} Text to speak or TTSOptions
+     * @return {Promise<any>} Returns a promise that resolves when the speaking finishes
+     */
+    TextToSpeech.prototype.speak = function (textOrOptions) {
+        return;
     };
-    NewsDetailsPage.prototype.showMarque = function () {
-        console.log(this.news[this.newsId].marqueId);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["a" /* MarqueDetailsPage */], {
-            marqueId: this.news[this.newsId].marqueId
+    /**
+     * Stop any current TTS playback
+     * @return {Promise<any>}
+     */
+    TextToSpeech.prototype.stop = function () {
+        return;
+    };
+    TextToSpeech.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    TextToSpeech.ctorParameters = function () { return []; };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({
+            successIndex: 1,
+            errorIndex: 2
+        }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", Promise)
+    ], TextToSpeech.prototype, "speak", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", Promise)
+    ], TextToSpeech.prototype, "stop", null);
+    TextToSpeech = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["d" /* Plugin */])({
+            pluginName: 'Text To Speech',
+            plugin: 'cordova-plugin-tts',
+            pluginRef: 'TTS',
+            repo: 'https://github.com/vilic/cordova-plugin-tts',
+            platforms: ['Android', 'iOS', 'Windows Phone 8']
+        })
+    ], TextToSpeech);
+    return TextToSpeech;
+}(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* IonicNativePlugin */]));
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 629:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Chat2Page; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__ = __webpack_require__(626);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__ = __webpack_require__(239);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+var Chat2Page = (function () {
+    function Chat2Page(ref, speech, tts, navCtrl, platform) {
+        this.ref = ref;
+        this.speech = speech;
+        this.tts = tts;
+        this.navCtrl = navCtrl;
+        this.platform = platform;
+        this.speechList = [];
+        this.toUser = {
+            _id: '534b8e5aaa5e7afc1b23e69b',
+            pic: 'assets/img/bot.png',
+            username: 'BoBot',
+        };
+        this.user = {
+            _id: '534b8fb2aa5e7afc1b23e69c',
+            pic: 'assets/img/logo2.png',
+            username: 'Sandy',
+        };
+        this.messages = [
+            {
+                toId: this.user._id,
+                _id: 1,
+                date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                userId: this.toUser._id,
+                username: this.toUser.username,
+                pic: this.toUser.pic,
+                text: {
+                    speech: "Salut ! Je suis BoBot, je vais t'aider à déterminer ton besoin."
+                }
+            },
+            {
+                toId: this.user._id,
+                _id: 2,
+                date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                userId: this.toUser._id,
+                username: this.toUser.username,
+                pic: this.toUser.pic,
+                text: {
+                    speech: "Es-tu un client, un prospect ou un collaborateur ?"
+                }
+            }
+        ];
+        ApiAIPlugin.init({
+            clientAccessToken: "099b97242c1745bd92c163cd27d2c767",
+            lang: "en" // set lang tag from list of supported languages 
+        }, function (result) { }, function (error) { });
+        this.initializeApp();
+        this.hideTime = true;
+        this.verbalResponse = true;
+    }
+    Chat2Page.prototype.initializeApp = function () {
+        var _this = this;
+        this.platform.ready().then(function () {
+            if (!_this.hasPermission()) {
+                _this.getPermission();
+            }
         });
     };
-    NewsDetailsPage.prototype.ionViewWillEnter = function () {
-        this.tabBarElement.style.display = 'none';
+    Chat2Page.prototype.SpeakText = function (voice) {
+        return __awaiter(this, void 0, void 0, function () {
+            var e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.tts.speak(voice)];
+                    case 1:
+                        _a.sent();
+                        console.log("Successfully spoke");
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_1 = _a.sent();
+                        console.log(e_1);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
     };
-    NewsDetailsPage.prototype.ionViewWillLeave = function () {
-        this.tabBarElement.style.display = 'flex';
-    };
-    NewsDetailsPage.prototype.show = function (event) {
-        if (event.srcElement.style.wordBreak == "normal") {
-            event.srcElement.style.wordBreak = "break-word";
-            event.srcElement.style.width = "100px";
+    Chat2Page.prototype.listenForSpeech = function () {
+        var _this = this;
+        this.androidOptions = {
+            prompt: 'Speak into your phone!',
+            matches: 1
+        };
+        this.iosOptions = {
+            matches: 1
+        };
+        if (this.platform.is('android')) {
+            this.speech.startListening(this.androidOptions).subscribe(function (data) {
+                _this.messages.push({
+                    toId: _this.toUser._id,
+                    _id: _this.messages.length,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: _this.user._id,
+                    username: _this.user.username,
+                    pic: _this.user.pic,
+                    text: data
+                });
+                _this.SendTextFromVoice(data);
+            }, function (error) {
+                console.log(error);
+            });
         }
-        else {
-            event.srcElement.style.wordBreak = "normal";
-            event.srcElement.style.width = "100%";
-            event.srcElement.style.minWidth = "100px";
+        else if (this.platform.is('ios')) {
+            this.speech.startListening(this.iosOptions).subscribe(function (data) { return _this.speechList = data; }, function (error) { return console.log(error); });
+            console.log(this.speechList);
         }
     };
-    return NewsDetailsPage;
+    Chat2Page.prototype.SendText = function (query) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var e_2;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, ApiAIPlugin.requestText({
+                                query: query,
+                                originalRequest: {
+                                    source: 'WWT chat bot',
+                                    data: 'messages'
+                                }
+                            }, function (response) {
+                                console.log(JSON.stringify(response));
+                                console.log(JSON.stringify(response.result));
+                                var speech = response.result.fulfillment;
+                                if (response.result.fulfillment.speech) {
+                                    console.log(speech);
+                                    if (_this.platform.is('ios')) {
+                                        _this.messages.push({
+                                            toId: _this.user._id,
+                                            _id: _this.messages.length,
+                                            date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                            userId: _this.toUser._id,
+                                            username: _this.toUser.username,
+                                            pic: _this.toUser.pic,
+                                            text: speech
+                                        });
+                                        _this.ref.detectChanges();
+                                    }
+                                    else {
+                                        _this.messages.push({
+                                            toId: _this.user._id,
+                                            _id: 2,
+                                            date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                            userId: _this.toUser._id,
+                                            username: _this.toUser.username,
+                                            pic: _this.toUser.pic,
+                                            text: speech
+                                        });
+                                        _this.ref.detectChanges();
+                                    }
+                                }
+                                else {
+                                    _this.messages.push({
+                                        toId: _this.user._id,
+                                        _id: 2,
+                                        date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                        userId: _this.toUser._id,
+                                        username: _this.toUser.username,
+                                        pic: _this.toUser.pic,
+                                        text: "Je suis désolé, je n'ai pas compris votre réponse."
+                                    });
+                                    _this.ref.detectChanges();
+                                }
+                            }, function (error) {
+                                console.error(error);
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_2 = _a.sent();
+                        alert(e_2);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.SendTextFromVoice = function (query) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var e_3;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, ApiAIPlugin.requestText({
+                                query: query
+                            }, function (response) {
+                                if (response.result.fulfillment.speech) {
+                                    var voice = response.result.fulfillment.speech;
+                                    console.log('3', voice);
+                                    _this.messages.push({
+                                        toId: _this.user._id,
+                                        _id: 2,
+                                        date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                        userId: _this.toUser._id,
+                                        username: _this.toUser.username,
+                                        pic: _this.toUser.pic,
+                                        text: voice
+                                    });
+                                    _this.ref.detectChanges();
+                                    _this.SpeakText(voice);
+                                }
+                                else {
+                                    var voice = "Je suis désolé, je n'ai pas compris votre réponse";
+                                    console.log('3', voice);
+                                    _this.messages.push({
+                                        toId: _this.user._id,
+                                        _id: 2,
+                                        date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                        userId: _this.toUser._id,
+                                        username: _this.toUser.username,
+                                        pic: _this.toUser.pic,
+                                        text: voice
+                                    });
+                                    _this.ref.detectChanges();
+                                    _this.SpeakText(voice);
+                                }
+                            }, function (error) {
+                                console.error(error);
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_3 = _a.sent();
+                        alert(e_3);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.getSupportedLanguages = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var languages, e_4;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.speech.getSupportedLanguages()];
+                    case 1:
+                        languages = _a.sent();
+                        console.log(languages);
+                        return [2 /*return*/, languages];
+                    case 2:
+                        e_4 = _a.sent();
+                        console.error(e_4);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.hasPermission = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var permission, e_5;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.speech.hasPermission()];
+                    case 1:
+                        permission = _a.sent();
+                        console.log(permission);
+                        return [2 /*return*/, permission];
+                    case 2:
+                        e_5 = _a.sent();
+                        console.log(e_5);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.getPermission = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var permission, e_6;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.speech.requestPermission()];
+                    case 1:
+                        permission = _a.sent();
+                        console.log(permission);
+                        return [2 /*return*/, permission];
+                    case 2:
+                        e_6 = _a.sent();
+                        console.log(e_6);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.isSpeechSupported = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var isAvailable;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.speech.isRecognitionAvailable()];
+                    case 1:
+                        isAvailable = _a.sent();
+                        console.log(isAvailable);
+                        return [2 /*return*/, isAvailable];
+                }
+            });
+        });
+    };
+    Chat2Page.prototype.sendMessage = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                this.messages.push({
+                    toId: this.toUser._id,
+                    _id: this.messages.length,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: this.user._id,
+                    username: this.user.username,
+                    pic: this.user.pic,
+                    text: this.newMessage
+                });
+                this.SendText(this.newMessage);
+                console.log(this.newMessage);
+                this.newMessage = "";
+                return [2 /*return*/];
+            });
+        });
+    };
+    Chat2Page.prototype.buildCardLayout = function (data) {
+    };
+    Chat2Page.prototype.login = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["l" /* WelcomePage */]);
+    };
+    return Chat2Page;
 }());
-NewsDetailsPage = __decorate([
+Chat2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-news-details',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\newsDetails\newsDetails.html"*/'<ion-content *ngIf="news != null && marques != null && products != null" padding style="border-top: 20px solid #488aff">\n\n  <ion-header no-border style="background-color: rgba(0, 0, 0, 0.2)">\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n          <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n      </ion-buttons>\n\n      <ion-title>\n\n\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        \n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n<div id="profile-bg" [ngStyle]="{\'background-image\': \'url(\' + marques[news[newsId].marqueId].imgCover +\')\'}"></div>\n\n<div id="content">\n\n  <ion-card>\n\n    <ion-card-content>\n\n  <div id="profile-info" padding>\n\n    <div style="position: absolute; left:35%; right:35%; z-index: 1000">\n\n        <img id="profile-image" [src]="news[newsId].img">\n\n    </div>\n\n    <h3 id="profile-name">{{news[newsId].content.title}}</h3>\n\n    <br>\n\n    <div *ngIf="news[newsId].content.subtitle">\n\n      <h4 style="font-size: 1.4em">{{news[newsId].content.subtitle}}</h4>\n\n      <br>\n\n    </div>\n\n    <hr>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col>\n\n          <button *ngIf="news[newsId].marqueId == 0" ion-button full style="background-color: #0eae15" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 1" ion-button full style="background-color: #d01717" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 2" ion-button full style="background-color: #386ecd" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 3" ion-button full style="background-color: #cbc40e" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 4" ion-button full style="background-color: #cc7136" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 5" ion-button full style="background-color: #962ac8" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 6" ion-button full style="background-color: #d42649" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n    <hr style="margin-bottom: 20px;">\n\n    <div *ngIf="news[newsId].content.introBold" class="justify-center">\n\n      <p><b>{{news[newsId].content.introBold}}</b></p>\n\n      <br>\n\n    </div>\n\n    <div *ngIf="news[newsId].content.intro" class="justify-center">\n\n      <p *ngFor="let intro of news[newsId].content.intro">{{intro}}</p>\n\n      <br>\n\n    </div>\n\n    <div *ngIf="news[newsId].content.pointsIntro != null" class="justify-center">\n\n      <ul>\n\n        <li *ngFor="let point of news[newsId].content.pointsIntro"> {{point}} </li>\n\n      </ul>\n\n    </div>\n\n    <br><br>\n\n    <div *ngIf="news[newsId].content.parts != null">\n\n      <div *ngFor="let part of news[newsId].content.parts">\n\n        <h3 *ngIf="part.title != null" style="font-size: 1.2em">{{part.title}}</h3>\n\n        <br>\n\n        <div *ngIf="part.paragraphes != null">\n\n          <div *ngFor="let p of part.paragraphes">\n\n            <p *ngIf="p.accrPoints" class="justify-center">{{p.accrPoints}}</p>\n\n            <p *ngIf="p.accrPointsBold" class="justify-center"><b>{{p.accrPointsBold}}</b></p>\n\n            <div *ngIf="p.points" class="justify-center">\n\n              <ul style="color:#666" text-justify>\n\n                <li *ngFor="let point of p.points">\n\n                  {{point.title}}\n\n                  <div *ngIf="point.subpoints">\n\n                    <ul>\n\n                      <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                    </ul>\n\n                  </div>\n\n                </li>\n\n              </ul>\n\n            </div>\n\n            <p *ngIf="p.description" class="justify-center">{{p.description}}</p>\n\n            <p *ngIf="p.descriptionBold" class="justify-center"><b>{{p.descriptionBold}}</b></p>\n\n            <div *ngIf="p.temoignage" class="temoignage-back">\n\n              <div class="temoignage" >\n\n                  <ion-card text-center>   \n\n                    <ion-item style="margin-right: 50px;">\n\n                      <ion-avatar item-start>\n\n                        <img [src]="p.temoignage.authorImg">\n\n                      </ion-avatar>\n\n                      <h2 text-center style="color: white">{{p.temoignage.author}}</h2>\n\n                      <p text-center>{{p.temoignage.function}}</p>\n\n                    </ion-item>\n\n                    <hr>\n\n                    <ion-card-content>\n\n                      <p style="color:#8e9093; font-size: 1.2em"><i>{{p.temoignage.content}}</i></p>\n\n                    </ion-card-content>\n\n                  </ion-card>\n\n                </div>\n\n            </div>\n\n            <br>\n\n          </div>\n\n        </div>\n\n        <div *ngIf="part.points" class="justify-center" style="color: #666">\n\n          <ul>\n\n            <li *ngFor="let p of part.points">{{p}}</li>\n\n          </ul>\n\n        </div>\n\n        <br>\n\n      </div>\n\n    </div>\n\n    <!-- <p> &bull; {{services.location}}</p>\n\n    <p class="profile-description">{{service.description}}</p>\n\n    <button ion-button (click)="seeMarque()">Voir la marque</button>\n\n    <button ion-button *ngIf="!like" small color="purple" (click)="follow()">Je n\'aime plus</button>\n\n    <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J\'aime <ion-icon name="checkmark"></ion-icon></button> -->\n\n  </div>\n\n</ion-card-content>\n\n</ion-card>\n\n</div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\newsDetails\newsDetails.html"*/
+        selector: 'page-chat2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/'\n\n  <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n  \n\n      </ion-buttons>\n\n      <ion-title>\n\n        Chat-Bot\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content padding>\n\n  <div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">\n\n    <div *ngIf="user._id !== message.userId">\n\n      <img class="profile-pic left" [src]="toUser.pic" />\n\n      <div class="chat-bubble left slide-left">\n\n          \n\n         <div class="message" [innerHTML]="message.text.speech" autolinker></div>\n\n          \n\n        <div class="message-detail">\n\n          <span class="bold">{{toUser.username}}</span>\n\n        </div>\n\n          \n\n      </div>\n\n    </div>\n\n    <div *ngIf="user._id === message.userId">\n\n      <img class="profile-pic right" [src]="user.pic" />\n\n\n\n      <div class="chat-bubble right slide-right">\n\n          \n\n        <div class="message" [innerHTML]="message.text" autolinker></div>\n\n\n\n        <div class="message-detail">\n\n          <span class="bold">{{user.username}}</span>\n\n        </div>\n\n\n\n      </div>\n\n    </div>\n\n    <div class="cf"></div>\n\n  </div>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col>\n\n            <button ion-button clear (click)="listenForSpeech()"><ion-icon class="footer-btn" name="mic"></ion-icon></button>\n\n        </ion-col>\n\n        <ion-col col-8>\n\n            <ion-input [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>\n\n        </ion-col>\n\n        <ion-col>\n\n            <button ion-button clear (click)="sendMessage()"><ion-icon class="footer-btn" name="send"></ion-icon></button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
-], NewsDetailsPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"], __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__["a" /* SpeechRecognition */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__["a" /* TextToSpeech */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Platform */]])
+], Chat2Page);
 
-//# sourceMappingURL=newsDetails.js.map
+//# sourceMappingURL=chat2.js.map
 
 /***/ })
 

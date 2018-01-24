@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
-import { TinderQPage } from '../pages';
+import { TinderQ2Page } from '../pages';
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -23,8 +23,6 @@ export class WelcomePage {
   };
 
   tabBarElement: any;
-  // Our translated text strings
-  private loginErrorString: string;
 
   constructor(public navCtrl: NavController,
     public toastCtrl: ToastController) {
@@ -49,7 +47,7 @@ export class WelcomePage {
 
   // Attempt to login in through our User service
   doLogin() {
-      this.navCtrl.push(TinderQPage);
+      this.navCtrl.push(TinderQ2Page);
   }
 
   prev(){

@@ -44,7 +44,7 @@ export class ProductDetailsPage {
   // private loginErrorString: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, platform: Platform,
-    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer, private documentView: DocumentViewer, public imageViewerCtrl: ImageViewerController) {
+    public toastCtrl: ToastController, http:Http, private youtube: YoutubeVideoPlayer, private documentView: DocumentViewer, public imageViewerCtrl: ImageViewerController) {
     
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.productId = navParams.get('productId');  
@@ -71,7 +71,6 @@ export class ProductDetailsPage {
       {
         let openVideo = true;
         var vlength = this.navCtrl.getViews().length;
-        let index = 0;
         let final = new Array();
         for (let views of this.navCtrl.getViews())
         {

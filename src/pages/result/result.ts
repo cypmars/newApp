@@ -1,6 +1,5 @@
-import { Component, ViewChild, ViewChildren, QueryList, OnInit, OnDestroy } from '@angular/core';
-import {  FabContainer, FabButton } from 'ionic-angular';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { IonicPage, NavController, NavParams} from 'ionic-angular';
 import { CompleteTestService } from '../../providers/CompleteTestService';
 
 import { Http } from '@angular/http';
@@ -8,7 +7,6 @@ import 'rxjs/Rx';
 
 import { ServiceDetailsPage } from '../pages';
 import {
-  VisNode,
   VisNodes,
   VisEdges,
   VisNetworkService,
@@ -54,7 +52,7 @@ export class ResultPage implements OnInit, OnDestroy{
   myServiceId;
   boolFooterVisible: boolean = false;
   placeholder="";
-  constructor(private http: Http, public navCtrl: NavController, private visNetworkServ: VisNetworkService, public navParams: NavParams, public completeTestService: CompleteTestService) {
+  constructor(http: Http, public navCtrl: NavController, visNetworkServ: VisNetworkService, public navParams: NavParams, public completeTestService: CompleteTestService) {
    
     let servData = http.get('assets/data/services.json').map(res => res.json().services);
     servData.subscribe(data => {
@@ -74,7 +72,6 @@ export class ResultPage implements OnInit, OnDestroy{
   }
 
   public addNode(node): void {
-    const newId = this.visNetworkData.nodes.getLength() + 1;
     this.visNetworkData.nodes.add(node);
   }
 
@@ -141,7 +138,7 @@ export class ResultPage implements OnInit, OnDestroy{
       var footer = document.getElementsByClassName('footer');
       footer[1].setAttribute("hidden", "true");
       this.boolFooterVisible = false;
-      this.navCtrl.push('ServiceDetailsPage', {
+      this.navCtrl.push(ServiceDetailsPage, {
         param1: this.myServiceId
       });
     }

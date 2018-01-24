@@ -24,7 +24,7 @@ export class ServiceDetailsPage {
   products:any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer) {
+    public toastCtrl: ToastController, http:Http, private youtube: YoutubeVideoPlayer) {
 
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.serviceId = navParams.get('param1');
@@ -46,7 +46,6 @@ export class ServiceDetailsPage {
       {
         let openVideo = true;
         var vlength = this.navCtrl.getViews().length;
-        let index = 0;
         let final = new Array();
         for (let views of this.navCtrl.getViews())
         {

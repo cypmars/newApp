@@ -1,6 +1,5 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, Platform, Content } from 'ionic-angular';
-import { FormControl, FormBuilder } from '@angular/forms';
+import { IonicPage, NavController, Platform } from 'ionic-angular';
 import { WelcomePage } from '../pages';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { SpeechRecognition, SpeechRecognitionListeningOptionsAndroid, SpeechRecognitionListeningOptionsIOS } from '@ionic-native/speech-recognition';
@@ -305,7 +304,6 @@ export class Chat2Page {
 
   
   login() {
-    
-    this.navCtrl.push('WelcomePage');
+    this.navCtrl.push(WelcomePage);
   }
 }

@@ -32,7 +32,7 @@ export class MarqueDetailsPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public toastCtrl: ToastController, private http:Http, private youtube: YoutubeVideoPlayer) {
+    public toastCtrl: ToastController, http:Http, private youtube: YoutubeVideoPlayer) {
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.marqueId = navParams.get('marqueId');  
 
@@ -54,7 +54,6 @@ export class MarqueDetailsPage {
       {
         let openVideo = true;
         var vlength = this.navCtrl.getViews().length;
-        let index = 0;
         let final = new Array();
         for (let views of this.navCtrl.getViews())
         {
@@ -69,6 +68,7 @@ export class MarqueDetailsPage {
           }
         }
         if (openVideo){
+          console.log(openVideo);
           this.youtube.openVideo(this.marques[this.marqueId].videoId);
         }
       }

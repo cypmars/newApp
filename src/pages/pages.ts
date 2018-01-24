@@ -6,10 +6,8 @@ export const HomePage = 'HomePage';
 export const SimpleFormPage = 'SimpleFormPage';
 export const SimpleForm1Page = 'SimpleForm1Page';
 export const SimpleForm2Page = 'SimpleForm2Page';
-export const TinderQPage = 'TinderQPage';
+
 export const TinderQ2Page = 'TinderQ2Page';
-export const ChatBubble = 'ChatBubble';
-export const ChatPage = 'ChatPage';
 
 export const Chat2Page = 'Chat2Page';
 

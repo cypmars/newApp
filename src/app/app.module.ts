@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
-import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 
@@ -33,7 +32,6 @@ import { SwingModule } from 'angular2-swing';
   providers: [
     StatusBar,
     SplashScreen,
-    TextToSpeech,
     SpeechRecognition,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
