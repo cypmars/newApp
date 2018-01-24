@@ -617,6 +617,367 @@
           }
         ]
       }
+    },
+    {
+      "id": 8,
+      "idService": 9, 
+      "idMarque": 1,
+      "title":"EXOSPHERE",
+      "img": "assets/img/products/8.jpg",
+      "videoId": "bmctCqhJYuA",
+      "pdf": "assets/img/products/pdf/8.pdf",
+      "content": {
+        "title": "EXOSPHERE",
+        "subtitle": "Unité de Surveillance Mobile : PC Mobile et Aérostat",
+        "parts":[
+          {
+            "title": "Votre besoin en sécurité",
+            "paragraphes": [
+              {
+                "accrPoints": "Les sites sensibles étendus, les événements, les chantiers isolés, les espaces industriels… nécessitent le déploiement d’un renfort de sécurité permettant de :",
+                "points": [
+                  {"title": "Surveiller des zones étendues et/ou isolées"},
+                  {"title": "Gérer une crise et/ou un événement"},
+                  {"title": "Upgrader temporairement un dispositif de sécurité existant"},
+                  {"title": "Déployer rapidement une solution autonome en énergie"},
+                  {"title": "Reprendre un pc en panne ou indisponible"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Unité de surveillance mobile Exosphère",
+            "paragraphes": [
+              {
+                "description": "L’unité de surveillance mobile EXOSPHERE permet de renforcer la sécurité sur un site ou événement sensible grâce au déploiement rapide de moyens d’observation, de détection et de traitement des signaux."
+              },
+              {
+                "descriptionBold": "Une solution clé en main, projetable en 24H*, pour la surveillance temporaire de vos sites, événements…",
+                "accrPoints": "Notre offre :",
+                "points": [
+                  {"title": "Un PC Mobile autonome et un aérostat de surveillance aérienne,"},
+                  {"title": "Une équipe de personnes hautement qualifiées."}
+                ]
+              },
+              {
+                "description": "*Sous réserve des conditions climatiques et des autorisations nécessaires. "
+              }
+            ]
+          },
+          {
+            "title": "Points remarquables d'Exopshère",
+            "paragraphes": [
+              {
+                "points": [
+                  {
+                    "title": "Modularité",
+                    "subpoints" : [
+                      "Vidéosurveillance de zone ou de proximité",
+                      "Reprise de signaux d’un PC fixe",
+                      "Gestion des alarmes",
+                      "Accueil et gestion des badges et clés"
+                    ]
+                  },
+                  {
+                    "title": "Qualité de l’observation",
+                    "subpoints" : [
+                      "Mât télescopique : vision à 8.5 m de hauteur",
+                      "Aérostat : vision à 150 m au-dessus du sol"
+                    ]
+                  },
+                  {
+                    "title": "Mobilité et autonomie",
+                    "subpoints" : [
+                      "Déplacement sur tout type de terrain",
+                      "Autonomie électrique"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Fonctionnement Exosphère",
+            "paragraphes": [
+              {
+                "accrPoints": "Nos opérateurs utilisent les dernières technologies de vidéosurveillance intelligente pour détecter toute anomalie :",
+                "points": [
+                  {"title": "Détection intrusion,"},
+                  {"title": "Détection feu,"},
+                  {"title": "Bagage abandonné,"},
+                  {"title": "Gestion de foule,"},
+                  {"title": "Arrêt véhicule interdit…"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Applications en sécurité",
+            "paragraphes": [
+              {
+                "points": [
+                  {"title": "Grands rassemblements"},
+                  {"title": "Manifestations culturelles"},
+                  {"title": "Evénements sportifs"},
+                  {"title": "Sites sensibles"},
+                  {"title": "Convois sensibles en stationnement"},
+                  {"title": "Chantiers isolés"},
+                  {"title": "Espaces industriels de grande surface"},
+                  {"title": "Reprise de PC en panne ou indisponible"}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "idService": 10,
+      "idMarque": 1,
+      "title":"B.NET 2018 : Bouton virtuel anti-agression",
+      "img": "assets/img/products/9.png",
+      "pdf": "assets/img/products/pdf/9.pdf",
+      "content": {
+        "title": "B.NET 2018 : Bouton virtuel anti-agression",
+        "parts":[
+          {
+            "title": "Votre besoin",
+            "paragraphes": [
+              {
+                "accrPoints": "Les sites bancaires, tertiaires et industriels, nécessitent la mise en place de solutions de sécurité permettant :",
+                "points": [
+                  {"title": "De protéger les personnes, bâtiments, valeurs et installation"},
+                  {"title": "D'informer en temps réel des incidents"},
+                  {"title": "De répondre aux attentes de simplicité d'utilisation des collaborateurs"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Notre solution",
+            "paragraphes":[
+              {"description": "Onet Sécurité Telem intègre dans sa suite logicielle B.net un module de gestion d’alarmes centralisé permettant d’assurer à distance et en temps réel la sécurité des collaborateurs."},
+              {"description": "Un simple clic sur une icône positionnée sur le poste informatique déclenche l’envoi d’un message d’alerte au centre de télésurveillance. Celui-ci identifie le site et le poste à l’origine de l’alarme grâce à l’adresse IP transmise par le module."},
+              {"description": "Le service de télésurveillance reçoit donc l’ensemble des informations nécessaires pour répondre de manière optimale grâce aux consignes appropriées."}
+            ]
+          },
+          {
+            "title": "Points remarquables",
+            "paragraphes":[
+              {
+                "points": [
+                  {"title": "Sécurisation optimale : remontées d’alarmes en temps réel"},
+                  {"title": "Simplicité de l’interface : une seule page Web pour paramétrer l’outil"},
+                  {"title": "Economique : offre logicielle uniquement, aucun équipement requis"},
+                  {"title": "Personnalisation : gestion jusqu'à 10 types d’alarmes différents"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Caractéristiques",
+            "paragraphes":[
+              {
+                "points": [
+                  {"title": "Identification par code site et adresse IP"},
+                  {"title": "Gestion par site des séquences d’appels et de fréquences d’appels à la télésurveillance"},
+                  {"title": "Fonction copier/coller pour un paramétrage plus rapide"},
+                  {"title": "Compatible frontal F1"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "B.NET",
+            "paragraphes":[
+              {"description": "La solution logicielle B.net est une solution de gestion de parc simple et efficace."},
+              {
+                "accrPoints": "Elle permet de :",
+                "points": [
+                  {"title": "gérer et de superviser en temps réel et à distance l’ensemble des sites"},
+                  {"title": "consulter et modifier les données à partir d’un simple navigateur internet"},
+                  {"title": "définir les droits d’utilisation selon le profil utilisateur"},
+                  {"title": "tracer et analyser les événements"},
+                  {"title": "interconnecter et synchroniser le dispositif de sécurité aux différents systèmes de l’entreprise"}
+                ]
+              }
+            ]
+          }
+        ],
+        "contact": {
+          "address": {
+            "num": "16",
+            "road": "rue de l'étang - ZI de Mayencin",
+            "cp": "38610",
+            "city": "Gieres",
+            "country": "France"
+          },
+          "tel": "04 76 51 70 71",
+          "interlocuteur": {
+            "email": "telem@telemsa.com"
+          }
+        }
+      }
+    },
+    {
+      "id": 10,
+      "idService": 10,
+      "idMarque": 1,
+      "title":"Superviseur graphique Belledonne",
+      "img": "assets/img/products/10.png",
+      "pdf": "assets/img/products/pdf/10.pdf",
+      "content": {
+        "title": "Superviseur graphique Belledonne",
+        "parts":[
+          {
+            "title": "Votre besoin en solutions de sécurité",
+            "paragraphes": [
+              {
+                "accrPoints": "Les sites bancaires, tertiaires et industriels, nécessitent la mise en place de solutions de sécurité permettant :",
+                "points": [
+                  {"title": "De protéger les personnes, bâtiments, valeurs et installation"},
+                  {"title": "De disposer d'une vision complète du site à sécuriser"},
+                  {"title": "D'être informé en temps réel des incidents"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Le superviseur graphique Belledonne",
+            "paragraphes":[
+              {"description": "Le superviseur graphique Belledonne vous offre une vision globale et cartographiée de l'ensemble de vos installations et vous permet d'être informé en temps réel des incidents survenant sur votre site."},
+              {"description": "Notre approche graphique ciblée vous permet d'améliorer le pilotage de votre site et d'interagir directement sur les points de sécurité en quelques clics."}
+            ]
+          },
+          {
+            "title": "Points remarquables de la solution de sécurité Belledonne",
+            "paragraphes":[
+              {
+                "points": [
+                  {"title": "Intégration complète et ergonomique dans la plateforme Belledonne.net."},
+                  {"title": "Affichage 3D des plans des bâtiments pour une visualisation optimale des locaux et des points de sécurité."},
+                  {"title": "Facilité d'utilisation grâce à une librairie de symboles évolutive et personnalisable."},
+                  {"title": "Interface adaptée à l'utilisation tactile."}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Fonctionnement de Belledonne",
+            "paragraphes":[
+              {
+                "points": [
+                  {"title": "1: Déclenchement d'une alarme par un incident survenu sur un point de sécurité. "},
+                  {"title": "2: Transmission immédiate, automatique et précise de l'information sur le plan 3D du poste de supervision."},
+                  {"title": "3: Levée de doute réalisée par l'opérateur."},
+                  {"title": "4: Saisie du rapport d'évènement et consignation dans la main courante."}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Pour aller plus loin : L'hyperviseur graphique",
+            "paragraphes":[
+              {"description": "La solution Belledonne est compatible avec les principales solutions d'hypervision graphique.."},
+              {"description": "Parfaitement adapté à la gestion de plans multisite, l'hyperviseur graphique offre la possibilité d'interagir sur les différents systèmes du bâtiment (intrusion, contrôle d'accès, vidéoprotection, sécurité incendie, éclairage, comptage d'énergie...) pour un pilotage centralisé de l'ensemble des installations techniques."}
+            ]
+          }
+        ],
+        "contact": {
+          "address": {
+            "num": "16",
+            "road": "rue de l'étang - ZI de Mayencin",
+            "cp": "38610",
+            "city": "Gieres",
+            "country": "France"
+          },
+          "tel": "04 76 51 70 71",
+          "interlocuteur": {
+            "email": "telem@telemsa.com"
+          }
+        }
+      }
+    },
+    {
+      "id": 11,
+      "idService": 12,
+      "idMarque": 1,
+      "title":"Maîtriser les risques inhérents aux sites sans surveillance",
+      "img": "assets/img/products/11.png",
+      "pdf": "assets/img/products/pdf/11.pdf",
+      "content": {
+        "title": "Maîtriser les risques inhérents aux sites sans surveillance",
+        "parts":[
+          {
+            "title": "Sécurité des sites ouverts",
+            "paragraphes": [
+              {"description":"Particulièrement exposés aux actes de malveillance, car souvent mal délimités, les sites ouverts (chantiers, friches, locaux inhabités…) présentent de multiples risques : vols de matériaux et d’équipements techniques, incendies volontaires, dégradations diverses, occupations non autorisées..."},
+              {
+                "accrPoints": "Le besoin de mise en sécurité est donc primordial pour :",
+                "points": [
+                  {"title": "Assurer la sûreté des biens et des installations"},
+                  {"title": "Assurer la sécurité des personnes"},
+                  {"title": "Intervenir rapidement en cas d'incident"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Un système vidéo de détection-intrusion sans fil avec levée de doute",
+            "paragraphes":[
+              {"description": "La conception, l'installation et la maintenance d’un système vidéo de détection-intrusion sans fil avec levée de doute, parfaitement adapté aux caractéristiques des ces sites."},
+              {"description": "Egalement experts en télésurveillance (2 PCS - APSAD P3) et en sécurité humaine, nous pouvons assurer la réception et la gestion des alarmes, ainsi que l’intervention si nécessaire."}
+            ]
+          },
+          {
+            "title": "Points remarquables du système vidéo de détection-intrusion sans fil",
+            "paragraphes":[
+              {
+                "points": [
+                  {"title": "Composé d’une centrale d’alarme et de détecteurs de mouvement avec caméra infrarouge grand angle, le système permet de détecter les tentatives d’intrusion, de jour comme de nuit. La levée de doute vidéo assurée par le télésurveilleur permet de vérifier la pertinence de l’information, et évite les alarmes intempestives."},
+                  {
+                    "title": "Le système sans fil permet une installation facile aux endroits stratégiques, et reste totalement autonome :",
+                    "subpoints":[
+                      "Pas de raccordement au 220v, car alimenté par piles au lithium haute durabilité,",
+                      "Pas de raccordement au réseau téléphonique commuté RTC, car muni d’un transmetteur GSM."
+                    ]
+                  },
+                  {"title": "Les équipements résistent aux intempéries et supportent les variations de température comprises entre -20°C et 60°C."}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Fonctionnement du système vidéo de détection-intrusion sans fil",
+            "paragraphes":[
+              {"description": "En cas d’intrusion, le système capture une vidéo de 10 secondes aussi bien de jour que de nuit."},
+              {"description": "Celle-ci est immédiatement envoyée à un centre de télésurveillance ou vers un GSM."},
+              {"description": "En cas de fausse alarme, le centre de télésurveillance peut grâce à la levée de doute neutraliser l’alarme à distance ou, dans le cas contraire, faire intervenir un agent de sécurité."}
+            ]
+          },
+          {
+            "title": "Onet Sécurité",
+            "paragraphes":[
+              {"description": "Des solutions de sécurité à forte valeur ajoutée combinant moyens humains et technologiques."},
+              {"description": "Certifié NF Service et Apsad en Détection Intrusion et Vidéosurveillance. "}
+            ]
+          }
+        ],
+        "contact": {
+          "address": {
+            "num": "16",
+            "road": "rue de l'étang - ZI de Mayencin",
+            "cp": "38610",
+            "city": "Gieres",
+            "country": "France"
+          },
+          "tel": "04 76 51 70 71",
+          "interlocuteur": {
+            "email": "telem@telemsa.com"
+          }
+        }
+      } 
     }
   ]
 }

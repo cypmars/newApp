@@ -1489,19 +1489,12 @@
       "marqueId": 4,
       "imgService": "assets/img/23.jpg", 
       "imgMarque": "assets/img/marques/4.jpg",
-      "icon": "\uf017",
+      "icon": "\uf023",
       "pertinence": "bas",   
-      "title": "Transport routier / Manœuvre ferroviaire",
+      "title": "Transport routier",
       "content": {     
-        "title": "Transport routier / Manœuvre ferroviaire",  
+        "title": "Transport routier",  
         "parts":[
-          {
-            "title":"Manœuvre Ferroviaire",
-            "paragraphes": [
-              {"description": "Pour offrir à nos clients industriels une solution logistique complète, nous assurons la gestion des Installations terminales Embranchées (ITE)."},
-              {"description" : "Notre expérience dans ce domaine complexe, nos collaborateurs dûment habilités (P1 – P2- P3) et nos moyens de traction nous permettent de répondre de façon adaptée à vos exigences et offrent souplesse et performance à notre prestation de logistique in situ."}
-            ]
-          },
           {
             "title":"Transport routier",
             "paragraphes": [
@@ -1512,18 +1505,6 @@
         ],
         "areas":
         [
-          {
-            "title": "DOMAINES D’INTERVENTION MANOEUVRE FERROVIAIRE",
-            "parts": [
-              {
-                "points":[
-                  "Exploitation d'Installations terminales Embranchées",
-                  "Gestion des rames : prise en charge (vide/pleine) – Chargement/déchargement (palettisé ou vrac)…",
-                  "Reconstitution et acheminement des rames, mise à disposition à la SNCF"
-                ]
-              }
-            ]
-          },
           {
             "title": "DOMAINES D’INTERVENTION TRANSPORT ROUTIER",
             "parts": [
@@ -1544,11 +1525,47 @@
     },
     {
       "id": 24,
-      "marqueId": 5,
-      "subServiceIds": [25,26,27],  
+      "marqueId": 4,
       "imgService": "assets/img/24.jpg", 
+      "imgMarque": "assets/img/marques/4.jpg",
+      "icon": "\uf024",
+      "pertinence": "bas",   
+      "title": "Manœuvre ferroviaire",
+      "content": {     
+        "title": "Manœuvre ferroviaire",  
+        "parts":[
+          {
+            "title":"Manœuvre Ferroviaire",
+            "paragraphes": [
+              {"description": "Pour offrir à nos clients industriels une solution logistique complète, nous assurons la gestion des Installations terminales Embranchées (ITE)."},
+              {"description" : "Notre expérience dans ce domaine complexe, nos collaborateurs dûment habilités (P1 – P2- P3) et nos moyens de traction nous permettent de répondre de façon adaptée à vos exigences et offrent souplesse et performance à notre prestation de logistique in situ."}
+            ]
+          }
+        ],
+        "areas":
+        [
+          {
+            "title": "DOMAINES D’INTERVENTION MANOEUVRE FERROVIAIRE",
+            "parts": [
+              {
+                "points":[
+                  "Exploitation d'Installations terminales Embranchées",
+                  "Gestion des rames : prise en charge (vide/pleine) – Chargement/déchargement (palettisé ou vrac)…",
+                  "Reconstitution et acheminement des rames, mise à disposition à la SNCF"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "marqueId": 5,
+      "subServiceIds": [26,27,28],  
+      "imgService": "assets/img/25.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf018",
+      "icon": "\uf025",
       "pertinence": "bas",      
       "title": "Constructions neuves et modifications d'installations",
       "content": {     
@@ -1636,11 +1653,11 @@
       }
     },
     {
-      "id": 25,
+      "id": 26,
       "marqueId": 5,
-      "imgService": "assets/img/25.jpg", 
+      "imgService": "assets/img/26.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf019",
+      "icon": "\uf025",
       "pertinence": "bas",       
       "title": "Ingénierie",
       "content": {     
@@ -1691,11 +1708,11 @@
       }
     },
     {
-      "id": 26,
+      "id": 27,
       "marqueId": 5,
-      "imgService": "assets/img/26.jpg", 
+      "imgService": "assets/img/27.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf01a",
+      "icon": "\uf026",
       "pertinence": "bas",       
       "title": "Fourniture de systèmes et d'équipements pour les réacteurs de puissance",
       "content": {     
@@ -1734,12 +1751,12 @@
       }
     },
     {
-      "id": 27,
+      "id": 28,
       "marqueId": 5,
-      "imgService": "assets/img/27.jpg", 
+      "imgService": "assets/img/28.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
       "videoId": "dZ3Ba4y6ztA",
-      "icon": "\uf01b",
+      "icon": "\uf027",
       "pertinence": "bas",       
       "title": "Fourniture d'installations pour le traitement de déchets radioactifs",
       "content": {     
@@ -1762,11 +1779,11 @@
       }
     },
     {
-      "id": 28,
+      "id": 29,
       "marqueId": 5,
-      "imgService": "assets/img/28.jpg", 
+      "imgService": "assets/img/29.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf01c",
+      "icon": "\uf029",
       "pertinence": "bas",
       "title": "Assistance à l'exploitation",
       "content": {     
@@ -1852,11 +1869,11 @@
       }
     },
     {
-      "id": 29,
+      "id": 30,
       "marqueId": 5,
-      "imgService": "assets/img/29.jpg", 
+      "imgService": "assets/img/30.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf01d",
+      "icon": "\uf030",
       "pertinence": "bas",
       "title": "Maintenance",
       "content": {     
@@ -1925,11 +1942,11 @@
       }
     },
     {
-      "id": 30,
+      "id": 31,
       "marqueId": 5,
-      "imgService": "assets/img/30.jpg", 
+      "imgService": "assets/img/31.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf01e",
+      "icon": "\uf031",
       "pertinence": "bas",
       "title": "Contrôle non destructif",
       "content": {     
@@ -2012,11 +2029,11 @@
       }
     },
     {
-      "id": 31,
+      "id": 32,
       "marqueId": 5,
-      "imgService": "assets/img/31.jpg", 
+      "imgService": "assets/img/32.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf01f",
+      "icon": "\uf032",
       "pertinence": "bas",       
       "title": "Décontamination, démantèlement",
       "content": {     
@@ -2027,6 +2044,785 @@
             "paragraphes": [
               {"description": "Acteur majeur sur le marché, nous répondons à vos problématiques de décontamination et de démantèlement quelque soit leur complexité, grâce à nos services d’ensemblier."}, 
               {"description": "Nos solutions sont adaptées à la diversité des secteurs d’activité concernés : production électronucléaire, cycle du combustible, recherche, défense, chimie, pétrochimie…"}
+            ]
+          },
+          {
+            "title": "Nos savoir-faire Décontamination et Démantèlement",
+            "paragraphes": [
+              {
+                "points": [
+                  {
+                    "title" : "INGENIERIE ET CONSEIL",
+                    "subpoints": [
+                      "audit et diagnostic de sites",
+                      "stratégies de démantèlement",
+                      "modification d'installations préalable au démantèlement",
+                      "Développement d’équipements spécifiques",
+                      "études réglementaires et environnementales",
+                      "analyses technico-économiques",
+                      "planification"
+                    ]
+                  },
+                  {
+                    "title": "TRAVAUX DE DEMANTELEMENT",
+                    "subpoints": [
+                      "assainissement",
+                      "découpes (laser, plasma, UHP...)",
+                      "opérations de démantèlement téléopérées",
+                      "démontage mécanique",
+                      "manutention lourde"
+                    ]
+                  },
+                  {
+                    "title": "E.P.C (Engineering Conception Procurment)",
+                    "subpoints":[
+                      "clé en main"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Nos marchés Décontamination et Démantèlement",
+            "paragraphes": [
+              {
+                "points": [     
+                  {"title": "Parc électronucléaire"},
+                  {"title": "Installations du cycle du combustible"},
+                  {"title": "Laboratoires"},
+                  {"title": "Installation de stockage de déchets radioactifs"},
+                  {"title": "France et international"}
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Notre valeur ajoutée pour vos problèmatiques de sites contaminés ou à démanteler",
+            "paragraphes": [
+              {
+                "points": [         
+                  {"title": "Une capacité d'intervention sur tous types de projets et d’installations, y compris les plus complexes"},
+                  {"title": "Un effectif de 1000 personnes spécialisées"},
+                  {"title": "Un retour d’expérience de plus de 40 ans"},
+                  {"title": "Mise en œuvre de techniques innovantes telles que le laser ou la réalité virtuelle..."}
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Quelques références Décontamination, Déconstruction et Démantèlement",
+            "paragraphes": [
+              {
+                "points": [         
+                  {"title": "Décontamination du circuit primaire par procédé DFD (traitement chimique, brevet ONET Technologies) -  Bohunice, Slovaquie"},
+                  {"title": "Démantèlement du hall échangeur Chinon A3 - EDF"},
+                  {"title": "Déconstruction de la Station de Traitement des Effluents et des Déchets - CEA"},
+                  {"title": "Assistance à maîtrise d’ouvrage pour la dénucléarisation d’un site complet - CEA Grenoble"},
+                  {"title": "Démantèlement des dissolveurs MAR 200 – Usine UP1 – CEA Marcoule"}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "marqueId": 5,
+      "imgService": "assets/img/33.jpg", 
+      "imgMarque": "assets/img/marques/5.jpg",
+      "videoId": "f-aN89vOAI4",
+      "icon": "\uf033",
+      "pertinence": "bas",       
+      "title": "Désamiantage",
+      "content": {     
+        "title": "Désamiantage",
+        "parts":[
+          {
+            "title":"Opérations spécifiques ou clé en main",
+            "paragraphes": [
+              {"description": "Dans un contexte de plus en plus exigeant en termes de sécurité, de délais et de qualité, Onet Technologies réalise depuis plus de 30 ans, l'assainissement et la déconstruction dans les milieux à risques ainsi que le traitement des déchets issus de ces opérations."}, 
+              {"description": "Onet Technologies est qualifiée pour retirer tous types d’amiante et intervient dans tous les secteurs d’activité, sur des projets d'envergure comme sur des installations plus classiques."},
+              {"description": "Onet Technologies s'adapte à vos besoins pour des opérations très spécialisées ou des projets clé en main."}
+            ]
+          },
+          {
+            "title": "Nos savoir-faire Amiantes",
+            "paragraphes": [
+              {
+                "points": [
+                  {"title" : "Amiante friable : flocage, calorifuge, isolation d’équipements.."},
+                  {"title": "Amiante non friable : revêtements de sols, éléments en amiante ciment, enveloppe extérieure de bâtiment"}
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Nos marchés de désamiantage",
+            "paragraphes": [
+              {
+                "points": [     
+                  {"title": "Intervention dans tous les secteurs d’activités : BTP, Industriels, collectivités locales, hôpitaux…"}
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Notre valeur ajoutée pour vos travaux de désamiantage",
+            "paragraphes": [
+              {
+                "points": [         
+                  {"title": "Retrait en milieu conventionnel et ionisant"},
+                  {"title": "Traitement d’équipements radiés : voitures SNCF, Sous-marins, bateaux…"},
+                  {"title": "Grand confinement"},
+                  {"title": "Dépoussiérage à fort volume"},
+                  {"title": "Intervention après sinistre, travaux, chantier"},
+                  {"title": "Offre globale clés en main"},
+                  {"title": "Implantations nationales"}
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Quelques références Désamiantage",
+            "paragraphes": [
+              {
+                "points": [         
+                  {"title": "Dépoussiérage et retrait de calorifuges et tresses sur support. Maintien de l’activité du site pendant l’intervention - Usines Michelin à Vannes et Roanne"},
+                  {"title": "Désamiantage et démolition de l’ancienne usine Henkel à Saint-Fargeau Ponthierry"},
+                  {"title": "Étude et réalisation d’une ICPE dédiée et développement d’un système téléopéré pour le désamiantage de 1 200 voitures – SNCF le Mans"},
+                  {"title": "Retrait des revêtements amiantés – SNA Le Triomphant"},
+                  {"title": "Désamiantage et déconstruction d’alternateurs pour différents sites EDF (Saint-Hilaire (38), Curbains (05)) et d’un barrage Usine CNR Caderousse"}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "marqueId": 5,
+      "subServiceIds": [35,36,37],
+      "imgService": "assets/img/34.jpg", 
+      "imgMarque": "assets/img/marques/5.jpg",
+      "icon": "\uf034",
+      "pertinence": "bas",       
+      "title": "Traitement des déchets",
+      "content": {     
+        "title": "Traitement des déchets",
+        "parts":[
+          {
+            "title":"Maîtrise complète de la filière déchets radioactifs et dangereux",
+            "paragraphes": [
+              {"description": "Nous maîtrisons l’intégralité de la chaîne de gestion des déchets radioactifs et autres déchets dangereux."}, 
+              {"description": "Nous mettons à votre disposition notre propre installation d’entreposage et de traitement de déchets radioactifs Sogeval, ainsi que nos nouveaux conteneurs brevetés."}
+            ]
+          },
+          {
+            "title": "Nos savoir-faire dans la gestion des déchets",
+            "paragraphes": [
+              {
+                "points": [
+                  {"title" : "Collecte, tri, conditionnement, entreposage et traitement de déchets radiologiques"},
+                  {"title": "Assainissement radiologique et chimique des sols"},
+                  {
+                    "title" : "INGENIERIE ET CONSEIL",
+                    "subpoints": [
+                      "Diagnostic, caractérisation et inventaire des déchets radioactifs et dangereux",
+                      "Développement des procédés de traitement/conditionnement",
+                      "Etudes réglementaires et environnementales",
+                      "Analyses technico-économiques"
+                    ]
+                  },
+                  {
+                    "title": "CONCEPTION ET RÉALISATION",
+                    "subpoints": [
+                      "Récupération et retrait des déchets radioactifs ou dangereux",
+                      "Traitement (comprenant aussi la construction des équipements)",
+                      "Conditionnement et Contrôle",
+                      "Transport"
+                    ]
+                  },
+                  {
+                    "title": "E.P.C (Engineering Conception Procurment)",
+                    "subpoints":[
+                      "clé en main"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Nos marchés de gestion et traitement des déchets nucléaires et dangereux",
+            "paragraphes": [
+              {
+                "points": [     
+                  {"title": "Parc électronucléaire"},
+                  {"title": "Installations du cycle du combustible"},
+                  {"title": "Laboratoires"},
+                  {"title": "Installation de stockage de déchets radioactifs"},
+                  {"title": "France et international"}
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Notre valeur ajoutée au sein de la filière déchets",
+            "paragraphes": [
+              {
+                "points": [         
+                  {"title": "SOGEVAL, notre propre installation classée pour le traitement et l’entreposage de déchets radioactifs"},
+                  {"title": "Maîtrise de la filière déchets depuis la caractérisation jusqu’au stockage"},
+                  {"title": "Conteneurs brevetés"}
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Quelques références Gestion des déchets radioactifs ou dangereux",
+            "paragraphes": [
+              {
+                "points": [         
+                  {"title": "SOGEVAL, notre propre installation d’entreposage et de traitement de déchets radioactifs"},
+                  {"title": "Système de reprise  et traitement d’effluents borés : Conception, construction, installation et mise en service - Kozloduy, Bulgarie"},
+                  {"title": "Maîtrise d’œuvre pour la conception, la réalisation et la mise en service industrielle d’un réacteur de destruction de sodium (Na) et d’alliages spéciaux (NaK) du site de Dessel (bâtiment PAMELA)   – ONDRAF, Belgique"},
+                  {"title": "Reprise de déchets historiques faiblement irradiés – CEA Cadarache"},
+                  {"title": "Conception, construction et réalisation d’une installation de reprise se déchets historiques sur site de Trisaïa – SOGIN, Italie"}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "marqueId": 5,
+      "imgService": "assets/img/35.jpg", 
+      "imgMarque": "assets/img/marques/5.jpg",
+      "icon": "\uf035",
+      "pertinence": "bas",       
+      "title": "Maîtrise de la filière déchets",
+      "content": {     
+        "title": "Maîtrise de la filière déchets",
+        "parts":[
+          {
+            "title":"Services et solutions intégrés sur l’ensemble du cycle de traitement des déchets",
+            "paragraphes": [
+              {"description": "Présents depuis l’inventaire sur site jusqu’à la livraison des déchets conditionnés vers l’exécutoire final, Onet Technologies recherche pour ses clients des solutions pour les déchets exotiques et sans filière."}, 
+              {
+                "accrPointsBold": "Onet Technologies prend en charge pour ses clients toutes les étapes de la chaîne des déchets :", 
+                "points": [      
+                  {"title": "la gestion et l'optimisation sur les sites de ses clients"},
+                  {"title": "la caractérisation"},
+                  {"title": "le choix technico-économique des meilleures filières de traitement"},
+                  {"title": "le conditionnement"},
+                  {"title": "le traitement par des procédés éprouvés ou innovants"},
+                  {"title": "le transport"}
+                ]
+              },
+              {"descriptionBold": "L'expertise acquise par Onet Technologies avec sa propre installation Sogeval, lui permet d’exploiter les installations de ses clients."},
+              {
+                "accrPoints": "Ses principales missions sont alors :", 
+                "points": [      
+                  {"title": "le conseil"},
+                  {"title": "la supervision"},
+                  {"title": "l'encadrement"},
+                  {"title": "le fonctionnement"},
+                  {"title": "la maintenance des process nécessaires dans le respect de la quantité et de la qualité des colis de déchets produits"}
+                ]
+              },
+              {"descriptionBold":"Pégase au CEA Cadarache est une unité de traitement de déchets plutonifères."},
+              {"description": "Après la conception, la construction, cette unité a été mise en service et est exploitée par Onet Technologies."},
+              {"description": "C'était un contrat clés en main comprenant un atelier de mesure et de caractérisation, des transferts sécurisés, un atelier de traitement, le transport vers l'Andra et enfin, l'exploitation."},
+              {"description": "Le chantier a pris fin en mars 2014."}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "marqueId": 5,
+      "imgService": "assets/img/36.jpg", 
+      "imgMarque": "assets/img/marques/5.jpg",
+      "icon": "\uf036",
+      "pertinence": "bas",       
+      "title": "Installation Sogeval",
+      "content": {     
+        "title": "Installation Sogeval",
+        "subtitle": "Solution externalisée pour vos déchets radioactifs",
+        "intro": ["Avec près de 1000 tonnes de déchets traités annuellement, Onet Technologies met à la disposition de ses clients des capacités uniques de traitement et d’entreposage de déchets, matières et équipements nucléaires, via son installation dédiée Sogeval."],
+        "pointsIntro": [
+          "Surface d'entreposage de 4 200 m² (extension Sogeval 2 en 2017 : 5 200 m²)",
+          "110 conteneurs équivalent 20 pieds",
+          "5 cellules d'intervention reconfigurables sur 450 m²"
+        ],
+        "parts":[
+          {
+            "paragraphes": [
+              {
+                "accrPointsBold": " Un panel de solutions sur mesure :",
+                "points": [
+                  {"title" : "Étude et choix des meilleures filières technico-économiques"},
+                  {"title": "Études de nouvelles filières et R&D associés"},
+                  {"title":"Traitement et reconditionnement"},
+                  {"title":"Élaboration des dossiers d'acceptation et d'agrément"},
+                  {"title":"Entreposage"},
+                  {"title":"Prise en charge depuis le site du producteur jusqu'à l'exutoire final"},
+                  {"title":"Décontamination de matériels et d’emballages"},
+                  {"title":"Traitement de déchets liquides"},
+                  {"title":"Traitement de déchets amiante"}
+                ]
+              }
+            ]
+          },
+          {
+            "title":"Notre valeur ajoutée",
+            "paragraphes": [
+              {
+                "points": [     
+                  {"title": "Souplesse industrielle : Sogeval est un maillon dans la chaîne de gestion de vos déchets."},
+                  {"title": "Souplesse logistique : des capacités importantes d’entreposage temporaire permettant de délester et rendre disponible des zones ou locaux nucléaires saturés."},
+                  {"title": "Souplesse investissement : faire appel à Sogeval évite la mobilisation d’un financement dédié pour la construction d’installations ou d’équipements."},
+                  {"title": "Réactivité et gain de temps : une installation avec des capacités de reconfiguration permettant d’apporter réactivité et maîtrise des délais."},
+                  {"title": "Ingénierie dédiée à la gestion des déchets radioactifs."},
+                  {"title": "Diversité des déchets traités : déchets de démantèlement, déchets amiante, déchets DEEE, déchets de laboratoires, super contrôle ANDRA..."}
+                ]
+              }
+            ]
+          },
+          {
+            "title":"La solution surconteneur",
+            "paragraphes": [
+              {"description":"Une prestation clés en main pour prendre en charge les déchets et matériels depuis le site du producteur jusqu'à son traitement dans notre installation Sogeval."}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "marqueId": 5,
+      "imgService": "assets/img/37.jpg", 
+      "imgMarque": "assets/img/marques/5.jpg",
+      "icon": "\uf037",
+      "pertinence": "bas",       
+      "title": "Les conteneurs Onet",
+      "content": {     
+        "title": "Les conteneurs Onet",
+        "parts":[
+          {
+            "paragraphes": [
+              {"descriptionBold":"Onet Technologies propose des conteneurs à forte valeur ajoutée pour le transport de matières radioactives."},
+              {"description":"Commercialisés en France et en Europe, ces conteneurs sont une réelle innovation."},
+              {"description":"Conçus par Onet Technologies, ils sont plusieurs fois brevetés."},
+              {"descriptionBold":"Ils sont une exclusivité Onet."},
+              {"description":"Ces conteneurs offrent de hautes performances et répondent aux nombreuses exigences liées au transport de matières radioactives de faible activité (FA/TFA) et aux déchets toxiques."},
+              {"description":"Les conteneurs Onet font déjà leurs preuves au sein de l’installation Sogeval (Installation pour la protection de l'environnement située à Pierrelatte)."}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "marqueId": 5,
+      "imgService": "assets/img/38.jpg", 
+      "imgMarque": "assets/img/marques/5.jpg",
+      "icon": "\uf038",
+      "pertinence": "bas",       
+      "title": "Formations pour l’industrie et le bâtiment",
+      "content": {     
+        "title": "Formations pour l’industrie et le bâtiment",
+        "parts":[
+          {
+            "title":"Un réseau de proximité",
+            "paragraphes": [
+              {"description": "Nos formations s'adressent aussi bien aux particuliers qu'aux salariés d'entreprises."}, 
+              {"description": "Chaque année c'est plus de 25 000 stagiaires qui sont formés par plus de 100 formateurs dont l'expérience sur le terrain est une réelle plus-value."}
+            ]
+          },
+          {
+            "title": "Nos moyens humains et logistiques",
+            "paragraphes": [
+              {"description": "Onet Technologies met tout en oeuvre pour répondre aux besoins de ses clients et des stagiaires présents aux formations."},
+              {
+                "points": [
+                  {"title":"Plus de 100 formateurs"},
+                  {"title":"45 salles de formation réparties sur 10 sites en France"},
+                  {"title":"10 chantiers-école en Prévention des Risques"},
+                  {"title":"10 chantiers-école Qualité Sécurité Environnement"},
+                  {"title":"2 chantiers-école amiante"},
+                  {"title":"1 atelier de formation en robinetterie"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Nos savoir-faire",
+            "paragraphes": [
+              {
+                "points": [
+                  {
+                    "title" : "Formations sur mesure",
+                    "subpoints": [
+                      "Définition des objectifs avec nos clients",
+                      "Détermination du profil des stagiaires",
+                      "Contenu pédagogique et calendrier",
+                      "Retour d’expérience systématique"
+                    ]
+                  },
+                  {"title": "Formations réglementaires et qualifiantes"},
+                  {
+                    "title": "Formations spécifiques à la filière nucléaire",
+                    "subpoints": [
+                      "Radioprotection",
+                      "Sûreté",
+                      "Qualité",
+                      "Stars (Stage Technique d’Appui en Radioprotection Sécurité)",
+                      "Port des EPI Respiratoires"
+                    ]
+                  },
+                  {"title": "Formations pour l’industrie et le bâtiment"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Nos certifications",
+            "paragraphes": [
+              {
+                "points": [
+                  {
+                    "title" : "ISO 9001 / ISO 14001 /OHSAS 18001 - INTERTEK",
+                    "subpoints": [
+                      "Système de Management de la Qualité, de l’Environnement, de la Sécurité au travail",
+                      "Conception & réalisation de formations professionnelles et réglementaires"
+                    ]
+                  },
+                  {
+                    "title": "CEFRI",
+                    "subpoints": [
+                      "Qualification pour la formation à la prévention des risques au personnel de catégories « A » ou « B » travaillant sous rayonnements ionisants en installations nucléaires.",
+                      "Formation PCR niveau 3 secteur RN"
+                    ]
+                  },
+                  {
+                    "title": "EDF",
+                    "subpoints": [
+                      "Formations STARS : Stage Technique d’Appui Radioprotection et Sécurité",
+                      "Formations CIN (Agrément N°41)",
+                      "Formations Savoir Commun du Nucléaire et Complément Sûreté Qualité",
+                      "Formations CIN (Agrément N°41) : Savoir Commun du Nucléaire, Complément Sûreté Qualité et Radioprotection RN"
+                    ]
+                  },
+                  {
+                    "title": "INRS",
+                    "subpoints": [
+                      "Formations Sauveteur Secouriste du Travail",
+                      "Formations Prévention des risques liés à l’activité physique"
+                    ]
+                  },
+                  {
+                    "title": "SFECE – Syndicat Français de l’Échafaudage, du Coffrage et de l’Étaiement",
+                    "subpoints": [
+                      "Formations Échafaudages"
+                    ]
+                  },
+                  {
+                    "title": "I.CERT",
+                    "subpoints": [
+                      "Certification pour dispenser des formations à la prévention des risques liés à l'amiante pour les travailleurs réalisant les activités relevant du 1er alinéa de l'article R.4412-94"
+                    ]
+                  },
+                  {
+                    "title": "GLOBAL CERTIFICATION Formation à la conduite en sécurité - Qualification testeur pour les familles d’équipement :",
+                    "subpoints": [
+                      "R386 –Plates-formes élévatrices mobiles de personnes, catégories 1A-1B-3A-3B",
+                      "R389 – Chariots automoteurs de manutention à conducteur porté, catégories 1-2-3-4-5 "
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "marqueId": 6,
+      "imgService": "assets/img/39.jpg", 
+      "imgMarque": "assets/img/marques/6.jpg",
+      "icon": "\uf039",
+      "title": "Intérim",
+      "content": {     
+        "title": "Intérim",  
+        "keys": [
+          {"label": "+ 1500", "nb": "clients"},
+          {"label": "17 000", "nb": "intérimaires"},
+          {"label": "3 461 762", "nb": "heures de délégation"},
+          {"label": "+ 40", "nb": "années d'expérience"}
+        ],
+        "intro": ["Axxis Intérim et Recrutement, développe son expertise en recrutement-placement et dans le domaine de la délégation de personnel intérimaire, avec la conviction que le respect de l’individu, de la réglementation, des engagements permet à chacun d’évoluer dans un environnement plus sûr, propice à l’expression de tous les talents."],
+        "parts":[
+          {
+            "title":"DOMAINES DE SPÉCIALISATION D'AXXIS INTÉRIM ET RECRUTEMENT",
+            "paragraphes": [
+              {
+                "accrPoints": "Axxis Intérim et Recrutement est expert dans les secteurs à fortes contraintes :",
+                "points": [        
+                  {"title": "nucléaire,"},
+                  {"title": "aéroportuaire,"},
+                  {"title": "travaux subaquatiques"},
+                  {"title": "maintenance industrielle."}
+                ]
+              },
+              {
+                "accrPoints": "Il dispose également de savoir-faire dans les domaines suivants:",
+                "points": [        
+                  {"title": "logistique,"},
+                  {"title": "BTP,"},
+                  {"title": "électricité"},
+                  {"title": "services,"},
+                  {"title": "notariat..."}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "FORMATION DES INTÉRIMAIRES",
+            "paragraphes" : [
+              {"description": "Afin d'anticiper l'évolution des besoins de nos clients, Axxis Intérim & Recrutement s'engage à faire évoluer ses intérimaires en compétences, à apporter son conseil et à mettre en place les dispositifs de formations adaptées (formation continue ou formation en alternance)."},
+              {
+                "accrPoints": "Par ailleurs, un budget conséquent est alloué à la formation de nos collaborateurs intérimaires afin de :",
+                "points": [        
+                  {"title": "Maintenir à jour certaines habilitations sur des postes très spécifiques (Nucléaire, Aéroportuaire, Maintenance Industrielle ...)"},
+                  {"title": "Manager la prévention des risques (SST, sensibilisation à la sécurité incendie...)"},
+                  {"title": "Faire évoluer nos collaborateurs intérimaires (CACES, pontier, Fimo,...)"}
+                ]
+              },
+              {"description": "Avec le soutien d’ Axxis Formation, nos agences constituent régulièrement des dossiers de formation CDPI, CIPI et contrat de professionnalisation. Nous encourageons et aidons nos collaborateurs intérimaires à bénéficier de formations qualifiantes longues à constituer des dossiers dans le cadre du FAFTT."},
+              {
+                "accrPoints": "Les différents dispositifs de formation à disposition des intérimaires sont :",
+                "points": [        
+                  {"title": "Le Contrat de Développement Professionnel Intérimaire (C.D.P.I.): Dispositif spécifique au travail temporaire, ce contrat permet à des intérimaires peu ou pas qualifiés de compléter leur expérience acquise lors de missions par une formation qualifiante."},
+                  {"title": "Le Contrat de Développement Professionnel Intérimaire (C.D.P.I.): Dispositif spécifique au travail temporaire, ce contrat permet à des intérimaires peu ou pas qualifiés de compléter leur expérience acquise lors de missions par une formation qualifiante."},
+                  {"title": "Le Contrat de Professionnalisation: Ce contrat favorise l'insertion ou la réinsertion professionnelle et permet l'acquisition d'une qualification reconnue. Il s'adresse aux intérimaires et aux permanents des entreprises de travail temporaire."},
+                  {"title": "Le Contrat d’apprentissage: L’apprentissage en intérim devient possible. Une entreprise de travail temporaire peut mettre à disposition d’une entreprise utilisatrice un apprenti. L’objectif : acquérir des compétences en milieu professionnel."}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Le réseau national COALYS",
+            "paragraphes" : [
+              {"description": "En septembre 2010, Axxis Intérim et Recrutement, s'est rapprochée des deux entreprises de travail temporaire – Triangle et DLSI - afin de créer Coalys."},
+              {"description":"En janvier 2012, un quatrième partenaire, Régional Intérim rejoint Coalys afin de compléter la couverture nationale."},
+              {"description": "Par l'intermédiaire de ce réseau de plus de 200 agences de travail temporaire, les membres de Coalys proposent une offre couvrant le territoire national."},
+              {"description": "Coalys allie les qualités de la taille humaine de ses acteurs (proximité, réactivité, ...) et les qualités des Majors de la profession (Couverture nationale, éventail des spécialités, outils et méthodologies,...)."}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "marqueId": 6,
+      "imgService": "assets/img/40.jpg", 
+      "imgMarque": "assets/img/marques/6.jpg",
+      "icon": "\uf040",
+      "pertinence": "bas",      
+      "title": "Recrutement",
+      "content": {     
+        "title": "Recrutement",  
+        "subtitle": "Le recrutement, clé de la réussite de votre entreprise",
+        "intro": [
+          "Le recrutement, clé de la réussite de votre entreprise, répond à une méthodologie rigoureuse.",
+          "Axxis Intérim et Recrutement propose au choix, une prestation complète de recrutement ou une prestation à la carte selon vos besoins :"
+        ],
+        "pointsIntro": [
+          "analyse de postes,",
+          "sourcing,",
+          "rédaction et publication d’annonces,",
+          "tri de CV,",
+          "pré-qualification téléphonique,",
+          "entretien,",
+          "contrôle de références,",
+          "etc."
+        ],
+        "parts":[
+          {
+            "title":"Axxis Intérim et Recrutement, le recrutement CDD et CDI",
+            "paragraphes": [
+              {"description": "Notre réseau d'agences propose également une gamme complète de solutions pour accompagner les entreprises dans leurs recrutements en CDD ou CDI."}
+            ],
+            "subParts": [
+              {
+                "title": "CE QUE NOUS VOUS OFFRONS",
+                "paragraphes": [
+                  {
+                    "points": [        
+                      {"title": "La connaissance du marché de l’emploi, des spécificités de nos clients, des secteurs d’activités avec lesquels nous travaillons."},
+                      {"title": "La réactivité acquise dans notre métier d’origine, le travail temporaire, et transposée au recrutement CDD/CDI."},
+                      {"title": "Le réseau de proximité en relation permanente avec les candidats qui nous permet de vous proposer dans les meilleurs délais les profils les plus adaptés."},
+                      {"title": "Le savoir-faire et le professionnalisme de spécialistes du recrutement pour tout type de profil, de l’ouvrier au Cadre."},
+                      {
+                        "title": "Le sourcing candidat performant :",
+                        "subpoints": [
+                          "une base de données nationale et partagée,",
+                          "notre site Internet,",
+                          "nos partenariats Pôle Emploi,",
+                          "Cadremploi,",
+                          "APEC,",
+                          "missions locales,",
+                          "écoles…"
+                        ]
+                      }
+                    ]
+                  },
+                  {"description": "Notre réseau d’agences bénéficie du soutien des consultants experts de sa filiale Société Européenne de Sélection (SES)."},
+                  {"description": "SES bénéficie de plus de 25 ans d’expérience dans le conseil RH et le recrutement."},
+                  {"description": "Notre expertise et notre expérience nous permettent de répondre à l’ensemble des projets sur tous les secteurs d’activité, de la TPE au grand groupe."}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Amea, le recrutement des cadres et cadres dirigeants",
+            "paragraphes": [
+              {"description": "Implanté à Aix en Provence depuis sa création, notre Cabinet intervient dans le secteur Privé (PME et Grands Groupes de services) et dans le secteur Public (Collectivités Territoriales, EPA, EPIC, SEM)."},
+              {"description": "AMEA Conseil est spécialisé dans le conseil en ressources Humaines et le recrutement de Cadres et Cadres Dirigeants."},
+              {"description": "L’expérience des Consultants d’AMEA Conseil, issus du monde de l’entreprise où ils ont exercé des responsabilités opérationnelles est un gage de réelle compréhension des besoins des clients qui leur ont accordé leur confiance sur la durée."},
+              {"description": "Notre engagement, vis-à-vis de nos clients et des candidats est bâti sur une relation de confiance qui s’affirme dans la durée."},
+              {"description": "AMEA Conseil, adhérent à la charte de déontologie de Syntec, s'engage à respecter la déontologie de la profession, notamment les règles de confidentialité."}
+            ]
+          },
+          {
+            "title": "Diversité",
+            "paragraphes": [
+              {"description": "L’emploi des seniors, la non-discrimination à l’embauche et l’insertion professionnelle des personnes handicapées sont les axes sociaux sur lesquels nous nous engageons."},
+              {"description": "Cette volonté se concrétise par la signature de la Charte de la Diversité, et par l’adhésion à la charte de déontologie de la Fédération Syntec Conseil en Recrutement (respect de la déontologie de la profession, notamment des règles de confidentialité). "}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "marqueId": 6,
+      "imgService": "assets/img/41.jpg", 
+      "imgMarque": "assets/img/marques/6.jpg",
+      "icon": "\uf041",
+      "pertinence": "bas",       
+      "title": "Formation",
+      "content": {     
+        "title": "Formation",  
+        "subtitle": "Axxis Formation",
+        "keys": "",
+        "parts":[
+          {
+            "paragraphes": [
+              {"description": "Axxis Formation intervient dans les domaines d’activités couverts par le groupe Onet pour la formation des intérimaires et plus largement auprès d’entreprises de toutes tailles pour les aider à élaborer et mettre en œuvre un plan cohérent de développement des compétences."},
+              {"description": "Axxis Formation est un organisme de formation certifié ISO 9001, couvrant le territoire national."},
+              {"description": "Nos formations ont pour objectif de développer les compétences des collaborateurs et/ou faciliter l’accès à l’emploi."},
+              {
+                "accrPoints": "Nous intervenons en amont des projets de formation pour :",
+                "points": [
+                  {"title": "Optimiser le montage financier des dispositifs"},
+                  {"title": "Proposer une formation sur mesure élaborée par un consultant expert du domaine"},
+                  {"title": "Réunir les conditions nécessaires à l’atteinte des objectifs avec validation des acquis"}
+                ]
+              },
+              {"description": "L’ingénierie de formation que nous développons depuis plus de 20 ans, permet de proposer aux clients une approche basée sur l’accompagnement et le conseil."},
+              {"description": "Les dispositifs formation sont élaborés en tenant compte des enjeux du client avec l’objectif d’optimiser les budgets emploi/formation."}
+            ]
+          },
+          {
+            "title": "Un conseil sur-mesure pour chaque problématique de formation",
+            "paragraphes": [
+              {"description": "Après entretien avec le dirigeant, notre consultant évalue les besoins en compétences et en formation de l’entreprise et présente les réponses pouvant être apportées."},
+              {
+                "accrPoints": "Avec un regard objectif et professionnel, nos consultants formation appuient leur démarche sur :",
+                "points": [ 
+                  {"title": "L’appréhension du projet d’entreprise et des priorités d’évolution"},
+                  {"title": "L'identification des problématiques formation"},
+                  {"title": "L’élaboration d’une réponse en lien avec les points forts et les axes d’amélioration de l’entreprise dans le cadre d’un budget maitrisé"}
+                ]
+              },
+              {"description": "Expert du conseil en formation, ils vous livreront des pistes d’amélioration, vous conseilleront dans le choix des solutions à mettre en place et vous accompagneront dans l’optimisation de votre plan de développement des compétences."}
+            ]
+          },
+          {
+            "title": "Une démarche d'amélioration continue",
+            "paragraphes": [
+              {"description": "A l’issue de chaque formation, nous réalisons des évaluations qualité auprès des stagiaires et du formateur. Les résultats sont systématiquement communiqués au client."},
+              {"description": "Une enquête de satisfaction client est réalisée chaque trimestre. Ces résultats sont exploités dans le cadre de notre démarche d’amélioration continue."}
+            ],
+            "subParts": [
+              {
+                "title": "ENQUÊTE DE SATISFACTION CLIENTS AXXIS FORMATION JANVIER 2016 (BASE : 32% DE CLIENTS AYANT RÉPONDU À L’ENQUÊTE)",
+                "paragraphes": [
+                  {"descriptionBold": "100% des clients recommanderaient Axxis Formation"},
+                  {
+                    "accrPoints": "Détail des résultats :",
+                    "points": [         
+                        {"title": "Qualité de la réponse pédagogique en fonction du contexte : note 3,8/4 soit 95% de clients satisfaits"},
+                        {"title": "Bonne identification des objectifs de la formation : note 4/4 soit 100% de clients satisfaits"},
+                        {"title": "Qualité de la prise en charge et suivi administratif de la session de formation : note 3,6/4 soit 90% de clients satisfaits"},
+                        {"title": "Bonne adéquation des moyens pédagogiques, techniques et d'encadrement : note 3,7/4 soit 92% des clients satisfaits"},
+                        {"title": "Respect des engagements (Qualité/délai) : note 3,7/4 soit 94% de clients satisfaits"},
+                        {"title": "Qualité de l'intervenant : note 3,9/4 soit 98% des clients satisfaits."}
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Témoignage Client",
+            "paragraphes": [
+              {"description": "« J’ai pu apprécier la capacité d’Axxis Formation à nous accompagner grâce à la qualité de son ingénierie de formation. Nous avons ressenti une véritable écoute qui a permis à Axxis Formation d’élaborer des parcours en Management de proximité et gestion du temps prenant réellement en compte les spécificités de notre contexte. Les deux formatrices Axxis Formation ont été, en outre, très efficaces ». Joel Budanic Responsable Ressources Humaines d’EveRé"}
+            ]
+          },
+          {
+            "title": "Éléments clés d'Axxis Formation ",
+            "paragraphes":[
+              {
+                "points": [         
+                  {"title": "20 ans d’expérience"},
+                  {"title": "Une méthodologie découpée en 5 axes pour placer le client au centre du process  (l’identification des objectifs, l’adaptation des dispositifs, l’adéquation des moyens pédagogique, l’évaluation et le suivi des actions post formation)"},
+                  {"title": "L'expertise des consultants dans l'élaboration de dispositifs de formation"},
+                  {"title": "Des formateurs systématiquement évalués"},
+                  {"title": "Certifications (ISO, TOEIC, PCIE, titre professionnel gestion de la paie"},
+                  {"title": "Un maillage national avec un réseau de consultants et de formateurs en proximité"}
+                ]
+              }
+            ]
+          }
+        ],
+        "areas":
+        [
+          {
+            "title": "DOMAINES D'INTERVENTION",
+            "parts": [
+              {
+                "points":[
+                  "Aéroportuaire",
+                  "Management",
+                  "Développement personnel",
+                  "Commercial",
+                  "Droit",
+                  "Ressources humaines",
+                  "Bureautique (certification PCIE)",
+                  "Langues étrangères (certification TOEIC)",
+                  "Formations réglementaires"
+                ]
+              }
             ]
           }
         ]
