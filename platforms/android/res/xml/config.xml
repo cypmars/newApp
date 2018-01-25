@@ -33,9 +33,12 @@
         <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
         <param name="onload" value="true" />
     </feature>
-    <name>MyApp</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <feature name="SitewaertsDocumentViewer">
+        <param name="android-package" value="de.sitewaerts.cordova.documentviewer.DocumentViewerPlugin" />
+    </feature>
+    <name>Services Advisor</name>
+    <description>An awesome Polytech Students / Capgemini app.</description>
+    <author email="hi@ionicframework" href="http://ionicframework.com/">Quock HOANG</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -72,10 +75,5 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
-    <feature name="StreamingMedia">
-        <param name="android-package" value="com.hutchind.cordova.plugins.streamingmedia.StreamingMedia" />
-    </feature>
-    <feature name="SitewaertsDocumentViewer">
-        <param name="android-package" value="de.sitewaerts.cordova.documentviewer.DocumentViewerPlugin" />
-    </feature>
+    <preference name="YouTubeDataApiKey" value="AIzaSyATNVkp4Z4x4TLYIQGPLyPsyOGxhAy9CDI" />
 </widget>

@@ -2,49 +2,49 @@
   "_args": [
     [
       {
-        "raw": "cordova-plugin-speechrecognition",
+        "raw": "cordova-plugin-speechrecognition@^1.1.2",
         "scope": null,
         "escapedName": "cordova-plugin-speechrecognition",
         "name": "cordova-plugin-speechrecognition",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^1.1.2",
+        "spec": ">=1.1.2 <2.0.0",
+        "type": "range"
       },
       "C:\\Users\\Cyprien\\Desktop\\newApp2"
     ]
   ],
-  "_from": "cordova-plugin-speechrecognition@latest",
-  "_id": "cordova-plugin-speechrecognition@1.1.2",
+  "_from": "cordova-plugin-speechrecognition@>=1.1.2 <2.0.0",
+  "_id": "cordova-plugin-speechrecognition@1.2.0",
   "_inCache": true,
   "_location": "/cordova-plugin-speechrecognition",
-  "_nodeVersion": "7.4.0",
+  "_nodeVersion": "7.7.1",
   "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/cordova-plugin-speechrecognition-1.1.2.tgz_1487852186657_0.8749005801510066"
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-speechrecognition-1.2.0.tgz_1511816499593_0.8542067820671946"
   },
   "_npmUser": {
     "name": "pbakondy",
     "email": "pbakondy@gmail.com"
   },
-  "_npmVersion": "4.0.5",
+  "_npmVersion": "4.1.2",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "cordova-plugin-speechrecognition",
+    "raw": "cordova-plugin-speechrecognition@^1.1.2",
     "scope": null,
     "escapedName": "cordova-plugin-speechrecognition",
     "name": "cordova-plugin-speechrecognition",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^1.1.2",
+    "spec": ">=1.1.2 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-speechrecognition/-/cordova-plugin-speechrecognition-1.1.2.tgz",
-  "_shasum": "14503dac334e166a4cc4b87478b8ff72437e54ee",
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-speechrecognition/-/cordova-plugin-speechrecognition-1.2.0.tgz",
+  "_shasum": "005f10c896fd9293d8587fe5522a2b642dea970a",
   "_shrinkwrap": null,
-  "_spec": "cordova-plugin-speechrecognition",
+  "_spec": "cordova-plugin-speechrecognition@^1.1.2",
   "_where": "C:\\Users\\Cyprien\\Desktop\\newApp2",
   "author": {
     "name": "Peter Bakondy"
@@ -64,8 +64,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "14503dac334e166a4cc4b87478b8ff72437e54ee",
-    "tarball": "https://registry.npmjs.org/cordova-plugin-speechrecognition/-/cordova-plugin-speechrecognition-1.1.2.tgz"
+    "shasum": "005f10c896fd9293d8587fe5522a2b642dea970a",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-speechrecognition/-/cordova-plugin-speechrecognition-1.2.0.tgz"
   },
   "engines": [
     {
@@ -73,7 +73,7 @@
       "version": ">=3.0.0"
     }
   ],
-  "gitHead": "9302a31f7007a0180bd291e52da4130b48661924",
+  "gitHead": "6a1e773da555e25d56acd9c63253415d530af058",
   "homepage": "https://github.com/pbakondy/cordova-plugin-speechrecognition#readme",
   "keywords": [
     "cordova",
@@ -98,5 +98,5 @@
     "url": "git+https://github.com/pbakondy/cordova-plugin-speechrecognition.git"
   },
   "scripts": {},
-  "version": "1.1.2"
+  "version": "1.2.0"
 }

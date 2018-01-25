@@ -1,15 +1,15 @@
 webpackJsonp([11],{
 
-/***/ 309:
+/***/ 429:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Chat2PageModule", function() { return Chat2PageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__ = __webpack_require__(626);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat2__ = __webpack_require__(629);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__ = __webpack_require__(729);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat2__ = __webpack_require__(732);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -46,13 +46,13 @@ Chat2PageModule = __decorate([
 
 /***/ }),
 
-/***/ 626:
+/***/ 729:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TextToSpeech; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(78);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -151,16 +151,16 @@ var TextToSpeech = (function (_super) {
 
 /***/ }),
 
-/***/ 629:
+/***/ 732:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Chat2Page; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__ = __webpack_require__(626);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__ = __webpack_require__(729);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__ = __webpack_require__(151);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -236,9 +236,7 @@ var Chat2Page = (function () {
                 userId: this.toUser._id,
                 username: this.toUser.username,
                 pic: this.toUser.pic,
-                text: {
-                    speech: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?"
-                }
+                text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?"
             }
         ];
         ApiAIPlugin.init({
@@ -320,61 +318,103 @@ var Chat2Page = (function () {
             });
         }
     };
-    Chat2Page.prototype.SendText = function (query) {
+    Chat2Page.prototype.SendText = function (query, messages) {
         return __awaiter(this, void 0, void 0, function () {
-            var messages0, message0, messages1, message1, messages2, message2;
+            var _this = this;
+            var _loop_1, _i, messages_1, message;
             return __generator(this, function (_a) {
-                messages0 = [
-                    "Bon je dois t'avouer quelque chose ...",
-                    "Il y a quelque chose que je dois te dire ...",
-                    "Je dois te faire une confidence ... Oui ça va vite entre nous !"
-                ];
-                message0 = messages0[Math.floor(Math.random() * messages0.length)];
-                this.messages.push({
-                    toId: this.user._id,
-                    _id: this.messages.length,
-                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                    userId: this.toUser._id,
-                    username: this.toUser.username,
-                    pic: this.toUser.pic,
-                    text: message0
-                });
-                messages1 = [
-                    "Je suis installé mais j'ai pas encore bien bossé cette partie ... Pourrais-tu revenir un peu plus tard ?",
-                    "Je me dois d'être honnête envers toi, je ne suis pas au point pour le moment ..."
-                ];
-                message1 = messages1[Math.floor(Math.random() * messages1.length)];
-                this.messages.push({
-                    toId: this.user._id,
-                    _id: this.messages.length,
-                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                    userId: this.toUser._id,
-                    username: this.toUser.username,
-                    pic: this.toUser.pic,
-                    text: message1
-                });
-                messages2 = [
-                    "Tu peux me retrouver dans la partie recherche, je te guiderai au mieux !",
-                    "Retrouve moi dans la partie recherche et ensemble nous parviendrons à déterminer ton besoin"
-                ];
-                message2 = messages2[Math.floor(Math.random() * messages2.length)];
-                this.messages.push({
-                    toId: this.user._id,
-                    _id: this.messages.length,
-                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                    userId: this.toUser._id,
-                    username: this.toUser.username,
-                    pic: this.toUser.pic,
-                    text: message2
-                });
-                return [2 /*return*/];
+                switch (_a.label) {
+                    case 0:
+                        _loop_1 = function (message) {
+                            var e_2;
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0:
+                                        _a.trys.push([0, 2, , 3]);
+                                        return [4 /*yield*/, ApiAIPlugin.requestText({
+                                                query: query,
+                                                originalRequest: {
+                                                    source: 'WWT chat bot',
+                                                    data: 'messages'
+                                                }
+                                            }, function (response) {
+                                                console.log(JSON.stringify(response));
+                                                console.log(JSON.stringify(response.result));
+                                                var speech = response.result.fulfillment;
+                                                if (response.result.fulfillment.speech) {
+                                                    console.log(speech);
+                                                    if (_this.platform.is('ios')) {
+                                                        _this.messages.push({
+                                                            toId: _this.user._id,
+                                                            _id: _this.messages.length,
+                                                            date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                                            userId: _this.toUser._id,
+                                                            username: _this.toUser.username,
+                                                            pic: _this.toUser.pic,
+                                                            text: message
+                                                        });
+                                                        _this.ref.detectChanges();
+                                                    }
+                                                    else {
+                                                        _this.messages.push({
+                                                            toId: _this.user._id,
+                                                            _id: 2,
+                                                            date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                                            userId: _this.toUser._id,
+                                                            username: _this.toUser.username,
+                                                            pic: _this.toUser.pic,
+                                                            text: message
+                                                        });
+                                                        _this.ref.detectChanges();
+                                                    }
+                                                }
+                                                else {
+                                                    _this.messages.push({
+                                                        toId: _this.user._id,
+                                                        _id: 2,
+                                                        date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                                                        userId: _this.toUser._id,
+                                                        username: _this.toUser.username,
+                                                        pic: _this.toUser.pic,
+                                                        text: message
+                                                    });
+                                                    _this.ref.detectChanges();
+                                                }
+                                            }, function (error) {
+                                                console.error(error);
+                                            })];
+                                    case 1:
+                                        _a.sent();
+                                        return [3 /*break*/, 3];
+                                    case 2:
+                                        e_2 = _a.sent();
+                                        alert(e_2);
+                                        return [3 /*break*/, 3];
+                                    case 3: return [2 /*return*/];
+                                }
+                            });
+                        };
+                        _i = 0, messages_1 = messages;
+                        _a.label = 1;
+                    case 1:
+                        if (!(_i < messages_1.length)) return [3 /*break*/, 4];
+                        message = messages_1[_i];
+                        return [5 /*yield**/, _loop_1(message)];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3:
+                        _i++;
+                        return [3 /*break*/, 1];
+                    case 4: return [2 /*return*/];
+                }
             });
         });
     };
     Chat2Page.prototype.SendTextFromVoice = function (query) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
-            var e_2;
+            var e_3;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -419,8 +459,8 @@ var Chat2Page = (function () {
                         _a.sent();
                         return [3 /*break*/, 3];
                     case 2:
-                        e_2 = _a.sent();
-                        alert(e_2);
+                        e_3 = _a.sent();
+                        alert(e_3);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
@@ -429,7 +469,7 @@ var Chat2Page = (function () {
     };
     Chat2Page.prototype.getSupportedLanguages = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var languages, e_3;
+            var languages, e_4;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -440,8 +480,8 @@ var Chat2Page = (function () {
                         console.log(languages);
                         return [2 /*return*/, languages];
                     case 2:
-                        e_3 = _a.sent();
-                        console.error(e_3);
+                        e_4 = _a.sent();
+                        console.error(e_4);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
@@ -450,7 +490,7 @@ var Chat2Page = (function () {
     };
     Chat2Page.prototype.hasPermission = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var permission, e_4;
+            var permission, e_5;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -461,8 +501,8 @@ var Chat2Page = (function () {
                         console.log(permission);
                         return [2 /*return*/, permission];
                     case 2:
-                        e_4 = _a.sent();
-                        console.log(e_4);
+                        e_5 = _a.sent();
+                        console.log(e_5);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
@@ -471,7 +511,7 @@ var Chat2Page = (function () {
     };
     Chat2Page.prototype.getPermission = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var permission, e_5;
+            var permission, e_6;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -482,8 +522,8 @@ var Chat2Page = (function () {
                         console.log(permission);
                         return [2 /*return*/, permission];
                     case 2:
-                        e_5 = _a.sent();
-                        console.log(e_5);
+                        e_6 = _a.sent();
+                        console.log(e_6);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
@@ -506,6 +546,7 @@ var Chat2Page = (function () {
     };
     Chat2Page.prototype.sendMessage = function () {
         return __awaiter(this, void 0, void 0, function () {
+            var messages0, messages1, messages2, messages;
             return __generator(this, function (_a) {
                 this.messages.push({
                     toId: this.toUser._id,
@@ -516,7 +557,24 @@ var Chat2Page = (function () {
                     pic: this.user.pic,
                     text: this.newMessage
                 });
-                this.SendText(this.newMessage);
+                messages0 = [
+                    "Bon je dois t'avouer quelque chose ...",
+                    "Il y a quelque chose que je dois te dire ...",
+                    "Je dois te faire une confidence ... Oui ça va vite entre nous !"
+                ];
+                this.message0 = messages0[Math.floor(Math.random() * messages0.length)];
+                messages1 = [
+                    "Je suis installé mais j'ai pas encore bien bossé cette partie ... Pourrais-tu revenir un peu plus tard ?",
+                    "Je me dois d'être honnête envers toi, je ne suis pas au point pour le moment ..."
+                ];
+                this.message1 = messages1[Math.floor(Math.random() * messages1.length)];
+                messages2 = [
+                    "Tu peux me retrouver dans la partie recherche, je te guiderai au mieux !",
+                    "Retrouve moi dans la partie recherche et ensemble nous parviendrons à déterminer ton besoin"
+                ];
+                this.message2 = messages2[Math.floor(Math.random() * messages2.length)];
+                messages = [this.message0, this.message1, this.message2];
+                this.SendText(this.newMessage, messages);
                 console.log(this.newMessage);
                 this.newMessage = "";
                 return [2 /*return*/];
@@ -532,7 +590,7 @@ var Chat2Page = (function () {
 }());
 Chat2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-chat2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/'\n\n  <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n  \n\n      </ion-buttons>\n\n      <ion-title>\n\n        Chat-Bot\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content padding>\n\n  <div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">\n\n    <div *ngIf="user._id !== message.userId">\n\n      <img class="profile-pic left" [src]="toUser.pic" />\n\n      <div class="chat-bubble left slide-left">\n\n          \n\n         <div class="message" [innerHTML]="message.text.speech" autolinker></div>\n\n          \n\n        <div class="message-detail">\n\n          <span class="bold">{{toUser.username}}</span>\n\n        </div>\n\n          \n\n      </div>\n\n    </div>\n\n    <div *ngIf="user._id === message.userId">\n\n      <img class="profile-pic right" [src]="user.pic" />\n\n\n\n      <div class="chat-bubble right slide-right">\n\n          \n\n        <div class="message" [innerHTML]="message.text" autolinker></div>\n\n\n\n        <div class="message-detail">\n\n          <span class="bold">{{user.username}}</span>\n\n        </div>\n\n\n\n      </div>\n\n    </div>\n\n    <div class="cf"></div>\n\n  </div>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col>\n\n            <button ion-button clear (click)="listenForSpeech()"><ion-icon class="footer-btn" name="mic"></ion-icon></button>\n\n        </ion-col>\n\n        <ion-col col-8>\n\n            <ion-input [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>\n\n        </ion-col>\n\n        <ion-col>\n\n            <button ion-button clear (click)="sendMessage()"><ion-icon class="footer-btn" name="send"></ion-icon></button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/
+        selector: 'page-chat2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/'\n\n  <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n  \n\n      </ion-buttons>\n\n      <ion-title>\n\n        Chat-Bot\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content padding>\n\n  <div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">\n\n    <div *ngIf="user._id !== message.userId">\n\n      <img class="profile-pic left" [src]="toUser.pic" />\n\n      <div class="chat-bubble left slide-left">\n\n          \n\n         <div class="message" [innerHTML]="message.text" autolinker></div>\n\n          \n\n        <div class="message-detail">\n\n          <span class="bold">{{toUser.username}}</span>\n\n        </div>\n\n          \n\n      </div>\n\n    </div>\n\n    <div *ngIf="user._id === message.userId">\n\n      <img class="profile-pic right" [src]="user.pic" />\n\n\n\n      <div class="chat-bubble right slide-right">\n\n          \n\n        <div class="message" [innerHTML]="message.text" autolinker></div>\n\n\n\n        <div class="message-detail">\n\n          <span class="bold">{{user.username}}</span>\n\n        </div>\n\n\n\n      </div>\n\n    </div>\n\n    <div class="cf"></div>\n\n  </div>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col>\n\n            <button ion-button clear (click)="listenForSpeech()"><ion-icon class="footer-btn" name="mic"></ion-icon></button>\n\n        </ion-col>\n\n        <ion-col col-8>\n\n            <ion-input [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>\n\n        </ion-col>\n\n        <ion-col>\n\n            <button ion-button clear (click)="sendMessage()"><ion-icon class="footer-btn" name="send"></ion-icon></button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"], __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__["a" /* SpeechRecognition */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__["a" /* TextToSpeech */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Platform */]])
 ], Chat2Page);

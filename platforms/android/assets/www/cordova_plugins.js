@@ -23,19 +23,19 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-speechrecognition.SpeechRecognition",
-    "file": "plugins/cordova-plugin-speechrecognition/www/speechRecognition.js",
-    "pluginId": "cordova-plugin-speechrecognition",
-    "merges": [
-      "window.plugins.speechRecognition"
-    ]
-  },
-  {
     "id": "cordova-plugin-tts.tts",
     "file": "plugins/cordova-plugin-tts/www/tts.js",
     "pluginId": "cordova-plugin-tts",
     "clobbers": [
       "TTS"
+    ]
+  },
+  {
+    "id": "cordova-plugin-speechrecognition.SpeechRecognition",
+    "file": "plugins/cordova-plugin-speechrecognition/www/speechRecognition.js",
+    "pluginId": "cordova-plugin-speechrecognition",
+    "merges": [
+      "window.plugins.speechRecognition"
     ]
   },
   {
@@ -64,14 +64,6 @@ module.exports = [
     "runs": true
   },
   {
-    "id": "com.hutchind.cordova.plugins.streamingmedia.StreamingMedia",
-    "file": "plugins/com.hutchind.cordova.plugins.streamingmedia/www/StreamingMedia.js",
-    "pluginId": "com.hutchind.cordova.plugins.streamingmedia",
-    "clobbers": [
-      "streamingMedia"
-    ]
-  },
-  {
     "id": "cordova-plugin-youtube-video-player.YoutubeVideoPlayer",
     "file": "plugins/cordova-plugin-youtube-video-player/plugins/com.bunkerpalace.cordova.YoutubeVideoPlayer/www/YoutubeVideoPlayer.js",
     "pluginId": "cordova-plugin-youtube-video-player",
@@ -93,14 +85,13 @@ module.exports.metadata =
 // TOP OF METADATA
 {
   "cordova-plugin-apiai": "1.7.4",
-  "cordova-plugin-speechrecognition": "1.1.2",
   "cordova-plugin-tts": "0.2.3",
-  "cordova-plugin-device": "1.1.4",
+  "cordova-plugin-speechrecognition": "1.1.2",
+  "cordova-plugin-device": "1.1.7",
   "cordova-plugin-ionic-webview": "1.1.16",
-  "cordova-plugin-splashscreen": "4.0.3",
-  "cordova-plugin-whitelist": "1.3.1",
+  "cordova-plugin-splashscreen": "4.1.0",
+  "cordova-plugin-whitelist": "1.3.3",
   "ionic-plugin-keyboard": "2.2.1",
-  "com.hutchind.cordova.plugins.streamingmedia": "0.1.4",
   "cordova-plugin-youtube-video-player": "1.0.6",
   "cordova-plugin-document-viewer": "0.9.7"
 };

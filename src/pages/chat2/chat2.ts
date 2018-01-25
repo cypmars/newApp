@@ -43,9 +43,7 @@ export class Chat2Page {
       userId: this.toUser._id,
       username: this.toUser.username,
       pic: this.toUser.pic,
-      text: {
-        speech: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?"
-      }
+      text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?"
     }
   ];
 
@@ -59,6 +57,9 @@ export class Chat2Page {
   newMessage: {};
   responseMessage: {};
 
+  message0;
+  message1;
+  message2;
   constructor(private ref: ChangeDetectorRef, private speech: SpeechRecognition, private tts: TextToSpeech, public navCtrl: NavController, public platform: Platform) {
       ApiAIPlugin.init(
       {
@@ -142,53 +143,68 @@ export class Chat2Page {
     }
   }
 
-  async SendText(query):Promise<any> {
-    var messages0 = [
-      "Bon je dois t'avouer quelque chose ...",
-      "Il y a quelque chose que je dois te dire ...",
-      "Je dois te faire une confidence ... Oui ça va vite entre nous !"
-    ];
-    let message0=messages0[Math.floor(Math.random() * messages0.length)];
-    this.messages.push({
-      toId: this.user._id,
-      _id: this.messages.length,
-      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-      userId: this.toUser._id,
-      username: this.toUser.username,
-      pic: this.toUser.pic,
-      text: message0
-    });
+  async SendText(query, messages):Promise<any> {
 
-    let messages1 = [
-      "Je suis installé mais j'ai pas encore bien bossé cette partie ... Pourrais-tu revenir un peu plus tard ?",
-      "Je me dois d'être honnête envers toi, je ne suis pas au point pour le moment ..."
-    ];
-    var message1=messages1[Math.floor(Math.random() * messages1.length)];
-    this.messages.push({
-      toId: this.user._id,
-      _id: this.messages.length,
-      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-      userId: this.toUser._id,
-      username: this.toUser.username,
-      pic: this.toUser.pic,
-      text: message1
-    });
-
-    let messages2 = [
-      "Tu peux me retrouver dans la partie recherche, je te guiderai au mieux !",
-      "Retrouve moi dans la partie recherche et ensemble nous parviendrons à déterminer ton besoin"
-    ];
-    var message2=messages2[Math.floor(Math.random() * messages2.length)];
-
-    this.messages.push({
-      toId: this.user._id,
-      _id: this.messages.length,
-      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-      userId: this.toUser._id,
-      username: this.toUser.username,
-      pic: this.toUser.pic,
-      text: message2
-    });
+    for (let message of messages)
+    {
+      try {
+        await ApiAIPlugin.requestText(
+          {
+            query,
+            originalRequest: {
+              source: 'WWT chat bot',
+              data: 'messages'
+            }
+          },
+           (response) => {
+             console.log(JSON.stringify(response))
+             console.log(JSON.stringify(response.result))
+             let speech = response.result.fulfillment;
+               if(response.result.fulfillment.speech){
+                 console.log(speech);
+                 if(this.platform.is('ios')){
+                    this.messages.push({
+                      toId: this.user._id,
+                      _id: this.messages.length,
+                      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                      userId: this.toUser._id,
+                      username: this.toUser.username,
+                      pic: this.toUser.pic,
+                      text: message
+                    }); 
+                  this.ref.detectChanges();
+                } else {
+                  this.messages.push({      
+                    toId: this.user._id,
+                    _id: 2,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: this.toUser._id,
+                    username: this.toUser.username,
+                    pic: this.toUser.pic,
+                    text: message
+                  });
+                  this.ref.detectChanges();
+                }
+               } else {
+                 this.messages.push({
+                  toId: this.user._id,
+                  _id: 2,
+                  date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                  userId: this.toUser._id,
+                  username: this.toUser.username,
+                  pic: this.toUser.pic,
+                  text: message
+                });
+                this.ref.detectChanges();
+               }
+            },
+            (error) => {
+                console.error(error);
+            });
+    } catch (e) {
+        alert(e);
+    }
+    }
     // try {
     //     await ApiAIPlugin.requestText(
     //       {
@@ -343,7 +359,28 @@ export class Chat2Page {
       pic: this.user.pic,
       text: this.newMessage
     });
-    this.SendText(this.newMessage);
+
+    var messages0 = [
+      "Bon je dois t'avouer quelque chose ...",
+      "Il y a quelque chose que je dois te dire ...",
+      "Je dois te faire une confidence ... Oui ça va vite entre nous !"
+    ];
+    this.message0 = messages0[Math.floor(Math.random() * messages0.length)];
+
+    let messages1 = [
+      "Je suis installé mais j'ai pas encore bien bossé cette partie ... Pourrais-tu revenir un peu plus tard ?",
+      "Je me dois d'être honnête envers toi, je ne suis pas au point pour le moment ..."
+    ];
+    this.message1=messages1[Math.floor(Math.random() * messages1.length)];
+
+    let messages2 = [
+      "Tu peux me retrouver dans la partie recherche, je te guiderai au mieux !",
+      "Retrouve moi dans la partie recherche et ensemble nous parviendrons à déterminer ton besoin"
+    ];
+    this.message2=messages2[Math.floor(Math.random() * messages2.length)];
+
+    let messages= [this.message0, this.message1, this.message2];
+    this.SendText(this.newMessage, messages);
     console.log(this.newMessage);
     this.newMessage="";
   }
