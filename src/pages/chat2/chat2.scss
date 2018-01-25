@@ -233,10 +233,6 @@ page-chat2 {
     top: -3px;
   }
   
-  input, textarea, .item-input, .item-input-wrapper {
-    background-color: rgba(255,255,255,0.8) !important;
-  }
-  
   .bold {
     font-weight: bold;
   }
@@ -288,10 +284,6 @@ page-chat2 {
   }
 
   ion-footer{
-    background-color: rgba(255,255,255,0.8);
-  }
-
-  ion-input{
     background-color: rgba(255,255,255,0.8);
   }
 }

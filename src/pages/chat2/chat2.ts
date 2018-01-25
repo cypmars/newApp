@@ -148,7 +148,7 @@ export class Chat2Page {
       "Il y a quelque chose que je dois te dire ...",
       "Je dois te faire une confidence ... Oui ça va vite entre nous !"
     ];
-    var message0=messages0[Math.floor(Math.random() * messages0.length)];
+    let message0=messages0[Math.floor(Math.random() * messages0.length)];
     this.messages.push({
       toId: this.user._id,
       _id: this.messages.length,
@@ -159,7 +159,7 @@ export class Chat2Page {
       text: message0
     });
 
-    var messages1 = [
+    let messages1 = [
       "Je suis installé mais j'ai pas encore bien bossé cette partie ... Pourrais-tu revenir un peu plus tard ?",
       "Je me dois d'être honnête envers toi, je ne suis pas au point pour le moment ..."
     ];
@@ -174,9 +174,9 @@ export class Chat2Page {
       text: message1
     });
 
-    var messages2 = [
+    let messages2 = [
       "Tu peux me retrouver dans la partie recherche, je te guiderai au mieux !",
-      "Retrouve moi dans la partie recherche et ensemble nous parviendrons à déterminer ton besoin",
+      "Retrouve moi dans la partie recherche et ensemble nous parviendrons à déterminer ton besoin"
     ];
     var message2=messages2[Math.floor(Math.random() * messages2.length)];
 

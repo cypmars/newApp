@@ -26103,10 +26103,6 @@ page-chat2 .msg-header-username {
   top: -3px;
 }
 
-page-chat2 input, page-chat2 textarea, page-chat2 .item-input, page-chat2 .item-input-wrapper {
-  background-color: rgba(255, 255, 255, 0.8) !important;
-}
-
 page-chat2 .bold {
   font-weight: bold;
 }
@@ -26152,10 +26148,6 @@ page-chat2 .loader .ion-loading-c {
 }
 
 page-chat2 ion-footer {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-page-chat2 ion-input {
   background-color: rgba(255, 255, 255, 0.8);
 }
 

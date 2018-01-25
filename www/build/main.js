@@ -75,11 +75,11 @@ var map = {
 		9
 	],
 	"../pages/news/news.module": [
-		311,
+		312,
 		5
 	],
 	"../pages/newsDetails/newsDetails.module": [
-		312,
+		311,
 		10
 	],
 	"../pages/productDetails/productDetails.module": [
@@ -95,11 +95,11 @@ var map = {
 		8
 	],
 	"../pages/signup/signup.module": [
-		316,
+		317,
 		6
 	],
 	"../pages/simple-form/simple-form.module": [
-		317,
+		316,
 		2
 	],
 	"../pages/simple-form1/simple-form1.module": [
@@ -207,13 +207,13 @@ AppModule = __decorate([
                 links: [
                     { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/marqueDetails/marqueDetails.module#MarqueDetailsPageModule', name: 'MarqueDetailsPage', segment: 'marqueDetails', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/newsDetails/newsDetails.module#NewsDetailsPageModule', name: 'NewsDetailsPage', segment: 'newsDetails', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/productDetails/productDetails.module#ProductDetailsPageModule', name: 'ProductDetailsPage', segment: 'productDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/serviceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },

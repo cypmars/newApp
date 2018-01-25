@@ -355,7 +355,7 @@ var Chat2Page = (function () {
                 });
                 messages2 = [
                     "Tu peux me retrouver dans la partie recherche, je te guiderai au mieux !",
-                    "Retrouve moi dans la partie recherche et ensemble nous parviendrons à déterminer ton besoin",
+                    "Retrouve moi dans la partie recherche et ensemble nous parviendrons à déterminer ton besoin"
                 ];
                 message2 = messages2[Math.floor(Math.random() * messages2.length)];
                 this.messages.push({

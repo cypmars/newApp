@@ -1,5 +1,5 @@
-webpackJsonp([5],Array(311).concat([
-/* 311 */
+webpackJsonp([5],Array(312).concat([
+/* 312 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7,7 +7,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsPageModule", function() { return NewsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__news__ = __webpack_require__(631);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__news__ = __webpack_require__(632);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic2_auto_complete__ = __webpack_require__(356);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_CompleteNewsService__ = __webpack_require__(627);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -47,7 +47,6 @@ NewsPageModule = __decorate([
 //# sourceMappingURL=news.module.js.map
 
 /***/ }),
-/* 312 */,
 /* 313 */,
 /* 314 */,
 /* 315 */,
@@ -16556,7 +16555,8 @@ CompleteNewsService = __decorate([
 /* 628 */,
 /* 629 */,
 /* 630 */,
-/* 631 */
+/* 631 */,
+/* 632 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
