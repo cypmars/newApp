@@ -178,14 +178,8 @@ export class TinderQ2Page {
     //   lastCard.setAttribute("style", "display:none");
     // }
 
-    console.log(this.swingStack);
-    this.myAnswer.push(    
-      {
-        question: this.currentNode[this.currentQId], 
-        answer: like
-      }
-    );
     this.getNextNode(like);
+    this.cards.pop();
     if (this.currentNode[this.currentQId] != null)
     {
       this.cards.push(this.currentNode[this.currentQId]);

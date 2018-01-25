@@ -1195,9 +1195,9 @@
               },
               {
                 "dressing":[
-                  "assets/img/dressing/0.jpg",
-                  "assets/img/dressing/1.jpg",
-                  "assets/img/dressing/2.jpg"
+                  "assets/img/services/dressing/0.jpg",
+                  "assets/img/services/dressing/1.jpg",
+                  "assets/img/services/dressing/2.jpg"
                 ]
               }
             ]
@@ -1262,9 +1262,9 @@
               },
               {
                 "dressing":[
-                  "assets/img/dressing/3.jpg",
-                  "assets/img/dressing/4.jpg",
-                  "assets/img/dressing/5.jpg"
+                  "assets/img/services/dressing/3.jpg",
+                  "assets/img/services/dressing/4.jpg",
+                  "assets/img/services/dressing/5.jpg"
                 ]
               }
             ]
