@@ -304,8 +304,20 @@ var Chat2Page = (function () {
             });
         }
         else if (this.platform.is('ios')) {
-            this.speech.startListening(this.iosOptions).subscribe(function (data) { return _this.speechList = data; }, function (error) { return console.log(error); });
-            console.log(this.speechList);
+            this.speech.startListening(this.iosOptions).subscribe(function (data) {
+                _this.messages.push({
+                    toId: _this.toUser._id,
+                    _id: _this.messages.length,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: _this.user._id,
+                    username: _this.user.username,
+                    pic: _this.user.pic,
+                    text: data
+                });
+                _this.SendTextFromVoice(data);
+            }, function (error) {
+                console.log(error);
+            });
         }
     };
     Chat2Page.prototype.SendText = function (query) {

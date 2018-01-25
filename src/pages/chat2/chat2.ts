@@ -122,8 +122,23 @@ export class Chat2Page {
       });
     }
     else if(this.platform.is('ios')){
-      this.speech.startListening(this.iosOptions).subscribe(data => this.speechList = data, error => console.log(error));
-      console.log(this.speechList);
+      this.speech.startListening(this.iosOptions).subscribe(
+        data => {
+          this.messages.push(
+            {
+              toId: this.toUser._id,
+              _id: this.messages.length,
+              date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+              userId: this.user._id,
+              username: this.user.username,
+              pic: this.user.pic,
+              text: data
+            }
+          );
+          this.SendTextFromVoice(data);
+        }, (error) => {
+          console.log(error)
+      });
     }
   }
 
