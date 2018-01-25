@@ -164,7 +164,7 @@ export class ResultPage implements OnInit, OnDestroy{
           multiselect: false
         },
         nodes: {
-          borderWidth:50,
+          borderWidth:30,
           shape:"circle", 
           font:{
             color:'#fff',
