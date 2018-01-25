@@ -6,7 +6,7 @@
       "productIds": [0, 1, 2],
       "imgService": "assets/img/services/0.jpg", 
       "imgMarque": "assets/img/marques/0.jpg",
-      "icon": "\uf000",
+      "icon": "\uf2cc",
       "pertinence": "bas",
       "title": "Hygiène et Propreté classique",
       "content": {
@@ -48,7 +48,7 @@
       "productIds": [3],
       "imgService": "assets/img/services/1.jpg", 
       "imgMarque": "assets/img/marques/0.jpg",
-      "icon": "\uf001",
+      "icon": "\uf12a",
       "pertinence": "bas",
       "title": "Hygiène et Propreté en milieu sensible",
       "content": {
@@ -126,7 +126,7 @@
       "productIds": [4, 5, 6],
       "imgService": "assets/img/services/2.jpg", 
       "imgMarque": "assets/img/marques/0.jpg",
-      "icon": "\uf002",
+      "icon": "\uf2dc",
       "pertinence": "bas",
       "title": "Cryogénie",
       "content": {
@@ -203,7 +203,7 @@
       "marqueId": 0,
       "imgService": "assets/img/services/3.jpg", 
       "imgMarque": "assets/img/marques/0.jpg",
-      "icon": "\uf003",
+      "icon": "\uf275",
       "pertinence": "bas",   
       "title": "Propreté et maintenance des process industriels",
       "content": {
@@ -241,7 +241,7 @@
       "marqueId": 0,
       "imgService": "assets/img/services/4.png", 
       "imgMarque": "assets/img/marques/0.jpg",
-      "icon": "\uf004",
+      "icon": "\uf238",
       "pertinence": "bas",
       "title": "Propreté dans les transports",
       "content": {
@@ -309,7 +309,7 @@
       "imgService": "assets/img/services/5.jpg", 
       "imgMarque": "assets/img/marques/0.jpg",
       "videoId": "-YTJpFcD0tQ",
-      "icon": "\uf005",
+      "icon": "\uf1b8",
       "pertinence": "bas",    
       "title": "Gestion des déchets",
       "content": {
@@ -354,7 +354,7 @@
       "marqueId": 0,
       "imgService": "assets/img/services/6.jpg", 
       "imgMarque": "assets/img/marques/0.jpg",
-      "icon": "\uf006",
+      "icon": "\uf014",
       "pertinence": "bas",      
       "title": "La gestion des déchets en milieu tertiaire",
       "content": {     
@@ -491,7 +491,7 @@
       "marqueId": 0,
       "imgService": "assets/img/services/7.jpg", 
       "imgMarque": "assets/img/marques/0.jpg",
-      "icon": "\uf007",
+      "icon": "\uf06d",
       "pertinence": "bas",     
       "title": "La gestion des déchets industriels",
       "content": {     
@@ -601,7 +601,7 @@
       "marqueId": 0,
       "imgService": "assets/img/services/8.jpg", 
       "imgMarque": "assets/img/marques/0.jpg",
-      "icon": "\uf008",
+      "icon": "\uf1ad",
       "pertinence": "bas",      
       "title": "Services associés",
       "content": {     
@@ -649,7 +649,7 @@
       "productIds": [8],
       "imgService": "assets/img/services/9.jpg", 
       "imgMarque": "assets/img/marques/1.jpg",
-      "icon": "\uf009",
+      "icon": "\uf21b",
       "pertinence": "bas",      
       "title": "Sécurité humaine",
       "content": {     
@@ -695,7 +695,7 @@
       "productIds": [],
       "imgService": "assets/img/services/10.jpg", 
       "imgMarque": "assets/img/marques/1.jpg",
-      "icon": "\uf00a",
+      "icon": "\uf0f3",
       "pertinence": "bas",      
       "title": "Sécurité électronique",
       "content": {     
@@ -752,7 +752,7 @@
       "marqueId": 1,
       "imgService": "assets/img/services/11.jpg", 
       "imgMarque": "assets/img/marques/1.jpg",
-      "icon": "\uf00b",
+      "icon": "\uf06e",
       "pertinence": "bas",      
       "title": "Télé(vidéo)surveillance",
       "content": {     
@@ -843,7 +843,7 @@
       "imgService": "assets/img//services/12.jpg", 
       "imgMarque": "assets/img/marques/1.jpg",
       "videoId": "3M2-zbgnIIU",
-      "icon": "\uf00c",
+      "icon": "\uf03d",
       "pertinence": "bas",      
       "title": "Vidéoprotection",
       "content": {     
@@ -894,7 +894,7 @@
       "marqueId": 1,
       "imgService": "assets/img//services/13.jpg", 
       "imgMarque": "assets/img/marques/1.jpg",
-      "icon": "\uf00d",
+      "icon": "\uf080",
       "pertinence": "bas",      
       "title": "Conseil & Audit",
       "content": {     
@@ -983,7 +983,7 @@
       "marqueId": 2,
       "imgService": "assets/img//services/14.jpg", 
       "imgMarque": "assets/img/marques/2.jpg",
-      "icon": "\uf000e",
+      "icon": "\uf072",
       "pertinence": "bas",
       "title": "Aviation générale",
       "content": {     
@@ -1018,7 +1018,7 @@
       "marqueId": 2,
       "imgService": "assets/img/services/15.png", 
       "imgMarque": "assets/img/marques/2.jpg",
-      "icon": "\uf00f",
+      "icon": "\uf1b3",
       "pertinence": "bas",
       "title": "Full Handling",
       "content": {     
@@ -1085,7 +1085,7 @@
       "marqueId": 2,
       "imgService": "assets/img/services/16.png", 
       "imgMarque": "assets/img/marques/2.jpg",
-      "icon": "\uf010",
+      "icon": "\uf21a",
       "pertinence": "bas",
       "title": "Cargo & Transport",
       "content": {     
@@ -1130,7 +1130,7 @@
       "marqueId": 3,
       "imgService": "assets/img/services/17.jpg", 
       "imgMarque": "assets/img/marques/3.jpg",
-      "icon": "\uf011",
+      "icon": "\uf007",
       "pertinence": "bas",
       "title": "Accueil en entreprise et services associés",
       "content": {     
@@ -1210,7 +1210,7 @@
       "marqueId": 3,
       "imgService": "assets/img/services/18.jpg", 
       "imgMarque": "assets/img/marques/3.jpg",
-      "icon": "\uf012",
+      "icon": "\uf073",
       "pertinence": "bas",
       "title": "Accueil Evènementiel",
       "content": {     
@@ -1277,7 +1277,7 @@
       "marqueId": 3,
       "imgService": "assets/img/services/19.jpg", 
       "imgMarque": "assets/img/marques/3.jpg",
-      "icon": "\uf013",
+      "icon": "\uf21d",
       "pertinence": "bas",
       "title": "Animation In&Out store",
       "content": {     
@@ -1324,7 +1324,7 @@
       "marqueId": 3,
       "imgService": "assets/img/services/20.jpg", 
       "imgMarque": "assets/img/marques/3.jpg",
-      "icon": "\uf014",
+      "icon": "\uf193",
       "pertinence": "bas",
       "title": "Accompagnement de personnes en situation de handicap ou à mobilité réduite",
       "content": {     
@@ -1374,7 +1374,7 @@
       "marqueId": 4,
       "imgService": "assets/img/services/21.jpg", 
       "imgMarque": "assets/img/marques/4.jpg",
-      "icon": "\uf015",
+      "icon": "\uf201",
       "pertinence": "bas",   
       "title": "Conseil et ingénierie logistique",
       "content": {     
@@ -1413,7 +1413,7 @@
       "marqueId": 4,
       "imgService": "assets/img/services/22.jpg", 
       "imgMarque": "assets/img/marques/4.jpg",
-      "icon": "\uf016",
+      "icon": "\uf0ec",
       "pertinence": "bas",   
       "title": "Gestion et pilotage des flux physiques et d'informations",
       "content": {     
@@ -1489,7 +1489,7 @@
       "marqueId": 4,
       "imgService": "assets/img/services/23.jpg", 
       "imgMarque": "assets/img/marques/4.jpg",
-      "icon": "\uf023",
+      "icon": "\uf0d1",
       "pertinence": "bas",   
       "title": "Transport routier",
       "content": {     
@@ -1528,7 +1528,7 @@
       "marqueId": 4,
       "imgService": "assets/img/services/24.jpg", 
       "imgMarque": "assets/img/marques/4.jpg",
-      "icon": "\uf024",
+      "icon": "\uf238",
       "pertinence": "bas",   
       "title": "Manœuvre ferroviaire",
       "content": {     
@@ -1565,7 +1565,7 @@
       "subServiceIds": [26,27,28],  
       "imgService": "assets/img/services/25.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf025",
+      "icon": "\uf021",
       "pertinence": "bas",      
       "title": "Constructions neuves et modifications d'installations",
       "content": {     
@@ -1657,7 +1657,7 @@
       "marqueId": 5,
       "imgService": "assets/img/services/26.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf025",
+      "icon": "\uf0a3",
       "pertinence": "bas",       
       "title": "Ingénierie",
       "content": {     
@@ -1712,7 +1712,7 @@
       "marqueId": 5,
       "imgService": "assets/img/services/27.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf026",
+      "icon": "\uf1c0",
       "pertinence": "bas",       
       "title": "Fourniture de systèmes et d'équipements pour les réacteurs de puissance",
       "content": {     
@@ -1756,7 +1756,7 @@
       "imgService": "assets/img/services/28.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
       "videoId": "dZ3Ba4y6ztA",
-      "icon": "\uf027",
+      "icon": "\uf11c",
       "pertinence": "bas",       
       "title": "Fourniture d'installations pour le traitement de déchets radioactifs",
       "content": {     
@@ -1783,7 +1783,7 @@
       "marqueId": 5,
       "imgService": "assets/img/services/29.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf029",
+      "icon": "\uf024",
       "pertinence": "bas",
       "title": "Assistance à l'exploitation",
       "content": {     
@@ -1873,7 +1873,7 @@
       "marqueId": 5,
       "imgService": "assets/img/services/30.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf030",
+      "icon": "\uf013",
       "pertinence": "bas",
       "title": "Maintenance",
       "content": {     
@@ -1946,7 +1946,7 @@
       "marqueId": 5,
       "imgService": "assets/img/services/31.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf031",
+      "icon": "\uf00c",
       "pertinence": "bas",
       "title": "Contrôle non destructif",
       "content": {     
@@ -2033,7 +2033,7 @@
       "marqueId": 5,
       "imgService": "assets/img/services/32.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf032",
+      "icon": "\uf188",
       "pertinence": "bas",       
       "title": "Décontamination, démantèlement",
       "content": {     
@@ -2133,7 +2133,7 @@
       "imgService": "assets/img/services/33.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
       "videoId": "f-aN89vOAI4",
-      "icon": "\uf033",
+      "icon": "\uf2c7",
       "pertinence": "bas",       
       "title": "Désamiantage",
       "content": {     
@@ -2207,7 +2207,7 @@
       "subServiceIds": [35,36,37],
       "imgService": "assets/img/services/34.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf034",
+      "icon": "\uf0e7",
       "pertinence": "bas",       
       "title": "Traitement des déchets",
       "content": {     
@@ -2303,7 +2303,7 @@
       "marqueId": 5,
       "imgService": "assets/img/services/35.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf035",
+      "icon": "\uf1f8",
       "pertinence": "bas",       
       "title": "Maîtrise de la filière déchets",
       "content": {     
@@ -2349,7 +2349,7 @@
       "marqueId": 5,
       "imgService": "assets/img/services/36.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf036",
+      "icon": "\uf1cb",
       "pertinence": "bas",       
       "title": "Installation Sogeval",
       "content": {     
@@ -2409,7 +2409,7 @@
       "marqueId": 5,
       "imgService": "assets/img/services/37.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf037",
+      "icon": "\uf187",
       "pertinence": "bas",       
       "title": "Les conteneurs Onet",
       "content": {     
@@ -2433,7 +2433,7 @@
       "marqueId": 5,
       "imgService": "assets/img/services/38.jpg", 
       "imgMarque": "assets/img/marques/5.jpg",
-      "icon": "\uf038",
+      "icon": "\uf19d",
       "pertinence": "bas",       
       "title": "Formations pour l’industrie et le bâtiment",
       "content": {     
@@ -2558,7 +2558,7 @@
       "marqueId": 6,
       "imgService": "assets/img/services/39.jpg", 
       "imgMarque": "assets/img/marques/6.jpg",
-      "icon": "\uf039",
+      "icon": "\uf183",
       "title": "Intérim",
       "content": {     
         "title": "Intérim",  
@@ -2635,7 +2635,7 @@
       "marqueId": 6,
       "imgService": "assets/img/services/40.jpg", 
       "imgMarque": "assets/img/marques/6.jpg",
-      "icon": "\uf040",
+      "icon": "\uf19d",
       "pertinence": "bas",      
       "title": "Recrutement",
       "content": {     
@@ -2717,7 +2717,7 @@
       "marqueId": 6,
       "imgService": "assets/img/services/41.jpg", 
       "imgMarque": "assets/img/marques/6.jpg",
-      "icon": "\uf041",
+      "icon": "\uf27e",
       "pertinence": "bas",       
       "title": "Formation",
       "content": {     

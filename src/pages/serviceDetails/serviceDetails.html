@@ -103,7 +103,7 @@
                   </div>
                   <p *ngIf="p.description" text-justify>{{p.description}}</p>
                   <p *ngIf="p.descriptionBold"><b>{{p.descriptionBold}}</b></p>
-                  <div *ngIf="p.dressing != null" style="position: relative; height: 150px; margin-bottom: 20px;">
+                  <div *ngIf="p.dressing != null" style="position: relative; height: 350px; margin-bottom: 20px;">
                     <ion-slides *ngIf="p.dressing" pager>
                         <ion-slide *ngFor="let img of p.dressing">
                           <img [src]="img">
