@@ -143,63 +143,109 @@ export class Chat2Page {
   }
 
   async SendText(query):Promise<any> {
-    try {
-        await ApiAIPlugin.requestText(
-          {
-            query,
-            originalRequest: {
-              source: 'WWT chat bot',
-              data: 'messages'
-            }
-          },
-           (response) => {
-             console.log(JSON.stringify(response))
-             console.log(JSON.stringify(response.result))
-             let speech = response.result.fulfillment;
-               if(response.result.fulfillment.speech){
-                 console.log(speech);
-                 if(this.platform.is('ios')){
-                    this.messages.push({
-                      toId: this.user._id,
-                      _id: this.messages.length,
-                      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                      userId: this.toUser._id,
-                      username: this.toUser.username,
-                      pic: this.toUser.pic,
-                      text: speech
-                    });
-                  this.ref.detectChanges();
-                } else {
-                  this.messages.push({      
-                    toId: this.user._id,
-                    _id: 2,
-                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                    userId: this.toUser._id,
-                    username: this.toUser.username,
-                    pic: this.toUser.pic,
-                    text: speech
-                  });
-                  this.ref.detectChanges();
-                }
-               } else {
-                 this.messages.push({
-                  toId: this.user._id,
-                  _id: 2,
-                  date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                  userId: this.toUser._id,
-                  username: this.toUser.username,
-                  pic: this.toUser.pic,
-                  text: "Je suis désolé, je n'ai pas compris votre réponse."
-                });
-                this.ref.detectChanges();
-               }
-            },
-            (error) => {
-                console.error(error);
-            });
-    } catch (e) {
-        alert(e);
-    }
+    var messages0 = [
+      "Bon je dois t'avouer quelque chose ...",
+      "Il y a quelque chose que je dois te dire ...",
+      "Je dois te faire une confidence ... Oui ça va vite entre nous !"
+    ];
+    var message0=messages0[Math.floor(Math.random() * messages0.length)];
+    this.messages.push({
+      toId: this.user._id,
+      _id: this.messages.length,
+      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+      userId: this.toUser._id,
+      username: this.toUser.username,
+      pic: this.toUser.pic,
+      text: message0
+    });
+
+    var messages1 = [
+      "Je suis installé mais j'ai pas encore bien bossé cette partie ... Pourrais-tu revenir un peu plus tard ?",
+      "Je me dois d'être honnête envers toi, je ne suis pas au point pour le moment ..."
+    ];
+    var message1=messages1[Math.floor(Math.random() * messages1.length)];
+    this.messages.push({
+      toId: this.user._id,
+      _id: this.messages.length,
+      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+      userId: this.toUser._id,
+      username: this.toUser.username,
+      pic: this.toUser.pic,
+      text: message1
+    });
+
+    var messages2 = [
+      "Tu peux me retrouver dans la partie recherche, je te guiderai au mieux !",
+      "Retrouve moi dans la partie recherche et ensemble nous parviendrons à déterminer ton besoin",
+    ];
+    var message2=messages2[Math.floor(Math.random() * messages2.length)];
+
+    this.messages.push({
+      toId: this.user._id,
+      _id: this.messages.length,
+      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+      userId: this.toUser._id,
+      username: this.toUser.username,
+      pic: this.toUser.pic,
+      text: message2
+    });
+    // try {
+    //     await ApiAIPlugin.requestText(
+    //       {
+    //         query,
+    //         originalRequest: {
+    //           source: 'WWT chat bot',
+    //           data: 'messages'
+    //         }
+    //       },
+    //        (response) => {
+    //          console.log(JSON.stringify(response))
+    //          console.log(JSON.stringify(response.result))
+    //          let speech = response.result.fulfillment;
+    //            if(response.result.fulfillment.speech){
+    //              console.log(speech);
+    //              if(this.platform.is('ios')){
+    //                 this.messages.push({
+    //                   toId: this.user._id,
+    //                   _id: this.messages.length,
+    //                   date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+    //                   userId: this.toUser._id,
+    //                   username: this.toUser.username,
+    //                   pic: this.toUser.pic,
+    //                   text: speech
+    //                 });
+    //               this.ref.detectChanges();
+    //             } else {
+    //               this.messages.push({      
+    //                 toId: this.user._id,
+    //                 _id: 2,
+    //                 date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+    //                 userId: this.toUser._id,
+    //                 username: this.toUser.username,
+    //                 pic: this.toUser.pic,
+    //                 text: speech
+    //               });
+    //               this.ref.detectChanges();
+    //             }
+    //            } else {
+    //              this.messages.push({
+    //               toId: this.user._id,
+    //               _id: 2,
+    //               date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+    //               userId: this.toUser._id,
+    //               username: this.toUser.username,
+    //               pic: this.toUser.pic,
+    //               text: "Je suis désolé, je n'ai pas compris votre réponse."
+    //             });
+    //             this.ref.detectChanges();
+    //            }
+    //         },
+    //         (error) => {
+    //             console.error(error);
+    //         });
+    // } catch (e) {
+    //     alert(e);
+    // }
   }
 
   async SendTextFromVoice(query):Promise<any> {

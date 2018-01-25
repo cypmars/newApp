@@ -105,7 +105,7 @@ page-chat2 {
     text-transform: none !important;
   }
   p {
-    color: rgba(255,255,255,0.8);
+    color: #ffffff;
   }
 
   .bar-footer {
@@ -188,13 +188,13 @@ page-chat2 {
   }
   
   .chat-bubble.left {
-    background-color: rgba(255,255,255,0.8);
+    background-color: #e6e5eb;
     float: left;
     margin-left: 55px;
   }
   
   .chat-bubble.left:before {
-    background-color: rgba(255,255,255,0.8);
+    background-color: #e6e5eb;
     left: 10px;
     -webkit-transform: rotate(70deg) skew(5deg);
   }
@@ -288,6 +288,10 @@ page-chat2 {
   }
 
   ion-footer{
+    background-color: rgba(255,255,255,0.8);
+  }
+
+  ion-input{
     background-color: rgba(255,255,255,0.8);
   }
 }

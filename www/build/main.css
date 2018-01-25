@@ -25976,7 +25976,7 @@ page-chat2 .button-ios {
 }
 
 page-chat2 p {
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
 }
 
 page-chat2 .bar-footer {
@@ -26058,13 +26058,13 @@ page-chat2 .chat-bubble:before {
 }
 
 page-chat2 .chat-bubble.left {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #e6e5eb;
   float: left;
   margin-left: 55px;
 }
 
 page-chat2 .chat-bubble.left:before {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #e6e5eb;
   left: 10px;
   -webkit-transform: rotate(70deg) skew(5deg);
 }
@@ -26152,6 +26152,10 @@ page-chat2 .loader .ion-loading-c {
 }
 
 page-chat2 ion-footer {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+page-chat2 ion-input {
   background-color: rgba(255, 255, 255, 0.8);
 }
 

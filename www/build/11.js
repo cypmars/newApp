@@ -322,80 +322,59 @@ var Chat2Page = (function () {
     };
     Chat2Page.prototype.SendText = function (query) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            var e_2;
+            var messages0, message0, messages1, message1, messages2, message2;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, ApiAIPlugin.requestText({
-                                query: query,
-                                originalRequest: {
-                                    source: 'WWT chat bot',
-                                    data: 'messages'
-                                }
-                            }, function (response) {
-                                console.log(JSON.stringify(response));
-                                console.log(JSON.stringify(response.result));
-                                var speech = response.result.fulfillment;
-                                if (response.result.fulfillment.speech) {
-                                    console.log(speech);
-                                    if (_this.platform.is('ios')) {
-                                        _this.messages.push({
-                                            toId: _this.user._id,
-                                            _id: _this.messages.length,
-                                            date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                                            userId: _this.toUser._id,
-                                            username: _this.toUser.username,
-                                            pic: _this.toUser.pic,
-                                            text: speech
-                                        });
-                                        _this.ref.detectChanges();
-                                    }
-                                    else {
-                                        _this.messages.push({
-                                            toId: _this.user._id,
-                                            _id: 2,
-                                            date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                                            userId: _this.toUser._id,
-                                            username: _this.toUser.username,
-                                            pic: _this.toUser.pic,
-                                            text: speech
-                                        });
-                                        _this.ref.detectChanges();
-                                    }
-                                }
-                                else {
-                                    _this.messages.push({
-                                        toId: _this.user._id,
-                                        _id: 2,
-                                        date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                                        userId: _this.toUser._id,
-                                        username: _this.toUser.username,
-                                        pic: _this.toUser.pic,
-                                        text: "Je suis désolé, je n'ai pas compris votre réponse."
-                                    });
-                                    _this.ref.detectChanges();
-                                }
-                            }, function (error) {
-                                console.error(error);
-                            })];
-                    case 1:
-                        _a.sent();
-                        return [3 /*break*/, 3];
-                    case 2:
-                        e_2 = _a.sent();
-                        alert(e_2);
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
-                }
+                messages0 = [
+                    "Bon je dois t'avouer quelque chose ...",
+                    "Il y a quelque chose que je dois te dire ...",
+                    "Je dois te faire une confidence ... Oui ça va vite entre nous !"
+                ];
+                message0 = messages0[Math.floor(Math.random() * messages0.length)];
+                this.messages.push({
+                    toId: this.user._id,
+                    _id: this.messages.length,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: this.toUser._id,
+                    username: this.toUser.username,
+                    pic: this.toUser.pic,
+                    text: message0
+                });
+                messages1 = [
+                    "Je suis installé mais j'ai pas encore bien bossé cette partie ... Pourrais-tu revenir un peu plus tard ?",
+                    "Je me dois d'être honnête envers toi, je ne suis pas au point pour le moment ..."
+                ];
+                message1 = messages1[Math.floor(Math.random() * messages1.length)];
+                this.messages.push({
+                    toId: this.user._id,
+                    _id: this.messages.length,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: this.toUser._id,
+                    username: this.toUser.username,
+                    pic: this.toUser.pic,
+                    text: message1
+                });
+                messages2 = [
+                    "Tu peux me retrouver dans la partie recherche, je te guiderai au mieux !",
+                    "Retrouve moi dans la partie recherche et ensemble nous parviendrons à déterminer ton besoin",
+                ];
+                message2 = messages2[Math.floor(Math.random() * messages2.length)];
+                this.messages.push({
+                    toId: this.user._id,
+                    _id: this.messages.length,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: this.toUser._id,
+                    username: this.toUser.username,
+                    pic: this.toUser.pic,
+                    text: message2
+                });
+                return [2 /*return*/];
             });
         });
     };
     Chat2Page.prototype.SendTextFromVoice = function (query) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
-            var e_3;
+            var e_2;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -440,8 +419,8 @@ var Chat2Page = (function () {
                         _a.sent();
                         return [3 /*break*/, 3];
                     case 2:
-                        e_3 = _a.sent();
-                        alert(e_3);
+                        e_2 = _a.sent();
+                        alert(e_2);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
@@ -450,7 +429,7 @@ var Chat2Page = (function () {
     };
     Chat2Page.prototype.getSupportedLanguages = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var languages, e_4;
+            var languages, e_3;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -461,8 +440,8 @@ var Chat2Page = (function () {
                         console.log(languages);
                         return [2 /*return*/, languages];
                     case 2:
-                        e_4 = _a.sent();
-                        console.error(e_4);
+                        e_3 = _a.sent();
+                        console.error(e_3);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
@@ -471,7 +450,7 @@ var Chat2Page = (function () {
     };
     Chat2Page.prototype.hasPermission = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var permission, e_5;
+            var permission, e_4;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -482,8 +461,8 @@ var Chat2Page = (function () {
                         console.log(permission);
                         return [2 /*return*/, permission];
                     case 2:
-                        e_5 = _a.sent();
-                        console.log(e_5);
+                        e_4 = _a.sent();
+                        console.log(e_4);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
@@ -492,7 +471,7 @@ var Chat2Page = (function () {
     };
     Chat2Page.prototype.getPermission = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var permission, e_6;
+            var permission, e_5;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -503,8 +482,8 @@ var Chat2Page = (function () {
                         console.log(permission);
                         return [2 /*return*/, permission];
                     case 2:
-                        e_6 = _a.sent();
-                        console.log(e_6);
+                        e_5 = _a.sent();
+                        console.log(e_5);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
