@@ -26104,7 +26104,7 @@ page-chat2 .msg-header-username {
 }
 
 page-chat2 input, page-chat2 textarea, page-chat2 .item-input, page-chat2 .item-input-wrapper {
-  background-color: #f4f4f4 !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
 page-chat2 .bold {
@@ -26152,7 +26152,7 @@ page-chat2 .loader .ion-loading-c {
 }
 
 page-chat2 ion-footer {
-  background-color: #f4f4f4;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 page-marque-details ion-content {
@@ -28629,6 +28629,17 @@ page-tinderQ2 .footer-btn {
 
 page-tinderQ2 .card-ios, page-tinderQ2 .card-md {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+page-tinderQ2 .img-bot {
+  width: 94%;
+  min-height: auto;
+  margin-top: 35%;
+  margin-bottom: 35%;
+  padding-right: 3%;
+  padding-left: 3%;
+  opacity: 0.2;
+  /* L'opacite se regle ici */
 }
 
 page-welcome ion-content {

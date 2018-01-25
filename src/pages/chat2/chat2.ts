@@ -44,18 +44,7 @@ export class Chat2Page {
       username: this.toUser.username,
       pic: this.toUser.pic,
       text: {
-        speech: "Salut ! Je suis BoBot, je vais t'aider à déterminer ton besoin."
-      }
-    },
-    {
-      toId: this.user._id,
-      _id: 2,
-      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-      userId: this.toUser._id,
-      username: this.toUser.username,
-      pic: this.toUser.pic,
-      text: {
-        speech: "Es-tu un client, un prospect ou un collaborateur ?"
+        speech: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?"
       }
     }
   ];
