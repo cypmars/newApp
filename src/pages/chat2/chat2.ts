@@ -143,68 +143,44 @@ export class Chat2Page {
     }
   }
 
-  async SendText(query, messages):Promise<any> {
-
-    for (let message of messages)
-    {
+  async SendText(query, messages, ms):Promise<any> {
       try {
-        await ApiAIPlugin.requestText(
+        await setTimeout(()=>
+        {
+          if (messages.length >= 1)
           {
-            query,
-            originalRequest: {
-              source: 'WWT chat bot',
-              data: 'messages'
+            if(this.platform.is('ios')){
+              this.messages.push({
+                toId: this.user._id,
+                _id: this.messages.length,
+                date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                userId: this.toUser._id,
+                username: this.toUser.username,
+                pic: this.toUser.pic,
+                text: messages[messages.length - 1]
+              }); 
+            this.ref.detectChanges();
+            messages.pop();
+            this.SendText(query, messages, ms);
+            } else {
+              this.messages.push({      
+                toId: this.user._id,
+                _id: 2,
+                date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                userId: this.toUser._id,
+                username: this.toUser.username,
+                pic: this.toUser.pic,
+                text: messages[messages.length - 1]
+              });
+              this.ref.detectChanges();
+              messages.pop();
+              this.SendText(query, messages, ms);
             }
-          },
-           (response) => {
-             console.log(JSON.stringify(response))
-             console.log(JSON.stringify(response.result))
-             let speech = response.result.fulfillment;
-               if(response.result.fulfillment.speech){
-                 console.log(speech);
-                 if(this.platform.is('ios')){
-                    this.messages.push({
-                      toId: this.user._id,
-                      _id: this.messages.length,
-                      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                      userId: this.toUser._id,
-                      username: this.toUser.username,
-                      pic: this.toUser.pic,
-                      text: message
-                    }); 
-                  this.ref.detectChanges();
-                } else {
-                  this.messages.push({      
-                    toId: this.user._id,
-                    _id: 2,
-                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                    userId: this.toUser._id,
-                    username: this.toUser.username,
-                    pic: this.toUser.pic,
-                    text: message
-                  });
-                  this.ref.detectChanges();
-                }
-               } else {
-                 this.messages.push({
-                  toId: this.user._id,
-                  _id: 2,
-                  date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                  userId: this.toUser._id,
-                  username: this.toUser.username,
-                  pic: this.toUser.pic,
-                  text: message
-                });
-                this.ref.detectChanges();
-               }
-            },
-            (error) => {
-                console.error(error);
-            });
-    } catch (e) {
+          }
+        }, ms);
+      } catch (e) {
         alert(e);
-    }
-    }
+      }
     // try {
     //     await ApiAIPlugin.requestText(
     //       {
@@ -259,10 +235,7 @@ export class Chat2Page {
     //         (error) => {
     //             console.error(error);
     //         });
-    // } catch (e) {
-    //     alert(e);
-    // }
-  }
+    }
 
   async SendTextFromVoice(query):Promise<any> {
     try {
@@ -379,8 +352,8 @@ export class Chat2Page {
     ];
     this.message2=messages2[Math.floor(Math.random() * messages2.length)];
 
-    let messages= [this.message0, this.message1, this.message2];
-    this.SendText(this.newMessage, messages);
+    let messages= [this.message2, this.message1, this.message0];
+    this.SendText(this.newMessage, messages, 2000);
     console.log(this.newMessage);
     this.newMessage="";
   }

@@ -625,7 +625,7 @@ export class TinderQ2Page {
     this.swingStack.throwin.subscribe((event: DragEvent) => {
     });
     this.cards = [{}];
-    this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
+    //this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
 
     console.log(this.navCtrl.getPrevious().id) ;
     if(this.navCtrl.getPrevious().id == "WelcomePage" || this.navCtrl.getPrevious().id == "SignupPage"){

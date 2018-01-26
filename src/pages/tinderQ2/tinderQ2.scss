@@ -156,10 +156,10 @@ page-tinderQ2 {
   }
 
   .img-bot{
+    position: relative;
+    top:50%;
     width:94%;
     min-height: auto;
-    margin-top:35%;
-    margin-bottom:35%;
     padding-right: 3%;
     padding-left: 3%;
     opacity: 0.2; /* L'opacite se regle ici */
