@@ -199,7 +199,6 @@ export class Chat2Page {
              console.log(JSON.stringify(response.result))
              let speech = response.result.fulfillment;
                if(response.result.fulfillment.speech){
-                 console.log(speech);
                  if(this.platform.is('ios')){
                     this.messages.push({
                       toId: this.user._id,
@@ -208,7 +207,7 @@ export class Chat2Page {
                       userId: this.toUser._id,
                       username: this.toUser.username,
                       pic: this.toUser.pic,
-                      text: speech
+                      text: speech.speech
                     });
                   this.ref.detectChanges();
                 } else {
@@ -219,7 +218,7 @@ export class Chat2Page {
                     userId: this.toUser._id,
                     username: this.toUser.username,
                     pic: this.toUser.pic,
-                    text: speech
+                    text: speech.speech
                   });
                   this.ref.detectChanges();
                 }

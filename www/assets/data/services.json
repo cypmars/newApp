@@ -444,7 +444,7 @@
           },
           {
             "title":"Témoignages de nos clients",
-            "subParts": [
+            "subparts": [
               {
                 "title": "DES SOLUTIONS SUR-MESURE ET PERSONNALISÉES",
                 "paragraphes": [
@@ -574,7 +574,7 @@
           },
           {
             "title":"Témoignages de nos clients",
-            "subParts": [
+            "subparts": [
               {
                 "title": "ONET, AU COEUR DE L’OPTIMISATION DES FLUX",
                 "paragraphes": [
@@ -709,7 +709,7 @@
         "parts":[
           {
             "title":"Solution de sécurité par système électronique",
-            "subParts": [
+            "subparts": [
               {
                 "title": "PLUS TÔT VOUS ÊTES ALERTÉ D’UN DANGER, PLUS RAPIDEMENT ET INTELLIGEMMENT VOUS POUVEZ INTERVENIR.",
                 "paragraphes": [
@@ -774,7 +774,7 @@
           },
           {
             "title": "DOMAINES D'INTERVENTION DE LA TÉLÉSURVEILLANCE ET TÉLÉVIDÉOSURVEILLANCE",
-            "subParts": [
+            "subparts": [
               {
                 "title": "Gestion des alarmes",
                 "paragraphes": [
@@ -909,7 +909,7 @@
                 "description": "Nous proposons 2 gammes de prestations pour des missions d'accompagnement à court, moyen et long terme et des solutions périodiques de diagnostics, d'évaluations dans le cadre d'audits et d'études."
               }
             ],
-            "subParts": [
+            "subparts": [
               {
                 "title": "Missions d'accompagnement CT - MT - LT",
                 "paragraphes": [
@@ -2661,7 +2661,7 @@
             "paragraphes": [
               {"description": "Notre réseau d'agences propose également une gamme complète de solutions pour accompagner les entreprises dans leurs recrutements en CDD ou CDI."}
             ],
-            "subParts": [
+            "subparts": [
               {
                 "title": "CE QUE NOUS VOUS OFFRONS",
                 "paragraphes": [
@@ -2763,7 +2763,7 @@
               {"description": "A l’issue de chaque formation, nous réalisons des évaluations qualité auprès des stagiaires et du formateur. Les résultats sont systématiquement communiqués au client."},
               {"description": "Une enquête de satisfaction client est réalisée chaque trimestre. Ces résultats sont exploités dans le cadre de notre démarche d’amélioration continue."}
             ],
-            "subParts": [
+            "subparts": [
               {
                 "title": "ENQUÊTE DE SATISFACTION CLIENTS AXXIS FORMATION JANVIER 2016 (BASE : 32% DE CLIENTS AYANT RÉPONDU À L’ENQUÊTE)",
                 "paragraphes": [

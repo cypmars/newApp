@@ -1,7 +1,6 @@
-// The page the user lands on after opening the app and without a session
-export const WelcomePage = 'WelcomePage';
-
 export const HomePage = 'HomePage';
+
+export const WelcomePage = 'WelcomePage';
 
 export const SimpleFormPage = 'SimpleFormPage';
 export const SimpleForm1Page = 'SimpleForm1Page';
@@ -15,6 +14,8 @@ export const ServiceDetailsPage = 'ServiceDetailsPage';
 export const MarqueDetailsPage = 'MarqueDetailsPage';
 export const NewsDetailsPage = 'NewsDetailsPage';
 export const ProductDetailsPage = 'ProductDetailsPage';
+
+export const AskInfoPage = 'AskInfoPage';
 
 export const ResultPage = 'ResultPage';
 

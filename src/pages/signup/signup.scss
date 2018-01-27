@@ -1,20 +1,27 @@
 page-signup {
-  .splash-bg {
-      background: #b2284e; /* For browsers that do not support gradients */
-      background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Firefox 3.6 to 15 */
-      background: linear-gradient(-90deg, #b2284e, #2a73d3); /* Standard syntax */
-      height: 100%;
-    }
-  
+  ion-content {
+    background: #b2284e; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #b2284e, #2a73d3); /* Standard syntax */
+    height: 100%;
+  }
     .item-md, .item-ios{
       background-color: transparent;
-      padding-right: 16px;
+      padding-right: 20px;
       font-size: 0.8em;
-      padding-left: 0;
+      padding-left: 20px;
     }
   
+    .toolbar-ios-primary .toolbar-background-ios{
+      background: transparent;
+    }
+  
+    .toolbar-md-primary .toolbar-background-md{
+      background: transparent;
+    }
+
     input{
       color: white;
     }
@@ -128,6 +135,16 @@ page-signup {
       border-bottom: 0;
     }
   
+    .list-ios{
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    .list-md{
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
     .list-md .item-block .item-inner{
       border-bottom: 0;
     }
@@ -217,5 +234,6 @@ page-signup {
          height: 90%;
        }
    }
+
 
 }

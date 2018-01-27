@@ -20,8 +20,6 @@ export class SignupPage {
 
   slideOneForm: FormGroup;
   slideTwoForm: FormGroup;
-  slideThreeForm: FormGroup;
-
   who: string ;
 
   jobs;
@@ -30,60 +28,66 @@ export class SignupPage {
   tabBarElement: any;
 
   submitAttempt: boolean = false;
-  lastSlide: boolean = true;
+  lastSlide: boolean = false;
+
+  showjobs= false;
 
   itemsCat: [{id: number, name: string, iconName: string, jobsName: any}] = [
     {
       id: 0,
       name : "Agriculture & agroalimentaire",
       iconName : "leaf", 
-      jobsName: this.jobsTab= ["Agriculture", "Agroalimentaire", "Autre"]
+      jobsName: ["Agriculture", "Agroalimentaire", "Autre"]
     },
     {
       id: 1,
       name : "Industrie",
       iconName : "lock", 
-      jobsName: this.jobsTab = ["Pharmaceutique", "Textile", "Chimique", "Construction", "Batiment", "Automobile", "Aéronotique", "Lourde", "Autre"]
+      jobsName: ["Pharmaceutique", "Textile", "Chimique", "Construction", "Batiment", "Automobile", "Aéronotique", "Lourde", "Autre"]
     },
     {
       id: 2,
       name : "Energie",
       iconName : "plane",
-      jobsName: this.jobsTab = ["Nucléaire", "Eolien", "Solaire", "Hydrolique", "Pétrolier", "Autre"]
+      jobsName: ["Nucléaire", "Eolien", "Solaire", "Hydrolique", "Pétrolier", "Autre"]
     },
     {
       id: 3,
       name : "Commerce & Tourisme",
       iconName : "people", 
-      jobsName : this.jobsTab = ["Grand Commerce", "Petit commerce", "Artisanat", "Hôtellerie", "Restauration", "Autre"]
+      jobsName : ["Grand Commerce", "Petit commerce", "Artisanat", "Hôtellerie", "Restauration", "Autre"]
     },
     {
       id: 4,
       name : "Transport & Logistique",
       iconName : "train",
-      jobsName : this.jobsTab = ['Aéronotique', 'Ferroviaire', 'Urbain', 'Maritime', 'Astronautique', "Distribution", "Gestion & Pilotage", "Autre"] 
+      jobsName : ['Aéronotique', 'Ferroviaire', 'Urbain', 'Maritime', 'Astronautique', "Distribution", "Gestion & Pilotage", "Autre"] 
     },
     {
       id: 5,
       name : "Télécoms & Informatique",
       iconName : "nuclear",
-      jobsName : this.jobsTab = ["Systèmes d'infromation", "Robotique", "Technologies", "Recherche", "Autre"]
+      jobsName : ["Systèmes d'infromation", "Robotique", "Technologies", "Recherche", "Autre"]
     },
     {
       id: 6,
       name : "Santé & Services",
       iconName : "school",
-      jobsName : this.jobsTab = ["Médecine", "Parmaceutique", "Aide à la personne", "Gardiennage", "Recherche", "Autre"]
+      jobsName : ["Médecine", "Parmaceutique", "Aide à la personne", "Gardiennage", "Recherche", "Autre"]
     },
     {
       id: 7,
       name : "Economie",
       iconName : "code-working",
-      jobsName : this.jobsTab = ["Banque", "Finance", "Assurance", "Audit", "Conseil", "Autre"]
+      jobsName : ["Banque", "Finance", "Assurance", "Audit", "Conseil", "Autre"]
     }
   ];
 
   myIcon: string = "Secteur d'activité ?";
+
+  type="";
+  activity=-1;
+  job="";
 
   constructor(public navCtrl: NavController,
     public formBuilder: FormBuilder,
@@ -99,40 +103,37 @@ export class SignupPage {
     });
 
     this.slideTwoForm = formBuilder.group({
-      activity: ['']
-    });
-
-    this.slideThreeForm = formBuilder.group({
-      work: ['']
+      type: [''],
+      activity: [''],
+      job: ['']
     });
   }
 
+  ionViewWillEnter(){
+    this.tabBarElement.style.display = 'none';
+  }
+  
   ionViewWillLeave(){
     this.tabBarElement.style.display = 'flex';
+  }
+
+  onChange(event){
+    console.log(event);
   }
 
   next(){
     console.log(this.signupSlider._activeIndex);
     if (this.signupSlider._activeIndex == 0){
-      this.lastSlide = false;
-      this.signupSlider.slideNext();
-    }
-    else{
       this.lastSlide = true;
       this.signupSlider.slideNext();
     }
   }
 
   prev(){
-    console.log(this.signupSlider._activeIndex);
     if (this.signupSlider._activeIndex == 0)
       this.navCtrl.pop();
-    else if (this.signupSlider._activeIndex == 2){
+    else if (this.signupSlider._activeIndex == 1){
       this.lastSlide = false;
-      this.signupSlider.slidePrev();
-    }
-    else{
-      this.lastSlide = true;
       this.signupSlider.slidePrev();
     }
   }
@@ -140,24 +141,20 @@ export class SignupPage {
   save(){
     this.submitAttempt = true;
     
+    console.log(this.activity);
+    console.log(this.itemsCat[this.activity].jobsName);
+    console.log(this.job);
+    console.log(this.type);
+    console.log(this.itemsCat[this.activity].jobsName.indexOf(this.job));
+
+    
     if(!this.slideOneForm.valid){
       this.signupSlider.slideTo(0);
-      this.lastSlide = true;
+      this.lastSlide = false;
     }
     else {
       this.navCtrl.push(TinderQ2Page);
     }
-  }
-
-  public ngAfterViewInit(){
-    this.fab.setActiveLists(true);
-  }
-
-  public chooseService(event, data, fab: FabContainer){
-    this.myIcon = this.itemsCat[data].name;
-    this.lastSlide = false;
-    this.signupSlider.slideNext();
-    this.jobs = this.itemsCat[data].jobsName ; 
   }
 }
 
