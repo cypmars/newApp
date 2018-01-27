@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
@@ -33,6 +34,7 @@ import { SwingModule } from 'angular2-swing';
     StatusBar,
     SplashScreen,
     SpeechRecognition,
+    EmailComposer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
