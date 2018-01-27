@@ -71,7 +71,8 @@
       "cordova-plugin-document-viewer": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
