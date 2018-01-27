@@ -25856,6 +25856,114 @@ ion-auto-complete {
   width: 100vw;
 }
 
+page-askInfo ion-content {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+  height: 100%;
+}
+
+page-askInfo .splash-relative {
+  position: absolute;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  height: 100%;
+}
+
+page-askInfo .splash-logo {
+  margin: auto;
+  background: url("../assets/img/logo2.png") repeat transparent;
+  background-size: 100%;
+  width: 128px;
+  height: 128px;
+}
+
+page-askInfo .splash-intro {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+
+page-askInfo .splash-new {
+  position: relative;
+  font-size: 20px;
+}
+
+page-askInfo .splash-end {
+  position: fixed;
+  bottom: 20px;
+  width: 60%;
+  text-align: center;
+}
+
+page-askInfo .splash-end a {
+  color: white;
+}
+
+page-askInfo .item-md, page-askInfo .item-ios {
+  background-color: transparent;
+}
+
+page-askInfo button.login {
+  margin-top: 25px;
+  max-width: 180px;
+  background-color: transparent;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+page-askInfo button.login.activated {
+  background-color: gainsboro;
+}
+
+page-askInfo input {
+  color: white;
+}
+
+page-askInfo .white-text {
+  color: white;
+}
+
+page-askInfo .item-input ion-label {
+  width: 20px;
+}
+
+page-askInfo .item-md {
+  padding-left: 0;
+}
+
+page-askInfo .item-md.item-block .item-inner {
+  padding-right: 0;
+}
+
+page-askInfo .scroll-content {
+  padding-top: 0;
+}
+
+page-askInfo .toolbar-ios-primary .toolbar-background-ios {
+  background: transparent;
+}
+
+page-askInfo .toolbar-md-primary .toolbar-background-md {
+  background: transparent;
+}
+
+page-askInfo ion-label {
+  color: white;
+}
+
+page-askInfo textarea {
+  color: white;
+}
+
 page-chat2 {
   /* fixes an ios bug bear */
   /* loading */
@@ -27680,6 +27788,243 @@ page-service-details .mother {
 page-service-details .swiper-slide img {
   height: 100%;
   width: 100%;
+}
+
+page-signup ion-content {
+  background: #b2284e;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, right top, left top, from(#b2284e), to(#2a73d3));
+  background: linear-gradient(-90deg, #b2284e, #2a73d3);
+  /* Standard syntax */
+  height: 100%;
+}
+
+page-signup .item-md, page-signup .item-ios {
+  background-color: transparent;
+  padding-right: 20px;
+  font-size: 0.8em;
+  padding-left: 20px;
+}
+
+page-signup .toolbar-ios-primary .toolbar-background-ios {
+  background: transparent;
+}
+
+page-signup .toolbar-md-primary .toolbar-background-md {
+  background: transparent;
+}
+
+page-signup input {
+  color: white;
+}
+
+page-signup .item-md.item-block .item-inner, page-signup .item-ios.item-block .item-inner {
+  padding-right: 0px;
+}
+
+page-signup .item-input .label-md, page-signup .item-select .label-md, page-signup .item-datetime .label-md {
+  color: #ffffff;
+}
+
+page-signup .scroll-content {
+  height: 800px;
+}
+
+page-signup .item-input ion-label {
+  width: 120px !important;
+}
+
+page-signup .white-text {
+  color: white;
+}
+
+page-signup .content-md hr, page-signup .content-ios hr {
+  background-color: white;
+}
+
+page-signup p {
+  font-size: 5em;
+  color: white;
+}
+
+page-signup ion-select, page-signup ion-label {
+  color: white;
+}
+
+page-signup .myFab {
+  margin-top: 60px;
+}
+
+page-signup ion-fab-list[side=top-left] {
+  margin: -70px 62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-signup ion-fab-list[side=bottom-left] {
+  margin: 55px 62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-signup ion-fab-list[side=top-right] {
+  margin: -70px -62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-signup ion-fab-list[side=bottom-right] {
+  margin: 55px -62px;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+page-signup .larger {
+  font-size: 3em;
+}
+
+page-signup .fab-close-icone {
+  display: none;
+}
+
+page-signup .fab {
+  font-size: 8px;
+  line-height: 10px;
+  white-space: normal;
+}
+
+page-signup .fab-md-in-list {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  height: 55px;
+  width: 55px;
+}
+
+page-signup .fab-ios-in-list {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  height: 55px;
+  width: 55px;
+}
+
+page-signup .list-ios .item-block .item-inner {
+  border-bottom: 0;
+}
+
+page-signup .list-ios {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+page-signup .list-md {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+page-signup .list-md .item-block .item-inner {
+  border-bottom: 0;
+}
+
+page-signup .item-select {
+  border-bottom: 1px solid white;
+}
+
+page-signup .range-md.range-has-pin, page-signup .range-ios.range-has-pin {
+  padding: 0;
+}
+
+page-signup .label-md {
+  color: white;
+  width: 100%;
+  float: right;
+  margin: 0;
+}
+
+page-signup .item-input .label-md, page-signup .item-select .label-md, page-signup .item-datetime .label-md {
+  color: white;
+}
+
+page-signup .item-md {
+  padding-left: 0;
+}
+
+page-signup .item-md.item-block .item-inner, page-signup .item-ios.item-block .item-inner {
+  padding-right: 0;
+}
+
+page-signup .select-text {
+  width: 100%;
+}
+
+page-signup .select-md .select-icon .select-icon-inner {
+  color: white;
+}
+
+page-signup .range-ios, page-signup .range-md {
+  padding: 0 0 0 0;
+}
+
+page-signup .label-ios, page-signup .label-md {
+  margin-right: 0;
+}
+
+page-signup .buttonSign {
+  margin-top: 50px;
+  max-width: 180px;
+  background-color: transparent;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+page-signup .buttonSign.activated {
+  background-color: gainsboro;
+}
+
+.ios page-signup p, .md page-signup p {
+  font-size: 0.9em;
+  color: white;
+}
+
+.ios page-signup .swiper-slide, .md page-signup .swiper-slide {
+  display: block;
+}
+
+.ios page-signup ion-label, .ios page-signup .select-text, .md page-signup ion-label, .md page-signup .select-text {
+  margin-left: 10px;
+}
+
+.ios page-signup ion-input, .ios page-signup ion-select, .ios page-signup ion-textarea, .md page-signup ion-input, .md page-signup ion-select, .md page-signup ion-textarea {
+  background-color: transparent;
+  padding: 5px 10px;
+}
+
+.ios page-signup .invalid, .md page-signup .invalid {
+  border: 1px solid #ea6153;
+}
+
+.ios page-signup .swiper-container, .md page-signup .swiper-container {
+  height: 90%;
 }
 
 page-simple-form .content-md {
