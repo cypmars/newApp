@@ -1,0 +1,87 @@
+<ion-header no-border>
+  <ion-navbar color="primary" hideBackButton="true">
+    <ion-buttons start>
+      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button> 
+    </ion-buttons>  
+    <ion-title>
+      S'inscrire
+    </ion-title>
+    <ion-buttons end>
+      <button *ngIf="!lastSlide" ion-button icon-right (click)="next()">Next <ion-icon name="arrow-forward"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager #signupSlider>
+
+    <ion-slide>
+      <p *ngIf="submitAttempt" style="color: #ea6153;">S'il-vous-plait, remplissez les champs suivants.</p>
+        <form [formGroup]="slideOneForm">
+            <ion-item>
+                <ion-label floating class="white-text">Nom *</ion-label>
+                <ion-input formControlName="firstName" type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+                <ion-label floating class="white-text">Prénom *</ion-label>
+                <ion-input formControlName="lastName" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating class="white-text">E-Mail *</ion-label>
+                <ion-input formControlName="email" type="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating class="white-text">Mot de passe *</ion-label>
+                <ion-input formControlName="mdp" type="text"></ion-input>
+            </ion-item>
+        </form>
+        <br>
+    </ion-slide>
+    <ion-slide>
+        <ion-list>
+          <form [formGroup]="slideTwoForm">
+              <ion-list radio-group formControlName="type" [(ngModel)]="type">
+                  <ion-list-header>
+                    Vous êtes ?
+                  </ion-list-header>
+                
+                  <ion-item>
+                    <ion-label>Client</ion-label>
+                    <ion-radio value="client"></ion-radio>
+                  </ion-item>
+                
+                  <ion-item>
+                    <ion-label>Prospect</ion-label>
+                    <ion-radio value="prospect"></ion-radio>
+                  </ion-item>
+                
+                  <ion-item>
+                    <ion-label>Collaborateur</ion-label>
+                    <ion-radio value="collaborateur"></ion-radio>
+                  </ion-item>
+                </ion-list>
+            <br>
+            <ion-item>
+              <ion-label class="white-text">Secteur d'activité</ion-label>
+              <ion-select formControlName="activity" [(ngModel)]="activity" (ionChange)="onChange($event)">
+                <ion-option *ngFor="let itemCat of itemsCat" [value]="itemCat.id">{{itemCat.name}}</ion-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item *ngIf="activity>=0">
+                <ion-label class="white-text">Métier</ion-label>
+                <ion-select formControlName="job" [(ngModel)]="job">
+                  <ion-option *ngFor="let jobname of itemsCat[activity].jobsName" [value]="jobname">{{jobname}}</ion-option>
+                </ion-select>
+            </ion-item>
+
+          </form>
+        </ion-list>
+        <button class="buttonSign" ion-button color="primary" (click)="save()">S'inscrire</button>
+    </ion-slide>
+  </ion-slides>
+ </ion-content>
+ 
