@@ -64,13 +64,13 @@ export class AskInfoPage {
       //   }
       //  });
        
-       let email = {
-         from: this.mail.sendBy.email,
-         to: 'cypconnet@wanadoo.fr',
-         subject: this.mail.object,
-         body: 'Related to: '+this.mail.about+'<br><br>'+this.mail.text,
-         isHtml: true
-       };
+      //  let email = {
+      //    from: this.mail.sendBy.email,
+      //    to: 'cypconnet@wanadoo.fr',
+      //    subject: this.mail.object,
+      //    body: 'Related to: '+this.mail.about+'<br><br>'+this.mail.text,
+      //    isHtml: true
+      //  };
        
        // Send a text message using default options
        //this.emailComposer.open(email);
