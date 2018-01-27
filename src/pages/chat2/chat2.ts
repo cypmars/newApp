@@ -106,6 +106,7 @@ export class Chat2Page {
     if(this.platform.is('android')){
       this.speech.startListening(this.androidOptions).subscribe(
         (data) => {
+          console.log("dataVoice: "+data);
           this.messages.push(
             {
               toId: this.toUser._id,
@@ -143,98 +144,95 @@ export class Chat2Page {
     }
   }
 
-  async SendText(query, messages, ms):Promise<any> {
-      try {
-        await setTimeout(()=>
+  async SendNoDefined(query, messages, ms):Promise<any> {
+    try {
+      await setTimeout(()=>
+      {
+        if (messages.length >= 1)
         {
-          if (messages.length >= 1)
-          {
-            if(this.platform.is('ios')){
-              this.messages.push({
-                toId: this.user._id,
-                _id: this.messages.length,
-                date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                userId: this.toUser._id,
-                username: this.toUser.username,
-                pic: this.toUser.pic,
-                text: messages[messages.length - 1]
-              }); 
+          if(this.platform.is('ios')){
+            this.messages.push({
+              toId: this.user._id,
+              _id: this.messages.length,
+              date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+              userId: this.toUser._id,
+              username: this.toUser.username,
+              pic: this.toUser.pic,
+              text: messages[messages.length - 1]
+            }); 
+          this.ref.detectChanges();
+          messages.pop();
+          this.SendNoDefined(query, messages, ms);
+          } else {
+            this.messages.push({      
+              toId: this.user._id,
+              _id: 2,
+              date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+              userId: this.toUser._id,
+              username: this.toUser.username,
+              pic: this.toUser.pic,
+              text: messages[messages.length - 1]
+            });
             this.ref.detectChanges();
             messages.pop();
-            this.SendText(query, messages, ms);
-            } else {
-              this.messages.push({      
-                toId: this.user._id,
-                _id: 2,
-                date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                userId: this.toUser._id,
-                username: this.toUser.username,
-                pic: this.toUser.pic,
-                text: messages[messages.length - 1]
-              });
-              this.ref.detectChanges();
-              messages.pop();
-              this.SendText(query, messages, ms);
-            }
+            this.SendNoDefined(query, messages, ms);
           }
-        }, ms);
+        }
+      }, ms);
+    } catch (e) {
+      alert(e);
+    }
+  }
+
+  async SendText(query, messages, ms):Promise<any> {
+    try {
+        await ApiAIPlugin.requestText(
+          {
+            query,
+            originalRequest: {
+              source: 'WWT chat bot',
+              data: 'messages'
+            }
+          },
+           (response) => {
+             console.log(JSON.stringify(response))
+             console.log(JSON.stringify(response.result))
+             let speech = response.result.fulfillment;
+               if(response.result.fulfillment.speech){
+                 console.log(speech);
+                 if(this.platform.is('ios')){
+                    this.messages.push({
+                      toId: this.user._id,
+                      _id: this.messages.length,
+                      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                      userId: this.toUser._id,
+                      username: this.toUser.username,
+                      pic: this.toUser.pic,
+                      text: speech
+                    });
+                  this.ref.detectChanges();
+                } else {
+                  this.messages.push({      
+                    toId: this.user._id,
+                    _id: 2,
+                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                    userId: this.toUser._id,
+                    username: this.toUser.username,
+                    pic: this.toUser.pic,
+                    text: speech
+                  });
+                  this.ref.detectChanges();
+                }
+               } else {
+                 this.SendNoDefined(query, messages, ms)
+               }
+            },
+            (error) => {
+                console.error(error);
+            });
       } catch (e) {
         alert(e);
       }
-    // try {
-    //     await ApiAIPlugin.requestText(
-    //       {
-    //         query,
-    //         originalRequest: {
-    //           source: 'WWT chat bot',
-    //           data: 'messages'
-    //         }
-    //       },
-    //        (response) => {
-    //          console.log(JSON.stringify(response))
-    //          console.log(JSON.stringify(response.result))
-    //          let speech = response.result.fulfillment;
-    //            if(response.result.fulfillment.speech){
-    //              console.log(speech);
-    //              if(this.platform.is('ios')){
-    //                 this.messages.push({
-    //                   toId: this.user._id,
-    //                   _id: this.messages.length,
-    //                   date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-    //                   userId: this.toUser._id,
-    //                   username: this.toUser.username,
-    //                   pic: this.toUser.pic,
-    //                   text: speech
-    //                 });
-    //               this.ref.detectChanges();
-    //             } else {
-    //               this.messages.push({      
-    //                 toId: this.user._id,
-    //                 _id: 2,
-    //                 date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-    //                 userId: this.toUser._id,
-    //                 username: this.toUser.username,
-    //                 pic: this.toUser.pic,
-    //                 text: speech
-    //               });
-    //               this.ref.detectChanges();
-    //             }
-    //            } else {
-    //              this.messages.push({
-    //               toId: this.user._id,
-    //               _id: 2,
-    //               date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-    //               userId: this.toUser._id,
-    //               username: this.toUser.username,
-    //               pic: this.toUser.pic,
-    //               text: "Je suis désolé, je n'ai pas compris votre réponse."
-    //             });
-    //             this.ref.detectChanges();
-    //            }
-    //         },
-    //         (error) => {
-    //             console.error(error);
-    //         });
     }
 
   async SendTextFromVoice(query):Promise<any> {
