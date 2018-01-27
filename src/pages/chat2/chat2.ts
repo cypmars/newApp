@@ -69,7 +69,7 @@ export class Chat2Page {
       function(result) { /* success processing */ },
       function(error) { /* error processing */ }
       );
-      this.initializeApp()
+      this.initializeApp();
       this.hideTime = true;
       this.verbalResponse = true;
   }

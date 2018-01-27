@@ -53,7 +53,22 @@ export class ResultPage implements OnInit, OnDestroy{
   boolFooterVisible: boolean = false;
   placeholder="";
   constructor(http: Http, public navCtrl: NavController, visNetworkServ: VisNetworkService, public navParams: NavParams, public completeTestService: CompleteTestService) {
-   
+    var vlength = this.navCtrl.getViews().length;
+    let final = new Array();
+    for (let views of this.navCtrl.getViews())
+    {
+      if (views != this.navCtrl.getViews()[vlength - 1])
+      {
+        final.push(views);
+      }
+    }
+    for (let view of final){
+      if (view.id == "ResultPage"){
+        this.visNetwork=this.visNetwork+"0"
+      }
+    }
+    
+    console.log("CONSTRUCTOR");
     let servData = http.get('assets/data/services.json').map(res => res.json().services);
     servData.subscribe(data => {
       this.services = data;
@@ -76,6 +91,8 @@ export class ResultPage implements OnInit, OnDestroy{
   }
 
   public networkInitialized(): void {
+        console.log("NETWORK INITIALIZE");
+
         if (this.firstT)
         {
 
@@ -113,7 +130,23 @@ export class ResultPage implements OnInit, OnDestroy{
               this.myServiceId = (this.visNetworkService.getSelectedNodes(this.visNetwork))[0];
               var footer = document.getElementsByClassName('footer');
               console.log(footer);
-              footer[1].removeAttribute("hidden");
+
+              var count = 0;
+              var vlength = this.navCtrl.getViews().length;
+              let final = new Array();
+              for (let views of this.navCtrl.getViews())
+              {
+                if (views != this.navCtrl.getViews()[vlength - 1])
+                {
+                  final.push(views);
+                }
+              }
+              for (let view of final){
+                if (view.id == "ResultPage"){
+                  count = count+2;
+                }
+              }
+              footer[count + 1].removeAttribute("hidden");
               this.boolFooterVisible = true;
             }
           }
@@ -226,13 +259,18 @@ export class ResultPage implements OnInit, OnDestroy{
   
   public ngOnDestroy(): void {
     this.visNetworkService.off(this.visNetwork, 'click');
-    console.log(this.visNetworkData.nodes);
+    this.visNetworkData.nodes.clear();
+    console.log("ONDESTROY");
     this.firstT = false;
   }
 
+  public ionViewDidLeave(){
+    console.log("LEAVE")
+    // this.visNetworkService.off(this.visNetwork, 'click');
+    // this.visNetworkData.nodes.clear();
+  }
+
   prev(){
-    this.visNetworkService.off(this.visNetwork, 'click');
-    this.visNetworkData.nodes.clear();
     var footer = document.getElementsByClassName('footer');
     console.log(this.boolFooterVisible);
     if (this.boolFooterVisible){

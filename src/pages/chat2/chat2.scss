@@ -233,6 +233,14 @@ page-chat2 {
     top: -3px;
   }
   
+  button, ion-button, .button-md, .button-ios{
+    left:25%;
+  }
+
+  .text-input-ios, .text-input-md{
+    margin: 18px 8px 11px 20px;
+  }
+
   .bold {
     font-weight: bold;
   }

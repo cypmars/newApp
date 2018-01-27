@@ -1373,7 +1373,7 @@ AutoCompleteComponent.decorators = [
                 selector: 'ion-auto-complete',
                 template: "\n        <ion-input\n                #inputElem\n                (keyup)=\"getItems($event)\"\n                (tap)=\"handleTap($event)\"\n                [(ngModel)]=\"keyword\"\n                (ngModelChange)=\"updateModel()\"\n                [placeholder]=\"options.placeholder == null ? defaultOpts.placeholder : options.placeholder\"\n                [type]=\"options.type == null ? defaultOpts.type : options.type\"\n                [clearOnEdit]=\"options.clearOnEdit == null ? defaultOpts.clearOnEdit : options.clearOnEdit\"\n                [clearInput]=\"options.clearInput == null ? defaultOpts.clearInput : options.clearInput\"\n                [disabled]=\"disabled\"\n                [ngClass]=\"{'hidden': !useIonInput}\"\n                (ionFocus)=\"onFocus()\"\n                (ionBlur)=\"onBlur()\"\n        >\n        </ion-input>\n        <ion-searchbar\n                #searchbarElem\n                (ionInput)=\"getItems($event)\"\n                (tap)=\"handleTap($event)\"\n                [(ngModel)]=\"keyword\"\n                (ngModelChange)=\"updateModel()\"\n                [cancelButtonText]=\"options.cancelButtonText == null ? defaultOpts.cancelButtonText : options.cancelButtonText\"\n                [showCancelButton]=\"options.showCancelButton == null ? defaultOpts.showCancelButton : options.showCancelButton\"\n                [debounce]=\"options.debounce == null ? defaultOpts.debounce : options.debounce\"\n                [placeholder]=\"options.placeholder == null ? defaultOpts.placeholder : options.placeholder\"\n                [autocomplete]=\"options.autocomplete == null ? defaultOpts.autocomplete : options.autocomplete\"\n                [autocorrect]=\"options.autocorrect == null ? defaultOpts.autocorrect : options.autocorrect\"\n                [spellcheck]=\"options.spellcheck == null ? defaultOpts.spellcheck : options.spellcheck\"\n                [type]=\"options.type == null ? defaultOpts.type : options.type\"\n                [disabled]=\"disabled\"\n                [ngClass]=\"{'hidden': useIonInput}\"\n                (ionClear)=\"clearValue(true)\"\n                (ionFocus)=\"onFocus()\"\n                (ionBlur)=\"onBlur()\"\n        >\n        </ion-searchbar>\n        <ng-template #defaultTemplate let-attrs=\"attrs\">\n            <span [innerHTML]='attrs.label | boldprefix:attrs.keyword'></span>\n        </ng-template>\n        <ul *ngIf=\"!disabled && suggestions.length > 0 && showList\">\n            <li *ngFor=\"let suggestion of suggestions\" (tap)=\"select(suggestion);$event.srcEvent.stopPropagation()\">\n                <ng-template\n                        [ngTemplateOutlet]=\"template || defaultTemplate\"\n                        [ngTemplateOutletContext]=\"\n                        {attrs:{ \n                          data: suggestion, \n                          label: getLabel(suggestion),\n                          keyword: keyword,\n                          formValue: getFormValue(suggestion), \n                          labelAttribute: dataProvider.labelAttribute, \n                          formValueAttribute: dataProvider.formValueAttribute }}\"></ng-template>\n            </li>\n        </ul>\n        <p *ngIf=\"suggestions.length == 0 && showList && options.noItems\">{{ options.noItems }}</p>\n    ",
                 providers: [
-                    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* NG_VALUE_ACCESSOR */], useExisting: AutoCompleteComponent, multi: true }
+                    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* NG_VALUE_ACCESSOR */], useExisting: AutoCompleteComponent, multi: true }
                 ]
             },] },
 ];
@@ -1450,7 +1450,7 @@ AutoCompleteModule.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
                 imports: [
                     __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
-                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormsModule */],
+                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
                     __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["l" /* IonicModule */]
                 ],
                 declarations: [
@@ -60511,6 +60511,21 @@ var ResultPage = (function () {
         this.firstT = true;
         this.boolFooterVisible = false;
         this.placeholder = "";
+        var vlength = this.navCtrl.getViews().length;
+        var final = new Array();
+        for (var _i = 0, _a = this.navCtrl.getViews(); _i < _a.length; _i++) {
+            var views = _a[_i];
+            if (views != this.navCtrl.getViews()[vlength - 1]) {
+                final.push(views);
+            }
+        }
+        for (var _b = 0, final_1 = final; _b < final_1.length; _b++) {
+            var view = final_1[_b];
+            if (view.id == "ResultPage") {
+                this.visNetwork = this.visNetwork + "0";
+            }
+        }
+        console.log("CONSTRUCTOR");
         var servData = http.get('assets/data/services.json').map(function (res) { return res.json().services; });
         servData.subscribe(function (data) {
             _this.services = data;
@@ -60529,6 +60544,7 @@ var ResultPage = (function () {
     };
     ResultPage.prototype.networkInitialized = function () {
         var _this = this;
+        console.log("NETWORK INITIALIZE");
         if (this.firstT) {
             for (var _i = 0, _a = this.param6; _i < _a.length; _i++) {
                 var resultId = _a[_i];
@@ -60560,7 +60576,22 @@ var ResultPage = (function () {
                     _this.myServiceId = (_this.visNetworkService.getSelectedNodes(_this.visNetwork))[0];
                     var footer = document.getElementsByClassName('footer');
                     console.log(footer);
-                    footer[1].removeAttribute("hidden");
+                    var count = 0;
+                    var vlength = _this.navCtrl.getViews().length;
+                    var final = new Array();
+                    for (var _i = 0, _a = _this.navCtrl.getViews(); _i < _a.length; _i++) {
+                        var views = _a[_i];
+                        if (views != _this.navCtrl.getViews()[vlength - 1]) {
+                            final.push(views);
+                        }
+                    }
+                    for (var _b = 0, final_2 = final; _b < final_2.length; _b++) {
+                        var view = final_2[_b];
+                        if (view.id == "ResultPage") {
+                            count = count + 2;
+                        }
+                    }
+                    footer[count + 1].removeAttribute("hidden");
                     _this.boolFooterVisible = true;
                 }
             }
@@ -60654,12 +60685,16 @@ var ResultPage = (function () {
     };
     ResultPage.prototype.ngOnDestroy = function () {
         this.visNetworkService.off(this.visNetwork, 'click');
-        console.log(this.visNetworkData.nodes);
+        this.visNetworkData.nodes.clear();
+        console.log("ONDESTROY");
         this.firstT = false;
     };
+    ResultPage.prototype.ionViewDidLeave = function () {
+        console.log("LEAVE");
+        // this.visNetworkService.off(this.visNetwork, 'click');
+        // this.visNetworkData.nodes.clear();
+    };
     ResultPage.prototype.prev = function () {
-        this.visNetworkService.off(this.visNetwork, 'click');
-        this.visNetworkData.nodes.clear();
         var footer = document.getElementsByClassName('footer');
         console.log(this.boolFooterVisible);
         if (this.boolFooterVisible) {
@@ -60673,9 +60708,10 @@ ResultPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-result',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/'\n\n    <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n        <ion-buttons start>\n\n            <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n        </ion-buttons>\n\n        <ion-title>\n\n        Recherche\n\n        </ion-title>\n\n        <ion-buttons end>\n\n            <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    <form>\n\n    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>\n\n    </form>\n\n    </ion-header>\n\n    <ion-content *ngIf="services != null">\n\n        <div class="splash-relative">\n\n            <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n\n            <div class="splash-info" center>\n\n                <div class="splash-form">\n\n                    <div class="chart-container">\n\n                        <p text-center style="background-color: rgba(255, 255, 255, 0.7); border-radius:15px;margin: 10px 20% 0 20%; padding:5px 5px 5px 5px; position:fixed; top: 20%; left:0; width:60%; z-index:1000;"><small><span style="color:#0eae15">Propreté et Services</span> - <span style="color:#d01717">Sécurité</span> - <span style="color:#386ecd">Services aéroportuaires</span> - <span style="color:#cbc40e">Accueil</span> - <span style="color:#cc7136">Logistique</span> - <span style="color:#962ac8">Technologies</span> - <span style="color:#d42649">AXXIS: Intérim, Recrutement et Formation</span></small></p>\n\n                        <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n                    </div>\n\n                </div>\n\n            </div>\n\n        </div>\n\n    </ion-content>\n\n    <ion-footer class="footer" hidden>\n\n        <ion-grid>\n\n          <ion-row>\n\n            <ion-col text-center col-9 *ngIf="myServiceId != null" class="valignCenter">\n\n                <h4 style="color:#0eae15; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#d01717; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#386ecd; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#cbc40e; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#cc7136; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#962ac8; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#d42649; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].content.title}}</h4>\n\n            </ion-col>\n\n            <ion-col text-center col-3 class="valignCenter">\n\n                <button style="background-color:rgba(0,0,0,0.2); border-radius:40px; width:40px; height:40px;" (click)="more()">\n\n                    <ion-icon name="information" style="color: rgba(0,0,0,0.3)" class="footer-btn"></ion-icon>\n\n                </button>\n\n            </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n    </ion-footer>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_6_ng2_vis_components_network__["VisNetworkService"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6_ng2_vis_components_network__["VisNetworkService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_ng2_vis_components_network__["VisNetworkService"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */]) === "function" && _e || Object])
 ], ResultPage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=result.js.map
 
 /***/ })

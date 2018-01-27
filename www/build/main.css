@@ -26211,6 +26211,14 @@ page-chat2 .msg-header-username {
   top: -3px;
 }
 
+page-chat2 button, page-chat2 ion-button, page-chat2 .button-md, page-chat2 .button-ios {
+  left: 25%;
+}
+
+page-chat2 .text-input-ios, page-chat2 .text-input-md {
+  margin: 18px 8px 11px 20px;
+}
+
 page-chat2 .bold {
   font-weight: bold;
 }

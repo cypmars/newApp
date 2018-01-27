@@ -195,7 +195,7 @@ export class TinderQ2Page {
         param6: this.resultsTemp,
         param7: this.myAnswer
       });
-      console.log(this.myAnswer);
+      console.log(this.resultsTemp);
       this.resultsTemp = [];
       this.myAnswer = [];
       this.cards.pop();
