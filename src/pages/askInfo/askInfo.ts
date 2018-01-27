@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EmailComposer } from '@ionic-native/email-composer';
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -32,7 +31,7 @@ export class AskInfoPage {
   askInfoForm: FormGroup;
   serviceId;
   constructor(public navCtrl: NavController,  public navParams: NavParams,
-    public toastCtrl: ToastController, public formBuilder: FormBuilder, private emailComposer: EmailComposer) {
+    public toastCtrl: ToastController, public formBuilder: FormBuilder) {
       this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
       this.serviceId = navParams.get("serviceId");
       this.mail.about = navParams.get("serviceName");
@@ -59,11 +58,11 @@ export class AskInfoPage {
     this.submitAttempt = true;
     console.log(this.mail);
     if (this.askInfoForm.valid){
-      this.emailComposer.isAvailable().then((available: boolean) =>{
-        if(available) {
-          //Now we know we can send
-        }
-       });
+      // this.emailComposer.isAvailable().then((available: boolean) =>{
+      //   if(available) {
+      //     //Now we know we can send
+      //   }
+      //  });
        
        let email = {
          from: this.mail.sendBy.email,
@@ -74,7 +73,7 @@ export class AskInfoPage {
        };
        
        // Send a text message using default options
-       this.emailComposer.open(email);
+       //this.emailComposer.open(email);
     }
   }
 

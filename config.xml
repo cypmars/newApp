@@ -90,5 +90,4 @@
     <plugin name="cordova-plugin-youtube-video-player" spec="^1.0.6" />
     <plugin name="cordova-plugin-document-viewer" spec="^0.9.7" />
     <engine name="android" spec="~6.3.0" />
-    <plugin name="cordova-plugin-email-composer" spec="^0.8.13" />
 </widget>
