@@ -58,6 +58,7 @@ export class AskInfoPage {
     this.submitAttempt = true;
     console.log(this.mail);
     if (this.askInfoForm.valid){
+      this.navCtrl.pop();
       // this.emailComposer.isAvailable().then((available: boolean) =>{
       //   if(available) {
       //     //Now we know we can send

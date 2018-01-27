@@ -141,19 +141,23 @@ export class SignupPage {
   save(){
     this.submitAttempt = true;
     
-    console.log(this.activity);
-    console.log(this.itemsCat[this.activity].jobsName);
-    console.log(this.job);
-    console.log(this.type);
-    console.log(this.itemsCat[this.activity].jobsName.indexOf(this.job));
-
-    
-    if(!this.slideOneForm.valid){
+    if(!this.slideOneForm.valid || !this.slideTwoForm.valid){
       this.signupSlider.slideTo(0);
       this.lastSlide = false;
     }
     else {
-      this.navCtrl.push(TinderQ2Page);
+      console.log(this.activity);
+      console.log(this.itemsCat[this.activity].jobsName);
+      console.log(this.job);
+      console.log(this.type);
+      console.log(this.itemsCat[this.activity].jobsName.indexOf(this.job));
+      this.navCtrl.push(TinderQ2Page, {
+        param1: this.type,
+        param2: this.activity,
+        param3: this.itemsCat[this.activity].name,
+        param4: this.itemsCat[this.activity].jobsName.indexOf(this.job),
+        param5: this.job
+      });
     }
   }
 }
