@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 import { MarqueDetailsPage } from '../pages';
-import { AskInfoPage } from '../pages';
+// import { AskInfoPage } from '../pages';
 import { ProductDetailsPage } from '../pages';
 
 import { Http } from '@angular/http';

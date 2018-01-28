@@ -79,19 +79,19 @@ var map = {
 		9
 	],
 	"../pages/news/news.module": [
-		435,
+		432,
 		5
 	],
 	"../pages/newsDetails/newsDetails.module": [
-		432,
+		433,
 		10
 	],
 	"../pages/productDetails/productDetails.module": [
-		433,
+		434,
 		7
 	],
 	"../pages/result/result.module": [
-		434,
+		435,
 		0
 	],
 	"../pages/serviceDetails/serviceDetails.module": [
@@ -111,19 +111,19 @@ var map = {
 		4
 	],
 	"../pages/simple-form2/simple-form2.module": [
-		440,
+		441,
 		3
 	],
 	"../pages/tabs/tabs.module": [
-		441,
+		440,
 		14
 	],
 	"../pages/tinderQ2/tinderQ2.module": [
-		442,
+		443,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		443,
+		442,
 		12
 	]
 };
@@ -168,11 +168,11 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(252);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(253);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_speech_recognition__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_img_viewer__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_img_viewer__ = __webpack_require__(351);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(428);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tabs_tabs__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__(255);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_swing__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_swing__ = __webpack_require__(352);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_angular2_swing__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -212,18 +212,18 @@ AppModule = __decorate([
                     { loadChildren: '../pages/askInfo/askInfo.module#AskInfoPageModule', name: 'AskInfoPage', segment: 'askInfo', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/marqueDetails/marqueDetails.module#MarqueDetailsPageModule', name: 'MarqueDetailsPage', segment: 'marqueDetails', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/newsDetails/newsDetails.module#NewsDetailsPageModule', name: 'NewsDetailsPage', segment: 'newsDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/productDetails/productDetails.module#ProductDetailsPageModule', name: 'ProductDetailsPage', segment: 'productDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/serviceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tinderQ2/tinderQ2.module#TinderQ2PageModule', name: 'TinderQ2Page', segment: 'tinderQ2', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tinderQ2/tinderQ2.module#TinderQ2PageModule', name: 'TinderQ2Page', segment: 'tinderQ2', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -355,38 +355,49 @@ MyApp = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export HomePage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return WelcomePage; });
 /* unused harmony export SimpleFormPage */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return SimpleForm1Page; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return SimpleForm2Page; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return TinderQ2Page; });
-/* unused harmony export Chat2Page */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ResultPage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return ServiceDetailsPage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MarqueDetailsPage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NewsDetailsPage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ProductDetailsPage; });
 /* unused harmony export AskInfoPage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ResultPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return WelcomePage; });
+/* unused harmony export SignupPage */
+/* unused harmony export Chat2Page */
 /* unused harmony export MainPage */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return Tab1Root; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return Tab2Root; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return Tab3Root; });
-var HomePage = 'HomePage';
-var WelcomePage = 'WelcomePage';
+// Page lancée au démarrage de l'app: SimpleFormPage
+// Recherche principale
+// Page lancée au démarrage de l'app: SimpleFormPage
 var SimpleFormPage = 'SimpleFormPage';
 var SimpleForm1Page = 'SimpleForm1Page';
 var SimpleForm2Page = 'SimpleForm2Page';
+// Page contenant les questions tinder
 var TinderQ2Page = 'TinderQ2Page';
-var Chat2Page = 'Chat2Page';
+// Page contenant les bubbles Apple Music
+var ResultPage = 'ResultPage';
+// Pages de détails Services, marques, produits, news
 var ServiceDetailsPage = 'ServiceDetailsPage';
 var MarqueDetailsPage = 'MarqueDetailsPage';
 var NewsDetailsPage = 'NewsDetailsPage';
 var ProductDetailsPage = 'ProductDetailsPage';
+// Page de demande d'information accéssible à partir de ServiceDetailsPage
 var AskInfoPage = 'AskInfoPage';
-var ResultPage = 'ResultPage';
+// Page de connexion
+var WelcomePage = 'WelcomePage';
+// Page d'inscription
+var SignupPage = 'SignupPage';
+// Page du Chatbot
+var Chat2Page = 'Chat2Page';
+// Page lancée par le main.ts du repertoire app
 var MainPage = 'TabsPage';
-// The initial root pages for our tabs (remove if not using tabs)
+// Les pages routées par TabsPage
 var Tab1Root = 'NewsPage';
 var Tab2Root = 'SimpleFormPage';
 var Tab3Root = 'Chat2Page';
