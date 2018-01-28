@@ -104,11 +104,21 @@ export class ServiceDetailsPage {
 
   }
 
-  askInfoPage(){
+  infos(){
+    
+    this.navCtrl.push("SignupPage");
+
+    this.navCtrl.push("AskInfoPage", {
+      serviceId: this.serviceId,
+      serviceName: this.services[this.serviceId].title
+    });
+
     this.navCtrl.push(AskInfoPage, {
       serviceId: this.serviceId,
       serviceName: this.services[this.serviceId].title
     });
+
+    this.navCtrl.push("SignupPage");
   }
 
   show(event){

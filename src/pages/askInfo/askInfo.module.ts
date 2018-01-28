@@ -10,8 +10,6 @@ import { AskInfoPage } from './askInfo';
   imports: [
     IonicPageModule.forChild(AskInfoPage)
   ],
-  providers: [
-  ],
   exports: [
     AskInfoPage
   ]
