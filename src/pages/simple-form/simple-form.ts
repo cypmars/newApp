@@ -4,6 +4,9 @@ import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
 import { CompleteTestService } from '../../providers/CompleteTestService';
 
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 import { SimpleForm1Page } from '../pages';
 import { ServiceDetailsPage } from '../pages';
 import { WelcomePage } from '../pages';
@@ -60,7 +63,7 @@ export class SimpleFormPage {
   myIcon: string = "Choisissez une catégorie de service";
 
   constructor(public navCtrl: NavController,
-    public toastCtrl: ToastController, public completeTestService: CompleteTestService) {
+    public toastCtrl: ToastController, public completeTestService: CompleteTestService, http:Http) {
 
   }
 

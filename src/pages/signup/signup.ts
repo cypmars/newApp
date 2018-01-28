@@ -5,6 +5,9 @@ import {  FabContainer } from 'ionic-angular';
 
 import {TinderQ2Page } from '../pages';
 
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 @IonicPage()
 @Component({
   selector: 'page-signup',
@@ -91,7 +94,7 @@ export class SignupPage {
 
   constructor(public navCtrl: NavController,
     public formBuilder: FormBuilder,
-    public toastCtrl: ToastController) {
+    public toastCtrl: ToastController, http:Http) {
 
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
 

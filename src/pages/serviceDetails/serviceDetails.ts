@@ -6,7 +6,7 @@ import { MarqueDetailsPage } from '../pages';
 import { ProductDetailsPage } from '../pages';
 
 import { Http } from '@angular/http';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
 
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 

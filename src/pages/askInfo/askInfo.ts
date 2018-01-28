@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Http } from '@angular/http';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
 
 /**
  * The Welcome Page is a splash page that quickly describes the app,
@@ -37,7 +37,7 @@ export class AskInfoPage {
   constructor(public navCtrl: NavController,  public navParams: NavParams,
     public toastCtrl: ToastController, http: Http, public formBuilder: FormBuilder) {
       this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
-      
+
       this.serviceId = navParams.get("serviceId");
       this.mail.about = navParams.get("serviceName");
 

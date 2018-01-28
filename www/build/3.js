@@ -1,5 +1,5 @@
-webpackJsonp([3],Array(439).concat([
-/* 439 */
+webpackJsonp([3],Array(440).concat([
+/* 440 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic2_auto_complete__ = __webpack_require__(454);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_CompleteTestService__ = __webpack_require__(452);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simple_form2__ = __webpack_require__(742);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simple_form2__ = __webpack_require__(744);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -47,7 +47,6 @@ SimpleFormPageModule = __decorate([
 //# sourceMappingURL=simple-form2.module.js.map
 
 /***/ }),
-/* 440 */,
 /* 441 */,
 /* 442 */,
 /* 443 */,
@@ -57,7 +56,7 @@ SimpleFormPageModule = __decorate([
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var map_1 = __webpack_require__(260);
+var map_1 = __webpack_require__(256);
 Observable_1.Observable.prototype.map = map_1.map;
 //# sourceMappingURL=map.js.map
 
@@ -742,7 +741,7 @@ exports.VirtualAction = VirtualAction;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompleteTestService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(444);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
@@ -951,7 +950,7 @@ var Subscription_1 = __webpack_require__(16);
 exports.Subscription = Subscription_1.Subscription;
 var Subscriber_1 = __webpack_require__(3);
 exports.Subscriber = Subscriber_1.Subscriber;
-var AsyncSubject_1 = __webpack_require__(254);
+var AsyncSubject_1 = __webpack_require__(255);
 exports.AsyncSubject = AsyncSubject_1.AsyncSubject;
 var ReplaySubject_1 = __webpack_require__(137);
 exports.ReplaySubject = ReplaySubject_1.ReplaySubject;
@@ -973,7 +972,7 @@ var UnsubscriptionError_1 = __webpack_require__(261);
 exports.UnsubscriptionError = UnsubscriptionError_1.UnsubscriptionError;
 var timeInterval_1 = __webpack_require__(447);
 exports.TimeInterval = timeInterval_1.TimeInterval;
-var timestamp_1 = __webpack_require__(259);
+var timestamp_1 = __webpack_require__(260);
 exports.Timestamp = timestamp_1.Timestamp;
 var TestScheduler_1 = __webpack_require__(713);
 exports.TestScheduler = TestScheduler_1.TestScheduler;
@@ -1491,7 +1490,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Observable_1 = __webpack_require__(9);
 var tryCatch_1 = __webpack_require__(19);
 var errorObject_1 = __webpack_require__(17);
-var AsyncSubject_1 = __webpack_require__(254);
+var AsyncSubject_1 = __webpack_require__(255);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -1782,7 +1781,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Observable_1 = __webpack_require__(9);
 var tryCatch_1 = __webpack_require__(19);
 var errorObject_1 = __webpack_require__(17);
-var AsyncSubject_1 = __webpack_require__(254);
+var AsyncSubject_1 = __webpack_require__(255);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -2904,7 +2903,7 @@ Observable_1.Observable.merge = merge_1.merge;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var race_1 = __webpack_require__(256);
+var race_1 = __webpack_require__(257);
 Observable_1.Observable.race = race_1.race;
 //# sourceMappingURL=race.js.map
 
@@ -3022,7 +3021,7 @@ Observable_1.Observable.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNex
 
 "use strict";
 
-var onErrorResumeNext_1 = __webpack_require__(257);
+var onErrorResumeNext_1 = __webpack_require__(258);
 exports.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNextStatic;
 //# sourceMappingURL=onErrorResumeNext.js.map
 
@@ -7082,7 +7081,7 @@ Observable_1.Observable.prototype.onErrorResumeNext = onErrorResumeNext_1.onErro
 
 "use strict";
 
-var onErrorResumeNext_1 = __webpack_require__(257);
+var onErrorResumeNext_1 = __webpack_require__(258);
 /* tslint:enable:max-line-length */
 /**
  * When any of the provided Observable emits an complete or error notification, it immediately subscribes to the next one
@@ -7484,7 +7483,7 @@ Observable_1.Observable.prototype.race = race_1.race;
 
 var race_1 = __webpack_require__(318);
 // NOTE: to support backwards compatability with 5.4.* and lower
-var race_2 = __webpack_require__(256);
+var race_2 = __webpack_require__(257);
 exports.raceStatic = race_2.race;
 /* tslint:enable:max-line-length */
 /**
@@ -8688,7 +8687,7 @@ var ImmediateDefinition = (function () {
 exports.ImmediateDefinition = ImmediateDefinition;
 exports.Immediate = new ImmediateDefinition(root_1.root);
 //# sourceMappingURL=Immediate.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(258).clearImmediate, __webpack_require__(258).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(259).clearImmediate, __webpack_require__(259).setImmediate))
 
 /***/ }),
 /* 670 */
@@ -9442,7 +9441,7 @@ Observable_1.Observable.prototype.timestamp = timestamp_1.timestamp;
 "use strict";
 
 var async_1 = __webpack_require__(18);
-var timestamp_1 = __webpack_require__(259);
+var timestamp_1 = __webpack_require__(260);
 /**
  * @param scheduler
  * @return {Observable<Timestamp<any>>|WebSocketSubject<T>|Observable<T>}
@@ -10491,7 +10490,9 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* 739 */,
 /* 740 */,
 /* 741 */,
-/* 742 */
+/* 742 */,
+/* 743 */,
+/* 744 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10499,7 +10500,10 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__ = __webpack_require__(452);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(254);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(444);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages__ = __webpack_require__(67);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10514,6 +10518,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -10521,7 +10527,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * we recommend not using the Welcome page.
 */
 var SimpleForm2Page = (function () {
-    function SimpleForm2Page(navCtrl, navParams, toastCtrl, completeTestService) {
+    function SimpleForm2Page(navCtrl, navParams, toastCtrl, completeTestService, http) {
         this.navCtrl = navCtrl;
         this.toastCtrl = toastCtrl;
         this.completeTestService = completeTestService;
@@ -10565,11 +10571,11 @@ var SimpleForm2Page = (function () {
         this.navCtrl.pop();
     };
     SimpleForm2Page.prototype.login = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["m" /* WelcomePage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["m" /* WelcomePage */]);
     };
     SimpleForm2Page.prototype.getVal = function (event) {
         console.log(event.id);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["f" /* ServiceDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["f" /* ServiceDetailsPage */], {
             param1: event.id,
         });
         this.placeholder = "";
@@ -10580,7 +10586,7 @@ var SimpleForm2Page = (function () {
     SimpleForm2Page.prototype.chooseService = function (event, data, fab) {
         this.myIcon = this.itemsCat[this.param2].jobsName[data];
         this.myIconId = data;
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["l" /* TinderQ2Page */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["l" /* TinderQ2Page */], {
             param1: this.param1,
             param2: this.param2,
             param3: this.param3,
@@ -10601,7 +10607,7 @@ SimpleForm2Page = __decorate([
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */]])
+        __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
 ], SimpleForm2Page);
 
 //# sourceMappingURL=simple-form2.js.map

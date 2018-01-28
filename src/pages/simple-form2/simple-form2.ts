@@ -3,6 +3,9 @@ import {  FabContainer } from 'ionic-angular';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { CompleteTestService } from '../../providers/CompleteTestService';
 
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 import { WelcomePage, TinderQ2Page, ServiceDetailsPage } from '../pages';
 /**
  * The Welcome Page is a splash page that quickly describes the app,
@@ -64,7 +67,7 @@ export class SimpleForm2Page {
   constructor(public navCtrl: NavController,
     navParams: NavParams,
     public toastCtrl: ToastController,
-    public completeTestService: CompleteTestService) {
+    public completeTestService: CompleteTestService, http:Http) {
 
       this.myIcon = "Quel est votre métier ?"
       this.param1 = navParams.get('param1');

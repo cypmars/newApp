@@ -3,7 +3,11 @@ import {  FabContainer } from 'ionic-angular';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { CompleteTestService } from '../../providers/CompleteTestService';
 
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 import { WelcomePage, SimpleForm2Page, ServiceDetailsPage } from '../pages';
+
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -84,7 +88,7 @@ export class SimpleForm1Page {
   constructor(public navCtrl: NavController,
     navParams: NavParams,
     public toastCtrl: ToastController,
-    public completeTestService: CompleteTestService) {
+    public completeTestService: CompleteTestService, http:Http) {
       this.param1 = navParams.get('param1');
   }
 
