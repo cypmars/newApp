@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-
+import { AskInfoPage } from '../pages';
 import { MarqueDetailsPage } from '../pages';
 // import { AskInfoPage } from '../pages';
 import { ProductDetailsPage } from '../pages';
@@ -105,8 +105,7 @@ export class ServiceDetailsPage {
   }
 
   infos(){
-
-    this.navCtrl.push("AskInfoPage", {
+    this.navCtrl.push(AskInfoPage, {
       serviceId: this.serviceId,
       serviceName: this.services[this.serviceId].title
     });

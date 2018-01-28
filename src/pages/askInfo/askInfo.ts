@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map'
+
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -31,8 +35,9 @@ export class AskInfoPage {
   askInfoForm: FormGroup;
   serviceId;
   constructor(public navCtrl: NavController,  public navParams: NavParams,
-    public toastCtrl: ToastController, public formBuilder: FormBuilder) {
+    public toastCtrl: ToastController, http: Http, public formBuilder: FormBuilder) {
       this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
+      
       this.serviceId = navParams.get("serviceId");
       this.mail.about = navParams.get("serviceName");
 

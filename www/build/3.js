@@ -1,5 +1,5 @@
-webpackJsonp([3],Array(441).concat([
-/* 441 */
+webpackJsonp([3],Array(440).concat([
+/* 440 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47,6 +47,7 @@ SimpleFormPageModule = __decorate([
 //# sourceMappingURL=simple-form2.module.js.map
 
 /***/ }),
+/* 441 */,
 /* 442 */,
 /* 443 */,
 /* 444 */
@@ -10565,11 +10566,11 @@ var SimpleForm2Page = (function () {
         this.navCtrl.pop();
     };
     SimpleForm2Page.prototype.login = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["l" /* WelcomePage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["m" /* WelcomePage */]);
     };
     SimpleForm2Page.prototype.getVal = function (event) {
         console.log(event.id);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["e" /* ServiceDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["f" /* ServiceDetailsPage */], {
             param1: event.id,
         });
         this.placeholder = "";
@@ -10580,7 +10581,7 @@ var SimpleForm2Page = (function () {
     SimpleForm2Page.prototype.chooseService = function (event, data, fab) {
         this.myIcon = this.itemsCat[this.param2].jobsName[data];
         this.myIconId = data;
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["k" /* TinderQ2Page */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["l" /* TinderQ2Page */], {
             param1: this.param1,
             param2: this.param2,
             param3: this.param3,

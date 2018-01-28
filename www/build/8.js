@@ -172,6 +172,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 // import { AskInfoPage } from '../pages';
 
 
@@ -230,7 +231,7 @@ var ServiceDetailsPage = (function () {
     };
     ServiceDetailsPage.prototype.showMarque = function () {
         console.log(this.services[this.serviceId].marqueId);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["a" /* MarqueDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["b" /* MarqueDetailsPage */], {
             marqueId: this.services[this.serviceId].marqueId
         });
     };
@@ -242,12 +243,12 @@ var ServiceDetailsPage = (function () {
     };
     ServiceDetailsPage.prototype.showProduct = function (event, index) {
         console.log(index);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["c" /* ProductDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["d" /* ProductDetailsPage */], {
             productId: index
         });
     };
     ServiceDetailsPage.prototype.infos = function () {
-        this.navCtrl.push("AskInfoPage", {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["a" /* AskInfoPage */], {
             serviceId: this.serviceId,
             serviceName: this.services[this.serviceId].title
         });

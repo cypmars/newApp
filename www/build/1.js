@@ -1,5 +1,5 @@
-webpackJsonp([1],Array(443).concat([
-/* 443 */
+webpackJsonp([1],Array(442).concat([
+/* 442 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(255);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ2__ = __webpack_require__(746);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ2__ = __webpack_require__(745);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(352);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic2_auto_complete__ = __webpack_require__(454);
@@ -54,6 +54,7 @@ TinderQ2PageModule = __decorate([
 //# sourceMappingURL=tinderQ2.module.js.map
 
 /***/ }),
+/* 443 */,
 /* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10497,8 +10498,7 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* 742 */,
 /* 743 */,
 /* 744 */,
-/* 745 */,
-/* 746 */
+/* 745 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10697,7 +10697,7 @@ var TinderQ2Page = (function () {
         }
         else {
             console.log(this.resultsTemp);
-            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["d" /* ResultPage */], {
+            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["e" /* ResultPage */], {
                 param1: this.param1,
                 param2: this.param2,
                 param3: this.param3,
@@ -10730,7 +10730,7 @@ var TinderQ2Page = (function () {
     };
     TinderQ2Page.prototype.getVal = function (event) {
         console.log(event.id);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["e" /* ServiceDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["f" /* ServiceDetailsPage */], {
             param1: event.id,
         });
         this.placeholder = "";
@@ -11108,7 +11108,7 @@ var TinderQ2Page = (function () {
         console.log("Did Leave ???");
     };
     TinderQ2Page.prototype.login = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["l" /* WelcomePage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["m" /* WelcomePage */]);
     };
     return TinderQ2Page;
 }());

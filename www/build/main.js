@@ -25,9 +25,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var TabsPage = (function () {
     function TabsPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__pages__["h" /* Tab1Root */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_2__pages__["i" /* Tab2Root */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__pages__["j" /* Tab3Root */];
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__pages__["i" /* Tab1Root */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_2__pages__["j" /* Tab2Root */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__pages__["k" /* Tab3Root */];
         this.tab1Title = " ";
         this.tab2Title = " ";
         this.tab3Title = " ";
@@ -68,11 +68,11 @@ webpackEmptyAsyncContext.id = 160;
 var map = {
 	"../pages/askInfo/askInfo.module": [
 		429,
-		13
+		11
 	],
 	"../pages/chat2/chat2.module": [
 		430,
-		11
+		12
 	],
 	"../pages/marqueDetails/marqueDetails.module": [
 		431,
@@ -111,20 +111,20 @@ var map = {
 		4
 	],
 	"../pages/simple-form2/simple-form2.module": [
-		441,
+		440,
 		3
 	],
 	"../pages/tabs/tabs.module": [
-		440,
+		441,
 		14
 	],
 	"../pages/tinderQ2/tinderQ2.module": [
-		443,
+		442,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		442,
-		12
+		443,
+		13
 	]
 };
 function webpackAsyncContext(req) {
@@ -220,10 +220,10 @@ AppModule = __decorate([
                     { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tinderQ2/tinderQ2.module#TinderQ2PageModule', name: 'TinderQ2Page', segment: 'tinderQ2', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tinderQ2/tinderQ2.module#TinderQ2PageModule', name: 'TinderQ2Page', segment: 'tinderQ2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -356,22 +356,22 @@ MyApp = __decorate([
 
 "use strict";
 /* unused harmony export SimpleFormPage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return SimpleForm1Page; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return SimpleForm2Page; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return TinderQ2Page; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ResultPage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return ServiceDetailsPage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MarqueDetailsPage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NewsDetailsPage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ProductDetailsPage; });
-/* unused harmony export AskInfoPage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return WelcomePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return SimpleForm1Page; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return SimpleForm2Page; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return TinderQ2Page; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return ResultPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return ServiceDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return MarqueDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return NewsDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ProductDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AskInfoPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return WelcomePage; });
 /* unused harmony export SignupPage */
 /* unused harmony export Chat2Page */
 /* unused harmony export MainPage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return Tab1Root; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return Tab2Root; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return Tab3Root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return Tab1Root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return Tab2Root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return Tab3Root; });
 // Page lancée au démarrage de l'app: SimpleFormPage
 // Recherche principale
 // Page lancée au démarrage de l'app: SimpleFormPage
