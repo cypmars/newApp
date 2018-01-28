@@ -94,7 +94,7 @@ var WelcomePage = (function () {
     };
     // Attempt to login in through our User service
     WelcomePage.prototype.doLogin = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["l" /* TinderQ2Page */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["k" /* TinderQ2Page */]);
     };
     WelcomePage.prototype.prev = function () {
         this.tabBarElement.style.display = 'flex';

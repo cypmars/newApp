@@ -606,7 +606,7 @@ var Chat2Page = (function () {
     Chat2Page.prototype.buildCardLayout = function (data) {
     };
     Chat2Page.prototype.login = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["m" /* WelcomePage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["l" /* WelcomePage */]);
     };
     return Chat2Page;
 }());
