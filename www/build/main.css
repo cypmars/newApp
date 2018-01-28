@@ -26102,6 +26102,7 @@ page-chat2 button.ion-android-send {
 
 page-chat2 .footer-btn {
   font-size: x-large;
+  margin-left: 40px;
 }
 
 page-chat2 img.profile-pic {
@@ -26209,10 +26210,6 @@ page-chat2 .msg-header-username {
   vertical-align: middle;
   position: relative;
   top: -3px;
-}
-
-page-chat2 button, page-chat2 ion-button, page-chat2 .button-md, page-chat2 .button-ios {
-  left: 25%;
 }
 
 page-chat2 .text-input-ios, page-chat2 .text-input-md {

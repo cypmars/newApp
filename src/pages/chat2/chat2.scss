@@ -123,7 +123,8 @@ page-chat2 {
   }
   
   .footer-btn {
-        font-size: x-large;
+    font-size: x-large;
+    margin-left: 40px;
   }
   
   img.profile-pic {
@@ -231,10 +232,6 @@ page-chat2 {
     vertical-align: middle;
     position: relative;
     top: -3px;
-  }
-  
-  button, ion-button, .button-md, .button-ios{
-    left:25%;
   }
 
   .text-input-ios, .text-input-md{

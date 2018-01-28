@@ -10,7 +10,7 @@ import { SpeechRecognition, SpeechRecognitionListeningOptionsAndroid, SpeechReco
  * we recommend not using the Welcome page.
 */
 
-declare var ApiAIPlugin: any;
+//declare var ApiAIPlugin: any;
 
 @IonicPage()
 @Component({
@@ -61,17 +61,17 @@ export class Chat2Page {
   message1;
   message2;
   constructor(private ref: ChangeDetectorRef, private speech: SpeechRecognition, private tts: TextToSpeech, public navCtrl: NavController, public platform: Platform) {
-      ApiAIPlugin.init(
-      {
-          clientAccessToken: "099b97242c1745bd92c163cd27d2c767", 
-          lang: "en" // set lang tag from list of supported languages 
-      }, 
-      function(result) { /* success processing */ },
-      function(error) { /* error processing */ }
-      );
-      this.initializeApp();
-      this.hideTime = true;
-      this.verbalResponse = true;
+      // ApiAIPlugin.init(
+      // {
+      //     clientAccessToken: "099b97242c1745bd92c163cd27d2c767", 
+      //     lang: "en" // set lang tag from list of supported languages 
+      // }, 
+      // function(result) { /* success processing */ },
+      // function(error) { /* error processing */ }
+      // // );
+      // this.initializeApp();
+      // this.hideTime = true;
+      // this.verbalResponse = true;
   }
 
 

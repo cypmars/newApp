@@ -210,6 +210,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
+/**
+ * The Welcome Page is a splash page that quickly describes the app,
+ * and then directs the user to create an account or log in.
+ * If you'd like to immediately put the user onto a login/signup page,
+ * we recommend not using the Welcome page.
+*/
+//declare var ApiAIPlugin: any;
 var Chat2Page = (function () {
     function Chat2Page(ref, speech, tts, navCtrl, platform) {
         this.ref = ref;
@@ -239,13 +246,17 @@ var Chat2Page = (function () {
                 text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?"
             }
         ];
-        ApiAIPlugin.init({
-            clientAccessToken: "099b97242c1745bd92c163cd27d2c767",
-            lang: "en" // set lang tag from list of supported languages 
-        }, function (result) { }, function (error) { });
-        this.initializeApp();
-        this.hideTime = true;
-        this.verbalResponse = true;
+        // ApiAIPlugin.init(
+        // {
+        //     clientAccessToken: "099b97242c1745bd92c163cd27d2c767", 
+        //     lang: "en" // set lang tag from list of supported languages 
+        // }, 
+        // function(result) { /* success processing */ },
+        // function(error) { /* error processing */ }
+        // // );
+        // this.initializeApp();
+        // this.hideTime = true;
+        // this.verbalResponse = true;
     }
     Chat2Page.prototype.initializeApp = function () {
         var _this = this;
