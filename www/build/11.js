@@ -1,6 +1,6 @@
 webpackJsonp([11],{
 
-/***/ 430:
+/***/ 431:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__ = __webpack_require__(730);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat2__ = __webpack_require__(734);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat2__ = __webpack_require__(735);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -151,7 +151,7 @@ var TextToSpeech = (function (_super) {
 
 /***/ }),
 
-/***/ 734:
+/***/ 735:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -210,13 +210,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-/**
- * The Welcome Page is a splash page that quickly describes the app,
- * and then directs the user to create an account or log in.
- * If you'd like to immediately put the user onto a login/signup page,
- * we recommend not using the Welcome page.
-*/
-//declare var ApiAIPlugin: any;
 var Chat2Page = (function () {
     function Chat2Page(ref, speech, tts, navCtrl, platform) {
         this.ref = ref;
@@ -246,17 +239,13 @@ var Chat2Page = (function () {
                 text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?"
             }
         ];
-        // ApiAIPlugin.init(
-        // {
-        //     clientAccessToken: "099b97242c1745bd92c163cd27d2c767", 
-        //     lang: "en" // set lang tag from list of supported languages 
-        // }, 
-        // function(result) { /* success processing */ },
-        // function(error) { /* error processing */ }
-        // // );
-        // this.initializeApp();
-        // this.hideTime = true;
-        // this.verbalResponse = true;
+        ApiAIPlugin.init({
+            clientAccessToken: "099b97242c1745bd92c163cd27d2c767",
+            lang: "en" // set lang tag from list of supported languages 
+        }, function (result) { }, function (error) { });
+        this.initializeApp();
+        this.hideTime = true;
+        this.verbalResponse = true;
     }
     Chat2Page.prototype.initializeApp = function () {
         var _this = this;
@@ -625,10 +614,9 @@ Chat2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-chat2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/'\n\n  <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n  \n\n      </ion-buttons>\n\n      <ion-title>\n\n        Chat-Bot\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content padding>\n\n  <div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">\n\n    <div *ngIf="user._id !== message.userId">\n\n      <img class="profile-pic left" [src]="toUser.pic" />\n\n      <div class="chat-bubble left slide-left">\n\n          \n\n         <div class="message" [innerHTML]="message.text" autolinker></div>\n\n          \n\n        <div class="message-detail">\n\n          <span class="bold">{{toUser.username}}</span>\n\n        </div>\n\n          \n\n      </div>\n\n    </div>\n\n    <div *ngIf="user._id === message.userId">\n\n      <img class="profile-pic right" [src]="user.pic" />\n\n\n\n      <div class="chat-bubble right slide-right">\n\n          \n\n        <div class="message" [innerHTML]="message.text" autolinker></div>\n\n\n\n        <div class="message-detail">\n\n          <span class="bold">{{user.username}}</span>\n\n        </div>\n\n\n\n      </div>\n\n    </div>\n\n    <div class="cf"></div>\n\n  </div>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <!-- <ion-col>\n\n            <button ion-button clear (click)="listenForSpeech()"><ion-icon class="footer-btn" name="mic"></ion-icon></button>\n\n        </ion-col> -->\n\n        <ion-col col-8>\n\n            <ion-input [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>\n\n        </ion-col>\n\n        <ion-col>\n\n            <button ion-button clear (click)="sendMessage()"><ion-icon class="footer-btn" name="send"></ion-icon></button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\chat2\chat2.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__["a" /* SpeechRecognition */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__["a" /* SpeechRecognition */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__["a" /* TextToSpeech */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__["a" /* TextToSpeech */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Platform */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"], __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__["a" /* SpeechRecognition */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__["a" /* TextToSpeech */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Platform */]])
 ], Chat2Page);
 
-var _a, _b, _c, _d, _e;
 //# sourceMappingURL=chat2.js.map
 
 /***/ })
