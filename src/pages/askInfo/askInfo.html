@@ -21,7 +21,7 @@
             <div padding>
             <div class="splash-form">
               <p *ngIf="submitAttempt" style="color: #ea6153;">S'il-vous-plait, remplissez les champs suivants.</p>
-              <form [formGroup]="askInfoForm" (submit)="askInfo()">
+              <form [formGroup]="askInfoForm">
                   <ion-list text-center>
               
                     <ion-item>
@@ -52,7 +52,7 @@
                       <ion-textarea formControlName="text" type="text" [(ngModel)]="mail.text" name="text"></ion-textarea>
                     </ion-item>
               
-                    <button ion-button class="login">Envoyer !</button>
+                    <button ion-button class="login" (click)="sendMail()">Envoyer !</button>
               
                   </ion-list>
                 </form>                

@@ -59,7 +59,7 @@ export class AskInfoPage {
     this.tabBarElement.style.display = 'flex';
   }
 
-  askInfo(){
+  sendMail(){
     this.submitAttempt = true;
     console.log(this.mail);
     if (this.askInfoForm.valid){
