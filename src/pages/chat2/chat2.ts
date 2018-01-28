@@ -3,6 +3,9 @@ import { IonicPage, NavController, Platform } from 'ionic-angular';
 import { WelcomePage } from '../pages';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { SpeechRecognition, SpeechRecognitionListeningOptionsAndroid, SpeechRecognitionListeningOptionsIOS } from '@ionic-native/speech-recognition';
+
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -60,7 +63,7 @@ export class Chat2Page {
   message0;
   message1;
   message2;
-  constructor(private ref: ChangeDetectorRef, private speech: SpeechRecognition, private tts: TextToSpeech, public navCtrl: NavController, public platform: Platform) {
+  constructor(private ref: ChangeDetectorRef, private speech: SpeechRecognition, private tts: TextToSpeech, public navCtrl: NavController, public platform: Platform, http:Http) {
       ApiAIPlugin.init(
       {
           clientAccessToken: "099b97242c1745bd92c163cd27d2c767", 

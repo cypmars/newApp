@@ -1,14 +1,14 @@
 webpackJsonp([12],{
 
-/***/ 429:
+/***/ 433:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AskInfoPageModule", function() { return AskInfoPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsDetailsPageModule", function() { return NewsDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__askInfo__ = __webpack_require__(733);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__newsDetails__ = __webpack_require__(737);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AskInfoPageModule = (function () {
-    function AskInfoPageModule() {
+var NewsDetailsPageModule = (function () {
+    function NewsDetailsPageModule() {
     }
-    return AskInfoPageModule;
+    return NewsDetailsPageModule;
 }());
-AskInfoPageModule = __decorate([
+NewsDetailsPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__askInfo__["a" /* AskInfoPage */],
+            __WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__askInfo__["a" /* AskInfoPage */])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */])
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__askInfo__["a" /* AskInfoPage */]
+            __WEBPACK_IMPORTED_MODULE_2__newsDetails__["a" /* NewsDetailsPage */]
         ]
     })
-], AskInfoPageModule);
+], NewsDetailsPageModule);
 
-//# sourceMappingURL=askInfo.module.js.map
+//# sourceMappingURL=newsDetails.module.js.map
 
 /***/ }),
 
@@ -53,14 +53,14 @@ Observable_1.Observable.prototype.map = map_1.map;
 
 /***/ }),
 
-/***/ 733:
+/***/ 737:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AskInfoPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewsDetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(444);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
@@ -84,77 +84,74 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * If you'd like to immediately put the user onto a login/signup page,
  * we recommend not using the Welcome page.
 */
-var AskInfoPage = (function () {
-    function AskInfoPage(navCtrl, navParams, toastCtrl, http, formBuilder) {
+var NewsDetailsPage = (function () {
+    // The account fields for the login form.
+    // If you're using the username field with or without email, make
+    // sure to add it to the type
+    // account: { email: string, password: string } = {
+    //   email: '@ e-mail ou pseudo',
+    //   password: 'mot de passe'
+    // };
+    // Our translated text strings
+    // private loginErrorString: string;
+    function NewsDetailsPage(navCtrl, navParams, toastCtrl, http) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.toastCtrl = toastCtrl;
-        this.formBuilder = formBuilder;
-        this.mail = {
-            about: "Service",
-            object: "Objet",
-            text: "Message",
-            sendBy: {
-                firstName: "Prénom",
-                lastName: "Nom",
-                email: "@ email",
-            }
-        };
-        this.submitAttempt = false;
         this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
-        this.serviceId = navParams.get("serviceId");
-        this.mail.about = navParams.get("serviceName");
-        this.askInfoForm = formBuilder.group({
-            firstName: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(30), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern('[a-zA-Z ]*'), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])],
-            lastName: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(30), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern('[a-zA-Z ]*'), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])],
-            email: [''],
-            about: [''],
-            object: [''],
-            text: ['']
+        this.newsId = navParams.get('param1');
+        console.log(this.newsId);
+        var newsData = http.get('assets/data/news.json').map(function (res) { return res.json().news; });
+        newsData.subscribe(function (data) {
+            _this.news = data;
+        });
+        var brandData = http.get('assets/data/marques.json').map(function (res) { return res.json().marques; });
+        brandData.subscribe(function (data) {
+            _this.marques = data;
+        });
+        var productData = http.get('assets/data/products.json').map(function (res) { return res.json().products; });
+        productData.subscribe(function (data) {
+            _this.products = data;
         });
     }
-    AskInfoPage.prototype.ionViewWillEnter = function () {
-        this.tabBarElement.style.display = 'none';
-    };
-    AskInfoPage.prototype.ionViewWillLeave = function () {
-        this.tabBarElement.style.display = 'flex';
-    };
-    AskInfoPage.prototype.askInfo = function () {
-        this.submitAttempt = true;
-        console.log(this.mail);
-        if (this.askInfoForm.valid) {
-            this.navCtrl.pop();
-            // this.emailComposer.isAvailable().then((available: boolean) =>{
-            //   if(available) {
-            //     //Now we know we can send
-            //   }
-            //  });
-            //  let email = {
-            //    from: this.mail.sendBy.email,
-            //    to: 'cypconnet@wanadoo.fr',
-            //    subject: this.mail.object,
-            //    body: 'Related to: '+this.mail.about+'<br><br>'+this.mail.text,
-            //    isHtml: true
-            //  };
-            // Send a text message using default options
-            //this.emailComposer.open(email);
-        }
-    };
-    AskInfoPage.prototype.prev = function () {
-        this.tabBarElement.style.display = 'flex';
+    NewsDetailsPage.prototype.prev = function () {
         this.navCtrl.pop();
     };
-    return AskInfoPage;
+    NewsDetailsPage.prototype.showMarque = function () {
+        console.log(this.news[this.newsId].marqueId);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["b" /* MarqueDetailsPage */], {
+            marqueId: this.news[this.newsId].marqueId
+        });
+    };
+    NewsDetailsPage.prototype.ionViewWillEnter = function () {
+        this.tabBarElement.style.display = 'none';
+    };
+    NewsDetailsPage.prototype.ionViewWillLeave = function () {
+        this.tabBarElement.style.display = 'flex';
+    };
+    NewsDetailsPage.prototype.show = function (event) {
+        if (event.srcElement.style.wordBreak == "normal") {
+            event.srcElement.style.wordBreak = "break-word";
+            event.srcElement.style.width = "100px";
+        }
+        else {
+            event.srcElement.style.wordBreak = "normal";
+            event.srcElement.style.width = "100%";
+            event.srcElement.style.minWidth = "100px";
+        }
+    };
+    return NewsDetailsPage;
 }());
-AskInfoPage = __decorate([
+NewsDetailsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-askInfo',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\askInfo\askInfo.html"*/'<ion-header no-border>\n\n  <ion-navbar color=\'primary\' hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon>back</button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      \n\n    </ion-title>\n\n    <ion-buttons end>\n\n     \n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n  <div class="splash-bg">\n\n    <div class="splash-relative">\n\n            <div class="splash-intro">\n\n                  Demande d\'informations\n\n            </div>\n\n            <br>\n\n            <div padding>\n\n            <div class="splash-form">\n\n              <p *ngIf="submitAttempt" style="color: #ea6153;">S\'il-vous-plait, remplissez les champs suivants.</p>\n\n              <form [formGroup]="askInfoForm" (submit)="askInfo()">\n\n                  <ion-list text-center>\n\n              \n\n                    <ion-item>\n\n                      <ion-input formControlName="firstName" type="text" [(ngModel)]="mail.sendBy.firstName" name="sendBy.firstName"></ion-input>\n\n                    </ion-item>\n\n                    \n\n                    <ion-item>\n\n                      <ion-input formControlName="lastName" type="text" [(ngModel)]="mail.sendBy.lastName" name="sendBy.lastName"></ion-input>\n\n                    </ion-item>\n\n\n\n                    <ion-item>\n\n                      <ion-input formControlName="email" type="text" [(ngModel)]="mail.sendBy.email" name="sendBy.email"></ion-input>\n\n                    </ion-item>\n\n              \n\n                    <br>\n\n\n\n                    <ion-item>\n\n                      <ion-input formControlName="about" type="text" [(ngModel)]="mail.about" name="about" disabled>{{ mail.about }}</ion-input>\n\n                    </ion-item>\n\n\n\n                    <br>\n\n\n\n                    <ion-item>\n\n                      <ion-input formControlName="object" type="text" [(ngModel)]="mail.object" name="object"></ion-input>\n\n                    </ion-item>\n\n\n\n                    <ion-item>\n\n                      <ion-textarea formControlName="text" type="text" [(ngModel)]="mail.text" name="text"></ion-textarea>\n\n                    </ion-item>\n\n              \n\n                    <button ion-button class="login">Envoyer !</button>\n\n              \n\n                  </ion-list>\n\n                </form>                \n\n              </div>\n\n          </div>\n\n    </div>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\askInfo\askInfo.html"*/
+        selector: 'page-news-details',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\newsDetails\newsDetails.html"*/'<ion-content *ngIf="news != null && marques != null && products != null" padding style="border-top: 20px solid #488aff">\n\n  <ion-header no-border style="background-color: rgba(0, 0, 0, 0.2)">\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n      <ion-buttons start>\n\n          <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n      </ion-buttons>\n\n      <ion-title>\n\n\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        \n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n<div id="profile-bg" [ngStyle]="{\'background-image\': \'url(\' + marques[news[newsId].marqueId].imgCover +\')\'}"></div>\n\n<div id="content">\n\n  <ion-card>\n\n    <ion-card-content>\n\n  <div id="profile-info" padding>\n\n    <div style="position: absolute; left:35%; right:35%; z-index: 1000">\n\n        <img id="profile-image" [src]="news[newsId].img">\n\n    </div>\n\n    <h3 id="profile-name">{{news[newsId].content.title}}</h3>\n\n    <br>\n\n    <div *ngIf="news[newsId].content.subtitle">\n\n      <h4 style="font-size: 1.4em">{{news[newsId].content.subtitle}}</h4>\n\n      <br>\n\n    </div>\n\n    <hr>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col>\n\n          <button *ngIf="news[newsId].marqueId == 0" ion-button full style="background-color: #0eae15" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 1" ion-button full style="background-color: #d01717" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 2" ion-button full style="background-color: #386ecd" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 3" ion-button full style="background-color: #cbc40e" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 4" ion-button full style="background-color: #cc7136" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 5" ion-button full style="background-color: #962ac8" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n          <button *ngIf="news[newsId].marqueId == 6" ion-button full style="background-color: #d42649" (click)="showMarque()">{{marques[news[newsId].marqueId].title}}</button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n    <hr style="margin-bottom: 20px;">\n\n    <div *ngIf="news[newsId].content.introBold" class="justify-center">\n\n      <p><b>{{news[newsId].content.introBold}}</b></p>\n\n      <br>\n\n    </div>\n\n    <div *ngIf="news[newsId].content.intro" class="justify-center">\n\n      <p *ngFor="let intro of news[newsId].content.intro">{{intro}}</p>\n\n      <br>\n\n    </div>\n\n    <div *ngIf="news[newsId].content.pointsIntro != null" class="justify-center">\n\n      <ul>\n\n        <li *ngFor="let point of news[newsId].content.pointsIntro"> {{point}} </li>\n\n      </ul>\n\n    </div>\n\n    <br><br>\n\n    <div *ngIf="news[newsId].content.parts != null">\n\n      <div *ngFor="let part of news[newsId].content.parts">\n\n        <h3 *ngIf="part.title != null" style="font-size: 1.2em">{{part.title}}</h3>\n\n        <br>\n\n        <div *ngIf="part.paragraphes != null">\n\n          <div *ngFor="let p of part.paragraphes">\n\n            <p *ngIf="p.accrPoints" class="justify-center">{{p.accrPoints}}</p>\n\n            <p *ngIf="p.accrPointsBold" class="justify-center"><b>{{p.accrPointsBold}}</b></p>\n\n            <div *ngIf="p.points" class="justify-center">\n\n              <ul style="color:#666" text-justify>\n\n                <li *ngFor="let point of p.points">\n\n                  {{point.title}}\n\n                  <div *ngIf="point.subpoints">\n\n                    <ul>\n\n                      <li *ngFor="let subpoint of point.subpoints">{{subpoint}}</li>\n\n                    </ul>\n\n                  </div>\n\n                </li>\n\n              </ul>\n\n            </div>\n\n            <p *ngIf="p.description" class="justify-center">{{p.description}}</p>\n\n            <p *ngIf="p.descriptionBold" class="justify-center"><b>{{p.descriptionBold}}</b></p>\n\n            <div *ngIf="p.temoignage" class="temoignage-back">\n\n              <div class="temoignage" >\n\n                  <ion-card text-center>   \n\n                    <ion-item style="margin-right: 50px;">\n\n                      <ion-avatar item-start>\n\n                        <img [src]="p.temoignage.authorImg">\n\n                      </ion-avatar>\n\n                      <h2 text-center style="color: white">{{p.temoignage.author}}</h2>\n\n                      <p text-center>{{p.temoignage.function}}</p>\n\n                    </ion-item>\n\n                    <hr>\n\n                    <ion-card-content>\n\n                      <p style="color:#8e9093; font-size: 1.2em"><i>{{p.temoignage.content}}</i></p>\n\n                    </ion-card-content>\n\n                  </ion-card>\n\n                </div>\n\n            </div>\n\n            <br>\n\n          </div>\n\n        </div>\n\n        <div *ngIf="part.points" class="justify-center" style="color: #666">\n\n          <ul>\n\n            <li *ngFor="let p of part.points">{{p}}</li>\n\n          </ul>\n\n        </div>\n\n        <br>\n\n      </div>\n\n    </div>\n\n    <!-- <p> &bull; {{services.location}}</p>\n\n    <p class="profile-description">{{service.description}}</p>\n\n    <button ion-button (click)="seeMarque()">Voir la marque</button>\n\n    <button ion-button *ngIf="!like" small color="purple" (click)="follow()">Je n\'aime plus</button>\n\n    <button ion-button *ngIf="like" class="follow-button" small color="purple" (click)="follow()">J\'aime <ion-icon name="checkmark"></ion-icon></button> -->\n\n  </div>\n\n</ion-card-content>\n\n</ion-card>\n\n</div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\newsDetails\newsDetails.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]])
-], AskInfoPage);
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
+], NewsDetailsPage);
 
-//# sourceMappingURL=askInfo.js.map
+//# sourceMappingURL=newsDetails.js.map
 
 /***/ })
 
