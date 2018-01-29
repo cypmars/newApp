@@ -1,6 +1,6 @@
 webpackJsonp([8],{
 
-/***/ 436:
+/***/ 434:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiceDetailsPageModule", function() { return ServiceDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__serviceDetails__ = __webpack_require__(740);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__serviceDetails__ = __webpack_require__(738);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_youtube_video_player__ = __webpack_require__(721);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -148,7 +148,7 @@ var YoutubeVideoPlayer = (function (_super) {
 
 /***/ }),
 
-/***/ 740:
+/***/ 738:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -232,7 +232,7 @@ var ServiceDetailsPage = (function () {
         //this.youtube.openVideo(this.services[this.serviceId].videoId);
     };
     ServiceDetailsPage.prototype.playVideo = function (videoId) {
-        this.youtube.openVideo(videoId);
+        //this.youtube.openVideo(videoId);
     };
     ServiceDetailsPage.prototype.showMarque = function () {
         console.log(this.services[this.serviceId].marqueId);

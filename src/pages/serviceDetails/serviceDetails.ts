@@ -85,7 +85,7 @@ export class ServiceDetailsPage {
   }
 
   playVideo(videoId){
-    this.youtube.openVideo(videoId);
+    //this.youtube.openVideo(videoId);
   }
 
   showMarque(){

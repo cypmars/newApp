@@ -223,13 +223,13 @@ var MarqueDetailsPage = (function () {
                 }
                 if (openVideo) {
                     console.log(openVideo);
-                    _this.youtube.openVideo(_this.marques[_this.marqueId].videoId);
+                    //this.youtube.openVideo(this.marques[this.marqueId].videoId);
                 }
             }
         });
     }
     MarqueDetailsPage.prototype.replayVideo = function () {
-        this.youtube.openVideo(this.marques[this.marqueId].videoId);
+        //this.youtube.openVideo(this.marques[this.marqueId].videoId);
     };
     MarqueDetailsPage.prototype.toggleGroup = function (group) {
         if (this.isGroupShown(group)) {
