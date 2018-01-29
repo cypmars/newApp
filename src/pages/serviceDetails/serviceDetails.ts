@@ -114,7 +114,7 @@ export class ServiceDetailsPage {
   infos(){
     console.log(this.serviceId);
     console.log(this.services[this.serviceId].title);
-    this.navCtrl.push("AskInfoPage", {
+    this.navCtrl.push(AskInfoPage, {
       serviceId: this.serviceId,
       serviceName: this.services[this.serviceId].title
     });

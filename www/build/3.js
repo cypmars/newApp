@@ -10571,11 +10571,11 @@ var SimpleForm2Page = (function () {
         this.navCtrl.pop();
     };
     SimpleForm2Page.prototype.login = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["l" /* WelcomePage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["m" /* WelcomePage */]);
     };
     SimpleForm2Page.prototype.getVal = function (event) {
         console.log(event.id);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["e" /* ServiceDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["f" /* ServiceDetailsPage */], {
             param1: event.id,
         });
         this.placeholder = "";
@@ -10586,7 +10586,7 @@ var SimpleForm2Page = (function () {
     SimpleForm2Page.prototype.chooseService = function (event, data, fab) {
         this.myIcon = this.itemsCat[this.param2].jobsName[data];
         this.myIconId = data;
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["k" /* TinderQ2Page */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["l" /* TinderQ2Page */], {
             param1: this.param1,
             param2: this.param2,
             param3: this.param3,
