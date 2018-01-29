@@ -395,7 +395,7 @@ var ProductDetailsPage = (function () {
         this.tabBarElement.style.display = 'none';
     };
     ProductDetailsPage.prototype.showMarque = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__pages__["b" /* MarqueDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__pages__["a" /* MarqueDetailsPage */], {
             marqueId: this.products[this.productId].idMarque
         });
     };

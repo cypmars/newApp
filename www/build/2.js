@@ -10565,13 +10565,13 @@ var SimpleFormPage = (function () {
     }
     SimpleFormPage.prototype.getVal = function (event) {
         console.log(event.id);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["f" /* ServiceDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["e" /* ServiceDetailsPage */], {
             param1: event.id,
         });
         this.placeholder = "";
     };
     SimpleFormPage.prototype.login = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["m" /* WelcomePage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["l" /* WelcomePage */]);
     };
     SimpleFormPage.prototype.ngAfterViewInit = function () {
         this.fab.setActiveLists(true);
@@ -10579,7 +10579,7 @@ var SimpleFormPage = (function () {
     SimpleFormPage.prototype.chooseService = function (event, data, fab) {
         this.myIcon = this.itemsCat[data].name;
         this.search.param1 = this.itemsCat[data].iconName;
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["g" /* SimpleForm1Page */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["f" /* SimpleForm1Page */], {
             param1: this.myIcon,
         });
     };

@@ -255,7 +255,7 @@ var MarqueDetailsPage = (function () {
         this.tabBarElement.style.display = 'flex';
     };
     MarqueDetailsPage.prototype.showService = function (index) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["f" /* ServiceDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["e" /* ServiceDetailsPage */], {
             param1: index
         });
     };
@@ -271,13 +271,13 @@ var MarqueDetailsPage = (function () {
     };
     MarqueDetailsPage.prototype.showProduct = function (event, index) {
         console.log(index);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["d" /* ProductDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["c" /* ProductDetailsPage */], {
             productId: index
         });
     };
     MarqueDetailsPage.prototype.showNews = function (event, index) {
         console.log(index);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["c" /* NewsDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["b" /* NewsDetailsPage */], {
             param1: index
         });
     };

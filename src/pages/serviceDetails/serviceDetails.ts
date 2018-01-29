@@ -18,6 +18,7 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 export class ServiceDetailsPage {
 
   tabBarElement: any;
+  buttonInfo: any;
   serviceId;
   services: any[];
   marques:any[];
@@ -27,6 +28,8 @@ export class ServiceDetailsPage {
     public toastCtrl: ToastController, http:Http, private youtube: YoutubeVideoPlayer) {
 
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
+    this.buttonInfo = document.getElementsByClassName('.infos-link')[0];
+
     this.serviceId = navParams.get('param1');
 
     let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
@@ -60,8 +63,13 @@ export class ServiceDetailsPage {
           }
         }
         if (openVideo){
-          this.youtube.openVideo(this.services[this.serviceId].videoId);
+          //this.youtube.openVideo(this.services[this.serviceId].videoId);
         }
+      }
+      console.log(this.buttonInfo);
+      if (this.buttonInfo != null){
+        this.buttonInfo.removeAttribute("hidden");
+        this.buttonInfo.srcElement.style.zIndex=1000;
       }
     });
 
@@ -73,7 +81,7 @@ export class ServiceDetailsPage {
   }
 
   replayVideo(){
-    this.youtube.openVideo(this.services[this.serviceId].videoId);
+    //this.youtube.openVideo(this.services[this.serviceId].videoId);
   }
 
   playVideo(videoId){

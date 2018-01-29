@@ -10591,11 +10591,11 @@ var SimpleForm1Page = (function () {
         this.navCtrl.pop();
     };
     SimpleForm1Page.prototype.login = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["m" /* WelcomePage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["l" /* WelcomePage */]);
     };
     SimpleForm1Page.prototype.getVal = function (event) {
         console.log(event.id);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["f" /* ServiceDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["e" /* ServiceDetailsPage */], {
             param1: event.id,
         });
         this.placeholder = "";
@@ -10605,7 +10605,7 @@ var SimpleForm1Page = (function () {
     };
     SimpleForm1Page.prototype.chooseService = function (event, data, fab) {
         this.myIcon = this.itemsCat[data].name;
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["h" /* SimpleForm2Page */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["g" /* SimpleForm2Page */], {
             param1: this.param1,
             param2: data,
             param3: this.myIcon

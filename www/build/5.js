@@ -10572,13 +10572,13 @@ var NewsPage = (function () {
     }
     NewsPage.prototype.getVal = function (event) {
         console.log(event.id);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["c" /* NewsDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["b" /* NewsDetailsPage */], {
             param1: event.id,
         });
         this.placeholder = "";
     };
     NewsPage.prototype.showDetails = function (event, idNews) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["c" /* NewsDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["b" /* NewsDetailsPage */], {
             param1: idNews,
         });
     };
