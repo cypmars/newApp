@@ -120,7 +120,7 @@ var NewsDetailsPage = (function () {
     };
     NewsDetailsPage.prototype.showMarque = function () {
         console.log(this.news[this.newsId].marqueId);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["b" /* MarqueDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["a" /* MarqueDetailsPage */], {
             marqueId: this.news[this.newsId].marqueId
         });
     };

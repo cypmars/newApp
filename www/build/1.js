@@ -10698,7 +10698,7 @@ var TinderQ2Page = (function () {
         }
         else {
             console.log(this.resultsTemp);
-            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["e" /* ResultPage */], {
+            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["d" /* ResultPage */], {
                 param1: this.param1,
                 param2: this.param2,
                 param3: this.param3,
@@ -10731,7 +10731,7 @@ var TinderQ2Page = (function () {
     };
     TinderQ2Page.prototype.getVal = function (event) {
         console.log(event.id);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["f" /* ServiceDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["e" /* ServiceDetailsPage */], {
             param1: event.id,
         });
         this.placeholder = "";
@@ -11109,7 +11109,7 @@ var TinderQ2Page = (function () {
         console.log("Did Leave ???");
     };
     TinderQ2Page.prototype.login = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["m" /* WelcomePage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["l" /* WelcomePage */]);
     };
     return TinderQ2Page;
 }());

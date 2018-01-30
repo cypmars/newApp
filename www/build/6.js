@@ -50171,7 +50171,7 @@ var SignupPage = (function () {
             console.log(this.job);
             console.log(this.type);
             console.log(this.itemsCat[this.activity].jobsName.indexOf(this.job));
-            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["l" /* TinderQ2Page */], {
+            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages__["k" /* TinderQ2Page */], {
                 param1: this.type,
                 param2: this.activity,
                 param3: this.itemsCat[this.activity].name,
