@@ -16,13 +16,9 @@ export const MarqueDetailsPage = 'MarqueDetailsPage';
 export const NewsDetailsPage = 'NewsDetailsPage';
 export const ProductDetailsPage = 'ProductDetailsPage';
 
-// Page de demande d'information accéssible à partir de ServiceDetailsPage
-export const AskInfoPage = 'AskInfoPage';
-export const AskFormPage = 'AskFormPage';
-
 // Page de connexion
 export const WelcomePage = 'WelcomePage';
-
+export const InfoPage = 'InfoPage';
 // Page d'inscription
 export const SignupPage = 'SignupPage';
 

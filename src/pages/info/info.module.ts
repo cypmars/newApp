@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 
-import { AskFormPage } from './ask-form';
+import { InfoPage } from './info';
 
 @NgModule({
   declarations: [
-    AskFormPage,
+    InfoPage,
   ],
   imports: [
-    IonicPageModule.forChild(AskFormPage),
+    IonicPageModule.forChild(InfoPage)
   ],
   exports: [
-    AskFormPage
+    InfoPage
   ]
 })
-export class AskFormPageModule { }
+export class InfoPageModule { }
