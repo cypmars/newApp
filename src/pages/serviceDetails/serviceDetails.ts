@@ -87,27 +87,12 @@ export class ServiceDetailsPage {
       marqueId: this.services[this.serviceId].marqueId
     });
   }
-
-  ngAfterViewInit(){
-
-  }
-
-  ionViewWillEnter(){
-    this.tabBarElement.style.display = 'none';
-
-  }
-
   toInfoPage(){
-      console.log(this.serviceId);
-      console.log(this.services[this.serviceId].title);
+    this.tabBarElement.style.display = 'flex';
       this.navCtrl.push(AskInfoPage, {
         serviceId: this.serviceId,
         serviceName: this.services[this.serviceId].title
       });
-  }
-  
-  ionViewWillLeave(){
-    this.tabBarElement.style.display = 'flex';
   }
 
   showProduct(event, index){

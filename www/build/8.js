@@ -234,21 +234,12 @@ var ServiceDetailsPage = (function () {
             marqueId: this.services[this.serviceId].marqueId
         });
     };
-    ServiceDetailsPage.prototype.ngAfterViewInit = function () {
-    };
-    ServiceDetailsPage.prototype.ionViewWillEnter = function () {
-        this.tabBarElement.style.display = 'none';
-    };
     ServiceDetailsPage.prototype.toInfoPage = function () {
-        console.log(this.serviceId);
-        console.log(this.services[this.serviceId].title);
+        this.tabBarElement.style.display = 'flex';
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["a" /* AskInfoPage */], {
             serviceId: this.serviceId,
             serviceName: this.services[this.serviceId].title
         });
-    };
-    ServiceDetailsPage.prototype.ionViewWillLeave = function () {
-        this.tabBarElement.style.display = 'flex';
     };
     ServiceDetailsPage.prototype.showProduct = function (event, index) {
         console.log(index);
