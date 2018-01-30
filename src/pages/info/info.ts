@@ -2,19 +2,29 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
 import { TinderQ2Page } from '../pages';
-
 import { WelcomePage } from '../pages';
 
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-
-
+/**
+ * The Welcome Page is a splash page that quickly describes the app,
+ * and then directs the user to create an account or log in.
+ * If you'd like to immediately put the user onto a login/signup page,
+ * we recommend not using the Welcome page.
+*/
 @IonicPage()
 @Component({
   selector: 'page-info',
   templateUrl: 'info.html'
 })
 export class InfoPage {
+  // The account fields for the login form.
+  // If you're using the username field with or without email, make
+  // sure to add it to the type
+  account: { email: string, password: string } = {
+    email: '@ e-mail ou pseudo',
+    password: 'mot de passe'
+  };
 
   tabBarElement: any;
 
@@ -31,9 +41,17 @@ export class InfoPage {
     this.tabBarElement.style.display = 'flex';
   }
 
-  // Attempt to login in through our User service
+  forgot() {
+    this.navCtrl.push('ForgotPage');
+  }
+
   login() {
-      this.navCtrl.push(WelcomePage);
+    this.navCtrl.push(WelcomePage);
+  }
+
+  // Attempt to login in through our User service
+  doLogin() {
+      this.navCtrl.push(TinderQ2Page);
   }
 
   prev(){
