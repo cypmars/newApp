@@ -18,6 +18,7 @@ export const ProductDetailsPage = 'ProductDetailsPage';
 
 // Page de demande d'information accéssible à partir de ServiceDetailsPage
 export const AskInfoPage = 'AskInfoPage';
+export const AskFormPage = 'AskFormPage';
 
 // Page de connexion
 export const WelcomePage = 'WelcomePage';

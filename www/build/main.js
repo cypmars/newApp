@@ -1,4 +1,4 @@
-webpackJsonp([15],{
+webpackJsonp([16],{
 
 /***/ 152:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -66,64 +66,68 @@ webpackEmptyAsyncContext.id = 160;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"../pages/askInfo/askInfo.module": [
+	"../pages/ask-form/ask-form.module": [
 		429,
+		14
+	],
+	"../pages/askInfo/askInfo.module": [
+		430,
 		13
 	],
 	"../pages/chat2/chat2.module": [
-		430,
+		431,
 		10
 	],
 	"../pages/marqueDetails/marqueDetails.module": [
-		431,
+		432,
 		9
 	],
 	"../pages/news/news.module": [
-		432,
+		433,
 		5
 	],
 	"../pages/newsDetails/newsDetails.module": [
-		433,
+		434,
 		12
 	],
 	"../pages/productDetails/productDetails.module": [
-		434,
+		435,
 		7
 	],
 	"../pages/result/result.module": [
-		437,
+		436,
 		0
 	],
 	"../pages/serviceDetails/serviceDetails.module": [
-		435,
+		437,
 		8
 	],
 	"../pages/signup/signup.module": [
-		436,
+		438,
 		6
 	],
 	"../pages/simple-form/simple-form.module": [
-		438,
+		439,
 		2
 	],
 	"../pages/simple-form1/simple-form1.module": [
-		439,
+		440,
 		4
 	],
 	"../pages/simple-form2/simple-form2.module": [
-		440,
+		441,
 		3
 	],
 	"../pages/tabs/tabs.module": [
-		441,
-		14
+		442,
+		15
 	],
 	"../pages/tinderQ2/tinderQ2.module": [
-		442,
+		443,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		443,
+		444,
 		11
 	]
 };
@@ -209,15 +213,16 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_10_angular2_swing__["SwingModule"],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                 links: [
+                    { loadChildren: '../pages/ask-form/ask-form.module#AskFormPageModule', name: 'AskFormPage', segment: 'ask-form', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/askInfo/askInfo.module#AskInfoPageModule', name: 'AskInfoPage', segment: 'askInfo', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/marqueDetails/marqueDetails.module#MarqueDetailsPageModule', name: 'MarqueDetailsPage', segment: 'marqueDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/newsDetails/newsDetails.module#NewsDetailsPageModule', name: 'NewsDetailsPage', segment: 'newsDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/productDetails/productDetails.module#ProductDetailsPageModule', name: 'ProductDetailsPage', segment: 'productDetails', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/serviceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
@@ -364,7 +369,8 @@ MyApp = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return MarqueDetailsPage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return NewsDetailsPage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ProductDetailsPage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AskInfoPage; });
+/* unused harmony export AskInfoPage */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AskFormPage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return WelcomePage; });
 /* unused harmony export SignupPage */
 /* unused harmony export Chat2Page */
@@ -389,6 +395,7 @@ var NewsDetailsPage = 'NewsDetailsPage';
 var ProductDetailsPage = 'ProductDetailsPage';
 // Page de demande d'information accéssible à partir de ServiceDetailsPage
 var AskInfoPage = 'AskInfoPage';
+var AskFormPage = 'AskFormPage';
 // Page de connexion
 var WelcomePage = 'WelcomePage';
 // Page d'inscription

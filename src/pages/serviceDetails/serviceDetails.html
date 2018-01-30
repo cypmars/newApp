@@ -64,6 +64,8 @@
             </ion-row>
           </ion-grid>
           <hr>
+          <button class="infos-link" ion-button color="primary" small (click)="toInfoPage()">Demande d'informations</button>
+          <hr>
           <div *ngIf="services[serviceId].productIds">
             <h3 style="font-size:1.2em" *ngIf="services[serviceId].productIds != null">Fiches &amp; Produits</h3>
             <br>
