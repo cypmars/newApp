@@ -14,15 +14,15 @@
 <ion-content>
   <div class="splash-bg">
     <div class="splash-relative">
+            <div class="splash-logo"></div>
             <div class="splash-intro">
-                  Demande d'informations ou de devis
+                  Demande d'informations
             </div>
             <br>
             <div padding>
             <div class="splash-form">
-              <button ion-button block (click)="signup()">Connectez-vous</button>
+              <button ion-button block (click)="signup()"><ion-icon name="logo-linkedin" class="white-text"></ion-icon> &nbsp;&nbsp;Se connecter avec LinkedIn</button>
               <br>
-              <h4>Ou</h4>
               <form (submit)="doLogin()">
                   <ion-list text-center>
               
@@ -48,12 +48,13 @@
                       <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
                     </ion-item>
               
-                    <button ion-button class="login">Envoyer</button>
+                    <button ion-button class="login">Se connecter</button>
               
                   </ion-list>
                 </form>                
               </div>
           </div>
+
     </div>
   </div>
 </ion-content>

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
 import { TinderQ2Page } from '../pages';
-import { WelcomePage } from '../pages';
 
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -45,8 +44,8 @@ export class InfoPage {
     this.navCtrl.push('ForgotPage');
   }
 
-  login() {
-    this.navCtrl.push(WelcomePage);
+  signup() {
+    this.navCtrl.push('SignupPage');
   }
 
   // Attempt to login in through our User service
