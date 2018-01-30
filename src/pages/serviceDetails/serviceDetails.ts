@@ -17,7 +17,6 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 })
 export class ServiceDetailsPage {
 
-  tabBarElement: any;
   buttonInfo: any;
   serviceId;
   services: any[];
@@ -27,7 +26,6 @@ export class ServiceDetailsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public toastCtrl: ToastController, http:Http, private youtube: YoutubeVideoPlayer) {
 
-    this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.serviceId = navParams.get('param1');
 
     let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
@@ -88,7 +86,6 @@ export class ServiceDetailsPage {
     });
   }
   toInfoPage(){
-    this.tabBarElement.style.display = 'flex';
       this.navCtrl.push(AskInfoPage, {
         serviceId: this.serviceId,
         serviceName: this.services[this.serviceId].title
