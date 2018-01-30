@@ -59,7 +59,7 @@ export class ServiceDetailsPage {
           }
         }
         if (openVideo){
-          //this.youtube.openVideo(this.services[this.serviceId].videoId);
+          this.youtube.openVideo(this.services[this.serviceId].videoId);
         }
       }
     });
@@ -72,11 +72,11 @@ export class ServiceDetailsPage {
   }
 
   replayVideo(){
-    //this.youtube.openVideo(this.services[this.serviceId].videoId);
+    this.youtube.openVideo(this.services[this.serviceId].videoId);
   }
 
   playVideo(videoId){
-    //this.youtube.openVideo(videoId);
+    this.youtube.openVideo(videoId);
   }
 
   showMarque(){

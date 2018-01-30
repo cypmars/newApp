@@ -1,4 +1,5 @@
-<ion-header no-border>
+<ion-content>
+  <ion-header no-border>
   <ion-navbar color='primary' hideBackButton="true">
     <ion-buttons start>
       <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon>back</button>
@@ -10,9 +11,7 @@
      
     </ion-buttons>
   </ion-navbar>
-</ion-header>
-<ion-content>
-  <div class="splash-bg">
+  </ion-header>
     <div class="splash-relative">
             <div class="splash-intro">
                   Demande d'informations
@@ -21,43 +20,8 @@
             <div padding>
             <div class="splash-form">
               <p *ngIf="submitAttempt" style="color: #ea6153;">S'il-vous-plait, remplissez les champs suivants.</p>
-              <form [formGroup]="askInfoForm">
-                  <ion-list text-center>
               
-                    <ion-item>
-                      <ion-input formControlName="firstName" type="text" [(ngModel)]="mail.sendBy.firstName" name="sendBy.firstName"></ion-input>
-                    </ion-item>
-                    
-                    <ion-item>
-                      <ion-input formControlName="lastName" type="text" [(ngModel)]="mail.sendBy.lastName" name="sendBy.lastName"></ion-input>
-                    </ion-item>
-
-                    <ion-item>
-                      <ion-input formControlName="email" type="text" [(ngModel)]="mail.sendBy.email" name="sendBy.email"></ion-input>
-                    </ion-item>
-              
-                    <br>
-
-                    <ion-item>
-                      <ion-input formControlName="about" type="text" [(ngModel)]="mail.about" name="about" disabled>{{ mail.about }}</ion-input>
-                    </ion-item>
-
-                    <br>
-
-                    <ion-item>
-                      <ion-input formControlName="object" type="text" [(ngModel)]="mail.object" name="object"></ion-input>
-                    </ion-item>
-
-                    <ion-item>
-                      <ion-textarea formControlName="text" type="text" [(ngModel)]="mail.text" name="text"></ion-textarea>
-                    </ion-item>
-              
-                    <button ion-button class="login" (click)="sendMail()">Envoyer !</button>
-              
-                  </ion-list>
-                </form>                
               </div>
           </div>
-    </div>
   </div>
 </ion-content>

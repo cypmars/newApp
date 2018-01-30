@@ -18,7 +18,6 @@ import 'rxjs/add/operator/map';
 })
 export class AskInfoPage {
 
-  tabBarElement: any;
 
   mail = {
     about: "Service",
@@ -36,55 +35,13 @@ export class AskInfoPage {
   serviceId;
   constructor(public navCtrl: NavController,  public navParams: NavParams,
     public toastCtrl: ToastController, http: Http, public formBuilder: FormBuilder) {
-      this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
 
       this.serviceId = navParams.get("serviceId");
       this.mail.about = navParams.get("serviceName");
 
-      this.askInfoForm = formBuilder.group({
-        firstName: ['',  Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
-        lastName: ['',  Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
-        email: [''],
-        about: [''],
-        object: [''],
-        text: ['']
-      });
-  }
-
-  ionViewWillEnter(){
-    this.tabBarElement.style.display = 'none';
-  }
-
-  ionViewWillLeave(){
-    this.tabBarElement.style.display = 'flex';
-  }
-
-  sendMail(){
-    this.submitAttempt = true;
-    console.log(this.mail);
-    if (this.askInfoForm.valid){
-      this.navCtrl.pop();
-      // this.emailComposer.isAvailable().then((available: boolean) =>{
-      //   if(available) {
-      //     //Now we know we can send
-      //   }
-      //  });
-       
-      //  let email = {
-      //    from: this.mail.sendBy.email,
-      //    to: 'cypconnet@wanadoo.fr',
-      //    subject: this.mail.object,
-      //    body: 'Related to: '+this.mail.about+'<br><br>'+this.mail.text,
-      //    isHtml: true
-      //  };
-       
-       // Send a text message using default options
-       //this.emailComposer.open(email);
-    }
   }
 
   prev(){
-    this.tabBarElement.style.display = 'flex';
     this.navCtrl.pop();
   }
 }

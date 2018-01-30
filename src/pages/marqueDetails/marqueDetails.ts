@@ -69,7 +69,7 @@ export class MarqueDetailsPage {
         }
         if (openVideo){
           console.log(openVideo);
-          //this.youtube.openVideo(this.marques[this.marqueId].videoId);
+          this.youtube.openVideo(this.marques[this.marqueId].videoId);
         }
       }
     });
@@ -77,7 +77,7 @@ export class MarqueDetailsPage {
   }
 
   replayVideo(){
-    //this.youtube.openVideo(this.marques[this.marqueId].videoId);
+    this.youtube.openVideo(this.marques[this.marqueId].videoId);
   }
 
   toggleGroup(group) {

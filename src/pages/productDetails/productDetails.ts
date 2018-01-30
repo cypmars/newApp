@@ -85,7 +85,7 @@ export class ProductDetailsPage {
           }
         }
         if (openVideo){
-          //this.youtube.openVideo(this.products[this.productId].videoId);
+          this.youtube.openVideo(this.products[this.productId].videoId);
         }
       }
     });
@@ -106,7 +106,7 @@ export class ProductDetailsPage {
   }
 
   replayVideo(){
-    //this.youtube.openVideo(this.products[this.productId].videoId);
+    this.youtube.openVideo(this.products[this.productId].videoId);
   }
 
   prev() {
