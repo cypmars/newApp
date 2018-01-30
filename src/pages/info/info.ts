@@ -16,17 +16,6 @@ import 'rxjs/add/operator/map';
 })
 export class InfoPage {
 
-  mail = {
-    about: "Service",
-    object: "Objet",
-    message: "Message",
-    sendBy: {
-      firstname: "Prénom",
-      lastname: "Nom",
-      email: "@ email",
-    }
-  }
-
   tabBarElement: any;
 
   constructor(public navCtrl: NavController,
