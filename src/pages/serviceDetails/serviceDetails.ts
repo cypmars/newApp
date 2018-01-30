@@ -28,8 +28,6 @@ export class ServiceDetailsPage {
     public toastCtrl: ToastController, http:Http, private youtube: YoutubeVideoPlayer) {
 
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
-    this.buttonInfo = document.getElementsByClassName('.infos-link')[0];
-
     this.serviceId = navParams.get('param1');
 
     let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
@@ -66,11 +64,6 @@ export class ServiceDetailsPage {
           //this.youtube.openVideo(this.services[this.serviceId].videoId);
         }
       }
-      console.log(this.buttonInfo);
-      if (this.buttonInfo != null){
-        this.buttonInfo.removeAttribute("hidden");
-        this.buttonInfo.srcElement.style.zIndex=1000;
-      }
     });
 
   }
@@ -95,10 +88,24 @@ export class ServiceDetailsPage {
     });
   }
 
-  ionViewWillEnter(){
-    this.tabBarElement.style.display = 'none';
+  ngAfterViewInit(){
+
   }
 
+  ionViewWillEnter(){
+    this.tabBarElement.style.display = 'none';
+
+  }
+
+  toInfoPage(){
+      console.log(this.serviceId);
+      console.log(this.services[this.serviceId].title);
+      this.navCtrl.push(AskInfoPage, {
+        serviceId: this.serviceId,
+        serviceName: this.services[this.serviceId].title
+      });
+  }
+  
   ionViewWillLeave(){
     this.tabBarElement.style.display = 'flex';
   }
@@ -107,16 +114,6 @@ export class ServiceDetailsPage {
     console.log(index);
     this.navCtrl.push(ProductDetailsPage, {
       productId: index
-    });
-
-  }
-
-  infos(){
-    console.log(this.serviceId);
-    console.log(this.services[this.serviceId].title);
-    this.navCtrl.push(AskInfoPage, {
-      serviceId: this.serviceId,
-      serviceName: this.services[this.serviceId].title
     });
 
   }
