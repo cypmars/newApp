@@ -44,9 +44,6 @@
               <ion-col *ngIf="services[serviceId].videoId">
                   <button ion-button color="primary" small (click)="replayVideo()">Rejouer la vidéo &nbsp;&nbsp;<ion-icon name="logo-youtube" style="color: white"></ion-icon></button>
               </ion-col>
-              <ion-col>
-                  <button ion-button color="primary" small (click)="toInfoPage()">Demande d'informations</button>
-              </ion-col>
             </ion-row>
           </ion-grid>
           <hr>
@@ -60,6 +57,9 @@
                 <button *ngIf="services[serviceId].marqueId == 4" ion-button full style="background-color: #cc7136" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>
                 <button *ngIf="services[serviceId].marqueId == 5" ion-button full style="background-color: #962ac8" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>
                 <button *ngIf="services[serviceId].marqueId == 6" ion-button full style="background-color: #d42649" (click)="showMarque()">{{marques[services[serviceId].marqueId].title}}</button>
+              </ion-col>
+              <ion-col>
+                <button ion-button color="primary" (click)="toInfoPage()">Demande d'informations</button>
               </ion-col>
             </ion-row>
           </ion-grid>
