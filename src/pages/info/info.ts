@@ -36,11 +36,6 @@ export class InfoPage {
       this.navCtrl.push(WelcomePage);
   }
 
-  send(){
-
-    this.navCtrl.pop();
-  }
-
   prev(){
     this.tabBarElement.style.display = 'flex';
     this.navCtrl.pop();
