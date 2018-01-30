@@ -1,6 +1,6 @@
 webpackJsonp([10],{
 
-/***/ 431:
+/***/ 430:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__ = __webpack_require__(731);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat2__ = __webpack_require__(736);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat2__ = __webpack_require__(735);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -163,7 +163,7 @@ var TextToSpeech = (function (_super) {
 
 /***/ }),
 
-/***/ 736:
+/***/ 735:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -623,7 +623,7 @@ var Chat2Page = (function () {
     Chat2Page.prototype.buildCardLayout = function (data) {
     };
     Chat2Page.prototype.login = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["l" /* WelcomePage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["m" /* WelcomePage */]);
     };
     return Chat2Page;
 }());

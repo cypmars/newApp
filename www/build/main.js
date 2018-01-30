@@ -25,9 +25,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var TabsPage = (function () {
     function TabsPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__pages__["h" /* Tab1Root */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_2__pages__["i" /* Tab2Root */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__pages__["j" /* Tab3Root */];
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__pages__["i" /* Tab1Root */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_2__pages__["j" /* Tab2Root */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__pages__["k" /* Tab3Root */];
         this.tab1Title = " ";
         this.tab2Title = " ";
         this.tab3Title = " ";
@@ -66,17 +66,17 @@ webpackEmptyAsyncContext.id = 160;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"../pages/ask-form/ask-form.module": [
+	"../pages/askInfo/askInfo.module": [
 		429,
 		14
 	],
-	"../pages/askInfo/askInfo.module": [
-		430,
-		13
-	],
 	"../pages/chat2/chat2.module": [
-		431,
+		430,
 		10
+	],
+	"../pages/info/info.module": [
+		431,
+		13
 	],
 	"../pages/marqueDetails/marqueDetails.module": [
 		432,
@@ -213,9 +213,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_10_angular2_swing__["SwingModule"],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                 links: [
-                    { loadChildren: '../pages/ask-form/ask-form.module#AskFormPageModule', name: 'AskFormPage', segment: 'ask-form', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/askInfo/askInfo.module#AskInfoPageModule', name: 'AskInfoPage', segment: 'askInfo', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/info/info.module#InfoPageModule', name: 'InfoPage', segment: 'info', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/marqueDetails/marqueDetails.module#MarqueDetailsPageModule', name: 'MarqueDetailsPage', segment: 'marqueDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/newsDetails/newsDetails.module#NewsDetailsPageModule', name: 'NewsDetailsPage', segment: 'newsDetails', priority: 'low', defaultHistory: [] },
@@ -361,23 +361,22 @@ MyApp = __decorate([
 
 "use strict";
 /* unused harmony export SimpleFormPage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return SimpleForm1Page; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return SimpleForm2Page; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return TinderQ2Page; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ResultPage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return ServiceDetailsPage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MarqueDetailsPage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NewsDetailsPage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ProductDetailsPage; });
-/* unused harmony export AskInfoPage */
-/* unused harmony export AskFormPage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return WelcomePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return SimpleForm1Page; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return SimpleForm2Page; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return TinderQ2Page; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return ResultPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return ServiceDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return MarqueDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return NewsDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ProductDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return WelcomePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InfoPage; });
 /* unused harmony export SignupPage */
 /* unused harmony export Chat2Page */
 /* unused harmony export MainPage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return Tab1Root; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return Tab2Root; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return Tab3Root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return Tab1Root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return Tab2Root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return Tab3Root; });
 // Page lancée au démarrage de l'app: SimpleFormPage
 // Recherche principale
 // Page lancée au démarrage de l'app: SimpleFormPage
@@ -393,11 +392,9 @@ var ServiceDetailsPage = 'ServiceDetailsPage';
 var MarqueDetailsPage = 'MarqueDetailsPage';
 var NewsDetailsPage = 'NewsDetailsPage';
 var ProductDetailsPage = 'ProductDetailsPage';
-// Page de demande d'information accéssible à partir de ServiceDetailsPage
-var AskInfoPage = 'AskInfoPage';
-var AskFormPage = 'AskFormPage';
 // Page de connexion
 var WelcomePage = 'WelcomePage';
+var InfoPage = 'InfoPage';
 // Page d'inscription
 var SignupPage = 'SignupPage';
 // Page du Chatbot

@@ -192,7 +192,6 @@ var MarqueDetailsPage = (function () {
         this.youtube = youtube;
         this.shownGroup = null;
         this.listShown = false;
-        this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
         this.marqueId = navParams.get('marqueId');
         var newsData = http.get('assets/data/news.json').map(function (res) { return res.json().news; });
         newsData.subscribe(function (data) {
@@ -247,15 +246,8 @@ var MarqueDetailsPage = (function () {
     MarqueDetailsPage.prototype.prev = function () {
         this.navCtrl.pop();
     };
-    MarqueDetailsPage.prototype.ionViewWillEnter = function () {
-        this.tabBarElement.style.display = 'none';
-        console.log("enter");
-    };
-    MarqueDetailsPage.prototype.ionViewWillLeave = function () {
-        this.tabBarElement.style.display = 'flex';
-    };
     MarqueDetailsPage.prototype.showService = function (index) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["e" /* ServiceDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["f" /* ServiceDetailsPage */], {
             param1: index
         });
     };
@@ -271,13 +263,13 @@ var MarqueDetailsPage = (function () {
     };
     MarqueDetailsPage.prototype.showProduct = function (event, index) {
         console.log(index);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["c" /* ProductDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["d" /* ProductDetailsPage */], {
             productId: index
         });
     };
     MarqueDetailsPage.prototype.showNews = function (event, index) {
         console.log(index);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["b" /* NewsDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["c" /* NewsDetailsPage */], {
             param1: index
         });
     };

@@ -336,7 +336,6 @@ var ProductDetailsPage = (function () {
         this.youtube = youtube;
         this.documentView = documentView;
         this.imageViewerCtrl = imageViewerCtrl;
-        this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
         this.productId = navParams.get('productId');
         var servData = http.get('assets/data/services.json').map(function (res) { return res.json().services; });
         servData.subscribe(function (data) {
@@ -391,16 +390,10 @@ var ProductDetailsPage = (function () {
     ProductDetailsPage.prototype.prev = function () {
         this.navCtrl.pop();
     };
-    ProductDetailsPage.prototype.ionViewWillEnter = function () {
-        this.tabBarElement.style.display = 'none';
-    };
     ProductDetailsPage.prototype.showMarque = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__pages__["a" /* MarqueDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__pages__["b" /* MarqueDetailsPage */], {
             marqueId: this.products[this.productId].idMarque
         });
-    };
-    ProductDetailsPage.prototype.ionViewWillLeave = function () {
-        this.tabBarElement.style.display = 'flex';
     };
     return ProductDetailsPage;
 }());

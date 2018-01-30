@@ -60609,7 +60609,7 @@ var ResultPage = (function () {
             var footer = document.getElementsByClassName('footer');
             footer[1].setAttribute("hidden", "true");
             this.boolFooterVisible = false;
-            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["e" /* ServiceDetailsPage */], {
+            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["f" /* ServiceDetailsPage */], {
                 param1: this.myServiceId
             });
         }

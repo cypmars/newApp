@@ -25,7 +25,6 @@ import { MarqueDetailsPage } from '../pages';
 export class ProductDetailsPage {
 
   productId;
-  tabBarElement: any;
   products: any[];
   services: any[];
   news: any[];
@@ -46,7 +45,6 @@ export class ProductDetailsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, platform: Platform,
     public toastCtrl: ToastController, http:Http, private youtube: YoutubeVideoPlayer, private documentView: DocumentViewer, public imageViewerCtrl: ImageViewerController) {
     
-    this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.productId = navParams.get('productId');  
 
     let servData = http.get('assets/data/services.json').map(res => res.json().services);
@@ -113,18 +111,10 @@ export class ProductDetailsPage {
     this.navCtrl.pop();
   }
 
-  ionViewWillEnter(){
-    this.tabBarElement.style.display = 'none';
-  }
-
   showMarque(){
     this.navCtrl.push(MarqueDetailsPage, {
       marqueId: this.products[this.productId].idMarque
     });
-  }
-
-  ionViewWillLeave(){
-    this.tabBarElement.style.display = 'flex';
   }
 
 }

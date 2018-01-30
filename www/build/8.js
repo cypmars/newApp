@@ -229,19 +229,19 @@ var ServiceDetailsPage = (function () {
     };
     ServiceDetailsPage.prototype.showMarque = function () {
         console.log(this.services[this.serviceId].marqueId);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["a" /* MarqueDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["b" /* MarqueDetailsPage */], {
             marqueId: this.services[this.serviceId].marqueId
         });
     };
     ServiceDetailsPage.prototype.toInfoPage = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["l" /* WelcomePage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["a" /* InfoPage */], {
             serviceId: this.serviceId,
             serviceName: this.services[this.serviceId].title
         });
     };
     ServiceDetailsPage.prototype.showProduct = function (event, index) {
         console.log(index);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["c" /* ProductDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["d" /* ProductDetailsPage */], {
             productId: index
         });
     };

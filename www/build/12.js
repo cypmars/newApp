@@ -99,7 +99,6 @@ var NewsDetailsPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.toastCtrl = toastCtrl;
-        this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
         this.newsId = navParams.get('param1');
         console.log(this.newsId);
         var newsData = http.get('assets/data/news.json').map(function (res) { return res.json().news; });
@@ -120,15 +119,9 @@ var NewsDetailsPage = (function () {
     };
     NewsDetailsPage.prototype.showMarque = function () {
         console.log(this.news[this.newsId].marqueId);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["a" /* MarqueDetailsPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages__["b" /* MarqueDetailsPage */], {
             marqueId: this.news[this.newsId].marqueId
         });
-    };
-    NewsDetailsPage.prototype.ionViewWillEnter = function () {
-        this.tabBarElement.style.display = 'none';
-    };
-    NewsDetailsPage.prototype.ionViewWillLeave = function () {
-        this.tabBarElement.style.display = 'flex';
     };
     NewsDetailsPage.prototype.show = function (event) {
         if (event.srcElement.style.wordBreak == "normal") {

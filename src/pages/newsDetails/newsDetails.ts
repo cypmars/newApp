@@ -17,7 +17,6 @@ import 'rxjs/add/operator/map'
   templateUrl: 'newsDetails.html'
 })
 export class NewsDetailsPage {
-  tabBarElement: any;
   newsId;
   news: any[];
   marques:any[];
@@ -37,7 +36,6 @@ export class NewsDetailsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public toastCtrl: ToastController, http:Http) {
 
-    this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.newsId = navParams.get('param1');
     console.log(this.newsId);
 
@@ -68,14 +66,6 @@ export class NewsDetailsPage {
     this.navCtrl.push(MarqueDetailsPage, {
       marqueId: this.news[this.newsId].marqueId
     });
-  }
-
-  ionViewWillEnter(){
-    this.tabBarElement.style.display = 'none';
-  }
-
-  ionViewWillLeave(){
-    this.tabBarElement.style.display = 'flex';
   }
 
   show(event){

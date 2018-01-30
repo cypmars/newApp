@@ -23,7 +23,6 @@ export class MarqueDetailsPage {
 
   shownGroup = null;
   marqueId;
-  tabBarElement: any;
   news: any[];
   marques: any[];
   services: any[];
@@ -33,7 +32,6 @@ export class MarqueDetailsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public toastCtrl: ToastController, http:Http, private youtube: YoutubeVideoPlayer) {
-    this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     this.marqueId = navParams.get('marqueId');  
 
     let newsData = http.get('assets/data/news.json').map(res => res.json().news);
@@ -94,15 +92,6 @@ export class MarqueDetailsPage {
 
   prev() {
     this.navCtrl.pop();
-  }
-
-  ionViewWillEnter(){
-    this.tabBarElement.style.display = 'none';
-    console.log("enter");
-  }
-
-  ionViewWillLeave(){
-    this.tabBarElement.style.display = 'flex';
   }
 
   showService(index){
