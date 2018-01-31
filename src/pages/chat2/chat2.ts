@@ -199,7 +199,6 @@ export class Chat2Page {
           },
            (response) => {
              console.log(JSON.stringify(response))
-             console.log(JSON.stringify(response.result))
              let speech = response.result.fulfillment;
                if(response.result.fulfillment.speech){
                  if(this.platform.is('ios')){

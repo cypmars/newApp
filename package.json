@@ -30,6 +30,7 @@
     "@ionic-native/youtube-video-player": "^4.5.2",
     "@ionic/storage": "2.0.1",
     "@types/vis": "^4.21.0",
+    "actions-on-google": "^1.8.1",
     "angular2-swing": "^0.14.0",
     "api-ai-javascript": "^2.0.0-beta.21",
     "chart.js": "^2.7.1",
