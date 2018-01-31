@@ -65,7 +65,7 @@ export class InfoPage {
         let email = {
           from: this.mail.sendBy.email,
           to: 'cypconnet@wanadoo.fr',
-          subject: "[INFO/DEVIS] "+this.mail.sendBy.firstName+" "+this.mail.sendBy.lastName+" about "+this.mail.about,
+          subject: "[INFO/DEVIS] "+this.mail.sendBy.firstname+" "+this.mail.sendBy.lastname+" about "+this.mail.about,
           body: this.mail.object+"<br><br>"+this.mail.message,
           isHtml: true
         };

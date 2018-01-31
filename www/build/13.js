@@ -1,6 +1,6 @@
 webpackJsonp([13],{
 
-/***/ 431:
+/***/ 430:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InfoPageModule", function() { return InfoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__info__ = __webpack_require__(735);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__info__ = __webpack_require__(734);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -53,7 +53,7 @@ Observable_1.Observable.prototype.map = map_1.map;
 
 /***/ }),
 
-/***/ 735:
+/***/ 734:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -127,7 +127,7 @@ var InfoPage = (function () {
                 var email = {
                     from: _this.mail.sendBy.email,
                     to: 'cypconnet@wanadoo.fr',
-                    subject: "[INFO/DEVIS] " + _this.mail.sendBy.firstName + " " + _this.mail.sendBy.lastName + " about " + _this.mail.about,
+                    subject: "[INFO/DEVIS] " + _this.mail.sendBy.firstname + " " + _this.mail.sendBy.lastname + " about " + _this.mail.about,
                     body: _this.mail.object + "<br><br>" + _this.mail.message,
                     isHtml: true
                 };
@@ -150,10 +150,10 @@ InfoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-info',template:/*ion-inline-start:"/Users/cyp/Documents/newApp/src/pages/info/info.html"*/'<ion-header no-border>\n  <ion-navbar color=\'primary\' hideBackButton="true">\n    <ion-buttons start>\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon>back</button>\n    </ion-buttons>\n    <ion-title>\n      \n    </ion-title>\n    <ion-buttons end>\n     \n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content>\n  <div class="splash-bg">\n    <div class="splash-relative">\n            <div class="splash-intro">\n                  Demande d\'informations\n            </div>\n            <br>\n            <div padding>\n            <div class="splash-form">\n              <button ion-button block (click)="signup()">Je me connecte</button>\n              <br>\n              <h4 text-center class="white-text">Où</h4>\n              <hr>\n              <form [formGroup]="askForm">\n                  <ion-list text-center>\n              \n                    \n                    <ion-item>\n                      <ion-input type="text" [(ngModel)]="mail.sendBy.firstname" formControlName="firstname" name="firstname"></ion-input>\n                    </ion-item>\n              \n                    <ion-item>\n                      <ion-input type="text" [(ngModel)]="mail.sendBy.lastname" formControlName="lastname"  name="lastname"></ion-input>\n                    </ion-item>\n\n                    <ion-item>\n                      <ion-input type="email" [(ngModel)]="mail.sendBy.email" formControlName="email" name="email"></ion-input>\n                    </ion-item>\n\n                    <ion-item>\n                      <ion-input type="text" [(ngModel)]="mail.about" formControlName="about" name="about" disabled></ion-input>\n                    </ion-item>\n\n                    <ion-item>\n                      <ion-input type="text" [(ngModel)]="mail.object" formControlName="object"  name="object"></ion-input>\n                    </ion-item>\n\n                    <ion-item>\n                      <ion-textarea type="text" [(ngModel)]="mail.message" formControlName="message" name="message"></ion-textarea>\n                    </ion-item>\n              \n                    <button ion-button (click)="sendMail()">Envoyer !</button>\n              \n                  </ion-list>\n                </form>                \n              </div>\n          </div>\n    </div>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/cyp/Documents/newApp/src/pages/info/info.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6_ionic_angular_navigation_nav_params__["a" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_ionic_angular_navigation_nav_params__["a" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormBuilder */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_email_composer__["a" /* EmailComposer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_email_composer__["a" /* EmailComposer */]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_6_ionic_angular_navigation_nav_params__["a" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_email_composer__["a" /* EmailComposer */]])
 ], InfoPage);
 
-var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=info.js.map
 
 /***/ })

@@ -46,7 +46,8 @@ export class Chat2Page {
       userId: this.toUser._id,
       username: this.toUser.username,
       pic: this.toUser.pic,
-      text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?"
+      text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?",
+      chips: []
     }
   ];
 
@@ -161,7 +162,8 @@ export class Chat2Page {
               userId: this.toUser._id,
               username: this.toUser.username,
               pic: this.toUser.pic,
-              text: messages[messages.length - 1]
+              text: messages[messages.length - 1],
+              chips:[]
             }); 
           this.ref.detectChanges();
           messages.pop();
@@ -174,7 +176,8 @@ export class Chat2Page {
               userId: this.toUser._id,
               username: this.toUser.username,
               pic: this.toUser.pic,
-              text: messages[messages.length - 1]
+              text: messages[messages.length - 1],
+              chips: []
             });
             this.ref.detectChanges();
             messages.pop();
@@ -200,28 +203,55 @@ export class Chat2Page {
            (response) => {
              console.log(JSON.stringify(response))
              let speech = response.result.fulfillment;
-               if(response.result.fulfillment.speech){
+             let parts = response.result.fulfillment.messages;
+               if(parts){
                  if(this.platform.is('ios')){
-                    this.messages.push({
-                      toId: this.user._id,
-                      _id: this.messages.length,
-                      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                      userId: this.toUser._id,
-                      username: this.toUser.username,
-                      pic: this.toUser.pic,
-                      text: speech.speech
-                    });
+                  let newM = {
+                     toId: this.user._id,
+                     _id: this.messages.length,
+                     date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                     userId: this.toUser._id,
+                     username: this.toUser.username,
+                     pic: this.toUser.pic,
+                     text: '',
+                     chips: []
+                  }
+                  for (let message of parts){
+                     switch (message.type){
+                       case "simple_response":
+                         newM.text=message.TextToSpeech;
+                         break;
+                       case "suggestion_chips":
+                         for (let suggestion of message.suggestions)
+                           newM.chips.push(suggestion.title)
+                         break;
+                     }
+                  }
+                  this.messages.push(newM);
                   this.ref.detectChanges();
                 } else {
-                  this.messages.push({      
-                    toId: this.user._id,
-                    _id: 2,
-                    date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                    userId: this.toUser._id,
-                    username: this.toUser.username,
-                    pic: this.toUser.pic,
-                    text: speech.speech
-                  });
+                  let newM = {
+                     toId: this.user._id,
+                     _id: this.messages.length,
+                     date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                     userId: this.toUser._id,
+                     username: this.toUser.username,
+                     pic: this.toUser.pic,
+                     text: '',
+                     chips: []
+                  }
+                  for (let message of parts){
+                     switch (message.type){
+                       case "simple_response":
+                         newM.text=message.TextToSpeech;
+                         break;
+                       case "suggestion_chips":
+                         for (let suggestion of message.suggestions)
+                           newM.chips.push(suggestion.title)
+                         break;
+                     }
+                  }
+                  this.messages.push(newM);
                   this.ref.detectChanges();
                 }
                } else {
@@ -329,7 +359,8 @@ export class Chat2Page {
       userId: this.user._id,
       username: this.user.username,
       pic: this.user.pic,
-      text: this.newMessage
+      text: this.newMessage,
+      chips: []
     });
 
     var messages0 = [

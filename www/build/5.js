@@ -1,5 +1,5 @@
-webpackJsonp([5],Array(433).concat([
-/* 433 */
+webpackJsonp([5],Array(432).concat([
+/* 432 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7,9 +7,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsPageModule", function() { return NewsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__news__ = __webpack_require__(737);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__news__ = __webpack_require__(736);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic2_auto_complete__ = __webpack_require__(455);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_CompleteNewsService__ = __webpack_require__(732);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_CompleteNewsService__ = __webpack_require__(731);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -47,6 +47,7 @@ NewsPageModule = __decorate([
 //# sourceMappingURL=news.module.js.map
 
 /***/ }),
+/* 433 */,
 /* 434 */,
 /* 435 */,
 /* 436 */,
@@ -10426,8 +10427,7 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* 728 */,
 /* 729 */,
 /* 730 */,
-/* 731 */,
-/* 732 */
+/* 731 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10488,18 +10488,18 @@ CompleteNewsService = __decorate([
 //# sourceMappingURL=CompleteNewsService.js.map
 
 /***/ }),
+/* 732 */,
 /* 733 */,
 /* 734 */,
 /* 735 */,
-/* 736 */,
-/* 737 */
+/* 736 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_CompleteNewsService__ = __webpack_require__(732);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_CompleteNewsService__ = __webpack_require__(731);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(254);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {

@@ -25,6 +25,17 @@
           <span class="bold">{{toUser.username}}</span>
         </div>
           
+        <div *ngIf="message.chips" style="margin-bottom:20px;" text-center>
+          <ion-scroll zoom="false" scrollX="true" class="scroll">
+            <ion-row text-center>
+              <div class="mother">
+                <div style="white-space: nowrap;" *ngFor="let chip of message.chips" class="area" style="margin-right:5px;">
+                  <ion-badge style="background-color: #386ecd" *ngIf="marqueId == 2" (click)="sendText(chip, messages, 2000)">{{chip}}</ion-badge>
+                </div>
+              </div>
+            </ion-row>
+          </ion-scroll>
+        </div>
       </div>
     </div>
     <div *ngIf="user._id === message.userId">
