@@ -7,7 +7,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsPageModule", function() { return NewsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__news__ = __webpack_require__(738);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__news__ = __webpack_require__(737);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic2_auto_complete__ = __webpack_require__(455);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_CompleteNewsService__ = __webpack_require__(732);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -906,13 +906,13 @@ var BehaviorSubject_1 = __webpack_require__(315);
 exports.BehaviorSubject = BehaviorSubject_1.BehaviorSubject;
 var ConnectableObservable_1 = __webpack_require__(263);
 exports.ConnectableObservable = ConnectableObservable_1.ConnectableObservable;
-var Notification_1 = __webpack_require__(70);
+var Notification_1 = __webpack_require__(71);
 exports.Notification = Notification_1.Notification;
-var EmptyError_1 = __webpack_require__(77);
+var EmptyError_1 = __webpack_require__(78);
 exports.EmptyError = EmptyError_1.EmptyError;
 var ArgumentOutOfRangeError_1 = __webpack_require__(55);
 exports.ArgumentOutOfRangeError = ArgumentOutOfRangeError_1.ArgumentOutOfRangeError;
-var ObjectUnsubscribedError_1 = __webpack_require__(75);
+var ObjectUnsubscribedError_1 = __webpack_require__(76);
 exports.ObjectUnsubscribedError = ObjectUnsubscribedError_1.ObjectUnsubscribedError;
 var TimeoutError_1 = __webpack_require__(340);
 exports.TimeoutError = TimeoutError_1.TimeoutError;
@@ -936,9 +936,9 @@ var asap_1 = __webpack_require__(447);
 var async_1 = __webpack_require__(18);
 var queue_1 = __webpack_require__(271);
 var animationFrame_1 = __webpack_require__(717);
-var rxSubscriber_1 = __webpack_require__(72);
+var rxSubscriber_1 = __webpack_require__(73);
 var iterator_1 = __webpack_require__(53);
-var observable_1 = __webpack_require__(73);
+var observable_1 = __webpack_require__(74);
 var _operators = __webpack_require__(350);
 exports.operators = _operators;
 /* tslint:enable:no-unused-variable */
@@ -2144,7 +2144,7 @@ exports.combineLatest = combineLatest;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var concat_1 = __webpack_require__(69);
+var concat_1 = __webpack_require__(70);
 Observable_1.Observable.concat = concat_1.concat;
 //# sourceMappingURL=concat.js.map
 
@@ -2349,7 +2349,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var isFunction_1 = __webpack_require__(71);
+var isFunction_1 = __webpack_require__(72);
 var Observable_1 = __webpack_require__(9);
 var Subscription_1 = __webpack_require__(16);
 /**
@@ -2840,7 +2840,7 @@ exports.IntervalObservable = IntervalObservable;
 "use strict";
 
 var Observable_1 = __webpack_require__(9);
-var merge_1 = __webpack_require__(68);
+var merge_1 = __webpack_require__(69);
 Observable_1.Observable.merge = merge_1.merge;
 //# sourceMappingURL=merge.js.map
 
@@ -4232,7 +4232,7 @@ Observable_1.Observable.prototype.concat = concat_1.concat;
 "use strict";
 
 var concat_1 = __webpack_require__(279);
-var concat_2 = __webpack_require__(69);
+var concat_2 = __webpack_require__(70);
 exports.concatStatic = concat_2.concat;
 /* tslint:enable:max-line-length */
 /**
@@ -6428,7 +6428,7 @@ Observable_1.Observable.prototype.merge = merge_1.merge;
 "use strict";
 
 var merge_1 = __webpack_require__(306);
-var merge_2 = __webpack_require__(68);
+var merge_2 = __webpack_require__(69);
 exports.mergeStatic = merge_2.merge;
 /* tslint:enable:max-line-length */
 /**
@@ -6504,7 +6504,7 @@ Observable_1.Observable.prototype.mergeAll = mergeAll_1.mergeAll;
 
 "use strict";
 
-var mergeAll_1 = __webpack_require__(74);
+var mergeAll_1 = __webpack_require__(75);
 /**
  * Converts a higher-order Observable into a first-order Observable which
  * concurrently delivers all values that are emitted on the inner Observables.
@@ -6958,7 +6958,7 @@ Observable_1.Observable.prototype.observeOn = observeOn_1.observeOn;
 
 "use strict";
 
-var observeOn_1 = __webpack_require__(76);
+var observeOn_1 = __webpack_require__(77);
 /**
  *
  * Re-emits all notifications from source Observable with specified scheduler.
@@ -9907,7 +9907,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(9);
-var Notification_1 = __webpack_require__(70);
+var Notification_1 = __webpack_require__(71);
 var ColdObservable_1 = __webpack_require__(715);
 var HotObservable_1 = __webpack_require__(716);
 var SubscriptionLog_1 = __webpack_require__(450);
@@ -10492,8 +10492,7 @@ CompleteNewsService = __decorate([
 /* 734 */,
 /* 735 */,
 /* 736 */,
-/* 737 */,
-/* 738 */
+/* 737 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10501,7 +10500,7 @@ CompleteNewsService = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_CompleteNewsService__ = __webpack_require__(732);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(254);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

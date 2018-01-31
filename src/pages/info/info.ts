@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
+import { EmailComposer } from '@ionic-native/email-composer';
 
-import { TinderQ2Page } from '../pages';
+import { WelcomePage } from '../pages';
 
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -22,8 +23,8 @@ export class InfoPage {
     object: "Objet",
     message: "Message",
     sendBy: {
-      firstName: "Prénom",
-      lastName: "Nom",
+      firstname: "Prénom",
+      lastname: "Nom",
       email: "@ email",
     }
   }
@@ -32,7 +33,7 @@ export class InfoPage {
   tabBarElement: any;
 
   constructor(public navCtrl: NavController, public navParams:NavParams,
-    public toastCtrl: ToastController, http:Http, public formBuilder: FormBuilder) {
+    public toastCtrl: ToastController, http:Http, public formBuilder: FormBuilder, private emailComposer: EmailComposer) {
       this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
 
       this.serviceId = navParams.get("serviceId");
@@ -40,7 +41,7 @@ export class InfoPage {
 
       this.askForm = formBuilder.group({
         firstname: ['',  Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
-        lastName: ['',  Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
+        lastname: ['',  Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
         email: [''],
         about: [''],
         object: [''],
@@ -56,17 +57,28 @@ export class InfoPage {
     this.tabBarElement.style.display = 'flex';
   }
 
-  forgot() {
-    this.navCtrl.push('ForgotPage');
-  }
+  sendMail(){
+    this.emailComposer.isAvailable().then((available: boolean) =>{
+      if(available) {
+        //Now we know we can send
 
-  signup() {
-    this.navCtrl.push('SignupPage');
+        let email = {
+          from: this.mail.sendBy.email,
+          to: 'cypconnet@wanadoo.fr',
+          subject: "[INFO/DEVIS] "+this.mail.sendBy.firstName+" "+this.mail.sendBy.lastName+" about "+this.mail.about,
+          body: this.mail.object+"<br><br>"+this.mail.message,
+          isHtml: true
+        };
+        
+        // Send a text message using default options
+        this.emailComposer.open(email);
+      }
+     });
   }
 
   // Attempt to login in through our User service
-  doLogin() {
-      this.navCtrl.push(TinderQ2Page);
+  login() {
+      this.navCtrl.push(WelcomePage);
   }
 
   prev(){

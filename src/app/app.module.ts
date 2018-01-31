@@ -13,6 +13,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { HttpModule } from '@angular/http';
 import { SwingModule } from 'angular2-swing';
 
+import { EmailComposer } from '@ionic-native/email-composer';
 @NgModule({
   declarations: [
     MyApp,
@@ -34,6 +35,7 @@ import { SwingModule } from 'angular2-swing';
     StatusBar,
     SplashScreen,
     SpeechRecognition,
+    EmailComposer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
