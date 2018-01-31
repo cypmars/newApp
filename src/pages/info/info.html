@@ -16,50 +16,45 @@
     <div class="splash-relative">
             <div class="splash-logo"></div>
             <div class="splash-intro">
-                  Service Advisor
+                  Demande d'informations
             </div>
             <br>
             <div padding>
             <div class="splash-form">
               <button ion-button block (click)="signup()"><ion-icon name="logo-linkedin" class="white-text"></ion-icon> &nbsp;&nbsp;Se connecter avec LinkedIn</button>
               <br>
-              <form (submit)="doLogin()">
+              <form [formGroup]="askForm">
                   <ion-list text-center>
               
                     
                     <ion-item>
-                      <ion-label><ion-icon name="contact" class="white-text"></ion-icon></ion-label>
-                      <ion-input type="text" [(ngModel)]="account.email" name="login"></ion-input>
+                      <ion-input type="text" [(ngModel)]="mail.sendBy.firstname" formControlName="firstname" name="firstname"></ion-input>
                     </ion-item>
-              
-                    <!--
-                    Want to use a Username instead of an Email? Here you go:
               
                     <ion-item>
-                      <ion-label floating>{{ 'USERNAME' | translate }}</ion-label>
-                      <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
+                      <ion-input type="text" [(ngModel)]="mail.sendBy.lastname" formControlName="lastname"  name="lastname"></ion-input>
                     </ion-item>
-                    -->
-                    <div class="">
-                      
-                    </div>
+
                     <ion-item>
-                      <ion-label><ion-icon name="lock" class="white-text"></ion-icon></ion-label>
-                      <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+                      <ion-input type="email" [(ngModel)]="mail.sendBy.email" formControlName="email" name="email"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                      <ion-input type="text" [(ngModel)]="mail.about" formControlName="about" name="about" disabled></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                      <ion-input type="text" [(ngModel)]="mail.object" formControlName="object"  name="object"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                      <ion-textarea type="text" [(ngModel)]="mail.message" formControlName="message" name="message"></ion-textarea>
                     </ion-item>
               
-                    <button ion-button>Se connecter</button>
+                    <button ion-button (click)="sendMail()">Envoyer !</button>
               
                   </ion-list>
                 </form>                
-              </div>
-          </div>
-          <div class="splash-end">
-              <div class="splash-new">
-                  <a (click)="signup()">Nouveau ? S'inscrire !</a>
-              </div>
-              <div class="splash-forgot">
-                <a (click)="forgot()">Mot de passe oublié</a>
               </div>
           </div>
     </div>

@@ -5,31 +5,47 @@ import { TinderQ2Page } from '../pages';
 
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-/**
- * The Welcome Page is a splash page that quickly describes the app,
- * and then directs the user to create an account or log in.
- * If you'd like to immediately put the user onto a login/signup page,
- * we recommend not using the Welcome page.
-*/
+import { NavParams } from 'ionic-angular/navigation/nav-params';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+
 @IonicPage()
 @Component({
   selector: 'page-info',
   templateUrl: 'info.html'
 })
 export class InfoPage {
-  // The account fields for the login form.
-  // If you're using the username field with or without email, make
-  // sure to add it to the type
-  account: { email: string, password: string } = {
-    email: '@ e-mail ou pseudo',
-    password: 'mot de passe'
-  };
+
+  serviceId;
+  mail = {
+    about: "Service",
+    object: "Objet",
+    message: "Message",
+    sendBy: {
+      firstName: "Prénom",
+      lastName: "Nom",
+      email: "@ email",
+    }
+  }
+  askForm: FormGroup;
 
   tabBarElement: any;
 
-  constructor(public navCtrl: NavController,
-    public toastCtrl: ToastController, http:Http) {
+  constructor(public navCtrl: NavController, public navParams:NavParams,
+    public toastCtrl: ToastController, http:Http, public formBuilder: FormBuilder) {
       this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
+
+      this.serviceId = navParams.get("serviceId");
+      this.mail.about = navParams.get("serviceName");
+
+      this.askForm = formBuilder.group({
+        firstname: ['',  Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
+        lastName: ['',  Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
+        email: [''],
+        about: [''],
+        object: [''],
+        message: ['']
+      });
   }
 
   ionViewWillEnter(){
