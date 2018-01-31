@@ -26156,6 +26156,55 @@ page-chat2 ion-footer {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+page-chat2 .scroll {
+  padding: 30px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+page-chat2 ion-badge {
+  word-break: break-word;
+  overflow: hidden;
+  width: 100px;
+  padding: 6px 6px;
+}
+
+page-chat2 .col ion-badge {
+  height: 100px;
+  font-size: 1.4em;
+}
+
+page-chat2 .col {
+  min-width: 150px;
+}
+
+page-chat2 .descr {
+  white-space: normal;
+}
+
+page-chat2 .badge-md, page-chat2 .badge-ios {
+  border-radius: 50px;
+}
+
+page-chat2 .justify-center {
+  text-align: justify;
+  text-align-last: center;
+}
+
+page-chat2 .scroll > .scroll-content {
+  white-space: nowrap;
+}
+
+page-chat2 .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 page-info ion-content {
   background: #b2284e;
   /* For browsers that do not support gradients */

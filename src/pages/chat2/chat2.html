@@ -13,47 +13,46 @@
     </ion-navbar>
   </ion-header>
 
-<ion-content padding>
-  <div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">
-    <div *ngIf="user._id !== message.userId">
-      <img class="profile-pic left" [src]="toUser.pic" />
-      <div class="chat-bubble left slide-left">
-          
-         <div class="message" [innerHTML]="message.text" autolinker></div>
-          
-        <div class="message-detail">
-          <span class="bold">{{toUser.username}}</span>
+  <ion-content padding>
+    <div *ngFor="let message of messages" >
+      <div *ngIf="user._id !== message.userId">
+        <div class="message-wrapper" on-hold="onMessageHold($event, $index, message)">
+          <img class="profile-pic left" [src]="toUser.pic" style="top: 25px"/>
+          <div class="chat-bubble left slide-left">   
+            <div class="message" [innerHTML]="message.text" autolinker></div>  
+            <div class="message-detail">
+              <span class="bold">{{toUser.username}}</span>
+            </div>
+          </div>
         </div>
-          
-        <div *ngIf="message.chips" style="margin-bottom:20px;" text-center>
-          <ion-scroll zoom="false" scrollX="true" class="scroll">
+        <div *ngIf="message.chips" text-center>
+          <ion-scroll zoom="false" style="top: 70px; left: 40px" scrollX="true" class="scroll">
             <ion-row text-center>
-              <div class="mother">
                 <div style="white-space: nowrap;" *ngFor="let chip of message.chips" class="area" style="margin-right:5px;">
-                  <ion-badge style="background-color: #386ecd" *ngIf="marqueId == 2" (click)="sendText(chip, messages, 2000)">{{chip}}</ion-badge>
+                  <ion-badge style="background-color: #d42649">{{chip}}</ion-badge>
                 </div>
-              </div>
             </ion-row>
           </ion-scroll>
         </div>
       </div>
-    </div>
-    <div *ngIf="user._id === message.userId">
-      <img class="profile-pic right" [src]="user.pic" />
-
-      <div class="chat-bubble right slide-right">
-          
-        <div class="message" [innerHTML]="message.text" autolinker></div>
-
-        <div class="message-detail">
-          <span class="bold">{{user.username}}</span>
+      <div *ngIf="user._id === message.userId">
+        <div class="message-wrapper">
+          <img class="profile-pic right" [src]="user.pic" />
+  
+          <div class="chat-bubble right slide-right">
+              
+            <div class="message" [innerHTML]="message.text" autolinker></div>
+  
+            <div class="message-detail">
+              <span class="bold">{{user.username}}</span>
+            </div>
+  
+          </div>
         </div>
-
       </div>
+      <div class="cf"></div>
     </div>
-    <div class="cf"></div>
-  </div>
-</ion-content>
+  </ion-content>
 
 <ion-footer>
     <ion-grid>
