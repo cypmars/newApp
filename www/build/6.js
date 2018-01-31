@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 436:
+/***/ 437:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageModule", function() { return SignupPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(741);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(727);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(742);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(728);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_vis__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -225,164 +225,6 @@ __export(__webpack_require__(729));
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-<<<<<<< HEAD
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-var Vis = __webpack_require__(724);
-var VisNetwork = (function (_super) {
-    __extends(VisNetwork, _super);
-    function VisNetwork() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return VisNetwork;
-}(Vis.Network));
-exports.VisNetwork = VisNetwork;
-var VisNodes = (function (_super) {
-    __extends(VisNodes, _super);
-    function VisNodes(data, options) {
-        return _super.call(this, data, options) || this;
-    }
-    VisNodes.prototype.getLength = function () {
-        return this.length;
-    };
-    VisNodes.prototype.add = function (data, senderId) {
-        return _super.prototype.add.call(this, data, senderId);
-    };
-    VisNodes.prototype.clear = function (senderId) {
-        return _super.prototype.clear.call(this, senderId);
-    };
-    VisNodes.prototype.distinct = function (field) {
-        return _super.prototype.distinct.call(this, field);
-    };
-    VisNodes.prototype.flush = function () {
-        _super.prototype.flush.call(this);
-    };
-    VisNodes.prototype.forEach = function (callback, options) {
-        _super.prototype.forEach.call(this, callback, options);
-    };
-    VisNodes.prototype.getAll = function (options) {
-        return _super.prototype.get.call(this, options);
-    };
-    VisNodes.prototype.getById = function (id, options) {
-        return _super.prototype.get.call(this, id, options);
-    };
-    VisNodes.prototype.getByIds = function (ids, options) {
-        return _super.prototype.get.call(this, ids, options);
-    };
-    VisNodes.prototype.getDataSet = function () {
-        return _super.prototype.getDataSet.call(this);
-    };
-    VisNodes.prototype.getIds = function (options) {
-        return _super.prototype.getIds.call(this, options);
-    };
-    VisNodes.prototype.map = function (callback, options) {
-        return _super.prototype.map.call(this, callback, options);
-    };
-    VisNodes.prototype.max = function (field) {
-        return _super.prototype.max.call(this, field);
-    };
-    VisNodes.prototype.min = function (field) {
-        return _super.prototype.min.call(this, field);
-    };
-    VisNodes.prototype.on = function (event, callback) {
-        _super.prototype.on.call(this, event, callback);
-    };
-    VisNodes.prototype.off = function (event, callback) {
-        _super.prototype.off.call(this, event, callback);
-    };
-    VisNodes.prototype.removeItems = function (ids, senderId) {
-        return _super.prototype.remove.call(this, ids, senderId);
-    };
-    VisNodes.prototype.setOptions = function (options) {
-        _super.prototype.setOptions.call(this, options);
-    };
-    VisNodes.prototype.update = function (data, senderId) {
-        return _super.prototype.update.call(this, data, senderId);
-    };
-    return VisNodes;
-}(Vis.DataSet));
-exports.VisNodes = VisNodes;
-var VisEdges = (function (_super) {
-    __extends(VisEdges, _super);
-    function VisEdges(data, options) {
-        return _super.call(this, data, options) || this;
-    }
-    VisEdges.prototype.getLength = function () {
-        return this.length;
-    };
-    VisEdges.prototype.add = function (data, senderId) {
-        return _super.prototype.add.call(this, data, senderId);
-    };
-    VisEdges.prototype.clear = function (senderId) {
-        return _super.prototype.clear.call(this, senderId);
-    };
-    VisEdges.prototype.distinct = function (field) {
-        return _super.prototype.distinct.call(this, field);
-    };
-    VisEdges.prototype.flush = function () {
-        _super.prototype.flush.call(this);
-    };
-    VisEdges.prototype.forEach = function (callback, options) {
-        _super.prototype.forEach.call(this, callback, options);
-    };
-    VisEdges.prototype.getAll = function (options) {
-        return _super.prototype.get.call(this, options);
-    };
-    VisEdges.prototype.getById = function (id, options) {
-        return _super.prototype.get.call(this, id, options);
-    };
-    VisEdges.prototype.getByIds = function (ids, options) {
-        return _super.prototype.get.call(this, ids, options);
-    };
-    VisEdges.prototype.getDataSet = function () {
-        return _super.prototype.getDataSet.call(this);
-    };
-    VisEdges.prototype.getIds = function (options) {
-        return _super.prototype.getIds.call(this, options);
-    };
-    VisEdges.prototype.map = function (callback, options) {
-        return _super.prototype.map.call(this, callback, options);
-    };
-    VisEdges.prototype.max = function (field) {
-        return _super.prototype.max.call(this, field);
-    };
-    VisEdges.prototype.min = function (field) {
-        return _super.prototype.min.call(this, field);
-    };
-    VisEdges.prototype.on = function (event, callback) {
-        _super.prototype.on.call(this, event, callback);
-    };
-    VisEdges.prototype.off = function (event, callback) {
-        _super.prototype.off.call(this, event, callback);
-    };
-    VisEdges.prototype.removeItems = function (ids, senderId) {
-        return _super.prototype.remove.call(this, ids, senderId);
-    };
-    VisEdges.prototype.setOptions = function (options) {
-        _super.prototype.setOptions.call(this, options);
-    };
-    VisEdges.prototype.update = function (data, senderId) {
-        return _super.prototype.update.call(this, data, senderId);
-    };
-    return VisEdges;
-}(Vis.DataSet));
-exports.VisEdges = VisEdges;
-__export(__webpack_require__(728));
-__export(__webpack_require__(725));
-=======
 
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -539,7 +381,6 @@ var VisEdges = (function (_super) {
 exports.VisEdges = VisEdges;
 __export(__webpack_require__(727));
 __export(__webpack_require__(725));
->>>>>>> cbffea77d98f51f7d70686c7001bca77a630d26f
 
 
 /***/ }),
@@ -49868,43 +49709,6 @@ exports.VisTimelineService = VisTimelineService;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-<<<<<<< HEAD
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(723);
-var index_2 = __webpack_require__(721);
-__export(__webpack_require__(730));
-var VisModule = (function () {
-    function VisModule() {
-    }
-    return VisModule;
-}());
-VisModule = __decorate([
-    core_1.NgModule({
-        declarations: [index_1.VisNetworkDirective, index_2.VisTimelineDirective],
-        exports: [index_1.VisNetworkDirective, index_2.VisTimelineDirective],
-        providers: [index_1.VisNetworkService, index_2.VisTimelineService],
-    })
-], VisModule);
-exports.VisModule = VisModule;
-
-
-/***/ }),
-
-/***/ 728:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -50028,137 +49832,10 @@ VisNetworkDirective = __decorate([
     __metadata("design:paramtypes", [core_1.ElementRef, vis_network_service_1.VisNetworkService])
 ], VisNetworkDirective);
 exports.VisNetworkDirective = VisNetworkDirective;
-=======
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(0);
-var vis_network_service_1 = __webpack_require__(725);
-/**
- * Use this directive with a div container to show network data.
- *
- * @export
- * @class VisNetworkDirective
- * @implements {OnInit}
- * @implements {OnDestroy}
- * @implements {OnChanges}
- */
-var VisNetworkDirective = (function () {
-    /**
-     * Creates an instance of VisNetworkDirective.
-     *
-     * @param {ElementRef} elementRef The HTML element reference.
-     * @param {VisNetworkService} visNetworkService The VisNetworkService.
-     *
-     * @memberOf VisNetworkDirective
-     */
-    function VisNetworkDirective(elementRef, visNetworkService) {
-        this.elementRef = elementRef;
-        this.visNetworkService = visNetworkService;
-        /**
-         * This event will be raised when the network is initialized.
-         * At this point of time the network is successfully registered
-         * with the VisNetworkService and you can register to events.
-         * The event data is the name of the network as a string.
-         *
-         * @type {EventEmitter<any>}
-         * @memberOf VisNetworkDirective
-         */
-        this.initialized = new core_1.EventEmitter();
-        this.isInitialized = false;
-        this.visNetworkContainer = elementRef.nativeElement;
-    }
-    /**
-     * Create the network when at least visNetwork and visNetworkData
-     * are defined.
-     *
-     * @memberOf VisNetworkDirective
-     */
-    VisNetworkDirective.prototype.ngOnInit = function () {
-        if (!this.isInitialized && this.visNetwork && this.visNetworkData) {
-            this.createNetwork();
-        }
-    };
-    /**
-     * Update the network data or options on reference changes to
-     * the visNetworkData or visNetworkOptions properties.
-     *
-     * @param {{[propName: string]: SimpleChange}} changes
-     *
-     * @memberOf VisNetworkDirective
-     */
-    VisNetworkDirective.prototype.ngOnChanges = function (changes) {
-        if (!this.isInitialized && this.visNetwork && this.visNetworkData) {
-            this.createNetwork();
-        }
-        for (var propertyName in changes) {
-            if (changes.hasOwnProperty(propertyName)) {
-                var change = changes[propertyName];
-                if (!change.isFirstChange()) {
-                    if (propertyName === 'visNetworkData') {
-                        this.visNetworkService.setData(this.visNetwork, changes[propertyName].currentValue);
-                    }
-                    if (propertyName === 'visNetworkOptions') {
-                        this.visNetworkService.setOptions(this.visNetwork, changes[propertyName].currentValue);
-                    }
-                }
-            }
-        }
-    };
-    /**
-     * Calls the destroy function for this network instance.
-     *
-     * @memberOf VisNetworkDirective
-     */
-    VisNetworkDirective.prototype.ngOnDestroy = function () {
-        this.isInitialized = false;
-        this.visNetworkService.destroy(this.visNetwork);
-    };
-    VisNetworkDirective.prototype.createNetwork = function () {
-        this.visNetworkService.create(this.visNetwork, this.visNetworkContainer, this.visNetworkData, this.visNetworkOptions);
-        this.isInitialized = true;
-        this.initialized.emit(this.visNetwork);
-    };
-    return VisNetworkDirective;
-}());
-__decorate([
-    core_1.Input('visNetwork'),
-    __metadata("design:type", String)
-], VisNetworkDirective.prototype, "visNetwork", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], VisNetworkDirective.prototype, "visNetworkData", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], VisNetworkDirective.prototype, "visNetworkOptions", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", core_1.EventEmitter)
-], VisNetworkDirective.prototype, "initialized", void 0);
-VisNetworkDirective = __decorate([
-    core_1.Directive({
-        selector: '[visNetwork]',
-    }),
-    __metadata("design:paramtypes", [core_1.ElementRef, vis_network_service_1.VisNetworkService])
-], VisNetworkDirective);
-exports.VisNetworkDirective = VisNetworkDirective;
->>>>>>> cbffea77d98f51f7d70686c7001bca77a630d26f
 
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ 728:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50195,7 +49872,6 @@ exports.VisModule = VisModule;
 
 /***/ }),
 
->>>>>>> cbffea77d98f51f7d70686c7001bca77a630d26f
 /***/ 729:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50356,7 +50032,7 @@ __export(__webpack_require__(723));
 
 /***/ }),
 
-/***/ 741:
+/***/ 742:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50516,7 +50192,7 @@ __decorate([
 ], SignupPage.prototype, "fab", void 0);
 SignupPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-signup',template:/*ion-inline-start:"/Users/cyp/Documents/newApp/src/pages/signup/signup.html"*/'<ion-header no-border>\n  <ion-navbar color="primary" hideBackButton="true">\n    <ion-buttons start>\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button> \n    </ion-buttons>  \n    <ion-title>\n      S\'inscrire\n    </ion-title>\n    <ion-buttons end>\n      <button *ngIf="!lastSlide" ion-button icon-right (click)="next()">Next <ion-icon name="arrow-forward"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-slides pager #signupSlider>\n\n    <ion-slide>\n      <p *ngIf="submitAttempt" style="color: #ea6153;">S\'il-vous-plait, remplissez les champs suivants.</p>\n        <form [formGroup]="slideOneForm">\n            <ion-item>\n                <ion-label floating class="white-text">Nom *</ion-label>\n                <ion-input formControlName="firstName" type="text"></ion-input>\n            </ion-item>\n    \n            <ion-item>\n                <ion-label floating class="white-text">Prénom *</ion-label>\n                <ion-input formControlName="lastName" type="text"></ion-input>\n            </ion-item>\n\n            <ion-item>\n                <ion-label floating class="white-text">E-Mail *</ion-label>\n                <ion-input formControlName="email" type="email"></ion-input>\n            </ion-item>\n\n            <ion-item>\n                <ion-label floating class="white-text">Mot de passe *</ion-label>\n                <ion-input formControlName="mdp" type="text"></ion-input>\n            </ion-item>\n        </form>\n        <br>\n    </ion-slide>\n    <ion-slide>\n        <ion-list>\n          <form [formGroup]="slideTwoForm">\n              <ion-list radio-group formControlName="type" [(ngModel)]="type">\n                  <ion-list-header>\n                    Vous êtes ?\n                  </ion-list-header>\n                \n                  <ion-item>\n                    <ion-label>Client</ion-label>\n                    <ion-radio value="client"></ion-radio>\n                  </ion-item>\n                \n                  <ion-item>\n                    <ion-label>Prospect</ion-label>\n                    <ion-radio value="prospect"></ion-radio>\n                  </ion-item>\n                \n                  <ion-item>\n                    <ion-label>Collaborateur</ion-label>\n                    <ion-radio value="collaborateur"></ion-radio>\n                  </ion-item>\n                </ion-list>\n            <br>\n            <ion-item>\n              <ion-label class="white-text">Secteur d\'activité</ion-label>\n              <ion-select formControlName="activity" [(ngModel)]="activity" (ionChange)="onChange($event)">\n                <ion-option *ngFor="let itemCat of itemsCat" [value]="itemCat.id">{{itemCat.name}}</ion-option>\n              </ion-select>\n            </ion-item>\n\n            <ion-item *ngIf="activity>=0">\n                <ion-label class="white-text">Métier</ion-label>\n                <ion-select formControlName="job" [(ngModel)]="job">\n                  <ion-option *ngFor="let jobname of itemsCat[activity].jobsName" [value]="jobname">{{jobname}}</ion-option>\n                </ion-select>\n            </ion-item>\n\n          </form>\n        </ion-list>\n        <button class="buttonSign" ion-button color="primary" (click)="save()">S\'inscrire</button>\n    </ion-slide>\n  </ion-slides>\n </ion-content>\n '/*ion-inline-end:"/Users/cyp/Documents/newApp/src/pages/signup/signup.html"*/
+        selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\signup\signup.html"*/'<ion-header no-border>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button> \n\n    </ion-buttons>  \n\n    <ion-title>\n\n      S\'inscrire\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button *ngIf="!lastSlide" ion-button icon-right (click)="next()">Next <ion-icon name="arrow-forward"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-slides pager #signupSlider>\n\n\n\n    <ion-slide>\n\n      <p *ngIf="submitAttempt" style="color: #ea6153;">S\'il-vous-plait, remplissez les champs suivants.</p>\n\n        <form [formGroup]="slideOneForm">\n\n            <ion-item>\n\n                <ion-label floating class="white-text">Nom *</ion-label>\n\n                <ion-input formControlName="firstName" type="text"></ion-input>\n\n            </ion-item>\n\n    \n\n            <ion-item>\n\n                <ion-label floating class="white-text">Prénom *</ion-label>\n\n                <ion-input formControlName="lastName" type="text"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label floating class="white-text">E-Mail *</ion-label>\n\n                <ion-input formControlName="email" type="email"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label floating class="white-text">Mot de passe *</ion-label>\n\n                <ion-input formControlName="mdp" type="text"></ion-input>\n\n            </ion-item>\n\n        </form>\n\n        <br>\n\n    </ion-slide>\n\n    <ion-slide>\n\n        <ion-list>\n\n          <form [formGroup]="slideTwoForm">\n\n              <ion-list radio-group formControlName="type" [(ngModel)]="type">\n\n                  <ion-list-header>\n\n                    Vous êtes ?\n\n                  </ion-list-header>\n\n                \n\n                  <ion-item>\n\n                    <ion-label>Client</ion-label>\n\n                    <ion-radio value="client"></ion-radio>\n\n                  </ion-item>\n\n                \n\n                  <ion-item>\n\n                    <ion-label>Prospect</ion-label>\n\n                    <ion-radio value="prospect"></ion-radio>\n\n                  </ion-item>\n\n                \n\n                  <ion-item>\n\n                    <ion-label>Collaborateur</ion-label>\n\n                    <ion-radio value="collaborateur"></ion-radio>\n\n                  </ion-item>\n\n                </ion-list>\n\n            <br>\n\n            <ion-item>\n\n              <ion-label class="white-text">Secteur d\'activité</ion-label>\n\n              <ion-select formControlName="activity" [(ngModel)]="activity" (ionChange)="onChange($event)">\n\n                <ion-option *ngFor="let itemCat of itemsCat" [value]="itemCat.id">{{itemCat.name}}</ion-option>\n\n              </ion-select>\n\n            </ion-item>\n\n\n\n            <ion-item *ngIf="activity>=0">\n\n                <ion-label class="white-text">Métier</ion-label>\n\n                <ion-select formControlName="job" [(ngModel)]="job">\n\n                  <ion-option *ngFor="let jobname of itemsCat[activity].jobsName" [value]="jobname">{{jobname}}</ion-option>\n\n                </ion-select>\n\n            </ion-item>\n\n\n\n          </form>\n\n        </ion-list>\n\n        <button class="buttonSign" ion-button color="primary" (click)="save()">S\'inscrire</button>\n\n    </ion-slide>\n\n  </ion-slides>\n\n </ion-content>\n\n '/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\signup\signup.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */],

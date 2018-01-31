@@ -36,7 +36,7 @@ var TabsPage = (function () {
 }());
 TabsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-tabs',template:/*ion-inline-start:"/Users/cyp/Documents/newApp/src/pages/tabs/tabs.html"*/'<ion-tabs color="primary" selectedIndex="1">\n  <ion-tab [root]="tab1Root" [tabTitle]="tab1Title" tabIcon="paper"></ion-tab>\n  <ion-tab [root]="tab2Root" [tabTitle]="tab2Title" tabIcon="search"></ion-tab>\n  <ion-tab [root]="tab3Root" [tabTitle]="tab3Title" tabIcon="chatbubbles"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/cyp/Documents/newApp/src/pages/tabs/tabs.html"*/
+        selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tabs\tabs.html"*/'<ion-tabs color="primary" selectedIndex="1">\n\n  <ion-tab [root]="tab1Root" [tabTitle]="tab1Title" tabIcon="paper"></ion-tab>\n\n  <ion-tab [root]="tab2Root" [tabTitle]="tab2Title" tabIcon="search"></ion-tab>\n\n  <ion-tab [root]="tab3Root" [tabTitle]="tab3Title" tabIcon="chatbubbles"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tabs\tabs.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */]])
 ], TabsPage);
@@ -75,80 +75,59 @@ var map = {
 		10
 	],
 	"../pages/info/info.module": [
-		444,
+		431,
 		13
 	],
 	"../pages/marqueDetails/marqueDetails.module": [
-		431,
+		432,
 		9
 	],
 	"../pages/news/news.module": [
-		432,
+		433,
 		5
 	],
 	"../pages/newsDetails/newsDetails.module": [
-		433,
+		434,
 		12
 	],
 	"../pages/productDetails/productDetails.module": [
-		434,
+		435,
 		7
 	],
 	"../pages/result/result.module": [
-		443,
+		436,
 		0
 	],
 	"../pages/serviceDetails/serviceDetails.module": [
-		435,
+		438,
 		8
 	],
 	"../pages/signup/signup.module": [
-		436,
+		437,
 		6
 	],
 	"../pages/simple-form/simple-form.module": [
-<<<<<<< HEAD
-		437,
+		440,
 		2
 	],
 	"../pages/simple-form1/simple-form1.module": [
-		438,
-		4
-	],
-	"../pages/simple-form2/simple-form2.module": [
-		439,
-		3
-=======
 		439,
 		4
-	],
-	"../pages/simple-form1/simple-form1.module": [
-		440,
-		3
 	],
 	"../pages/simple-form2/simple-form2.module": [
 		441,
-		2
->>>>>>> cbffea77d98f51f7d70686c7001bca77a630d26f
+		3
 	],
 	"../pages/tabs/tabs.module": [
-		440,
+		443,
 		15
 	],
 	"../pages/tinderQ2/tinderQ2.module": [
-<<<<<<< HEAD
-		441,
-		1
-	],
-	"../pages/welcome/welcome.module": [
 		442,
-=======
-		444,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		443,
->>>>>>> cbffea77d98f51f7d70686c7001bca77a630d26f
+		444,
 		11
 	]
 };
@@ -236,25 +215,20 @@ AppModule = __decorate([
                 links: [
                     { loadChildren: '../pages/askInfo/askInfo.module#AskInfoPageModule', name: 'AskInfoPage', segment: 'askInfo', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/chat2/chat2.module#Chat2PageModule', name: 'Chat2Page', segment: 'chat2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/info/info.module#InfoPageModule', name: 'InfoPage', segment: 'info', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/marqueDetails/marqueDetails.module#MarqueDetailsPageModule', name: 'MarqueDetailsPage', segment: 'marqueDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/newsDetails/newsDetails.module#NewsDetailsPageModule', name: 'NewsDetailsPage', segment: 'newsDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/productDetails/productDetails.module#ProductDetailsPageModule', name: 'ProductDetailsPage', segment: 'productDetails', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/serviceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-<<<<<<< HEAD
-                    { loadChildren: '../pages/tinderQ2/tinderQ2.module#TinderQ2PageModule', name: 'TinderQ2Page', segment: 'tinderQ2', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/info/info.module#InfoPageModule', name: 'InfoPage', segment: 'info', priority: 'low', defaultHistory: [] }
-=======
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tinderQ2/tinderQ2.module#TinderQ2PageModule', name: 'TinderQ2Page', segment: 'tinderQ2', priority: 'low', defaultHistory: [] }
->>>>>>> cbffea77d98f51f7d70686c7001bca77a630d26f
+                    { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/serviceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tinderQ2/tinderQ2.module#TinderQ2PageModule', name: 'TinderQ2Page', segment: 'tinderQ2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -373,7 +347,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/cyp/Documents/newApp/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/cyp/Documents/newApp/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__ionic_native_speech_recognition__["a" /* SpeechRecognition */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);

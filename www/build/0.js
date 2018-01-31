@@ -1,5 +1,5 @@
-webpackJsonp([0],Array(443).concat([
-/* 443 */
+webpackJsonp([0],Array(436).concat([
+/* 436 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,10 +8,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(254);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__result__ = __webpack_require__(747);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__result__ = __webpack_require__(741);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic2_auto_complete__ = __webpack_require__(455);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_CompleteTestService__ = __webpack_require__(453);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_vis__ = __webpack_require__(727);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_vis__ = __webpack_require__(728);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_vis__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -54,6 +54,13 @@ ResultPageModule = __decorate([
 //# sourceMappingURL=result.module.js.map
 
 /***/ }),
+/* 437 */,
+/* 438 */,
+/* 439 */,
+/* 440 */,
+/* 441 */,
+/* 442 */,
+/* 443 */,
 /* 444 */,
 /* 445 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10641,164 +10648,6 @@ __export(__webpack_require__(729));
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-<<<<<<< HEAD
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-var Vis = __webpack_require__(724);
-var VisNetwork = (function (_super) {
-    __extends(VisNetwork, _super);
-    function VisNetwork() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return VisNetwork;
-}(Vis.Network));
-exports.VisNetwork = VisNetwork;
-var VisNodes = (function (_super) {
-    __extends(VisNodes, _super);
-    function VisNodes(data, options) {
-        return _super.call(this, data, options) || this;
-    }
-    VisNodes.prototype.getLength = function () {
-        return this.length;
-    };
-    VisNodes.prototype.add = function (data, senderId) {
-        return _super.prototype.add.call(this, data, senderId);
-    };
-    VisNodes.prototype.clear = function (senderId) {
-        return _super.prototype.clear.call(this, senderId);
-    };
-    VisNodes.prototype.distinct = function (field) {
-        return _super.prototype.distinct.call(this, field);
-    };
-    VisNodes.prototype.flush = function () {
-        _super.prototype.flush.call(this);
-    };
-    VisNodes.prototype.forEach = function (callback, options) {
-        _super.prototype.forEach.call(this, callback, options);
-    };
-    VisNodes.prototype.getAll = function (options) {
-        return _super.prototype.get.call(this, options);
-    };
-    VisNodes.prototype.getById = function (id, options) {
-        return _super.prototype.get.call(this, id, options);
-    };
-    VisNodes.prototype.getByIds = function (ids, options) {
-        return _super.prototype.get.call(this, ids, options);
-    };
-    VisNodes.prototype.getDataSet = function () {
-        return _super.prototype.getDataSet.call(this);
-    };
-    VisNodes.prototype.getIds = function (options) {
-        return _super.prototype.getIds.call(this, options);
-    };
-    VisNodes.prototype.map = function (callback, options) {
-        return _super.prototype.map.call(this, callback, options);
-    };
-    VisNodes.prototype.max = function (field) {
-        return _super.prototype.max.call(this, field);
-    };
-    VisNodes.prototype.min = function (field) {
-        return _super.prototype.min.call(this, field);
-    };
-    VisNodes.prototype.on = function (event, callback) {
-        _super.prototype.on.call(this, event, callback);
-    };
-    VisNodes.prototype.off = function (event, callback) {
-        _super.prototype.off.call(this, event, callback);
-    };
-    VisNodes.prototype.removeItems = function (ids, senderId) {
-        return _super.prototype.remove.call(this, ids, senderId);
-    };
-    VisNodes.prototype.setOptions = function (options) {
-        _super.prototype.setOptions.call(this, options);
-    };
-    VisNodes.prototype.update = function (data, senderId) {
-        return _super.prototype.update.call(this, data, senderId);
-    };
-    return VisNodes;
-}(Vis.DataSet));
-exports.VisNodes = VisNodes;
-var VisEdges = (function (_super) {
-    __extends(VisEdges, _super);
-    function VisEdges(data, options) {
-        return _super.call(this, data, options) || this;
-    }
-    VisEdges.prototype.getLength = function () {
-        return this.length;
-    };
-    VisEdges.prototype.add = function (data, senderId) {
-        return _super.prototype.add.call(this, data, senderId);
-    };
-    VisEdges.prototype.clear = function (senderId) {
-        return _super.prototype.clear.call(this, senderId);
-    };
-    VisEdges.prototype.distinct = function (field) {
-        return _super.prototype.distinct.call(this, field);
-    };
-    VisEdges.prototype.flush = function () {
-        _super.prototype.flush.call(this);
-    };
-    VisEdges.prototype.forEach = function (callback, options) {
-        _super.prototype.forEach.call(this, callback, options);
-    };
-    VisEdges.prototype.getAll = function (options) {
-        return _super.prototype.get.call(this, options);
-    };
-    VisEdges.prototype.getById = function (id, options) {
-        return _super.prototype.get.call(this, id, options);
-    };
-    VisEdges.prototype.getByIds = function (ids, options) {
-        return _super.prototype.get.call(this, ids, options);
-    };
-    VisEdges.prototype.getDataSet = function () {
-        return _super.prototype.getDataSet.call(this);
-    };
-    VisEdges.prototype.getIds = function (options) {
-        return _super.prototype.getIds.call(this, options);
-    };
-    VisEdges.prototype.map = function (callback, options) {
-        return _super.prototype.map.call(this, callback, options);
-    };
-    VisEdges.prototype.max = function (field) {
-        return _super.prototype.max.call(this, field);
-    };
-    VisEdges.prototype.min = function (field) {
-        return _super.prototype.min.call(this, field);
-    };
-    VisEdges.prototype.on = function (event, callback) {
-        _super.prototype.on.call(this, event, callback);
-    };
-    VisEdges.prototype.off = function (event, callback) {
-        _super.prototype.off.call(this, event, callback);
-    };
-    VisEdges.prototype.removeItems = function (ids, senderId) {
-        return _super.prototype.remove.call(this, ids, senderId);
-    };
-    VisEdges.prototype.setOptions = function (options) {
-        _super.prototype.setOptions.call(this, options);
-    };
-    VisEdges.prototype.update = function (data, senderId) {
-        return _super.prototype.update.call(this, data, senderId);
-    };
-    return VisEdges;
-}(Vis.DataSet));
-exports.VisEdges = VisEdges;
-__export(__webpack_require__(728));
-__export(__webpack_require__(725));
-=======
 
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -10955,7 +10804,6 @@ var VisEdges = (function (_super) {
 exports.VisEdges = VisEdges;
 __export(__webpack_require__(727));
 __export(__webpack_require__(725));
->>>>>>> cbffea77d98f51f7d70686c7001bca77a630d26f
 
 
 /***/ }),
@@ -60280,169 +60128,6 @@ exports.VisTimelineService = VisTimelineService;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-<<<<<<< HEAD
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(723);
-var index_2 = __webpack_require__(721);
-__export(__webpack_require__(730));
-var VisModule = (function () {
-    function VisModule() {
-    }
-    return VisModule;
-}());
-VisModule = __decorate([
-    core_1.NgModule({
-        declarations: [index_1.VisNetworkDirective, index_2.VisTimelineDirective],
-        exports: [index_1.VisNetworkDirective, index_2.VisTimelineDirective],
-        providers: [index_1.VisNetworkService, index_2.VisTimelineService],
-    })
-], VisModule);
-exports.VisModule = VisModule;
-
-
-/***/ }),
-/* 728 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(0);
-var vis_network_service_1 = __webpack_require__(725);
-/**
- * Use this directive with a div container to show network data.
- *
- * @export
- * @class VisNetworkDirective
- * @implements {OnInit}
- * @implements {OnDestroy}
- * @implements {OnChanges}
- */
-var VisNetworkDirective = (function () {
-    /**
-     * Creates an instance of VisNetworkDirective.
-     *
-     * @param {ElementRef} elementRef The HTML element reference.
-     * @param {VisNetworkService} visNetworkService The VisNetworkService.
-     *
-     * @memberOf VisNetworkDirective
-     */
-    function VisNetworkDirective(elementRef, visNetworkService) {
-        this.elementRef = elementRef;
-        this.visNetworkService = visNetworkService;
-        /**
-         * This event will be raised when the network is initialized.
-         * At this point of time the network is successfully registered
-         * with the VisNetworkService and you can register to events.
-         * The event data is the name of the network as a string.
-         *
-         * @type {EventEmitter<any>}
-         * @memberOf VisNetworkDirective
-         */
-        this.initialized = new core_1.EventEmitter();
-        this.isInitialized = false;
-        this.visNetworkContainer = elementRef.nativeElement;
-    }
-    /**
-     * Create the network when at least visNetwork and visNetworkData
-     * are defined.
-     *
-     * @memberOf VisNetworkDirective
-     */
-    VisNetworkDirective.prototype.ngOnInit = function () {
-        if (!this.isInitialized && this.visNetwork && this.visNetworkData) {
-            this.createNetwork();
-        }
-    };
-    /**
-     * Update the network data or options on reference changes to
-     * the visNetworkData or visNetworkOptions properties.
-     *
-     * @param {{[propName: string]: SimpleChange}} changes
-     *
-     * @memberOf VisNetworkDirective
-     */
-    VisNetworkDirective.prototype.ngOnChanges = function (changes) {
-        if (!this.isInitialized && this.visNetwork && this.visNetworkData) {
-            this.createNetwork();
-        }
-        for (var propertyName in changes) {
-            if (changes.hasOwnProperty(propertyName)) {
-                var change = changes[propertyName];
-                if (!change.isFirstChange()) {
-                    if (propertyName === 'visNetworkData') {
-                        this.visNetworkService.setData(this.visNetwork, changes[propertyName].currentValue);
-                    }
-                    if (propertyName === 'visNetworkOptions') {
-                        this.visNetworkService.setOptions(this.visNetwork, changes[propertyName].currentValue);
-                    }
-                }
-            }
-        }
-    };
-    /**
-     * Calls the destroy function for this network instance.
-     *
-     * @memberOf VisNetworkDirective
-     */
-    VisNetworkDirective.prototype.ngOnDestroy = function () {
-        this.isInitialized = false;
-        this.visNetworkService.destroy(this.visNetwork);
-    };
-    VisNetworkDirective.prototype.createNetwork = function () {
-        this.visNetworkService.create(this.visNetwork, this.visNetworkContainer, this.visNetworkData, this.visNetworkOptions);
-        this.isInitialized = true;
-        this.initialized.emit(this.visNetwork);
-    };
-    return VisNetworkDirective;
-}());
-__decorate([
-    core_1.Input('visNetwork'),
-    __metadata("design:type", String)
-], VisNetworkDirective.prototype, "visNetwork", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], VisNetworkDirective.prototype, "visNetworkData", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], VisNetworkDirective.prototype, "visNetworkOptions", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", core_1.EventEmitter)
-], VisNetworkDirective.prototype, "initialized", void 0);
-VisNetworkDirective = __decorate([
-    core_1.Directive({
-        selector: '[visNetwork]',
-    }),
-    __metadata("design:paramtypes", [core_1.ElementRef, vis_network_service_1.VisNetworkService])
-], VisNetworkDirective);
-exports.VisNetworkDirective = VisNetworkDirective;
-
-
-/***/ }),
-=======
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -60604,7 +60289,6 @@ exports.VisModule = VisModule;
 
 
 /***/ }),
->>>>>>> cbffea77d98f51f7d70686c7001bca77a630d26f
 /* 729 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -60773,13 +60457,7 @@ __export(__webpack_require__(723));
 /* 738 */,
 /* 739 */,
 /* 740 */,
-/* 741 */,
-/* 742 */,
-/* 743 */,
-/* 744 */,
-/* 745 */,
-/* 746 */,
-/* 747 */
+/* 741 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61025,7 +60703,7 @@ var ResultPage = (function () {
 }());
 ResultPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-result',template:/*ion-inline-start:"/Users/cyp/Documents/newApp/src/pages/result/result.html"*/'\n    <ion-header no-border>\n    <ion-navbar color="primary" hideBackButton="true">\n        <ion-buttons start>\n            <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n        </ion-buttons>\n        <ion-title>\n        Recherche\n        </ion-title>\n        <ion-buttons end>\n            <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n        </ion-buttons>\n    </ion-navbar>\n    <form>\n    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>\n    </form>\n    </ion-header>\n    <ion-content *ngIf="services != null">\n        <div class="splash-relative">\n            <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n            <div class="splash-info" center>\n                <div class="splash-form">\n                    <div class="chart-container">\n                        <p text-center style="background-color: rgba(255, 255, 255, 0.7); border-radius:15px;margin: 10px 20% 0 20%; padding:5px 5px 5px 5px; position:fixed; top: 20%; left:0; width:60%; z-index:1000;"><small><span style="color:#0eae15">Propreté et Services</span> - <span style="color:#d01717">Sécurité</span> - <span style="color:#386ecd">Services aéroportuaires</span> - <span style="color:#cbc40e">Accueil</span> - <span style="color:#cc7136">Logistique</span> - <span style="color:#962ac8">Technologies</span> - <span style="color:#d42649">AXXIS: Intérim, Recrutement et Formation</span></small></p>\n                        <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </ion-content>\n    <ion-footer class="footer" hidden>\n        <ion-grid>\n          <ion-row>\n            <ion-col text-center col-9 *ngIf="myServiceId != null" class="valignCenter">\n                <h4 style="color:#0eae15; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].content.title}}</h4>\n                <h4 style="color:#d01717; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].content.title}}</h4>\n                <h4 style="color:#386ecd; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].content.title}}</h4>\n                <h4 style="color:#cbc40e; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].content.title}}</h4>\n                <h4 style="color:#cc7136; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].content.title}}</h4>\n                <h4 style="color:#962ac8; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].content.title}}</h4>\n                <h4 style="color:#d42649; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].content.title}}</h4>\n            </ion-col>\n            <ion-col text-center col-3 class="valignCenter">\n                <button style="background-color:rgba(0,0,0,0.2); border-radius:40px; width:40px; height:40px;" (click)="more()">\n                    <ion-icon name="information" style="color: rgba(0,0,0,0.3)" class="footer-btn"></ion-icon>\n                </button>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n    </ion-footer>\n\n'/*ion-inline-end:"/Users/cyp/Documents/newApp/src/pages/result/result.html"*/
+        selector: 'page-result',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/'\n\n    <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n        <ion-buttons start>\n\n            <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n        </ion-buttons>\n\n        <ion-title>\n\n        Recherche\n\n        </ion-title>\n\n        <ion-buttons end>\n\n            <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    <form>\n\n    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>\n\n    </form>\n\n    </ion-header>\n\n    <ion-content *ngIf="services != null">\n\n        <div class="splash-relative">\n\n            <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n\n            <div class="splash-info" center>\n\n                <div class="splash-form">\n\n                    <div class="chart-container">\n\n                        <p text-center style="background-color: rgba(255, 255, 255, 0.7); border-radius:15px;margin: 10px 20% 0 20%; padding:5px 5px 5px 5px; position:fixed; top: 20%; left:0; width:60%; z-index:1000;"><small><span style="color:#0eae15">Propreté et Services</span> - <span style="color:#d01717">Sécurité</span> - <span style="color:#386ecd">Services aéroportuaires</span> - <span style="color:#cbc40e">Accueil</span> - <span style="color:#cc7136">Logistique</span> - <span style="color:#962ac8">Technologies</span> - <span style="color:#d42649">AXXIS: Intérim, Recrutement et Formation</span></small></p>\n\n                        <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n                    </div>\n\n                </div>\n\n            </div>\n\n        </div>\n\n    </ion-content>\n\n    <ion-footer class="footer" hidden>\n\n        <ion-grid>\n\n          <ion-row>\n\n            <ion-col text-center col-9 *ngIf="myServiceId != null" class="valignCenter">\n\n                <h4 style="color:#0eae15; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#d01717; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#386ecd; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#cbc40e; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#cc7136; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#962ac8; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#d42649; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].content.title}}</h4>\n\n            </ion-col>\n\n            <ion-col text-center col-3 class="valignCenter">\n\n                <button style="background-color:rgba(0,0,0,0.2); border-radius:40px; width:40px; height:40px;" (click)="more()">\n\n                    <ion-icon name="information" style="color: rgba(0,0,0,0.3)" class="footer-btn"></ion-icon>\n\n                </button>\n\n            </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n    </ion-footer>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_6_ng2_vis_components_network__["VisNetworkService"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */]])
 ], ResultPage);
