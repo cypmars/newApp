@@ -213,7 +213,7 @@ export class Chat2Page {
                   userId: this.toUser._id,
                   username: this.toUser.username,
                   pic: this.toUser.pic,
-                  text: '',
+                  text: speech.speech,
                   chips: []
                 }
                 if(this.platform.is('ios')){
