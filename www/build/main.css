@@ -26034,7 +26034,6 @@ page-chat2 .bar.item-input-inset .item-input-wrapper input {
 
 page-chat2 .message-wrapper {
   position: relative;
-  display: flow-root;
   min-height: auto;
 }
 
@@ -26223,6 +26222,7 @@ page-chat2 .parent {
 page-chat2 .child {
   width: 100%;
   position: relative;
+  display: grid;
 }
 
 page-info ion-content {
