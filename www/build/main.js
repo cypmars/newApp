@@ -91,39 +91,39 @@ var map = {
 		7
 	],
 	"../pages/result/result.module": [
-		436,
+		437,
 		0
 	],
 	"../pages/serviceDetails/serviceDetails.module": [
-		437,
+		436,
 		8
 	],
 	"../pages/signup/signup.module": [
-		438,
+		439,
 		6
 	],
 	"../pages/simple-form/simple-form.module": [
-		439,
+		438,
 		2
 	],
 	"../pages/simple-form1/simple-form1.module": [
-		440,
+		444,
 		4
 	],
 	"../pages/simple-form2/simple-form2.module": [
-		441,
+		440,
 		3
 	],
 	"../pages/tabs/tabs.module": [
-		442,
+		441,
 		14
 	],
 	"../pages/tinderQ2/tinderQ2.module": [
-		443,
+		442,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		444,
+		443,
 		11
 	]
 };
@@ -217,15 +217,15 @@ AppModule = __decorate([
                     { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/newsDetails/newsDetails.module#NewsDetailsPageModule', name: 'NewsDetailsPage', segment: 'newsDetails', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/productDetails/productDetails.module#ProductDetailsPageModule', name: 'ProductDetailsPage', segment: 'productDetails', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/serviceDetails/serviceDetails.module#ServiceDetailsPageModule', name: 'ServiceDetailsPage', segment: 'serviceDetails', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/result/result.module#ResultPageModule', name: 'ResultPage', segment: 'result', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form/simple-form.module#SimpleFormPageModule', name: 'SimpleFormPage', segment: 'simple-form', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/simple-form2/simple-form2.module#SimpleFormPageModule', name: 'SimpleForm2Page', segment: 'simple-form2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tinderQ2/tinderQ2.module#TinderQ2PageModule', name: 'TinderQ2Page', segment: 'tinderQ2', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/simple-form1/simple-form1.module#SimpleFormPageModule', name: 'SimpleForm1Page', segment: 'simple-form1', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
