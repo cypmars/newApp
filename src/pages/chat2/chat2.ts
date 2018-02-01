@@ -13,7 +13,7 @@ import 'rxjs/add/operator/map';
  * we recommend not using the Welcome page.
 */
 
-// declare var ApiAIPlugin: any;
+declare var ApiAIPlugin: any;
 
 @IonicPage()
 @Component({
@@ -47,48 +47,8 @@ export class Chat2Page {
       username: this.toUser.username,
       pic: this.toUser.pic,
       text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?",
-      chips: ["Client", "prospect", "collaborateur"]
-    },
-    {
-      toId: this.toUser._id,
-      _id: 2,
-      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-      userId: this.user._id,
-      username: this.user.username,
-      pic: this.user.pic,
-      text: "Salut !",
       chips: []
-    },
-    {
-      toId: this.user._id,
-      _id: 1,
-      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-      userId: this.toUser._id,
-      username: this.toUser.username,
-      pic: this.toUser.pic,
-      text: "Salut",
-      chips: ["Client", "prospect", "collaborateur", "Client", "prospect", "collaborateur"]
-    },
-    {
-      toId: this.toUser._id,
-      _id: 2,
-      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-      userId: this.user._id,
-      username: this.user.username,
-      pic: this.user.pic,
-      text: "Salut !",
-      chips: []
-    },
-    {
-      toId: this.user._id,
-      _id: 1,
-      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-      userId: this.toUser._id,
-      username: this.toUser.username,
-      pic: this.toUser.pic,
-      text: "Salut",
-    },
-    
+    }
   ];
 
   androidOptions: SpeechRecognitionListeningOptionsAndroid;
@@ -105,17 +65,17 @@ export class Chat2Page {
   message1;
   message2;
   constructor(private ref: ChangeDetectorRef, private speech: SpeechRecognition, private tts: TextToSpeech, public navCtrl: NavController, public platform: Platform, http:Http) {
-      // ApiAIPlugin.init(
-      // {
-      //     clientAccessToken: "099b97242c1745bd92c163cd27d2c767", 
-      //     lang: "en" // set lang tag from list of supported languages 
-      // }, 
-      // function(result) { /* success processing */ },
-      // function(error) { /* error processing */ }
-      // );
-      // this.initializeApp();
-      // this.hideTime = true;
-      // this.verbalResponse = true;
+      ApiAIPlugin.init(
+      {
+          clientAccessToken: "099b97242c1745bd92c163cd27d2c767", 
+          lang: "en" // set lang tag from list of supported languages 
+      }, 
+      function(result) { /* success processing */ },
+      function(error) { /* error processing */ }
+      );
+      this.initializeApp();
+      this.hideTime = true;
+      this.verbalResponse = true;
   }
 
 
@@ -231,114 +191,114 @@ export class Chat2Page {
   }
 
   async SendText(query, messages, ms):Promise<any> {
-    // try {
-    //     await ApiAIPlugin.requestText(
-    //       {
-    //         query,
-    //         originalRequest: {
-    //           source: 'WWT chat bot',
-    //           data: 'messages'
-    //         }
-    //       },
-    //        (response) => {
-    //          console.log(JSON.stringify(response))
-    //          let speech = response.result.fulfillment;
-    //          let parts = response.result.fulfillment.messages;
-    //            if(parts){
-    //             let newM = {
-    //               toId: this.user._id,
-    //               _id: this.messages.length,
-    //               date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-    //               userId: this.toUser._id,
-    //               username: this.toUser.username,
-    //               pic: this.toUser.pic,
-    //               text: speech.speech,
-    //               chips: []
-    //             }
-    //             if(this.platform.is('ios')){
-    //               for (let message of parts){
-    //                   switch (message.type){
-    //                     case "simple_response":
-    //                       newM.text=message.textToSpeech;
-    //                       break;
-    //                     case "suggestion_chips":
-    //                       for (let suggestion of message.suggestions)
-    //                         newM.chips.push(suggestion.title)
-    //                       break;
-    //                   }
-    //               }
-    //               this.messages.push(newM);
-    //               this.ref.detectChanges();
-    //             } else {
-    //               for (let message of parts){
-    //                  switch (message.type){
-    //                    case "simple_response":
-    //                      newM.text=message.textToSpeech;
-    //                      break;
-    //                    case "suggestion_chips":
-    //                      for (let suggestion of message.suggestions)
-    //                        newM.chips.push(suggestion.title)
-    //                      break;
-    //                  }
-    //               }
-    //               this.messages.push(newM);
-    //               this.ref.detectChanges();
-    //             }
-    //            } else {
-    //              this.SendNoDefined(query, messages, ms)
-    //            }
-    //         },
-    //         (error) => {
-    //             console.error(error);
-    //         });
-    //   } catch (e) {
-    //     alert(e);
-    //   }
+    try {
+        await ApiAIPlugin.requestText(
+          {
+            query,
+            originalRequest: {
+              source: 'WWT chat bot',
+              data: 'messages'
+            }
+          },
+           (response) => {
+             console.log(JSON.stringify(response))
+             let speech = response.result.fulfillment;
+             let parts = response.result.fulfillment.messages;
+               if(parts){
+                let newM = {
+                  toId: this.user._id,
+                  _id: this.messages.length,
+                  date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                  userId: this.toUser._id,
+                  username: this.toUser.username,
+                  pic: this.toUser.pic,
+                  text: speech.speech,
+                  chips: []
+                }
+                if(this.platform.is('ios')){
+                  for (let message of parts){
+                      switch (message.type){
+                        case "simple_response":
+                          newM.text=message.textToSpeech;
+                          break;
+                        case "suggestion_chips":
+                          for (let suggestion of message.suggestions)
+                            newM.chips.push(suggestion.title)
+                          break;
+                      }
+                  }
+                  this.messages.push(newM);
+                  this.ref.detectChanges();
+                } else {
+                  for (let message of parts){
+                     switch (message.type){
+                       case "simple_response":
+                         newM.text=message.textToSpeech;
+                         break;
+                       case "suggestion_chips":
+                         for (let suggestion of message.suggestions)
+                           newM.chips.push(suggestion.title)
+                         break;
+                     }
+                  }
+                  this.messages.push(newM);
+                  this.ref.detectChanges();
+                }
+               } else {
+                 this.SendNoDefined(query, messages, ms)
+               }
+            },
+            (error) => {
+                console.error(error);
+            });
+      } catch (e) {
+        alert(e);
+      }
     }
 
   async SendTextFromVoice(query):Promise<any> {
-    // try {
-    //     await ApiAIPlugin.requestText(
-    //       {
-    //         query
-    //       },
-    //        (response) => {
-    //          if(response.result.fulfillment.speech){
-    //             let voice = response.result.fulfillment.speech
-    //             console.log('3', voice)
-    //             this.messages.push({
-    //               toId: this.user._id,
-    //               _id: 2,
-    //               date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-    //               userId: this.toUser._id,
-    //               username: this.toUser.username,
-    //               pic: this.toUser.pic,
-    //               text: voice
-    //             });
-    //             this.ref.detectChanges();
-    //             this.SpeakText(voice)
-    //          } else {
-    //            let voice = "Je suis désolé, je n'ai pas compris votre réponse"
-    //             console.log('3', voice)
-    //             this.messages.push({
-    //               toId: this.user._id,
-    //               _id: 2,
-    //               date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-    //               userId: this.toUser._id,
-    //               username: this.toUser.username,
-    //               pic: this.toUser.pic,
-    //               text: voice
-    //             });
-    //             this.ref.detectChanges();
-    //             this.SpeakText(voice)
-    //          }
-    //         },
-    //         (error) => {
-    //             console.error(error);
-    //         });
-    // } catch (e) {
-    //     alert(e);
-    // }
+    try {
+        await ApiAIPlugin.requestText(
+          {
+            query
+          },
+           (response) => {
+             if(response.result.fulfillment.speech){
+                let voice = response.result.fulfillment.speech
+                console.log('3', voice)
+                this.messages.push({
+                  toId: this.user._id,
+                  _id: 2,
+                  date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                  userId: this.toUser._id,
+                  username: this.toUser.username,
+                  pic: this.toUser.pic,
+                  text: voice
+                });
+                this.ref.detectChanges();
+                this.SpeakText(voice)
+             } else {
+               let voice = "Je suis désolé, je n'ai pas compris votre réponse"
+                console.log('3', voice)
+                this.messages.push({
+                  toId: this.user._id,
+                  _id: 2,
+                  date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                  userId: this.toUser._id,
+                  username: this.toUser.username,
+                  pic: this.toUser.pic,
+                  text: voice
+                });
+                this.ref.detectChanges();
+                this.SpeakText(voice)
+             }
+            },
+            (error) => {
+                console.error(error);
+            });
+    } catch (e) {
+        alert(e);
+    }
     }
 
   async getSupportedLanguages():Promise<Array<string>> {

@@ -25,10 +25,10 @@
             </div>
           </div>
         </div>
-        <div style="width:80%; margin-right:10%; margin-left:10%; margin-bottom:10px; margin-top:10px;" text-center>
+        <div style="width:80%; margin-right:10%; margin-left:10%; margin-bottom:10px;" text-center>
           <ion-row class="badges" text-center>
               <div style="white-space: nowrap;" text-center *ngFor="let chip of message.chips" class="area" style="margin-right:5px;">
-                <ion-badge style="background-color: #d42649" (click)="sendMessageByClick($event, chip)">{{chip}}</ion-badge>
+                <ion-badge style="background-color: #d42649; margin-top:10px;" (click)="sendMessageByClick($event, chip)">{{chip}}</ion-badge>
               </div>
           </ion-row>
         </div>
