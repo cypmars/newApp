@@ -164,7 +164,8 @@ page-chat2 {
   
   .message-wrapper {
     position: relative;
-    min-height: 100px;
+    display:flow-root;
+    min-height: auto;
   }
 
   .message-wrapper:last-child {

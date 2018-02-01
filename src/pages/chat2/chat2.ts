@@ -49,7 +49,6 @@ export class Chat2Page {
       text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?",
       chips: []
     }
-    
   ];
 
   androidOptions: SpeechRecognitionListeningOptionsAndroid;

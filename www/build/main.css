@@ -26034,7 +26034,8 @@ page-chat2 .bar.item-input-inset .item-input-wrapper input {
 
 page-chat2 .message-wrapper {
   position: relative;
-  min-height: 100px;
+  display: flow-root;
+  min-height: auto;
 }
 
 page-chat2 .message-wrapper:last-child {
