@@ -1,5 +1,5 @@
-webpackJsonp([1],Array(443).concat([
-/* 443 */
+webpackJsonp([1],Array(442).concat([
+/* 442 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(254);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ2__ = __webpack_require__(746);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tinderQ2__ = __webpack_require__(745);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing__ = __webpack_require__(352);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_swing___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_swing__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic2_auto_complete__ = __webpack_require__(455);
@@ -54,6 +54,7 @@ TinderQ2PageModule = __decorate([
 //# sourceMappingURL=tinderQ2.module.js.map
 
 /***/ }),
+/* 443 */,
 /* 444 */,
 /* 445 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10497,8 +10498,7 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /* 742 */,
 /* 743 */,
 /* 744 */,
-/* 745 */,
-/* 746 */
+/* 745 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11118,7 +11118,7 @@ __decorate([
 ], TinderQ2Page.prototype, "swingStack", void 0);
 TinderQ2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-tinderQ2',template:/*ion-inline-start:"/Users/cyp/Documents/newApp/src/pages/tinderQ2/tinderQ2.html"*/'<ion-header>\n  <ion-navbar color="primary" hideBackButton="true">\n    <ion-buttons start>\n      <button *ngIf="showButton" ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n    </ion-buttons>\n    <ion-title>\n      Recherche\n    </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n  <form>\n    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>\n  </form>\n</ion-header>\n <ion-content>\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n        <div class="splash-info" center>\n            <div class="splash-form">\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(false)" (throwoutright)="voteUp(true)" id="card-stack">\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n                      <ion-card-content>\n                          <ion-item *ngIf="c.question">\n                              <div id="validate-or-not" class="validate-or-not"></div>\n                              <img *ngIf="c.img" [src]="c.img">\n                              <div class="relative-pos" style="background-color: rgba(0,0,0,0.5); width:100%; padding-top: 15px; padding-bottom: 15px;">\n                                <h1 style="font-weight: 900">{{ c.question }}</h1>\n                              </div>\n                          </ion-item>\n                          <ion-item *ngIf="!c.question">\n                            <img class="img-bot" *ngIf="!c.img" src="assets/img/bot3.png">\n                          </ion-item>\n                      </ion-card-content>\n                    </ion-card>\n                  </div>\n              </div>\n        </div>\n</ion-content>\n\n<ion-footer>\n    <ion-grid>\n      <ion-row>\n        <ion-col text-right style="padding-right: 10px;">\n            <button style="background-color:rgba(0,0,0,0.2); border-radius:40px; width:68px;" (click)="voteUp(false)">\n                <ion-icon name="close" color="danger" class="footer-btn" style="width:30px;"></ion-icon>\n            </button>\n        </ion-col>\n        <ion-col text-left style="padding-left: 10px;">\n            <button style="background-color:rgba(0,0,0,0.2); border-radius:40px; width:68px;" (click)="voteUp(true)">\n                <ion-icon name="checkmark" color="secondary" class="footer-btn" style="width:30px;"></ion-icon>\n            </button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n</ion-footer>\n\n'/*ion-inline-end:"/Users/cyp/Documents/newApp/src/pages/tinderQ2/tinderQ2.html"*/
+        selector: 'page-tinderQ2',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ2\tinderQ2.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button *ngIf="showButton" ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button>\n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <form>\n\n    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>\n\n  </form>\n\n</ion-header>\n\n <ion-content>\n\n        <p class="white-text margin-plus" text-center style="font-size:1.2em;">Faites glisser les cartes vers la droite ou la gauche</p>\n\n        <div class="splash-info" center>\n\n            <div class="splash-form">\n\n                <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(false)" (throwoutright)="voteUp(true)" id="card-stack">\n\n\n\n                    <ion-card #mycards1 swing-card *ngFor="let c of cards">\n\n                      <ion-card-content>\n\n                          <ion-item *ngIf="c.question">\n\n                              <div id="validate-or-not" class="validate-or-not"></div>\n\n                              <img *ngIf="c.img" [src]="c.img">\n\n                              <div class="relative-pos" style="background-color: rgba(0,0,0,0.5); width:100%; padding-top: 15px; padding-bottom: 15px;">\n\n                                <h1 style="font-weight: 900">{{ c.question }}</h1>\n\n                              </div>\n\n                          </ion-item>\n\n                          <ion-item *ngIf="!c.question">\n\n                            <img class="img-bot" *ngIf="!c.img" src="assets/img/bot3.png">\n\n                          </ion-item>\n\n                      </ion-card-content>\n\n                    </ion-card>\n\n                  </div>\n\n              </div>\n\n        </div>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col text-right style="padding-right: 10px;">\n\n            <button style="background-color:rgba(0,0,0,0.2); border-radius:40px; width:68px;" (click)="voteUp(false)">\n\n                <ion-icon name="close" color="danger" class="footer-btn" style="width:30px;"></ion-icon>\n\n            </button>\n\n        </ion-col>\n\n        <ion-col text-left style="padding-left: 10px;">\n\n            <button style="background-color:rgba(0,0,0,0.2); border-radius:40px; width:68px;" (click)="voteUp(true)">\n\n                <ion-icon name="checkmark" color="secondary" class="footer-btn" style="width:30px;"></ion-icon>\n\n            </button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n</ion-footer>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\tinderQ2\tinderQ2.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */]])
 ], TinderQ2Page);

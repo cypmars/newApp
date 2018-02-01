@@ -26033,7 +26033,20 @@ page-chat2 .bar.item-input-inset .item-input-wrapper input {
 }
 
 page-chat2 .message-wrapper {
-  position: relative;
+  position: absolute;
+  right: 3px;
+  left: 3px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+}
+
+page-chat2 .parent {
+  width: 100%;
+  height: 22%;
 }
 
 page-chat2 .message-wrapper:last-child {

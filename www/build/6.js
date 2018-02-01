@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 438:
+/***/ 436:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageModule", function() { return SignupPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(742);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(728);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(740);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(727);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_vis__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -379,7 +379,7 @@ var VisEdges = (function (_super) {
     return VisEdges;
 }(Vis.DataSet));
 exports.VisEdges = VisEdges;
-__export(__webpack_require__(727));
+__export(__webpack_require__(728));
 __export(__webpack_require__(725));
 
 
@@ -49716,6 +49716,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(0);
+var index_1 = __webpack_require__(723);
+var index_2 = __webpack_require__(721);
+__export(__webpack_require__(730));
+var VisModule = (function () {
+    function VisModule() {
+    }
+    return VisModule;
+}());
+VisModule = __decorate([
+    core_1.NgModule({
+        declarations: [index_1.VisNetworkDirective, index_2.VisTimelineDirective],
+        exports: [index_1.VisNetworkDirective, index_2.VisTimelineDirective],
+        providers: [index_1.VisNetworkService, index_2.VisTimelineService],
+    })
+], VisModule);
+exports.VisModule = VisModule;
+
+
+/***/ }),
+
+/***/ 728:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
@@ -49832,42 +49868,6 @@ VisNetworkDirective = __decorate([
     __metadata("design:paramtypes", [core_1.ElementRef, vis_network_service_1.VisNetworkService])
 ], VisNetworkDirective);
 exports.VisNetworkDirective = VisNetworkDirective;
-
-
-/***/ }),
-
-/***/ 728:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(723);
-var index_2 = __webpack_require__(721);
-__export(__webpack_require__(730));
-var VisModule = (function () {
-    function VisModule() {
-    }
-    return VisModule;
-}());
-VisModule = __decorate([
-    core_1.NgModule({
-        declarations: [index_1.VisNetworkDirective, index_2.VisTimelineDirective],
-        exports: [index_1.VisNetworkDirective, index_2.VisTimelineDirective],
-        providers: [index_1.VisNetworkService, index_2.VisTimelineService],
-    })
-], VisModule);
-exports.VisModule = VisModule;
 
 
 /***/ }),
@@ -50032,7 +50032,7 @@ __export(__webpack_require__(723));
 
 /***/ }),
 
-/***/ 742:
+/***/ 740:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50192,7 +50192,7 @@ __decorate([
 ], SignupPage.prototype, "fab", void 0);
 SignupPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-signup',template:/*ion-inline-start:"/Users/cyp/Documents/newApp/src/pages/signup/signup.html"*/'<ion-header no-border>\n  <ion-navbar color="primary" hideBackButton="true">\n    <ion-buttons start>\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button> \n    </ion-buttons>  \n    <ion-title>\n      S\'inscrire\n    </ion-title>\n    <ion-buttons end>\n      <button *ngIf="!lastSlide" ion-button icon-right (click)="next()">Next <ion-icon name="arrow-forward"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-slides pager #signupSlider>\n\n    <ion-slide>\n      <p *ngIf="submitAttempt" style="color: #ea6153;">S\'il-vous-plait, remplissez les champs suivants.</p>\n        <form [formGroup]="slideOneForm">\n            <ion-item>\n                <ion-label floating class="white-text">Nom *</ion-label>\n                <ion-input formControlName="firstName" type="text"></ion-input>\n            </ion-item>\n    \n            <ion-item>\n                <ion-label floating class="white-text">Prénom *</ion-label>\n                <ion-input formControlName="lastName" type="text"></ion-input>\n            </ion-item>\n\n            <ion-item>\n                <ion-label floating class="white-text">E-Mail *</ion-label>\n                <ion-input formControlName="email" type="email"></ion-input>\n            </ion-item>\n\n            <ion-item>\n                <ion-label floating class="white-text">Mot de passe *</ion-label>\n                <ion-input formControlName="mdp" type="text"></ion-input>\n            </ion-item>\n        </form>\n        <br>\n    </ion-slide>\n    <ion-slide>\n        <ion-list>\n          <form [formGroup]="slideTwoForm">\n              <ion-list radio-group formControlName="type" [(ngModel)]="type">\n                  <ion-list-header>\n                    Vous êtes ?\n                  </ion-list-header>\n                \n                  <ion-item>\n                    <ion-label>Client</ion-label>\n                    <ion-radio value="client"></ion-radio>\n                  </ion-item>\n                \n                  <ion-item>\n                    <ion-label>Prospect</ion-label>\n                    <ion-radio value="prospect"></ion-radio>\n                  </ion-item>\n                \n                  <ion-item>\n                    <ion-label>Collaborateur</ion-label>\n                    <ion-radio value="collaborateur"></ion-radio>\n                  </ion-item>\n                </ion-list>\n            <br>\n            <ion-item>\n              <ion-label class="white-text">Secteur d\'activité</ion-label>\n              <ion-select formControlName="activity" [(ngModel)]="activity" (ionChange)="onChange($event)">\n                <ion-option *ngFor="let itemCat of itemsCat" [value]="itemCat.id">{{itemCat.name}}</ion-option>\n              </ion-select>\n            </ion-item>\n\n            <ion-item *ngIf="activity>=0">\n                <ion-label class="white-text">Métier</ion-label>\n                <ion-select formControlName="job" [(ngModel)]="job">\n                  <ion-option *ngFor="let jobname of itemsCat[activity].jobsName" [value]="jobname">{{jobname}}</ion-option>\n                </ion-select>\n            </ion-item>\n\n          </form>\n        </ion-list>\n        <button class="buttonSign" ion-button color="primary" (click)="save()">S\'inscrire</button>\n    </ion-slide>\n  </ion-slides>\n </ion-content>\n '/*ion-inline-end:"/Users/cyp/Documents/newApp/src/pages/signup/signup.html"*/
+        selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\signup\signup.html"*/'<ion-header no-border>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button> \n\n    </ion-buttons>  \n\n    <ion-title>\n\n      S\'inscrire\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button *ngIf="!lastSlide" ion-button icon-right (click)="next()">Next <ion-icon name="arrow-forward"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-slides pager #signupSlider>\n\n\n\n    <ion-slide>\n\n      <p *ngIf="submitAttempt" style="color: #ea6153;">S\'il-vous-plait, remplissez les champs suivants.</p>\n\n        <form [formGroup]="slideOneForm">\n\n            <ion-item>\n\n                <ion-label floating class="white-text">Nom *</ion-label>\n\n                <ion-input formControlName="firstName" type="text"></ion-input>\n\n            </ion-item>\n\n    \n\n            <ion-item>\n\n                <ion-label floating class="white-text">Prénom *</ion-label>\n\n                <ion-input formControlName="lastName" type="text"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label floating class="white-text">E-Mail *</ion-label>\n\n                <ion-input formControlName="email" type="email"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label floating class="white-text">Mot de passe *</ion-label>\n\n                <ion-input formControlName="mdp" type="text"></ion-input>\n\n            </ion-item>\n\n        </form>\n\n        <br>\n\n    </ion-slide>\n\n    <ion-slide>\n\n        <ion-list>\n\n          <form [formGroup]="slideTwoForm">\n\n              <ion-list radio-group formControlName="type" [(ngModel)]="type">\n\n                  <ion-list-header>\n\n                    Vous êtes ?\n\n                  </ion-list-header>\n\n                \n\n                  <ion-item>\n\n                    <ion-label>Client</ion-label>\n\n                    <ion-radio value="client"></ion-radio>\n\n                  </ion-item>\n\n                \n\n                  <ion-item>\n\n                    <ion-label>Prospect</ion-label>\n\n                    <ion-radio value="prospect"></ion-radio>\n\n                  </ion-item>\n\n                \n\n                  <ion-item>\n\n                    <ion-label>Collaborateur</ion-label>\n\n                    <ion-radio value="collaborateur"></ion-radio>\n\n                  </ion-item>\n\n                </ion-list>\n\n            <br>\n\n            <ion-item>\n\n              <ion-label class="white-text">Secteur d\'activité</ion-label>\n\n              <ion-select formControlName="activity" [(ngModel)]="activity" (ionChange)="onChange($event)">\n\n                <ion-option *ngFor="let itemCat of itemsCat" [value]="itemCat.id">{{itemCat.name}}</ion-option>\n\n              </ion-select>\n\n            </ion-item>\n\n\n\n            <ion-item *ngIf="activity>=0">\n\n                <ion-label class="white-text">Métier</ion-label>\n\n                <ion-select formControlName="job" [(ngModel)]="job">\n\n                  <ion-option *ngFor="let jobname of itemsCat[activity].jobsName" [value]="jobname">{{jobname}}</ion-option>\n\n                </ion-select>\n\n            </ion-item>\n\n\n\n          </form>\n\n        </ion-list>\n\n        <button class="buttonSign" ion-button color="primary" (click)="save()">S\'inscrire</button>\n\n    </ion-slide>\n\n  </ion-slides>\n\n </ion-content>\n\n '/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\signup\signup.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */],

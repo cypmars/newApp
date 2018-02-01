@@ -1,5 +1,5 @@
-webpackJsonp([0],Array(436).concat([
-/* 436 */
+webpackJsonp([0],Array(444).concat([
+/* 444 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,10 +8,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(254);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__result__ = __webpack_require__(740);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__result__ = __webpack_require__(747);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic2_auto_complete__ = __webpack_require__(455);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_CompleteTestService__ = __webpack_require__(453);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_vis__ = __webpack_require__(728);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_vis__ = __webpack_require__(727);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_vis__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -54,14 +54,6 @@ ResultPageModule = __decorate([
 //# sourceMappingURL=result.module.js.map
 
 /***/ }),
-/* 437 */,
-/* 438 */,
-/* 439 */,
-/* 440 */,
-/* 441 */,
-/* 442 */,
-/* 443 */,
-/* 444 */,
 /* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10802,7 +10794,7 @@ var VisEdges = (function (_super) {
     return VisEdges;
 }(Vis.DataSet));
 exports.VisEdges = VisEdges;
-__export(__webpack_require__(727));
+__export(__webpack_require__(728));
 __export(__webpack_require__(725));
 
 
@@ -60135,6 +60127,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(0);
+var index_1 = __webpack_require__(723);
+var index_2 = __webpack_require__(721);
+__export(__webpack_require__(730));
+var VisModule = (function () {
+    function VisModule() {
+    }
+    return VisModule;
+}());
+VisModule = __decorate([
+    core_1.NgModule({
+        declarations: [index_1.VisNetworkDirective, index_2.VisTimelineDirective],
+        exports: [index_1.VisNetworkDirective, index_2.VisTimelineDirective],
+        providers: [index_1.VisNetworkService, index_2.VisTimelineService],
+    })
+], VisModule);
+exports.VisModule = VisModule;
+
+
+/***/ }),
+/* 728 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
@@ -60251,41 +60278,6 @@ VisNetworkDirective = __decorate([
     __metadata("design:paramtypes", [core_1.ElementRef, vis_network_service_1.VisNetworkService])
 ], VisNetworkDirective);
 exports.VisNetworkDirective = VisNetworkDirective;
-
-
-/***/ }),
-/* 728 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(0);
-var index_1 = __webpack_require__(723);
-var index_2 = __webpack_require__(721);
-__export(__webpack_require__(730));
-var VisModule = (function () {
-    function VisModule() {
-    }
-    return VisModule;
-}());
-VisModule = __decorate([
-    core_1.NgModule({
-        declarations: [index_1.VisNetworkDirective, index_2.VisTimelineDirective],
-        exports: [index_1.VisNetworkDirective, index_2.VisTimelineDirective],
-        providers: [index_1.VisNetworkService, index_2.VisTimelineService],
-    })
-], VisModule);
-exports.VisModule = VisModule;
 
 
 /***/ }),
@@ -60456,7 +60448,14 @@ __export(__webpack_require__(723));
 /* 737 */,
 /* 738 */,
 /* 739 */,
-/* 740 */
+/* 740 */,
+/* 741 */,
+/* 742 */,
+/* 743 */,
+/* 744 */,
+/* 745 */,
+/* 746 */,
+/* 747 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60702,7 +60701,7 @@ var ResultPage = (function () {
 }());
 ResultPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-result',template:/*ion-inline-start:"/Users/cyp/Documents/newApp/src/pages/result/result.html"*/'\n    <ion-header no-border>\n    <ion-navbar color="primary" hideBackButton="true">\n        <ion-buttons start>\n            <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n        </ion-buttons>\n        <ion-title>\n        Recherche\n        </ion-title>\n        <ion-buttons end>\n            <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n        </ion-buttons>\n    </ion-navbar>\n    <form>\n    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>\n    </form>\n    </ion-header>\n    <ion-content *ngIf="services != null">\n        <div class="splash-relative">\n            <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n            <div class="splash-info" center>\n                <div class="splash-form">\n                    <div class="chart-container">\n                        <p text-center style="background-color: rgba(255, 255, 255, 0.7); border-radius:15px;margin: 10px 20% 0 20%; padding:5px 5px 5px 5px; position:fixed; top: 20%; left:0; width:60%; z-index:1000;"><small><span style="color:#0eae15">Propreté et Services</span> - <span style="color:#d01717">Sécurité</span> - <span style="color:#386ecd">Services aéroportuaires</span> - <span style="color:#cbc40e">Accueil</span> - <span style="color:#cc7136">Logistique</span> - <span style="color:#962ac8">Technologies</span> - <span style="color:#d42649">AXXIS: Intérim, Recrutement et Formation</span></small></p>\n                        <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </ion-content>\n    <ion-footer class="footer" hidden>\n        <ion-grid>\n          <ion-row>\n            <ion-col text-center col-9 *ngIf="myServiceId != null" class="valignCenter">\n                <h4 style="color:#0eae15; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].content.title}}</h4>\n                <h4 style="color:#d01717; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].content.title}}</h4>\n                <h4 style="color:#386ecd; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].content.title}}</h4>\n                <h4 style="color:#cbc40e; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].content.title}}</h4>\n                <h4 style="color:#cc7136; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].content.title}}</h4>\n                <h4 style="color:#962ac8; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].content.title}}</h4>\n                <h4 style="color:#d42649; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].content.title}}</h4>\n            </ion-col>\n            <ion-col text-center col-3 class="valignCenter">\n                <button style="background-color:rgba(0,0,0,0.2); border-radius:40px; width:40px; height:40px;" (click)="more()">\n                    <ion-icon name="information" style="color: rgba(0,0,0,0.3)" class="footer-btn"></ion-icon>\n                </button>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n    </ion-footer>\n\n'/*ion-inline-end:"/Users/cyp/Documents/newApp/src/pages/result/result.html"*/
+        selector: 'page-result',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/'\n\n    <ion-header no-border>\n\n    <ion-navbar color="primary" hideBackButton="true">\n\n        <ion-buttons start>\n\n            <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n        </ion-buttons>\n\n        <ion-title>\n\n        Recherche\n\n        </ion-title>\n\n        <ion-buttons end>\n\n            <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    <form>\n\n    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>\n\n    </form>\n\n    </ion-header>\n\n    <ion-content *ngIf="services != null">\n\n        <div class="splash-relative">\n\n            <p class="white-text margin-plus" text-center style="font-size: 1.2em;">Nous avons déterminé votre besoin !</p>\n\n            <div class="splash-info" center>\n\n                <div class="splash-form">\n\n                    <div class="chart-container">\n\n                        <p text-center style="background-color: rgba(255, 255, 255, 0.7); border-radius:15px;margin: 10px 20% 0 20%; padding:5px 5px 5px 5px; position:fixed; top: 20%; left:0; width:60%; z-index:1000;"><small><span style="color:#0eae15">Propreté et Services</span> - <span style="color:#d01717">Sécurité</span> - <span style="color:#386ecd">Services aéroportuaires</span> - <span style="color:#cbc40e">Accueil</span> - <span style="color:#cc7136">Logistique</span> - <span style="color:#962ac8">Technologies</span> - <span style="color:#d42649">AXXIS: Intérim, Recrutement et Formation</span></small></p>\n\n                        <div class="network-canvas" [visNetwork]="visNetwork" [visNetworkData]="visNetworkData" [visNetworkOptions]="visNetworkOptions" (initialized)="networkInitialized()"></div>\n\n                    </div>\n\n                </div>\n\n            </div>\n\n        </div>\n\n    </ion-content>\n\n    <ion-footer class="footer" hidden>\n\n        <ion-grid>\n\n          <ion-row>\n\n            <ion-col text-center col-9 *ngIf="myServiceId != null" class="valignCenter">\n\n                <h4 style="color:#0eae15; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 0">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#d01717; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 1">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#386ecd; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 2">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#cbc40e; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 3">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#cc7136; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 4">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#962ac8; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 5">{{services[myServiceId].content.title}}</h4>\n\n                <h4 style="color:#d42649; width: 100%;" no-margin *ngIf="services[myServiceId].marqueId == 6">{{services[myServiceId].content.title}}</h4>\n\n            </ion-col>\n\n            <ion-col text-center col-3 class="valignCenter">\n\n                <button style="background-color:rgba(0,0,0,0.2); border-radius:40px; width:40px; height:40px;" (click)="more()">\n\n                    <ion-icon name="information" style="color: rgba(0,0,0,0.3)" class="footer-btn"></ion-icon>\n\n                </button>\n\n            </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n    </ion-footer>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\result\result.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_6_ng2_vis_components_network__["VisNetworkService"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */]])
 ], ResultPage);

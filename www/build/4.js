@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic2_auto_complete__ = __webpack_require__(455);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_CompleteTestService__ = __webpack_require__(453);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simple_form__ = __webpack_require__(743);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simple_form1__ = __webpack_require__(743);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -29,22 +29,22 @@ var SimpleFormPageModule = (function () {
 SimpleFormPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__simple_form__["a" /* SimpleFormPage */],
+            __WEBPACK_IMPORTED_MODULE_4__simple_form1__["a" /* SimpleForm1Page */],
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_2_ionic2_auto_complete__["a" /* AutoCompleteModule */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__simple_form__["a" /* SimpleFormPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__simple_form1__["a" /* SimpleForm1Page */]),
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_3__providers_CompleteTestService__["a" /* CompleteTestService */]
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_4__simple_form__["a" /* SimpleFormPage */]
+            __WEBPACK_IMPORTED_MODULE_4__simple_form1__["a" /* SimpleForm1Page */]
         ]
     })
 ], SimpleFormPageModule);
 
-//# sourceMappingURL=simple-form.module.js.map
+//# sourceMappingURL=simple-form1.module.js.map
 
 /***/ }),
 /* 440 */,
@@ -10496,7 +10496,7 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SimpleFormPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SimpleForm1Page; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__ = __webpack_require__(453);
@@ -10520,16 +10520,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
  * If you'd like to immediately put the user onto a login/signup page,
  * we recommend not using the Welcome page.
 */
-var SimpleFormPage = (function () {
-    function SimpleFormPage(navCtrl, toastCtrl, completeTestService, http) {
+var SimpleForm1Page = (function () {
+    function SimpleForm1Page(navCtrl, navParams, toastCtrl, completeTestService, http) {
         this.navCtrl = navCtrl;
         this.toastCtrl = toastCtrl;
         this.completeTestService = completeTestService;
@@ -10547,57 +10545,89 @@ var SimpleFormPage = (function () {
         this.itemsCat = [
             {
                 id: 0,
-                name: "Client",
+                name: "Agriculture & agroalimentaire",
                 iconName: "leaf"
             },
             {
                 id: 1,
-                name: "Prospect",
+                name: "Industrie",
                 iconName: "lock"
             },
             {
                 id: 2,
-                name: "Collaborateur",
+                name: "Energie",
                 iconName: "plane"
+            },
+            {
+                id: 3,
+                name: "Commerce & Tourisme",
+                iconName: "people"
+            },
+            {
+                id: 4,
+                name: "Transport & Logistique",
+                iconName: "train"
+            },
+            {
+                id: 5,
+                name: "Télécoms & Informatique",
+                iconName: "nuclear"
+            },
+            {
+                id: 6,
+                name: "Santé et Service",
+                iconName: "school"
+            },
+            {
+                id: 7,
+                name: "Economie",
+                iconName: "code-working"
             }
         ];
-        this.myIcon = "Choisissez une catégorie de service";
+        this.myIcon = "Quel est le secteur d'activité de votre Entreprise ?";
+        this.param1 = navParams.get('param1');
     }
-    SimpleFormPage.prototype.getVal = function (event) {
+    SimpleForm1Page.prototype.prev = function () {
+        this.navCtrl.pop();
+    };
+    SimpleForm1Page.prototype.login = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["m" /* WelcomePage */]);
+    };
+    SimpleForm1Page.prototype.getVal = function (event) {
         console.log(event.id);
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["f" /* ServiceDetailsPage */], {
             param1: event.id,
         });
         this.placeholder = "";
     };
-    SimpleFormPage.prototype.login = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["m" /* WelcomePage */]);
-    };
-    SimpleFormPage.prototype.ngAfterViewInit = function () {
+    SimpleForm1Page.prototype.ngAfterViewInit = function () {
         this.fab.setActiveLists(true);
     };
-    SimpleFormPage.prototype.chooseService = function (event, data, fab) {
+    SimpleForm1Page.prototype.chooseService = function (event, data, fab) {
         this.myIcon = this.itemsCat[data].name;
-        this.search.param1 = this.itemsCat[data].iconName;
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["g" /* SimpleForm1Page */], {
-            param1: this.myIcon,
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages__["h" /* SimpleForm2Page */], {
+            param1: this.param1,
+            param2: data,
+            param3: this.myIcon
         });
     };
-    return SimpleFormPage;
+    return SimpleForm1Page;
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('fab'),
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* FabContainer */])
-], SimpleFormPage.prototype, "fab", void 0);
-SimpleFormPage = __decorate([
+], SimpleForm1Page.prototype, "fab", void 0);
+SimpleForm1Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-simple-form',template:/*ion-inline-start:"/Users/cyp/Documents/newApp/src/pages/simple-form/simple-form.html"*/'<ion-header>\n  <ion-navbar color="primary" hideBackButton="true">\n    <ion-buttons start>\n\n    </ion-buttons>\n    <ion-title>\n      Recherche\n    </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n  <form>\n    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>\n  </form>\n</ion-header>\n<ion-content>\n    <p class="white-text margin-plus" style="font-size: 1.2em;" text-center>Qui êtes-vous ?</p>\n    <div class="splash-info" center>\n        <div class="splash-form">\n          <div class="myFab">\n            <!--<ion-fab class="myFab" center top margin-top #fab>\n              <button id="show-services" ion-fab color="danger"><ion-icon [name]="myIcon"></ion-icon></button>\n              <ion-fab-list side="top">\n                <button (click)="chooseService($event, 0, fab)" ion-fab color="white"><ion-icon class="larger" name="leaf"></ion-icon></button>\n              </ion-fab-list>\n              <ion-fab-list side="top-left">\n                <button (click)="chooseService($event, 1, fab)" ion-fab color="white"><ion-icon class="larger" name="lock"></ion-icon></button>\n              </ion-fab-list>\n              <ion-fab-list side="left">\n                <button (click)="chooseService($event, 2, fab)" ion-fab color="white"><ion-icon class="larger" name="plane"></ion-icon></button>\n              </ion-fab-list>\n              <ion-fab-list side="bottom-left">\n                <button (click)="chooseService($event, 3, fab)" ion-fab color="white"><ion-icon class="larger" name="people"></ion-icon></button>\n              </ion-fab-list>\n              <ion-fab-list side="bottom">\n                <button (click)="chooseService($event, 4, fab)" ion-fab color="white"><ion-icon class="larger" name="train"></ion-icon></button>\n              </ion-fab-list>\n              <ion-fab-list side="bottom-right">\n                <button (click)="chooseService($event, 5, fab)" ion-fab color="white"><ion-icon class="larger" name="nuclear"></ion-icon></button>\n              </ion-fab-list>\n              <ion-fab-list side="right">\n                <button (click)="chooseService($event, 6, fab)" ion-fab color="white"><ion-icon class="larger" name="school"></ion-icon></button>\n              </ion-fab-list>\n              <ion-fab-list side="top-right">\n                <button (click)="chooseService($event, 7, fab)" ion-fab color="white"><ion-icon class="larger" name="code-working"></ion-icon></button>\n              </ion-fab-list>\n            </ion-fab>-->\n            <ion-fab class="myFab" center middle #fab >\n                <button id="show-services" ion-fab color="danger">{{myIcon}}</button>\n                <ion-fab-list side="top">\n                  <button (click)="chooseService($event, 0, fab)" ion-fab color="white">Client</button>\n                </ion-fab-list>\n                <ion-fab-list side="left">\n                  <button (click)="chooseService($event, 1, fab)" ion-fab color="white">Prospect</button>\n                </ion-fab-list>\n                <ion-fab-list side="right">\n                  <button (click)="chooseService($event, 2, fab)" ion-fab color="white">Collaborateur</button>\n                </ion-fab-list>\n              </ion-fab>\n          </div>\n        </div>\n        </div>\n</ion-content>\n\n'/*ion-inline-end:"/Users/cyp/Documents/newApp/src/pages/simple-form/simple-form.html"*/
+        selector: 'page-simple-form1',template:/*ion-inline-start:"C:\Users\Cyprien\Desktop\newApp2\src\pages\simple-form1\simple-form1.html"*/'<ion-header>\n\n  <ion-navbar color="primary" hideBackButton="true">\n\n    <ion-buttons start>\n\n      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon></button> \n\n    </ion-buttons>\n\n    <ion-title>\n\n      Recherche\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <form>\n\n    <ion-auto-complete [dataProvider]="completeTestService" (itemSelected)="getVal($event)" [(ngModel)]="placeholder" name="placeholder"></ion-auto-complete>\n\n  </form>\n\n</ion-header>\n\n<ion-content>\n\n    <p class="white-text margin-plus" style="font-size: 1.2em;" text-center>Quel est le secteur d\'activité de votre Entreprise ?</p>\n\n    <div class="splash-info" center>\n\n        <div class="splash-form">\n\n          <div class="myFab">\n\n            <!--<ion-fab class="myFab" center top margin-top #fab>\n\n              <button id="show-services" ion-fab color="danger"><ion-icon [name]="myIcon"></ion-icon></button>\n\n              <ion-fab-list side="top">\n\n                <button (click)="chooseService($event, 0, fab)" ion-fab color="white"><ion-icon class="larger" name="leaf"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="top-left">\n\n                <button (click)="chooseService($event, 1, fab)" ion-fab color="white"><ion-icon class="larger" name="lock"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="left">\n\n                <button (click)="chooseService($event, 2, fab)" ion-fab color="white"><ion-icon class="larger" name="plane"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="bottom-left">\n\n                <button (click)="chooseService($event, 3, fab)" ion-fab color="white"><ion-icon class="larger" name="people"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="bottom">\n\n                <button (click)="chooseService($event, 4, fab)" ion-fab color="white"><ion-icon class="larger" name="train"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="bottom-right">\n\n                <button (click)="chooseService($event, 5, fab)" ion-fab color="white"><ion-icon class="larger" name="nuclear"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="right">\n\n                <button (click)="chooseService($event, 6, fab)" ion-fab color="white"><ion-icon class="larger" name="school"></ion-icon></button>\n\n              </ion-fab-list>\n\n              <ion-fab-list side="top-right">\n\n                <button (click)="chooseService($event, 7, fab)" ion-fab color="white"><ion-icon class="larger" name="code-working"></ion-icon></button>\n\n              </ion-fab-list>\n\n            </ion-fab>-->\n\n            <ion-fab class="myFab" center middle #fab >\n\n                <button id="show-services" ion-fab color="danger">{{myIcon}}</button>\n\n                <ion-fab-list side="top">\n\n                  <button (click)="chooseService($event, 0, fab)" ion-fab color="white">Agriculture &amp; Agro-alimentaire</button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="top-left">\n\n                  <button (click)="chooseService($event, 1, fab)" ion-fab color="white">Industrie</button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="left">\n\n                  <button (click)="chooseService($event, 2, fab)" ion-fab color="white">Energie</button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="bottom-left">\n\n                  <button (click)="chooseService($event, 3, fab)" ion-fab color="white">Commerce &amp; Tourisme</button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="bottom">\n\n                  <button (click)="chooseService($event, 4, fab)" ion-fab color="white">Transport &amp; Logistique</button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="bottom-right">\n\n                  <button (click)="chooseService($event, 5, fab)" ion-fab color="white">Télécoms &amp; Informatique</button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="right">\n\n                  <button (click)="chooseService($event, 6, fab)" ion-fab color="white">Santé &amp; services</button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="top-right">\n\n                  <button (click)="chooseService($event, 7, fab)" ion-fab color="white">Economie</button>\n\n                </ion-fab-list>\n\n              </ion-fab>\n\n          </div>\n\n        </div>\n\n        </div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Cyprien\Desktop\newApp2\src\pages\simple-form1\simple-form1.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
-], SimpleFormPage);
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_CompleteTestService__["a" /* CompleteTestService */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
+], SimpleForm1Page);
 
-//# sourceMappingURL=simple-form.js.map
+//# sourceMappingURL=simple-form1.js.map
 
 /***/ })
 ]));
