@@ -254,26 +254,6 @@ var Chat2Page = (function () {
                 username: this.toUser.username,
                 pic: this.toUser.pic,
                 text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?",
-                chips: ["allo", "hello", "terre", "world", "magic", "Agriculture & Agro-alimentaire"]
-            },
-            {
-                toId: this.user._id,
-                _id: 1,
-                date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                userId: this.toUser._id,
-                username: this.toUser.username,
-                pic: this.toUser.pic,
-                text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?",
-                chips: []
-            },
-            {
-                toId: this.user._id,
-                _id: 1,
-                date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                userId: this.toUser._id,
-                username: this.toUser.username,
-                pic: this.toUser.pic,
-                text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?",
                 chips: []
             }
         ];
