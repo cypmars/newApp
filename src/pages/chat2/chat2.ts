@@ -47,6 +47,26 @@ export class Chat2Page {
       username: this.toUser.username,
       pic: this.toUser.pic,
       text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?",
+      chips: ["allo", "hello", "terre", "world", "magic", "Agriculture & Agro-alimentaire"]
+    },
+    {
+      toId: this.user._id,
+      _id: 1,
+      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+      userId: this.toUser._id,
+      username: this.toUser.username,
+      pic: this.toUser.pic,
+      text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?",
+      chips: []
+    },
+    {
+      toId: this.user._id,
+      _id: 1,
+      date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+      userId: this.toUser._id,
+      username: this.toUser.username,
+      pic: this.toUser.pic,
+      text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?",
       chips: []
     }
     
@@ -206,45 +226,35 @@ export class Chat2Page {
              let speech = response.result.fulfillment;
              let parts = response.result.fulfillment.messages;
                if(parts){
-                 if(this.platform.is('ios')){
-                  let newM = {
-                     toId: this.user._id,
-                     _id: this.messages.length,
-                     date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                     userId: this.toUser._id,
-                     username: this.toUser.username,
-                     pic: this.toUser.pic,
-                     text: '',
-                     chips: []
-                  }
+                let newM = {
+                  toId: this.user._id,
+                  _id: this.messages.length,
+                  date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
+                  userId: this.toUser._id,
+                  username: this.toUser.username,
+                  pic: this.toUser.pic,
+                  text: '',
+                  chips: []
+                }
+                if(this.platform.is('ios')){
                   for (let message of parts){
-                     switch (message.type){
-                       case "simple_response":
-                         newM.text=message.TextToSpeech;
-                         break;
-                       case "suggestion_chips":
-                         for (let suggestion of message.suggestions)
-                           newM.chips.push(suggestion.title)
-                         break;
-                     }
+                      switch (message.type){
+                        case "simple_response":
+                          newM.text=message.textToSpeech;
+                          break;
+                        case "suggestion_chips":
+                          for (let suggestion of message.suggestions)
+                            newM.chips.push(suggestion.title)
+                          break;
+                      }
                   }
                   this.messages.push(newM);
                   this.ref.detectChanges();
                 } else {
-                  let newM = {
-                     toId: this.user._id,
-                     _id: this.messages.length,
-                     date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-                     userId: this.toUser._id,
-                     username: this.toUser.username,
-                     pic: this.toUser.pic,
-                     text: '',
-                     chips: []
-                  }
                   for (let message of parts){
                      switch (message.type){
                        case "simple_response":
-                         newM.text=message.TextToSpeech;
+                         newM.text=message.textToSpeech;
                          break;
                        case "suggestion_chips":
                          for (let suggestion of message.suggestions)
@@ -390,18 +400,7 @@ export class Chat2Page {
   }
 
 
-  async sendMessageByClick(message):Promise<any> {
-    
-        this.messages.push({
-          toId: this.toUser._id,
-          _id: this.messages.length,
-          date: new Date().toLocaleTimeString().replace(/:\d+ /, ' '),
-          userId: this.user._id,
-          username: this.user.username,
-          pic: this.user.pic,
-          text: message,
-          chips: []
-        });
+  async sendMessageByClick(event, message):Promise<any> {
     
         var messages0 = [
           "Bon je dois t'avouer quelque chose ...",
@@ -423,6 +422,8 @@ export class Chat2Page {
         this.message2=messages2[Math.floor(Math.random() * messages2.length)];
     
         let messages= [this.message2, this.message1, this.message0];
+        console.log(event);
+        
         this.SendText(message, messages, 2000);
       }
 

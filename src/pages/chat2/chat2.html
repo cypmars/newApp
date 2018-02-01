@@ -25,13 +25,13 @@
             </div>
           </div>
         </div>
-        <ion-scroll zoom="false" *ngIf="message.chips" style="top: 70px; left: 40px" scrollX="true" class="scroll">
-          <ion-row text-center>
-              <div style="white-space: nowrap;" *ngFor="let chip of message.chips" class="area" style="margin-right:5px;">
-                <ion-badge style="background-color: #d42649" (click)="sendMessageByClick(chip)">{{chip}}</ion-badge>
+        <div style="width:70%; margin-right:15%; margin-left:15%; margin-bottom:10px;" text-center>
+          <ion-row class="badges" text-center>
+              <div style="white-space: nowrap;" text-center *ngFor="let chip of message.chips" class="area" style="margin-right:5px;">
+                <ion-badge style="background-color: #d42649" (click)="sendMessageByClick($event, chip)">{{chip}}</ion-badge>
               </div>
           </ion-row>
-        </ion-scroll>
+        </div>
       </div>
       <div *ngIf="user._id === message.userId">
         <div class="message-wrapper">

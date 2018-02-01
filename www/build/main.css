@@ -26033,20 +26033,8 @@ page-chat2 .bar.item-input-inset .item-input-wrapper input {
 }
 
 page-chat2 .message-wrapper {
-  position: absolute;
-  right: 3px;
-  left: 3px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: stretch;
-}
-
-page-chat2 .parent {
-  width: 100%;
-  height: 22%;
+  position: relative;
+  min-height: 100px;
 }
 
 page-chat2 .message-wrapper:last-child {
@@ -26178,7 +26166,6 @@ page-chat2 .scroll {
 page-chat2 ion-badge {
   word-break: break-word;
   overflow: hidden;
-  width: 100px;
   padding: 6px 6px;
 }
 
@@ -26216,6 +26203,25 @@ page-chat2 .row {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+}
+
+page-chat2 .badges.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+page-chat2 .parent {
+  width: 100%;
+}
+
+page-chat2 .child {
+  width: 100%;
+  position: relative;
 }
 
 page-info ion-content {

@@ -163,17 +163,10 @@ page-chat2 {
   }
   
   .message-wrapper {
-    position: absolute;
-    right: 3px;
-    left: 3px;
-    height: fit-content;
-    width: stretch;
+    position: relative;
+    min-height: 100px;
   }
-  .parent{
-    width:100%;
-    height:22%;
-  }
-  
+
   .message-wrapper:last-child {
     margin-bottom: 10px;
   }
@@ -309,7 +302,8 @@ page-chat2 {
   ion-badge{
     word-break: break-word;
     overflow:hidden;
-    width: 100px;
+
+
     padding: 6px 6px;
   }
 
@@ -341,5 +335,19 @@ page-chat2 {
     display: flex;
     flex-wrap:nowrap;
     
+  }
+
+  .badges.row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .parent{
+    width:100%;
+  }
+
+  .child{
+    width: 100%;
+    position: relative
   }
 }
