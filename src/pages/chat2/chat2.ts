@@ -6,12 +6,6 @@ import { SpeechRecognition, SpeechRecognitionListeningOptionsAndroid, SpeechReco
 
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-/**
- * The Welcome Page is a splash page that quickly describes the app,
- * and then directs the user to create an account or log in.
- * If you'd like to immediately put the user onto a login/signup page,
- * we recommend not using the Welcome page.
-*/
 
 declare var ApiAIPlugin: any;
 
@@ -65,8 +59,26 @@ export class Chat2Page {
   message0;
   message1;
   message2;
+
+  marques;
+  products;
+  services;
   constructor(private ref: ChangeDetectorRef, private speech: SpeechRecognition, private tts: TextToSpeech, public navCtrl: NavController, public platform: Platform, http:Http) {
-      ApiAIPlugin.init(
+    let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
+    brandData.subscribe(data => {
+      this.marques = data;
+    });
+
+    let productData = http.get('assets/data/products.json').map(res => res.json().products);
+    productData.subscribe(data => {
+      this.products = data;
+    });
+    
+    let servData = http.get('assets/data/services.json').map(res => res.json().services);
+    servData.subscribe(data => {
+      this.services = data;
+    });  
+    ApiAIPlugin.init(
       {
           clientAccessToken: "099b97242c1745bd92c163cd27d2c767", 
           lang: "en" // set lang tag from list of supported languages 
@@ -204,8 +216,18 @@ export class Chat2Page {
            (response) => {
              console.log(JSON.stringify(response))
              let speech = response.result.fulfillment;
+             let contexts = response.result.contexts;
              let parts = response.result.fulfillment.messages;
                if(parts){
+                 for (let context of contexts){
+                   if (context.name == "aider-followup"){
+                     this.clickResponses =[];
+                   }
+                   if (context.name=="aider-yes-type-agro-custom-followup")
+                   {
+                      computeResults(context.parameters.type, "Agroalimentaire", context.parameters.agroJobs);
+                   }
+                 }
                 let newM = {
                   toId: this.user._id,
                   _id: this.messages.length,
