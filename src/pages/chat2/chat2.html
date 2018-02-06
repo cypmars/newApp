@@ -33,6 +33,21 @@
               </div>
           </ion-row>
         </div>
+        <div style="width:80%; margin-right:10%; margin-left:10%; margin-bottom:10px;" text-center>
+          <ion-list *ngIf="myArray && services != null">
+            <ion-card *ngFor="for let element of myArray">
+                <img [src]="{{services[element].imgService}}"/>
+                <ion-card-content>
+                  <ion-card-title>
+                    {{services[element].title}}
+                    </ion-card-title>
+                  <p>
+                    {{services[element].content.subtitle}}
+                  </p>
+                </ion-card-content>
+              </ion-card>
+          </ion-list>
+        </div>
       </div>
       <div *ngIf="user._id === message.userId" class="child">
         <div class="message-wrapper">

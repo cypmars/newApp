@@ -7,7 +7,7 @@ export class ComputeResultsService{
 
     myQuestions;
     myResults;
-    myArray;
+    private myArray;
     questions = 
     [
         {
@@ -89,6 +89,10 @@ export class ComputeResultsService{
         this.myArray = new Array();
     }
 
+    getMyArray(){
+        return this.myArray;
+    }
+    
     computeResults(type:string, sector:string, job:string) {
         switch(sector){
             case "Agro-alimentaire":

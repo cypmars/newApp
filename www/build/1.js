@@ -10577,6 +10577,9 @@ var ComputeResultsService = (function () {
         this.myQuestions = new Array();
         this.myArray = new Array();
     }
+    ComputeResultsService.prototype.getMyArray = function () {
+        return this.myArray;
+    };
     ComputeResultsService.prototype.computeResults = function (type, sector, job) {
         switch (sector) {
             case "Agro-alimentaire":
@@ -11090,6 +11093,7 @@ var TinderQ2Page = (function () {
         console.log("param4: " + this.param4);
         console.log("param5: " + this.param5);
         this.myArray = new Array();
+        this.compute = new __WEBPACK_IMPORTED_MODULE_3__providers_ComputeResultsService__["a" /* ComputeResultsService */]();
     }
     TinderQ2Page.prototype.getNextNode = function (like) {
         if (like) {
@@ -11130,15 +11134,6 @@ var TinderQ2Page = (function () {
     };
     // Connected through HTML
     TinderQ2Page.prototype.voteUp = function (like) {
-        // if (this.currentNode.length == this.currentQId + 3)
-        // {
-        //   var lastCard = document.getElementsByClassName('card')[0];
-        //   lastCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
-        // }
-        // if (this.currentNode.length == this.currentQId + 2){
-        //   var lastCard = document.getElementsByClassName('card')[0];
-        //   lastCard.setAttribute("style", "display:none");
-        // }
         this.getNextNode(like);
         this.cards.pop();
         if (this.currentNode[this.currentQId] != null) {
@@ -11191,8 +11186,7 @@ var TinderQ2Page = (function () {
     TinderQ2Page.prototype.ngAfterViewInit = function () {
         console.log("INIT");
         this.myArray = new Array();
-        var compute = new __WEBPACK_IMPORTED_MODULE_3__providers_ComputeResultsService__["a" /* ComputeResultsService */]();
-        this.myArray = compute.computeQuestionsAndResults(this.param1, this.param2, this.param4);
+        this.myArray = this.compute.computeQuestionsAndResults(this.param1, this.param2, this.param4);
         this.currentNode = this.myArray[0];
         this.currentQId = 0;
         // Either subscribe in controller or set in HTML
@@ -11208,11 +11202,14 @@ var TinderQ2Page = (function () {
     TinderQ2Page.prototype.ionViewDidLeave = function () {
         console.log(this.navCtrl.getActive());
         if (!(this.navCtrl.getActive().component.name == "WelcomePage") && !(this.navCtrl.getActive().component.name == "TinderQ2Page") && !(this.navCtrl.getActive().component.name == "ServiceDetailsPage")) {
+            this.myArray = this.compute.getMyArray();
             this.currentNode = this.myArray[0];
             this.currentQId = 0;
             this.swingStack.throwin.subscribe(function (event) {
             });
             this.cards = [{}];
+            console.log(this.myArray[0]);
+            console.log(this.currentNode[this.currentQId]);
             this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
         }
         console.log("Did Leave ???");

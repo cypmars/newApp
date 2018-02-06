@@ -66,6 +66,8 @@ export class Chat2Page {
   services;
 
   myArray;
+  compute: ComputeResultsService;
+
   constructor(private ref: ChangeDetectorRef, private speech: SpeechRecognition, private tts: TextToSpeech, public navCtrl: NavController, public platform: Platform, http:Http) {
     let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
     brandData.subscribe(data => {
@@ -92,6 +94,9 @@ export class Chat2Page {
       this.initializeApp();
       this.hideTime = true;
       this.verbalResponse = true;
+
+      this.myArray = new Array();
+      this.compute = new ComputeResultsService();
   }
 
 
@@ -228,9 +233,8 @@ export class Chat2Page {
                    }
                    if (context.name=="aider-yes-type-agro-custom-followup")
                    {
-                    this.myArray = new Array();
-                    var compute: ComputeResultsService = new ComputeResultsService();
-                    this.myArray = compute.computeResults(context.parameters.type, "Agro-alimentaire", context.parameters.agroJobs);
+                    this.myArray = [];
+                    this.myArray = this.compute.computeResults(context.parameters.type, "Agro-alimentaire", context.parameters.agroJobs);
                    }
                  }
                 let newM = {

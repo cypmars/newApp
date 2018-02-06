@@ -46,6 +46,8 @@ export class TinderQ2Page {
   currentNode;
   currentQId;
 
+  compute: ComputeResultsService;
+
   showButton: boolean = true ; 
 
   myArray;
@@ -92,15 +94,6 @@ export class TinderQ2Page {
    
   // Connected through HTML
   voteUp(like: boolean) {
-    // if (this.currentNode.length == this.currentQId + 3)
-    // {
-    //   var lastCard = document.getElementsByClassName('card')[0];
-    //   lastCard.setAttribute("style", "background: #b2284e; background: -webkit-linear-gradient(-90deg, #b2284e, #2a73d3); background: -o-linear-gradient(-90deg, #b2284e, #2a73d3); background: -moz-linear-gradient(-90deg, #b2284e, #2a73d3); background: linear-gradient(-90deg, #b2284e, #2a73d3);");
-    // }
-    // if (this.currentNode.length == this.currentQId + 2){
-    //   var lastCard = document.getElementsByClassName('card')[0];
-    //   lastCard.setAttribute("style", "display:none");
-    // }
 
     this.getNextNode(like);
     this.cards.pop();
@@ -171,6 +164,8 @@ export class TinderQ2Page {
       console.log("param5: " + this.param5);
 
       this.myArray = new Array();
+
+      this.compute = new ComputeResultsService();
   }
 
   getVal(event){
@@ -192,8 +187,7 @@ export class TinderQ2Page {
   ngAfterViewInit() {
     console.log("INIT");
     this.myArray = new Array();
-    var compute: ComputeResultsService = new ComputeResultsService();
-    this.myArray = compute.computeQuestionsAndResults(this.param1, this.param2, this.param4);
+    this.myArray = this.compute.computeQuestionsAndResults(this.param1, this.param2, this.param4);
     
     this.currentNode = this.myArray[0];
     this.currentQId = 0;
@@ -214,11 +208,14 @@ export class TinderQ2Page {
     console.log(this.navCtrl.getActive());
     if (!(this.navCtrl.getActive().component.name == "WelcomePage") && !(this.navCtrl.getActive().component.name == "TinderQ2Page") && !(this.navCtrl.getActive().component.name == "ServiceDetailsPage"))
     {
+      this.myArray = this.compute.getMyArray();
       this.currentNode = this.myArray[0];
       this.currentQId = 0;
       this.swingStack.throwin.subscribe((event: DragEvent) => {
       });
       this.cards = [{}];
+      console.log(this.myArray[0]);
+      console.log(this.currentNode[this.currentQId]);
       this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
     }
     console.log("Did Leave ???");
