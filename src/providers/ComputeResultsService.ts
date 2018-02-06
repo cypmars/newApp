@@ -97,6 +97,10 @@ export class ComputeResultsService{
         return this.myResults;
     }
 
+    getMyQuestions(){
+        return this.myQuestions;
+    }
+
     computeResults(type:string, sector:string, job:string) {
         switch(sector){
             case "Agro-alimentaire":

@@ -111,7 +111,6 @@ export class TinderQ2Page {
         param5: this.param5,
         param6: this.myArray[1]
       });
-      this.myArray = [];
       this.cards.pop();
       this.cards.pop();
     }
@@ -208,14 +207,11 @@ export class TinderQ2Page {
     console.log(this.navCtrl.getActive());
     if (!(this.navCtrl.getActive().component.name == "WelcomePage") && !(this.navCtrl.getActive().component.name == "TinderQ2Page") && !(this.navCtrl.getActive().component.name == "ServiceDetailsPage"))
     {
-      this.myArray = this.compute.getMyResults();
-      this.currentNode = this.myArray[0];
+      this.currentNode = this.compute.getMyQuestions();
       this.currentQId = 0;
       this.swingStack.throwin.subscribe((event: DragEvent) => {
       });
       this.cards = [{}];
-      console.log(this.myArray[0]);
-      console.log(this.currentNode[this.currentQId]);
       this.addNewCards(this.currentNode[this.currentQId], this.currentQId);
     }
     console.log("Did Leave ???");
