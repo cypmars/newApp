@@ -228,13 +228,13 @@ export class Chat2Page {
              let contexts = response.result.contexts;
              let parts = response.result.fulfillment.messages;
                if(parts){
+                this.myArray = [];
                  for (let context of contexts){
                    if (context.name == "aider-followup"){
                      this.clickResponses =[];
                    }
                    if (context.name=="aider-yes-type-agro-custom-followup")
                    {
-                    this.myArray = [];
                     this.myArray = this.compute.computeResults(context.parameters.type, "Agro-alimentaire", context.parameters.agroJobs);
                    }
                  }
@@ -246,7 +246,8 @@ export class Chat2Page {
                   username: this.toUser.username,
                   pic: this.toUser.pic,
                   text: speech.speech,
-                  chips: []
+                  chips: [],
+                  suggests: this.myArray
                 }
                 if(this.platform.is('ios')){
                   for (let message of parts){
