@@ -1,5 +1,5 @@
-webpackJsonp([1],Array(443).concat([
-/* 443 */
+webpackJsonp([1],Array(442).concat([
+/* 442 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -54,6 +54,7 @@ TinderQ2PageModule = __decorate([
 //# sourceMappingURL=tinderQ2.module.js.map
 
 /***/ }),
+/* 443 */,
 /* 444 */,
 /* 445 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10580,6 +10581,9 @@ var ComputeResultsService = (function () {
     ComputeResultsService.prototype.getMyArray = function () {
         return this.myArray;
     };
+    ComputeResultsService.prototype.getMyResults = function () {
+        return this.myResults;
+    };
     ComputeResultsService.prototype.computeResults = function (type, sector, job) {
         switch (sector) {
             case "Agro-alimentaire":
@@ -11202,7 +11206,7 @@ var TinderQ2Page = (function () {
     TinderQ2Page.prototype.ionViewDidLeave = function () {
         console.log(this.navCtrl.getActive());
         if (!(this.navCtrl.getActive().component.name == "WelcomePage") && !(this.navCtrl.getActive().component.name == "TinderQ2Page") && !(this.navCtrl.getActive().component.name == "ServiceDetailsPage")) {
-            this.myArray = this.compute.getMyArray();
+            this.myArray = this.compute.getMyResults();
             this.currentNode = this.myArray[0];
             this.currentQId = 0;
             this.swingStack.throwin.subscribe(function (event) {

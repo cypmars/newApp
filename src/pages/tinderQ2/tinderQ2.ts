@@ -208,7 +208,7 @@ export class TinderQ2Page {
     console.log(this.navCtrl.getActive());
     if (!(this.navCtrl.getActive().component.name == "WelcomePage") && !(this.navCtrl.getActive().component.name == "TinderQ2Page") && !(this.navCtrl.getActive().component.name == "ServiceDetailsPage"))
     {
-      this.myArray = this.compute.getMyArray();
+      this.myArray = this.compute.getMyResults();
       this.currentNode = this.myArray[0];
       this.currentQId = 0;
       this.swingStack.throwin.subscribe((event: DragEvent) => {

@@ -82,7 +82,9 @@ export class Chat2Page {
     let servData = http.get('assets/data/services.json').map(res => res.json().services);
     servData.subscribe(data => {
       this.services = data;
+      this.compute = new ComputeResultsService();
     });  
+
     ApiAIPlugin.init(
       {
           clientAccessToken: "099b97242c1745bd92c163cd27d2c767", 
@@ -96,7 +98,6 @@ export class Chat2Page {
       this.verbalResponse = true;
 
       this.myArray = new Array();
-      this.compute = new ComputeResultsService();
   }
 
 

@@ -35,8 +35,8 @@
         </div>
         <div style="width:80%; margin-right:10%; margin-left:10%; margin-bottom:10px;" text-center>
           <ion-list *ngIf="myArray && services != null">
-            <ion-card *ngFor="for let element of myArray">
-                <img [src]="{{services[element].imgService}}"/>
+            <ion-card *ngFor="let element of myArray">
+                <img [src]="services[element].imgService"/>
                 <ion-card-content>
                   <ion-card-title>
                     {{services[element].title}}

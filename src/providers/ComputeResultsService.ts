@@ -92,7 +92,11 @@ export class ComputeResultsService{
     getMyArray(){
         return this.myArray;
     }
-    
+
+    getMyResults(){
+        return this.myResults;
+    }
+
     computeResults(type:string, sector:string, job:string) {
         switch(sector){
             case "Agro-alimentaire":
