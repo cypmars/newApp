@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 437:
+/***/ 436:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageModule", function() { return SignupPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(742);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(729);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(741);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis__ = __webpack_require__(728);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_vis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_vis__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -216,7 +216,7 @@ var VisTimeline = (function (_super) {
 }(Vis.Timeline));
 exports.VisTimeline = VisTimeline;
 __export(__webpack_require__(726));
-__export(__webpack_require__(730));
+__export(__webpack_require__(729));
 
 
 /***/ }),
@@ -379,7 +379,7 @@ var VisEdges = (function (_super) {
     return VisEdges;
 }(Vis.DataSet));
 exports.VisEdges = VisEdges;
-__export(__webpack_require__(728));
+__export(__webpack_require__(727));
 __export(__webpack_require__(725));
 
 
@@ -49705,7 +49705,7 @@ exports.VisTimelineService = VisTimelineService;
 
 /***/ }),
 
-/***/ 728:
+/***/ 727:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49836,7 +49836,7 @@ exports.VisNetworkDirective = VisNetworkDirective;
 
 /***/ }),
 
-/***/ 729:
+/***/ 728:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49854,7 +49854,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
 var index_1 = __webpack_require__(723);
 var index_2 = __webpack_require__(721);
-__export(__webpack_require__(731));
+__export(__webpack_require__(730));
 var VisModule = (function () {
     function VisModule() {
     }
@@ -49872,7 +49872,7 @@ exports.VisModule = VisModule;
 
 /***/ }),
 
-/***/ 730:
+/***/ 729:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50017,7 +50017,7 @@ exports.VisTimelineDirective = VisTimelineDirective;
 
 /***/ }),
 
-/***/ 731:
+/***/ 730:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50032,7 +50032,7 @@ __export(__webpack_require__(723));
 
 /***/ }),
 
-/***/ 742:
+/***/ 741:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

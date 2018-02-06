@@ -5,8 +5,8 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class ComputeResultsService{
 
-    myQuestions;
-    myResults;
+    private myQuestions;
+    private myResults;
     private myArray;
     questions = 
     [
