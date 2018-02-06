@@ -92,6 +92,7 @@ export class ComputeResultsService{
     computeResults(type:string, sector:string, job:string) {
         switch(sector){
             case "Agro-alimentaire":
+                this.myResults.push(0);
                 switch(job){
                     case "Boucherie":
 
@@ -113,6 +114,8 @@ export class ComputeResultsService{
                 }
                 break;
             case "Economie":
+                this.myResults.push(8);
+                this.myResults.push(7);
                 switch (job){
                     case "Banque":
                         break;
@@ -129,6 +132,7 @@ export class ComputeResultsService{
                 }
                 break;
             case "Santé & Services":
+                this.myResults.push(8);
                 switch (job){
                     case "Medecine":
                         break;
@@ -145,6 +149,11 @@ export class ComputeResultsService{
                 }
                 break;
             case "Télécoms & Informatique":
+                this.myQuestions.push(this.questions[6]);
+                this.myQuestions.push(this.questions[2]);
+                this.myQuestions.push(this.questions[4]);
+                this.myQuestions.push(this.questions[1]);
+                this.myQuestions.push(this.questions[7]);
                 switch (job){
                     case "Systèmes d'information":
                         break;
@@ -159,12 +168,23 @@ export class ComputeResultsService{
                 }
                 break;
             case "Transport & Logistique":
+                this.myResults.push(1);
+                this.myResults.push(2);
+                this.myResults.push(4);
+                this.myResults.push(8);
+                this.myResults.push(21);
+                this.myResults.push(22);
                 switch (job){
                     case "Aéronautique":
+                        this.myResults.push(14);
+                        this.myResults.push(15);
+                        this.myResults.push(16);
                         break;
                     case "Ferroviaire":
+                        this.myResults.push(24);
                         break;
                     case "Urbain":
+                        this.myResults.push(23);
                         break;
                     case "Maritime":
                         break;
@@ -180,6 +200,11 @@ export class ComputeResultsService{
                 }
                 break;
             case "Commerce & Tourisme":
+                this.myResults.push(0);
+                this.myResults.push(5);
+                this.myResults.push(6);
+                this.myResults.push(8);
+                this.myResults.push(19);
                 switch (job){
                     case "Grand Commerce":
                         break;
@@ -197,8 +222,21 @@ export class ComputeResultsService{
                 }
                 break;
             case "Energie": 
+                this.myResults.push(1);
+                this.myResults.push(2);
+                this.myResults.push(3);
+                this.myResults.push(5);
+                this.myResults.push(7);
+                this.myResults.push(8);
                 switch (job){
                     case "Nucléaire":
+                        this.myResults.push(25);
+                        this.myResults.push(26);
+                        this.myResults.push(27);
+                        this.myResults.push(30);
+                        this.myResults.push(31);
+                        this.myResults.push(32);
+                        this.myResults.push(33);
                         break;
                     case "Eolien":
                         break;
@@ -214,8 +252,15 @@ export class ComputeResultsService{
                 }
                 break;
             case "Industrie": 
+            this.myResults.push(1);
+            this.myResults.push(2);
+            this.myResults.push(3);
+            this.myResults.push(5);
+            this.myResults.push(7);
+            this.myResults.push(38);
                 switch (job){
                     case "Pharmacie":
+                        this.myResults.push(34);
                         break;
                     case "Textile":
                         break;
@@ -224,12 +269,14 @@ export class ComputeResultsService{
                     case "Construction":
                         break;
                     case "Bâtiment":
+                        this.myResults.push(25);
                         break;
                     case "Automobile":
                         break;
                     case "Aeronautique":
                         break;
                     case "Lourde":
+                        this.myResults.push(34);
                         break;
                         
                 }

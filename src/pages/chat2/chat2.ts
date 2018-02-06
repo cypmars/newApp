@@ -3,6 +3,7 @@ import { IonicPage, NavController, Platform } from 'ionic-angular';
 import { WelcomePage } from '../pages';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { SpeechRecognition, SpeechRecognitionListeningOptionsAndroid, SpeechRecognitionListeningOptionsIOS } from '@ionic-native/speech-recognition';
+import { ComputeResultsService } from '../../providers/ComputeResultsService';
 
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -63,6 +64,8 @@ export class Chat2Page {
   marques;
   products;
   services;
+
+  myArray;
   constructor(private ref: ChangeDetectorRef, private speech: SpeechRecognition, private tts: TextToSpeech, public navCtrl: NavController, public platform: Platform, http:Http) {
     let brandData = http.get('assets/data/marques.json').map(res => res.json().marques);
     brandData.subscribe(data => {
@@ -225,7 +228,9 @@ export class Chat2Page {
                    }
                    if (context.name=="aider-yes-type-agro-custom-followup")
                    {
-                      computeResults(context.parameters.type, "Agroalimentaire", context.parameters.agroJobs);
+                    this.myArray = new Array();
+                    var compute: ComputeResultsService = new ComputeResultsService();
+                    this.myArray = compute.computeResults(context.parameters.type, "Agro-alimentaire", context.parameters.agroJobs);
                    }
                  }
                 let newM = {
