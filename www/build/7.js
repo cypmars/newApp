@@ -1,6 +1,6 @@
 webpackJsonp([7],{
 
-/***/ 443:
+/***/ 430:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Chat2PageModule", function() { return Chat2PageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__ = __webpack_require__(734);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat2__ = __webpack_require__(747);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_text_to_speech__ = __webpack_require__(732);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat2__ = __webpack_require__(735);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,7 +58,7 @@ Observable_1.Observable.prototype.map = map_1.map;
 
 /***/ }),
 
-/***/ 731:
+/***/ 727:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -589,7 +589,7 @@ ComputeResultsService = __decorate([
 
 /***/ }),
 
-/***/ 734:
+/***/ 732:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -694,7 +694,7 @@ var TextToSpeech = (function (_super) {
 
 /***/ }),
 
-/***/ 747:
+/***/ 735:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -702,9 +702,9 @@ var TextToSpeech = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__ = __webpack_require__(734);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_ComputeResultsService__ = __webpack_require__(731);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__ = __webpack_require__(732);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_ComputeResultsService__ = __webpack_require__(727);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map__ = __webpack_require__(445);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map__);
@@ -957,19 +957,11 @@ var Chat2Page = (function () {
                             }, function (response) {
                                 console.log(JSON.stringify(response));
                                 var speech = response.result.fulfillment;
-                                var contexts = response.result.contexts;
+                                var action = response.result.action;
+                                var parameters = response.result.parameters;
                                 var parts = response.result.fulfillment.messages;
                                 if (parts) {
                                     _this.myArray = [];
-                                    for (var _i = 0, contexts_1 = contexts; _i < contexts_1.length; _i++) {
-                                        var context = contexts_1[_i];
-                                        if (context.name == "aider-followup") {
-                                            _this.clickResponses = [];
-                                        }
-                                        if (context.name == "aider-yes-type-agro-custom-followup") {
-                                            _this.myArray = _this.compute.computeResults(context.parameters.type, "Agro-alimentaire", context.parameters.agroJobs);
-                                        }
-                                    }
                                     var newM = {
                                         toId: _this.user._id,
                                         _id: _this.messages.length,
@@ -979,18 +971,27 @@ var Chat2Page = (function () {
                                         pic: _this.toUser.pic,
                                         text: speech.speech,
                                         chips: [],
-                                        suggests: _this.myArray
+                                        suggests: []
                                     };
+                                    if (action.includes("Aider-yes-type-agro-custom-custom") || action.includes("Aider-yes-type-eco-custom-custom")
+                                        || action.includes("Aider-yes-type-energie-custom-custom") || action.includes("Aider-yes-type-info-custom-custom")
+                                        || action.includes("Aider-yes-type-log-custom-custom") || action.includes("Aider-yes-type-sante-custom-custom")
+                                        || action.includes("Aider-yes-type-tourisme-custom-custom") || action.includes("Aider-yes-type-industrie-custom-custom")) {
+                                        _this.myArray = _this.compute.computeResults(parameters.type, parameters.sector, parameters.agroJobs);
+                                        newM.suggests = _this.myArray;
+                                    }
+                                    if (action == "Aider.Aider-yes")
+                                        _this.clickResponses = [];
                                     if (_this.platform.is('ios')) {
-                                        for (var _a = 0, parts_1 = parts; _a < parts_1.length; _a++) {
-                                            var message = parts_1[_a];
+                                        for (var _i = 0, parts_1 = parts; _i < parts_1.length; _i++) {
+                                            var message = parts_1[_i];
                                             switch (message.type) {
                                                 case "simple_response":
                                                     newM.text = message.textToSpeech;
                                                     break;
                                                 case "suggestion_chips":
-                                                    for (var _b = 0, _c = message.suggestions; _b < _c.length; _b++) {
-                                                        var suggestion = _c[_b];
+                                                    for (var _a = 0, _b = message.suggestions; _a < _b.length; _a++) {
+                                                        var suggestion = _b[_a];
                                                         newM.chips.push(suggestion.title);
                                                     }
                                                     break;
@@ -1000,15 +1001,15 @@ var Chat2Page = (function () {
                                         _this.ref.detectChanges();
                                     }
                                     else {
-                                        for (var _d = 0, parts_2 = parts; _d < parts_2.length; _d++) {
-                                            var message = parts_2[_d];
+                                        for (var _c = 0, parts_2 = parts; _c < parts_2.length; _c++) {
+                                            var message = parts_2[_c];
                                             switch (message.type) {
                                                 case "simple_response":
                                                     newM.text = message.textToSpeech;
                                                     break;
                                                 case "suggestion_chips":
-                                                    for (var _e = 0, _f = message.suggestions; _e < _f.length; _e++) {
-                                                        var suggestion = _f[_e];
+                                                    for (var _d = 0, _e = message.suggestions; _d < _e.length; _d++) {
+                                                        var suggestion = _e[_d];
                                                         newM.chips.push(suggestion.title);
                                                     }
                                                     break;
