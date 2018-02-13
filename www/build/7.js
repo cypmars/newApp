@@ -974,22 +974,21 @@ var Chat2Page = (function () {
                                         suggests: []
                                     };
                                     if (action.includes("Aider-yes-type-agro-custom-custom"))
-                                        _this.myArray = _this.compute.computeResults(parameters.type, parameters.sector, parameters.agroJobs);
+                                        newM.suggests = _this.compute.computeResults(parameters.type, parameters.sector, parameters.agroJobs);
                                     if (action.includes("Aider-yes-type-eco-custom-custom"))
-                                        _this.myArray = _this.compute.computeResults(parameters.type, parameters.sector, parameters.ecoJobs);
+                                        newM.suggests = _this.compute.computeResults(parameters.type, parameters.sector, parameters.ecoJobs);
                                     if (action.includes("Aider-yes-type-energie-custom-custom"))
-                                        _this.myArray = _this.compute.computeResults(parameters.type, parameters.sector, parameters.energieJobs);
+                                        newM.suggests = _this.compute.computeResults(parameters.type, parameters.sector, parameters.energieJobs);
                                     if (action.includes("Aider-yes-type-info-custom-custom"))
-                                        _this.myArray = _this.compute.computeResults(parameters.type, parameters.sector, parameters.infoJobs);
+                                        newM.suggests = _this.compute.computeResults(parameters.type, parameters.sector, parameters.infoJobs);
                                     if (action.includes("Aider-yes-type-log-custom-custom"))
-                                        _this.myArray = _this.compute.computeResults(parameters.type, parameters.sector, parameters.logJobs);
+                                        newM.suggests = _this.compute.computeResults(parameters.type, parameters.sector, parameters.logJobs);
                                     if (action.includes("Aider-yes-type-sante-custom-custom"))
-                                        _this.myArray = _this.compute.computeResults(parameters.type, parameters.sector, parameters.santeJobs);
+                                        newM.suggests = _this.compute.computeResults(parameters.type, parameters.sector, parameters.santeJobs);
                                     if (action.includes("Aider-yes-type-tourisme-custom-custom"))
-                                        _this.myArray = _this.compute.computeResults(parameters.type, parameters.sector, parameters.tourismeJobs);
+                                        newM.suggests = _this.compute.computeResults(parameters.type, parameters.sector, parameters.tourismeJobs);
                                     if (action.includes("Aider-yes-type-industrie-custom-custom"))
-                                        _this.myArray = _this.compute.computeResults(parameters.type, parameters.sector, parameters.industrieJobs);
-                                    newM.suggests = _this.myArray;
+                                        newM.suggests = _this.compute.computeResults(parameters.type, parameters.sector, parameters.industrieJobs);
                                     if (action == "Aider.Aider-yes")
                                         _this.clickResponses = [];
                                     if (_this.platform.is('ios')) {

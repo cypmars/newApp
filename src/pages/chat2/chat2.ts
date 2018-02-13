@@ -245,30 +245,28 @@ export class Chat2Page {
 
 
                 if (action.includes("Aider-yes-type-agro-custom-custom"))
-                  this.myArray = this.compute.computeResults(parameters.type, parameters.sector, parameters.agroJobs);
+                  newM.suggests = this.compute.computeResults(parameters.type, parameters.sector, parameters.agroJobs);
 
                 if (action.includes("Aider-yes-type-eco-custom-custom"))
-                  this.myArray = this.compute.computeResults(parameters.type, parameters.sector, parameters.ecoJobs);
+                  newM.suggests = this.compute.computeResults(parameters.type, parameters.sector, parameters.ecoJobs);
 
                 if (action.includes("Aider-yes-type-energie-custom-custom"))
-                  this.myArray = this.compute.computeResults(parameters.type, parameters.sector, parameters.energieJobs);
+                  newM.suggests = this.compute.computeResults(parameters.type, parameters.sector, parameters.energieJobs);
 
                 if (action.includes("Aider-yes-type-info-custom-custom"))
-                  this.myArray = this.compute.computeResults(parameters.type, parameters.sector, parameters.infoJobs);
+                  newM.suggests = this.compute.computeResults(parameters.type, parameters.sector, parameters.infoJobs);
 
                 if (action.includes("Aider-yes-type-log-custom-custom"))
-                  this.myArray = this.compute.computeResults(parameters.type, parameters.sector, parameters.logJobs);
+                  newM.suggests = this.compute.computeResults(parameters.type, parameters.sector, parameters.logJobs);
 
                 if (action.includes("Aider-yes-type-sante-custom-custom"))
-                  this.myArray = this.compute.computeResults(parameters.type, parameters.sector, parameters.santeJobs);
+                  newM.suggests = this.compute.computeResults(parameters.type, parameters.sector, parameters.santeJobs);
 
                 if (action.includes("Aider-yes-type-tourisme-custom-custom"))
-                  this.myArray = this.compute.computeResults(parameters.type, parameters.sector, parameters.tourismeJobs);
+                  newM.suggests = this.compute.computeResults(parameters.type, parameters.sector, parameters.tourismeJobs);
 
                 if (action.includes("Aider-yes-type-industrie-custom-custom"))
-                  this.myArray = this.compute.computeResults(parameters.type, parameters.sector, parameters.industrieJobs);
-                  
-                newM.suggests = this.myArray;
+                  newM.suggests = this.compute.computeResults(parameters.type, parameters.sector, parameters.industrieJobs);
 
                 if (action == "Aider.Aider-yes")
                   this.clickResponses =[];
