@@ -225,19 +225,12 @@ export class Chat2Page {
            (response) => {
              console.log(JSON.stringify(response))
              let speech = response.result.fulfillment;
-             let contexts = response.result.contexts;
+             let action = response.result.action;
+             let parameters = response.result.parameters;
              let parts = response.result.fulfillment.messages;
                if(parts){
                 this.myArray = [];
-                 for (let context of contexts){
-                   if (context.name == "aider-followup"){
-                     this.clickResponses =[];
-                   }
-                   if (context.name=="aider-yes-type-agro-custom-followup")
-                   {
-                    this.myArray = this.compute.computeResults(context.parameters.type, "Agro-alimentaire", context.parameters.agroJobs);
-                   }
-                 }
+
                 let newM = {
                   toId: this.user._id,
                   _id: this.messages.length,
@@ -247,8 +240,21 @@ export class Chat2Page {
                   pic: this.toUser.pic,
                   text: speech.speech,
                   chips: [],
-                  suggests: this.myArray
+                  suggests: []
                 }
+
+                if (action.includes("Aider-yes-type-agro-custom-custom") || action.includes("Aider-yes-type-eco-custom-custom")
+                  || action.includes("Aider-yes-type-energie-custom-custom") || action.includes("Aider-yes-type-info-custom-custom")
+                  || action.includes("Aider-yes-type-log-custom-custom") || action.includes("Aider-yes-type-sante-custom-custom")
+                  || action.includes("Aider-yes-type-tourisme-custom-custom") || action.includes("Aider-yes-type-industrie-custom-custom"))
+                {
+                  this.myArray = this.compute.computeResults(parameters.type, parameters.sector, parameters.agroJobs);
+                  newM.suggests = this.myArray;
+                }
+                if (action == "Aider.Aider-yes")
+                  this.clickResponses =[];
+        
+
                 if(this.platform.is('ios')){
                   for (let message of parts){
                       switch (message.type){
