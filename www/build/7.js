@@ -789,9 +789,11 @@ var Chat2Page = (function () {
                 username: this.toUser.username,
                 pic: this.toUser.pic,
                 text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?",
-                chips: []
+                chips: [],
+                suggests: []
             }
         ];
+        this.newMessage = "";
         var brandData = http.get('assets/data/marques.json').map(function (res) { return res.json().marques; });
         brandData.subscribe(function (data) {
             _this.marques = data;
@@ -812,7 +814,6 @@ var Chat2Page = (function () {
         this.initializeApp();
         this.hideTime = true;
         this.verbalResponse = true;
-        this.myArray = new Array();
     }
     Chat2Page.prototype.initializeApp = function () {
         var _this = this;
@@ -905,7 +906,8 @@ var Chat2Page = (function () {
                                             username: _this.toUser.username,
                                             pic: _this.toUser.pic,
                                             text: messages[messages.length - 1],
-                                            chips: []
+                                            chips: [],
+                                            suggests: []
                                         });
                                         _this.ref.detectChanges();
                                         messages.pop();
@@ -920,7 +922,8 @@ var Chat2Page = (function () {
                                             username: _this.toUser.username,
                                             pic: _this.toUser.pic,
                                             text: messages[messages.length - 1],
-                                            chips: []
+                                            chips: [],
+                                            suggests: []
                                         });
                                         _this.ref.detectChanges();
                                         messages.pop();
@@ -961,7 +964,6 @@ var Chat2Page = (function () {
                                 var parameters = response.result.parameters;
                                 var parts = response.result.fulfillment.messages;
                                 if (parts) {
-                                    _this.myArray = [];
                                     var newM = {
                                         toId: _this.user._id,
                                         _id: _this.messages.length,
@@ -1267,7 +1269,7 @@ var Chat2Page = (function () {
 }());
 Chat2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-chat2',template:/*ion-inline-start:"/Users/cyp/Documents/newApp/src/pages/chat2/chat2.html"*/'\n  <ion-header no-border>\n    <ion-navbar color="primary" hideBackButton="true">\n      <ion-buttons start>\n  \n      </ion-buttons>\n      <ion-title>\n        Chat-Bot\n      </ion-title>\n      <ion-buttons end>\n        <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-header>\n\n  <ion-content padding>\n    <div *ngFor="let message of messages" class="parent">\n      <div *ngIf="user._id !== message.userId" class="child">\n        <div class="message-wrapper" on-hold="onMessageHold($event, $index, message)">\n          <img class="profile-pic left" [src]="toUser.pic" style="top: 25px"/>\n          <div class="chat-bubble left slide-left">   \n            <div class="message" [innerHTML]="message.text" autolinker></div>  \n            <div class="message-detail">\n              <span class="bold">{{toUser.username}}</span>\n            </div>\n          </div>\n        </div>\n        <div style="width:80%; margin-right:10%; margin-left:10%; margin-bottom:10px;" text-center>\n          <ion-row class="badges" style="justify-content:center;">\n              <div style="white-space: nowrap;" text-center *ngFor="let chip of message.chips" class="area" style="margin-right:5px;">\n                <ion-badge *ngIf="!clickResponses.indexOf(chip)>=0" style="background-color: #d42649; margin-top:10px;" (click)="sendMessageByClick($event, chip)" >{{chip}}</ion-badge>\n                <ion-badge *ngIf="clickResponses.indexOf(chip)>=0" style="background-color: #0eae15; margin-top:10px;" >{{chip}}</ion-badge>\n              </div>\n          </ion-row>\n        </div>\n        <div *ngIf="message.suggests" style="width:80%; margin-right:10%; margin-left:10%; margin-bottom:10px;" text-center>\n          <ion-list *ngIf="message.suggests && services != null">\n            <ion-card *ngFor="let element of message.suggests">\n                <img [src]="services[element].imgService"/>\n                <ion-card-content>\n                  <ion-card-title>\n                    {{services[element].title}}\n                    </ion-card-title>\n                  <p>\n                    {{services[element].content.subtitle}}\n                  </p>\n                </ion-card-content>\n              </ion-card>\n          </ion-list>\n        </div>\n      </div>\n      <div *ngIf="user._id === message.userId" class="child">\n        <div class="message-wrapper">\n          <img class="profile-pic right" [src]="user.pic" />\n  \n          <div class="chat-bubble right slide-right">\n              \n            <div class="message" [innerHTML]="message.text" autolinker></div>\n  \n            <div class="message-detail">\n              <span class="bold">{{user.username}}</span>\n            </div>\n  \n          </div>\n        </div>\n      </div>\n      <div class="cf"></div>\n    </div>\n  </ion-content>\n\n<ion-footer>\n    <ion-grid>\n      <ion-row>\n        <!-- <ion-col>\n            <button ion-button clear (click)="listenForSpeech()"><ion-icon class="footer-btn" name="mic"></ion-icon></button>\n        </ion-col> -->\n        <ion-col col-8>\n            <ion-input [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>\n        </ion-col>\n        <ion-col>\n            <button ion-button clear (click)="sendMessage()"><ion-icon class="footer-btn" name="send"></ion-icon></button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n</ion-footer>'/*ion-inline-end:"/Users/cyp/Documents/newApp/src/pages/chat2/chat2.html"*/
+        selector: 'page-chat2',template:/*ion-inline-start:"/Users/cyp/Documents/newApp/src/pages/chat2/chat2.html"*/'\n  <ion-header no-border>\n    <ion-navbar color="primary" hideBackButton="true">\n      <ion-buttons start>\n  \n      </ion-buttons>\n      <ion-title>\n        Chat-Bot\n      </ion-title>\n      <ion-buttons end>\n        <button ion-button icon-left (click)="login()"><ion-icon name="contact"></ion-icon></button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-header>\n\n  <ion-content padding>\n    <div *ngFor="let message of messages" class="parent">\n      <div *ngIf="user._id !== message.userId" class="child">\n        <div class="message-wrapper" on-hold="onMessageHold($event, $index, message)">\n          <img class="profile-pic left" [src]="toUser.pic" style="top: 25px"/>\n          <div class="chat-bubble left slide-left">   \n            <div class="message" [innerHTML]="message.text" autolinker></div>  \n            <div class="message-detail">\n              <span class="bold">{{toUser.username}}</span>\n            </div>\n          </div>\n        </div>\n        <div style="width:80%; margin-right:10%; margin-left:10%;" text-center>\n          <ion-row class="badges" style="justify-content:center;">\n              <div style="white-space: nowrap;" text-center *ngFor="let chip of message.chips" class="area" style="margin-right:5px;">\n                <ion-badge *ngIf="!clickResponses.indexOf(chip)>=0" style="background-color: #d42649; margin-top:10px;" (click)="sendMessageByClick($event, chip)" >{{chip}}</ion-badge>\n                <ion-badge *ngIf="clickResponses.indexOf(chip)>=0" style="background-color: #0eae15; margin-top:10px;" >{{chip}}</ion-badge>\n              </div>\n          </ion-row>\n        </div>\n        <div *ngIf="message.suggests" style="width:80%; margin-right:10%; margin-left:10%; margin-bottom:10px;" text-center>\n          <ion-list *ngIf="message.suggests && services != null">\n            <ion-card *ngFor="let element of message.suggests">\n                <img [src]="services[element].imgService"/>\n                <ion-card-content>\n                  <ion-card-title>\n                    {{services[element].title}}\n                    </ion-card-title>\n                  <p>\n                    {{services[element].content.subtitle}}\n                  </p>\n                </ion-card-content>\n              </ion-card>\n          </ion-list>\n        </div>\n      </div>\n      <div *ngIf="user._id === message.userId" class="child">\n        <div class="message-wrapper">\n          <img class="profile-pic right" [src]="user.pic" />\n  \n          <div class="chat-bubble right slide-right">\n              \n            <div class="message" [innerHTML]="message.text" autolinker></div>\n  \n            <div class="message-detail">\n              <span class="bold">{{user.username}}</span>\n            </div>\n  \n          </div>\n        </div>\n      </div>\n      <div class="cf"></div>\n    </div>\n  </ion-content>\n\n<ion-footer>\n    <ion-grid>\n      <ion-row>\n        <!-- <ion-col>\n            <button ion-button clear (click)="listenForSpeech()"><ion-icon class="footer-btn" name="mic"></ion-icon></button>\n        </ion-col> -->\n        <ion-col col-8>\n            <ion-input [(ngModel)]="newMessage" placeholder="Send a message..."></ion-input>\n        </ion-col>\n        <ion-col>\n            <button ion-button clear (click)="sendMessage()"><ion-icon class="footer-btn" name="send"></ion-icon></button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n</ion-footer>'/*ion-inline-end:"/Users/cyp/Documents/newApp/src/pages/chat2/chat2.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"], __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__["a" /* SpeechRecognition */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_text_to_speech__["a" /* TextToSpeech */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Platform */], __WEBPACK_IMPORTED_MODULE_6__angular_http__["a" /* Http */]])
 ], Chat2Page);

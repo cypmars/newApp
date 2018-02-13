@@ -42,7 +42,8 @@ export class Chat2Page {
       username: this.toUser.username,
       pic: this.toUser.pic,
       text: "Salut ! Je suis BoBot, puis-je t'aider à déterminer ton besoin ?",
-      chips: []
+      chips: [],
+      suggests: []
     }
     
   ];
@@ -54,8 +55,6 @@ export class Chat2Page {
   alternate: boolean;
   hideTime: boolean;
   verbalResponse: boolean;
-  newMessage: {};
-  responseMessage: {};
 
   message0;
   message1;
@@ -65,7 +64,8 @@ export class Chat2Page {
   products;
   services;
 
-  myArray;
+  newMessage = "";
+
   compute: ComputeResultsService;
 
   constructor(private ref: ChangeDetectorRef, private speech: SpeechRecognition, private tts: TextToSpeech, public navCtrl: NavController, public platform: Platform, http:Http) {
@@ -96,8 +96,6 @@ export class Chat2Page {
       this.initializeApp();
       this.hideTime = true;
       this.verbalResponse = true;
-
-      this.myArray = new Array();
   }
 
 
@@ -185,7 +183,8 @@ export class Chat2Page {
               username: this.toUser.username,
               pic: this.toUser.pic,
               text: messages[messages.length - 1],
-              chips:[]
+              chips:[],
+              suggests: []
             }); 
           this.ref.detectChanges();
           messages.pop();
@@ -199,7 +198,8 @@ export class Chat2Page {
               username: this.toUser.username,
               pic: this.toUser.pic,
               text: messages[messages.length - 1],
-              chips: []
+              chips: [],
+              suggests: []
             });
             this.ref.detectChanges();
             messages.pop();
@@ -229,7 +229,6 @@ export class Chat2Page {
              let parameters = response.result.parameters;
              let parts = response.result.fulfillment.messages;
                if(parts){
-                this.myArray = [];
 
                 let newM = {
                   toId: this.user._id,
